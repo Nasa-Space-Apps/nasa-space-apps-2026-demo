@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens come from src/lib/themes.ts (published as CSS variables by app/layout.tsx): --canvas --surface --ink --ink-soft --muted --line
+ * --accent --radius --radius-sm --ease --dur-*. Flat design: no shadows, no gradients. Every motion uses var(--ease) and soft durations.
+ * New @keyframes are not picked up by the dev server (docs/gotchas.md): animate with transitions.
+ */
+
+html,
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- browser surfaces themed from the palette ---- */
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+* {
+  caret-color: var(--accent);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+button {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---- components ---- */
+
+/*
+ * Hover language (from primer.io): a button's fill is swept across by a lime layer (background-size 0 → 100%) while the text goes ink;
+ * links turn soft orange; arrows glide. All on the theme curve, no snapping.
+ */
+
+/** Primary button: solid ink, mono caps; on hover the lime fill sweeps in from the left. */
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background-color: var(--ink);
+  background-image: linear-gradient(var(--hover), var(--hover));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  color: var(--canvas);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-size var(--dur-base) var(--ease),
+    color var(--dur-base) var(--ease),
+    box-shadow var(--dur-base) var(--ease),
+    transform var(--dur-base) var(--ease),
+    opacity var(--dur-base) var(--ease);
+}
+.ui-btn:hover:not(:disabled) {
+  background-size: 100% 100%;
+  color: var(--ink);
+}
+.ui-btn:active:not(:disabled) {
+  transform: scale(0.985);
+}
+.ui-btn:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+.ui-btn .ui-arrow,
+.ui-link .ui-arrow {
+  transition: transform var(--dur-base) var(--ease);
+}
+.ui-btn:hover .ui-arrow,
+.ui-link:hover .ui-arrow {
+  transform: translateX(4px);
+}
+
+/** Secondary button: hairline outline; same lime sweep on hover. */
+.ui-btn.is-ghost {
+  background-color: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line); /* a 1px outline, not a shadow */
+}
+.ui-btn.is-ghost:hover:not(:disabled) {
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+/** Selected state (e.g. the current world): ink, and it stays ink on hover. */
+.ui-btn.is-active {
+  background-size: 0% 100% !important;
+  color: var(--canvas) !important;
+  cursor: default;
+}
+
+/** Text link: mono caps, no box; turns soft orange on hover. */
+.ui-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--dur-base) var(--ease);
+}
+.ui-link:hover {
+  color: var(--accent-soft);
+}
+.ui-link.is-back:hover .ui-arrow {
+  transform: translateX(-4px);
+}
+
+/** Dropdown rows and the top bar cells: the same lime sweep. */
+.ui-row,
+.ui-nav {
+  background-color: transparent;
+  background-image: linear-gradient(var(--hover), var(--hover));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  transition:
+    background-size var(--dur-base) var(--ease),
+    color var(--dur-base) var(--ease);
+}
+.ui-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ui-row:hover {
+  background-size: 100% 100%;
+  color: var(--ink);
+}
+.ui-row.is-active {
+  background-color: var(--ink);
+  color: var(--canvas);
+}
+.ui-row.is-active:hover {
+  background-size: 0% 100%;
+  color: var(--canvas);
+}
+.ui-nav:hover {
+  background-size: 100% 100%;
+  color: var(--ink) !important;
+}
+
+/** Timeline markers: fill with the lime on hover. */
+.ui-marker {
+  transition:
+    transform var(--dur-base) var(--ease),
+    background-color var(--dur-base) var(--ease);
+}
+.ui-marker:hover:not(:disabled) {
+  background-color: var(--hover) !important;
+  transform: scale(1.3) !important;
+}
+
+/** Icons (components/Icon.tsx): drawn with one stroke weight. */
+.ui-icon {
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+}
+
+/* ---- reduced motion: keep the layout, drop the movement ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
+

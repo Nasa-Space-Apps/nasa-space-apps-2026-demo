@@ -1,0 +1,158 @@
+// Globe view: celestial bodies and the vehicles abandoned on them (one per mission in `missions.ts`).
+
+export type AbandonedVehicle = {
+  missionId: string; // id in MISSIONS
+  name: string;
+  place: string;
+  lat: number; // degrees, north positive
+  lon: number; // degrees, east positive
+  tag: string; // short status shown next to the marker on the globe
+  status: string; // how it ended up abandoned
+  facts: [string, string][]; // label / value pairs (up to 4)
+};
+
+export type Body = {
+  id: string;
+  name: string;
+  blurb: string;
+  facts: [string, string][];
+  vehicles: AbandonedVehicle[];
+};
+
+export const BODIES: Body[] = [
+  {
+    id: "mars",
+    name: "Mars",
+    blurb: "A cold desert world. Its rovers were meant to last months; one kept going for fourteen years.",
+    facts: [
+      ["Diameter", "6,779 km"],
+      ["Gravity", "3.7 m/s²"],
+    ],
+    vehicles: [
+      {
+        missionId: "opportunity",
+        name: "Opportunity",
+        place: "Perseverance Valley · Endeavour Crater",
+        lat: -2.3,
+        lon: -5.5,
+        tag: "Lost in a dust storm · 2018",
+        status:
+          "Last signal on June 10, 2018 (Sol 5111), as a global dust storm blocked its solar panels. NASA declared the mission complete on Feb 13, 2019.",
+        facts: [
+          ["Landed", "Jan 25, 2004"],
+          ["Planned", "90 sols"],
+          ["Lasted", "5,111 sols"],
+          ["Distance", "45.16 km"],
+        ],
+      },
+      {
+        missionId: "perseverance",
+        name: "Perseverance",
+        place: "Jezero Crater · test drive",
+        lat: 18.44,
+        lon: 77.45,
+        tag: "Test drive · demo",
+        status:
+          "Powered down at sunset after caching its samples. Demo vehicle: the real Perseverance is still active and this ending is fictional. The ground is Gale Crater (Curiosity's landing site), used as a stand-in.",
+        facts: [
+          ["Landed", "Feb 18, 2021"],
+          ["Site", "Jezero Crater"],
+          ["Samples", "10 tubes cached"],
+          ["Ending", "Fictional"],
+        ],
+      },
+      // ---- FICTIONAL demo vehicles (stories in lib/checkpoints-demo.ts): the markers sit on the real site of each mission, the ending is invented ----
+      {
+        missionId: "spirit",
+        name: "Spirit",
+        place: "Gusev Crater · demo",
+        lat: -14.57,
+        lon: 175.47,
+        tag: "Stuck in sand · demo",
+        status: "Demo vehicle with an invented story: it sinks into soft sand and goes quiet. The ground is the same Mars terrain used for Opportunity.",
+        facts: [
+          ["Site", "Gusev Crater"],
+          ["Wheels", "5 of 6"],
+          ["Ending", "Fictional"],
+        ],
+      },
+      {
+        missionId: "ingenuity",
+        name: "Ingenuity",
+        place: "Jezero Crater · demo airfield",
+        lat: 21.5,
+        lon: 71.5,
+        tag: "Last flight · demo",
+        status: "Demo vehicle with an invented story: it flies from airfield to airfield and lands for good after a last hover. The ground is Gale Crater, as a stand-in.",
+        facts: [
+          ["Type", "Helicopter"],
+          ["Flights", "41 (fiction)"],
+          ["Ending", "Fictional"],
+        ],
+      },
+      {
+        missionId: "insight",
+        name: "InSight",
+        place: "Elysium Planitia · demo",
+        lat: 4.5,
+        lon: 135.6,
+        tag: "Out of power · demo",
+        status: "Demo vehicle with an invented story: a lander that rolls on three wheels, listens for quakes and loses power under red dust. The real InSight never moved.",
+        facts: [
+          ["Site", "Elysium Planitia"],
+          ["Legs", "3, on wheels"],
+          ["Ending", "Fictional"],
+        ],
+      },
+      {
+        missionId: "beagle-2",
+        name: "Beagle 2",
+        place: "Isidis Planitia · demo",
+        lat: 11.5,
+        lon: 90.4,
+        tag: "Resting · demo",
+        status: "Demo vehicle with an invented story: this Beagle 2 opens all its petals, rolls on a small base and calls home. The real one never did.",
+        facts: [
+          ["Site", "Isidis Planitia"],
+          ["Panels", "4"],
+          ["Ending", "Fictional"],
+        ],
+      },
+    ],
+  },
+  {
+    id: "moon",
+    name: "Moon",
+    blurb: "Airless and silent. Whatever is left here stays exactly where it stopped.",
+    facts: [
+      ["Diameter", "3,474 km"],
+      ["Gravity", "1.62 m/s²"],
+    ],
+    vehicles: [
+      {
+        missionId: "sev",
+        name: "SEV",
+        place: "Fra Mauro · Apollo 14 landing area",
+        lat: -3.645,
+        lon: -17.471,
+        tag: "Powered down · demo",
+        status:
+          "Powered down as the sun set behind the ridge, and never woke up again. Demo vehicle: the SEV has no real link to Apollo 14 and this ending is fictional.",
+        facts: [
+          ["Site", "Fra Mauro"],
+          ["Apollo 14", "Feb 5, 1971"],
+          ["Ending", "Fictional"],
+        ],
+      },
+    ],
+  },
+];
+
+/** Unit vector of a lat/lon on a three.js SphereGeometry textured with an equirectangular layout centred on lon 0. */
+export function latLonDir(lat: number, lon: number): [number, number, number] {
+  const la = (lat * Math.PI) / 180;
+  const lo = (lon * Math.PI) / 180;
+  return [Math.cos(la) * Math.cos(lo), Math.sin(la), -Math.cos(la) * Math.sin(lo)];
+}
+
+export const bodyOfMission = (missionId: string) => BODIES.find((b) => b.vehicles.some((v) => v.missionId === missionId));
