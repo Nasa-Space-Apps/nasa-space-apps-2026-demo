@@ -1,0 +1,261 @@
+# Historia del proyecto
+
+Registro de lo que se construyó, en orden, con las decisiones y el porqué. Pensado para recuperar contexto rápido.
+
+## Contexto y preferencias del usuario
+
+- Quiere una escena 3D a pantalla completa, con el look de [bruno-simon.com](https://bruno-simon.com/) (cámara en 3/4 elevada,
+  terreno estilizado, vehículo pequeño). Desde el hito 14, **sin conducción libre**: ruta fija, `Espacio` y línea de tiempo.
+- **UI:** diseño **plano (flat)**, simple, sin brillos, degradados ni elementos "producidos"/"de IA". Le gustan las paletas
+  atrevidas con bordes definidos (ShellWatch) y también la sobriedad topográfica (Abatable). Quiere poder **tener varios
+  estilos/temas y cambiar entre ellos**.
+- **Globo / tema:** no le gusta lo «realista» (probó texturas y las descartó): quiere un estilo **simple y fácil de ver**, claro, tipo carta estelar (rejilla azul, cuadrados negros, tags amarillos; referencia
+  la sección del globo de portalsystems.space). Quiere que **toda la demo tenga tema claro**, que el globo **gire solo y solo en horizontal**, y que **solo se vea lo de delante** del globo. Prefiere
+  **rutas por vista** (`/moon`, `/mars/opportunity`) para cargar únicamente lo necesario. Pidió commit explícitamente tras cada bloque aprobado.
+- Habla español y prefiere respuestas concisas. La **interfaz y los audios del juego van en inglés**; la documentación, en español.
+- Arranca él mismo el servidor de desarrollo (pidió no dejar ninguno corriendo) y decide cuándo se hace commit.
+- Prefiere **generar contenido costoso una sola vez** (audio) y guardarlo como activo/metadato en lugar de depender de una API
+  en ejecución.
+- Los activos (STL/GLB) los aporta él desde `Downloads`. El segundo vehículo (SEV) no tiene relación histórica con Apollo 14:
+  es solo una prueba de otro vehículo en otro terreno.
+
+## Hitos
+
+### 1. Proyecto base
+`create-next-app` en `poc/` con TypeScript, Tailwind, ESLint, App Router, carpeta `src/`, alias `@/*`, npm. Se inicializó el
+repo git (commit inicial de Create Next App).
+
+### 2. Primer render (terreno + rover)
+- Se añadieron `three`, `@react-three/fiber`, `@react-three/drei`, `@types/three`.
+- Los modelos se copiaron a `public/models/` (`terrain.stl`, `opportunity.glb`).
+- Escena a pantalla completa (`fixed inset-0`), terreno con color por altura, niebla del color del cielo, sombras, rover apoyado
+  sobre el terreno con *raycast*.
+- Sin controles en esta fase (el usuario lo pidió así).
+
+### 3. Movimiento, efectos y primer minimapa
+- **Conducción** (WASD/flechas, Shift turbo, Espacio freno) con aceleración, giro dependiente de la velocidad y límites del mapa.
+- **Mapa de alturas**: en vez de hacer *raycast* cada frame (110k triángulos), el STL se rasteriza una vez a una rejilla de
+  0,5 unidades; `heightAt(x, z)` es una interpolación bilineal (barato, se usa para física, huellas y minimapa).
+- **Rover conforme al terreno**: 4 muestras en las esquinas → cabeceo y alabeo; inclinación al acelerar/girar y vibración.
+- **Polvo** (partículas `Points` con shader propio) desde las ruedas, **huellas** (`InstancedMesh`) y **cámara** con
+  seguimiento suave, adelantamiento según la velocidad y FOV/vibración con turbo.
+- **Bordes del mapa**: el terreno se aplana hacia los bordes y se añade un plano de suelo infinito para que el límite se
+  pierda en la niebla.
+- Primer minimapa: relieve sombreado, curvas, radar cian… (**descartado** por el usuario: "muy producido/estético").
+
+### 4. Orientación del rover
+El detector automático de ejes del modelo falló (rover de lado). Se verificó visualmente y se fijó: el modelo avanza hacia
+**+z** (`flip: false`); el brazo y el mástil quedan al frente. Ver `docs/assets.md`.
+
+### 5. Rediseño plano — referencia ShellWatch
+Paleta amarillo `#FFEB6D` / azul `#225DFF`, borde de 4px, esquinas de 15px, tipografía tipo Futura (se usa **Jost**).
+Relieve en 5 franjas planas, rover como punto azul con flecha negra, sin radar ni efectos. Chips de controles en píldora.
+
+### 6. Rediseño — referencia Abatable
+Paleta papel `#F5F6F3`, tinta `#0A0A0A`, marino `#002642`, naranja `#FF5C29`, verde musgo; tipografía **Instrument Sans**
+(alternativa libre a PP Mori). Mapa topográfico con **curvas de nivel** (marching squares), cruz sobre el rover y recorrido
+discontinuo. Dos variantes: **Papel** y **Marino**.
+
+### 7. Sistema de estilos (temas)
+Los tres estilos conviven. Un selector arriba a la izquierda (y las teclas `1…9`) cambia entre ellos; se persiste en
+`localStorage`. Todo el aspecto del minimapa, selectores y chips sale de tokens en `src/lib/themes.ts`.
+Detalle: se ocultan las curvas del borde aplanado (se amontonaban en un anillo).
+
+### 8. Segundo vehículo y terreno (misiones)
+Se añadieron `moon-terrain.stl` y `sev.glb`. Se creó el concepto de **misión** (`src/lib/missions.ts`): cada una define terreno,
+vehículo, entorno (cielo/niebla/luz), polvo y huellas. Selector **Vehículo** (y tecla `M`). Cambiar de vehículo reinicia el
+rover y regenera el terreno y el minimapa. Ajustes: materiales metálicos limitados (el SEV salía negro), margen de borde por
+misión (en la Luna el borde aplanado es una pendiente empinada), punto de salida en la zona más plana.
+
+### 9. Cuarto estilo — referencia Mind Robotics
+Tema `mind` (tecla `4`): crema `#E8E5E0`, tinta `#061A1E`, verde azulado `#299093`, coral `#EF6156`, esquinas muy redondeadas y
+sin bordes, tipografía **Outfit** (alternativa libre a Centra No2). Se añadió el campo `caps` a los temas para poder usar texto
+en capitalización normal en vez de mayúsculas.
+
+### 10. Escala de los vehículos (revisión) y checkpoints de storytelling
+- **Revisión de escala:** se comprobó que los vehículos **no** tienen escala real (200–2000× más grandes que lo que
+  corresponde al terreno; los STL son maquetas de ≈ 118 m/u en la Luna y ≈ 470 m/u en Marte). El usuario decidió **dejarlo así
+  por ahora** y documentarlo como pendiente: ver «Por resolver: escala real» en [roadmap.md](roadmap.md).
+- **Storytelling:** cada expedición (Opportunity · Mars, SEV · Moon) tiene **3 checkpoints** sobre el terreno. Al entrar en su
+  radio aparece una **tarjeta abajo a la izquierda** con foto, texto y 3 datos (el usuario la probó arriba a la derecha y la
+  devolvió a abajo a la izquierda); el minimapa muestra rombos numerados que se rellenan al alcanzarlos y hay balizas 3D
+  (poste + gema + anillo sobre el terreno). El texto es inventado pero verosímil
+  (Eagle → Endurance → Victoria en Marte; Antares → Cone → muestreo en la Luna) y las fotos son de NASA (dominio público).
+- Decisiones de diseño: datos en `lib/checkpoints.ts` (no en componentes); tarjeta y rombos con tokens de tema (`checkpoint`
+  en `themes.ts`), plana y sin efectos; el estado va en `game` (`checkpoints`, `visited`, `active`) y la tarjeta lo consulta
+  con un bucle rAF para no re-renderizar por frame. Los puntos se eligieron mirando el mapa de alturas del STL (cráteres y
+  zonas altas) y evitando el punto de salida.
+
+### 11. Narración de checkpoints con ElevenLabs
+El usuario quiso experimentar con ElevenLabs: al llegar a un checkpoint se narra su texto. Primera versión: un Route Handler
+(`/api/narrate`) que generaba el audio **en tiempo real** con caché en disco (clave solo en el servidor, el cliente enviaba
+ids). Tras probarla con la clave real, el usuario prefirió **generar el audio antes, una sola vez**, y guardar la grabación
+como metadato → ver hito 12. Narración automática al entrar, corte al salir, tecla `N` y botón en la tarjeta se mantienen.
+
+### 12. Audio pregrabado, voz narrativa e interfaz 100 % en inglés
+- **Pregrabado:** se eliminó el Route Handler y la caché. `scripts/generate-narration.mjs` (`npm run narration`) graba cada
+  checkpoint con ElevenLabs **una vez** (solo lo nuevo o cambiado, por hash) en `public/narration/<id>.mp3` +
+  `manifest.json`; cada `Checkpoint` guarda su `audio` (ruta) y su `narration` (guion hablado) como metadatos. La app solo
+  reproduce los mp3 estáticos: cero llamadas a la API en ejecución y la clave solo se usa en el script.
+- **Voz más narrativa:** voz **Bill** (madura, pausada: ritmo de documental) con el modelo **`eleven_v4`**. Se compararon
+  Brian, Bill, Daniel y George; la clave está restringida (sin `voices_read`) y no se pueden listar voces por API.
+- **Inglés:** toda la interfaz (selectores, chips, minimapa, tarjeta, nombres de vehículos y estilos) y los textos/audios de
+  los checkpoints pasaron a inglés. La documentación del repo sigue en español.
+
+### 13. Guía de voz «mission control»
+El usuario propuso dar retroalimentación auditiva corta mientras el jugador está en la experiencia («debes ir al primer punto»,
+«aún te queda mucho», «casi lo terminas», «a la derecha/izquierda»…), sin sobrecargar, y pidió unas 100 frases genéricas,
+documentadas y asignadas a cada vehículo. Se valoró que es buena idea **si es escasa y contextual** y se implementó:
+- **102 frases** (70 genéricas, 16 solo Marte, 16 solo Luna) en `src/lib/guide-lines.ts`, grabadas una vez con `npm run guide`
+  (voz Daniel, `eleven_flash_v2_5`, 723 créditos) en `public/guide/`; catálogo autogenerado en [guide.md](guide.md).
+- **Motor** (`lib/guide.ts`): objetivo = primer checkpoint sin visitar; dirección **relativa al vehículo** (A/D) con histéresis de
+  2,5 s; bandas de distancia 25/50/75 %; secuencia «progreso + siguiente objetivo» al salir de un checkpoint; avisos al estar parado,
+  cerca del borde, en pendiente o con turbo prolongado. **Anti-saturación:** una voz a la vez, nunca sobre la narración ni dentro de un
+  checkpoint, 6 s de silencio, enfriamientos por categoría, variantes sin repetir, nada antes del primer gesto.
+- **Subtítulo** de cada frase y tecla `G` (chip «Guide on/off»). Voz distinta de la del narrador (Bill) para separar historia e
+  instrucciones.
+- Refactor: `scripts/lib/tts.mjs` compartido por `generate-narration.mjs` y `generate-guide.mjs` (mismo hash: la narración no se regrabó).
+- Probado en el navegador con el audio real: bienvenida, primer objetivo, cambio de canal a la narración al entrar, secuencia de salida,
+  borde, dirección y parado. Hallazgo corregido: girar en el sitio no cuenta como «parado».
+
+### 14. Cambio de enfoque: ruta definida, solo `Espacio` y línea de tiempo
+El usuario cambió el planteamiento de la PoC: **ya no se conduce libremente** (se quitó WASD/flechas/Shift) y cada vehículo sigue una
+**ruta definida** que pasa por sus checkpoints. Lo implementado:
+- **Salida y final como checkpoints** (con foto, datos y narración como los demás; ahora 5 por expedición): Marte `landing`
+  (Sol 0, aterrizaje con airbags) → Eagle → Endurance → Victoria → `perseverance` (Sol 5111, última señal en la tormenta de polvo de
+  2018: **real**); Luna `landing-zone` (Fra Mauro) → Antares → Cone → Sampling → `last-light` (el SEV se apaga al caer el sol:
+  **inventado**, el SEV es solo una prueba). 4 clips de narración nuevos (Bill, `eleven_v4`, 430 créditos) y 4 fotos NASA nuevas.
+- **Ruta** (`lib/route.ts`): una curva suave por tramo a través de los `via` de cada checkpoint, calculados con un A\* sobre el mapa
+  de alturas para esquivar pendientes (la recta en Marte llegaba a 56°; ahora ≤ ~20°). El vehículo se detiene en el centro de
+  cada checkpoint.
+- **`Espacio` mantenido** = avanzar hasta el siguiente checkpoint (hay que soltar y volver a pulsar para seguir). Se eligió
+  «mantener» y no «alternar» por ser lo más parecido a conducir; se puede cambiar en `Rover.tsx`.
+- **Línea de tiempo** horizontal (`Timeline.tsx`): marcadores equiespaciados por checkpoint, progreso proporcional dentro del
+  tramo, **solo se puede viajar a los checkpoints** (clic → piloto automático hacia delante o hacia atrás; los intermedios solo
+  cuentan como visitados, sin tarjeta ni narración).
+- **Limpieza**: fuera `findSpawn`, `margin`, `spawnRadius`, `trail` y `slope` del estado; el minimapa dibuja la ruta. **Guía de voz**
+  recortada de 102 a 49 frases: se eliminaron bienvenida, dirección, rumbo, borde, pendiente, turbo, ánimo, fuera de ruta y las de
+  «quedan N»; se mantuvieron distancia, siguiente objetivo, progreso, final, parado y `ready`, y se añadieron 3 que mencionan
+  `Space`. Se borraron los 60 mp3 sobrantes y sus entradas del manifiesto.
+
+### 15. Vista de entrada: globos de Marte y la Luna («abandonados») y «viajar al pasado»
+Tras revisar Eyes on Curiosity y science.nasa.gov/eyes (ver ideas en [roadmap.md](roadmap.md)), el usuario y su compañero de hackathon cambiaron el
+enfoque: ver **cómo se movieron los vehículos hasta quedar abandonados**. Al cargar ahora hay una vista previa (`Explore`, ver [architecture.md](architecture.md)):
+globos (Marte, Luna) que se pueden girar, con un marcador donde quedó cada vehículo (Opportunity: Perseverance Valley ≈ 2,3°S 5,5°O;
+SEV: Fra Mauro, ficticio) → la lista de vehículos del mundo → tarjeta con el modelo 3D **empolvado** (no manipulable) y el botón **«Travel to the past»**,
+que abre la escena de siempre en el checkpoint de salida (`← Globe` vuelve). Decisiones: el polvo es un shader sobre el GLB real, sin assets nuevos.
+
+**Giro de estilo (mismo hito):** el primer globo usaba texturas realistas; al usuario no le gustó lo «realista». Pasó a un **globo alámbrico claro** (referencia: carta estelar con rejilla azul, estrellas como cuadrados
+negros, etiquetas con ticks y tag amarillo), sin assets, y se pidió que **toda la demo tenga tema claro**: nuevo tema `light` («Light · Blue», por defecto, tecla `1`) y tokens `globe` en los 5 temas. La escena 3D del rover sigue con el cielo de cada misión.
+
+### 16. Una sola vista de globo + rutas por vehículo
+Se simplificaron las dos vistas iniciales en una: **globo único** (Luna por defecto) con selector Luna/Marte a la izquierda y, en la misma vista, la lista y la tarjeta del
+vehículo. El globo **solo gira en el eje vertical** (sin inclinar) y **se quitaron las líneas traseras** (solo se ve lo que da la cara). **Rutas**: `/moon`, `/mars` (globo; el selector
+cambia con `pushState`, sin remontar), `/moon/sev` y `/mars/opportunity` (la escena); `/` redirige a `/moon`. Cada ruta carga solo sus recursos (el globo no descarga la escena del rover; el viaje carga únicamente el terreno y el GLB
+de ese vehículo). Se eliminó `App.tsx` y `poc-mission` (el vehículo lo decide la URL). Detalles en [architecture.md](architecture.md).
+
+**Ajuste posterior:** el globo vuelve a **girar solo** y conserva la inercia del arrastre; los cuadrados negros ahora **orbitan con la esfera** (referencia: portalsystems.space, sección del globo) y los que quedan
+detrás no se dibujan.
+
+### 17. Globo ortográfico, foto en la tarjeta y regla de diseño flat
+- **Globo «chueco»**: con perspectiva (fov 35) y el globo desplazado a la derecha de la cámara, la esfera se deformaba y la rejilla se inclinaba. Ahora la cámara es **ortográfica**
+  (círculo perfecto, rejilla simétrica), con elevación fija `TILT` ≈ 29° (aspecto isométrico), eje vertical en pantalla, contorno del limbo y el globo **centrado en el área libre** a la derecha del panel (`frame()`).
+- **Tarjeta del vehículo**: el modelo 3D «empolvado» se sustituyó por una **foto de NASA** (`public/images/vehicles`: Opportunity = autorretrato polvoriento PIA17759; SEV = Lunar Electric Rover, su antecesor). Se eliminó el mini `Canvas`, el shader de polvo y las motas.
+- **Diseño**: el usuario fijó **flat design** como regla de toda la demo → [design.md](design.md). La paleta/tipografía definitivas llegarán después (los 5 temas son provisionales). Refactor menor: estilos DOM compartidos en `lib/ui.ts`.
+- La línea de tiempo (`Timeline.tsx`) **no se tocó**: queda pendiente de revisar con el diseño definitivo.
+
+### 18. Vehículos nuevos en el estilo de las ilustraciones de referencia
+El usuario quiso vehículos **nuevos** (no una capa de estilo sobre los GLB) con la estética de las ilustraciones de [primer.io/payment-pioneers](https://primer.io/payment-pioneers): 3 tonos de un color,
+fondo gris liso, sin contornos ni degradados. Se eligió **3D en código** (frente a ilustración 2D) y paleta por mundo: **Marte coral** (`#E65A4F/#F9A66C/#FFE4E0`), **Luna azul** (`#1650B0/#7FB0E3/#F2F7FC`), fondo `#D9D9D9`.
+- `lib/vehicles.ts`: Opportunity y SEV construidos con primitivas (cajas redondeadas, cilindros), `ShaderMaterial` de 3 bandas por el ángulo con una luz fija. Reemplazan a los GLB en la escena y en la tarjeta del globo
+  (`VehicleView`, giro lento sobre fondo liso). Las ruedas son pivotes independientes y **giran** con la velocidad.
+- `Rover.tsx` perdió `prepareRover` (clonado, `metalness`, detección de ruedas por flood-fill): el modelo declara sus ruedas. `RoverConfig` cambió `url/scale/flip` por `model/palette`.
+- Las fotos de NASA de la tarjeta (hito 17) quedaron **sin uso** (y los GLB también); se conservan. Terreno, cielo y UI siguen con el aspecto anterior: son los siguientes pasos del rediseño.
+
+### 19. Rediseño completo: tema «Primer» único y movimiento suave
+El usuario fijó la referencia **primer.io/payment-pioneers** para **toda** la demo («que todo sea suave, nada brusco») y pidió un único tema por defecto. Se midió la página (computed styles): lienzo `#F9FAF7`, tinta `#0D0D0D`,
+superficie `#EDEEEB`, gris `#616161`, línea `#DADADA`, naranja `#FF540A`; grotesca propietaria (Onsite Standard, peso 450, tracking −0,04 em en títulos) + JetBrains Mono en mayúsculas para botones y etiquetas; radios 2–4 px; curvas `cubic-bezier(0.22,1,0.36,1)`.
+- **Un solo tema**: `themes.ts` exporta `THEME`; se eliminaron los 5 temas, el selector «Style», las teclas `1…9`, `use-theme.ts` y `prefs.ts`. Los tokens se publican como variables CSS (`cssVars`) y los usa tanto `globals.css` (clases `.ui-btn`, `.ui-link`, `.ui-row`, `.ui-nav`) como el canvas/WebGL.
+- **Tipografía**: Hanken Grotesk (sustituto libre de la grotesca de la referencia) + JetBrains Mono. Sin kickers sobre los títulos; metadatos en mono bajo el título.
+- **UI**: paneles planos `#EDEEEB`, botón primario de tinta con flecha que se desliza, barra superior de tinta (como la navegación de la referencia), línea de tiempo con cuadrados y punto naranja, minimapa de curvas de nivel con ruta en tinta y el vehículo en naranja.
+- **Globo**: rejilla gris fina sobre el lienzo, contorno y estrellas en tinta, marcador naranja, etiqueta oscura en mono.
+- **Escena 3D**: terreno con `MeshToonMaterial` de 3 tonos (mismo lenguaje que los vehículos) en arena (Marte) y gris azulado (Luna), cielo y niebla del color del lienzo, `Canvas flat` (sin tone mapping, colores exactos); balizas de tinta con una gema naranja.
+- **Movimiento**: todo con la misma curva y duraciones 250/600/1000 ms; entrada escalonada (`Reveal`), fundido al color del lienzo al viajar (Explore → escena y al revés), balizas y tarjetas que cambian de color/opacidad por interpolación, `prefers-reduced-motion` respetado.
+- **Superficies del navegador** tematizadas: selección naranja, cursor, scrollbars finas, anillo de foco de tinta, `Loader` de drei.
+- Nota de proceso: el skill de diseño pide un revisor de acabado en un subagente; no se lanzó (se prefirió no gastar subagentes sin que el usuario los pidiera): la revisión fue visual en el navegador.
+
+### 20. Pulido del tema: hover de Primer, iconos propios, vehículo quieto, terreno con contraste y transcripción
+- **Hover** medido en la referencia con el puntero encima: el botón primario se rellena de lima (`#D7F94F`) con un barrido y el texto pasa a tinta; los enlaces pasan a `#FF916B`; las flechas se deslizan. Replicado en `.ui-btn`, `.ui-row`, `.ui-nav`, `.ui-marker`, `.ui-link` (ver [design.md](design.md)).
+- **Iconos**: `Icon.tsx` con trazo de 1,5 px (flecha de la referencia, chevron, play, stop, pause, close); desaparecen los glifos →, ←, ▶, ■, ▾.
+- **Vehículo en la tarjeta del globo**: quieto, vista isométrica, render a demanda (antes giraba).
+- **Terreno**: más oscuro y con 3 tonos más separados (arena en Marte, gris azulado en la Luna); cielo algo más claro para separar el horizonte.
+- **Transcripción de la narración**: `Captions` muestra frase a frase lo que dice el narrador (y la guía). **Solo se pide el audio a ElevenLabs; los tiempos se calculan en el cliente** (duración real del clip repartida por caracteres y pausas). El usuario comprobó que queda perfectamente sincronizado y lo fijó como método para cualquier audio nuevo (receta en [narration.md](narration.md)). ElevenLabs ofrece timestamps con `/with-timestamps`, pero se descartó: obliga a regrabar y gasta créditos.
+
+### 21. Marcador sin punto, terreno con curvas de nivel, bug de «volver» y auditoría del hover
+- **Línea de tiempo y minimapa**: el vehículo parado en un checkpoint **rellena su cuadrado de naranja** (sin punto, sin aro discontinuo, sin flecha); el punto y la flecha de rumbo solo aparecen al desplazarse, con fundido. Ver [design.md](design.md).
+- **Terreno**: sigue siendo el mismo mapa de alturas de NASA (no se genera otro «poly»); ahora el shader dibuja **curvas de nivel** (`lines`, `step` por misión) para darle bordes y legibilidad.
+- **Bug de volver al globo**: página en blanco al volver con «← Globe» o Atrás tras «Travel to the past». Causa: Next conserva `Explore` montado con su estado (`leaving = true`, el velo del viaje) y re-ejecuta sus efectos al volver; se reinicia ahora en el efecto de montaje (ver [gotchas.md](gotchas.md)).
+- **Hover**: el botón «Globe» se veía negro (texto de tinta sobre la barra de tinta) porque un `background` en línea anulaba el barrido lima. Auditados todos los botones: primarios, ghost, pestañas, enlaces, desplegable, barra superior, marcadores de la línea de tiempo.
+
+### 22. Rendimiento: perfil `light` y liberación de vistas ocultas
+La laptop del usuario iba «casi al full». Se midió (GPU por proceso, memoria compartida de GPU, canvases, bucles `requestAnimationFrame`, y experimentos A/B con interruptores temporales): el JS es despreciable; el coste es la **GPU integrada** (escena 26 %, globo 17–21 %) por canvas de 4,8 Mpx (`dpr` 2 + MSAA) y,
+sobre todo, porque Next **conserva montadas las rutas visitadas** (cada escena retenía ~350–400 MB de memoria de GPU). Sombras y curvas de nivel no pesan. Cambios (todo tras un interruptor, `lib/perf.ts`): `dpr` ≤ 1,5, sin antialiasing en la escena, escena a 30 fps con el vehículo parado (`FrameGovernor`; ver el truco de `useFrame` en
+[gotchas.md](gotchas.md)), y `Scene`/`Explore` liberan su canvas cuando no son la ruta actual. Resultado: escena parada 26 → ~10 % GPU, globo → ~13 %, canvases tras dos visitas 8 → 3. Detalle y método en [performance.md](performance.md). Volver atrás: `PERF_PROFILE = "full"`.
+
+### 23. Precarga y transiciones sin cortes
+El usuario pidió componentes de precarga, sobre todo una pantalla de carga al cargar el modelo para que la escena no aparezca de golpe. Hallazgos: el velo de la escena se desvanecía **aunque el terreno aún no hubiera cargado** (luego aparecía de golpe), el `Loader` de drei era distinto al resto, los `Suspense` de las rutas
+usaban colores antiguos (negro `#07080d`) y el globo y la tarjeta del vehículo aparecían de golpe. Ahora: pantalla de carga única (`Loading`) con progreso real del STL y etapa («Downloading / Building terrain») que se mantiene hasta que el terreno está construido y compilado (`Preload all`), fundidos de salida antes de navegar (escena y globo), fundido de entrada del canvas del globo,
+del vehículo y de las fotos (`FadeImg`). Ver [design.md](design.md#carga-precarga--componentsloadingtsx).
+
+### 24. Música de fondo
+El usuario pidió sonidos de fondo livianos y acogedores para /moon, /mars y la línea de tiempo, generados con ElevenLabs y reproducidos en bucle, bajando el volumen mientras se narra. Se grabaron 3 pistas instrumentales con ElevenLabs Music (`npm run ambient`, prompts en `lib/ambient-tracks.ts`) y se reproducen con `lib/ambient.ts`: crossfade entre lugares, bucle con solapamiento de 4 s y *ducking* al 20 % mientras suena la narración o la guía. Tecla `S` (con su chip en la escena) y botón «Music on/off» en el globo. Se intenta sonar al cargar; si el navegador lo bloquea, arranca con el primer gesto. Ver [ambient.md](ambient.md).
+
+### 25. Tarjeta «Created by»
+El usuario pidió un botón pequeño que muestre a los autores en una tarjeta flotante («Created by»), una tarjeta por persona con retrato, nombre, rol y enlace de LinkedIn, siguiendo las tarjetas de entrevista de Primer. Primero solo la suya (Jackson Merma, «AI & Software Engineer»), con un retrato 2D plano dibujado en SVG a partir de su foto (azules en pocos tonos, como la referencia). Datos en `lib/team.ts`, retratos en `Portrait.tsx`, tarjeta en `Credits.tsx` (botón en el globo). **Oculta tras verla** (al usuario no le gustó): el código se conserva sin montar. Si vuelve, falta la tarjeta del compañero. Ver [design.md](design.md#créditos--created-by-componentscreditstsx-portraittsx).
+
+### 26. Tercer vehículo: Perseverance (prueba) sobre el terreno de Gale
+El usuario aportó `Mars 2020 Perseverance Rover.glb` y `Curiosity Landing Site.stl` y pidió un vehículo de prueba más, con todos sus recursos (modelo poly, audios, checkpoints) y sin música nueva. Investigación: el STL es de **Marte** (cráter Gale, aterrizaje de Curiosity en 2012; mismo formato y tamaño que el terreno de Opportunity), pero Perseverance está en el cráter Jezero y sigue activo. Decisión del usuario (entre dos opciones): **historia real de Perseverance + final ficticio**, dibujada sobre el terreno de Gale como escenario de prueba (documentado en `bodies.ts`, `missions.ts` y los textos). Hecho: modelo procedural `perseverance` (verde) en `vehicles.ts`; 6 checkpoints (aterrizaje, Ingenuity, Montdenier, delta, Three Forks y el final ficticio «Last Sol») con fotos NASA y datos verificados en images.nasa.gov; ruta trazada con A* sobre el mapa de alturas de Gale (pendiente máxima 13°); 6 narraciones y 13 frases de guía (`next/remind`, `done`, `idle`) grabadas con ElevenLabs; marcador en el globo de Marte (Jezero, 18,4° N 77,5° E). Sin música propia: usa la cama `timeline`. Detalles de la ruta: salida (274, 43), Ingenuity (259, −45), Montdenier (177, −97), delta (64, −217), Three Forks (−84, −206) y final (−268, −136), todos en terreno llano (pendiente media < 4°) elegidos con un mapa de alturas y pendientes del STL; tramos de 89–211 u. Al revisar la línea de tiempo con 6 paradas, los nombres largos ocupaban 3 líneas y casi tocaban el borde de la tarjeta: la fila de etiquetas reserva ahora espacio para 3 líneas (`Timeline.tsx`). Estilo del vehículo: verde `#0F7A5C / #5FC29A / #E6F7EE`. Ver [assets.md](assets.md) y [themes-and-missions.md](themes-and-missions.md).
+
+### 27. Vehículos con más detalle (medidos sobre los GLB)
+El usuario pidió volver a analizar los GLB y generar geometrías más completas **sin cambiar el estilo** («el estilo está genial, quiero más detalle»). Los GLB venían comprimidos con Draco; se decodificaron en Node y se midieron con vistas ortográficas con rejilla (un render propio, fuera del repo): el SEV es en realidad el **MMSEV** (cabina orgánica, 12 ruedas en 6 pares), el Perseverance viene con el mástil plegado y el de Opportunity es un modelo muy simple.
+- `lib/vehicles.ts` se partió: `lib/vehicles/kit.ts` (primitivas nuevas: tubos entre dos puntos, polígonos extruidos, revolución, `loft` con ventanas pintadas, ruedas con tacos y radios) y un archivo por vehículo. Los tres se rehicieron desde cero con las medidas de su GLB: ver la tabla de [assets.md](assets.md#vehículos).
+- **Coste:** todo se funde en 1 malla + 1 por rueda con un único material (el tono va en un atributo de vértice): 7 draw calls por vehículo frente a las ~50 mallas de antes, con 16–28 mil triángulos.
+- Cambian las huellas (Opportunity 10,9 de ancho; SEV 13,2 de largo por el morro; Perseverance 12,3 × 14,6) y las ruedas del SEV pasan a ser pares gemelos (una marca de huella por par). `VehicleView` encuadra con el centro real del vehículo (`rig.center`).
+- Comprobado en el navegador: las tres tarjetas del globo y las tres escenas en marcha (sombras, ruedas, sin errores de consola).
+
+### 28. Cuatro vehículos nuevos con historias ficticias (Spirit, Ingenuity, InSight, Beagle 2)
+El usuario pasó una lista de vehículos (`Downloads/vehiculos.jpeg`) y pidió **modelos 3D y una línea de tiempo ficticia de ≥ 5 checkpoints** para cada uno, **sin generar ningún audio** (se pueden repetir los existentes), sobre los terrenos de Marte que ya hay. El objetivo es ver los 3D, no la historia.
+- **Modelos** (`lib/vehicles/`): `spirit.ts` (el mismo MER de Opportunity, `mer()` con la rueda delantera derecha bloqueada y fija en la carrocería), `ingenuity.ts` (helicóptero: patas largas, fuselaje dorado, panel solar y **dos rotores contrarrotantes**), `insight.ts` (cubierta hexagonal, dos abanicos solares de 12 lados, brazo plegado con pinza, domo del sismómetro) y `beagle2.ts` (base oscura con el marco amarillo de calibración, tapa dorada con el brazo y cuatro paneles redondos «en pétalos»; no existe modelo 3D: se dibujó con las fotos de réplicas). Medidas sobre los GLB de NASA (`public/models/<id>/`, ver `SOURCES.md`).
+- **Kit:** `Kit.rotor(pos, rate, draw)` crea una pieza que gira sobre y (`rig.rotors`), `finish({ halfLen, halfWid, hover })` permite vehículos sin ruedas y `rig.hover` los hace flotar; `Rover.tsx` los anima (rotores siempre girando, cabeceo mayor con la aceleración, balanceo suave en vez de vibración). Ingenuity vuela a 6,4 u sobre el suelo; sin ruedas no deja huellas ni polvo.
+- **Ficción para que se muevan:** los landers reales no se desplazan. Esta demo pone **una rueda bajo cada pata de InSight** (3) y **un chasis de 4 ruedas bajo Beagle 2**; el texto y el marcador del globo lo dicen («demo», «Fictional»).
+- **Historias** (`lib/checkpoints-demo.ts`): 5 checkpoints por vehículo, todos `demo: true`, con nombres, fechas y cifras inventados. Rutas calculadas con A* sobre el mapa de pendientes de cada STL (pendiente media < 2,5° salvo los vuelos de Ingenuity, que cruzan terreno abrupto): Spirit y Beagle 2 en `terrain.stl`; Ingenuity e InSight en `gale-terrain.stl`. Marcadores del globo en Gusev, Jezero (desplazado), Elysium e Isidis.
+- **Audio, regla fijada por el usuario: no se graba nada.** Cada checkpoint demo reutiliza el mp3 de **otro** checkpoint (`audio`), así que **el subtítulo no coincide con lo que dice la voz**. Los checkpoints demo **no están en `ALL_CHECKPOINTS`**, para que `npm run narration` / `npm run guide` nunca los toquen (sobrescribirían los clips compartidos), y la guía de voz calla sobre ellos (`cpLine` devuelve `null` si `demo`; los `done`/`idle` de vehículo no existen para los nuevos).
+- **Fotos** (`public/images/checkpoints/mars-<vehículo>-*.jpg`, 960 × 600): recortes de fotos reales de NASA (pruebas en la Tierra, selfies, ilustración) o de **réplicas de Beagle 2** de Wikimedia Commons (**CC BY / CC BY-SA**: el crédito con autor y licencia sale bajo la foto). El `credit` de cada una dice qué muestra de verdad.
+- Comprobado en el navegador: las 4 tarjetas del globo y las 4 escenas de punta a punta (InSight, Spirit y Beagle 2 completan la ruta; Ingenuity vuela y se detiene en cada punto), sin errores de consola.
+
+## Decisiones técnicas importantes
+
+| Decisión | Motivo |
+| --- | --- |
+| Estado compartido en un objeto mutable (`game`) | Escena y DOM leen el mismo estado sin re-renderizar React 60 veces/s. |
+| Mapa de alturas rasterizado en lugar de *raycast* | Mucho más rápido y permite el minimapa y la física con la misma fuente. |
+| Dibujar el minimapa en `<canvas>` 2D con *bake* + capa dinámica | El fondo (relieve/curvas) se calcula una vez; cada frame solo se pintan recorrido y marcador. |
+| Tokens de tema en datos (`themes.ts`) | Añadir un estilo = añadir un objeto, sin tocar componentes. |
+| `react-hooks/immutability` desactivada | Falsos positivos con la mutación imperativa propia de `useFrame`. |
+| Vehículos procedurales de 3 tonos | Estilo plano de las referencias del usuario; ruedas separadas (giran) y sin GLB ni detección de ruedas. |
+| Vehículo = 1 malla + 1 por rueda, tono por vértice | El detalle no cuesta draw calls: cientos de piezas se hornean en una sola geometría con un único material. |
+| Vehículos demo con audio prestado y fuera de `ALL_CHECKPOINTS` | Regla del usuario: no grabar audio nuevo. Los scripts de grabación escriben en `cp.audio`: si incluyeran estos checkpoints sobrescribirían los clips ajenos. |
+
+## Estado actual
+
+**Última versión de la demo** (rama `master`; el ajuste final del hito 16 —giro automático y cuadrados orbitantes— está sin commitear al escribir esto): entrada por un **globo alámbrico claro**
+(`/moon`, `/mars`) con los vehículos abandonados y «Travel to the past» hacia `/<mundo>/<vehículo>`; 2 expediciones (Opportunity en Marte, SEV en la Luna) que
+recorren una **ruta definida** con `Espacio` y línea de tiempo, 5 estilos (por defecto `light`), minimapa con la ruta, polvo, huellas, cámara, **5 checkpoints
+por expedición** (salida, 3 paradas y final) con baliza 3D, rombo en el minimapa y tarjeta informativa
+(abajo a la izquierda), y **narración con voz** pregrabada (Bill, `eleven_v4`; automática al llegar, tecla `N`, botón
+Listen/Stop). Todo el texto y audio de la interfaz en inglés. La app no necesita claves ni red para jugar (salvo el
+decodificador Draco por CDN).
+
+Deudas conocidas: **escala real de los vehículos** (ver [roadmap.md](roadmap.md)), voz sin evaluar de oído, `visited` no
+persistente. Pendiente / ideas: ver [roadmap.md](roadmap.md). Verificación hecha: `tsc`, `eslint` y `npm run build` limpios y
+pruebas manuales en el navegador (ver [gotchas.md](gotchas.md) para el método).

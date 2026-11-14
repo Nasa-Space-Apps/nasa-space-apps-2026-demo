@@ -1,0 +1,36 @@
+# Proyecto: Rover PoC (Next.js + three.js)
+
+Antes de tocar código, lee **`docs/README.md`** (índice) y **`docs/architecture.md`**. Para tareas de estilo o de vehículos,
+`docs/themes-and-missions.md`. Las reglas de Next del proyecto están en `@AGENTS.md`.
+
+## Convenciones
+
+- El usuario escribe en español; responde en español. Código e identificadores en inglés.
+- Estado compartido escena ⇄ DOM: `src/lib/game.ts` (objeto mutable, sin re-renders). No lo conviertas en estado de React.
+- Datos de terreno/vehículo van en `src/lib/missions.ts` y los tokens de diseño en `src/lib/themes.ts`, no hardcodeados en componentes.
+- El mutado imperativo dentro de `useFrame` es intencional; la regla `react-hooks/immutability` está desactivada a propósito
+  (`eslint.config.mjs`).
+- Diseño de UI: **tema único «Primer» + flat design, regla obligatoria de toda la demo** (sin sombras/brillos/degradados/efectos "IA"; movimiento siempre suave): léelo en `docs/design.md` antes de tocar UI. Los tokens viven **solo** en `src/lib/themes.ts` (`THEME`, publicados como variables CSS); estilos DOM compartidos en `src/lib/ui.ts` y clases `.ui-*` de `globals.css`. Todas las transiciones usan `THEME.ease`/`dur`; no escribas colores ni curvas sueltos. Iconos solo de `components/Icon.tsx` (nada de glifos → ▶ ■); botones con las clases `.ui-btn`/`.ui-link` (hover de Primer: barrido lima).
+- Antes de dar algo por hecho: `npx tsc --noEmit` y `npm run lint`. Para verlo en el navegador, ver `docs/gotchas.md`.
+- Carga: nada aparece de golpe. Pantalla de carga única en `components/Loading.tsx` (fallbacks de ruta, chunks y la escena, que espera a `game.terrain`); las salidas se funden **antes** de navegar y los canvas/fotos entran con fundido (`FadeImg`, `onCreated`). Detalle en `docs/design.md` («Carga»).
+- Rendimiento: `src/lib/perf.ts` tiene un perfil (`light` por defecto / `full`) que limita el `dpr` (1,5), quita el antialiasing de la escena, baja a 30 fps la escena parada y libera el canvas de las vistas que no son la ruta actual. No pongas `dpr`/`antialias` sueltos en un `Canvas`: usa `PERF`. Mediciones y método: `docs/performance.md`. Para volver atrás: `PERF_PROFILE = "full"`.
+- El tercer vehículo (`perseverance`, prueba) usa la historia real de Perseverance (Jezero) sobre el terreno de Gale (`gale-terrain.stl`) y un final ficticio; ver `docs/history.md` (hito 26). Al añadir otro vehículo, sigue la receta de `docs/themes-and-missions.md` (`scripts/generate-guide.mjs` y `lib/guide-lines.ts` también conocen los vehículos por id).
+- Vehículos **demo ficticios** (`spirit`, `ingenuity`, `insight`, `beagle-2`): historias inventadas en `src/lib/checkpoints-demo.ts` (checkpoints `demo: true`) para probar sus 3D. **Regla del usuario: no se graba audio para ellos**: reutilizan mp3 de otros checkpoints y **no están en `ALL_CHECKPOINTS`** (los scripts de narración/guía escriben en `cp.audio` y pisarían los clips ajenos); la guía de voz no habla de ellos. Ver `docs/history.md` (hito 28).
+- Los terrenos (STL) viven en `public/models` y se documentan en `docs/assets.md`. **Los vehículos son procedurales**: 3 tonos de un color, sin GLB, en el estilo de `docs/design.md#vehículos`; no les apliques capas de estilo a modelos importados. Un archivo por vehículo en `src/lib/vehicles/<id>.ts`, dibujado con el kit de `src/lib/vehicles/kit.ts` (todo se funde en 1 malla + 1 por rueda; no crees mallas sueltas) y con proporciones medidas sobre el GLB de referencia de `public/models`; `src/lib/vehicles.ts` solo expone `buildVehicle`.
+- La interfaz y los textos/audios del juego van **en inglés** (la documentación del repo, en español).
+- Todo lo que dice una voz tiene subtítulo (`Captions.tsx`). **Método fijado por el usuario:** de ElevenLabs solo se pide el audio y los tiempos se calculan en el cliente (`lib/transcript.ts`, duración real repartida por caracteres): para audios nuevos graba solo el audio y el subtítulo funciona solo. No pidas timestamps a ElevenLabs. Receta en `docs/narration.md`.
+- Créditos (**ocultos, no montados**): botón «Credits» con la tarjeta «Created by» (`components/Credits.tsx`); personas en `src/lib/team.ts`, retratos 2D planos en SVG (`components/Portrait.tsx` + `src/lib/portraits/<id>.ts`, **calcados de la foto** con `scripts/portrait`, no dibujados a ojo) con los colores `THEME.portrait`. Detalle en `docs/design.md` («Créditos»).
+- Música de fondo: 3 camas pregrabadas con ElevenLabs Music (`npm run ambient`, prompts en `src/lib/ambient-tracks.ts`, audios en `public/ambient`), reproducidas por `lib/ambient.ts` (`<Ambient track=…/>` en `Explore` y `Scene`): bucle con crossfade, bajan al 20 % mientras suena narración o guía, tecla `S`. Detalle en `docs/ambient.md`.
+- Narración (ElevenLabs): audios **pregrabados** en `public/narration` con `npm run narration` (script `scripts/generate-narration.mjs`);
+  la app no llama a ninguna API en ejecución. La API key solo en `.env.local` (`ELEVENLABS_API_KEY`, sin `NEXT_PUBLIC_`) y solo
+  la usa el script. Si cambias un `narration` en `checkpoints.ts`, regraba el clip. Ver `docs/narration.md`. Nunca leas ni imprimas `.env.local`.
+- Guía de voz: frases en `src/lib/guide-lines.ts` (sin imports; las carga también Node), audios pregrabados con `npm run guide`;
+  catálogo en `docs/guide.md` (se regenera con `npm run guide -- --docs`). Si cambias frases, regraba y regenera el catálogo.
+  Poca y contextual: respeta las reglas anti-saturación de `docs/guide.md` al añadir categorías.
+- Los checkpoints/textos del storytelling van en `src/lib/checkpoints.ts` (no en componentes); sus fotos en
+  `public/images/checkpoints` (16:10, créditos en `docs/assets.md`). Los vehículos aún no tienen escala real: ver `docs/roadmap.md`.
+- Rutas: `/` → `/moon`; `/[body]` es el globo (`Explore`) y `/[body]/[vehicle]` la escena del rover (`Scene`, el slug es el id de la misión). Mundos y vehículos
+  abandonados en `src/lib/bodies.ts`. Cada vista se carga por su loader (`ExploreLoader`/`SceneLoader`, `ssr:false`); no importes la escena desde el globo ni al revés. `cacheComponents` está
+  activo: `await params` va dentro de un `<Suspense>`. Ver «Rutas y vistas» en `docs/architecture.md`.
+- Globo: estilo alámbrico claro con tokens `theme.globe`; **sin texturas ni assets**; **cámara ortográfica** con elevación fija (aspecto isométrico); solo gira en el eje vertical, gira solo, y solo se dibuja lo de delante. La tarjeta del vehículo dibuja el vehículo procedural (`VehicleView`) sobre fondo liso. No uses `Html` de drei (etiquetas DOM en `GlobeLabels.tsx`).
+- No hay selector de temas ni atajos `1…9`. Los `@keyframes` nuevos en `globals.css` no se recogen en dev: usa transiciones inline (`ease()` de `lib/ui.ts`, `Reveal`).

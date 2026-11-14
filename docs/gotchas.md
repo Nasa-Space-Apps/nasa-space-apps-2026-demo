@@ -1,0 +1,132 @@
+# Trampas y problemas ya resueltos
+
+## Next.js 16
+
+- `AGENTS.md` (generado por Next) avisa de que esta versión cambia APIs respecto a lo habitual. Consulta
+  `node_modules/next/dist/docs/` antes de usar APIs de Next que no conozcas. `layout.tsx` usa el tipo global `LayoutProps<"/">`.
+- `ssr: false` en `next/dynamic` solo funciona dentro de un Client Component → por eso existen `SceneLoader.tsx` y `ExploreLoader.tsx`.
+- **`cacheComponents` está activo** (`next.config.ts`): `await params` fuera de `<Suspense>` da «instant shell»; ver «Rutas y vistas» en [architecture.md](architecture.md). Las rutas no válidas devuelven 200 con la página 404 (el `notFound()` ocurre dentro del Suspense ya en streaming).
+- `next dev` muestra un indicador "N" abajo a la izquierda (solo en desarrollo). Los chips de controles están centrados abajo
+  para no solaparse con él.
+
+## ESLint / React Compiler
+
+- La regla `react-hooks/immutability` marcaba como error la mutación dentro de `useFrame` (posiciones, `game.*`, buffers). Es
+  un falso positivo para código imperativo de R3F → **desactivada** en `eslint.config.mjs`.
+- No asignes `game.*` durante el render (la regla lo veía como error); hazlo en `useEffect` o en `useFrame`.
+
+## three.js / R3F
+
+- **Avisos de consola inofensivos:** `THREE.Clock deprecated` y `PCFSoftShadowMap has been removed` vienen de R3F/three, no del
+  código del proyecto.
+- **STL en Z-up:** si algo sale «tumbado», es la rotación `rotateX(-90°)` en `buildTerrain`.
+- **Modelos negros:** ya no aplica a los vehículos (su `ShaderMaterial` de 3 tonos no usa iluminación PBR). Si cargas un GLB con `metalness` alto sin mapa de entorno, saldrá negro.
+  Alternativa: añadir `<Environment>` de drei (requiere assets de red o `Lightformer`).
+- **Bordes del terreno:** se aplanan + plano de suelo infinito + niebla. En terrenos empinados el borde es una pendiente fuerte:
+  usar `margin` por misión para que el rover no suba por ahí.
+- **Cambio de misión:** `Experience` se remonta con `key={mission.id}`; el estado del rover (`st`) y las huellas se reinician
+  solos, `game` se reinicia en el `useEffect`. El minimapa detecta el cambio comparando `game.terrain`.
+
+## Escala y terreno
+
+- **Los vehículos no están a escala** (ver «Por resolver: escala real» en [roadmap.md](roadmap.md)). Los STL tampoco son
+  metros; no deduzcas distancias reales de las unidades.
+- **El centro de los mapas es un cráter** (punto de aterrizaje). En Marte (Opportunity) sus paredes son muy empinadas: el rover sale
+  inclinado hasta casi vertical. Es del relieve exagerado, no un fallo de la física.
+- **Terreno de Gale** (`gale-terrain.stl`, vehículo Perseverance): un cráter central enorme con el suelo plano a z ≈ 0 y paredes de 20–30 de desnivel. Los checkpoints están en las mesetas llanas (norte y este)
+  y la ruta evita el cráter (pendiente máxima ~13°); no pongas paradas en el suelo del cráter sin trazar antes la ruta (A\*: ver la receta de checkpoints).
+
+## Checkpoints
+
+- **Nunca pongas un checkpoint donde sale el rover** (Luna ≈ (2, 2), Marte (0, 0)): se activaría nada más cargar.
+- Las coordenadas son de **mundo** (terreno centrado). Si el STL está en Z-up: `X = x − cx`, `Z = −(y − cy)`.
+- El vehículo se detiene solo en el centro de cada checkpoint (con `Espacio`), así que la tarjeta se ve el tiempo que quieras. En un
+  viaje automático los checkpoints intermedios se cruzan sin tarjeta ni narración.
+- **La salida ya está activa al cargar** (el rover aparece dentro de su radio): su tarjeta y narración arrancan solas. El navegador
+  bloquea el audio sin gesto previo → verás «Browser blocked audio: press Listen» hasta que haya un clic o tecla; el botón lo resuelve.
+- **La meta de un tramo no se recalcula mientras frena** (`st.goal` en `Rover.tsx`): si se buscara «el siguiente stop > s + 0.5» en
+  cada frame, al estar a < 0,5 u del checkpoint saltaría al siguiente y el vehículo no se detendría (bug real que se corrigió).
+- La tarjeta va abajo a la izquierda. Solo en desarrollo se sube (`bottom-14`) para no quedar tapada por el indicador «N» de
+  Next; en producción va a `bottom-5`. El minimapa ocupa abajo a la derecha y los chips, abajo al centro.
+- `visited` no se persiste: se reinicia al cambiar de vehículo y al recargar.
+- **Guía de voz**: tiempos en reloj real, movimiento en tiempo de simulación (`dt` ≤ 0,05 s): con pocos fps la guía parece «adelantada»
+  respecto al rover. Para probarla, engancha `HTMLMediaElement.prototype.play` y registra `src` + `performance.now()`; el subtítulo
+  está en el `[aria-live]` de `GuideCaption`. Ver [guide.md](guide.md).
+- Si editas `narration` (guion) de un checkpoint, hay que regrabar el audio (`npm run narration`); si no, el mp3 dice otra cosa.
+- Si el navegador va a ~1 fps (otra pestaña con la escena abierta compite por la GPU), el rover casi no avanza: el `dt` se
+  limita a 0,05 s por frame. Al probar con automatización, conduce por posición (leyendo el minimapa), no por tiempo.
+- `rm -rf .next` con el servidor de desarrollo en marcha es seguro (se regenera solo); `.next/types` puede quedar obsoleto
+  si borras una ruta: `npx next typegen` lo regenera.
+
+## Teclado y foco
+
+- **Un estilo `background` en línea anula el barrido lima** de `.ui-btn`/`.ui-nav`/`.ui-row` (el shorthand borra `background-image`): en la barra superior eso dejaba el texto de «Globe» en tinta sobre tinta al pasar el cursor. No pongas `background` en línea en elementos con esas clases (usa la clase o `backgroundColor` solo si no necesitas el barrido).
+
+- Tras pulsar un botón del DOM, `Espacio` (avanzar) podría reactivarlo → los selectores, el botón Listen y los marcadores de la línea
+  de tiempo llaman a `blur()` al hacer clic.
+- Los listeners de teclado están en `window`; `bindKeyboard()` hace `preventDefault` solo para las teclas del juego.
+
+## Probar en el navegador (método usado)
+
+Con la extensión Claude in Chrome (o cualquier navegador):
+
+1. `npm run dev` y abre `http://localhost:3000`.
+2. Las pulsaciones sintéticas de una herramienta de «tecla» son demasiado cortas para conducir. En su lugar, despacha eventos
+   desde la consola:
+   ```js
+   const k=(c,d)=>window.dispatchEvent(new KeyboardEvent(d?'keydown':'keyup',{code:c,bubbles:true}));
+   k('KeyW',1);            // avanzar
+   setTimeout(()=>k('KeyW',0), 2000);
+   ```
+   (`Space` avanza hasta el siguiente checkpoint y se para solo; `KeyM` de vehículo, `KeyN` la
+   narración, `KeyG` la guía). Para saltar a un checkpoint sin esperar: `document.querySelectorAll('[aria-label="Route timeline"] button')[i].click()`.
+   Lee «Pos X · Z» del minimapa y el texto de estado de la línea de tiempo (`span.truncate`) para comprobar dónde está. Para que suene el audio hace falta **un clic real** previo en la página
+   (los eventos sintéticos no cuentan como gesto del usuario).
+3. Ir directo a un vehículo: `http://localhost:3000/moon/sev` (o `/mars/opportunity`); al globo con tarjeta: `/moon#sev`. Para silenciar: `localStorage.setItem('poc-narration','off')`
+   (`poc-narration` / `poc-guide`: `on|off`) Ojo: son las preferencias reales del usuario si usas su navegador; restáuralas.
+4. Los errores de consola pueden ser **obsoletos** (estados intermedios del HMR mientras se editaba); recarga y vuelve a leer.
+
+## Volver al globo (Next mantiene las vistas vivas)
+
+- **Rendimiento:** por lo mismo, cada vista visitada seguía montada (≈ +350–400 MB de GPU por escena). `Scene` y `Explore` ahora no renderizan nada cuando su ruta no es la actual (`usePathname`), ver [performance.md](performance.md). `PERF.releaseHiddenViews = false` lo desactiva.
+- **R3F en `frameloop="demand"`:** invalidar solo desde fuera del render (un `requestAnimationFrame` propio) da **un fotograma de cada dos** (30 fps aunque pidas 60). Para sostener 60 fps hay que invalidar desde dentro de `useFrame` (`FrameGovernor`). Cuenta fotogramas con `drawElements`, no con `requestAnimationFrame`.
+
+- Con `cacheComponents`, Next **conserva montada la vista anterior** (oculta, con su estado de React) cuando navegas a otra ruta, y al volver **re-ejecuta sus efectos**. `Explore` fundía a blanco al viajar (`leaving = true`) y al volver con «← Globe» o el botón Atrás
+  del navegador seguía así: página en blanco en `/moon#sev`. Corregido reseteando `leaving` en el efecto de montaje. **Regla:** todo estado transitorio de una vista (fundidos, «en curso»…) debe reiniciarse en el efecto de montaje, no en el inicializador del `useState`.
+- Para reproducirlo: `/moon` → clic en el vehículo → Travel to the past → `navigate back`.
+
+## Tarjeta del vehículo y subtítulos
+
+- `VehicleView` usa `frameloop="demand"`: si cambias algo del modelo o la cámara, llama a `invalidate()` (el efecto de encuadre ya lo hace).
+- `Captions` y la narración: la burbuja se apaga sola al terminar el clip (`ended`) o al parar (`stopNarration`). Si editas `narration` de un checkpoint, los subtítulos se recalculan solos al regrabar el audio (no hay archivos de tiempos que mantener).
+
+## Globo y rutas
+
+- **No uses `Html` de drei dentro del `Canvas`** (etiquetas): en desarrollo con StrictMode lanza «Attempted to synchronously unmount a root while React was already rendering» y pierde etiquetas. Se usan etiquetas DOM propias (`GlobeLabels.tsx`) posicionadas por proyección.
+- **`@keyframes` nuevos en `globals.css` no los recogió el servidor de desarrollo** (el bundle CSS no los incluía ni tras recargar): el fundido de entrada a la escena usa una transición inline (`veil` en `Scene.tsx`).
+- **`await params` fuera de `<Suspense>`** da el error «instant shell» (`cacheComponents`): ver `app/[body]/page.tsx`.
+- **Cambiar de mundo usa `history.pushState`** (no `router.push`) para no remontar el `Canvas`; `usePathname` se sincroniza solo. La tarjeta va en el hash (`/mars#opportunity`) y se lee **tras montar** (al volver de la escena Next actualiza la URL después del primer render).
+- El giro hacia el vehículo (`settle`) se mide en tiempo de simulación (`dt` ≤ 0,05 s): con pocos fps (navegador de pruebas) tarda mucho más en reloj real. Espera varios segundos antes de capturar.
+- Para probar el arrastre del globo: `left_click_drag` sobre la esfera. Solo el movimiento horizontal gira el globo; el vertical se ignora a propósito.
+- `VehicleCard` dibuja el vehículo procedural en un mini `<Canvas>` ortográfico (`VehicleView`): no descarga nada. Los vehículos usan una luz **fija en espacio mundo** (`SUN` en `lib/vehicles/kit.ts`), así que los tonos cambian al girar.
+- **Vehículos (kit):** en `Kit.loft` el orden de los anillos decide hacia dónde mira la superficie; el material es de doble cara, así que un casco «del revés» no desaparece, pero si sale todo oscuro es que las normales apuntan hacia dentro. No uses escalas negativas para reflejar piezas (invierten las caras): refleja las coordenadas (`for (const s of [-1, 1])`). Las ruedas izquierdas se dibujan giradas 180°, así que en `wheel()` la cara exterior siempre es +x.
+- **Probar un vehículo sin navegador:** los modelos no importan nada de Next ni usan el alias `@/`, así que Node puede construirlos (`buildVehicle`) y volcar sus triángulos; así se revisaron (render ortográfico propio) antes de abrir el navegador. Mantén esos archivos sin imports de la app.
+- **El globo usa cámara ortográfica** (`orthographic` en el `Canvas`): los shaders de `Globe.tsx` (rejilla, cuadrados orbitantes) y el `front` de `Pin` asumen una dirección de vista constante (+z en vista). Si vuelves a perspectiva, hay que recuperar la dirección hacia la cámara por vértice. El zoom (píxeles por unidad) lo fija `Fit` con `frame()`; la posición horizontal sale del ancho del panel izquierdo.
+- Los scripts de edición con *heredoc* de varias líneas con comillas fallaron en el shell de la herramienta; para ediciones largas escribe el script a un archivo y ejecútalo.
+
+## Rendimiento
+
+- No hay *raycast* por frame: todo usa `heightAt` sobre la rejilla.
+- El *bake* del minimapa (desenfoque + curvas) tarda unas decenas de ms; ocurre al cargar y al cambiar de estilo/misión.
+- Posible parpadeo de sombras al moverse (el frustum de la luz sigue al rover sin ajustarse al texel). Ver roadmap.
+
+## Servidor de desarrollo
+
+- **El usuario arranca `npm run dev` a mano** (y pidió que no se deje ninguno corriendo). Si lanzas uno propio para probar,
+  ciérralo después. Next avisa si ya hay otro en el proyecto («You can access the existing server at…») y no arranca un
+  segundo: pruebas contra el existente.
+
+## Verificaciones pendientes de hacer en un entorno limpio
+
+- `npm run build` pasa (verificado al documentar), pero no se ha probado el build servido con `npm start` en el navegador.
+- Probar en un navegador sin caché y sin internet (Draco por CDN).

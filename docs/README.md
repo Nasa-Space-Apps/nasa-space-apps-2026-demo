@@ -1,0 +1,42 @@
+# Documentación
+
+Índice de la carpeta `docs/`. Si retomas el proyecto, léelos en este orden:
+
+1. **[history.md](history.md)** — qué se hizo, en qué orden y por qué (incluye las decisiones de diseño y las preferencias del
+   usuario). *Léelo primero para recuperar el contexto.*
+2. **[architecture.md](architecture.md)** — mapa del código: **rutas y vistas** (globo y escena), archivos, flujo de datos, bucle de render, física del rover,
+   terreno, partículas, minimapa.
+3. **[design.md](design.md)** — **el diseño de la demo: tema «Primer» + flat design** (tokens, tipografía, componentes, movimiento, 3D), cómo aplicarlo en código y qué falta.
+4. **[themes-and-missions.md](themes-and-missions.md)** — receta para añadir un estilo visual (incluye los tokens del globo), un vehículo+terreno (y su marcador en el globo) o
+   checkpoints (storytelling) nuevos.
+5. **[assets.md](assets.md)** — los modelos de `public/models` y las fotos de `public/images`: tamaños, ejes, créditos (el globo no usa assets).
+6. **[gotchas.md](gotchas.md)** — trampas y problemas ya resueltos (rutas, globo, `cacheComponents`); cómo probar en el navegador.
+7. **[narration.md](narration.md)** — narración pregrabada de los checkpoints (ElevenLabs): cómo grabar/regrabar, voz, modelo, costes.
+8. **[performance.md](performance.md)** — qué cuesta en GPU/memoria (medido), el **perfil `light`/`full`** de `lib/perf.ts` (cómo volver atrás en una línea) y cómo volver a medir.
+9. **[guide.md](guide.md)** — guía de voz «mission control»: principios, qué frase suena en cada momento y para cada vehículo, catálogo
+   de las 62 frases, cómo regrabar.
+10. **[ambient.md](ambient.md)** — música de fondo (ElevenLabs Music, pregrabada): una cama por lugar, bucle con crossfade, baja de volumen mientras habla la narración/guía, tecla `S`.
+11. **[roadmap.md](roadmap.md)** — pendientes e ideas (incluye **⚠️ escala real de los vehículos**, aún sin resolver).
+12. **[data-request.md](data-request.md)** — qué información hay que extraer por vehículo (ficha, 4–6 paradas con fecha/hora/sol/posición, imágenes con crédito, fuentes) para la demo con Opportunity, Spirit, Ingenuity, InSight y Beagle 2; pensado para pasárselo a quien investiga.
+
+Otros documentos importantes fuera de `docs/`:
+
+- [`../README.md`](../README.md) — visión general, cómo arrancar, controles.
+- [`../CLAUDE.md`](../CLAUDE.md) — instrucciones para Claude Code en este repo (convenciones).
+- [`../AGENTS.md`](../AGENTS.md) — aviso generado por Next sobre cambios incompatibles de esta versión.
+
+## Mapa rápido del repo
+
+```
+src/
+  app/            layout.tsx (fuentes), page.tsx (→ /moon), [body]/page.tsx (globo), [body]/[vehicle]/page.tsx (escena del rover), globals.css
+  components/     Explore + Globe + GlobeLabels + VehicleCard + VehicleView (globo y tarjeta del vehículo abandonado; ExploreLoader/SceneLoader cargan cada vista), Scene (Canvas + overlays), Rover (sigue la ruta), Dust, Tracks, Checkpoints (balizas), CheckpointCard, Timeline (línea de tiempo), Guide + GuideCaption (guía de voz), Minimap, Hud
+  lib/            perf (perfil de rendimiento light/full), ui (estilos DOM compartidos), vehicles + vehicles/ (vehículos procedurales de 3 tonos: kit de primitivas y un archivo por vehículo), bodies (mundos + vehículos abandonados), game (estado), terrain (STL → malla + mapa de alturas), route (ruta del vehículo), missions, themes, checkpoints (storytelling + ruta), narration (voz del checkpoint), guide + guide-lines (guía de voz)
+public/models/    STL (terrenos) + una carpeta por vehículo (<id>/: GLB y fotos de referencia, ver SOURCES.md); no se cargan: son la referencia de proporciones de los vehículos procedurales (lib/vehicles/)
+public/images/    checkpoints/ (fotos NASA 16:10); vehicles/ (fotos de referencia, sin uso)
+public/narration/ mp3 pregrabados de cada checkpoint + manifest.json (ElevenLabs)
+public/guide/     mp3 pregrabados de la guía de voz (62 frases) + manifest.json
+public/ambient/   mp3 pregrabados de la música de fondo (moon, mars, timeline) + manifest.json
+scripts/          generate-narration.mjs · generate-guide.mjs · generate-ambient.mjs · lib/tts.mjs (npm run narration / guide / ambient)
+docs/             esta documentación
+```
