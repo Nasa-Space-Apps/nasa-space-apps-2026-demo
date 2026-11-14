@@ -1,0 +1,35 @@
+{
+  "tracks": {
+    "moon": {
+      "file": "/ambient/moon.mp3",
+      "kind": "music",
+      "model": "music_v1",
+      "format": "mp3_44100_96",
+      "seconds": 60,
+      "hash": "2b2f181a4778f615",
+      "bytes": 721024,
+      "generatedAt": "2026-11-13T03:23:31.675Z"
+    },
+    "mars": {
+      "file": "/ambient/mars.mp3",
+      "kind": "music",
+      "model": "music_v1",
+      "format": "mp3_44100_96",
+      "seconds": 60,
+      "hash": "2e788fe7ff361e07",
+      "bytes": 721024,
+      "generatedAt": "2026-11-13T03:23:39.351Z"
+    },
+    "timeline": {
+      "file": "/ambient/timeline.mp3",
+      "kind": "music",
+      "model": "music_v1",
+      "format": "mp3_44100_96",
+      "seconds": 75,
+      "hash": "0cc0544a28f639f4",
+      "bytes": 900642,
+      "generatedAt": "2026-11-13T03:23:48.556Z"
+    }
+  },
+  "updatedAt": "2026-11-13T03:23:48.556Z"
+}
