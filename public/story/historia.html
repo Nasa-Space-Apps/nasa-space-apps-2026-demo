@@ -1573,7 +1573,20 @@ kbd{background:var(--chip);border:1px solid var(--bd);border-radius:4px;padding:
   "aviso": "Los campos de «narrativa» son redacción editorial hecha a partir de los hechos del evento; no son citas. Los hechos y fuentes provienen de linea_de_tiempo_opportunity.json."
 }</script>
 <script>
-const D=JSON.parse(document.getElementById('data').textContent);
+async function arrancar(){
+  /* Plantilla sin datos (tiene el marcador en vez del JSON): intenta cargar ../data por http; con file:// explica qué hacer. */
+  const crudo=document.getElementById('data').textContent.trim();
+  if(crudo[0]==='{')return iniciar(JSON.parse(crudo));
+  if(window.DATOS)return iniciar(window.DATOS); /* ../data/historia_opportunity.js, sirve también con file:// */
+  try{
+    const r=await fetch('../data/historia_opportunity.json');
+    if(!r.ok)throw new Error(r.status);
+    return iniciar(await r.json());
+  }catch(_){
+    document.body.innerHTML='<div style="max-width:620px;margin:60px auto;padding:0 16px;font:16px/1.6 system-ui"><h2>Esto es una plantilla sin datos</h2><p>Abre el HTML ya generado: <code>public/story/historia.html</code> (en <code>npm run dev</code>: <code>/story/historia.html</code>).</p><p>Para regenerarlo: <code>python story/build_historia.py</code>.</p><p>Si sirves la carpeta <code>story/</code> por http, la plantilla carga <code>../data/historia_opportunity.json</code> sola.</p></div>';
+  }
+}
+function iniciar(D){
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(_){return 'fuente'}};
 $('#t').textContent=D.titulo;
@@ -1601,4 +1614,7 @@ let cur=-1;const cards=[...document.querySelectorAll('.ev')];
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(e.target.tagName)||e.ctrlKey||e.metaKey)return;
  const d=e.key==='j'||e.key==='ArrowDown'?1:e.key==='k'||e.key==='ArrowUp'?-1:0;if(!d)return;e.preventDefault();
  cards[cur]?.classList.remove('cur');cur=Math.max(0,Math.min(cards.length-1,cur+d));cards[cur].classList.add('cur');cards[cur].scrollIntoView({block:'start',behavior:'smooth'})});
+
+}
+arrancar();
 </script></body></html>

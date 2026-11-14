@@ -254,4 +254,7 @@ print(json.dumps(out['resumen'], ensure_ascii=False))
 
 t = open(PLANTILLAS / 'juego.template.html', encoding='utf-8').read()
 data = open(DATOS / 'juego_opportunity.json', encoding='utf-8').read().replace('</', '<\\/')
+# La plantilla carga ../data/juego_opportunity.js (sirve con file://); el HTML final lleva los datos dentro y no lo necesita.
+open(DATOS / 'juego_opportunity.js', 'w', encoding='utf-8').write('window.DATOS = ' + open(DATOS / 'juego_opportunity.json', encoding='utf-8').read() + ';\n')
+t = t.replace('<script src="../data/juego_opportunity.js"></script>\n', '')
 open(SALIDA_HTML / 'juego.html', 'w', encoding='utf-8').write(t.replace('__DATA__', data))

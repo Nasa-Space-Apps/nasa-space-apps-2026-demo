@@ -18,6 +18,8 @@ python story/build_historia.py
 python story/build_juego.py
 ```
 
+- Cada build también escribe `data/<nombre>_opportunity.js` (`window.DATOS = …`). Las plantillas de `templates/` lo cargan con una etiqueta `<script src="../data/…">`, por eso **se pueden abrir con doble clic (`file://`)** o por http y muestran los datos sin generar nada. El HTML final de `public/story/` lleva los datos incrustados y no necesita ese archivo.
+
 ## Reglas de contenido
 
 - Los hechos y las fuentes salen de la línea de tiempo. Los campos de narración (`gancho`, `escena_visual`, textos del juego) son redacción editorial.

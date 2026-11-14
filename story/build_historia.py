@@ -151,4 +151,7 @@ print(json.dumps(out['resumen'], ensure_ascii=False))
 
 t = open(PLANTILLAS / 'historia.template.html', encoding='utf-8').read()
 data = open(DATOS / 'historia_opportunity.json', encoding='utf-8').read().replace('</', '<\/')
+# La plantilla carga ../data/historia_opportunity.js (sirve con file://); el HTML final lleva los datos dentro y no lo necesita.
+open(DATOS / 'historia_opportunity.js', 'w', encoding='utf-8').write('window.DATOS = ' + open(DATOS / 'historia_opportunity.json', encoding='utf-8').read() + ';\n')
+t = t.replace('<script src="../data/historia_opportunity.js"></script>\n', '')
 open(SALIDA_HTML / 'historia.html', 'w', encoding='utf-8').write(t.replace('__DATA__', data))

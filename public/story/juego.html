@@ -1622,7 +1622,20 @@ table.sm th{color:var(--mut);font-weight:600;font-size:12px;text-transform:upper
   }
 }</script>
 <script>
-const D=JSON.parse(document.getElementById('data').textContent);
+async function arrancar(){
+  /* Plantilla sin datos (tiene el marcador en vez del JSON): intenta cargar ../data por http; con file:// explica qué hacer. */
+  const crudo=document.getElementById('data').textContent.trim();
+  if(crudo[0]==='{')return iniciar(JSON.parse(crudo));
+  if(window.DATOS)return iniciar(window.DATOS); /* ../data/juego_opportunity.js, sirve también con file:// */
+  try{
+    const r=await fetch('../data/juego_opportunity.json');
+    if(!r.ok)throw new Error(r.status);
+    return iniciar(await r.json());
+  }catch(_){
+    document.body.innerHTML='<div style="max-width:620px;margin:60px auto;padding:0 16px;font:16px/1.6 system-ui"><h2>Esto es una plantilla sin datos</h2><p>Abre el HTML ya generado: <code>public/story/juego.html</code> (en <code>npm run dev</code>: <code>/story/juego.html</code>).</p><p>Para regenerarlo: <code>python story/build_juego.py</code>.</p><p>Si sirves la carpeta <code>story/</code> por http, la plantilla carga <code>../data/juego_opportunity.json</code> sola.</p></div>';
+  }
+}
+function iniciar(D){
 const N=Object.fromEntries(D.nodos.map(n=>[n.id,n]));
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const REAL=[];(function(){let i=D.inicio;while(i){const n=N[i];REAL.push(n);i=n.siguiente||(n.opciones&&n.opciones.find(o=>o.correcta).siguiente)}})();
@@ -1718,4 +1731,7 @@ document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||['INP
  if(['1','2','3'].includes(e.key)&&n.tipo==='decision'&&document.querySelector('.opt'))choose(+e.key-1);
  else if(e.key==='Enter'||e.key===' '){const b=document.querySelector('#stage [data-a="next"],#stage [data-a="go"],#stage [data-a="again"]');if(b){e.preventDefault();b.click()}}});
 title();
+
+}
+arrancar();
 </script></body></html>
