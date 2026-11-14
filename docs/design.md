@@ -67,7 +67,7 @@ Un único set, **dibujado**: rejilla 16×16, **trazo de 2 px** (antes 1,5: más 
 - **Subtítulos** (`Captions`): burbuja de tinta; etiqueta «narrator» (papel) o «guide» (rosa).
 - **Línea de tiempo**: pista de 5 px redondeada, relleno de tinta y **círculos** de 16 px con trazo de tinta por checkpoint (tinta = alcanzado, color del vehículo = el vehículo está parado ahí). Solo entre dos checkpoints aparece un punto del color del vehículo que recorre la pista.
 - **Minimapa**: dentro de un panel, con su viñeta (trazo de tinta); curvas de nivel suaves sobre papel, ruta en tinta (discontinua la pendiente), checkpoints cuadrados numerados.
-- **Globo**: campo azul, rejilla azul claro, limbo y estrellas en tinta, marcador **de papel** (el rosa se perdía sobre el azul), etiqueta de tinta.
+- **Globo (menú del juego)**: campo azul, rejilla azul claro, limbo y estrellas en tinta. **Sin paneles**: el mundo se cambia con **texto** (`.ui-world`: «Mars  Moon» en 800; el actual lleva un subrayado rosa que se desliza con rebote, el otro se inclina y crece al pasar el cursor); una pista de tinta abajo; y los **vehículos en miniatura** (tinta + rosa + papel, anillo cuadrado de papel que pulsa, etiqueta de tinta solo al pasar el cursor). La **tarjeta del vehículo flota** junto a él (papel con trazo, +0,6°), se cierra con una **X** (`.ui-fab-sm`, gira 90° al hover), con Esc o con un clic fuera, y el globo se queda quieto y bloqueado mientras está abierta.
 - **Carga** (`Loading.tsx`): campo azul, título enorme en 800 abajo a la izquierda, etapa en negrita minúscula y barra de 6 px (tinta sobre papel) pegada al borde inferior.
 
 ## Escena 3D
@@ -86,9 +86,10 @@ Un único set, **dibujado**: rejilla 16×16, **trazo de 2 px** (antes 1,5: más 
 Siguen la estética de **3 tonos de un solo color** sin contornos ni degradados (ver `lib/vehicles/kit.ts`, medidas sobre el GLB de referencia, receta en [themes-and-missions.md](themes-and-missions.md)). Se ven bien sobre el papel crema y contra el campo azul. En la tarjeta del globo van **quietos, en vista isométrica**, dentro de una viñeta con trazo de tinta, sobre `paperLight`.
 **Pendiente (decisión de arte):** la referencia dibuja sus personajes en tinta negra y crema, sin colores; los vehículos conservan sus colores. Si se quiere ir más allá, habría que rehacerlos a tinta (negro + crema).
 
-## Movimiento (todo suave)
+## Movimiento (suave, y juguetón donde es un juego)
 
-- **Una sola curva** (`THEME.ease`) y tres duraciones. Nada de `ease`/`linear` sueltos ni duraciones inventadas.
+- **Dos curvas** y tres duraciones: `THEME.ease` (suave, para todo lo funcional) y **`THEME.pop`** (`cubic-bezier(0.34, 1.7, 0.5, 1)`: rebota y se asienta) para los elementos **de juego** del menú y de los botones. Nada de `ease`/`linear` sueltos ni duraciones inventadas.
+- **Pops de juego** (hito 32): `components/Pop.tsx` hace entrar/salir con escala + giro + rebote (selector de mundo, música, pista inferior, tarjeta del vehículo que sale desde su vehículo); `.ui-btn` sube y se inclina al hover y se aplasta al pulsar; `.ui-fab-sm` (la X) gira 90°. En el 3D (`lib/motion.ts`, muelles desde `useFrame`): el globo y cada vehículo aparecen con rebote escalonado, cada vehículo da un saltito cada pocos segundos, se agranda y se menea al hover y rebota al estar seleccionado. Los bucles van con la Web Animations API (flecha de «travel to the past»). `prefers-reduced-motion` quita saltitos y meneos.
 - **Entradas**: fundido + ascenso de 14 px (`Reveal`), escalonadas; las tarjetas del checkpoint y el minimapa suben 18 px y se funden en 600–1000 ms.
 - **Cambios de estado**: color, opacidad y tamaño por transición; en 3D se interpolan (`lerp` con `1 − e^(−k·dt)`).
 - **Transiciones de vista**: al viajar, el globo se funde al azul y la escena entra desde ese mismo azul (y al volver igual): sin cortes.

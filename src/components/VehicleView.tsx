@@ -39,7 +39,7 @@ export default function VehicleView({ config, label }: { config: RoverConfig; la
   return (
     <div className="pointer-events-none w-full" style={{ aspectRatio: "16 / 10", background: config.palette.bg }} role="img" aria-label={label}>
       <div className="h-full w-full" style={{ opacity: made ? 1 : 0, transition: "opacity 600ms cubic-bezier(0.22, 1, 0.36, 1)" }}>
-      <Canvas orthographic frameloop="demand" dpr={PERF.dpr} camera={{ zoom: 20, near: 0.1, far: 200, position: [22, 17, 24] }} gl={{ antialias: true }} onCreated={() => requestAnimationFrame(() => setMade(true))}>
+      <Canvas orthographic frameloop="demand" resize={{ offsetSize: true }} dpr={PERF.dpr} camera={{ zoom: 20, near: 0.1, far: 200, position: [22, 17, 24] }} gl={{ antialias: true }} onCreated={() => requestAnimationFrame(() => setMade(true))}>
         <color attach="background" args={[config.palette.bg]} />
         <Still config={config} />
       </Canvas>

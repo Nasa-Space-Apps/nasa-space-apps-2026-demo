@@ -95,6 +95,13 @@ Con la extensión Claude in Chrome (o cualquier navegador):
   del navegador seguía así: página en blanco en `/moon#sev`. Corregido reseteando `leaving` en el efecto de montaje. **Regla:** todo estado transitorio de una vista (fundidos, «en curso»…) debe reiniciarse en el efecto de montaje, no en el inicializador del `useState`.
 - Para reproducirlo: `/moon` → clic en el vehículo → Travel to the past → `navigate back`.
 
+## Animaciones de juego (hito 32)
+
+- **Un `Canvas` de R3F dentro de un elemento con `transform: scale`** (p. ej. dentro de `Pop`) se mide con `getBoundingClientRect`, que incluye la escala: a mitad del pop el canvas «mide» poco y el vehículo queda diminuto cuando termina. Usa `resize={{ offsetSize: true }}` (medida de layout, sin transformaciones), como `VehicleView`.
+- **El CSS nuevo puede no llegar al servidor de desarrollo** hasta que se recarga la página (`location.reload()`); si una clase nueva no hace nada, comprueba con `document.styleSheets` antes de depurar el código.
+- Los `@keyframes` nuevos no se recogen en dev: para bucles (p. ej. la flecha que se mueve de «travel to the past») usa la **Web Animations API** (`el.animate`, ver `VehicleCard`) y cancélala al desmontar; los muelles del 3D van en `lib/motion.ts` (`springStep`, desde `useFrame`).
+- El clic fuera de la tarjeta (`Explore`) ignora el clic que la abrió con una marca de tiempo (`openedAt`): el efecto que registra el listener puede ejecutarse antes de que ese mismo clic llegue a `window`.
+
 ## Tarjeta del vehículo y subtítulos
 
 - `VehicleView` usa `frameloop="demand"`: si cambias algo del modelo o la cámara, llama a `invalidate()` (el efecto de encuadre ya lo hace).

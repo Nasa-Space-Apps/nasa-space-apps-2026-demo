@@ -142,7 +142,7 @@ Reglas **(propuestas)**:
 ## 12. Preguntas abiertas
 
 1. ~~Estilo de las ilustraciones de la Parte 1~~ **Resuelto (hito 30):** el lenguaje es el cómic de [ponpon-mania.com/chapter/2](https://ponpon-mania.com/chapter/2) (tinta negra + papel crema, recuadros gruesos, manchas azul/rosa, grano), ya aplicado a toda la UI: ver [design.md](design.md#parte-1-del-juego-historieta-2d). **Sigue abierto:** *quién y cómo produce* los dibujos (generados, encargados, dibujados a mano) y si los personajes/vehículos de las viñetas van en tinta y crema como en la referencia.
-2. **Entrada**: ¿se conserva el globo como pantalla de inicio (con Opportunity como único marcador) o se sustituye por una portada con los dos modos?
+2. **Entrada**: ~~¿globo o portada?~~ **Decidido en parte (hito 31):** el globo se conserva como **menú previo** al juego (vehículos 3D en miniatura, botón de mundo, tarjeta flotante). **Abierto:** cómo se elige el modo (Historia / Decisiones) desde la tarjeta del vehículo.
 3. **Duración objetivo** (provisional): Historia ≈ 6–8 min; Decisiones ≈ 8–12 min con fallos de ~1 min cada uno. ¿Es válido para la demo del jurado?
 4. **Resumen/puntuación** al final del modo Decisiones: ¿solo «aprendiste X» o también conteo de aciertos?
 5. **Reintento tras un fallo**: ¿volver a la misma decisión (propuesto) o reiniciar la parte?

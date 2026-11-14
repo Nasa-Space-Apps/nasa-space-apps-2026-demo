@@ -247,6 +247,23 @@ Para la Parte 1 (historieta) el usuario encontró en [ponpon-mania.com/chapter/2
 - **Verificado:** `tsc` y `lint` limpios; vistas `/mars` (globo) y `/mars/opportunity` (escena) revisadas en el navegador. **No** se probó la Luna ni los vehículos en pausa, ni se midió el coste del grano en GPU.
 - **No se tocó:** los vehículos procedurales (siguen en color), los créditos (ocultos) y las ilustraciones de la Parte 1 (aún por hacer).
 
+### 31. El globo como menú previo al juego: vehículos 3D, tarjeta flotante y botón de mundo
+Primer paso «poco a poco hacia el juego»: la vista del globo pasa a ser un **menú de videojuego** (será la pantalla previa a la historieta/juego).
+- **Vehículos en el globo**: los cuadraditos son ahora **vehículos 3D de muy bajo detalle y pequeños** (`lib/vehicles/mini.ts`), de pie en su lat/lon y **un poco enterrados**, con contraste (tinta + rosa + papel sobre el azul) y clicables (esfera de impacto generosa, crecen al pasar el cursor, el giro se pausa bajo el cursor).
+- **Fuera**: la tarjeta gigante «Left behind», el selector Luna/Marte en panel y la **lista de vehículos**. **Dentro**: un **botón flotante redondo** (icono del otro mundo) que cambia Marte ⇄ Luna, y una pista inferior de una línea.
+- **Tarjeta flotante**: al hacer clic en un vehículo, su tarjeta (misma información) aparece **flotando junto a él** y lo sigue mientras se gira el globo.
+- Etiquetas de nombre solo al pasar el cursor (seis a la vez se solapaban en el cúmulo de Jezero).
+- Verificado: `tsc` y `lint` limpios; revisado en el navegador el globo de Marte, los vehículos y la tarjeta flotante (abierta por el hash `#opportunity`). **Sin probar**: la Luna, el clic real con el globo girando (en el navegador de pruebas gira más rápido que las acciones; el giro se pausa al pasar el cursor) y pantallas estrechas.
+
+### 32. Ajustes del menú del globo: globo quieto, cierre de la tarjeta, mundo en texto y animaciones de juego
+El usuario revisó el hito 31 y pidió:
+- **El globo no se mueve al hacer clic** (ni se centra ni se desplaza ni hace zoom: la tarjeta sale donde sale) y **el puntero no puede girarlo mientras la tarjeta está abierta** (se detiene en seco, sin inercia). El giro hacia un vehículo solo ocurre al **volver del viaje** (`faceId`, nunca por un clic).
+- **Cierre**: la tarjeta pierde el «back» y gana una **X**; también se cierra con **Esc** o con un **clic fuera de ella** (se ignora el clic que la abrió; hacer clic en otro vehículo solo cambia de tarjeta).
+- **El cambio de mundo es solo texto** («Mars  Moon»; el actual lleva un subrayado rosa tipo rotulador que se desliza) en vez del icono redondo (se quitaron los iconos `moon`/`mars`).
+- **Animaciones de juego, dinámicas y juguetonas**: nueva curva `THEME.pop` (rebota y se asienta) y `components/Pop.tsx` (entrada/salida con escala, giro y rebote: el selector, la música, la pista inferior —que salta fuera al abrir una tarjeta y vuelve al cerrarla— y la tarjeta, que sale desde el vehículo y se va con un pop); `lib/motion.ts` (muelle `springStep`) para el 3D: el globo y cada vehículo **aparecen con un rebote escalonado**, cada vehículo da **un saltito cada pocos segundos**, **se agranda y se menea al pasar el cursor** y **rebota contento** al seleccionarlo; los botones `.ui-btn` suben y se inclinan al hover y se aplastan al pulsar; la X gira 90°; la flecha de «travel to the past» se mueve cada pocos segundos (Web Animations API: los `@keyframes` nuevos no se recogen en dev). `prefers-reduced-motion` desactiva los saltitos y meneos.
+- **Dos trampas encontradas:** (1) el CSS nuevo no llegó al bundle del servidor de desarrollo hasta **recargar la página** (ver gotchas); (2) un `Canvas` de R3F dentro de un elemento con `transform: scale` se mide mal (`getBoundingClientRect` incluye la escala) y el vehículo de la tarjeta salía diminuto → `resize={{ offsetSize: true }}` en `VehicleView`.
+- Verificado: `tsc` y `lint` limpios; en el navegador: tarjeta flotante abierta, cierre con clic fuera, cambio Luna → Marte. **Sin probar**: Esc, la X y el clic real sobre un vehículo con el globo girando.
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |

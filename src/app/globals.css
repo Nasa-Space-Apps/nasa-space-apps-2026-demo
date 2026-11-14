@@ -86,15 +86,20 @@ button {
     background-size var(--dur-base) var(--ease),
     color var(--dur-base) var(--ease),
     box-shadow var(--dur-base) var(--ease),
-    transform var(--dur-base) var(--ease),
+    transform var(--dur-fast) var(--pop),
     opacity var(--dur-base) var(--ease);
 }
+/* game feel: a button hops up and tilts under the pointer, and squashes when pressed (the springy --pop curve overshoots, then settles) */
 .ui-btn:hover:not(:disabled) {
   background-size: 100% 100%;
   color: var(--ink);
+  transform: translateY(-2px) rotate(-1.2deg);
 }
 .ui-btn:active:not(:disabled) {
-  transform: scale(0.985);
+  transform: translateY(1px) scale(0.93);
+}
+.ui-btn.is-active:hover {
+  transform: none;
 }
 .ui-btn:disabled {
   cursor: default;
@@ -120,6 +125,79 @@ button {
   background-size: 0% 100% !important;
   color: var(--on-ink) !important;
   cursor: default;
+}
+
+/** Round button (the card's close X): a paper disc in an ink stroke; the pink sweeps in on hover and the disc spins and pops. */
+.ui-fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: var(--stroke) solid var(--ink);
+  border-radius: 999px;
+  background-color: var(--surface);
+  background-image: linear-gradient(var(--hover), var(--hover));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    background-size var(--dur-base) var(--ease),
+    transform var(--dur-base) var(--pop);
+}
+.ui-fab:hover {
+  background-size: 100% 100%;
+  transform: rotate(-10deg) scale(1.06);
+}
+.ui-fab:active {
+  transform: scale(0.9);
+}
+.ui-fab-sm {
+  width: 34px;
+  height: 34px;
+  border-width: 2.5px;
+}
+.ui-fab-sm:hover {
+  transform: rotate(90deg) scale(1.18);
+}
+
+/** The globe's world switch: plain heavy text; the current world wears a pink highlighter that springs in, the other one tilts and grows under the pointer. */
+.ui-world {
+  padding: 6px 16px 8px;
+  border: 0;
+  border-radius: 999px;
+  background-color: transparent;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  color: var(--ink);
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  opacity: 0.7;
+  cursor: pointer;
+  transition:
+    background-size var(--dur-base) var(--pop),
+    transform var(--dur-fast) var(--pop),
+    opacity var(--dur-base) var(--ease);
+}
+.ui-world.is-active {
+  background-size: 100% 100%;
+  opacity: 1;
+  cursor: default;
+}
+.ui-world:not(.is-active):hover {
+  opacity: 1;
+  transform: rotate(-6deg) scale(1.15);
+}
+.ui-world:not(.is-active):active {
+  transform: scale(0.9);
 }
 
 /** Text link: bold lowercase, no box; turns blue on hover. */

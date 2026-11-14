@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 
 /**
- * The icon set of the demo: one 16×16 grid, one 1.5 px stroke, round caps and joins, no fills (outline icons that inherit `currentColor`).
+ * The icon set of the demo: one 16×16 grid, one 2 px stroke, round caps and joins, no fills (outline icons that inherit `currentColor`).
  * The arrow is the one from the reference: a straight shaft with an open chevron head. Add new icons here, never inline glyphs (→ ▶ ■).
  */
 const PATHS = {

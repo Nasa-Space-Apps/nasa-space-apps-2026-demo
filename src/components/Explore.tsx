@@ -6,16 +6,17 @@ import { BODIES } from "@/lib/bodies";
 import { MISSIONS } from "@/lib/missions";
 import { PERF } from "@/lib/perf";
 import { THEME as theme } from "@/lib/themes";
-import { ease, ui } from "@/lib/ui";
+import { ease } from "@/lib/ui";
 import Ambient, { AmbientButton } from "./Ambient";
 import Globe from "./Globe";
-import Icon from "./Icon";
-import GlobeLabels from "./GlobeLabels";
-import Reveal from "./Reveal";
+import GlobeLabels, { floating } from "./GlobeLabels";
+import Pop from "./Pop";
 import VehicleCard from "./VehicleCard";
 
 /**
- * The globe view (/moon, /mars): one globe, a body selector on the left, and — when a vehicle is picked (marker or list) — its card.
+ * The globe view (/moon, /mars): the menu before the story. Just the globe with a tiny vehicle standing at each abandoned site, a text switch for the
+ * world (Mars / Moon) and a one-line hint. Clicking a vehicle opens its card, floating beside it, and locks the globe: the card closes with its X, a
+ * click anywhere outside it, or Esc. Everything pops in and out with the game-like `pop` curve.
  * The body lives in the URL (`pushState`, no remount); the selected vehicle in the hash (/moon#sev) so "back from the trip" reopens its card.
  */
 export default function Explore({ initialBodyId }: { initialBodyId: string }) {
@@ -26,42 +27,68 @@ export default function Explore({ initialBodyId }: { initialBodyId: string }) {
   return <ExploreView initialBodyId={initialBodyId} />;
 }
 
+/** Ref callback of the floating card's element: the globe moves it every frame (no React renders per frame). */
+const regFloat = (el: HTMLElement | null) => {
+  floating.el = el;
+  floating.placed = false;
+};
+
 function ExploreView({ initialBodyId }: { initialBodyId: string }) {
   const router = useRouter();
   const pathname = usePathname();
-  const { label, display, text, panel, title } = ui(theme);
 
   const body = BODIES.find((b) => pathname === `/${b.id}`) ?? BODIES.find((b) => b.id === initialBodyId) ?? BODIES[0];
-  const [picked, setPicked] = useState<string | null>(null);
+  const [picked, setPicked] = useState<string | null>(null); // vehicle whose card is open
+  const [facing, setFacing] = useState<string | null>(null); // vehicle the globe turns towards on arrival (coming back from the trip); never set by a click
+  const [cardId, setCardId] = useState<string | null>(null); // card kept mounted a moment after closing, so it can pop out
   const [leaving, setLeaving] = useState(false); // fade to the canvas colour before travelling
   const timer = useRef(0);
+  const closeTimer = useRef(0);
+  const openedAt = useRef(0);
   useEffect(() => {
     // coming back from the trip (/mars#opportunity): Next updates the URL after this component first renders, so read the hash once mounted.
     // Next also keeps this view alive (with its state) while the scene is open and re-runs this effect when it comes back: the travel fade
     // must be released then, or the page stays covered (blank) after "← Globe" or the browser's Back button.
     const id = window.location.hash.slice(1);
     /* eslint-disable react-hooks/set-state-in-effect -- sync from the URL / reset after coming back */
-    if (id) setPicked(id);
+    if (id) {
+      setPicked(id);
+      setFacing(id);
+      setCardId(id);
+    }
     setLeaving(false);
     /* eslint-enable react-hooks/set-state-in-effect */
-    return () => window.clearTimeout(timer.current);
+    return () => {
+      window.clearTimeout(timer.current);
+      window.clearTimeout(closeTimer.current);
+    };
   }, []);
-  const vehicle = body.vehicles.find((v) => v.missionId === picked) ?? null;
-  const mission = MISSIONS.find((m) => m.id === vehicle?.missionId) ?? null;
+  const cardVehicle = body.vehicles.find((v) => v.missionId === cardId) ?? null;
+  const cardMission = MISSIONS.find((m) => m.id === cardVehicle?.missionId) ?? null;
 
   const select = (id: string | null) => {
+    window.clearTimeout(closeTimer.current);
     setPicked(id);
+    if (id) {
+      openedAt.current = performance.now();
+      setCardId(id);
+    } else {
+      closeTimer.current = window.setTimeout(() => setCardId(null), theme.dur.base); // let the card pop out first
+    }
     window.history.replaceState(null, "", `/${body.id}${id ? `#${id}` : ""}`);
   };
   const switchBody = (id: string) => {
     if (id === body.id) return;
+    window.clearTimeout(closeTimer.current);
     setPicked(null);
+    setCardId(null);
+    setFacing(null);
     window.history.pushState(null, "", `/${id}`); // Next syncs usePathname with the History API
   };
   const travel = () => {
-    if (!mission || leaving) return;
+    if (!cardMission || leaving) return;
     setLeaving(true);
-    timer.current = window.setTimeout(() => router.push(`/${body.id}/${mission.id}`), theme.dur.base + 150);
+    timer.current = window.setTimeout(() => router.push(`/${body.id}/${cardMission.id}`), theme.dur.base + 150);
   };
 
   useEffect(() => {
@@ -69,99 +96,98 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
       if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
       if (e.code === "Escape") select(null);
     };
+    // a click anywhere outside the open card closes it (the click that opened it, on a vehicle, is ignored; clicking another vehicle just switches)
+    const onClick = (e: MouseEvent) => {
+      if (picked === null || performance.now() - openedAt.current < 150) return;
+      if (floating.el?.contains(e.target as Node)) return;
+      select(null);
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("click", onClick);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("click", onClick);
+    };
   });
 
   return (
     <div className="fixed inset-0 select-none" style={{ background: theme.globe.bg }}>
-      <Globe body={body} selectedId={vehicle?.missionId ?? null} theme={theme} onSelect={select} />
+      <Globe body={body} selectedId={picked} faceId={facing} theme={theme} onSelect={select} />
       <GlobeLabels theme={theme} />
       <Ambient track={body.id === "mars" ? "mars" : "moon"} />
-      <div className="fixed right-5 top-5 z-10 flex items-start gap-2" style={{ fontFamily: theme.font }}>
-        <AmbientButton />
+
+      {/* top left: the world switch, just text; the current world wears a pink highlighter */}
+      <div className="fixed left-5 top-5 z-10 flex items-center gap-1" role="tablist" aria-label="World" style={{ fontFamily: theme.font }}>
+        {BODIES.map((b, i) => (
+          <Pop key={b.id} theme={theme} delay={i * 90} origin="left center" from="scale(0.4) rotate(-10deg) translateY(-16px)">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={b.id === body.id}
+              className={`ui-world ${b.id === body.id ? "is-active" : ""}`}
+              onClick={(e) => {
+                e.currentTarget.blur();
+                switchBody(b.id);
+              }}
+            >
+              {b.name}
+            </button>
+          </Pop>
+        ))}
       </div>
 
-      <div
-        className="fixed left-5 top-5 z-10 flex max-h-[calc(100vh-40px)] w-[clamp(300px,28vw,400px)] flex-col gap-2 overflow-y-auto"
-        style={{ fontFamily: theme.font }}
-      >
-        <Reveal theme={theme} style={panel}>
-          <div style={display}>Left behind</div>
-          <p
+      <div className="fixed right-5 top-5 z-10 flex items-start gap-2" style={{ fontFamily: theme.font }}>
+        <Pop theme={theme} delay={220} origin="right center" from="scale(0.5) rotate(6deg) translateY(-14px)">
+          <AmbientButton />
+        </Pop>
+      </div>
+
+      {/* bottom centre: what to do (it hops away while a card is open and back when it closes) */}
+      <div className="pointer-events-none fixed bottom-6 left-1/2 z-10" style={{ transform: "translateX(-50%)" }}>
+        <Pop theme={theme} show={picked === null} delay={350} from="scale(0.5) translateY(40px)" to="scale(0.7) translateY(30px)">
+          <span
+            className="flex items-center gap-2 whitespace-nowrap"
             style={{
-              ...text,
-              marginTop: vehicle ? 0 : 10,
-              color: theme.muted,
-              maxHeight: vehicle ? 0 : 90,
-              opacity: vehicle ? 0 : 1,
-              overflow: "hidden",
-              transition: ease(theme, ["max-height", "opacity", "margin-top"]),
+              background: theme.ink,
+              color: theme.onInk,
+              borderRadius: theme.radiusSm,
+              padding: "11px 22px",
+              fontFamily: theme.font,
+              fontSize: 14,
+              fontWeight: 700,
+              letterSpacing: "0.01em",
+              textTransform: "lowercase",
             }}
           >
-            Robots that never came home. Pick a world, then a vehicle, and travel back to see how it got there.
-          </p>
-          <div role="tablist" aria-label="World" className="mt-4 flex gap-2">
-            {BODIES.map((b) => {
-              const active = b.id === body.id;
-              return (
-                <button
-                  key={b.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={active}
-                  className={`ui-btn ${active ? "is-active" : "is-ghost"}`}
-                  style={{ flex: 1 }}
-                  onClick={(e) => {
-                    e.currentTarget.blur();
-                    switchBody(b.id);
-                  }}
-                >
-                  {b.name}
-                </button>
-              );
-            })}
-          </div>
-        </Reveal>
-
-        {vehicle && mission ? (
-          <Reveal theme={theme} key={`card-${vehicle.missionId}`}>
-            <VehicleCard theme={theme} mission={mission} vehicle={vehicle} bodyName={body.name} onTravel={travel} onBack={() => select(null)} />
-          </Reveal>
-        ) : (
-          <Reveal theme={theme} key={`body-${body.id}`} delay={90} style={panel}>
-            <div className="flex items-baseline justify-between gap-3">
-              <span style={title}>{body.name}</span>
-              <span style={label}>{body.facts.map(([l, v]) => `${l} ${v}`).join(" · ")}</span>
-            </div>
-            <p style={{ ...text, marginTop: 10, color: theme.muted }}>{body.blurb}</p>
-            <div style={{ ...label, marginTop: 18 }}>Abandoned here · drag to rotate</div>
-            <ul className="mt-2.5 flex list-none flex-col gap-2 p-0">
-              {body.vehicles.map((v) => (
-                <li key={v.missionId}>
-                  <button
-                    type="button"
-                    className="ui-btn"
-                    onClick={(e) => {
-                      e.currentTarget.blur();
-                      select(v.missionId);
-                    }}
-                    style={{ width: "100%", justifyContent: "space-between", textAlign: "left", padding: "14px 22px", textTransform: "none", fontFamily: theme.font }}
-                  >
-                    <span>
-                      <span style={{ display: "block", fontSize: 19, fontWeight: 800, letterSpacing: "-0.03em" }}>{v.name}</span>
-                      <span style={{ display: "block", marginTop: 6, fontFamily: theme.mono, fontSize: 12, fontWeight: 700, letterSpacing: "0.01em", textTransform: "lowercase", opacity: 0.7 }}>
-                        {v.place}
-                      </span>
-                    </span>
-                    <Icon className="ui-arrow" name="arrow-right" size={18} />
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        )}
+            <span style={{ color: theme.accent }}>{body.name}</span>
+            <span style={{ opacity: 0.4 }}>·</span>
+            drag to spin
+            <span style={{ opacity: 0.4 }}>·</span>
+            click a vehicle
+          </span>
+        </Pop>
       </div>
+
+      {/* the vehicle's card, floating beside it: the globe positions this wrapper (it never follows the pointer), the card inside pops in and out */}
+      {cardVehicle && cardMission && (
+        <div
+          ref={regFloat}
+          className="pointer-events-none fixed left-0 top-0 z-20 w-[clamp(280px,26vw,360px)]"
+          style={{ opacity: 0, willChange: "transform", transition: ease(theme, ["opacity"]), fontFamily: theme.font }}
+        >
+          <Pop
+            theme={theme}
+            key={`card-${cardVehicle.missionId}`}
+            show={picked !== null}
+            origin="left center"
+            from="scale(0.3) rotate(-8deg) translateX(-30px)"
+            to="scale(0.6) rotate(5deg) translateX(-20px)"
+            style={{ pointerEvents: picked !== null ? "auto" : "none" }}
+          >
+            <VehicleCard theme={theme} mission={cardMission} vehicle={cardVehicle} bodyName={body.name} onTravel={travel} onClose={() => select(null)} />
+          </Pop>
+        </div>
+      )}
 
       {/* travelling: the view melts into the canvas colour, the scene fades in from the same colour */}
       <div
