@@ -1,0 +1,1604 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opportunity: la historia</title>
+<style>
+:root{--bg:#fafaf9;--card:#fff;--fg:#1c1917;--mut:#6b6560;--bd:#e7e5e4;--acc:#c2410c;--ok:#15803d;--warn:#b45309;--chip:#f1efed}
+@media(prefers-color-scheme:dark){:root{--bg:#141210;--card:#1c1917;--fg:#ede9e6;--mut:#a39d97;--bd:#33302d;--acc:#fb923c;--ok:#4ade80;--warn:#fbbf24;--chip:#2a2623}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,Segoe UI,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px 70px}
+h1{font-size:23px;margin:22px 0 2px}.sub{color:var(--mut);margin:0 0 10px}
+nav{position:sticky;top:0;background:var(--bg);z-index:3;border-bottom:1px solid var(--bd);padding:8px 0;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+nav a{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:999px;padding:3px 12px;text-decoration:none;font-size:13px}
+nav a:hover{border-color:var(--acc)}nav .sp{flex:1}
+button.b{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:6px;padding:3px 10px;cursor:pointer;font:inherit;font-size:12.5px}
+button.b:hover{border-color:var(--acc)}
+.acto{margin:32px 0 6px;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.ev{background:var(--card);border:1px solid var(--bd);border-left:5px solid var(--acc);border-radius:10px;padding:14px 16px;margin:12px 0;scroll-margin-top:60px}
+.ev.cur{outline:2px solid var(--acc);outline-offset:2px}
+.top{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;color:var(--mut);font-size:13px}
+.num{background:var(--acc);color:#fff;border-radius:50%;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+h3{margin:4px 0 6px;font-size:18px}
+.gancho{font-size:16px;margin:6px 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.box{background:var(--chip);border-radius:8px;padding:8px 12px;font-size:13.5px}
+.box b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin-bottom:2px}
+.tag{background:var(--chip);border-radius:4px;padding:1px 8px;font-size:12px;display:inline-block;margin:2px 4px 2px 0}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}
+.lnk{font-size:12px;border:1px solid var(--bd);border-radius:999px;padding:1px 9px;color:var(--acc);text-decoration:none;background:var(--chip);display:inline-block;margin:2px 3px 0 0}
+.lnk.s{border-color:var(--ok)}
+details>summary{cursor:pointer;color:var(--mut);font-size:13px;margin-top:8px}
+.nota{background:var(--chip);border-radius:6px;padding:6px 10px;margin:6px 0;font-size:13.5px}
+.meta{font-size:12.5px;color:var(--mut);margin-top:6px}
+kbd{background:var(--chip);border:1px solid var(--bd);border-radius:4px;padding:0 5px;font:12px ui-monospace,monospace}
+</style></head><body><div class="wrap">
+<h1 id="t"></h1><p class="sub" id="s"></p>
+<nav id="nav"></nav>
+<div id="out"></div>
+<p class="meta" id="aviso"></p>
+</div>
+<script id="data" type="application/json">{
+  "esquema_version": "historia-1.0",
+  "mision": "Opportunity",
+  "idioma": "es",
+  "titulo": "Opportunity: la historia en 20 momentos",
+  "publico": "Estudiantes de 5.º de secundaria (último año)",
+  "criterio_de_seleccion": "Prioridad 1: potencial para contar la historia de la misión y generar imágenes y animaciones. Prioridad 2: fuentes confiables (no determinante; otro agente ampliará fuentes).",
+  "actos": [
+    {
+      "n": 1,
+      "titulo": "La idea",
+      "eventos": [
+        "opp001",
+        "opp005",
+        "opp008"
+      ]
+    },
+    {
+      "n": 2,
+      "titulo": "El viaje",
+      "eventos": [
+        "opp015",
+        "opp018"
+      ]
+    },
+    {
+      "n": 3,
+      "titulo": "El agua en Meridiani",
+      "eventos": [
+        "opp021",
+        "opp025",
+        "opp028",
+        "opp030"
+      ]
+    },
+    {
+      "n": 4,
+      "titulo": "Años extra: récords, averías y hallazgos",
+      "eventos": [
+        "opp033",
+        "opp045",
+        "opp047",
+        "opp052",
+        "opp054",
+        "opp059",
+        "opp062"
+      ]
+    },
+    {
+      "n": 5,
+      "titulo": "La tormenta y el adiós",
+      "eventos": [
+        "opp070",
+        "opp072",
+        "opp077",
+        "opp081"
+      ]
+    }
+  ],
+  "eventos": [
+    {
+      "id": "opp001",
+      "orden_historia": 1,
+      "acto": 1,
+      "acto_titulo": "La idea",
+      "fecha_inicio": "1987",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "titulo": "Steve Squyres concibe un rover científico para Marte",
+      "narrativa": {
+        "gancho": "Un profesor de Cornell cree que, para saber si Marte fue húmedo o seco, hacen falta «botas geológicas sobre el terreno». Nace la idea de un robot geólogo.",
+        "escena_visual": "Oficina universitaria de los años 80: un profesor frente a una pizarra con un mapa de Marte y el boceto de un robot con ruedas.",
+        "emocion": "curiosidad y determinación",
+        "elementos": [
+          "Steve Squyres",
+          "pizarra con boceto de rover",
+          "mapa de Marte"
+        ],
+        "por_que_se_eligio": "Es el origen de todo: una pregunta científica clara (¿Marte fue húmedo o seco?) que el público de secundaria entiende de inmediato."
+      },
+      "hechos": {
+        "detalle": "Steve Squyres, profesor de Cornell, concibe por primera vez un rover geólogo para Marte. Su argumento científico: para saber si Marte fue húmedo y cálido o frío y seco hacían falta «botas geológicas sobre el terreno», es decir, un robot que examinara las rocas de cerca.",
+        "datos_clave": [
+          "Protagonista: Steve Squyres (Cornell)",
+          "Pregunta científica: ¿Marte fue húmedo y cálido, o frío y seco?"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Cornell Close-Ups: Steven Squyres",
+          "editor": "Cornell Daily Sun",
+          "url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "\"Follow the Water\": Steve Squyres and the Mars Exploration Rovers",
+          "editor": "Acta Astronáutica / ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S001600321000133X",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Entrevistas a Squyres sobre el origen de MER; libro «Roving Mars»."
+    },
+    {
+      "id": "opp005",
+      "orden_historia": 2,
+      "acto": 1,
+      "acto_titulo": "La idea",
+      "fecha_inicio": "2000",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "titulo": "El TES de Mars Global Surveyor detecta hematita gris en Meridiani Planum",
+      "narrativa": {
+        "gancho": "Desde la órbita, un instrumento detecta una mancha de hematita de unos 300 × 500 km. Es un mineral que suele formarse con agua: ya hay destino.",
+        "escena_visual": "Mapa espectral de Marte con una gran mancha gris sobre Meridiani Planum, visto desde una sonda en órbita.",
+        "emocion": "descubrimiento y expectativa",
+        "elementos": [
+          "Mars Global Surveyor",
+          "instrumento TES",
+          "mancha de hematita"
+        ],
+        "por_que_se_eligio": "Responde «¿por qué ahí?»: el sitio de aterrizaje se elige por una pista científica, no al azar."
+      },
+      "hechos": {
+        "detalle": "El instrumento TES de Mars Global Surveyor detecta una gran mancha de hematita gris en Meridiani Planum, de unos 300 × 500 km. La hematita es un mineral que normalmente se forma con agua; será la razón de elegir el sitio de Opportunity.",
+        "datos_clave": [
+          "Hematita gris, ~300 × 500 km",
+          "Instrumento: TES (Mars Global Surveyor)"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Phil Christensen: hematita y Meridiani",
+          "editor": "Arizona State University",
+          "url": "https://christensen.asu.edu/?p=416",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Artículos de Christensen et al. sobre hematita en Meridiani."
+    },
+    {
+      "id": "opp008",
+      "orden_historia": 3,
+      "acto": 1,
+      "acto_titulo": "La idea",
+      "fecha_inicio": "2000-07-16",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "titulo": "Reunión en la que Goldin pregunta '¿y si son dos rovers?'",
+      "narrativa": {
+        "gancho": "En una reunión se propone un solo rover. El jefe de la NASA pregunta: «¿Y si son dos rovers?». Esa pregunta duplica la misión.",
+        "escena_visual": "Sala de reuniones con la maqueta de un rover al centro; una sombra proyecta dos rovers en la pared.",
+        "emocion": "tensión que se vuelve entusiasmo",
+        "elementos": [
+          "Dan Goldin",
+          "maqueta de rover",
+          "equipo de ingenieros"
+        ],
+        "por_que_se_eligio": "Es una decisión real que cambió la misión y sirve de punto de partida para la versión interactiva."
+      },
+      "hechos": {
+        "detalle": "En una reunión el equipo propone un rover tipo Pathfinder y Goldin responde con una pregunta: «¿Y si son dos rovers?». El periodista Bruce Moomaw informó que el jefe de ciencia espacial Ed Weiler confirmó que Goldin tomó la decisión de forma repentina durante esa sesión.",
+        "datos_clave": [
+          "Decisor: Dan Goldin",
+          "Idea: dos rovers en dos sitios"
+        ],
+        "discutido": false,
+        "nota": "El relato de la reunión proviene de un directivo presente (testimonio personal, una sola voz)."
+      },
+      "fuentes": [
+        {
+          "titulo": "Relato de la reunión del 16 de julio de 2000",
+          "editor": "Project MUSE",
+          "url": "https://muse.jhu.edu/books/9780816599691/9780816599691-14.pdf",
+          "tipo": "libro/medio",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Mars general (Bruce Moomaw)",
+          "editor": "Terra Daily",
+          "url": "https://www.terradaily.com/news/mars-general-00q1.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "debil",
+      "busqueda_sugerida": "Fuente primaria de la reunión de julio de 2000 (Goldin, Weiler); la actual es secundaria."
+    },
+    {
+      "id": "opp015",
+      "orden_historia": 4,
+      "acto": 2,
+      "acto_titulo": "El viaje",
+      "fecha_inicio": "2003-07-07",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "titulo": "Lanzamiento de Opportunity (23:18 EDT; 03:18 GMT del 8 jul)",
+      "narrativa": {
+        "gancho": "Tras retrasos por un aislante agrietado, una celda de batería y una válvula defectuosa, Opportunity despega de noche en un Delta II.",
+        "escena_visual": "Cohete Delta II iluminado por reflectores en la plataforma de Cabo Cañaveral, de noche, a punto de despegar.",
+        "emocion": "nervios y alivio",
+        "elementos": [
+          "Delta II Heavy",
+          "plataforma SLC-17B",
+          "cuenta regresiva"
+        ],
+        "por_que_se_eligio": "Primer gran momento visual de la historia, con suspenso real por los retrasos."
+      },
+      "hechos": {
+        "detalle": "Despega Opportunity en un Delta II Heavy, versión del cohete que debutaba con esta misión. El lanzamiento estaba previsto para el 25 de junio y se retrasó por un aislante de corcho agrietado en el tanque, una celda de batería del sistema de terminación de vuelo y, el 7 de julio, una válvula defectuosa que sumó una hora de espera. Despegó de la plataforma SLC-17B de Cabo Cañaveral a las 11:18:15 p. m. EDT (03:18 GMT del 8 de julio). La ficha oficial de NASA indica el lanzador (Delta 7925H, vehículo D299) y la hora local del lanzamiento: 20:18:15 PDT, que coincide con las 23:18 EDT y las 03:18 GMT del día 8. Masa del vehículo: 1.062 kg (2.341 lb).",
+        "datos_clave": [
+          "Cohete: Delta II 7925 Heavy",
+          "Plataforma: SLC-17B, Cabo Cañaveral",
+          "Hora: 23:18:15 EDT = 03:18:15 UTC del 8 jul",
+          "La ventana de lanzamiento cerraba el 15 de julio",
+          "Lanzador: Delta 7925H (D299)",
+          "20:18:15 PDT",
+          "Masa: 1.062 kg"
+        ],
+        "discutido": false,
+        "nota": "Hora local EDT; en UTC ya es 8 de julio."
+      },
+      "fuentes": [
+        {
+          "titulo": "Boeing Delta II launches Opportunity",
+          "editor": "Boeing",
+          "url": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1?asPDF=1",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA ready for Opportunity",
+          "editor": "Astronomy",
+          "url": "https://www.astronomy.com/science/nasa-ready-for-opportunity/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "MER-B launch status",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Launch coverage, 8 jul 2003",
+          "editor": "SpaceDaily",
+          "url": "https://www.spacedaily.com/2003/030708041748.oc4f2yh0.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity soars towards Mars",
+          "editor": "SpaceRef",
+          "url": "https://spaceref.com/uncategorized/opportunity-soars-towards-mars/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Descripción de la misión MER",
+          "editor": "PDS Analyst's Notebook (WUSTL)",
+          "url": "https://an.rsl.wustl.edu/help/Content/About%20the%20mission/MER/MER%20mission.htm",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity (MER-B): ficha con visualización 3D de toda la misión",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mer-opportunity/?linkId=724006589",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity (MER-B): ficha de misión",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mer-opportunity",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Cobertura de NASA del lanzamiento del 7 de julio de 2003."
+    },
+    {
+      "id": "opp018",
+      "orden_historia": 5,
+      "acto": 2,
+      "acto_titulo": "El viaje",
+      "fecha_inicio": "2004-01-24",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": 1,
+      "titulo": "Opportunity aterriza en el cráter Eagle (21:05 PST; 25 ene UTC)",
+      "narrativa": {
+        "gancho": "Seis minutos de caída a unos 5.400 m/s: paracaídas, retrocohetes y airbags. Cuando se oye «rebotando», el equipo sabe que llegó.",
+        "escena_visual": "Secuencia de aterrizaje: la cápsula cae, se abre el paracaídas, los airbags la envuelven y rebota sobre un paisaje plano y rojizo.",
+        "emocion": "tensión extrema y euforia",
+        "elementos": [
+          "cápsula con airbags",
+          "paracaídas",
+          "sala de control JPL",
+          "Rob Manning"
+        ],
+        "por_que_se_eligio": "Es el momento de mayor suspenso de la misión y el más fácil de animar paso a paso."
+      },
+      "hechos": {
+        "detalle": "Opportunity entra en la atmósfera a las 8:59 p. m. PST y a las 9:05 p. m. ya rebota en Meridiani Planum, con un impacto de 2 a 3 G. Entra a unos 5.400 m/s. Secuencia: se suelta la etapa de crucero, el escudo térmico frena, se abre el paracaídas, se suelta el escudo y disparan los retrocohetes, se inflan los airbags y el conjunto cae, rebota y rueda, y finalmente el módulo se endereza y abre sus pétalos. Las señales tardan unos 11 minutos en llegar a la Tierra. Al oír «rebotando», Rob Manning celebra con «We're on Mars, everybody!». Cae a unos 24 km del centro de una elipse de aterrizaje de unos 74 km, rebota 26 veces y se detiene dentro del pequeño cráter Eagle (~22 m de diámetro): un «hoyo en uno» que le permite empezar a hacer ciencia de inmediato. Como aterrizó sobre un pétalo lateral, abrirse tomó unos 35 minutos, 15 más que a su gemelo. La página oficial de la misión fija el aterrizaje el 25 de enero de 2004 UT (24 de enero en hora del Pacífico), para una misión planeada de tres meses. Opportunity cayó dentro del cráter Eagle de Meridiani Planum, a unos 25 km al este de su objetivo, y quedó apuntando directamente a un afloramiento de roca expuesta, algo que la prensa científica calificó de golpe de suerte.",
+        "datos_clave": [
+          "Entrada: 20:59 PST; rebotando: 21:05 PST",
+          "Velocidad de entrada: ~5.400 m/s",
+          "Impacto: 2–3 G",
+          "26 rebotes",
+          "Cráter Eagle: ~22 m de diámetro",
+          "A ~24 km del centro de una elipse de ~74 km",
+          "Retraso de señal: ~11 min",
+          "Sol 1",
+          "25 ene 2004 UT = 24 ene PST",
+          "Misión planeada: 90 soles"
+        ],
+        "discutido": false,
+        "nota": "Fecha en hora del Pacífico (PST); en UTC es el 25 de enero. Aterrizó a la mayor altitud que la NASA había intentado hasta entonces (Wayne Lee, ingeniero jefe de EDL)."
+      },
+      "fuentes": [
+        {
+          "titulo": "MER update 25 ene 2004",
+          "editor": "The Planetary Society",
+          "url": "https://planetary.org/articles/01-25-mer-update",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "MER Press Kit (dossier de prensa)",
+          "editor": "NASA/JPL",
+          "url": "https://corpora.tika.apache.org/base/docs/govdocs1/386/386740.pdf",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "PIA03691: 2 Years on Mars, Meridiani Planum Features Investigated by Opportunity",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/images/pia03691-2-years-on-mars-meridiani-planum-features-investigated-by-the-rover-opportunity/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA: descenso y apertura del módulo",
+          "editor": "NASA",
+          "url": "https://www.nasa.gov/?p=425313",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA Hears from Opportunity Rover on Mars",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity landing coverage",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Jan 25, 2004: Opportunity lands on Mars",
+          "editor": "Astronomy",
+          "url": "https://www.astronomy.com/today-in-the-history-of-astronomy/jan-25-2004-opportunity-lands-on-mars/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "First aerial color photo of Mars rover's hole-in-one landing site",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/2017/05/03/first-aerial-color-photo-of-mars-rovers-hole-in-one-landing-site/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Cobertura del aterrizaje (AFP)",
+          "editor": "Taipei Times/AFP",
+          "url": "https://www.taipeitimes.com/News/front/archives/2004/01/26/2003092537",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Mars Exploration Rovers: Spirit and Opportunity (página oficial de la misión)",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta completa"
+        },
+        {
+          "titulo": "MER Science Highlights",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta completa"
+        },
+        {
+          "titulo": "Rover finds strong evidence of Mars water",
+          "editor": "UPI",
+          "url": "https://www.upi.com/Science_News/2004/03/03/Rover-finds-strong-evidence-of-Mars-water/UPI-16551078315684/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Timeline of Opportunity (copia de Wikipedia)",
+          "editor": "Wikipedia",
+          "url": "https://cavac.at/cavacopedia/Timeline%20of%20Opportunity",
+          "tipo": "comunitaria",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Material de JPL sobre la entrada, descenso y aterrizaje (EDL) de MER-B."
+    },
+    {
+      "id": "opp021",
+      "orden_historia": 6,
+      "acto": 3,
+      "acto_titulo": "El agua en Meridiani",
+      "fecha_inicio": "2004-03-02",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "titulo": "La NASA anuncia que las rocas de Meridiani estuvieron empapadas en agua",
+      "narrativa": {
+        "gancho": "La NASA anuncia que las rocas de Meridiani estuvieron empapadas en agua líquida. Opportunity encontró jarosita, sulfatos y pequeñas esferas.",
+        "escena_visual": "Primer plano de un afloramiento de roca con esférulas incrustadas y el brazo del rover con un instrumento acercándose.",
+        "emocion": "asombro",
+        "elementos": [
+          "Steve Squyres",
+          "jarosita",
+          "brazo robótico con instrumentos"
+        ],
+        "por_que_se_eligio": "Responde la pregunta científica que abrió la historia: Marte tuvo agua líquida."
+      },
+      "hechos": {
+        "detalle": "La NASA anuncia que las rocas de Meridiani estuvieron empapadas en agua líquida. En el cráter Eagle las «blueberries» resultaron concreciones ricas en hematita, y la roca tenía sulfatos y jarosita, un mineral que se forma con agua. El comunicado oficial 2004-074 de NASA detalla las pruebas: el espectrómetro Mössbauer detectó jarosita (sulfato de hierro hidratado), el APXS halló mucho azufre y sales de sulfato, y las rocas mostraban esférulas («arándanos») y estructuras sedimentarias. Squyres resumió que todo apuntaba a depósitos formados en agua líquida. El último dato Mössbauer llegó el viernes 27 de febrero y el anuncio se organizó para el 2 de marzo en la sede de NASA en Washington. Aún no se sabía cuánto tiempo estuvo el agua ni si era superficial o subterránea.",
+        "datos_clave": [
+          "Esférulas de hematita («blueberries»)",
+          "Sulfatos y jarosita",
+          "Conclusión: agua líquida en el pasado",
+          "Evidencia: sulfatos, jarosita, esférulas y capas finas",
+          "Último dato Mössbauer: 27 feb 2004",
+          "Comunicado 2004-074"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Evidencia de agua en Meridiani (marzo 2004)",
+          "editor": "SpaceNews",
+          "url": "https://spacenews.com/?p=40434",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Check-type evidence of water found on Mars",
+          "editor": "NASA Astrobiology",
+          "url": "https://astrobiology.nasa.gov/news/check-type-evidence-of-water-found-on-mars/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA Science: Eagle Crater",
+          "editor": "NASA",
+          "url": "https://science.nasa.gov/?p=337742",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity Rover Finds Strong Evidence Meridiani Planum Was Wet (comunicado 2004-074)",
+          "editor": "NASA/NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Steven Squyres delivers NASA's really big news: Mars once had water",
+          "editor": "Cornell Chronicle",
+          "url": "https://news.cornell.edu/node/294161",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "How an obscure mineral provided a vital clue to Martian water",
+          "editor": "Cornell Chronicle",
+          "url": "https://news.cornell.edu/node/294156",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Rover finds evidence landing site once wet, habitable",
+          "editor": "Spaceflight Now (CBS)",
+          "url": "https://spaceflightnow.com/mars/mera/040302marswater.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Rover finds strong evidence of Mars water",
+          "editor": "UPI",
+          "url": "https://www.upi.com/Science_News/2004/03/03/Rover-finds-strong-evidence-of-Mars-water/UPI-16551078315684/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Comunicado NASA 2004-074 y artículos de Science de diciembre de 2004."
+    },
+    {
+      "id": "opp025",
+      "orden_historia": 7,
+      "acto": 3,
+      "acto_titulo": "El agua en Meridiani",
+      "fecha_inicio": "2004-04",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "titulo": "Hallazgo de las «blueberries» (esférulas de hematita) cerca del cráter Fram",
+      "narrativa": {
+        "gancho": "Aparecen las «blueberries»: pequeñas esferas de hematita esparcidas por el suelo, otra huella de un pasado con agua.",
+        "escena_visual": "Suelo marciano rojizo cubierto de esferitas oscuras, vistas con la cámara del brazo.",
+        "emocion": "curiosidad lúdica",
+        "elementos": [
+          "esférulas de hematita",
+          "cráter Fram"
+        ],
+        "por_que_se_eligio": "Tienen un nombre fácil de recordar y una imagen muy visual para el público joven."
+      },
+      "hechos": {
+        "detalle": "La página oficial de resultados fecha en abril de 2004, durante la misión primaria, el hallazgo de las esférulas de hematita («arándanos») cerca del cráter Fram, que indican un ambiente acuoso antiguo. Las esférulas ya se habían visto antes en la roca de Eagle; NASA las ubica aquí.",
+        "datos_clave": [
+          "Lugar: cráter Fram",
+          "Fecha oficial: abril 2004"
+        ],
+        "discutido": true,
+        "nota": "Las esférulas se vieron desde Eagle (feb–mar 2004, ver anuncio del 2 de marzo); la página oficial las asocia con Fram en abril."
+      },
+      "fuentes": [
+        {
+          "titulo": "MER Science Highlights",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta completa"
+        },
+        {
+          "titulo": "Rover finds strong evidence of Mars water",
+          "editor": "UPI",
+          "url": "https://www.upi.com/Science_News/2004/03/03/Rover-finds-strong-evidence-of-Mars-water/UPI-16551078315684/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Steven Squyres delivers NASA's really big news: Mars once had water",
+          "editor": "Cornell Chronicle",
+          "url": "https://news.cornell.edu/node/294161",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Resultados científicos de Squyres et al. 2004; fecha exacta del hallazgo (hay discusión)."
+    },
+    {
+      "id": "opp028",
+      "orden_historia": 8,
+      "acto": 3,
+      "acto_titulo": "El agua en Meridiani",
+      "fecha_inicio": "2004-11",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": 287,
+      "titulo": "«Burns Cliff»: panorama de la pared interior de Endurance (soles 287–294)",
+      "narrativa": {
+        "gancho": "El rover baja despacio por la pared del cráter Endurance hasta «Burns Cliff», una pila de rocas finamente estratificadas, y toma un enorme panorama.",
+        "escena_visual": "Pared vertical de capas de roca vista desde abajo, con el rover diminuto al pie de la pendiente.",
+        "emocion": "escala y asombro",
+        "elementos": [
+          "Burns Cliff",
+          "cráter Endurance",
+          "panorama gigante"
+        ],
+        "por_que_se_eligio": "Da una imagen espectacular de escala y de capas de roca que «cuentan» la historia del lugar."
+      },
+      "hechos": {
+        "detalle": "El rover bajó despacio por la pendiente de la pared de Endurance hasta la base de «Burns Cliff», una pila vertical de rocas finamente estratificadas, y tomó un panorama de gran tamaño. JPL lo combinó después con un modelo del rover en una imagen sintética de 2006.",
+        "datos_clave": [
+          "Soles 287–294",
+          "Panorama 3D (anaglifo) PIA07065",
+          "Imagen sintética PIA03241 (oct 2006)"
+        ],
+        "discutido": false,
+        "nota": "Fecha estimada por cálculo a partir del sol (sol 1 = 25 ene 2004 UTC; 1 sol = 24 h 39 min), no dada por la fuente."
+      },
+      "fuentes": [
+        {
+          "titulo": "Opportunity panorama: 'Burns Cliff', sols 287-294",
+          "editor": "The Planetary Society",
+          "url": "https://www.planetary.org/space-images/opportunity-panorama-burns-cliff-sols-287-294",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "PIA07065: Opportunity at the Wall (3-D)",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/images/pia07065-opportunity-at-the-wall-3-d",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "PIA03241: Opportunity on 'Burns Cliff' (Simulated)",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/images/pia03241-opportunity-on-burns-cliff-simulated/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Imágenes PIA07065 y PIA03241 en la web de NASA/JPL."
+    },
+    {
+      "id": "opp030",
+      "orden_historia": 9,
+      "acto": 3,
+      "acto_titulo": "El agua en Meridiani",
+      "fecha_inicio": "2005-01",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": 339,
+      "titulo": "'Heat Shield Rock', primer meteorito hallado en otro planeta",
+      "narrativa": {
+        "gancho": "Junto a su propio escudo térmico descartado, Opportunity encuentra una roca de hierro y níquel: el primer meteorito identificado en otro planeta.",
+        "escena_visual": "Roca oscura del tamaño de una pelota de baloncesto junto a un escudo térmico abollado sobre la arena.",
+        "emocion": "sorpresa",
+        "elementos": [
+          "Heat Shield Rock",
+          "escudo térmico descartado"
+        ],
+        "por_que_se_eligio": "Es un hallazgo inesperado y fácil de contar: una roca del espacio sobre otro mundo."
+      },
+      "hechos": {
+        "detalle": "Junto a su propio escudo térmico descartado, Opportunity halla «Heat Shield Rock», un meteorito de hierro y níquel del tamaño de una pelota de baloncesto: el primer meteorito de cualquier tipo identificado en otro planeta.",
+        "datos_clave": [
+          "Meteorito de hierro y níquel",
+          "Primero identificado en otro planeta"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Opportunity Rover Finds an Iron Meteorite on Mars",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/news/opportunity-rover-finds-an-iron-meteorite-on-mars/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Nota de prensa de JPL de enero de 2005."
+    },
+    {
+      "id": "opp033",
+      "orden_historia": 10,
+      "acto": 4,
+      "acto_titulo": "Años extra: récords, averías y hallazgos",
+      "fecha_inicio": "2005-04-26",
+      "fecha_fin": "2005-06-04",
+      "precision_fecha": "rango",
+      "sol": null,
+      "titulo": "Atrapado en Purgatory Dune (soles 446-484)",
+      "narrativa": {
+        "gancho": "Las ruedas se hunden más de 10 cm en una duna. Los ingenieros pasan más de una semana probando con un rover gemelo en la Tierra y logran sacarlo en unas cinco semanas.",
+        "escena_visual": "Rover con las ruedas medio enterradas en arena clara; en otra escena, ingenieros con un rover gemelo en una caja de arena.",
+        "emocion": "angustia y perseverancia",
+        "elementos": [
+          "rover atrapado",
+          "rover gemelo de pruebas",
+          "duna Purgatory"
+        ],
+        "por_que_se_eligio": "Es el primer gran peligro de la misión y muestra el trabajo de equipo entre Marte y la Tierra."
+      },
+      "hechos": {
+        "detalle": "El 26 de abril de 2005 (sol 446) las ruedas se hunden más de 10 cm en una duna blanda mientras Opportunity cruzaba un rizo de arena de unos 30 cm de alto y 2,5 m de ancho; llevaba casi 40 m de un recorrido planeado de 90 m. Con la dirección de la rueda delantera derecha ya deshabilitada, el equipo diseña giros «en K». En la Tierra, los ingenieros pasan más de una semana probando con un rover gemelo de prueba antes de elegir cómo salir. El rover sale el sol 484 tras unas cinco semanas. Los rizos parecidos que evitó después se llamaron «purgatoides».",
+        "datos_clave": [
+          "Duna de arena: ~30 cm de alto y 2,5 m de ancho",
+          "Ruedas hundidas más de 10 cm",
+          "Soles 446 a 484",
+          "Dirección de la rueda delantera derecha ya deshabilitada"
+        ],
+        "discutido": true,
+        "nota": "Fecha de salida discutida: 4 de junio de 2005 (Cornell) frente a reportes del sol 484. Verificar la conversión sol–fecha."
+      },
+      "fuentes": [
+        {
+          "titulo": "NASA Science: Purgatory Dune",
+          "editor": "NASA",
+          "url": "https://science.nasa.gov/?p=940660",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "PIA07999: Looking Back at Purgatory Dune",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/images/pia07999-looking-back-at-purgatory-dune",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "MERs update (Purgatory Dune)",
+          "editor": "MarsDaily",
+          "url": "https://www.marsdaily.com/news/mars-mers-05zs.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Lucky Spirit and even luckier Opportunity continue their odyssey",
+          "editor": "Cornell Chronicle",
+          "url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "ASU Pancam: ruta de Opportunity",
+          "editor": "Arizona State University",
+          "url": "https://pancam.sese.asu.edu/448B_track.html",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity Mars Rover mission: Overview and selected results (Arvidson et al., 2011)",
+          "editor": "Journal of Geophysical Research (copia en Harvard DASH)",
+          "url": "https://dash.harvard.edu/bitstreams/7312037d-3c65-6bd4-e053-0100007fdf3b/download",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Reportes de JPL del sol 446 al 484 (abril-junio de 2005)."
+    },
+    {
+      "id": "opp045",
+      "orden_historia": 11,
+      "acto": 4,
+      "acto_titulo": "Años extra: récords, averías y hallazgos",
+      "fecha_inicio": "2011-05-25",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "titulo": "La NASA da por terminada la misión de Spirit",
+      "narrativa": {
+        "gancho": "La NASA da por terminada la misión de Spirit, la gemela de Opportunity. Opportunity sigue su camino.",
+        "escena_visual": "Dos siluetas de rover en el horizonte; una se apaga, la otra sigue en movimiento.",
+        "emocion": "tristeza y resolución",
+        "elementos": [
+          "Spirit",
+          "Opportunity"
+        ],
+        "por_que_se_eligio": "Da profundidad emocional: la gemela se despide y Opportunity continúa. Hay poco detalle en los datos actuales."
+      },
+      "hechos": {
+        "detalle": "La NASA da por terminada la misión de Spirit.",
+        "datos_clave": [],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Spirit Rover",
+          "editor": "Space.com",
+          "url": "https://www.space.com/18766-spirit-rover.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA Science: Mars Exploration Rover - Spirit",
+          "editor": "NASA",
+          "url": "https://science.nasa.gov/mission/mer-spirit/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Comunicado NASA de mayo de 2011 sobre el cierre de Spirit; contexto del sol en que dejó de comunicarse."
+    },
+    {
+      "id": "opp047",
+      "orden_historia": 12,
+      "acto": 4,
+      "acto_titulo": "Años extra: récords, averías y hallazgos",
+      "fecha_inicio": "2011-11",
+      "fecha_fin": "2011-12",
+      "precision_fecha": "rango",
+      "sol": null,
+      "titulo": "Hallazgo de la vena de yeso 'Homestake'",
+      "narrativa": {
+        "gancho": "Opportunity encuentra «Homestake», una vena brillante de yeso. Squyres la considera la evidencia más poderosa de agua líquida que halló el rover.",
+        "escena_visual": "Vena clara y brillante cruzando una roca oscura, vista de cerca.",
+        "emocion": "triunfo científico",
+        "elementos": [
+          "vena de yeso Homestake",
+          "Cape York",
+          "Steve Squyres"
+        ],
+        "por_que_se_eligio": "Es la prueba más fuerte de agua del rover y cierra el arco científico de la historia."
+      },
+      "hechos": {
+        "detalle": "Opportunity encuentra «Homestake», una vena brillante de sulfato de calcio (probablemente yeso), mineral que se depositó con agua en condiciones más neutras que las de los sulfatos ácidos anteriores. El comunicado de JPL describe una vena brillante de unos 40 a 50 cm de largo y del ancho de un pulgar, rica en calcio y azufre y probablemente yeso. Squyres la calificó como la evidencia más poderosa de agua líquida que halló Opportunity: el agua fluyó por fracturas subterráneas y el depósito se formó en el lugar, en condiciones más neutras que las de los sulfatos ácidos hallados antes. Se examinó en noviembre de 2011 en el borde de Cape York, y Opportunity pasó el Día de Acción de Gracias en «Turkey Haven», en el extremo norte de Cape York. Squyres lo presentó públicamente en la reunión de la AGU el 7-8 de diciembre de 2011.",
+        "datos_clave": [
+          "Yeso (sulfato de calcio)",
+          "Lugar: Cape York / Matijevic Hill",
+          "Vena: ~40–50 cm de largo, ancho de un pulgar",
+          "Composición: sulfato de calcio (probable yeso)",
+          "Examinada en nov 2011; anunciada en dic 2011"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Slam-dunk sign of ancient water on Mars",
+          "editor": "NASA Astrobiology",
+          "url": "https://astrobiology.nasa.gov/news/slam-dunk-sign-of-ancient-water-on-mars/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA Mars Rover Finds Mineral Vein Deposited by Water (dic 2011)",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Mars Opportunity Rover Finds Rich Vein Of Gypsum Water Deposits",
+          "editor": "JPL vía MarsDaily",
+          "url": "https://www.marsdaily.com/reports/Mars_Opportunity_Rover_Finds_Rich_Vein_Of_Gypsum_Water_Deposits_999.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Rover Finds 'Bulletproof' Evidence of Water on Early Mars",
+          "editor": "National Geographic",
+          "url": "https://www.nationalgeographic.com/science/article/111208-mars-water-nasa-rover-opportunity-gypsum-life-space-science",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Mars rover finds mineral vein deposited by water",
+          "editor": "Astronomy",
+          "url": "https://www.astronomy.com/science/mars-rover-finds-mineral-vein-deposited-by-water/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Comunicado de JPL de diciembre de 2011 y estudios posteriores de Squyres et al."
+    },
+    {
+      "id": "opp052",
+      "orden_historia": 13,
+      "acto": 4,
+      "acto_titulo": "Años extra: récords, averías y hallazgos",
+      "fecha_inicio": "2013-05-15",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": 3309,
+      "titulo": "Opportunity supera el récord de distancia del rover lunar Apolo 17",
+      "narrativa": {
+        "gancho": "Con una marcha de 80 m, el odómetro supera los 35,744 km del vehículo lunar del Apolo 17. Un rover en Marte pasa a un récord lunar.",
+        "escena_visual": "Huellas de ruedas en Marte extendiéndose al horizonte; un vehículo lunar del Apolo 17 en una esquina.",
+        "emocion": "orgullo",
+        "elementos": [
+          "Opportunity",
+          "vehículo lunar del Apolo 17"
+        ],
+        "por_que_se_eligio": "Conecta con la historia de las misiones lunares, que el público conoce."
+      },
+      "hechos": {
+        "detalle": "El sol 3309, con una marcha de 80 m, el odómetro superó los 35,744 km que recorrió el vehículo lunar del Apolo 17. Siete días después, Opportunity salió del todo de Cape York.",
+        "datos_clave": [
+          "Odómetro tras la marcha: 35,760 km",
+          "Salida de Cape York: sol 3316 (22 de mayo de 2013)"
+        ],
+        "discutido": false,
+        "nota": "La fuente da el 22 de mayo como salida de Cape York y menciona de pasada el 23."
+      },
+      "fuentes": [
+        {
+          "titulo": "Mars Exploration Rovers Update: Opportunity Departs Cape York, Breaks Apollo Record",
+          "editor": "The Planetary Society (A.J.S. Rayl)",
+          "url": "https://www.planetary.org/articles/05-mer-update-opportunity-departs-cape-york",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Nota de prensa de NASA/JPL de mayo de 2013."
+    },
+    {
+      "id": "opp054",
+      "orden_historia": 14,
+      "acto": 4,
+      "acto_titulo": "Años extra: récords, averías y hallazgos",
+      "fecha_inicio": "2014-01-08",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": 3541,
+      "titulo": "La «rosquilla de mermelada»: Pinnacle Island",
+      "narrativa": {
+        "gancho": "En una imagen aparece una roca blanca con el centro rojo donde cuatro días antes no había nada. Es la «rosquilla de mermelada».",
+        "escena_visual": "Dos fotos lado a lado: la misma zona vacía y, cuatro días después, una pequeña roca blanca con centro rojo.",
+        "emocion": "misterio",
+        "elementos": [
+          "Pinnacle Island",
+          "rueda de Opportunity"
+        ],
+        "por_que_se_eligio": "Es un pequeño misterio con resolución clara: la rueda movió un fragmento. Atrae a estudiantes."
+      },
+      "hechos": {
+        "detalle": "Una imagen del 8 de enero de 2014 mostró una pequeña roca blanca con centro rojo donde cuatro días antes no había nada. Se trataba de un fragmento de una roca mayor que una rueda de Opportunity rompió y movió. Era rica en manganeso y azufre, elementos solubles en agua que habrían sido concentrados por ella.",
+        "datos_clave": [
+          "Roca de unos 4 cm",
+          "Alta concentración de manganeso y azufre",
+          "Se estudió justo antes de llegar al McClure-Beverlin Escarpment"
+        ],
+        "discutido": true,
+        "nota": "Hay discrepancias menores entre fuentes: el texto de Planetary Society da el sol 3540 como 7 de enero y un pie de foto lo da como 8 de enero. El sol 3541 es el de las imágenes en que se notó la roca."
+      },
+      "fuentes": [
+        {
+          "titulo": "Mars Rover Heads Uphill After Solving Doughnut Riddle",
+          "editor": "NASA/JPL",
+          "url": "https://www.jpl.nasa.gov/news/mars-rover-heads-uphill-after-solving-doughnut-riddle/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Mars Exploration Rovers Update: Opportunity Finds Mystery Rock, Mission Celebrates 10 Years",
+          "editor": "The Planetary Society (A.J.S. Rayl)",
+          "url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Artículos de JPL de enero de 2014 y análisis de manganeso y azufre."
+    },
+    {
+      "id": "opp059",
+      "orden_historia": 15,
+      "acto": 4,
+      "acto_titulo": "Años extra: récords, averías y hallazgos",
+      "fecha_inicio": "2014-12",
+      "fecha_fin": "2015-03",
+      "precision_fecha": "rango",
+      "sol": null,
+      "titulo": "Problemas de memoria flash ('amnesia')",
+      "narrativa": {
+        "gancho": "La memoria flash se degrada y el rover empieza a «olvidar» lo que hizo cada sol. La amnesia obliga a cambiar el software.",
+        "escena_visual": "Interfaz de datos con líneas que se borran al apagarse; el rover «durmiendo» en la noche marciana.",
+        "emocion": "preocupación",
+        "elementos": [
+          "memoria flash de 256 MB",
+          "banco 7",
+          "ingenieros de software"
+        ],
+        "por_que_se_eligio": "Muestra que una misión larga también se enfrenta a fallos de hardware, no solo a terreno difícil."
+      },
+      "hechos": {
+        "detalle": "La memoria flash se degrada y el rover empieza a «olvidar» lo que hizo cada sol: si no puede guardar en flash, usa la RAM, que se borra al dormirse. Dos reformateos en 2014 no sirven y en diciembre pasa a RAM; un nuevo software que ignora el banco 7 se confirma el 20 de marzo de 2015, pero la amnesia volvía cada vez que se encendía la flash. JPL resume que en 2015 perdió el uso de su memoria flash de 256 MB.",
+        "datos_clave": [
+          "Memoria flash de 256 MB",
+          "Software que ignora el banco 7 (20 mar 2015)"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Mars rover Opportunity suffering from amnesia",
+          "editor": "MarsDaily/UPI",
+          "url": "https://www.solardaily.com/reports/Mars_rover_Opportunity_suffering_from_amnesia_says_NASA_999.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "MER update: 12th anniversary",
+          "editor": "The Planetary Society",
+          "url": "https://www.planetary.org/articles/12-mer-update-12th-anniversary",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity completa un maratón en Marte",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/?p=5057",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA's Opportunity Rover Mission on Mars Comes to an End",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta completa"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Reportes de JPL de 2014-2015 sobre la memoria flash."
+    },
+    {
+      "id": "opp062",
+      "orden_historia": 16,
+      "acto": 4,
+      "acto_titulo": "Años extra: récords, averías y hallazgos",
+      "fecha_inicio": "2015-03-24",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": 3968,
+      "titulo": "Completa una distancia de maratón; explora Marathon Valley hasta 2016",
+      "narrativa": {
+        "gancho": "Opportunity completa una distancia de maratón: el primer rover en lograrlo en otro mundo. Luego explora Marathon Valley.",
+        "escena_visual": "Línea de meta imaginaria en un camino marciano con huellas de rueda; el odómetro marca 42,198 km.",
+        "emocion": "celebración",
+        "elementos": [
+          "Opportunity",
+          "odómetro",
+          "Marathon Valley"
+        ],
+        "por_que_se_eligio": "Un hito deportivo comprensible para cualquier estudiante."
+      },
+      "hechos": {
+        "detalle": "Completa una distancia de maratón, el primer rover en lograrlo en otro mundo. Luego explora Marathon Valley, un valle cortado en la pared de Endeavour con rocas de composición distinta a las vistas por ambos rovers. La página oficial de NASA precisa que el 24 de marzo de 2015 (sol 3968), tras un avance de 153 pies (46,5 m), el odómetro llegó a 26,221 millas (42,198 km), más allá de la distancia de una maratón; NASA lo presenta como la primera empresa humana en superar un maratón en otro mundo.",
+        "datos_clave": [
+          "Primer maratón en otro mundo",
+          "Marathon Valley hasta 2016",
+          "Sol 3968",
+          "Odómetro: 26,221 mi (42,198 km)",
+          "Avance del día: 153 pies (46,5 m)"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Opportunity completa un maratón en Marte",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/?p=5057",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA Science: Mars Exploration Rover - Opportunity",
+          "editor": "NASA",
+          "url": "https://science.nasa.gov/mission/mer-opportunity/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity Rover",
+          "editor": "Space.com",
+          "url": "https://www.space.com/18289-opportunity-rover.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "MER Science Highlights",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta completa"
+        },
+        {
+          "titulo": "Opportunity (MER-B): ficha de misión",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mer-opportunity",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Página oficial de NASA sobre el maratón de Opportunity (24 de marzo de 2015)."
+    },
+    {
+      "id": "opp070",
+      "orden_historia": 17,
+      "acto": 5,
+      "acto_titulo": "La tormenta y el adiós",
+      "fecha_inicio": "2018-05-30",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "titulo": "El MRO detecta la tormenta de polvo que se acerca",
+      "narrativa": {
+        "gancho": "Un orbitador detecta una tormenta de polvo que avanza hacia Opportunity. En pocos días cubre el planeta y convierte el día en noche sobre el rover.",
+        "escena_visual": "Cielo naranja que se oscurece sobre Perseverance Valley; el rover pequeño bajo un cielo casi negro.",
+        "emocion": "amenaza creciente",
+        "elementos": [
+          "Mars Reconnaissance Orbiter",
+          "tormenta global de polvo",
+          "paneles solares"
+        ],
+        "por_que_se_eligio": "Inicia el desenlace con un antagonista natural claro. Los paneles solares dependen de la luz."
+      },
+      "hechos": {
+        "detalle": "El Mars Reconnaissance Orbiter detecta una tormenta de polvo que avanza hacia Opportunity; en pocos días cubre todo el planeta y convierte el día en noche sobre el rover. El MRO detectó el temporal el 30 de mayo (JPL corrigió el 12 de junio el comunicado original, que decía 30 de mayo; otras notas dicen 1 de junio). El 30 de mayo la opacidad (tau) era de solo 0,6. La tormenta creció en días hasta convertirse en un evento de escala planetaria: el 6 de junio ya estaba cerca, el 10 de junio la tau llegó a 10,8, un récord, y la noche perpetua se instaló sobre el valle Perseverance. NASA hizo una teleconferencia el 13 de junio. JPL declaró el 26 de julio que era «el principio del fin» de la tormenta.",
+        "datos_clave": [
+          "Tormenta global de polvo",
+          "Tau 30 mayo: 0,6",
+          "Tau 10 jun: 10,8 (récord)",
+          "Teleconferencia NASA: 13 jun 2018",
+          "Fin del temporal: 26 jul 2018 (JPL)"
+        ],
+        "discutido": true,
+        "nota": "Fecha de detección: JPL (corregido el 12 jun) dice 30 mayo; otras fuentes dicen 31 mayo o 1 junio."
+      },
+      "fuentes": [
+        {
+          "titulo": "NASA's Mars rover Opportunity is officially declared dead",
+          "editor": "NPR via MPR News",
+          "url": "https://www.mprnews.org/story/2019/02/13/npr-nasas-mars-rover-opportunity-is-officially-declared-dead",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity Hunkers Down During Dust Storm (actualizado hasta el 26 jul 2018)",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Dust Storm Wanes, Opportunity Sleeps, Team Prepares Recovery Strategy (1 ago 2018)",
+          "editor": "The Planetary Society",
+          "url": "https://www.planetary.org/articles/08-mer-update-opportunity-sleeps",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity hunkers down during dust storm (JPL, 13 jun 2018)",
+          "editor": "JPL vía MarsDaily",
+          "url": "https://www.marsdaily.com/reports/Opportunity_hunkers_down_during_dust_storm_999.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA Encounters the Perfect Storm for Science (14 jun 2018)",
+          "editor": "NASA vía LASP/MAVEN",
+          "url": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Mars Rover Opportunity Hunkers Down During Dust Storm (11 jun 2018)",
+          "editor": "NASA vía SpaceRef",
+          "url": "https://spaceref.com/?p=17728",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA Studying Record-Setting Dust Storm on Mars",
+          "editor": "NASA APPEL",
+          "url": "https://appel.nasa.gov/?p=350951",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity Pummeled by Massive Dust Storm, Hunkers Down to Sleep",
+          "editor": "The Planetary Society",
+          "url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Intensifying Global Martian Dust Storm Imperils Opportunity",
+          "editor": "Ken Kremer (blog)",
+          "url": "https://kenkremer.blogspot.com/2018/06/intensifying-global-martian-dust-storm.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Comunicados de JPL de junio de 2018; fecha exacta de detección (hay discusión)."
+    },
+    {
+      "id": "opp072",
+      "orden_historia": 18,
+      "acto": 5,
+      "acto_titulo": "La tormenta y el adiós",
+      "fecha_inicio": "2018-06-10",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": 5111,
+      "titulo": "Última comunicación (sol 5111)",
+      "narrativa": {
+        "gancho": "Opportunity toma 354 imágenes para un último panorama; las finales son en blanco y negro porque la tormenta impidió usar los filtros. Luego, silencio.",
+        "escena_visual": "Panorama nocturno oscuro con luz tenue sobre Perseverance Valley; el rover inmóvil, con los paneles cubiertos de polvo.",
+        "emocion": "melancolía",
+        "elementos": [
+          "Perseverance Valley",
+          "panorama de 360°",
+          "sol 5111"
+        ],
+        "por_que_se_eligio": "Es el punto emocional de la historia. Aviso: la frase «mi batería está baja y se está haciendo oscuro» no es un texto del rover, es una traducción poética de un periodista."
+      },
+      "hechos": {
+        "detalle": "Última comunicación de Opportunity desde Perseverance Valley. Entre el 13 de mayo y el 10 de junio (soles 5084 a 5111) tomó 354 imágenes para un panorama de 360°; las últimas, en blanco y negro porque la tormenta impidió usar los filtros. Ese día la opacidad (tau) fue de unos 10,8: casi nada de luz llegaba al suelo. La frase «mi batería está baja y se está haciendo oscuro» no es un texto del rover: fue una traducción poética del periodista Jacob Margolis a partir de lo que le dijeron dos científicos. El archivo oficial de JPL aclara que esa imagen «ruidosa», tomada hacia las 9:30 a. m. PDT del 10 de junio de 2018 (sol 5111), fue el último dato que transmitió, pero no la última toma: otra serie (PIA22930) se tomó tres minutos después, y solo se transmitieron las miniaturas porque se perdió el contacto antes de enviar los cuadros completos. La imagen se envió al MRO hacia las 9:45 a. m. PDT.",
+        "datos_clave": [
+          "Sol 5111",
+          "354 imágenes (soles 5084–5111)",
+          "Opacidad (tau) ≈ 10,8",
+          "Frase famosa: traducción poética, no mensaje real",
+          "Último dato: ~9:30 a. m. PDT, 10 jun 2018",
+          "Segunda serie de imágenes 3 min después (PIA22930)",
+          "Solo miniaturas transmitidas"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "MER update: Opportunity complete",
+          "editor": "The Planetary Society (A.J.S. Rayl)",
+          "url": "https://www.planetary.org/articles/02-mer-update-opportunity-complete",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity rover last message",
+          "editor": "Newsweek",
+          "url": "https://www.google.pl/amp/s/www.newsweek.com/nasa-mars-opportunity-rover-new-york-daily-news-jet-propulsion-laboratory-1334615%3famp=1",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity's Parting Shot Was a Beautiful Panorama",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/news/opportunitys-parting-shot-was-a-beautiful-panorama/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta completa"
+        },
+        {
+          "titulo": "Mars Opportunity rover final photo",
+          "editor": "CNN",
+          "url": "https://edition-prod-cf.sitemirror.cnn.com/2019/03/13/world/mars-opportunity-rover-final-photo-scn-trnd/index.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "PIA22930: últimas imágenes de Opportunity",
+          "editor": "PDS Rings / SETI",
+          "url": "https://pds-rings.seti.org/press_releases/pages/PIA22xxx/PIA22930.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity rover's final words",
+          "editor": "Snopes",
+          "url": "https://snopes.com/fact-check/opportunity-rovers-final-words/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "'My battery is low and it's getting dark'",
+          "editor": "LAist",
+          "url": "https://laist.com/news/jpl-mars-rover-opportunity-battery-is-low-and-its-getting-dark",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity's Last Message",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/images/opportunitys-last-message",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "PIA22929: último dato enviado por Opportunity (sol 5111)",
+          "editor": "NASA/JPL-Caltech",
+          "url": "https://pds-rings.seti.org/press_releases/pages/PIA22xxx/PIA22929.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "PIA22329: Dust Storm Covers Opportunity (10 jun 2018)",
+          "editor": "NASA/JPL-Caltech/MSSS",
+          "url": "https://pds-rings.seti.org:443/press_releases/pages/PIA22xxx/PIA22329.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity Rover's Final Mars Images",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/?p=140583",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity's last Mars panorama is a showstopper",
+          "editor": "TechCrunch",
+          "url": "https://techcrunch.com/2019/03/13/opportunitys-last-mars-panorama-is-a-showstopper/amp/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Archivo oficial de JPL y del periodista Jacob Margolis sobre la frase."
+    },
+    {
+      "id": "opp077",
+      "orden_historia": 19,
+      "acto": 5,
+      "acto_titulo": "La tormenta y el adiós",
+      "fecha_inicio": "2019-02-12",
+      "fecha_fin": "2019-02-13",
+      "precision_fecha": "rango",
+      "sol": null,
+      "titulo": "Últimos comandos y declaración de misión completa (12-13 feb)",
+      "narrativa": {
+        "gancho": "Tras ocho meses de intentos, JPL transmite las últimas instrucciones mientras suena «I'll Be Seeing You». Se declara completa una misión pensada para 90 soles y que duró 15 años.",
+        "escena_visual": "Sala de control casi a oscuras, pantallas con la señal plana; ingenieros escuchando la canción.",
+        "emocion": "despedida y gratitud",
+        "elementos": [
+          "Thomas Zurbuchen",
+          "John Callas",
+          "antena de Goldstone"
+        ],
+        "por_que_se_eligio": "Es el cierre de la misión, con una frase real: «Farewell, Opportunity, and well done»."
+      },
+      "hechos": {
+        "detalle": "Tras ocho meses de intentos, JPL transmite las últimas instrucciones el 12 de febrero, cerca de las 8 p. m. PST, mientras suena «I'll Be Seeing You» de Billie Holiday en la sala de control, a través de la antena de 70 m de Goldstone. El 13 de febrero Thomas Zurbuchen declara completa la misión; John Callas cierra con «Farewell, Opportunity, and well done». Balance: 15 años en Marte, ~60 veces su vida prevista, más de 45 km y más de 217.000 imágenes. Tras más de 835 comandos de recuperación enviados desde junio (más de mil según el comunicado de NASA del 13 de marzo de 2019) y una estrategia de último recurso de ocho meses, el 12 de febrero de 2019 hacia las 8 p. m. PST, mientras sonaba «I'll Be Seeing You» de Billie Holiday en el centro de operaciones, se enviaron los últimos comandos. El 13 de febrero Thomas Zurbuchen declaró completa la misión de Opportunity y, con ella, la de los Mars Exploration Rovers; John Callas, gerente del proyecto, dijo que se hicieron todos los esfuerzos razonables de ingeniería. NASA gastó unos 800 millones de dólares (de 2003) en construir y lanzar a los dos rovers. Callas contó además que un calentador del brazo quedó encendido poco después del aterrizaje y consumía las baterías de noche; sin arreglarlo, la misión no habría durado mucho más que los 90 días.",
+        "datos_clave": [
+          "Más de 1.000 comandos enviados (JPL); 835 según otra cuenta de NASA",
+          "Más de 45 km recorridos",
+          "Más de 217.000 imágenes y 15 panorámicas de 360°",
+          "835+ comandos (>1.000 según NASA)",
+          "Último intento: 12 feb 2019, ~8 p. m. PST",
+          "Declaración: 13 feb 2019",
+          "Costo de ambos rovers: ~800 millones USD"
+        ],
+        "discutido": true,
+        "nota": "Comandos de recuperación: más de 1.000 (JPL, balance final) frente a 835 (cuenta de NASA a inicios de febrero). Mostrar ambos. Los conteos de comandos difieren: Planetary Society y Astronomy dan «más de 835»; el comunicado de NASA habla de más de 1.000."
+      },
+      "fuentes": [
+        {
+          "titulo": "MER update: Opportunity complete",
+          "editor": "The Planetary Society (A.J.S. Rayl)",
+          "url": "https://www.planetary.org/articles/02-mer-update-opportunity-complete",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA's Opportunity Rover Mission on Mars Comes to an End",
+          "editor": "JPL/NASA",
+          "url": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta completa"
+        },
+        {
+          "titulo": "Opportunity mission declared complete",
+          "editor": "collectSPACE",
+          "url": "https://www.collectspace.com/news/news-021319a-opportunity-mars-rover-end.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Mission complete for Opportunity rover",
+          "editor": "Astronomy",
+          "url": "https://astronomy.com/science/mission-complete-for-opportunity-rover",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity's last message to scientists",
+          "editor": "ABC7",
+          "url": "https://abc7news.com/amp/post/my-battery-is-low-and-its-getting-dark-opportunitys-last-message-to-scientists/5137455/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA's Record-Setting Opportunity Rover Mission on Mars Comes to End (comunicado)",
+          "editor": "NASA vía Defense Daily/PR Newswire",
+          "url": "https://www.defensedaily.com/press-releases/nasas-record-setting-opportunity-rover-mission-on-mars-comes-to-end/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Opportunity's Last View Of Mars (comunicado, 13 mar 2019)",
+          "editor": "NASA vía SpaceRef",
+          "url": "https://spaceref.com/science-and-exploration/opportunitys-last-view-of-mars/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA's Opportunity rover mission on Mars comes to end (13 feb 2019)",
+          "editor": "NASA/JPL vía ScienceDaily",
+          "url": "https://www.sciencedaily.com/releases/2019/02/190213150035.htm",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA declares Opportunity rover dead after 15 years on Mars",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA ends efforts to restore contact with Opportunity",
+          "editor": "SpaceNews",
+          "url": "https://spacenews.com/?p=85811",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA declares 'mission complete' for Opportunity rover",
+          "editor": "Astronomy",
+          "url": "https://www.astronomy.com/space-exploration/nasa-declares-mission-complete-for-opportunity-rover/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "NASA announces demise of Mars rover Opportunity",
+          "editor": "Rappler/AFP",
+          "url": "https://www.rappler.com/science/223458-nasa-announces-demise-of-mars-rover-opportunity/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Mars Opportunity rover ends its mission",
+          "editor": "EarthSky",
+          "url": "https://earthsky.org/space/mars-opportunity-rover-ends-mission-feb2019",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Conferencia de prensa de NASA del 13 de febrero de 2019."
+    },
+    {
+      "id": "opp081",
+      "orden_historia": 20,
+      "acto": 5,
+      "acto_titulo": "La tormenta y el adiós",
+      "fecha_inicio": "2026-10-11",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "titulo": "Perseverance supera el récord de distancia de Opportunity",
+      "narrativa": {
+        "gancho": "Años después, Perseverance supera los 45,16 km de Opportunity. Lo logra en unos cinco años y medio, en gran parte por conducir de forma autónoma.",
+        "escena_visual": "Dos rovers en un mismo horizonte: uno viejo y polvoriento, otro nuevo y brillante, con un odómetro entre ambos.",
+        "emocion": "legado y esperanza",
+        "elementos": [
+          "Perseverance",
+          "Opportunity",
+          "AutoNav"
+        ],
+        "por_que_se_eligio": "Cierra el círculo: el pasado inspira el futuro. Es un buen final para el público joven."
+      },
+      "hechos": {
+        "detalle": "Perseverance supera las 28,06 millas (45,16 km) de Opportunity y llega a 28,10 millas (45,22 km), en el sol 2006 de su misión. Lo logra en unos cinco años y medio; Opportunity necesitó casi quince, en gran parte por la conducción autónoma (AutoNav): más del 90 % de la distancia de Perseverance frente a cerca del 5 % en los primeros rovers. La página oficial de NASA da los números: Opportunity 28,06 millas (45,16 km); Perseverance, 28,10 millas (45,22 km) el 11 de octubre de 2026 y aún contando. La infografía de NASA añade que los MER vivieron 14 años y enviaron más de 300.000 imágenes crudas; Spirit recorrió 4,8 millas (7,7 km).",
+        "datos_clave": [
+          "Opportunity: 45,16 km",
+          "Perseverance: 45,22 km",
+          "AutoNav: >90 % vs ~5 %",
+          "Opportunity: 45,16 km",
+          "Perseverance: 45,22 km (11 oct 2026)",
+          "Spirit: 7,7 km"
+        ],
+        "discutido": false,
+        "nota": null
+      },
+      "fuentes": [
+        {
+          "titulo": "Perseverance supera el récord de distancia de Opportunity (oct 2026)",
+          "editor": "NASA/JPL",
+          "url": "https://science.nasa.gov/?p=1484026",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Perseverance breaks Opportunity distance record",
+          "editor": "EarthSky",
+          "url": "https://earthsky.org/?p=560859",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Mars Exploration Rovers: Spirit and Opportunity (página oficial de la misión)",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta completa"
+        }
+      ],
+      "solidez_fuentes": "fuerte",
+      "busqueda_sugerida": "Página oficial de NASA sobre el récord de Perseverance (octubre de 2026)."
+    }
+  ],
+  "resumen": {
+    "eventos": 20,
+    "con_fuente_fuerte": 19,
+    "con_fuente_debil": [
+      "opp008"
+    ],
+    "discutidos": [
+      "opp025",
+      "opp033",
+      "opp054",
+      "opp070",
+      "opp077"
+    ]
+  },
+  "aviso": "Los campos de «narrativa» son redacción editorial hecha a partir de los hechos del evento; no son citas. Los hechos y fuentes provienen de linea_de_tiempo_opportunity.json."
+}</script>
+<script>
+const D=JSON.parse(document.getElementById('data').textContent);
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(_){return 'fuente'}};
+$('#t').textContent=D.titulo;
+$('#s').textContent=`${D.publico} · ${D.resumen.eventos} eventos · ${D.resumen.con_fuente_fuerte} con fuente oficial o científica · ${D.resumen.con_fuente_debil.length} con fuente débil`;
+$('#aviso').textContent=D.aviso;
+$('#nav').innerHTML=D.actos.map(a=>`<a href="#acto${a.n}">${a.n}. ${esc(a.titulo)}</a>`).join('')+'<span class="sp"></span><span class="meta"><kbd>j</kbd>/<kbd>k</kbd> mover</span><button class="b" id="dl">Descargar JSON</button>';
+const fecha=e=>e.fecha_fin?`${e.fecha_inicio} → ${e.fecha_fin}`:e.fecha_inicio;
+let h='',last=0;
+for(const e of D.eventos){
+ if(e.acto!==last){last=e.acto;h+=`<div class="acto" id="acto${e.acto}">Acto ${e.acto} · ${esc(e.acto_titulo)}</div>`}
+ const n=e.narrativa,f=e.hechos;
+ h+=`<article class="ev" id="${e.id}"><div class="top"><span class="num">${e.orden_historia}</span><b>${esc(fecha(e))}</b>${e.sol!=null?`<span>sol ${e.sol}</span>`:''}<span class="tag">${e.id}</span>
+ <span class="tag ${e.solidez_fuentes==='fuerte'?'ok':'warn'}">${e.solidez_fuentes==='fuerte'?'✓ fuente oficial/científica':'⚠ fuente débil'}</span>${f.discutido?'<span class="tag warn">⚠ discutido</span>':''}</div>
+ <h3>${esc(e.titulo)}</h3><div class="gancho">${esc(n.gancho)}</div>
+ <div class="grid"><div class="box"><b>Escena visual</b>${esc(n.escena_visual)} <button class="b" data-copy="${esc(n.escena_visual)}">Copiar</button></div>
+ <div class="box"><b>Emoción</b>${esc(n.emocion)}<b style="margin-top:6px">Elementos</b>${n.elementos.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div></div>
+ <div class="box"><b>Por qué se eligió</b>${esc(n.por_que_se_eligio)}</div>
+ <div style="margin-top:8px">${e.fuentes.map(s=>`<a class="lnk ${['oficial NASA/JPL','científica'].includes(s.tipo)?'s':''}" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.titulo+' · '+s.tipo)}">🔗 ${esc(s.editor||host(s.url))}</a>`).join('')}</div>
+ <div class="meta">🔎 Para el agente de fuentes: ${esc(e.busqueda_sugerida)}</div>
+ <details><summary>Hechos originales</summary><p>${esc(f.detalle)}</p>${f.datos_clave.length?`<ul>${f.datos_clave.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${f.nota?`<div class="nota">📝 ${esc(f.nota)}</div>`:''}</details></article>`}
+$('#out').innerHTML=h;
+document.addEventListener('click',e=>{const c=e.target.closest('[data-copy]');if(c){navigator.clipboard?.writeText(c.dataset.copy);c.textContent='Copiado'}});
+$('#dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));a.download='historia_opportunity.json';a.click()};
+let cur=-1;const cards=[...document.querySelectorAll('.ev')];
+document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(e.target.tagName)||e.ctrlKey||e.metaKey)return;
+ const d=e.key==='j'||e.key==='ArrowDown'?1:e.key==='k'||e.key==='ArrowUp'?-1:0;if(!d)return;e.preventDefault();
+ cards[cur]?.classList.remove('cur');cur=Math.max(0,Math.min(cards.length-1,cur+d));cards[cur].classList.add('cur');cards[cur].scrollIntoView({block:'start',behavior:'smooth'})});
+</script></body></html>

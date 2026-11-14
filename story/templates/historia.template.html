@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opportunity: la historia</title>
+<style>
+:root{--bg:#fafaf9;--card:#fff;--fg:#1c1917;--mut:#6b6560;--bd:#e7e5e4;--acc:#c2410c;--ok:#15803d;--warn:#b45309;--chip:#f1efed}
+@media(prefers-color-scheme:dark){:root{--bg:#141210;--card:#1c1917;--fg:#ede9e6;--mut:#a39d97;--bd:#33302d;--acc:#fb923c;--ok:#4ade80;--warn:#fbbf24;--chip:#2a2623}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,Segoe UI,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px 70px}
+h1{font-size:23px;margin:22px 0 2px}.sub{color:var(--mut);margin:0 0 10px}
+nav{position:sticky;top:0;background:var(--bg);z-index:3;border-bottom:1px solid var(--bd);padding:8px 0;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+nav a{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:999px;padding:3px 12px;text-decoration:none;font-size:13px}
+nav a:hover{border-color:var(--acc)}nav .sp{flex:1}
+button.b{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:6px;padding:3px 10px;cursor:pointer;font:inherit;font-size:12.5px}
+button.b:hover{border-color:var(--acc)}
+.acto{margin:32px 0 6px;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.ev{background:var(--card);border:1px solid var(--bd);border-left:5px solid var(--acc);border-radius:10px;padding:14px 16px;margin:12px 0;scroll-margin-top:60px}
+.ev.cur{outline:2px solid var(--acc);outline-offset:2px}
+.top{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;color:var(--mut);font-size:13px}
+.num{background:var(--acc);color:#fff;border-radius:50%;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+h3{margin:4px 0 6px;font-size:18px}
+.gancho{font-size:16px;margin:6px 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.box{background:var(--chip);border-radius:8px;padding:8px 12px;font-size:13.5px}
+.box b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin-bottom:2px}
+.tag{background:var(--chip);border-radius:4px;padding:1px 8px;font-size:12px;display:inline-block;margin:2px 4px 2px 0}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}
+.lnk{font-size:12px;border:1px solid var(--bd);border-radius:999px;padding:1px 9px;color:var(--acc);text-decoration:none;background:var(--chip);display:inline-block;margin:2px 3px 0 0}
+.lnk.s{border-color:var(--ok)}
+details>summary{cursor:pointer;color:var(--mut);font-size:13px;margin-top:8px}
+.nota{background:var(--chip);border-radius:6px;padding:6px 10px;margin:6px 0;font-size:13.5px}
+.meta{font-size:12.5px;color:var(--mut);margin-top:6px}
+kbd{background:var(--chip);border:1px solid var(--bd);border-radius:4px;padding:0 5px;font:12px ui-monospace,monospace}
+</style></head><body><div class="wrap">
+<h1 id="t"></h1><p class="sub" id="s"></p>
+<nav id="nav"></nav>
+<div id="out"></div>
+<p class="meta" id="aviso"></p>
+</div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D=JSON.parse(document.getElementById('data').textContent);
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(_){return 'fuente'}};
+$('#t').textContent=D.titulo;
+$('#s').textContent=`${D.publico} · ${D.resumen.eventos} eventos · ${D.resumen.con_fuente_fuerte} con fuente oficial o científica · ${D.resumen.con_fuente_debil.length} con fuente débil`;
+$('#aviso').textContent=D.aviso;
+$('#nav').innerHTML=D.actos.map(a=>`<a href="#acto${a.n}">${a.n}. ${esc(a.titulo)}</a>`).join('')+'<span class="sp"></span><span class="meta"><kbd>j</kbd>/<kbd>k</kbd> mover</span><button class="b" id="dl">Descargar JSON</button>';
+const fecha=e=>e.fecha_fin?`${e.fecha_inicio} → ${e.fecha_fin}`:e.fecha_inicio;
+let h='',last=0;
+for(const e of D.eventos){
+ if(e.acto!==last){last=e.acto;h+=`<div class="acto" id="acto${e.acto}">Acto ${e.acto} · ${esc(e.acto_titulo)}</div>`}
+ const n=e.narrativa,f=e.hechos;
+ h+=`<article class="ev" id="${e.id}"><div class="top"><span class="num">${e.orden_historia}</span><b>${esc(fecha(e))}</b>${e.sol!=null?`<span>sol ${e.sol}</span>`:''}<span class="tag">${e.id}</span>
+ <span class="tag ${e.solidez_fuentes==='fuerte'?'ok':'warn'}">${e.solidez_fuentes==='fuerte'?'✓ fuente oficial/científica':'⚠ fuente débil'}</span>${f.discutido?'<span class="tag warn">⚠ discutido</span>':''}</div>
+ <h3>${esc(e.titulo)}</h3><div class="gancho">${esc(n.gancho)}</div>
+ <div class="grid"><div class="box"><b>Escena visual</b>${esc(n.escena_visual)} <button class="b" data-copy="${esc(n.escena_visual)}">Copiar</button></div>
+ <div class="box"><b>Emoción</b>${esc(n.emocion)}<b style="margin-top:6px">Elementos</b>${n.elementos.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div></div>
+ <div class="box"><b>Por qué se eligió</b>${esc(n.por_que_se_eligio)}</div>
+ <div style="margin-top:8px">${e.fuentes.map(s=>`<a class="lnk ${['oficial NASA/JPL','científica'].includes(s.tipo)?'s':''}" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.titulo+' · '+s.tipo)}">🔗 ${esc(s.editor||host(s.url))}</a>`).join('')}</div>
+ <div class="meta">🔎 Para el agente de fuentes: ${esc(e.busqueda_sugerida)}</div>
+ <details><summary>Hechos originales</summary><p>${esc(f.detalle)}</p>${f.datos_clave.length?`<ul>${f.datos_clave.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${f.nota?`<div class="nota">📝 ${esc(f.nota)}</div>`:''}</details></article>`}
+$('#out').innerHTML=h;
+document.addEventListener('click',e=>{const c=e.target.closest('[data-copy]');if(c){navigator.clipboard?.writeText(c.dataset.copy);c.textContent='Copiado'}});
+$('#dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));a.download='historia_opportunity.json';a.click()};
+let cur=-1;const cards=[...document.querySelectorAll('.ev')];
+document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(e.target.tagName)||e.ctrlKey||e.metaKey)return;
+ const d=e.key==='j'||e.key==='ArrowDown'?1:e.key==='k'||e.key==='ArrowUp'?-1:0;if(!d)return;e.preventDefault();
+ cards[cur]?.classList.remove('cur');cur=Math.max(0,Math.min(cards.length-1,cur+d));cards[cur].classList.add('cur');cards[cur].scrollIntoView({block:'start',behavior:'smooth'})});
+</script></body></html>

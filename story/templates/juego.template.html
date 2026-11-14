@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opportunity: tú decides</title>
+<style>
+:root{--bg:#0b0d14;--card:#141826;--fg:#e8eaf2;--mut:#8b93a7;--bd:#262c42;--acc:#ff7a3d;--ok:#4ade80;--bad:#f87171;--hyp:#a78bfa;--chip:#1c2236}
+*{box-sizing:border-box}html,body{height:100%}
+body{margin:0;background:radial-gradient(1200px 600px at 70% -10%,#1b2140 0,#0b0d14 60%) fixed;color:var(--fg);font:17px/1.65 system-ui,Segoe UI,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:0 18px 90px}
+header{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--bd);font-size:14px}
+header .t{font-weight:700;flex:1;letter-spacing:.04em}
+button{font:inherit;cursor:pointer;color:var(--fg)}
+.b{border:1px solid var(--bd);background:var(--card);border-radius:8px;padding:6px 14px;font-size:14px}.b:hover{border-color:var(--acc)}
+.b.p{background:var(--acc);border-color:var(--acc);color:#1a0d05;font-weight:700}
+.b.big{font-size:17px;padding:10px 26px}
+.stat{color:var(--mut);font-size:13px}
+.bar{height:5px;background:var(--chip);border-radius:3px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .4s}
+.stage{min-height:70vh;display:flex;flex-direction:column;justify-content:center}
+.title{text-align:center;padding:40px 0}
+.title h1{font-size:44px;margin:0 0 6px;letter-spacing:.02em}.title p{color:var(--mut);max-width:520px;margin:8px auto}
+.opt-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:18px 0;color:var(--mut);font-size:14px}
+.opt-row label{cursor:pointer;display:flex;gap:6px;align-items:center}
+.splash{text-align:center;animation:in .5s}
+.splash .cap{color:var(--acc);letter-spacing:.2em;text-transform:uppercase;font-size:13px}
+.splash h2{font-size:34px;margin:6px 0}.splash .who{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--bd);border-left:6px solid var(--acc);border-radius:14px;padding:20px 22px;animation:in .35s}
+.card.hyp{border-left-color:var(--hyp);background:linear-gradient(180deg,#171a2e,#141826)}.card.fail{border-left-color:var(--bad)}.card.dec{border-left-color:var(--ok)}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--mut)}
+.badge{border-radius:999px;padding:1px 10px;background:var(--chip);font-size:12px}
+.badge.h{color:var(--hyp);border:1px dashed var(--hyp)}.badge.f{color:var(--bad)}.badge.d{color:var(--ok)}
+h3{margin:8px 0 8px;font-size:25px;line-height:1.25}
+.tx{min-height:3.3em;white-space:pre-wrap}.cursor::after{content:"▍";color:var(--acc);animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.opts{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.opt{text-align:left;border:2px solid var(--bd);background:var(--chip);border-radius:10px;padding:13px 16px;font-size:17px;transition:.15s}.opt:hover{border-color:var(--acc);transform:translateX(3px)}
+kbd{background:#0b0d14;border:1px solid var(--bd);border-radius:4px;padding:0 7px;font:12px ui-monospace,monospace;margin-right:10px;color:var(--acc)}
+.timer{height:6px;background:var(--chip);border-radius:3px;overflow:hidden;margin-top:14px}.timer i{display:block;height:100%;background:var(--bad);width:100%}
+.lec{background:var(--chip);border-radius:8px;padding:10px 14px;margin:14px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.toast{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--ok);border-radius:10px;padding:10px 14px;max-width:320px;font-size:14px;animation:in .3s;z-index:20}
+.toast b{color:var(--ok)}
+.creator{display:none;margin-top:14px;border-top:1px dashed var(--bd);padding-top:10px;font-size:13.5px;color:var(--mut)}
+body.cr .creator{display:block}.creator b{color:var(--fg)}
+.lnk{font-size:12px;border:1px solid var(--bd);border-radius:999px;padding:1px 9px;color:var(--acc);text-decoration:none;background:var(--chip);display:inline-block;margin:2px 3px 0 0}
+.ov{position:fixed;inset:0;background:#0b0d14ee;z-index:30;overflow:auto;padding:20px}
+.ov .in{max-width:900px;margin:0 auto}
+.ov h2{margin:0 0 4px}
+.fl{display:flex;flex-direction:column;align-items:center;gap:0}
+.fn{border:1px solid var(--bd);background:var(--card);border-radius:10px;padding:6px 12px;font-size:13.5px;min-width:180px;text-align:center}
+.fn.dec{border-color:var(--ok)}.fn.un{color:var(--mut);border-style:dashed;opacity:.6}.fn.cur{outline:2px solid var(--acc)}
+.fn.alt{border-color:var(--hyp)}.fn.fail{border-color:var(--bad)}
+.ln{width:2px;height:14px;background:var(--bd)}
+.br{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:8px 0}
+.bc{display:flex;flex-direction:column;align-items:center;gap:0;border-top:2px solid var(--bd);padding-top:6px}
+.arch{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-top:12px}
+.dc{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;font-size:14px}.dc.lock{opacity:.45}.dc b{display:block;color:var(--acc)}
+.hide{display:none}
+table.sm{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}table.sm td,table.sm th{border-bottom:1px solid var(--bd);padding:8px 10px;vertical-align:top;text-align:left}
+table.sm th{color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+.o1{color:var(--ok)}.o0{color:var(--bad)}.cp{color:var(--acc);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:18px}
+</style></head><body><div class="wrap">
+<header><span class="t">OPPORTUNITY · TÚ DECIDES</span><span class="stat" id="st"></span><button class="b" id="bf">Ramas <kbd style="margin:0">F</kbd></button><button class="b" id="ba">Archivo <kbd style="margin:0">A</kbd></button><button class="b" id="bs">Resumen <kbd style="margin:0">R</kbd></button></header>
+<div class="bar"><i id="pg"></i></div>
+<div class="stage" id="stage"></div>
+</div>
+<div class="ov hide" id="ovf"><div class="in"><div class="row" style="justify-content:space-between;margin:0"><h2>Diagrama de ramas</h2><button class="b" data-close>Cerrar <kbd style="margin:0">Esc</kbd></button></div><p class="stat" id="fls"></p><label class="stat"><input type="checkbox" id="rv"> Revelar todos los nodos</label><div class="fl" id="fl"></div></div></div>
+<div class="ov hide" id="ovs"><div class="in"><div class="row" style="justify-content:space-between;margin:0"><h2>Resumen de decisiones</h2><button class="b" data-close>Cerrar <kbd style="margin:0">Esc</kbd></button></div><p class="stat">Vista completa para revisar el guion: todas las decisiones, sus opciones y a dónde llevan.</p><div id="sum"></div><h2 style="margin-top:26px">Árbol completo</h2><div class="fl" id="sumtree"></div></div></div>
+<div class="ov hide" id="ova"><div class="in"><div class="row" style="justify-content:space-between;margin:0"><h2>Archivo de la misión</h2><button class="b" data-close>Cerrar <kbd style="margin:0">Esc</kbd></button></div><p class="stat" id="as"></p><div class="arch" id="arch"></div></div></div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D=JSON.parse(document.getElementById('data').textContent);
+const N=Object.fromEntries(D.nodos.map(n=>[n.id,n]));
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const REAL=[];(function(){let i=D.inicio;while(i){const n=N[i];REAL.push(n);i=n.siguiente||(n.opciones&&n.opciones.find(o=>o.correcta).siguiente)}})();
+const NDEC=REAL.filter(n=>n.tipo==='decision').length,NDATOS=REAL.length;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// ---- persistencia ----
+let P={disc:[],datos:[],cr:false,presion:false};
+try{Object.assign(P,JSON.parse(localStorage.getItem('opp_game')||'{}'))}catch(_){}
+const save=()=>{try{localStorage.setItem('opp_game',JSON.stringify(P))}catch(_){}};
+if(P.cr)document.body.classList.add('cr');
+const disc=new Set(P.disc),datos=new Set(P.datos);
+// ---- estado de partida ----
+let cur=null,lastCap=0,firstTry=0,fails=0,decided=new Set(),lastWrong=null,tmr=null,typing=null,pending=null;
+function stat(){$('#st').textContent=`Ramas ${disc.size}/${D.nodos.length} · Datos ${datos.size}/${NDATOS}`;
+ const r=REAL.filter(n=>disc.has(n.id)).length;$('#pg').style.width=(r/REAL.length*100)+'%'}
+function toast(t,x){const e=document.createElement('div');e.className='toast';e.innerHTML=`<b>${esc(t)}</b><br>${esc(x)}`;document.body.append(e);setTimeout(()=>e.remove(),4200)}
+function unlock(n){if(n.dato_desbloqueado&&!datos.has(n.id)){datos.add(n.id);P.datos=[...datos];save();toast('Dato desbloqueado: '+n.dato_desbloqueado.titulo,n.dato_desbloqueado.texto)}stat()}
+function mark(n){disc.add(n.id);P.disc=[...disc];save();stat()}
+function stopT(){clearInterval(tmr);tmr=null}
+// ---- pantallas ----
+function title(){stopT();lastCap=0;cur=null;
+ $('#stage').innerHTML=`<div class="title"><h1>Opportunity</h1><p>Tú decides. Una misión a Marte pensada para durar 90 soles y que duró 15 años. En los momentos clave tendrás que elegir. Solo una opción coincide con lo que ocurrió en realidad.</p>
+ <div class="opt-row"><label><input type="checkbox" id="op1" ${P.presion?'checked':''}> Modo presión (25 s por decisión)</label><label><input type="checkbox" id="op2" ${P.cr?'checked':''}> Modo creador</label></div>
+ <button class="b p big" id="go">Comenzar</button><p class="stat" style="margin-top:18px">Progreso guardado: ${disc.size}/${D.nodos.length} ramas · ${datos.size}/${NDATOS} datos</p>
+ <button class="b" id="rp">Borrar progreso</button></div>`;
+ $('#op1').onchange=e=>{P.presion=e.target.checked;save()};$('#op2').onchange=e=>{P.cr=e.target.checked;document.body.classList.toggle('cr',P.cr);save()};
+ $('#go').onclick=start;$('#rp').onclick=()=>{if(confirm('¿Borrar ramas y datos descubiertos?')){disc.clear();datos.clear();P.disc=[];P.datos=[];save();stat();title()}};stat()}
+function start(){firstTry=0;fails=0;decided=new Set();lastWrong=null;lastCap=0;show(D.inicio)}
+function splash(n,then){stopT();$('#stage').innerHTML=`<div class="splash"><div class="cap">Capítulo ${n.capitulo}</div><h2>${esc(n.capitulo_titulo)}</h2><div class="who">${esc(n.personaje)}</div></div>`;
+ pending=then;setTimeout(()=>{if(pending===then){pending=null;then()}},reduce?300:1700)}
+function show(id){const n=N[id];if(n.capitulo!==lastCap&&n.camino==='real'){lastCap=n.capitulo;splash(n,()=>draw(id));return}draw(id)}
+function creator(n){return `<div class="creator"><b>Escena visual:</b> ${esc(n.narrativa.escena_visual)}<br><b>Emoción:</b> ${esc(n.narrativa.emocion)} · <b>Id:</b> ${n.id} · <b>eventos base:</b> ${n.eventos_base.join(', ')}
+ <div>${n.fuentes.map(f=>`<a class="lnk" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.titulo)}">🔗 ${esc(f.editor||f.tipo)}</a>`).join('')}</div></div>`}
+function typeText(el,text,done){let i=0;const full=()=>{clearInterval(typing);typing=null;el.textContent=text;el.classList.remove('cursor');done()};
+ if(reduce){full();return}el.classList.add('cursor');
+ typing=setInterval(()=>{i+=2;el.textContent=text.slice(0,i);if(i>=text.length)full()},16);el._skip=full}
+function draw(id){cur=id;const n=N[id];mark(n);stopT();
+ const cls=n.tipo==='fallo'?'fail':n.hipotetico?'hyp':n.tipo==='decision'?'dec':'';
+ const badge=n.tipo==='fallo'?'<span class="badge f">Final alternativo</span>':n.hipotetico?'<span class="badge h">Hipotético: esto no ocurrió</span>':n.tipo==='decision'?'<span class="badge d">Decisión</span>':'<span class="badge">Historia real</span>';
+ $('#stage').innerHTML=`<div class="card ${cls}"><div class="meta">${badge}<span>${esc(n.fecha)}</span><span>· ${esc(n.personaje)}</span></div><h3>${esc(n.titulo)}</h3><div class="tx" id="tx"></div><div id="ctl"></div>${creator(n)}</div>`;
+ window.scrollTo({top:0});
+ if(n.camino==='real'&&n.tipo!=='decision')unlock(n);
+ typeText($('#tx'),n.narrativa.texto,()=>controls(n));$('#tx').onclick=()=>$('#tx')._skip&&typing&&$('#tx')._skip()}
+function controls(n){const c=$('#ctl');if(!c)return;
+ if(n.tipo==='decision'){c.innerHTML=`<p><b>${esc(n.pregunta)}</b></p><div class="opts">${n.opciones.map((o,i)=>`<button class="opt" data-o="${i}"><kbd>${i+1}</kbd>${esc(o.texto)}</button>`).join('')}</div>${P.presion?'<div class="timer"><i id="tb"></i></div>':''}`;
+  if(P.presion){const t0=Date.now(),T=n.tiempo_s*1000;tmr=setInterval(()=>{const r=1-(Date.now()-t0)/T;$('#tb')&&($('#tb').style.width=Math.max(0,r*100)+'%');if(r<=0){stopT();toast('Se acabó el tiempo','Se eligió la opción por defecto.');const i=n.opciones.findIndex(o=>o.id===n.opcion_por_defecto);choose(i)}},100)}}
+ else if(n.tipo==='fallo'){c.innerHTML=`<div class="lec"><b>Lo que aprendemos:</b> ${esc(n.leccion)}</div><div class="row"><button class="b p" data-a="again">Volver a decidir <kbd style="margin:0 0 0 8px">Enter</kbd></button><button class="b" data-a="peek">Ver lo que pasó en realidad</button><button class="b" data-a="flow">Ver ramas</button></div>`}
+ else if(n.final){const ok=firstTry;c.innerHTML=`<div class="lec"><b>Tu resultado:</b> acertaste ${ok} de ${NDEC} decisiones a la primera y viste ${fails} finales alternativos. Todas las decisiones correctas coinciden con lo que ocurrió en la realidad.</div><div class="row"><button class="b p" data-a="flow">Ver diagrama de ramas</button><button class="b" data-a="arch">Archivo de la misión</button><button class="b" data-a="again0">Jugar de nuevo</button></div>`}
+ else c.innerHTML=`<div class="row"><button class="b p" data-a="next">Continuar <kbd style="margin:0 0 0 8px">Enter</kbd></button></div>`}
+function choose(i){const n=N[cur];if(n.tipo!=='decision')return;const o=n.opciones[i];if(!o)return;stopT();
+ if(o.correcta){if(!decided.has(n.id)){if(lastWrong!==n.id)firstTry++;decided.add(n.id)}unlock(n);
+  $('#stage').innerHTML=`<div class="card dec"><div class="meta"><span class="badge d">Resultado real</span></div><h3>${esc(n.titulo)}</h3><p>${esc(n.resultado_real)}</p>${n.nota?`<div class="lec">📝 ${esc(n.nota)}</div>`:''}<div class="row"><button class="b p" data-a="go" data-to="${o.siguiente}">Continuar <kbd style="margin:0 0 0 8px">Enter</kbd></button></div>${creator(n)}</div>`;stat()}
+ else{lastWrong=n.id;show(o.siguiente)}}
+$('#stage').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.classList.contains('opt'))return choose(+b.dataset.o);
+ const a=b.dataset.a;
+ if(a==='next')show(N[cur].siguiente);
+ else if(a==='go')show(b.dataset.to);
+ else if(a==='again'){fails++;show(N[cur].volver_a)}
+ else if(a==='peek'){fails++;const d=N[N[cur].volver_a];lastWrong=d.id;cur=d.id;choose(d.opciones.findIndex(o=>o.correcta))}
+ else if(a==='flow')flow();else if(a==='arch')arch();else if(a==='again0')start()});
+// ---- diagrama de ramas ----
+function chip(n,rv){const k=rv||disc.has(n.id);const cls=['fn',n.tipo==='decision'?'dec':'',n.tipo==='fallo'?'fail':'',n.hipotetico&&n.tipo!=='fallo'?'alt':'',k?'':'un',n.id===cur?'cur':''].join(' ');
+ return `<div class="fn ${cls}">${k?(n.tipo==='decision'?'◆ ':'')+esc(n.titulo):(n.tipo==='decision'?'◆ ???':'???')}</div>`}
+function chain(id,rv){let h='';while(id){const n=N[id];h+=chip(n,rv);id=n.siguiente;if(!id)break;h+='<div class="ln"></div>'}return h}
+function tree(rv){let h='';REAL.forEach((n,i)=>{if(i)h+='<div class="ln"></div>';h+=chip(n,rv);
+  if(n.tipo==='decision'){h+='<div class="br">'+n.opciones.filter(o=>!o.correcta).map(o=>`<div class="bc"><div class="stat">${rv||disc.has(o.siguiente)?esc(o.texto):'???'}</div>${chain(o.siguiente,rv)}</div>`).join('')+'</div>'}});return h}
+function flow(){const rv=$('#rv').checked;$('#fl').innerHTML=tree(rv);
+ $('#fls').textContent=`Descubierto: ${disc.size} de ${D.nodos.length} nodos (${Math.round(disc.size/D.nodos.length*100)} %). Los nodos con ??? son ramas que todavía no viste.`;$('#ovf').classList.remove('hide')}
+$('#rv').onchange=flow;
+function lastOf(id){while(N[id].siguiente)id=N[id].siguiente;return N[id]}
+function summary(){let h='<table class="sm"><tr><th>#</th><th>Fecha</th><th>Pregunta</th><th>Opciones</th><th>Resultado real</th><th>Finales alternativos</th></tr>';
+ REAL.filter(n=>n.tipo==='decision').forEach((n,i)=>{
+  h+=`<tr><td>${i+1}</td><td>${esc(n.fecha)}<div class="stat">Cap. ${n.capitulo}</div></td><td><b>${esc(n.titulo)}</b><div class="stat">${esc(n.pregunta)}</div></td>
+  <td>${n.opciones.map(o=>`<div class="${o.correcta?'o1':'o0'}">${o.correcta?'✓':'✗'} ${esc(o.texto)}</div>`).join('')}</td>
+  <td>${esc(n.resultado_real)}${n.nota?`<div class="stat">📝 ${esc(n.nota)}</div>`:''}</td>
+  <td>${n.opciones.filter(o=>!o.correcta).map(o=>{const f=lastOf(o.siguiente);return `<div>☠ ${esc(f.titulo)}<div class="stat">${esc(f.leccion)}</div></div>`}).join('')}</td></tr>`});
+ h+='</table>';$('#sum').innerHTML=h;$('#sumtree').innerHTML=tree(true);$('#ovs').classList.remove('hide')}
+$('#bs').onclick=summary;
+function arch(){$('#arch').innerHTML=REAL.map(n=>{const k=datos.has(n.id);return `<div class="dc ${k?'':'lock'}"><b>${k?esc(n.dato_desbloqueado.titulo):'???'}</b>${k?esc(n.dato_desbloqueado.texto):'Dato bloqueado: sigue la historia real.'}</div>`}).join('');
+ $('#as').textContent=`${datos.size} de ${NDATOS} datos desbloqueados.`;$('#ova').classList.remove('hide')}
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>document.querySelectorAll('.ov').forEach(o=>o.classList.add('hide')));
+$('#bf').onclick=flow;$('#ba').onclick=arch;
+// ---- teclado ----
+document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||['INPUT','TEXTAREA'].includes(e.target.tagName))return;
+ const open=[...document.querySelectorAll('.ov')].some(o=>!o.classList.contains('hide'));
+ if(e.key==='Escape'){document.querySelectorAll('.ov').forEach(o=>o.classList.add('hide'));return}
+ if(e.key==='f'||e.key==='F'){flow();return}if(e.key==='a'||e.key==='A'){arch();return}if(e.key==='r'||e.key==='R'){summary();return}
+ if(open)return;
+ if(pending&&(e.key==='Enter'||e.key===' ')){e.preventDefault();const f=pending;pending=null;f();return}
+ const n=cur&&N[cur];if(!n)return;
+ if(typing&&(e.key==='Enter'||e.key===' ')){e.preventDefault();$('#tx')._skip&&$('#tx')._skip();return}
+ if(['1','2','3'].includes(e.key)&&n.tipo==='decision'&&document.querySelector('.opt'))choose(+e.key-1);
+ else if(e.key==='Enter'||e.key===' '){const b=document.querySelector('#stage [data-a="next"],#stage [data-a="go"],#stage [data-a="again"]');if(b){e.preventDefault();b.click()}}});
+title();
+</script></body></html>
