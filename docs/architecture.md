@@ -212,7 +212,7 @@ Detalle y catálogo en [guide.md](guide.md). Resumen técnico:
 ## Datos configurables
 
 - **`missions.ts`** — vehículo + terreno + entorno + polvo + huellas + checkpoints y su radio. Ver [themes-and-missions.md](themes-and-missions.md).
-- **`themes.ts`** — el tema «Primer»: color, tipografía, radios, curva y duraciones del movimiento, minimapa, balizas y globo.
+- **`themes.ts`** — el tema «Ink & Paper»: color (campo azul, papel, tinta, acento rosa), tipografía, radios, trazo, grano, curva y duraciones del movimiento, minimapa, balizas, terreno (`ground`) y globo.
 - **`checkpoints.ts`** — storytelling: posición, texto de la tarjeta, guion de la narración, ruta del audio, foto y datos.
 - **`guide-lines.ts`** — frases de la guía de voz (y su vehículo/categoría).
 

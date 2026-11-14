@@ -24,25 +24,27 @@ export function Hints({ theme }: { theme: Theme }) {
       {items.map(([k, l, on]) => (
         <span
           key={k}
-          className="flex items-center gap-2 uppercase"
+          className="flex items-center gap-2"
           style={{
-            background: theme.surface,
-            color: on ? theme.ink : theme.muted,
+            background: theme.ink,
+            color: theme.onInk,
+            opacity: on ? 1 : 0.6,
             borderRadius: theme.radiusSm,
-            padding: "4px 10px 4px 4px",
-            fontSize: 11,
-            fontWeight: 500,
-            letterSpacing: "0.02em",
+            padding: "4px 14px 4px 4px",
+            fontSize: 12,
+            fontWeight: 700,
+            letterSpacing: "0.01em",
+            textTransform: "lowercase",
             lineHeight: 1,
-            transition: ease(theme, ["color"]),
+            transition: ease(theme, ["opacity"]),
           }}
         >
           <span
             style={{
-              background: on ? theme.ink : theme.line,
-              color: on ? theme.canvas : theme.muted,
+              background: on ? theme.accent : theme.onInk,
+              color: theme.ink,
               borderRadius: theme.radiusSm,
-              padding: "6px 8px",
+              padding: "7px 10px",
               transition: ease(theme, ["background-color", "color"]),
             }}
           >
@@ -90,15 +92,15 @@ export function TopBar({
     gap: 10,
     height: 40,
     padding: "0 14px",
-    color: theme.canvas,
+    color: theme.onInk,
     border: 0,
     cursor: "pointer",
     whiteSpace: "nowrap" as const,
     fontFamily: theme.mono,
-    fontSize: 12,
-    fontWeight: 500,
-    letterSpacing: "0.02em",
-    textTransform: "uppercase" as const,
+    fontSize: 14,
+    fontWeight: 700,
+    letterSpacing: "0.01em",
+    textTransform: "lowercase" as const,
     transition: ease(theme, ["background-color"], theme.dur.fast),
   };
 
@@ -106,12 +108,12 @@ export function TopBar({
     <div
       ref={root}
       className="relative select-none"
-      style={{ background: theme.ink, borderRadius: theme.radius, display: "flex", alignItems: "stretch", fontFamily: theme.mono }}
+      style={{ background: theme.ink, borderRadius: theme.radiusSm, display: "flex", alignItems: "stretch", fontFamily: theme.mono }}
     >
       <button
         type="button"
         className="ui-nav"
-        style={{ ...cell, borderRadius: `${theme.radius}px 0 0 ${theme.radius}px` }}
+        style={{ ...cell, borderRadius: `${theme.radiusSm}px 0 0 ${theme.radiusSm}px`, paddingLeft: 18 }}
         onClick={(e) => {
           e.currentTarget.blur();
           onGlobe();
@@ -119,20 +121,20 @@ export function TopBar({
       >
         <Icon name="arrow-left" size={16} /> Globe
       </button>
-      <span style={{ width: 1, background: "rgba(249,250,247,0.18)", margin: "10px 0" }} />
+      <span style={{ width: 1, background: theme.onInk, opacity: 0.25, margin: "10px 0" }} />
       <button
         type="button"
         className="ui-nav"
         aria-haspopup="listbox"
         aria-expanded={open}
-        style={{ ...cell, borderRadius: `0 ${theme.radius}px ${theme.radius}px 0` }}
+        style={{ ...cell, borderRadius: `0 ${theme.radiusSm}px ${theme.radiusSm}px 0`, paddingRight: 18 }}
         onClick={(e) => {
           setOpen((o) => !o);
           e.currentTarget.blur(); // keep Space/Enter for driving
         }}
       >
         <span style={{ opacity: 0.55 }}>Vehicle</span>
-        <span style={{ fontFamily: theme.font, textTransform: "none", fontSize: 14, letterSpacing: "-0.02em" }}>{current.name}</span>
+        <span style={{ textTransform: "none", fontSize: 15, letterSpacing: "-0.02em" }}>{current.name}</span>
         <Icon name="chevron-down" size={14} style={{ opacity: 0.55, transform: open ? "rotate(180deg)" : "none", transition: ease(theme, ["transform"], theme.dur.fast) }} />
       </button>
 
@@ -141,7 +143,8 @@ export function TopBar({
         className="absolute left-0 top-full mt-2 min-w-full list-none p-1"
         style={{
           background: theme.surface,
-          borderRadius: theme.radius,
+          border: `${theme.stroke}px solid ${theme.ink}`,
+          borderRadius: theme.radius * 3,
           color: theme.ink,
           opacity: open ? 1 : 0,
           transform: open ? "none" : "translateY(-6px)",
@@ -163,10 +166,10 @@ export function TopBar({
                 setOpen(false);
                 e.currentTarget.blur();
               }}
-              style={{ fontFamily: theme.font, fontSize: 14, letterSpacing: "-0.02em" }}
+              style={{ fontFamily: theme.font, fontSize: 15, fontWeight: 700, letterSpacing: "-0.02em" }}
             >
               <span className="flex-1 whitespace-nowrap">{it.name}</span>
-              <span style={{ fontFamily: theme.mono, fontSize: 11, opacity: 0.55 }}>{i === 0 ? "M" : ""}</span>
+              <span style={{ fontFamily: theme.mono, fontSize: 12, opacity: 0.55 }}>{i === 0 ? "M" : ""}</span>
             </button>
           </li>
         ))}

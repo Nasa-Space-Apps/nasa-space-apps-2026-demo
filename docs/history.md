@@ -233,6 +233,20 @@ El usuario pasó una lista de vehículos (`Downloads/vehiculos.jpeg`) y pidió *
 - **Fotos** (`public/images/checkpoints/mars-<vehículo>-*.jpg`, 960 × 600): recortes de fotos reales de NASA (pruebas en la Tierra, selfies, ilustración) o de **réplicas de Beagle 2** de Wikimedia Commons (**CC BY / CC BY-SA**: el crédito con autor y licencia sale bajo la foto). El `credit` de cada una dice qué muestra de verdad.
 - Comprobado en el navegador: las 4 tarjetas del globo y las 4 escenas de punta a punta (InSight, Spirit y Beagle 2 completan la ruta; Ingenuity vuela y se detiene en cada punto), sin errores de consola.
 
+### 29. Giro de enfoque: de plataforma informativa a juego (solo Opportunity)
+Tras conversarlo con su colega, el usuario cambió la dinámica: **ya no es una plataforma informativa** sino un **juego** con dos modos, centrado **solo en Opportunity** «por el momento», que cubre **toda la misión**: desde lo que pasó antes de llegar a Marte (planificación, construcción…) hasta el final de su recorrido.
+- **Modo Historia** (informativo y atractivo): **Parte 1**, historieta 2D (imágenes tipo anime/storytelling + voz) hasta el aterrizaje; **Parte 2**, el 3D con narración que ya existe, donde los checkpoints pasan a ser puntos de la historia **con información real** (se cambiará más adelante).
+- **Modo Decisiones** (aprender del error): usa los mismos puntos como columna vertebral; algunos son **elecciones** entre varias opciones. Las que **no** siguen la historia real muestran un paso alterno y **siempre convergen en un fallo de la misión**; también en dos partes (tarjetas/imágenes + narración, y en el 3D una animación que muestre el fallo).
+- **Qué se hizo en este hito:** solo **definir** el enfoque (el usuario pidió expresamente no implementarlo): nuevo [game-design.md](game-design.md) (modos, partes, modelo de nodos, reglas de decisiones y fallos, impacto en el código, fases, preguntas abiertas), y actualizados `CLAUDE.md`, `PRODUCT.md`, `docs/README.md` y el roadmap. Lo que Claude añadió al pulir la idea está marcado **(propuesto)** en ese documento.
+- **En pausa** (código conservado, fuera del flujo del juego): globo y rutas `/[body]`, Perseverance, SEV, los 4 vehículos demo y los créditos.
+
+### 30. Rediseño de todo el estilo: de «Primer» a «Ink & Paper» (referencia: Ponpon Mania)
+Para la Parte 1 (historieta) el usuario encontró en [ponpon-mania.com/chapter/2](https://ponpon-mania.com/chapter/2) el estilo de cómic más cercano y original que quería, y pidió **refactorizar todo el estilo de la demo** con esa página como inspiración (esto responde la pregunta abierta 1 de [game-design.md](game-design.md) sobre el estilo de las ilustraciones: ahora es este lenguaje).
+- **Qué se midió** (recorriendo la página con el navegador): campo azul lila plano con grano y manchas rosa, páginas de papel `#FEECE3` con recuadros de trazo de tinta grueso, tinta `#171717`, píldora de progreso negra, Libre Franklin 700 en minúscula, hover con contorno en píldora. Detalle en [design.md](design.md).
+- **Qué se hizo:** `themes.ts` reescrito (tokens nuevos `onInk`, `stroke`, `grain`, `paperLight`, `ground`; radios 6/999), `layout.tsx` con Libre Franklin (sin mono), `globals.css` (píldoras, barrido rosa, grano en `body::after`), `ui.ts` (`panel` con trazo, `frame`, etiquetas en minúscula) y los componentes: `Hud`, `Captions`, `CheckpointCard` (giro −0,7°), `Timeline` (círculos), `Minimap` (giro +0,7°, viñeta), `VehicleCard`, `Loading`, `Explore`, `GlobeLabels`, iconos a 2 px. La escena 3D toma cielo/niebla del campo azul, terreno en crema (Marte) y lila (Luna) con curvas de tinta, y `missions.ts` lee todo de `THEME`.
+- **Verificado:** `tsc` y `lint` limpios; vistas `/mars` (globo) y `/mars/opportunity` (escena) revisadas en el navegador. **No** se probó la Luna ni los vehículos en pausa, ni se midió el coste del grano en GPU.
+- **No se tocó:** los vehículos procedurales (siguen en color), los créditos (ocultos) y las ilustraciones de la Parte 1 (aún por hacer).
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |

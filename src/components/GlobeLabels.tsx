@@ -28,7 +28,7 @@ export default function GlobeLabels({ theme }: { theme: Theme }) {
       {BODIES.flatMap((b) => b.vehicles).map((v) => (
         <div key={v.missionId} style={{ ...base, transition: `opacity ${theme.dur.base}ms ${theme.ease}` }} ref={reg(`v:${v.missionId}`)}>
           <div style={{ transform: "translate(18px,-12px)" }}>
-            <div style={{ fontSize: 15, fontWeight: 450, letterSpacing: "-0.03em", lineHeight: 1 }}>{v.name}</div>
+            <div style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1 }}>{v.name}</div>
             <div
               style={{
                 marginTop: 6,
@@ -36,12 +36,12 @@ export default function GlobeLabels({ theme }: { theme: Theme }) {
                 background: g.tag,
                 color: g.tagText,
                 fontFamily: theme.mono,
-                fontSize: 10.5,
-                fontWeight: 500,
-                letterSpacing: "0.02em",
-                textTransform: "uppercase",
+                fontSize: 12,
+                fontWeight: 700,
+                letterSpacing: "0.01em",
+                textTransform: "lowercase",
                 lineHeight: 1,
-                padding: "6px 8px",
+                padding: "7px 11px",
                 borderRadius: theme.radiusSm,
               }}
             >

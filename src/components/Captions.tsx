@@ -29,22 +29,22 @@ export default function Captions({ theme }: { theme: Theme }) {
         transform: `translate(-50%, ${text ? "0" : "10px"})`,
         transition: `${ease(theme, ["opacity"])}, ${ease(theme, ["transform"], theme.dur.slow)}`,
         background: theme.ink,
-        borderRadius: theme.radius,
-        color: theme.canvas,
+        borderRadius: 24,
+        color: theme.onInk,
       }}
-      className="pointer-events-none absolute bottom-full left-1/2 mb-2.5 flex max-w-[min(600px,88vw)] select-none items-center gap-3 py-2.5 pl-2.5 pr-4 text-[14px] leading-snug"
+      className="pointer-events-none absolute bottom-full left-1/2 mb-2.5 flex max-w-[min(600px,88vw)] select-none items-center gap-3 py-2.5 pl-2.5 pr-5 text-[15px] font-semibold leading-snug"
     >
       <span
         style={{
-          background: shown.who === "Narrator" ? theme.hover : theme.accent,
+          background: shown.who === "Narrator" ? theme.onInk : theme.accent,
           color: theme.accentInk,
           borderRadius: theme.radiusSm,
-          padding: "5px 7px",
+          padding: "6px 10px",
           fontFamily: theme.mono,
-          fontSize: 10.5,
-          fontWeight: 500,
-          letterSpacing: "0.02em",
-          textTransform: "uppercase",
+          fontSize: 12,
+          fontWeight: 700,
+          letterSpacing: "0.01em",
+          textTransform: "lowercase",
           lineHeight: 1,
           whiteSpace: "nowrap",
           transition: ease(theme, ["background-color"]),

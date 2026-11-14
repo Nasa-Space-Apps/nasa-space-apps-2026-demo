@@ -50,7 +50,7 @@ export default function CheckpointCard({ theme }: { theme: Theme }) {
     return () => cancelAnimationFrame(raf);
   }, []);
 
-  const { label, title, text, panel } = ui(theme);
+  const { label, title, text, panel, frame } = ui(theme);
   const place = shown ? (shown.index === 0 ? "Start" : shown.index === shown.total - 1 ? "End" : "Stop") : "";
 
   return (
@@ -70,13 +70,13 @@ export default function CheckpointCard({ theme }: { theme: Theme }) {
       }`}
     >
       {shown && (
-        <div style={{ ...panel, padding: 10 }}>
-          <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16 / 10", borderRadius: theme.radius, background: theme.line }}>
+        <div style={{ ...panel, padding: 10, rotate: "-0.7deg" /* a page laid on the table, not a UI box */ }}>
+          <div className="relative w-full" style={{ ...frame, aspectRatio: "16 / 10", background: theme.line }}>
             <FadeImg src={shown.cp.image} alt={shown.cp.name} theme={theme} />
           </div>
 
           <div className="px-1.5 pb-1">
-            <div style={{ ...label, marginTop: 8, fontSize: 9.5, textTransform: "none", letterSpacing: "0.01em" }}>{shown.cp.credit}</div>
+            <div style={{ ...label, marginTop: 8, fontSize: 10.5, textTransform: "none", fontWeight: 500 }}>{shown.cp.credit}</div>
             <div style={{ ...title, marginTop: 14, fontSize: 21 }}>{shown.cp.name}</div>
             <div className="mt-2 flex items-center justify-between gap-3">
               <span style={label}>
@@ -87,9 +87,10 @@ export default function CheckpointCard({ theme }: { theme: Theme }) {
                   <span
                     key={c.id}
                     style={{
-                      width: 7,
-                      height: 7,
-                      borderRadius: 1,
+                      width: 9,
+                      height: 9,
+                      borderRadius: 999,
+                      border: `2px solid ${theme.ink}`,
                       background: i === shown.index ? theme.accent : reached.includes(c.id) ? theme.ink : theme.line,
                       transition: ease(theme, ["background-color"]),
                     }}
@@ -127,8 +128,8 @@ export default function CheckpointCard({ theme }: { theme: Theme }) {
             <div className="mt-3.5 grid grid-cols-3 gap-2">
               {shown.cp.facts.map(([k, v]) => (
                 <div key={k}>
-                  <span style={{ ...label, display: "block", fontSize: 10 }}>{k}</span>
-                  <span style={{ marginTop: 6, display: "block", fontSize: 14, fontWeight: 500, letterSpacing: "-0.02em", lineHeight: 1.15 }}>{v}</span>
+                  <span style={{ ...label, display: "block", fontSize: 11 }}>{k}</span>
+                  <span style={{ marginTop: 6, display: "block", fontSize: 15, fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.1 }}>{v}</span>
                 </div>
               ))}
             </div>

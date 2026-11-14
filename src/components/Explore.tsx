@@ -146,11 +146,11 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
                       e.currentTarget.blur();
                       select(v.missionId);
                     }}
-                    style={{ width: "100%", justifyContent: "space-between", textAlign: "left", padding: "14px 16px", textTransform: "none", fontFamily: theme.font }}
+                    style={{ width: "100%", justifyContent: "space-between", textAlign: "left", padding: "14px 22px", textTransform: "none", fontFamily: theme.font }}
                   >
                     <span>
-                      <span style={{ display: "block", fontSize: 18, fontWeight: 450, letterSpacing: "-0.03em" }}>{v.name}</span>
-                      <span style={{ display: "block", marginTop: 6, fontFamily: theme.mono, fontSize: 11, letterSpacing: "0.02em", textTransform: "uppercase", opacity: 0.65 }}>
+                      <span style={{ display: "block", fontSize: 19, fontWeight: 800, letterSpacing: "-0.03em" }}>{v.name}</span>
+                      <span style={{ display: "block", marginTop: 6, fontFamily: theme.mono, fontSize: 12, fontWeight: 700, letterSpacing: "0.01em", textTransform: "lowercase", opacity: 0.7 }}>
                         {v.place}
                       </span>
                     </span>

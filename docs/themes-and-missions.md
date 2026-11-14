@@ -2,7 +2,7 @@
 
 ## El tema — `src/lib/themes.ts`
 
-La demo tiene **un único tema, «Primer»** (referencia: primer.io/payment-pioneers). Ya no hay selector de estilos ni atajos `1…9`: los temas anteriores
+La demo tiene **un único tema, «Ink & Paper»** (cómic; referencia: ponpon-mania.com/chapter/2; antes «Primer»). Ya no hay selector de estilos ni atajos `1…9`: los temas anteriores
 (Light, Flat, Paper, Navy, Mind) se eliminaron (siguen en el historial de Git). Reglas y valores: [design.md](design.md).
 
 `THEME` (tipo `Theme`) es la **única fuente de verdad** de los tokens: `app/layout.tsx` los publica como variables CSS (`cssVars(THEME)` → `--canvas`, `--surface`, `--ink`,

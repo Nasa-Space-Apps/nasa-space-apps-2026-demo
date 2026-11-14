@@ -5,8 +5,8 @@ import { THEME as theme } from "@/lib/themes";
 import { ease } from "@/lib/ui";
 
 /**
- * Loading screen of the demo: the canvas colour, a large title at the bottom left, a mono status line, and a hairline progress bar along the bottom
- * edge (the same ink-on-line bar language as the timeline). Every stage of a trip (route fallback, chunk download, terrain download and build) draws the
+ * Loading screen of the demo: the blue field, a large heavy title at the bottom left, a bold lowercase status line, and an ink-on-paper progress bar along the bottom
+ * edge (the same bar language as the timeline). Every stage of a trip (route fallback, chunk download, terrain download and build) draws the
  * same thing in the same place, so going from one to the next never shows a different screen: only the text and the bar change, softly.
  *
  * `progress` 0–100 is a determinate bar; without it the bar breathes (indeterminate). `title` / `stage` appear (fade in) only when given.
@@ -45,22 +45,22 @@ export function LoadingContent({ title, stage, progress, visible = true }: { tit
       >
         <div className="min-w-0">
           {title && (
-            <div style={{ fontSize: "clamp(40px, 6.5vw, 88px)", fontWeight: 450, letterSpacing: "-0.04em", lineHeight: 0.95, color: theme.ink }}>{title}</div>
+            <div style={{ fontSize: "clamp(40px, 6.5vw, 88px)", fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.92, color: theme.ink }}>{title}</div>
           )}
           {stage && (
-            <div style={{ marginTop: 14, fontFamily: theme.mono, fontSize: 12, fontWeight: 500, letterSpacing: "0.02em", textTransform: "uppercase", color: theme.muted }}>
+            <div style={{ marginTop: 14, fontFamily: theme.mono, fontSize: 14, fontWeight: 700, letterSpacing: "0.01em", textTransform: "lowercase", color: theme.ink }}>
               {stage}
             </div>
           )}
         </div>
         {determinate && (
-          <div style={{ fontFamily: theme.mono, fontSize: 12, fontWeight: 500, color: theme.ink, fontVariantNumeric: "tabular-nums", paddingBottom: 1 }}>
+          <div style={{ fontFamily: theme.mono, fontSize: 14, fontWeight: 700, color: theme.ink, fontVariantNumeric: "tabular-nums", paddingBottom: 1 }}>
             {Math.round(progress)}%
           </div>
         )}
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0" style={{ height: 2, background: theme.line }}>
+      <div className="absolute bottom-0 left-0 right-0" style={{ height: 6, background: theme.surface }}>
         <div
           style={{
             height: "100%",

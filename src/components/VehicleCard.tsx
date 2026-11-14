@@ -23,7 +23,7 @@ export default function VehicleCard({
   onTravel: () => void;
   onBack: () => void;
 }) {
-  const { label, title, text, panel } = ui(theme);
+  const { label, title, text, panel, frame } = ui(theme);
 
   return (
     <div style={{ ...panel, padding: 12, fontFamily: theme.font }} className="w-full select-none">
@@ -35,7 +35,7 @@ export default function VehicleCard({
         <span style={label}>Abandoned · {bodyName}</span>
       </div>
 
-      <div className="overflow-hidden" style={{ borderRadius: theme.radius }}>
+      <div style={frame}>
         <VehicleView config={mission.rover} label={`${vehicle.name}, illustrated`} />
       </div>
 
@@ -48,7 +48,7 @@ export default function VehicleCard({
           {vehicle.facts.map(([k, v]) => (
             <div key={k}>
               <span style={{ ...label, display: "block" }}>{k}</span>
-              <span style={{ marginTop: 6, display: "block", fontSize: 15, fontWeight: 500, letterSpacing: "-0.02em", lineHeight: 1.15, color: theme.ink }}>{v}</span>
+              <span style={{ marginTop: 6, display: "block", fontSize: 16, fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.1, color: theme.ink }}>{v}</span>
             </div>
           ))}
         </div>
