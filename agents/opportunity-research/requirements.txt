@@ -1,0 +1,6 @@
+claude-agent-sdk
+ddgs
+httpx
+pydantic
+trafilatura
+crawl4ai

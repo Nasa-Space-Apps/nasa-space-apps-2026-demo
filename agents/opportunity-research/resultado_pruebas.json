@@ -1,0 +1,44 @@
+[
+  {
+    "herramienta": "NASA Image and Video Library",
+    "ok": true,
+    "detalle": "85 resultados; ej: PIA05251 / Mars Exploration Rover MER-B Opportunity Landing S (1.5s)",
+    "requiere": "nada (sin clave)"
+  },
+  {
+    "herramienta": "NASA Images /asset",
+    "ok": true,
+    "detalle": "4 archivos para PIA05251",
+    "requiere": "nada"
+  },
+  {
+    "herramienta": "NASA NTRS (papers técnicos)",
+    "ok": true,
+    "detalle": "10 resultados; ej: Mars Exploration Rover airbag landing loads testing and anal",
+    "requiere": "nada (sin clave)"
+  },
+  {
+    "herramienta": "Wikipedia / Wikimedia Commons",
+    "ok": false,
+    "detalle": "OMITIDA: Wikimedia responde 403 a User-Agent sin contacto (probado con 2 agentes genéricos)",
+    "requiere": "variable WIKIMEDIA_CONTACT (correo o URL tuyos) para el User-Agent"
+  },
+  {
+    "herramienta": "ddgs (búsqueda web gratis)",
+    "ok": true,
+    "detalle": "5 resultados; ej: https://www.jpl.nasa.gov/images/pia07999-looking-back-at-purgatory-dune/",
+    "requiere": "nada (sin clave); puede limitar la velocidad"
+  },
+  {
+    "herramienta": "httpx + trafilatura (extraer texto)",
+    "ok": true,
+    "detalle": "14416 caracteres de https://science.nasa.gov/mission/mer-opportunity/",
+    "requiere": "nada"
+  },
+  {
+    "herramienta": "Crawl4AI (JS, markdown)",
+    "ok": true,
+    "detalle": "51153 caracteres de markdown",
+    "requiere": "navegador de Playwright instalado (playwright install chromium)"
+  }
+]
