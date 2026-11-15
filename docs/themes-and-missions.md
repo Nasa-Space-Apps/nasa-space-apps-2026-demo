@@ -5,21 +5,24 @@
 La demo tiene **un único tema, «Ink & Paper»** (cómic; referencia: ponpon-mania.com/chapter/2; antes «Primer»). Ya no hay selector de estilos ni atajos `1…9`: los temas anteriores
 (Light, Flat, Paper, Navy, Mind) se eliminaron (siguen en el historial de Git). Reglas y valores: [design.md](design.md).
 
-`THEME` (tipo `Theme`) es la **única fuente de verdad** de los tokens: `app/layout.tsx` los publica como variables CSS (`cssVars(THEME)` → `--canvas`, `--surface`, `--ink`,
+**Paleta por mundo (hito 46):** `BASE` (no exportado) tiene todo lo común (tinta, papel, radios, movimiento, minimapa, suelo de ambos mundos…) y `WORLDS` el color que cambia con el mundo (`canvas`, `canvasAlt`, `accent`, `accentSoft`, `beacon`): **Marte** terracota + mantequilla, **Luna** azul acero + menta. `themeFor("mars" | "moon")` devuelve el `Theme` completo (cacheado); `worldOfPath(ruta)` da el mundo de una URL; `useTheme()` (`lib/use-theme.ts`) lo lee de la ruta en los componentes de UI. `THEME` (el tema de la Luna) queda solo como valor por defecto. **Para añadir un mundo nuevo:** una entrada en `WORLDS`, su `ground` en `BASE` y su caso en `worldOfPath`. Detalle y colores: [design.md](design.md#paleta-por-mundo-hito-46).
+
+El tema (tipo `Theme`) es la **única fuente de verdad** de los tokens: `WorldVars.tsx` (y un script del `<head>` en `app/layout.tsx`, para el primer pintado) los publica como variables CSS (`cssVars(themeFor(mundo))` → `--canvas`, `--surface`, `--ink`,
 `--ink-soft`, `--muted`, `--line`, `--accent`, `--radius`, `--radius-sm`, `--ease`, `--dur-*`) para las clases `.ui-*` de `globals.css`, y el código de canvas/WebGL (minimapa, globo,
-balizas) lee el objeto directamente. **Para cambiar un color o un radio, edita solo `themes.ts`.**
+balizas) lee el objeto directamente. **Para cambiar un color o un radio, edita solo `themes.ts`** (los colores de cada mundo, en `WORLDS`).
 
 Campos de `Theme`:
 
 - **Fuentes:** `font` (texto) y `mono` (etiquetas, botones, números); se cargan con `next/font/google` en `layout.tsx` (`--font-sans`, `--font-mono`).
-- **Color:** `canvas` (fondo), `surface` (tarjetas), `ink`/`inkSoft` (texto y botón primario / su hover), `muted` (texto secundario), `line` (líneas finas), `accent` (el único color) y `accentInk`.
+- **Color:** `canvas` (fondo), `surface` (tarjetas), `ink`/`inkSoft` (texto y botón primario / su hover), `muted` (texto secundario), `line` (líneas finas), `accent` (el único color; cambia con el mundo) y `accentInk`.
 - **Forma y movimiento:** `radius` (paneles), `radiusSm` (botones, chips), `ease` (la curva de **todas** las transiciones) y `dur { fast, base, slow }` en ms.
 - **Minimapa:** `map { bg, minor, major, minorW, majorW, every }` (curvas de nivel), `trail`, `marker { dot, ring, arrow }`, `checkpoint { pin, done, ring }` (cuadrados numerados).
 - **Balizas 3D:** `beacon { pending, active, done }` (poste y anillo en `pending`/`done`; la gema en `active`).
-- **Globo:** `globe { bg, line, star, ink, tag, tagText, pin }`.
+- **Globo:** `globe { bg, line, star, ink, tag, tagText, pin, vehicle }` (`bg`/`line`/`vehicle.mid` salen del mundo).
+- **Mundo:** `ground { mars, moon, lines }` (el suelo 3D de cada mundo; no depende del mundo actual).
 
 Estilos DOM compartidos: `lib/ui.ts` (`ui(theme)` → `label`, `display`, `title`, `text`, `panel`, `value`; `ease(theme, props, ms?, delay?)` para `transition`) y `components/Reveal.tsx`
-(entrada suave). Las piezas con estados (botones, enlaces, filas del desplegable) son las clases `.ui-btn` (`.is-ghost`, `.is-active`), `.ui-link` (`.is-back`), `.ui-row` y `.ui-nav` de `globals.css`.
+(entrada suave). Las piezas con estados (botones, enlaces, filas del desplegable) son las clases `.ui-btn` (`.is-ghost`, `.is-accent`, `.is-active`), `.ui-fab` (disco redondo; `-md` = botón de música, `-sm` = la X), `.ui-link` (`.is-back`), `.ui-row` y `.ui-nav` de `globals.css`.
 
 Si quieres una fuente nueva: cárgala con `next/font/google` en `layout.tsx`, expónla como variable CSS y úsala en `font`/`mono`.
 
@@ -66,12 +69,11 @@ Una misión es un objeto `Mission` del array `MISSIONS`. Su ruta es `/<mundo>/<i
    **Mide antes de dibujar**: saca del GLB de referencia la posición y el radio de las ruedas, la caja del cuerpo y dónde va cada pieza (los GLB vienen comprimidos con Draco: se decodifican con `@gltf-transform/core` + `draco3dgltf` en Node), elige un factor de escala para que la huella
    sea parecida a la de los demás (≈ 9–12 de ancho) y deja las ruedas un poco más grandes que las reales. Los detalles pequeños llevan tono fijo (`DARK`/`MID`/`LIGHT`) para que se lean.
 3. Añade el objeto a `MISSIONS` con su `model` y su `palette` (3 tonos de un color + fondo). Las ruedas, la huella (`halfLen/halfWid`) y el tamaño salen del modelo.
-4. Define su historia (y con ella los checkpoints y la **ruta**): receta en [story.md](story.md) (hito 44: ya no se escriben checkpoints a mano; sin historia, `checkpoints: []` y la tarjeta del globo dice «coming soon»).
+4. Define su historia (y con ella los checkpoints y la **ruta**): receta en [story.md](story.md) (hito 44: ya no se escriben checkpoints a mano; sin historia, `checkpoints: []` y la tarjeta del globo dice «coming soon»). Hoy tienen historia `opportunity`, `spirit`, `ingenuity` y `surveyor-3`. En `missions.ts`, el cielo/niebla (`env.sky`) es `themeFor(<mundo>).canvas`, no un color suelto.
 5. **Añádelo al globo** (`src/lib/bodies.ts`): en el `Body` donde quedó abandonado (`mars`/`moon`; crea uno nuevo si hace falta) agrega un `AbandonedVehicle` con
    `missionId` (= el `id` de la misión; será el segmento de la ruta `/<mundo>/<id>`), `name`, `place`, `lat`/`lon`, `tag` (frase corta del marcador), `status`, y hasta 4 `facts`. La tarjeta dibuja el vehículo con el `model`/`palette` de la misión (`VehicleView`).
    El marcador, la etiqueta, la tarjeta y las rutas aparecen solos (`generateStaticParams` sale de `BODIES`).
 6. **Audios**: `npm run story-audio -- <misión>` (ver story.md). La guía de voz es genérica (no hace falta tocarla). La música (`ambient-tracks.ts`) es opcional: sin pista propia suena la de `timeline`.
-   y a `vehicleOf`/`startIds` de `scripts/generate-guide.mjs`; después `npm run guide -- --docs` para el catálogo. La música (`ambient-tracks.ts`) es opcional: sin pista propia suena la de `timeline`.
 7. Prueba: carga el mapa, avanza con `Espacio`, comprueba la orientación (¿el frente es el frente?), la niebla y el polvo; y en `/<mundo>` que el marcador y la tarjeta (vehículo girando sobre fondo liso) funcionan.
 
 ### Checkpoints (storytelling) — `src/lib/checkpoints.ts`

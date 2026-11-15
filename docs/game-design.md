@@ -1,6 +1,6 @@
 # Diseño del juego: «Left behind» (Opportunity, de la mesa de diseño a la última señal)
 
-> **Estado (hito 36):** el **modo Historia de Opportunity ya está implementado** (cómic → 3D → cómic, 20 eventos reales): ver [story.md](story.md). Lo que sigue sin construir es el **modo Decisiones** (la columna vertebral ya existe en `public/models/opportunity/story.json`; las decisiones están definidas en `story/data/juego_opportunity.json`).
+> **Estado (hito 45):** el **modo Historia ya está implementado para Opportunity (hito 36), Ingenuity, Surveyor 3 y Spirit**; el texto de abajo se escribió pensando en Opportunity. El **modo Historia de Opportunity** (hito 36) (cómic → 3D → cómic, 20 eventos reales): ver [story.md](story.md). Lo que sigue sin construir es el **modo Decisiones** (la columna vertebral ya existe en `public/models/opportunity/story.json`; las decisiones están definidas en `story/data/juego_opportunity.json`).
 >
 > **Este es el enfoque vigente del proyecto** (hito 29 de [history.md](history.md)). Sustituye al de «plataforma informativa con globo y varios vehículos».
 > Es **definición, no implementación**: nada de lo descrito aquí está construido salvo lo que se marca como «ya existe».
@@ -118,7 +118,7 @@ Reglas **(propuestas)**:
 | Escena 3D, ruta, checkpoints, minimapa, narración, guía, ambiente, captions, loading, `perf`, tema | **Se reutilizan** (Parte 2) |
 | `lib/checkpoints.ts` (Opportunity) | Se convierte en los nodos de la Parte 2; texto a reemplazar por datos reales |
 | Globo (`Explore`, `Globe`, `VehicleCard`, `bodies.ts`) y rutas `/[body]` | **En pausa**: el código se conserva; la entrada pasa a ser una pantalla de inicio con los dos modos (ver preguntas) |
-| Vehículos Perseverance, SEV y demo (`spirit`, `ingenuity`, `insight`, `beagle2`) y sus checkpoints/audios | **En pausa**: no se borran ni se montan en el flujo del juego |
+| Vehículos Perseverance, SEV y demo (`insight`, `beagle2`) y sus checkpoints/audios | **En pausa** («coming soon» en el globo); Spirit, Ingenuity y Surveyor 3 ya tienen historia (hitos 40–45) |
 | Nuevo: datos de la historia (`lib/story.ts`), visor de historieta (Parte 1), tarjeta de decisión, tarjeta «What really happened», estado de partida (modo, nodo actual, rama), escenas de fallo 3D, navegación entre partes | **Por construir** |
 | Audio: narración Parte 1 + ramas alternas + frases de la guía del modo Decisiones | **Por grabar** (cuesta créditos; cada rama alterna suma) |
 | Rutas | **(propuesto)** `/` inicio con selección de modo; `/play/story` y `/play/decisions` con `?part=` o segmentos propios; hasta decidirlo, no tocar el enrutado actual |

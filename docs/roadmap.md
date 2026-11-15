@@ -2,6 +2,18 @@
 
 > **Prioridad actual: el juego sobre Opportunity** (modos Historia y Decisiones, Parte 1 en 2D y Parte 2 en 3D). Plan por fases y preguntas abiertas en [game-design.md](game-design.md#10-fases-sugeridas-propuesto). Lo de abajo es anterior al giro: lo que se refiere a más vehículos, el globo o la comparación entre expediciones está **en pausa**.
 
+## Siguiente (qué hacer al retomar)
+
+Estado (hito 48): 4 historias completas (Opportunity, Spirit, Ingenuity, Surveyor 3) con cómic, 3D, narración y fuentes; paleta por mundo; globo libre; tarjeta 3D con ilustración a todo el ancho. Candidatos, en el orden en que encajan con lo pedido hasta ahora:
+
+1. **Revisar de oído las 80 narraciones** y las 20 ilustraciones de Spirit (el sello de «REJECTED» de `spi001`); regrabar solo lo que no guste (`--only`).
+2. **Más historias:** InSight tiene línea de tiempo base pero no dossiers (pipeline: skill `mars-mission-story-pipeline`); Perseverance, SEV y Beagle 2 están «coming soon». Receta completa en [story.md](story.md).
+3. **Modo Decisiones** (definido en [game-design.md](game-design.md), no implementado; los 30 nodos de Opportunity están en `story/data/juego_opportunity.json`).
+4. **Terreno propio de Gusev** (hoy Spirit usa Meridiani como maqueta) y de Jezero (Ingenuity usa Gale): las paradas no son lugares reales.
+5. **Alinear el color de cada vehículo con la paleta de su mundo** (hoy: Spirit violeta, Ingenuity ámbar, Opportunity coral, Surveyor 3 oliva).
+6. Comprobar la tarjeta del 3D en pantallas pequeñas (≤ 720 px de alto) y en vertical; el zoom táctil (pellizco) del globo no está hecho.
+7. Deudas viejas: escala real de los vehículos (abajo), progreso `visited` no persistente, build servido sin probar.
+
 Ideas y deudas técnicas detectadas, sin orden estricto. Lo marcado ⭐ es lo que más encaja con lo que el usuario ha pedido.
 
 ## ⚠️ Por resolver: escala real de los vehículos
@@ -27,7 +39,8 @@ Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría
 
 ## Hecho (última versión de la demo)
 
-- ✅ **Historias** de Opportunity (hito 36), Ingenuity (hito 40) y Surveyor 3 (hito 42) con el mismo flujo (cómic → 3D → cómic, narración, fuentes); scripts genéricos por misión; vehículos sin historia con «coming soon» (hito 43–44). Lo siguiente de esta lista describe etapas anteriores.
+- ✅ **Historias** de Opportunity (hito 36), Ingenuity (hito 40), Surveyor 3 (hito 42) y **Spirit (hito 45)** con el mismo flujo (cómic → 3D → cómic, narración, fuentes); scripts genéricos por misión; vehículos sin historia con «coming soon» (hito 43–44).
+- ✅ **Paleta por mundo** (hito 46: Marte terracota + mantequilla, Luna azul acero + menta) y **UI** (hitos 47–48): globo libre en X e Y con zoom propio, botón de música como icono, «skip the 3D» de acento, etiqueta «05. Título» en el cómic, tarjeta 3D con la ilustración a todo el ancho. Lo siguiente de esta lista describe etapas anteriores.
 
 - ✅ 3 expediciones (Opportunity y Perseverance en Marte, SEV en la Luna), tema único (flat; «Ink & Paper» desde el hito 30, antes «Primer»), minimapa, polvo, huellas, cámara de seguimiento.
 - ✅ **Storytelling**: 5 o 6 checkpoints por expedición, salida y final incluidos (balizas, rombos en el minimapa, tarjeta con foto y datos).
@@ -35,7 +48,7 @@ Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría
   los checkpoints para viajar (hacia delante o atrás).
 - ✅ **Narración** pregrabada con ElevenLabs (voz Bill, `eleven_v4`), automática al entrar, tecla `N`, botón Listen/Stop.
 - ✅ Interfaz y audios en inglés.
-- ✅ **Vista de entrada con el globo** (`/moon`, `/mars`): globo alámbrico claro sin assets, gira solo (inercia al arrastrar, solo eje vertical), cuadrados negros que orbitan con él
+- ✅ **Vista de entrada con el globo** (`/moon`, `/mars`): globo alámbrico claro sin assets, gira solo (inercia al arrastrar; desde el hito 47 gira libre en X e Y y tiene zoom propio), cuadrados negros que orbitan con él
   (solo los de delante), selector de mundo, marcadores/etiquetas de los vehículos abandonados y tarjeta con el modelo 3D empolvado → «Travel to the past».
 - ✅ **Rutas por vehículo** (`/moon/sev`, `/mars/opportunity`) con carga de recursos por ruta (`cacheComponents` + `generateStaticParams`).
 - ✅ **Rediseño completo en el tema «Primer»**: tokens únicos, tipografía, UI, globo, escena 3D y movimiento suave (ver [design.md](design.md)).

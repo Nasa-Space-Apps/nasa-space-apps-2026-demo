@@ -6,7 +6,8 @@
 | --- | --- | --- |
 | `/` | redirige a `/moon` (`app/page.tsx`) | nada |
 | `/moon`, `/mars` | **Globo** (`app/[body]/page.tsx` → `ExploreLoader` → `Explore`) | three/R3F + el globo; el vehículo ilustrado de la tarjeta (procedural, sin descargas) |
-| `/moon/sev`, `/mars/opportunity` | **Viaje al pasado** (`app/[body]/[vehicle]/page.tsx` → `SceneLoader` → `Scene`) | el terreno STL **solo de ese vehículo** (el vehículo es procedural, no hay GLB), sus checkpoints, narración/guía |
+| `/mars/opportunity`, `/mars/spirit`, `/mars/ingenuity`, `/moon/surveyor-3` | **La historia** (`app/[body]/[vehicle]/page.tsx` → `SceneLoader` → `Journey`: cómic → `Scene` 3D → cómic) | el terreno STL **solo de esa misión** (el vehículo es procedural, no hay GLB), su `story.json` (checkpoints, imágenes, audio), narración/guía |
+| `/<mundo>/<id>` de un vehículo sin historia (`sev`, `perseverance`, `insight`, `beagle-2`) | redirige al globo (`storyOf(id)` es `undefined`; «coming soon») | nada |
 
 - El segmento `[vehicle]` es el `id` de la misión (`missions.ts`). Ambas páginas usan `generateStaticParams` desde `lib/bodies.ts`; un valor no válido
   llama a `notFound()`. **Modo `cacheComponents`:** leer `params` fuera de `<Suspense>` da el error «instant shell»; por eso cada página es un
@@ -19,7 +20,7 @@
 
 ## Vista del globo (`Explore`)
 
-Es el **menú previo al juego** (hito 31): un globo (por defecto la Luna) a pantalla completa con **un vehículo 3D en miniatura de pie en cada sitio abandonado**, un **selector de mundo en texto** arriba a la izquierda («Mars  Moon», el actual con subrayado rosa), el botón de música arriba a la derecha y una **pista de una línea** abajo («mars · drag to spin · click a vehicle»). **No hay panel lateral ni lista de vehículos**: al hacer clic en un vehículo del globo se abre su tarjeta (`VehicleCard`, con «Travel to the past») **flotando a su lado**; **el globo no se mueve ni se puede girar con el puntero mientras hay una tarjeta abierta**, y esta se cierra con su **X**, con **Esc** o con un **clic fuera**. Todo entra y sale con animaciones de juego (`Pop`, `THEME.pop`, muelles de `lib/motion.ts`).
+Es el **menú previo al juego** (hito 31): un globo (por defecto la Luna) a pantalla completa con **un vehículo 3D en miniatura de pie en cada sitio abandonado**, un **selector de mundo en texto** arriba a la izquierda («Mars  Moon», el actual con el resaltado del color de acento del mundo), el botón de música (un disco con icono de altavoz, atenuado si está apagado) arriba a la derecha y una **pista de una línea** abajo («mars · drag to spin · scroll to zoom · click a vehicle»). **No hay panel lateral ni lista de vehículos**: al hacer clic en un vehículo del globo se abre su tarjeta (`VehicleCard`, con «Travel to the past») **flotando a su lado**; **el globo no se mueve ni se puede girar con el puntero mientras hay una tarjeta abierta**, y esta se cierra con su **X**, con **Esc** o con un **clic fuera**. Todo entra y sale con animaciones de juego (`Pop`, `THEME.pop`, muelles de `lib/motion.ts`).
 
 - **`lib/bodies.ts`**: cuerpos (`blurb`, `facts`) y sus `AbandonedVehicle` (`missionId`, `lat/lon`, `tag`, `status`, `facts`). `latLonDir()` da la
   dirección de un lat/lon sobre la esfera. Añadir un vehículo = añadir su misión y una entrada aquí (la ruta `/<mundo>/<id>` aparece sola).
@@ -41,7 +42,7 @@ Es el **menú previo al juego** (hito 31): un globo (por defecto la Luna) a pant
 
 ## La experiencia de Opportunity (`Journey`, `Comic`) — hito 36
 
-`/mars/opportunity` no monta `Scene` directamente (`SceneLoader` elige `Journey` para `opportunity`). `Journey` tiene tres fases sobre un mismo campo azul:
+`/mars/opportunity` no monta `Scene` directamente (`SceneLoader` elige `Journey` para `opportunity`). `Journey` (también para `spirit`, `ingenuity` y `surveyor-3`: todo sale de `storyOf(misión)`) tiene tres fases sobre un mismo campo (el color del mundo):
 
 - **intro**: `Comic` con `INTRO_BEATS` (5 páginas). **Desde la 3.ª página** solo descarga el terreno (`fetch`); `Scene` (`next/dynamic`) se monta en `onLeave`, al pulsar «land on mars», y `game.hold = true` la mantiene en espera hasta `onDone`.
 - **mars**: al terminar el cómic (`onDone`/`onSkip`) quita el `hold` y desmonta el cómic: el rover ya está en la primera parada, que se abre con su tarjeta y su narración. Al llegar a la última parada (`game.active` = último id) aparece `ContinuePrompt`.
@@ -85,6 +86,10 @@ conducción libre); el `useEffect` de `Scene.tsx` atiende `M` (siguiente vehícu
 
 **Archivos de datos:** `lib/missions.ts` (vehículo + terreno + entorno), `lib/themes.ts` (el tema único), `lib/story.ts`
 (las historias: de cada beat sale un checkpoint, y el orden de la lista es el orden del recorrido; `via` son los puntos intermedios de cada tramo) y `lib/checkpoints.ts` (solo el tipo `Checkpoint`). **Solo en mantenimiento:** `scripts/build-story.mjs`, `plan-story-route.mjs`, `generate-story-images.mjs`, `generate-story-audio.mjs` y `generate-guide.mjs` (graban los mp3 de `public/models/<misión>/audio` y `public/guide`; comparten `scripts/lib/tts.mjs`).
+
+## Tema por mundo (hito 46)
+
+`lib/themes.ts` define `BASE` (lo común) y `WORLDS` (campo, tinte, acento, baliza de **Marte** y de la **Luna**); `themeFor(mundo)` devuelve el `Theme` completo y `worldOfPath(ruta)` el mundo de una URL (`/mars…` = Marte, el resto = Luna). Los componentes de UI usan `useTheme()` (`lib/use-theme.ts`, lee `usePathname`, así que sigue al `pushState` del selector de mundo del globo); las variables CSS (`--canvas`, `--accent`…) las publica `components/WorldVars.tsx` y un script del `<head>` (`app/layout.tsx`) las fija antes del primer pintado. Dentro del `<Canvas>` de R3F no hay contexto de React: `Experience` usa `themeFor(bodyOfMission(mission.id).id)` y el globo recibe el tema por props. `missions.ts` toma el cielo y la niebla de `themeFor(<mundo>).canvas`. Detalle: [design.md](design.md#paleta-por-mundo-hito-46).
 
 ## Estado compartido: `src/lib/game.ts`
 
@@ -179,6 +184,7 @@ Datos en `src/lib/checkpoints.ts` (tipo `Checkpoint` + una lista por misión); `
   «▶ Listen / ■ Stop»** (con el estado de la narración y los mensajes de error), `text` y 3 datos. Aparece con fundido +
   desplazamiento; usa los tokens del tema (tarjeta, tipografías, `tag`, `caps`). Es `pointer-events: none` salvo el botón.
   Se coloca `bottom-5 left-5` (en desarrollo `bottom-14`, por el indicador «N» de Next).
+- **Tarjeta de las historias** (hito 48; `CheckpointCard.tsx`, rama `story`, la que tiene `imageRatio`): la ilustración a **todo el ancho** de la tarjeta con altura limitada por la pantalla (`maxHeight: max(220px, 100vh − 415px)`, `object-cover`), y debajo título, «start n/N · fecha · lugar», puntos + `listen`, resumen, 3 datos en columnas, fuentes en una línea y crédito. Su ancho es `clamp(340px, (100vw − dock)/2 − 40px, 520px)` con `dock = clamp(440px, 100vw − 900px, 560px)`, el ancho de la barra central de `Scene.tsx` (subtítulo + chips + línea de tiempo). La rama sin `imageRatio` (tarjetas antiguas, 16:10) ya no la usa ninguna misión.
 - **Línea de tiempo** (`Timeline.tsx`, DOM, abajo en el centro): barra con un marcador (rombo) por checkpoint **equiespaciados**; el
   relleno y el punto del vehículo avanzan proporcionalmente dentro de cada tramo. Muestra «Next: …» / «Traveling to …» / «End of the
   route» y «n/N visited». Con 6 o más paradas las etiquetas son más estrechas y los nombres largos ocupan 3 líneas: la fila de etiquetas reserva 44 px (26 con 5 paradas) para que el texto no toque el borde de la tarjeta. **Solo los marcadores son clicables** (`travelTo(i)`, desactivado en el checkpoint donde estás): no se puede
@@ -225,7 +231,7 @@ Detalle y catálogo en [guide.md](guide.md). Resumen técnico:
 ## Datos configurables
 
 - **`missions.ts`** — vehículo + terreno + entorno + polvo + huellas + checkpoints y su radio. Ver [themes-and-missions.md](themes-and-missions.md).
-- **`themes.ts`** — el tema «Ink & Paper»: color (campo azul, papel, tinta, acento rosa), tipografía, radios, trazo, grano, curva y duraciones del movimiento, minimapa, balizas, terreno (`ground`) y globo.
+- **`themes.ts`** — el tema «Ink & Paper» (`BASE` + paleta por mundo en `WORLDS`): color (campo y acento por mundo, papel, tinta), tipografía, radios, trazo, grano, curva y duraciones del movimiento, minimapa, balizas, terreno (`ground`) y globo.
 - **`checkpoints.ts`** — storytelling: posición, texto de la tarjeta, guion de la narración, ruta del audio, foto y datos.
 - **`guide-lines.ts`** — frases de la guía de voz (y su vehículo/categoría).
 

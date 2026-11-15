@@ -6,8 +6,8 @@ Los valores viven **solo** en `src/lib/themes.ts` (`THEME`); este documento expl
 
 ## La idea
 
-Una interfaz de **cómic hecho a mano y silenciosa**: un campo plano de color (azul lila) con un grano fino, **hojas de papel crema** con **trazo grueso de tinta negra**, un solo acento rosa, botones en píldora y una única tipografía en negrita y minúscula.
-En el original, las páginas del cómic (crema, ligeramente giradas) cuelgan sobre un fondo de manchas planas azul y rosa; aquí el fondo es el azul (cielo del 3D, globo, carga) y las tarjetas son las páginas. La interfaz se queda neutra (tinta y papel); el color de verdad lo ponen el campo azul, el acento y los **vehículos** (3 tonos).
+Una interfaz de **cómic hecho a mano y silenciosa**: un campo plano de color con un grano fino (**terracota en Marte, azul acero en la Luna**; el azul lila de la referencia ya no se usa), **hojas de papel crema** con **trazo grueso de tinta negra**, un solo acento por mundo, botones en píldora y una única tipografía en negrita y minúscula.
+En el original, las páginas del cómic (crema, ligeramente giradas) cuelgan sobre un fondo de manchas planas azul y rosa; aquí el fondo es el azul (cielo del 3D, globo, carga) y las tarjetas son las páginas. La interfaz se queda neutra (tinta y papel); el color de verdad lo ponen el campo del mundo, el acento y los **vehículos** (3 tonos).
 
 ## Qué se midió en la referencia
 
@@ -26,22 +26,22 @@ En el original, las páginas del cómic (crema, ligeramente giradas) cuelgan sob
 
 | Token | Valor | Uso |
 | --- | --- | --- |
-| `canvas` | `#7E7EFF` | **El campo azul**: fondo de la página, del globo, cielo y niebla de la escena, pantalla de carga y color al que se funden las vistas |
+| `canvas` | por mundo: Marte `#E2603A`, Luna `#4B7DB8` (el azul lila `#7E7EFF` de la referencia ya no se usa) | **El campo**: fondo de la página, del globo, cielo y niebla de la escena, pantalla de carga y color al que se funden las vistas |
 | `surface` / `onInk` | `#FEECE3` | El **papel**: paneles y tarjetas; y el color del texto/iconos sobre tinta |
 | `paperLight` | `#FFF6F0` | Papel claro: fondo plano detrás del vehículo en su tarjeta |
 | `ink` / `inkSoft` | `#171717` / `#3A3A3A` | Texto, trazos, botón primario, barra superior, limbo y estrellas del globo, curvas de nivel del terreno |
 | `muted` | `#675651` | Texto secundario |
 | `line` | `#E8CFC2` | Pistas de barras y divisores sobre papel |
-| `accent` / `hover` | `#F892C0` | **El único acento** (rosa): posición actual, gema de las balizas, selección de texto, relleno que barre un botón al pasar el cursor |
-| `accentSoft` | `#4747E0` | Enlaces en hover |
+| `accent` / `hover` | por mundo: Marte `#FFC247`, Luna `#6BE3C3` (antes rosa `#F892C0`) | **El único acento**: posición actual, gema de las balizas, selección de texto, relleno que barre un botón al pasar el cursor, botón `.is-accent` |
+| `accentSoft` | por mundo: Marte `#B33A16`, Luna `#1F5C8E` | Enlaces en hover |
 | `radius` / `radiusSm` | 6 / 999 px | Papel y paneles / botones, chips y píldoras (totalmente redondos) |
 | `stroke` | 3 px | Trazo de tinta de paneles, fotos e ilustraciones (el «recuadro de viñeta») |
 | `grain` | 0,08 | Opacidad del grano sobre toda la pantalla (0 = sin grano) |
 | `ease` | `cubic-bezier(0.22, 1, 0.36, 1)` | La curva de **todas** las transiciones |
 | `dur` | 250 / 600 / 1000 ms | `fast` (hover), `base` (estados), `slow` (entradas y desplazamientos) |
-| `ground` | `mars` crema `#EDC4AE → #FFF3EA` (borde `#F5D9C9`), `moon` lila `#D7CDF0 → #F6F2FF` (borde `#E6DEF8`), `lines` tinta | Terreno de cada mundo en 3 tonos de papel con curvas de nivel de tinta |
+| `ground` | `mars` arena `#EEBE95 → #FFF1DF` (borde `#F7D8BC`), `moon` plata `#CDD3DA → #F5F6F8` (borde `#E2E6EA`), `lines` tinta | Terreno de cada mundo en 3 tonos de papel con curvas de nivel de tinta |
 
-Paletas de los vehículos (3 tonos, en `missions.ts`; el `bg` es `paperLight`): Opportunity coral `#E65A4F / #F9A66C / #FFE4E0`, SEV azul, Perseverance verde. Los vehículos **no se han tocado** en este hito.
+Paletas de los vehículos (3 tonos, en `missions.ts`; el `bg` es `paperLight`): Opportunity coral `#E65A4F / #F9A66C / #FFE4E0`, Spirit violeta, Ingenuity ámbar, Surveyor 3 oliva, SEV azul, Perseverance verde. Cada vehículo conserva su color y **no** sigue la paleta del mundo (posible mejora: alinearlos).
 
 ## Paleta por mundo (hito 46)
 
@@ -79,13 +79,17 @@ Un único set, **dibujado**: rejilla 16×16, **trazo de 2 px** (antes 1,5: más 
 - **Subtítulos** (`Captions`): burbuja de tinta; etiqueta «narrator» (papel) o «guide» (rosa).
 - **Línea de tiempo**: pista de 5 px redondeada, relleno de tinta y **círculos** de 16 px con trazo de tinta por checkpoint (tinta = alcanzado, color del vehículo = el vehículo está parado ahí). Solo entre dos checkpoints aparece un punto del color del vehículo que recorre la pista.
 - **Minimapa**: dentro de un panel, con su viñeta (trazo de tinta); curvas de nivel suaves sobre papel, ruta en tinta (discontinua la pendiente), checkpoints cuadrados numerados.
-- **Globo (menú del juego)**: campo azul, rejilla azul claro, limbo y estrellas en tinta. **Sin paneles**: el mundo se cambia con **texto** (`.ui-world`: «Mars  Moon» en 800; el actual lleva un subrayado rosa que se desliza con rebote, el otro se inclina y crece al pasar el cursor); una pista de tinta abajo; y los **vehículos hundidos en una masa que los pega al suelo** (efecto simbionte: tinta + rosa + papel, una sola malla, forma reconocible —ruedas, panel, mástil— que gira para mirarte y respira y se estira como gelatina; anillo cuadrado de papel que pulsa, etiqueta de tinta solo al pasar el cursor). La **tarjeta del vehículo flota** junto a él (papel con trazo, +0,6°), se cierra con una **X** (`.ui-fab-sm`, gira 90° al hover), con Esc o con un clic fuera, y el globo se queda quieto y bloqueado mientras está abierta.
+- **Tarjeta del 3D (hito 48)**: la ilustración a todo el ancho de la tarjeta (4:5, tan alta como deje la pantalla) y debajo título, lugar, progreso + `listen`, resumen, datos y fuentes; ver [story.md](story.md).
+- **Botón «skip the 3D»** (`.ui-btn.is-accent`): relleno del acento del mundo con contorno de tinta de 2,5 px; el barrido del hover es de tinta. «continue the story» es el botón primario (tinta).
+- **Botón de música del globo** (`AmbientButton`): disco redondo `.ui-fab .ui-fab-md` solo con el icono (`sound` / `sound-off`), atenuado (`--line`) cuando está apagado; `aria-label` y `title` dicen el estado.
+- **Píldora de página del cómic**: «05. Six minutes of fall» (número, punto, espacio y el título tal como viene del `story.json`, sin pasar a minúscula).
+- **Globo (menú del juego)**: campo del mundo, rejilla en el tinte claro del mundo, limbo y estrellas en tinta; **gira libre en X e Y** y se acerca con la rueda (solo el globo y los vehículos). **Sin paneles**: el mundo se cambia con **texto** (`.ui-world`: «Mars  Moon» en 800; el actual lleva un subrayado rosa que se desliza con rebote, el otro se inclina y crece al pasar el cursor); una pista de tinta abajo; y los **vehículos hundidos en una masa que los pega al suelo** (efecto simbionte: tinta + rosa + papel, una sola malla, forma reconocible —ruedas, panel, mástil— que gira para mirarte y respira y se estira como gelatina; anillo cuadrado de papel que pulsa, etiqueta de tinta solo al pasar el cursor). La **tarjeta del vehículo flota** junto a él (papel con trazo, +0,6°), se cierra con una **X** (`.ui-fab-sm`, gira 90° al hover), con Esc o con un clic fuera, y el globo se queda quieto y bloqueado mientras está abierta.
 - **Carga** (`Loading.tsx`): campo azul, título enorme en 800 abajo a la izquierda, etapa en negrita minúscula y barra de 6 px (tinta sobre papel) pegada al borde inferior.
 
 ## Escena 3D
 
-- **Cielo y niebla** = `canvas` (azul): el horizonte se disuelve en el campo, como las páginas sobre el fondo de la referencia.
-- **Terreno**: el mismo mapa de alturas de siempre, `MeshToonMaterial` de 3 pasos de tono (`RAMP` 120/190/255, antes 88/172/255 para que las sombras no ensucien el papel) en **crema** (Marte) y **lila claro** (Luna) con **curvas de nivel de tinta** dibujadas por su shader (`withContours`, `lines` = tinta).
+- **Cielo y niebla** = `canvas` del mundo: el horizonte se disuelve en el campo, como las páginas sobre el fondo de la referencia.
+- **Terreno**: el mismo mapa de alturas de siempre, `MeshToonMaterial` de 3 pasos de tono (`RAMP` 120/190/255, antes 88/172/255 para que las sombras no ensucien el papel) en **arena** (Marte) y **plata** (Luna) con **curvas de nivel de tinta** dibujadas por su shader (`withContours`, `lines` = tinta).
 - **Polvo** crema/lila (`#F4DDD0` / `#E9E2F8`), **huellas** de tinta suave. **Balizas**: poste y anillo de tinta (grises al alcanzarlas) y gema rosa.
 - Luz y sombras se conservan; lo que se dibuja encima (UI, globo, balizas) es plano. `Canvas flat` (sin *tone mapping*).
 
@@ -125,7 +129,7 @@ Las viñetas que se hagan para la Parte 1 ([game-design.md](game-design.md)) **d
 1. **Colores sólidos.** Sin degradados, sin sombras (`box-shadow` de profundidad, `drop-shadow`, `text-shadow`), sin brillos ni desenfoques decorativos. Excepciones aceptadas: el contorno de 2 px de `.ui-btn.is-ghost` (un trazo, no una sombra) y el **grano** estático.
 2. **Trazo de tinta** (`stroke`) en paneles, fotos e ilustraciones; esquinas casi rectas en papel, **píldoras** en botones y chips.
 3. **Profundidad por color y superficie**, no por luz: el papel sobre el campo azul.
-4. **Un solo acento** (rosa), usado con cuentagotas; el azul es el campo, no un acento.
+4. **Un solo acento por mundo** (mantequilla en Marte, menta en la Luna), usado con cuentagotas; el campo (terracota / azul acero) no es un acento.
 5. **Tipografía e iconos**: Libre Franklin (800 títulos, 700 minúscula en etiquetas); sin kickers; iconos solo de `Icon.tsx`.
 6. **Imágenes**: fotos de NASA de los checkpoints (16:10, con crédito) dentro de un recuadro de tinta, sin filtros; los vehículos se dibujan; las viñetas de la Parte 1 son ilustradas.
 7. **Movimiento**: la curva y las duraciones del tema; nada brusco; respeta `prefers-reduced-motion`.
@@ -133,7 +137,7 @@ Las viñetas que se hagan para la Parte 1 ([game-design.md](game-design.md)) **d
 
 ## Cómo aplicarlo en código
 
-- Tokens: `src/lib/themes.ts` (`THEME`). Se publican como variables CSS en `<html>` (`cssVars`) y el canvas/WebGL los lee directamente (`missions.ts` toma cielo, terreno y fondo de la tarjeta de `THEME`).
+- Tokens: `src/lib/themes.ts` (`BASE` + `WORLDS`; `themeFor`, `useTheme`). Se publican como variables CSS en `<html>` (`cssVars`, `WorldVars`) y el canvas/WebGL los lee directamente (`missions.ts` toma cielo y terreno de `themeFor(<mundo>)` / `THEME.ground` y el fondo de la tarjeta de `THEME.paperLight`).
 - Estilos de texto y contenedores: `src/lib/ui.ts` (`ui(theme)` → `label`, `display`, `title`, `text`, `panel`, `value`, `frame`); `ease(theme, props, ms?, delay?)` para `transition`.
 - Estados interactivos: clases `.ui-btn`, `.ui-link`, `.ui-row`, `.ui-nav`, `.ui-marker` en `src/app/globals.css`. Iconos: `<Icon name="arrow-right" />`.
 - Entradas suaves: `components/Reveal.tsx`.
@@ -144,5 +148,6 @@ Las viñetas que se hagan para la Parte 1 ([game-design.md](game-design.md)) **d
 - La tipografía de la referencia es Libre Franklin (libre), así que coincide; el **logotipo y los títulos dibujados a mano** del original no tienen equivalente (se usa Libre Franklin 800).
 - Revisar el contraste del texto de tinta sobre el azul `#7E7EFF` en proyector (carga, etiquetas del globo) y la legibilidad del grano.
 - Manchas de fondo rosa/azul que cambian por escena (el original usa un canvas WebGL): hoy el campo es azul liso; añadir manchas planas orgánicas es un paso siguiente.
-- Probar la escena de la Luna (lila) y los vehículos en pausa con el nuevo tema.
+- Revisar el contraste del acento de Marte (mantequilla) sobre la arena del suelo (la baliza activa usa un tono más oscuro, `beacon`) y de la menta sobre la plata en la Luna.
+- Alinear (o no) el color de cada vehículo con la paleta de su mundo.
 - Revisión de acabado con un revisor independiente (skill de diseño) **no ejecutada**; la verificación fue visual en el navegador.

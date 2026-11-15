@@ -28,7 +28,7 @@ agents/opportunity-research/               código: agente.py, pipeline.py, proc
 story/                                     juego de decisiones y visores de Opportunity (fuera del alcance actual)
 ```
 
-Misiones con base hoy: opportunity, spirit, insight, ingenuity. **Solo Opportunity tiene dossiers e historia** (30 dossiers; historia y juego en `story/`).
+Misiones con base hoy: opportunity, spirit, insight, ingenuity (y surveyor3). **Con dossiers: opportunity (30), ingenuity (20), surveyor3 (20) y spirit (20)**, y las cuatro ya están **implementadas en la demo web** como modo Historia (`docs/story.md`: ilustraciones con Nano Banana, narración con ElevenLabs, ruta 3D). El juego de decisiones de Opportunity sigue en `story/` (no implementado en la demo).
 
 ## Reglas de trabajo (del usuario)
 
@@ -51,7 +51,7 @@ Misiones con base hoy: opportunity, spirit, insight, ingenuity. **Solo Opportuni
 ## Estado y pendientes
 
 - Hecho: agente verificado, pipeline por misión, 6 skills, carpetas por misión, Opportunity migrada a `misiones/opportunity/`.
-- Sin probar con datos reales: el pipeline completo en una misión nueva (Spirit sería la primera) y `pipeline.py historia --html`.
+- Spirit pasó el pipeline (dossiers entregados por el equipo en `feature/story-research-agent`) y se convirtió en historia de la demo (hito 45). Siguen sin probar con datos reales `pipeline.py historia --html` y una misión nueva de InSight (la base existe, faltan dossiers).
 - Alcance actual: **solo la historia**; el juego de otras misiones queda para después.
 
 Más detalle: `story/MAPA_DEL_PROCESO.md`, `story/PIPELINE_HISTORIA.md`, `misiones/README.md`, `agents/opportunity-research/README.md`.

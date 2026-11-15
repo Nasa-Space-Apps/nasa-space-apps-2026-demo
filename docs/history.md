@@ -336,6 +336,19 @@ El usuario pidió dejar en `public` **solo lo que se usa**. `public` pasó de **
 ### 44. Fuera el código muerto de los checkpoints antiguos
 Tras limpiar `public` (hito 43) el usuario pidió quitar también el código que apuntaba a lo borrado. Eliminado: `lib/checkpoints-demo.ts`; de `lib/checkpoints.ts`, los checkpoints de Opportunity, SEV y Perseverance y `ALL_CHECKPOINTS` (queda solo el tipo `Checkpoint`, sin `demo` ni `noGuide`); `scripts/generate-narration.mjs` y `npm run narration`; de `guide-lines.ts`/`guide.ts`/`generate-guide.mjs`, las frases `next-*`/`remind-*` y las de Perseverance y SEV. Las misiones sin historia siguen en `missions.ts` (el globo dibuja su vehículo) con `checkpoints: []`. La guía conserva 30 frases (`npm run guide -- --dry-run`: 30 al día, 0 por grabar) y el catálogo de `docs/guide.md` se regeneró. El comportamiento en las historias no cambia: el recordatorio nunca sonaba en ellas y la frase de «parado» sigue diciéndose la mitad de las veces. `tsc` y `lint` limpios.
 
+### 45. Spirit: ilustraciones, historia, audio y tarjeta del globo
+Tras traer a `dev` los 20 dossiers de Spirit (rama `feature/story-research-agent`, merge `49e08b0`) el usuario pidió lo mismo que con las otras misiones. **Imágenes:** `scripts/data/spirit-image-prompts.mjs` (prompts escritos leyendo el contexto y las «ideas visuales» de cada dossier; mismo `STYLE`/`ENDING` que Ingenuity; el rover MER descrito igual en todas) y `npm run story-images -- spirit` (Nano Banana 2.1 en Replicate, 4:5, 2K); revisadas en una hoja de contactos. **Historia:** `scripts/data/spirit-story.mjs` (6 de Tierra, 12 de Marte, 2 de legado; cifras en disputa evitadas, ver [story.md](story.md#historia-de-spirit-hito-45)), `npm run story-route` y `npm run story` → `public/models/spirit/story.json`; **terreno:** Meridiani (el montículo de Gale es demasiado empinado). **Audio:** 20 clips de Bill (2 394 créditos). **Registro:** `lib/story.ts`, `missions.ts` (checkpoints de la historia, sin «demo») y `bodies.ts` (datos reales en la tarjeta del globo). Verificado en el navegador: cómic de 6 páginas, 3D con 12 paradas, narración con subtítulo y tarjeta del globo con «travel to the past». Commits `dbaf79b` (imágenes) y `4f7d4fc` (historia).
+- **Incidencia:** «no se escuchan los audios» no era un fallo: la preferencia `poc-narration` del navegador estaba en `"off"` (tecla `N`). Los mp3 eran correctos.
+
+### 46. Paleta por mundo (Marte y Luna)
+El usuario veía Marte y la Luna igual de «moradas y rosadas» y pidió ampliar la paleta con una para cada mundo. `themes.ts` pasó a `BASE` + `WORLDS` (`themeFor`, `worldOfPath`): **Marte** terracota `#E2603A` + mantequilla `#FFC247`, **Luna** azul acero `#4B7DB8` + menta `#6BE3C3`; el suelo 3D es arena cálida / plata fría. Los componentes de UI dejaron de importar `THEME` y usan `useTheme()` (`lib/use-theme.ts`); `WorldVars.tsx` y un script del `<head>` publican las variables CSS por ruta (sin parpadeo); `missions.ts` toma el cielo de `themeFor`. Dentro del `Canvas` de R3F el tema sale de la misión. Commit `68c98de`. Detalle: [design.md](design.md#paleta-por-mundo-hito-46).
+
+### 47. Ajustes de UI: globo libre, zoom propio, botón de música y cómic
+A petición del usuario: (1) el **globo gira libre en X e Y** (trackball con cuaternión, inercia en ambos ejes; la rotación automática sigue siendo sobre su propio eje); (2) el **zoom** (rueda, `Ctrl`+rueda/pellizco, `Ctrl` +/−/0) lo hace la cámara, así que solo escala el globo y los vehículos, no los botones; solo en `/mars` y `/moon`; la pista de abajo dice «scroll to zoom»; (3) el **botón de música** es un disco con icono (altavoz / tachado); (4) **«skip the 3D»** pasó a botón de acento (`.is-accent`); (5) la **píldora del cómic** dice «05. Six minutes of fall» (antes «05.six minutes of fall» en minúscula). Commit `1de117a`.
+
+### 48. Tarjeta del 3D con la ilustración a todo el ancho
+Primero se agrandó la imagen al 55 % junto al título (insuficiente); el usuario pidió la ilustración a **todo el ancho** con los controles debajo. Ahora: imagen 4:5 a todo el ancho con altura máxima `max(220px, 100vh − 415px)` (recorta algo en pantallas bajas, se ve entera en altas), título, lugar, progreso + `listen`, resumen, datos en 3 columnas, fuentes en una línea y crédito. Para dar sitio se estrechó la barra central de `Scene.tsx` (`clamp(440px, 100vw − 900px, 560px)`) y la tarjeta ocupa el hueco hasta ella (hasta 520 px). Commits `54c28e3` (y `1de117a` el primer intento). Verificado en 1536×775 con Ingenuity y Opportunity.
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |
@@ -347,18 +360,18 @@ Tras limpiar `public` (hito 43) el usuario pidió quitar también el código que
 | `react-hooks/immutability` desactivada | Falsos positivos con la mutación imperativa propia de `useFrame`. |
 | Vehículos procedurales de 3 tonos | Estilo plano de las referencias del usuario; ruedas separadas (giran) y sin GLB ni detección de ruedas. |
 | Vehículo = 1 malla + 1 por rueda, tono por vértice | El detalle no cuesta draw calls: cientos de piezas se hornean en una sola geometría con un único material. |
-| Vehículos demo con audio prestado y fuera de `ALL_CHECKPOINTS` | Regla del usuario: no grabar audio nuevo. Los scripts de grabación escriben en `cp.audio`: si incluyeran estos checkpoints sobrescribirían los clips ajenos. |
+| Vehículos demo con audio prestado y fuera de `ALL_CHECKPOINTS` | (histórico, hitos 28–44; los checkpoints demo ya no existen) Regla del usuario: no grabar audio nuevo. |
+| Tema por mundo: `BASE` + `WORLDS`, `useTheme()` desde la ruta | Marte y la Luna necesitan colores distintos sin duplicar el tema; el mundo sale de la URL, que ya sincroniza el `pushState` del globo. Dentro de R3F (sin contexto) se usa la misión. |
+| Zoom del globo en la cámara, no en CSS/escala | Solo escalan el globo y los vehículos; el DOM (botones, etiquetas, tarjetas) conserva su tamaño y sigue las posiciones proyectadas. |
+| Ilustración de la tarjeta 3D con `maxHeight` según `100vh` | La imagen 4:5 a todo el ancho no cabe en pantallas bajas: se recorta un poco en vez de sacar la tarjeta de la pantalla. |
 
 ## Estado actual
 
-**Última versión de la demo** (rama `master`; el ajuste final del hito 16 —giro automático y cuadrados orbitantes— está sin commitear al escribir esto): entrada por un **globo alámbrico claro**
-(`/moon`, `/mars`) con los vehículos abandonados y «Travel to the past» hacia `/<mundo>/<vehículo>`; 2 expediciones (Opportunity en Marte, SEV en la Luna) que
-recorren una **ruta definida** con `Espacio` y línea de tiempo, 5 estilos (por defecto `light`), minimapa con la ruta, polvo, huellas, cámara, **5 checkpoints
-por expedición** (salida, 3 paradas y final) con baliza 3D, rombo en el minimapa y tarjeta informativa
-(abajo a la izquierda), y **narración con voz** pregrabada (Bill, `eleven_v4`; automática al llegar, tecla `N`, botón
-Listen/Stop). Todo el texto y audio de la interfaz en inglés. La app no necesita claves ni red para jugar (salvo el
-decodificador Draco por CDN).
+**Rama `dev`, hito 48 (15 nov 2026)** — el punto de partida para retomar el proyecto:
 
-Deudas conocidas: **escala real de los vehículos** (ver [roadmap.md](roadmap.md)), voz sin evaluar de oído, `visited` no
-persistente. Pendiente / ideas: ver [roadmap.md](roadmap.md). Verificación hecha: `tsc`, `eslint` y `npm run build` limpios y
-pruebas manuales en el navegador (ver [gotchas.md](gotchas.md) para el método).
+- **Producto:** un juego de historias con globo como menú previo. `/moon` y `/mars` son el globo (giro libre en X e Y, zoom propio, un vehículo hundido en el suelo por sitio abandonado); «travel to the past» abre `/<mundo>/<vehículo>`. **Cuatro vehículos tienen historia completa** —Opportunity, Spirit (Marte), Ingenuity (Marte) y Surveyor 3 (Luna)—: cómic de 5–6 páginas → recorrido 3D de 11–13 paradas (una por evento real) → cómic final de 2–3 páginas + tarjeta de cierre, con 20 ilustraciones de IA, 20 narraciones de Bill con subtítulos y hasta 3 fuentes por parada. Perseverance, SEV, InSight y Beagle 2 salen en el globo como «coming soon» (su 3D no se abre). El modo Decisiones está definido ([game-design.md](game-design.md)) y **sin implementar**; los créditos están ocultos.
+- **Diseño:** tema único «Ink & Paper» (cómic + flat) con **paleta por mundo** (Marte terracota + mantequilla, Luna azul acero + menta), vehículos de 3 tonos que conservan su color. Ver [design.md](design.md).
+- **Datos y scripts:** todo lo de una historia vive en `public/models/<misión>/` (`story.json`, `images/`, `audio/`), generado con `npm run story-images | story-route | story | story-audio -- <misión>` desde `scripts/data/<misión>-*.mjs`; los dossiers de investigación, en `misiones/<misión>/dossiers` (los entrega el equipo; no se modifican). Receta en [story.md](story.md). La app no necesita claves ni red para jugar; las claves (`ELEVENLABS_API_KEY`, `REPLICATE_API_KEY`) solo las usan los scripts desde `.env.local` (nunca se leen ni se imprimen).
+- **Verificación:** `npx tsc --noEmit` y `npm run lint` limpios; cada cambio de UI se comprobó en el navegador (método en [gotchas.md](gotchas.md)). **Sin probar:** el build servido (`npm run build && npm start`), conducir todas las paradas de Spirit/Surveyor 3 a mano y la tarjeta 3D en pantallas bajas o verticales.
+- **Deudas conocidas:** escala real de los vehículos, terrenos de maqueta (Spirit sobre Meridiani, Ingenuity sobre Gale), narraciones sin revisar de oído, `visited` no persistente. Lista priorizada: [roadmap.md](roadmap.md) («Siguiente»).
+- **Convenciones de trabajo del usuario:** responde en español; código e identificadores en inglés; interfaz y audios en inglés; commits convencionales **sin atribución de IA** y solo cuando los pide; no commitees ni hagas push sin que lo pida; `agents/` y `story/` son del equipo. Ver [`../CLAUDE.md`](../CLAUDE.md).

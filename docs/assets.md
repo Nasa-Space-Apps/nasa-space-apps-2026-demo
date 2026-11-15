@@ -5,9 +5,9 @@ cortos; abajo se indica el original.
 
 | Archivo | Original | Tamaño | Uso |
 | --- | --- | --- | --- |
-| `terrain.stl` | `Opportunity Landing Site.stl` | 2.7 MB | Terreno de Marte |
+| `terrain.stl` | `Opportunity Landing Site.stl` | 2.7 MB | Terreno de Marte (**Opportunity** y **Spirit**, que lo usa como maqueta de Gusev) |
 | `moon-terrain.stl` | `Apollo 14 - Landing Site.stl` | 6.6 MB | Terreno de la Luna |
-| `gale-terrain.stl` | `Curiosity Landing Site.stl` | 2.7 MB | Terreno de Marte (**cráter Gale**, donde aterrizó Curiosity en 2012) para el vehículo de prueba Perseverance |
+| `gale-terrain.stl` | `Curiosity Landing Site.stl` | 2.7 MB | Terreno de Marte (**cráter Gale**, donde aterrizó Curiosity en 2012): maqueta de Jezero para **Ingenuity**. Su montículo central es demasiado empinado (30–40°) para conducir sobre él |
 
 Los GLB y las fotos de referencia de los vehículos (una carpeta por vehículo en `public/models/<id>/`) **ya no están**: Se eliminaron en el hito 43 (limpieza de `public`); siguen en el historial de git (`git log --diff-filter=D -- public/...`). Qué se descargó, de dónde y con qué licencia sigue descrito en [`model-sources.md`](model-sources.md).
 
@@ -22,6 +22,10 @@ Sin assets: los globos son una rejilla de líneas generada por código (`Globe.t
 ## Historia de Surveyor 3 (`public/models/surveyor3/`, hito 42)
 
 `story.json` (20 beats), `images/surNNN.jpg` (20 ilustraciones de IA, 1040 px, 4:5, ≈ 3,9 MB, con `manifest.json` y los prompts de cada una) y `audio/surNNN.mp3` + `manifest.json` (narraciones con Bill, ≈ 6,5 MB). Se generan con `npm run story-images`, `story-route`, `story` y `story-audio` (`-- surveyor3`); ver [story.md](story.md#historia-de-surveyor-3-hito-42).
+
+## Historia de Spirit (`public/models/spirit/`, hito 45)
+
+`story.json` (20 beats), `images/spiNNN.jpg` (20 ilustraciones de IA, Nano Banana 2.1 en Replicate, 1040 px, 4:5, ≈ 3,9 MB, con `manifest.json` y el prompt de cada una; originales de 1856×2304 en `~/Downloads/images/spirit/`, fuera del repo) y `audio/spiNNN.mp3` + `manifest.json` (20 clips de Bill, ≈ 7,1 MB, 2 394 créditos). Se generan con `npm run story-images`, `story-route`, `story` y `story-audio` (`-- spirit`); ver [story.md](story.md#historia-de-spirit-hito-45).
 
 ## Historia de Ingenuity (`public/models/ingenuity/`, hitos 39–40)
 
@@ -69,7 +73,7 @@ al sureste; terreno alto al oeste (X ≈ −300). Luna: meseta alta al este/sure
 | `opportunity` | 6 (radio 0,85) en rocker-bogie; ejes en z 2,85 / −1 / −3,2 | 10,9 × 8,9 × 9,0 | 15,9 mil | × 1,25 | caja caliente, cubierta solar en flecha (centro, dos alas y panel trasero) con filas de celdas, mástil con cabeza ancha (2 pancam + 2 navcam), antena de baja ganancia, plato orientable, látigo UHF, reloj de sol, brazo plegado con su torreta, hazcams |
 | `sev` | 6 módulos de **ruedas gemelas** (radio 1,0) con poste de dirección | 8,9 × 13,2 × 9,2 | 27,6 mil | × 2,05 | cabina en barril que se estrecha en un morro acristalado (parabrisas de 2 paños, ventanas de esquina y 3 de barbilla), escotilla redonda con cúpula a cada lado, radiador de costillas en el techo, barra de luces, cámaras, antenas, 2 suit-ports traseros, chasis de celosía con baterías |
 | `perseverance` | 6 (radio 1,15, radios curvos) en rocker-bogie con dirección en las 4 esquinas | 12,3 × 14,6 × 11,0 | 16,3 mil | × 4,4 (1 m = 4,4 u) | cuerpo con panza y cubierta, barra diferencial, generador nuclear inclinado entre sus dos placas, mástil **desplegado** con el ojo de SuperCam sobre las Mastcam-Z, brazo plegado delante con torreta y taladro, plato hexagonal, lata UHF, antena de baja ganancia, equipo de cubierta |
-| `spirit` | 6 (como Opportunity); la delantera derecha **fija** (bloqueada) | 10,9 × 8,9 × 9,0 | 15,9 mil | × 1,25 | el mismo MER de Opportunity con una rueda muerta; violeta |
+| `spirit` | 6 (como Opportunity); la delantera derecha **fija** (bloqueada) | 10,9 × 8,9 × 9,0 | 15,9 mil | × 1,25 | el mismo MER de Opportunity con una rueda muerta (**real**: el motor de la delantera derecha murió en el sol 779); violeta |
 | `ingenuity` | **ninguna** (flota 6,4 u sobre el suelo); 2 rotores contrarrotantes (`rig.rotors`) | 10,5 × 5,7 × 5,9 | 5,1 mil | × 9 (1 m = 9 u) | fuselaje dorado, 4 patas, panel solar, antena; ámbar |
 | `insight` | 3 (radio 1,0), una bajo cada pata (**ficción**: el real no se mueve) | 15,1 × 7,0 × 7,6 | 9,1 mil | × 2,15 | cubierta hexagonal, 2 abanicos solares de 12 lados, brazo con pinza, domo, antenas; turquesa |
 | `beagle2` | 4 (radio 0,95) bajo la base (**ficción**) | 12,7 × 4,9 × 13,0 | 10,9 mil | × 7 (de las fotos de réplicas) | base con marco de calibración, tapa dorada con brazo, 4 paneles redondos; frambuesa |

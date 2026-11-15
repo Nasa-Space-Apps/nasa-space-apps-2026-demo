@@ -32,6 +32,7 @@ npm run story-audio -- opportunity                 # genera lo que falta o ha ca
 npm run story-audio -- ingenuity --dry-run         # muestra el plan y el nº de caracteres, sin llamar a la API
 npm run story-audio -- surveyor3 --only sur031     # solo esos beats
 npm run story-audio -- surveyor3 --force           # regraba todo
+npm run story-audio -- spirit                       # la de Spirit (hito 45): 20 clips, 5 979 caracteres, 2 394 créditos
 npm run story-audio -- surveyor3 --voice <id> --name "<etiqueta>" --model <id>   # otra voz/modelo en esta ejecución
 ```
 
@@ -68,7 +69,7 @@ Para **ajustar** si algún clip se desfasa: cambia los pesos de pausa o `MAX` en
 ## Uso en el juego
 
 - **Automático**: suena al llegar a cada página del cómic y al entrar en el radio de una parada del 3D; al salir se corta.
-- **Tecla `N`**: activa/desactiva la narración automática (se recuerda en `localStorage`, `poc-narration`). Dentro de una parada, activarla empieza a narrar al instante.
+- **Tecla `N`**: activa/desactiva la narración automática (se recuerda en `localStorage`, `poc-narration`). Dentro de una parada, activarla empieza a narrar al instante. **Si no se oye nada** (visto en el hito 46, con los archivos y el audio correctos), lo primero que hay que mirar es esta preferencia: `localStorage.getItem('poc-narration')` debe ser distinto de `"off"`; pulsa `N` hasta ver «narration on» y recarga.
 - **Botón «Listen / Stop»** en la tarjeta del 3D (funciona aunque la automática esté desactivada).
 - Mensajes junto al botón: `Audio file missing`, `Browser blocked audio: press Listen`, `Could not play audio`.
 

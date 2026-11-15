@@ -17,4 +17,6 @@ La línea de tiempo base (Fase 1) vive aparte: `timelines_v0/linea_de_tiempo_<id
 
 Opportunity es «heredada»: su `ficha.json` declara `rutas` con las carpetas donde ya estaban sus salidas.
 
+Estado (nov 2026): `opportunity` (30 dossiers), `ingenuity`, `surveyor3` y `spirit` (20 cada una) ya tienen su historia en la demo web (`docs/story.md`). `insight` solo tiene la línea de tiempo base.
+
 Herramientas: `agents/opportunity-research/pipeline.py` (ver su cabecera). Skills: `.claude/skills/mars-*`.
