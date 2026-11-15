@@ -83,9 +83,8 @@ Los **checkpoints de Opportunity** se generan de `storyOf(misión).mars` (`lib/s
 conducción libre); el `useEffect` de `Scene.tsx` atiende `M` (siguiente vehículo: navega a su ruta) y `N`
 (narración), `G` (guía de voz). Este último ignora Ctrl/Meta/Alt y las repeticiones.
 
-**Archivos de datos:** `lib/missions.ts` (vehículo + terreno + entorno), `lib/themes.ts` (el tema único), `lib/checkpoints.ts`
-(storytelling **y ruta**: el orden de la lista es el orden del recorrido y `via` son los puntos intermedios de cada tramo). **Solo en mantenimiento:** `scripts/generate-narration.mjs` y `scripts/generate-guide.mjs` (graban los mp3 de `public/narration` y
-`public/guide`; comparten `scripts/lib/tts.mjs`).
+**Archivos de datos:** `lib/missions.ts` (vehículo + terreno + entorno), `lib/themes.ts` (el tema único), `lib/story.ts`
+(las historias: de cada beat sale un checkpoint, y el orden de la lista es el orden del recorrido; `via` son los puntos intermedios de cada tramo) y `lib/checkpoints.ts` (solo el tipo `Checkpoint`). **Solo en mantenimiento:** `scripts/build-story.mjs`, `plan-story-route.mjs`, `generate-story-images.mjs`, `generate-story-audio.mjs` y `generate-guide.mjs` (graban los mp3 de `public/models/<misión>/audio` y `public/guide`; comparten `scripts/lib/tts.mjs`).
 
 ## Estado compartido: `src/lib/game.ts`
 
@@ -189,7 +188,7 @@ Datos en `src/lib/checkpoints.ts` (tipo `Checkpoint` + una lista por misión); `
 - **Narración** ([narration.md](narration.md)): la detección de `Checkpoints.tsx` también llama a `playNarration(cp)` al
   entrar y `stopNarration` al salir (y al desmontar), y precarga los clips de la misión al montarla. `lib/narration.ts` es un
   store externo con un `<audio>` por checkpoint; la tarjeta (botón Listen/Stop) y los chips (`N Narration on/off`) se suscriben
-  con `useSyncExternalStore`. El audio son mp3 **pregrabados** en `public/narration/` (campo `audio` del checkpoint): no hay
+  con `useSyncExternalStore`. El audio son mp3 **pregrabados** en `public/models/<misión>/audio/` (campo `audio` del checkpoint): no hay
   llamadas a ElevenLabs en ejecución.
 
 ## Guía de voz

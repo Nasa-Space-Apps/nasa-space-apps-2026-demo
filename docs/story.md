@@ -140,8 +140,8 @@ El mismo flujo, en la **Luna** (`/moon/surveyor-3`; el id de la misión lleva gu
 
 ## Pendiente
 
-- **Revisar las 20 narraciones de oído** (voz Bill; si alguna no convence, edita su texto y vuelve a `npm run story-audio`).
+- **Revisar las 60 narraciones de oído** (voz Bill; si alguna no convence, edita su texto en `scripts/data/<misión>-story.mjs` y vuelve a `npm run story -- <misión>` + `npm run story-audio -- <misión>`).
 - Ilustraciones: aún no se muestran los **créditos del generador/herramienta** ni hay versión en alta resolución; si se quiere un `webp`, ajustar `build-story.mjs`.
-- Los clips y frases de la guía por checkpoint de los eventos nuevos (`next/remind-<id>`) no existen; la guía es solo genérica.
-- El 3D todavía usa el vehículo y el terreno de siempre (maqueta): las paradas no corresponden a lugares reales de Meridiani.
-- Los clips antiguos de Opportunity (`public/narration/landing|eagle|endurance|victoria|perseverance.mp3`) y sus fotos de NASA siguen en el repo pero **ya no se usan** en la experiencia.
+- La guía de voz es solo genérica (las frases por checkpoint se eliminaron en el hito 44).
+- El 3D usa terrenos de maqueta (Meridiani, Gale y la Luna): las paradas no corresponden a lugares reales.
+- Los clips y fotos antiguos de los checkpoints de Opportunity, SEV y Perseverance ya no existen (hitos 43–44).

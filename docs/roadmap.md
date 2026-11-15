@@ -27,6 +27,8 @@ Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría
 
 ## Hecho (última versión de la demo)
 
+- ✅ **Historias** de Opportunity (hito 36), Ingenuity (hito 40) y Surveyor 3 (hito 42) con el mismo flujo (cómic → 3D → cómic, narración, fuentes); scripts genéricos por misión; vehículos sin historia con «coming soon» (hito 43–44). Lo siguiente de esta lista describe etapas anteriores.
+
 - ✅ 3 expediciones (Opportunity y Perseverance en Marte, SEV en la Luna), tema único (flat; «Ink & Paper» desde el hito 30, antes «Primer»), minimapa, polvo, huellas, cámara de seguimiento.
 - ✅ **Storytelling**: 5 o 6 checkpoints por expedición, salida y final incluidos (balizas, rombos en el minimapa, tarjeta con foto y datos).
 - ✅ **Ruta definida** (sin conducción libre): `Espacio` mantenido avanza hasta el siguiente checkpoint; **línea de tiempo** con clic en
@@ -92,8 +94,7 @@ Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría
 - **Sombras estables**: ajustar el frustum de la luz al texel para evitar parpadeo al moverse.
 - **Mapa de entorno** (`Environment` con `Lightformer`) para recuperar materiales metálicos sin que salgan negros.
 - **Draco offline**: alojar el decodificador en `public/draco/`.
-- **Peso de `sev.glb`** (22 MB, ya sin uso): borrar los GLB de `public/models` si no se van a reutilizar. Los mp3 de la narración suman 1,9 MB (`mp3_44100_64` los
-  reduciría a la mitad).
+- **Peso de `public`**: ya limpio (47 MB, hito 43). Los mp3 de las historias suman ~7 MB cada una (`mp3_44100_64` los reduciría a la mitad).
 - **Rendimiento en equipos modestos**: la escena puede ir a ~1 fps si hay otra pestaña con WebGL abierta; valorar `dpr` más bajo,
   sombras más baratas o un modo «ligero».
 - **Vehículos procedurales**: ya rehechos con detalle y proporciones medidas sobre los GLB (hito 27). Queda rehacerlos a escala real al resolver «escala real» (arriba), y, si se quiere, animar piezas (mástil que gira, suspensión que articula con el terreno, dirección de las ruedas).

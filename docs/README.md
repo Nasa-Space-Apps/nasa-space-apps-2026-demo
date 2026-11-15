@@ -2,7 +2,7 @@
 
 Índice de la carpeta `docs/`. Si retomas el proyecto, léelos en este orden:
 
-0. **[story.md](story.md)** — **la historia de Opportunity ya implementada (hito 36)**: 20 eventos reales (cómic → 3D → cómic), ilustraciones de IA, narraciones cortas, datos en `public/models/opportunity/`, cómo regenerarlo y qué falta.
+0. **[story.md](story.md)** — **las historias implementadas** (Opportunity hito 36, Ingenuity hito 40, Surveyor 3 hito 42): 20 eventos reales cada una (cómic → 3D → cómic), ilustraciones de IA, narraciones cortas, datos en `public/models/<misión>/`, cómo regenerarlas, la receta para añadir otra misión y qué falta.
 0. **[game-design.md](game-design.md)** — **enfoque vigente (hito 29): el juego sobre Opportunity**, con modo Historia y modo Decisiones, Parte 1 (2D) y Parte 2 (3D), reglas, impacto en el código y preguntas abiertas. *Léelo antes que nada: define hacia dónde va el proyecto.* El resto de la documentación describe lo que **ya está construido**.
 1. **[history.md](history.md)** — qué se hizo, en qué orden y por qué (incluye las decisiones de diseño y las preferencias del
    usuario). *Léelo primero para recuperar el contexto.*
@@ -11,12 +11,12 @@
 3. **[design.md](design.md)** — **el diseño de la demo: tema «Ink & Paper» (cómic, referencia Ponpon Mania) + flat design** (tokens, tipografía, componentes, movimiento, 3D), cómo aplicarlo en código y qué falta.
 4. **[themes-and-missions.md](themes-and-missions.md)** — receta para añadir un estilo visual (incluye los tokens del globo), un vehículo+terreno (y su marcador en el globo) o
    checkpoints (storytelling) nuevos.
-5. **[assets.md](assets.md)** — los modelos de `public/models` y las fotos de `public/images`: tamaños, ejes, créditos (el globo no usa assets).
+5. **[assets.md](assets.md)** — los terrenos y las carpetas de cada historia de `public/models`: tamaños, ejes, créditos (el globo no usa assets). Los GLB y fotos de referencia se eliminaron (hito 43): ver [model-sources.md](model-sources.md).
 6. **[gotchas.md](gotchas.md)** — trampas y problemas ya resueltos (rutas, globo, `cacheComponents`); cómo probar en el navegador.
-7. **[narration.md](narration.md)** — narración pregrabada de los checkpoints (ElevenLabs): cómo grabar/regrabar, voz, modelo, costes.
+7. **[narration.md](narration.md)** — narración pregrabada de las historias (ElevenLabs): cómo grabar/regrabar (`npm run story-audio`), voz, modelo, subtítulos, costes.
 8. **[performance.md](performance.md)** — qué cuesta en GPU/memoria (medido), el **perfil `light`/`full`** de `lib/perf.ts` (cómo volver atrás en una línea) y cómo volver a medir.
 9. **[guide.md](guide.md)** — guía de voz «mission control»: principios, qué frase suena en cada momento y para cada vehículo, catálogo
-   de las 62 frases, cómo regrabar.
+   de las 30 frases, cómo regrabar.
 10. **[ambient.md](ambient.md)** — música de fondo (ElevenLabs Music, pregrabada): una cama por lugar, bucle con crossfade, baja de volumen mientras habla la narración/guía, tecla `S`.
 11. **[roadmap.md](roadmap.md)** — pendientes e ideas (incluye **⚠️ escala real de los vehículos**, aún sin resolver).
 12. **[data-request.md](data-request.md)** — qué información hay que extraer por vehículo (ficha, 4–6 paradas con fecha/hora/sol/posición, imágenes con crédito, fuentes) para la demo con Opportunity, Spirit, Ingenuity, InSight y Beagle 2; pensado para pasárselo a quien investiga.

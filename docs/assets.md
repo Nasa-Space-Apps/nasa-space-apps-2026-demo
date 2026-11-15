@@ -17,7 +17,7 @@ Sin assets: los globos son una rejilla de líneas generada por código (`Globe.t
 
 ## La historia de Opportunity (`public/models/opportunity`, hito 36)
 
-`story.json` (los 20 beats: copy, hechos, fuente, ruta 3D), `images/oppNNN.jpg` (20 ilustraciones de IA a 1040 px, 4:5, ≈ 4 MB; originales de 1856×2304 en la carpeta de arte del equipo) y `audio/oppNNN.mp3` + `manifest.json` (narraciones con Bill, ≈ 6,6 MB, ya grabadas). Se generan con `npm run story -- opportunity` y `npm run story-audio -- opportunity`; el detalle está en [story.md](story.md). Además de esto, la carpeta sigue teniendo `opportunity.glb` (referencia de proporciones del vehículo).
+`story.json` (los 20 beats: copy, hechos, fuente, ruta 3D), `images/oppNNN.jpg` (20 ilustraciones de IA a 1040 px, 4:5, ≈ 4 MB; originales de 1856×2304 en la carpeta de arte del equipo) y `audio/oppNNN.mp3` + `manifest.json` (narraciones con Bill, ≈ 6,6 MB, ya grabadas). Se generan con `npm run story -- opportunity` y `npm run story-audio -- opportunity`; el detalle está en [story.md](story.md).
 
 ## Historia de Surveyor 3 (`public/models/surveyor3/`, hito 42)
 

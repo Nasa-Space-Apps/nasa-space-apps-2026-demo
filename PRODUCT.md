@@ -53,8 +53,8 @@ No es un visor de datos de misión ni un simulador de conducción: es una **hist
 
 ## Evidence on Hand
 
-- 16 fotos de checkpoints en `public/images/checkpoints` con crédito (`docs/assets.md`).
-- 16 narraciones y 62 frases de guía pregrabadas (`public/narration`, `public/guide`).
+- 60 ilustraciones de IA (20 por historia: Opportunity, Ingenuity y Surveyor 3) en `public/models/<misión>/images`, con los hechos y fuentes de cada evento en su `story.json` (`docs/assets.md`).
+- 60 narraciones y 30 frases de guía pregrabadas (`public/models/<misión>/audio`, `public/guide`).
 - No hay testimonios, métricas ni claims comerciales; no inventarlos.
 
 ## Product Principles

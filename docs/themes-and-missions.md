@@ -85,16 +85,16 @@ inspirado en las misiones reales.
 
 ```ts
 {
-  id: "cone",                       // clave estable (se usa en game.visited)
-  name: "Cone Crater",              // título de la tarjeta
-  place: "West flank · boulder field",       // línea pequeña bajo el título
+  id: "sur031",                     // clave estable (se usa en game.visited)
+  name: "The radar loses its way",   // título de la tarjeta
+  place: "Apr 20, 1967 · Oceanus Procellarum",   // línea pequeña bajo el título
   x: 70, z: 50,                     // coordenadas de MUNDO (terreno centrado en 0,0; ver abajo)
   via: [[30, -28], [66, 8]],        // opcional: puntos intermedios del tramo ANTERIOR → ESTE (para no cruzar pendientes fuertes)
-  image: "/images/checkpoints/moon-cone.jpg",  // 16:10
-  credit: "NASA · AS14-64-9099",
+  image: "/models/surveyor3/images/sur031.jpg",  // ilustración 4:5 de la historia
+  credit: "AI-generated illustration",
   text: "…",                        // resumen escrito de la tarjeta (~35 palabras)
   narration: "…",                   // guion hablado (~45 palabras, números con letras); ver docs/narration.md
-  audio: "/narration/cone.mp3",     // mp3 pregrabado con `npm run narration` (metadato)
+  audio: "/models/surveyor3/audio/sur031.mp3",  // mp3 pregrabado con `npm run story-audio -- surveyor3` (metadato)
   facts: [["Diameter", "~340 m"], ["Material", "…"], ["Terrain", "…"]],   // 3 pares etiqueta/valor
 }
 ```
@@ -106,7 +106,7 @@ inspirado en las misiones reales.
    alturas/pendientes, usa un script que lea el STL (los ejes se transforman como en `buildTerrain`: `X = x − cx`, `Z = −(y − cy)`);
    las zonas bajas suelen ser cráteres y las altas, bordes.
 2. **El primero es la salida**: el rover aparece ahí (ya no hay «punto de salida más plano»); su tarjeta se abre al cargar. No tiene
-   frases `next/remind` en la guía.
+   frases de guía (las historias no las tienen).
 3. **Traza la ruta con `via`**: entre dos checkpoints el camino es una curva suave por los `via`. Una línea recta suele cruzar
    cráteres (en Marte llegaba a 56° de pendiente); lo que se hizo fue un **A\* sobre el mapa de alturas** (rejilla de 2 u, coste =
    longitud·(1 + K·pendiente²·4), sin acercarse al borde), simplificado con Douglas-Peucker (ε 10–16 u) y comprobado con la propia
@@ -114,9 +114,8 @@ inspirado en las misiones reales.
    mismo (el rumbo se invierte al arrancar). Los `via` actuales son el resultado de ese proceso.
 4. Separación razonable: 100–400 unidades entre checkpoints (Marte es grande: 762 × 559). Los marcadores de la línea de tiempo van
    equiespaciados, no hace falta que los tramos midan lo mismo.
-5. Añade la imagen a `public/images/checkpoints/` (16:10, ≤ 960 px) y documéntala en [assets.md](assets.md).
-6. Graba el audio: `npm run narration` (solo genera el clip nuevo) y `npm run guide` (frases `next/remind` del nuevo nombre); commitea
-   `public/narration/` y `public/guide/`.
+5. La imagen es la ilustración del beat (`npm run story-images -- <misión>`, 4:5), en `public/models/<misión>/images/`; documéntala en [assets.md](assets.md).
+6. Graba el audio: `npm run story-audio -- <misión>` (solo genera el clip nuevo) y commitea `public/models/<misión>/`.
 7. Prueba: mantén `Espacio` hasta él, comprueba que se detiene en el centro, que la baliza se ve, que la tarjeta aparece/desaparece y
    que el marcador de la línea de tiempo y el cuadrado del minimapa se rellenan.
 
