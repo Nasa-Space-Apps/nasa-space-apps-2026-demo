@@ -280,6 +280,11 @@ El usuario aprobó el efecto de fundirse con el suelo pero la forma era **irreco
 - **Doble de tamaño:** `S` pasa de 0,017 a 0,034 (~48 px; ~65 px al seleccionarlo). Anillo, esfera de impacto, etiqueta y gelatina se reajustaron. Para que no se pisen, **Ingenuity se movió** de (21,5°N, 71,5°E) a (24°N, 65°E) (es un marcador demo «desplazado»: ya no estaba en su sitio real).
 - Verificado en el navegador con Opportunity (globo quieto por el hash): se lee como un rover pequeño sobre una masa negra. **Sin revisar a escala real**: el resto de vehículos ni el cúmulo de Jezero; ajustes finos en `blob.ts` (`LEAN`, `CLIMB`, `MELT`).
 
+### 35. Arreglo: trozos negros alrededor de InSight al pasar el cursor
+El usuario vio picos negros sueltos alrededor de InSight (en el globo) al pasar el cursor y quitarlo, y sospechó que era porque otro modelo «vuela». **No era eso:** eran las **esquinas del parche plano de fundido** (el cuadrado de `blob.ts`) asomando por encima del suelo. El parche se curva para la esfera **a su tamaño de reposo**, pero el marcador crece al hover/selección (y el muelle sobrepasa ~30 %), así que sus bordes quedaban por encima de la superficie; InSight es el modelo más ancho (15 u con los abanicos), por eso solo se veía ahí, y en el borde del globo se recortaban contra el fondo azul.
+- **Arreglo** (`lib/vehicles/blob.ts`, `RIM`): el **borde exterior del parche se hunde** 8 unidades por debajo del suelo (a partir del 80 % del radio), de modo que ninguna esquina asoma aunque el marcador crezca; los zarcillos (hasta ~85 %) no se ven afectados.
+- Verificado en el navegador con InSight justo en el borde derecho del globo, con el cursor encima y al quitarlo: sin trozos negros. No pude reproducir el «antes» exacto, así que la causa se dedujo del cálculo del desajuste de curvatura (ver `blobFrom`).
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |

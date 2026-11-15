@@ -18,6 +18,7 @@ export type Blob = { mesh: THREE.Mesh; dispose: () => void };
 const N = 56; // grid points per side
 const MELT = 1.5; // blur radius of the goo (grid cells): how much it flows over the lower part of the vehicle
 const LEAN = 0.5; // radians the vehicle rears back (nose up, tail sunk in the goo): from the globe's centre we look down on a surface, so a flat vehicle would show only its top
+const RIM = 8; // model units the outer rim of the goo patch dips below the ground (see step 4)
 const CLIMB = 0.26; // how high the goo climbs, as a fraction of the vehicle's height (wheels half sunk; the rest stays crisp)
 
 function rng(seed: number) {
@@ -193,7 +194,10 @@ export function blobFrom(rig: VehicleRig, palette: VehiclePalette, seed: string,
       const pz = z0 + iz * cell;
       const r2 = (px - cx) * (px - cx) + (pz - cz) * (pz - cz);
       pos[i * 3] = px;
-      pos[i * 3 + 1] = soft[i] - r2 / (2 * sphereR); // follow the curvature of the globe
+      // follow the curvature of the globe, and dip the outer rim well below the ground: the patch is bent for the globe's resting size, but the marker grows
+      // (hover, selection, spring overshoot) and the globe pops, so a flat corner of a wide model (InSight) would otherwise poke out of the ground as black shards
+      const rim = smooth(0.8, 1.05, Math.sqrt(r2) / half);
+      pos[i * 3 + 1] = soft[i] - r2 / (2 * sphereR) - RIM * rim;
       pos[i * 3 + 2] = pz;
     }
   const index: number[] = [];
