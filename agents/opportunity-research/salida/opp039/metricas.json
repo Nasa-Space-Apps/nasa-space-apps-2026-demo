@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.3103592,
+  "turnos": 18,
+  "duracion_s": 166.6,
+  "duracion_api_s": 132.7,
+  "tokens": {
+    "input_tokens": 13,
+    "cache_creation_input_tokens": 20826,
+    "cache_read_input_tokens": 108509,
+    "output_tokens": 13217,
+    "output_tokens_details": {
+      "thinking_tokens": 6723
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 20826
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1255,
+      "outputTokens": 32,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001415,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 13,
+      "outputTokens": 13217,
+      "cacheReadInputTokens": 108509,
+      "cacheCreationInputTokens": 20826,
+      "webSearchRequests": 0,
+      "costUSD": 0.3089442,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 6723,
+      "cacheCreationEphemeral5mInputTokens": 20826,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 7,
+    "leer_pagina": 8,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "2",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "3",
+    "costo_usd_referencia": 0.2631365,
+    "turnos": 2,
+    "duracion_s": 93.0,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4604,
+        "outputTokens": 31,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004758999999999999,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 8935,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5598,
+        "webSearchRequests": 0,
+        "costUSD": 0.2583775,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 7063,
+        "cacheCreationEphemeral5mInputTokens": 5598,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 12,
+      "datos_despues": 11,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se eliminó el dato [11] porque su afirmación nombra instrumentos específicos (generador de imágenes microscópicas, espectrómetro) que la cita no menciona. Se detectó una contradicción importante entre las fuentes sobre si el brazo quedó plegado o casi desplegado durante el bloqueo del Sol 1502."
+    }
+  },
+  "costo_usd_referencia_total": 0.5734957,
+  "costos": {
+    "total_usd": 0.573495,
+    "por_paso": {
+      "investigacion": 0.310359,
+      "revision": 0.263136
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006174,
+        "entrada": 5859,
+        "salida": 63,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.308944,
+        "entrada": 13,
+        "salida": 13217,
+        "cache_leida": 108509,
+        "cache_escrita": 20826,
+        "razonamiento": 6723
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.258377,
+        "entrada": 3,
+        "salida": 8935,
+        "cache_leida": 0,
+        "cache_escrita": 5598,
+        "razonamiento": 7063
+      }
+    }
+  }
+}
