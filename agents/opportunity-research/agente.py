@@ -160,6 +160,15 @@ def archivar_anterior(carpeta: Path):
     print(f"  versión anterior guardada en {destino}")
 
 
+def guardar(d: Dossier, modo: str, met: dict, carpeta: Path):
+    """Escribe dossier.json, dossier.md y metricas.json. Crea la carpeta si no existe."""
+    carpeta.mkdir(parents=True, exist_ok=True)
+    met["costos"] = costos.resumir_corrida(met)
+    (carpeta / "dossier.json").write_text(d.model_dump_json(indent=2), encoding="utf-8")
+    (carpeta / "dossier.md").write_text(a_markdown(d, modo), encoding="utf-8")
+    (carpeta / "metricas.json").write_text(json.dumps({"modo": modo, **met}, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("archivo")
@@ -187,6 +196,9 @@ def main():
     if prov.nombre != "plan" and (a.fallback_plan or os.environ.get("FALLBACK_PLAN", "").lower() in ("1", "true", "si", "sí")):
         cadena.append(proveedores.resolver("plan"))
     d, modo, met = ejecutar(ev, a.max_turnos, cadena)
+    # Red de seguridad: el borrador ya costó dinero; se guarda antes de revisar y de escribir la salida.
+    (BASE / "cache").mkdir(exist_ok=True)
+    (BASE / "cache" / f"borrador_{eid}.json").write_text(d.model_dump_json(indent=2), encoding="utf-8")
     usado = next((p for p in cadena if p.nombre == met.get("proveedor")), None)
     if usado and usado.modelo_revisor:
         print(f"Revisión editorial con {usado.modelo_revisor}...")
@@ -200,10 +212,7 @@ def main():
     d.evento_id = eid
     d = verificar(d)
     archivar_anterior(carpeta)
-    (carpeta / "dossier.json").write_text(d.model_dump_json(indent=2), encoding="utf-8")
-    (carpeta / "dossier.md").write_text(a_markdown(d, modo), encoding="utf-8")
-    met["costos"] = costos.resumir_corrida(met)
-    (carpeta / "metricas.json").write_text(json.dumps({"modo": modo, **met}, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    guardar(d, modo, met, carpeta)
     print(f"\nListo: {carpeta}\n  datos verificados: {len(d.datos_reales)} · sin verificar: {len(d.datos_no_verificados)} · "
           f"fuentes nuevas: {len(d.fuentes_nuevas)}"
           f"\n  costo de referencia: {met.get('costo_usd_referencia_total', met.get('costo_usd_referencia'))} USD · {met.get('turnos')} turnos · {met.get('duracion_s')} s (detalle en metricas.json)")
