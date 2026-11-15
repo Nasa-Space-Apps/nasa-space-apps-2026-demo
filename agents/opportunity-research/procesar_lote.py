@@ -21,8 +21,10 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 
+import mision as misiones
+
 BASE = Path(__file__).parent
-SALIDA = BASE / "salida"
+SALIDA = BASE / "salida"  # solo para el uso heredado sin --mision
 ARCHIVO = BASE / ".." / ".." / "story" / "data" / "historia_opportunity.json"
 
 
@@ -87,7 +89,8 @@ def procesar(cola, correr, costo_de, paralelo=1, tope=12.0, max_fallos=3, log=pr
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--archivo", default=str(ARCHIVO))
+    ap.add_argument("--mision", help="id de la misión: lee timelines_v0/linea_de_tiempo_<id>.json y guarda en misiones/<id>/dossiers y lotes")
+    ap.add_argument("--archivo", help="JSON con los eventos (por defecto, el de la misión; sin misión, el de la historia de Opportunity)")
     ap.add_argument("--ids", help="lista separada por comas; por defecto, todos los pendientes del archivo")
     ap.add_argument("--paralelo", type=int, default=1)
     ap.add_argument("--tope-usd", type=float, default=12.0)
@@ -96,10 +99,18 @@ def main():
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
-    todos = [i.strip() for i in (a.ids.split(",") if a.ids else ids_del_archivo(Path(a.archivo))) if i.strip()]
-    cola = pendientes(todos)
-    (BASE / "lotes").mkdir(exist_ok=True)
-    log_f = BASE / "lotes" / f"lote_{datetime.now():%Y%m%d-%H%M%S}.log"
+    if a.mision:
+        r_ = misiones.crear_carpetas(a.mision)
+        archivo, salida, lotes = a.archivo or str(r_["base"]), r_["dossiers"], r_["lotes"]
+    else:
+        archivo, salida, lotes = a.archivo or str(ARCHIVO), SALIDA, BASE / "lotes"
+    if not Path(archivo).exists():
+        sys.exit(f"No existe {archivo}. Si la misión no tiene línea de tiempo base, hay que construirla primero (Fase 1).")
+    a.archivo = archivo
+    todos = [i.strip() for i in (a.ids.split(",") if a.ids else ids_del_archivo(Path(archivo))) if i.strip()]
+    cola = pendientes(todos, salida)
+    lotes.mkdir(parents=True, exist_ok=True)
+    log_f = lotes / f"lote_{datetime.now():%Y%m%d-%H%M%S}.log"
     escribir = threading.Lock()
     print(f"Lote: {len(cola)} evento(s) pendiente(s): {', '.join(cola) or 'ninguno'}\nParalelo: {a.paralelo} · tope: {a.tope_usd} USD de referencia\nRegistro: {log_f}", flush=True)
 
@@ -107,7 +118,8 @@ def main():
 
     def correr(ev):
         try:
-            p = subprocess.run([sys.executable, "-u", "agente.py", str(a.archivo), "--evento", ev], cwd=BASE, env=env, capture_output=True,
+            cmd = [sys.executable, "-u", "agente.py", str(a.archivo), "--evento", ev] + (["--mision", a.mision] if a.mision else [])
+            p = subprocess.run(cmd, cwd=BASE, env=env, capture_output=True,
                                text=True, encoding="utf-8", errors="replace", timeout=a.minutos_por_evento * 60)
             salida, codigo = p.stdout + p.stderr, p.returncode
         except subprocess.TimeoutExpired:
@@ -117,7 +129,7 @@ def main():
         return codigo, salida
 
     t0 = time.time()
-    r = procesar(cola, correr, costo_evento, a.paralelo, a.tope_usd, a.max_fallos_seguidos, log=lambda m: print(m, flush=True))
+    r = procesar(cola, correr, lambda e: costo_evento(e, salida), a.paralelo, a.tope_usd, a.max_fallos_seguidos, log=lambda m: print(m, flush=True))
     print(f"\n===== RESUMEN DEL LOTE ({(time.time()-t0)/60:.1f} min) =====", flush=True)
     print(f"Procesados: {len(r['ok'])} · fallidos: {len(r['fallidos'])} · omitidos: {len(r['omitidos'])} · costo de referencia del lote: {r['gasto']:.4f} USD", flush=True)
     for ev, c in sorted(r["ok"]):
@@ -126,7 +138,7 @@ def main():
         print(f"  SE DETUVO: {r['motivo_parada']}", flush=True)
     if r["fallidos"]:
         print(f"  FALLIDOS: {', '.join(r['fallidos'])} (se pueden relanzar con --ids)", flush=True)
-    print(f"Pendientes tras el lote: {', '.join(pendientes(todos)) or 'ninguno'}", flush=True)
+    print(f"Pendientes tras el lote: {', '.join(pendientes(todos, salida)) or 'ninguno'}", flush=True)
 
 
 if __name__ == "__main__":

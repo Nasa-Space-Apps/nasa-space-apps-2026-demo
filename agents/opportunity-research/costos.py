@@ -34,9 +34,10 @@ def tabla_corrida(res: dict) -> str:
     return "\n".join(filas + [f"  TOTAL {res['total_usd']:.4f} USD  ({pasos})"])
 
 
-def reporte() -> str:
+def reporte(salida: Path | None = None) -> str:
+    """`salida` = carpeta con los dossiers (por defecto la heredada `salida/`; por misión, misiones/<id>/dossiers)."""
     eventos, totales, por_modelo = [], {"bedrock": 0.0, "otros": 0.0}, {}
-    for f in sorted((BASE / "salida").glob("*/metricas.json")):
+    for f in sorted((salida or BASE / "salida").glob("*/metricas.json")):
         met = json.loads(f.read_text(encoding="utf-8"))
         res = resumir_corrida(met)
         es_bedrock = str(met.get("modo", "")).startswith("Amazon Bedrock") or met.get("proveedor") == "bedrock"
@@ -62,4 +63,8 @@ def reporte() -> str:
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    print(reporte())
+    if "--mision" in sys.argv:  # python costos.py --mision spirit  -> solo los dossiers de esa misión
+        import mision as misiones
+        print(reporte(misiones.rutas(sys.argv[sys.argv.index("--mision") + 1])["dossiers"]))
+    else:
+        print(reporte())

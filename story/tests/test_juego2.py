@@ -10,7 +10,7 @@ RAIZ = Path(__file__).resolve().parents[2]
 JUEGO = json.loads((RAIZ / "story" / "data" / "juego2_opportunity.json").read_text(encoding="utf-8"))
 NODOS = JUEGO["nodos"]
 N = {n["id"]: n for n in NODOS}
-DOSSIERS = RAIZ / "agents" / "opportunity-research" / "salida"
+DOSSIERS = RAIZ / "misiones" / "opportunity" / "dossiers"
 
 # Afirmaciones que los dossiers NO pudieron confirmar o que contradijeron: no deben aparecer en el juego.
 PROHIBIDO = ["botas geológicas", "Goldin", "16 de julio", "giros en K", "purgatoides", "válvula", "debutaba", "Matijevic", "Turkey Haven",

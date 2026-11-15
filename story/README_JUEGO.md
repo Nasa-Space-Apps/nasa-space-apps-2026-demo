@@ -245,7 +245,7 @@ referencia exista, y que no reaparezca ninguna afirmación descartada («botas g
 
 ## 5. Los dossiers verificados
 
-Un dossier (`agents/opportunity-research/salida/<id>/dossier.json`) tiene: `contexto_ampliado` (relato en español), `datos_reales`
+Un dossier (`misiones/opportunity/dossiers/<id>/dossier.json`) tiene: `contexto_ampliado` (relato en español), `datos_reales`
 (afirmación + URL + cita literal + confianza), `datos_no_verificados` (cita no encontrada en el texto; **no usarlos**), `fuentes_nuevas`
 (clasificadas: oficial NASA/JPL, científica, prensa, comunitaria), `contradicciones`, `huecos` e `ideas_visuales`. `metricas.json` guarda
 tokens, tiempo, costo de referencia y versiones de prompt. Además hay `dossier.md`, la versión legible.
@@ -421,7 +421,7 @@ Pendientes, en un orden razonable:
 | Entender el juego de un vistazo | `public/story/juego2_mapa.html` |
 | Usar el JSON desde otro agente | `story/data/README_juego2.md` y `story/data/juego2_opportunity.json` |
 | Cambiar el texto de un nodo | `story/build_juego2.py` y luego `python story/build_juego2.py` |
-| Saber de dónde sale un dato | `respaldo_detalle` del nodo, o `agents/opportunity-research/salida/<evento>/dossier.json` |
+| Saber de dónde sale un dato | `respaldo_detalle` del nodo, o `misiones/opportunity/dossiers/<evento>/dossier.json` |
 | Investigar un evento nuevo | `agents/opportunity-research/README.md` |
 | Cambiar cómo investiga el agente | `agents/opportunity-research/prompts/` (con `CHANGELOG.md`) |
 | Saber cuánto se gastó | `python costos.py` en `agents/opportunity-research/` |

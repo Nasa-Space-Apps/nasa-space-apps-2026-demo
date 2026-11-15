@@ -1,6 +1,6 @@
 """Juego «Opportunity: tú decides», versión 2 (30 nodos).
 
-Regla de oro: todo lo real sale de los dossiers verificados (agents/opportunity-research/salida/<id>/dossier.json).
+Regla de oro: todo lo real sale de los dossiers verificados (misiones/opportunity/dossiers/<id>/dossier.json).
 Cada nodo real lleva `respaldo`: referencias «opp009#3» = dato 3 de los `datos_reales` de ese dossier. Los tests comprueban que existan.
 Los nodos ficticios (2 por cada opción equivocada) no llevan fuentes ni citas ni cifras: narran lo que habría pasado.
 
@@ -14,7 +14,7 @@ AQUI = Path(__file__).parent
 DATOS = AQUI / 'data'
 PLANTILLAS = AQUI / 'templates'
 SALIDA_HTML = AQUI.parent / 'public' / 'story'
-DOSSIERS = AQUI.parent / 'agents' / 'opportunity-research' / 'salida'
+DOSSIERS = AQUI.parent / 'misiones' / 'opportunity' / 'dossiers'
 SALIDA_HTML.mkdir(parents=True, exist_ok=True)
 
 CAPS = {1: 'Una pregunta y un riesgo', 2: 'Elegir un mundo', 3: 'Despegue y llegada', 4: 'Marte pone a prueba', 5: 'El agua y el adiós'}

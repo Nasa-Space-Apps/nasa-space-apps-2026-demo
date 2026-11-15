@@ -1,7 +1,7 @@
 # `juego2_opportunity.json` — guía para otros agentes
 
 Este JSON es la **fuente única** del juego «Opportunity: tú decides» (30 nodos) y de sus cartillas. Se genera con
-`python story/build_juego2.py` a partir de los dossiers verificados de `agents/opportunity-research/salida/`. No lo edites a mano.
+`python story/build_juego2.py` a partir de los dossiers verificados de `misiones/opportunity/dossiers/`. No lo edites a mano.
 
 ## Reglas de contenido (obligatorias)
 
