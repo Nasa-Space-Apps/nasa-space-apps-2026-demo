@@ -340,7 +340,7 @@ export default function Comic({
           style={{ background: theme.ink, color: theme.onInk, borderRadius: theme.radiusSm, padding: "10px 22px", minWidth: "min(300px, 60vw)", transform: entered ? "none" : "translateY(50px)", transition: `transform ${theme.dur.base}ms ${theme.pop} 200ms` }}
         >
           <span style={{ fontSize: 15, fontWeight: 800, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>
-            {String(i + 1).padStart(2, "0")}.{beats[i]?.title.toLowerCase() ?? "the end"}
+            {String(i + 1).padStart(2, "0")}. {beats[i]?.title ?? "The end"}
           </span>
           <span className="flex-1 overflow-hidden" style={{ height: 5, borderRadius: 999, background: theme.inkSoft, minWidth: 60 }}>
             <span className="block h-full" style={{ width: `${progress}%`, background: theme.accent, borderRadius: 999, transition: ease(theme, ["width"]) }} />

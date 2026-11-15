@@ -28,14 +28,16 @@ export function AmbientButton() {
   return (
     <button
       type="button"
-      className="ui-btn is-ghost"
+      className="ui-fab ui-fab-md"
       aria-pressed={enabled}
+      aria-label={enabled ? "Music on: press to mute" : "Music off: press to play"}
+      title={enabled ? "Music on (S)" : "Music off (S)"}
       onClick={(e) => {
         e.currentTarget.blur();
         toggleAmbient();
       }}
     >
-      <Icon name={enabled ? "sound" : "sound-off"} size={16} /> {enabled ? "Music on" : "Music off"}
+      <Icon name={enabled ? "sound" : "sound-off"} size={22} />
     </button>
   );
 }

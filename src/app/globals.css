@@ -121,6 +121,16 @@ button {
   color: var(--ink);
   box-shadow: inset 0 0 0 2px var(--ink); /* an outline, not a shadow */
 }
+/** Accent button (the «skip the 3D» action): the world's accent in an ink outline, so it reads on any ground; ink sweeps in on hover. */
+.ui-btn.is-accent {
+  background-color: var(--accent);
+  background-image: linear-gradient(var(--ink), var(--ink));
+  color: var(--ink);
+  box-shadow: inset 0 0 0 2.5px var(--ink); /* an outline, not a shadow */
+}
+.ui-btn.is-accent:hover:not(:disabled) {
+  color: var(--on-ink);
+}
 /** Selected state (e.g. the current world): ink, and it stays ink on hover. */
 .ui-btn.is-active {
   background-size: 0% 100% !important;
@@ -155,6 +165,17 @@ button {
 }
 .ui-fab:active {
   transform: scale(0.9);
+}
+.ui-fab-md {
+  width: 48px;
+  height: 48px;
+  border-width: 2.5px;
+}
+.ui-fab-md:hover {
+  transform: rotate(-8deg) scale(1.1);
+}
+.ui-fab-md[aria-pressed="false"] {
+  background-color: var(--line); /* muted: a dimmer disc says the sound is off */
 }
 .ui-fab-sm {
   width: 34px;

@@ -15,7 +15,16 @@ import { labelEls, placeFloating } from "./GlobeLabels";
 
 const R = 1.5; // globe radius at scale 1
 const IDLE = 0.1; // automatic spin, rad/s
-const TILT = 0.5; // fixed elevation (~29°) of the view: shows the north pole like an isometric drawing; the globe only spins around its vertical axis, which stays vertical on screen
+const TILT = 0.5; // starting elevation (~29°): shows the north pole like an isometric drawing. The globe is free: drag turns it about both screen axes
+const ZOOM_MIN = 0.6;
+const ZOOM_MAX = 3.2;
+/** Zoom of the globe view (a multiplier of the framing zoom). Module-level so the wheel handler and the render loop share it. */
+const view = { target: 1, cur: 1 };
+const zoomBy = (f: number) => {
+  view.target = THREE.MathUtils.clamp(view.target * f, ZOOM_MIN, ZOOM_MAX);
+};
+const AX = new THREE.Vector3(1, 0, 0);
+const AY = new THREE.Vector3(0, 1, 0);
 
 /**
  * Orthographic framing (no perspective: the sphere is a true circle and the grid doesn't lean, wherever it sits on screen).
@@ -27,14 +36,46 @@ function frame(w: number, h: number) {
   return { portrait, zoom, x: 0 };
 }
 
-/** Keeps the orthographic zoom in sync with the canvas size. */
+/**
+ * Keeps the orthographic zoom in sync with the canvas size and the user's zoom. The user zooms with the wheel over the globe, Ctrl + wheel / pinch (which the
+ * browser would use to zoom the whole page, buttons included) and Ctrl + / − / 0: it is the camera that zooms, so only the globe and its vehicles scale; the
+ * DOM (buttons, labels, cards) keeps its size and just follows the projected positions.
+ */
 function Fit() {
   const camera = useThree((s) => s.camera);
   const size = useThree((s) => s.size);
   useEffect(() => {
-    camera.zoom = frame(size.width, size.height).zoom;
-    camera.updateProjectionMatrix();
-  }, [camera, size]);
+    const onGlobe = () => /^\/(mars|moon)\/?$/.test(window.location.pathname); // the view is kept mounted but hidden under other routes: don't hijack the browser there
+    const onWheel = (e: WheelEvent) => {
+      if (!onGlobe()) return;
+      if (e.ctrlKey || (e.target as Element | null)?.tagName === "CANVAS") {
+        e.preventDefault();
+        zoomBy(Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0015)));
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (!onGlobe() || !(e.ctrlKey || e.metaKey) || e.altKey) return;
+      if (e.key === "+" || e.key === "=") zoomBy(1.2);
+      else if (e.key === "-" || e.key === "_") zoomBy(1 / 1.2);
+      else if (e.key === "0") view.target = 1;
+      else return;
+      e.preventDefault();
+    };
+    window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, []);
+  useFrame((_, dtRaw) => {
+    view.cur += (view.target - view.cur) * (1 - Math.exp(-8 * Math.min(dtRaw, 0.05)));
+    const z = frame(size.width, size.height).zoom * view.cur;
+    if (Math.abs(camera.zoom - z) > 1e-4) {
+      camera.zoom = z;
+      camera.updateProjectionMatrix();
+    }
+  });
   return null;
 }
 
@@ -342,9 +383,14 @@ type GlobeProps = {
 
 function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
   const outer = useRef<THREE.Group>(null); // position + scale
-  const spin = useRef<THREE.Group>(null); // rotation about the vertical axis (the only one the user can change)
+  const spin = useRef<THREE.Group>(null); // the globe's orientation (free: the user can turn it about both screen axes)
   const size = useThree((s) => s.size);
-  const st = useMemo(() => ({ drag: false, moved: 0, v: 0, angle: 0, settle: 0, free: false }), []);
+  const st = useMemo(
+    () => ({ drag: false, moved: 0, vx: 0, vy: 0, settle: 0, free: false, q: new THREE.Quaternion(), tq: new THREE.Quaternion(), dq: new THREE.Quaternion() }),
+    [],
+  );
+  /** Orientation with the starting elevation and the given turn about the globe's own axis. */
+  const orient = (out: THREE.Quaternion, angle: number) => out.setFromAxisAngle(AX, TILT).multiply(st.dq.setFromAxisAngle(AY, angle));
   const pop = useMemo<Spring>(() => ({ x: 0.25, v: 0 }), []); // the globe's size: it pops in with an overshoot
   const target = useMemo(() => {
     const v = body.vehicles.find((x) => x.missionId === faceId) ?? body.vehicles[0];
@@ -353,7 +399,7 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
 
   // a newly shown body spins in from the side and pops up (a springy grow)
   useEffect(() => {
-    st.angle = faceAngle(body.vehicles[0].lon) + 1.4;
+    st.q.setFromAxisAngle(AX, TILT).multiply(st.dq.setFromAxisAngle(AY, faceAngle(body.vehicles[0].lon) + 1.4));
     pop.x = 0.25;
     pop.v = 0;
   }, [body, st, pop]);
@@ -377,18 +423,25 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
 
     if (!st.drag && st.settle < 2.2) {
       st.settle += dt;
-      st.angle += wrap(target - st.angle) * (1 - Math.exp(-2.8 * dt));
-      st.v = 0;
+      st.q.slerp(orient(st.tq, target), 1 - Math.exp(-2.8 * dt)); // turn to face the vehicle
+      st.vx = 0;
+      st.vy = 0;
     } else if (!st.drag) {
-      if (selectedId !== null) st.v = 0; // a card is open: the globe stops dead (no drifting after a flick)
-      else {
-        // after a drag the globe keeps its momentum and settles back to the idle spin; it pauses while the pointer is over a vehicle
+      if (selectedId !== null) {
+        // a card is open: the globe stops dead (no drifting after a flick)
+        st.vx = 0;
+        st.vy = 0;
+      } else {
+        // after a drag the globe keeps its momentum and settles back to the idle spin about its own axis; it pauses while the pointer is over a vehicle
         const idle = hot.n > 0 ? 0 : IDLE;
-        st.v += (idle - st.v) * (1 - Math.exp(-1.5 * dt));
-        st.angle += st.v * dt;
+        st.vx += (idle - st.vx) * (1 - Math.exp(-1.5 * dt));
+        st.vy += (0 - st.vy) * (1 - Math.exp(-2.5 * dt));
+        st.q.premultiply(st.dq.setFromAxisAngle(AX, st.vy * dt)); // a flick up or down: about the screen's horizontal axis
+        st.q.multiply(st.dq.setFromAxisAngle(AY, st.vx * dt)); // the idle spin and a sideways flick: about the globe's own axis
       }
     }
-    g.rotation.y = st.angle;
+    st.q.normalize();
+    g.quaternion.copy(st.q);
   });
 
   const drag = (e: ThreeEvent<PointerEvent>) => {
@@ -396,16 +449,20 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
     const o = outer.current;
     if (!o) return;
     const k = 0.0075 / Math.max(o.scale.x, 0.6);
-    const mx = e.nativeEvent.movementX; // horizontal only: the globe can't be tilted
-    st.moved += Math.abs(mx);
-    st.angle += mx * k;
-    st.v = THREE.MathUtils.clamp(st.v * 0.5 + ((mx * k) / 0.016) * 0.5, -6, 6); // smoothed flick velocity, kept when the pointer is released
+    const mx = e.nativeEvent.movementX;
+    const my = e.nativeEvent.movementY;
+    st.moved += Math.abs(mx) + Math.abs(my);
+    // free trackball: the pointer turns the globe about the screen's vertical and horizontal axes (both applied in world space)
+    st.q.premultiply(st.dq.setFromAxisAngle(AY, mx * k));
+    st.q.premultiply(st.dq.setFromAxisAngle(AX, my * k));
+    st.vx = THREE.MathUtils.clamp(st.vx * 0.5 + ((mx * k) / 0.016) * 0.5, -6, 6); // smoothed flick velocity, kept when the pointer is released
+    st.vy = THREE.MathUtils.clamp(st.vy * 0.5 + ((my * k) / 0.016) * 0.5, -6, 6);
   };
 
   return (
     <group ref={outer}>
       <Limb color={theme.globe.star} />
-      <group rotation-x={TILT}>
+      <group>
         <group ref={spin}>
           {/* invisible sphere: catches the drag */}
           <mesh
@@ -417,7 +474,8 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
               st.free = true;
               st.settle = 2.2; // a drag cancels the "face the vehicle" turn
               st.moved = 0;
-              st.v = 0;
+              st.vx = 0;
+              st.vy = 0;
               document.body.style.cursor = "grabbing";
             }}
             onPointerMove={drag}

@@ -104,8 +104,9 @@ export default function CheckpointCard({ theme }: { theme: Theme }) {
       aria-hidden={!open}
       style={{
         fontFamily: theme.font,
-        // the story's card is wide (the illustration sits beside the title, the sources are links); the old cards keep their narrow column
-        width: story ? "clamp(320px, 26vw, 400px)" : "clamp(250px, 24vw, 340px)",
+        // the story's card takes all the room between the left edge and the dock (whose width is clamp(440px, 100vw - 900px, 560px), see Scene.tsx), so the
+        // illustration can be big; the old cards keep their narrow column
+        width: story ? "clamp(340px, calc((100vw - clamp(440px, 100vw - 900px, 560px)) / 2 - 40px), 520px)" : "clamp(250px, 24vw, 340px)",
         opacity: open ? 1 : 0,
         transform: open ? "none" : "translateY(18px)",
         visibility: open ? "visible" : "hidden",
@@ -116,22 +117,22 @@ export default function CheckpointCard({ theme }: { theme: Theme }) {
     >
       {shown && story && (
         <div style={{ ...panel, padding: 12, rotate: "-0.7deg" /* a page laid on the table, not a UI box */ }}>
+          {/* the illustration takes more than half of the card's width; the whole story (title, place, progress, listen, summary) runs beside it */}
           <div className="flex gap-3">
-            <div className="relative flex-none" style={{ ...frame, width: "41%", aspectRatio: shown.cp.imageRatio, background: theme.line }}>
+            <div className="relative flex-none self-start" style={{ ...frame, width: "55%", aspectRatio: shown.cp.imageRatio, background: theme.line }}>
               <FadeImg src={shown.cp.image} alt={shown.cp.name} theme={theme} />
             </div>
             <div className="flex min-w-0 flex-1 flex-col">
-              <div style={{ ...title, fontSize: 22 }}>{shown.cp.name}</div>
+              <div style={{ ...title, fontSize: 21 }}>{shown.cp.name}</div>
               <div style={{ ...label, marginTop: 8 }}>
                 {place} {shown.index + 1}/{shown.total}
               </div>
               <div style={{ ...label, marginTop: 2, color: theme.ink }}>{shown.cp.place}</div>
               <div className="mt-2">{dots}</div>
               {listen}
+              <p style={{ ...text, marginTop: 12, fontSize: 12.5, lineHeight: 1.4, color: theme.muted }}>{shown.cp.text}</p>
             </div>
           </div>
-
-          <p style={{ ...text, marginTop: 12, fontSize: 13, color: theme.muted }}>{shown.cp.text}</p>
 
           <div className="mt-3 flex flex-col gap-1.5">
             {shown.cp.facts.map(([k, v]) => (

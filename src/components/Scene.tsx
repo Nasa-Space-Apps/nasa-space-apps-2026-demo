@@ -258,7 +258,7 @@ function SceneView({ missionId, onBack, backLabel, lockVehicle }: { missionId: s
       <Minimap theme={theme} title={mission.title} accent={mission.rover.palette.dark} />
       <CheckpointCard theme={theme} />
       {/* bottom centre, between the card (left) and the minimap (right): caption above, then the key chips, then the timeline */}
-      <div className="pointer-events-none fixed bottom-5 left-1/2 z-10 flex w-[clamp(300px,calc(100vw-760px),640px)] -translate-x-1/2 flex-col items-stretch gap-2.5">
+      <div className="pointer-events-none fixed bottom-5 left-1/2 z-10 flex w-[clamp(440px,calc(100vw-900px),560px)] -translate-x-1/2 flex-col items-stretch gap-2.5">
         <Captions theme={theme} />
         <Hints theme={theme} />
         <Timeline theme={theme} accent={mission.rover.palette.dark} />

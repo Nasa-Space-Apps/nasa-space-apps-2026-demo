@@ -199,7 +199,7 @@ function MarsActions({ lastId, onClick }: { lastId: string; onClick: () => void 
     <div className="fixed right-5 top-5 z-20">
       {/* re-keyed when it changes, so the button pops again as it turns from «skip» into «continue» */}
       <Pop key={on ? "end" : "mid"} theme={theme} delay={on ? 900 : 1200} origin="right center" from="scale(0.4) rotate(8deg) translateY(-20px)">
-        <button type="button" className={`ui-btn ${on ? "" : "is-ghost"}`} onClick={(e) => (e.currentTarget.blur(), onClick())}>
+        <button type="button" className={`ui-btn ${on ? "" : "is-accent"}`} onClick={(e) => (e.currentTarget.blur(), onClick())}>
           {on ? "continue the story" : "skip the 3D"} <Icon className="ui-arrow" name="arrow-right" size={16} />
         </button>
       </Pop>

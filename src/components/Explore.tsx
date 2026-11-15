@@ -165,6 +165,8 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
             <span style={{ opacity: 0.4 }}>·</span>
             drag to spin
             <span style={{ opacity: 0.4 }}>·</span>
+            scroll to zoom
+            <span style={{ opacity: 0.4 }}>·</span>
             click a vehicle
           </span>
         </Pop>
