@@ -132,15 +132,14 @@ export const BODIES: Body[] = [
       {
         missionId: "sev",
         name: "SEV",
-        place: "Fra Mauro · Apollo 14 landing area",
-        lat: -3.645,
-        lon: -17.471,
+        place: "Mare Tranquillitatis · demo site",
+        lat: 8,
+        lon: 20, // far from Surveyor 3 (-3, -23): the two markers used to overlap on the globe
         tag: "Powered down · demo",
         status:
-          "Powered down as the sun set behind the ridge, and never woke up again. Demo vehicle: the SEV has no real link to Apollo 14 and this ending is fictional.",
+          "Powered down as the sun set behind the ridge, and never woke up again. Demo vehicle: the SEV is a fictional stand-in on the Moon and this ending is fictional.",
         facts: [
-          ["Site", "Fra Mauro"],
-          ["Apollo 14", "Feb 5, 1971"],
+          ["Site", "Mare Tranquillitatis"],
           ["Ending", "Fictional"],
         ],
       },
