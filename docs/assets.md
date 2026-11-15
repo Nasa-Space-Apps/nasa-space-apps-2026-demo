@@ -27,6 +27,10 @@ Sin assets: los globos son una rejilla de líneas generada por código (`Globe.t
 
 `story.json` (20 beats), `images/spiNNN.jpg` (20 ilustraciones de IA, Nano Banana 2.1 en Replicate, 1040 px, 4:5, ≈ 3,9 MB, con `manifest.json` y el prompt de cada una; originales de 1856×2304 en `~/Downloads/images/spirit/`, fuera del repo) y `audio/spiNNN.mp3` + `manifest.json` (20 clips de Bill, ≈ 7,1 MB, 2 394 créditos). Se generan con `npm run story-images`, `story-route`, `story` y `story-audio` (`-- spirit`); ver [story.md](story.md#historia-de-spirit-hito-45).
 
+## InSight y Beagle 2 (`public/models/insight/` y `public/models/beagle2/`, hito 51)
+
+Solo **ilustraciones** por ahora (la historia, la ruta 3D y la narración aún no existen): 20 `insNNN.jpg` y 20 `bglNNN.jpg` (Nano Banana 2.1 en Replicate, 4:5, 1040 px, ≈ 3,6 y 4,0 MB) con su `manifest.json` (prompt y predicción de cada imagen) en `images/`; los originales de 1856×2304 están en `~/Downloads/images/<misión>/`, fuera del repo. Se generan con `npm run story-images -- insight` / `-- beagle2` desde `scripts/data/<misión>-image-prompts.mjs`. No hay más archivos de estos vehículos en `public/` (su modelo procedural, `lib/vehicles/insight.ts` y `beagle2.ts`, se sigue usando en el globo).
+
 ## Historia de Ingenuity (`public/models/ingenuity/`, hitos 39–40)
 
 20 ilustraciones de IA (Nano Banana 2.1 en Replicate, 4:5, 1040 px, ≈ 3,7 MB) `ingNNN.jpg` + `manifest.json` con el prompt de cada una; generadas con `npm run story-images -- ingenuity` (ver [story.md](story.md#ilustraciones-de-otras-misiones-ingenuity-hito-39)). Viven en `images/` (la misma ruta que Opportunity; las fotos PIA de referencia que había allí se eliminaron). Junto a `story.json` y `audio/ingNNN.mp3` (20 clips de Bill, ≈ 6,9 MB) forman la historia de Ingenuity: [story.md](story.md#historia-de-ingenuity-hito-40).

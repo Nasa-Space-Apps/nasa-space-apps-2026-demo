@@ -150,6 +150,12 @@ El mismo flujo en `/mars/spirit`: cómic de **6** páginas → 3D con **12** par
 - **Imagen a revisar:** el sello de la carpeta en `spi001` muestra la palabra «REJECTED» (el modelo la escribió); se arregla con `npm run story-images -- spirit --only spi001 --force`.
 - **Si «no suena la narración»:** casi seguro es la preferencia `poc-narration = "off"` del navegador (tecla `N`); ver [gotchas.md](gotchas.md).
 
+## Ilustraciones de InSight y Beagle 2 (hito 51)
+
+Las 40 ilustraciones (20 por misión, uno por dossier de `misiones/insight` y `misiones/beagle2`) ya están generadas con la receta de siempre: `scripts/data/insight-image-prompts.mjs` y `scripts/data/beagle2-image-prompts.mjs` (mismo `STYLE`/`ENDING` que Ingenuity, importados; cada archivo define el vehículo una sola vez, `LANDER`, y los prompts lo reutilizan para que se reconozca) → `npm run story-images -- insight` y `-- beagle2` → `public/models/<misión>/images`. **La carpeta de Beagle 2 es `beagle2`** (como en `misiones/`), mientras que su id en `missions.ts` es `beagle-2` (igual que `surveyor3` ↔ `surveyor-3`). Revisadas en hojas de contactos: estilo coherente con el resto, sin texto legible salvo algún garabato (el calendario de `bgl032` muestra abreviaturas de los días de la semana; el «post» de `ins072`, líneas ilegibles). Beagle 2 no es de la NASA (ESA/Reino Unido): el vínculo con el reto es que HiRISE (MRO) lo localizó en 2015.
+
+**Falta para abrirlas en la demo** (receta: [Añadir otra misión](#el-reparto-antes--después-del-3d) y los pasos de arriba): `scripts/data/<misión>-story.mjs` (copy, anclas, cierre), `npm run story-route`, `npm run story`, `npm run story-audio`, `STORIES` en `lib/story.ts`, `checkpoints` en `missions.ts` y datos reales en `bodies.ts`. InSight no se mueve (ficción: el modelo lleva ruedas) y Beagle 2 tampoco: hay que decidir el terreno (¿Meridiani, Gale?) y cómo se cuenta una historia 3D de un módulo inmóvil.
+
 ## Pendiente
 
 - **Revisar las 80 narraciones de oído** (Opportunity, Ingenuity, Surveyor 3 y Spirit) (voz Bill; si alguna no convence, edita su texto en `scripts/data/<misión>-story.mjs` y vuelve a `npm run story -- <misión>` + `npm run story-audio -- <misión>`).
