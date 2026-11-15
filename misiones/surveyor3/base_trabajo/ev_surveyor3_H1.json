@@ -1,0 +1,206 @@
+[
+ {
+  "fecha_inicio": "1966-06-02",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Surveyor 1 logra el primer alunizaje suave de EE. UU.",
+  "detalle": "La primera nave Surveyor posada en la Luna llegó el 2 de junio de 1966 a unos 63,6 horas del lanzamiento del 30 de mayo, a unos 14 km del punto previsto. Demostró que un alunizaje suave y las operaciones en superficie eran posibles, base de lo que heredó Surveyor 3.",
+  "datos_clave": [
+   "Aterrizaje: 2 jun 1966, 06:17:36 UT",
+   "Lanzamiento: 30 mayo 1966",
+   "Desvío: ~14 km del objetivo",
+   "Cráter de ~100 km con rocas de más de 1 m cerca"
+  ],
+  "etapa": "Antecedentes heredados",
+  "fase": "origen",
+  "categoria": "hito",
+  "discutido": true,
+  "nota": "Cifra de fotos discrepante: NASA Science 11.240, Wikipedia 11.237, JPL (1966) 11.150; también hay dos masas de aterrizaje (292 y 294,3 kg).",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1",
+    "editor": "NASA Science",
+    "url": "https://science.nasa.gov/mission/surveyor-1/",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 1",
+    "editor": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1966-06-02",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Los amortiguadores de Surveyor 1 miden el choque del alunizaje",
+  "detalle": "Cada pata llevaba amortiguadores con galgas extensiométricas que registraron cómo se comportó la nave al tocar la superficie. NASA considera esos datos importantes para las misiones Apollo, y el diseño soportaba unos 800 kgf de fuerza de aterrizaje.",
+  "datos_clave": [
+   "Galgas en los amortiguadores de las patas",
+   "Diseño: ~800 kgf (7,8 kN) de carga de aterrizaje (límite de diseño, no medición del suelo)"
+  ],
+  "etapa": "Antecedentes heredados",
+  "fase": "operaciones",
+  "categoria": "ciencia",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1",
+    "editor": "NASA Science",
+    "url": "https://science.nasa.gov/mission/surveyor-1/",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 1",
+    "editor": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1966-09-20",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Surveyor 2: un motor vernier no enciende en la corrección de rumbo",
+  "detalle": "Tras el lanzamiento el 20 de septiembre de 1966, en la maniobra de media ruta (22:00 PDT) uno de los tres motores vernier no dio empuje y la nave empezó a girar descontrolada. Fue el fallo que Surveyor 3 debía evitar repetir.",
+  "datos_clave": [
+   "Lanzamiento: 20 sep 1966, 5:31.824 PDT (Atlas-Centaur)",
+   "Corrección de media ruta: ~22:00 PDT, 20 sep",
+   "Fallo: 1 de 3 motores vernier sin empuje"
+  ],
+  "etapa": "Antecedentes heredados",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "problema",
+  "discutido": true,
+  "nota": "Causa raíz no localizada: las fuentes dicen 'no encendió' (JPL) o 'no respondió bien' (informe Hughes, vía búsqueda); no se halló el informe de la Junta de Revisión del Fallo. Hora de pérdida de contacto: 9:35 UTC (Wikipedia) = 2:35 PDT (JPL), coherente.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor II impacts Moon",
+    "editor": "JPL",
+    "url": "https://www.jpl.nasa.gov/news/surveyor-ii-impacts-moon/",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor II loses communication",
+    "editor": "JPL",
+    "url": "https://www.jpl.nasa.gov/news/surveyor-ii-loses-communication/",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 2",
+    "editor": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_2",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1966-09-22",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Surveyor 2 se pierde tras 38 intentos de recuperación y se estrella",
+  "detalle": "Los ingenieros intentaron 38 encendidos; siempre prendieron solo dos motores y el giro subió de 92 a 136 rpm. El contacto se perdió a las 2:35 PDT del 22 de septiembre, a 45 h 3 min del lanzamiento, y la nave chocó cerca del cráter Copernicus.",
+  "datos_clave": [
+   "38 intentos de encendido",
+   "Giro: de 92 a 136 rpm",
+   "Pérdida de contacto: 45 h 3 min tras el lanzamiento",
+   "Impacto previsto 22 sep 1966 (Wikipedia: 03:18 UTC del 23 sep, a ~2,6 km/s)",
+   "Sin maniobra, habría caído a ~25 millas del objetivo"
+  ],
+  "etapa": "Antecedentes heredados",
+  "fase": "fin_de_mision",
+  "categoria": "problema",
+  "discutido": true,
+  "nota": "Sitio de impacto exacto desconocido; Wikipedia da 4°S 11°O, lo que el propio texto califica de impreciso.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor II impacts Moon",
+    "editor": "JPL",
+    "url": "https://www.jpl.nasa.gov/news/surveyor-ii-impacts-moon/",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor II loses communication",
+    "editor": "JPL",
+    "url": "https://www.jpl.nasa.gov/news/surveyor-ii-loses-communication/",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04",
+  "fecha_fin": null,
+  "precision_fecha": "mes",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Equipo directivo de Surveyor 3 en NASA y JPL",
+  "detalle": "Según NSSDC, Howard H. Haglund dirigía el proyecto en JPL, Leonard D. Jaffe era científico del proyecto en JPL y Benjamin Milwitzky dirigía el programa en la sede de NASA. La financiación venía de la Oficina de Ciencia Espacial y Aplicaciones.",
+  "datos_clave": [
+   "Howard H. Haglund: Project Manager, JPL",
+   "Leonard D. Jaffe: Project Scientist, JPL",
+   "Benjamin Milwitzky: Program Manager, NASA HQ"
+  ],
+  "etapa": "Equipo",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "planificacion",
+  "discutido": false,
+  "nota": "Hueco: no se encontraron fuentes abiertas sobre científicos de Hughes ni sus roles.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 (1967-035A)",
+    "editor": "NASA NSSDC",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04-17",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Masa de Surveyor 3: 1.026 kg al lanzar y 296 kg al posarse",
+  "detalle": "NSSDC da unos 1.026 kg de masa de lanzamiento y unos 296 kg al aterrizar, tras quemar el combustible del retrocohete. Es una nave de trípode con patas, paneles solares, antena de alta ganancia, cámara de TV y brazo muestreador.",
+  "datos_clave": [
+   "Masa de lanzamiento: ~1.026 kg",
+   "Masa de aterrizaje: ~296 kg"
+  ],
+  "etapa": "Diseño de la nave",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "desarrollo",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 (1967-035A)",
+    "editor": "NASA NSSDC",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ }
+]

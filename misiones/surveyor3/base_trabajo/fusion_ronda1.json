@@ -1,0 +1,2143 @@
+{
+  "esquema_version": "2.0",
+  "mision": {
+    "id": "surveyor3",
+    "nombre": "Surveyor 3",
+    "nombre_completo": "Surveyor C (Surveyor 3)",
+    "agencia": "NASA/JPL",
+    "tipo": "lander",
+    "cuerpo": "Luna",
+    "lugar": "Oceanus Procellarum (cráter Surveyor)",
+    "estado_actual": "Misión terminada: último contacto el 4 de mayo de 1967. La nave permanece en la Luna; Apollo 12 recuperó piezas en noviembre de 1969.",
+    "sol_cero": "No aplica (Luna)",
+    "fechas_clave": {
+      "lanzamiento": {
+        "fecha": "1967-04-17",
+        "eventos": [
+          "sur016",
+          "sur017",
+          "sur018",
+          "sur019",
+          "sur020",
+          "sur021",
+          "sur022",
+          "sur023"
+        ]
+      },
+      "aterrizaje": {
+        "fecha": "1967-04-20",
+        "eventos": [
+          "sur024",
+          "sur025",
+          "sur026",
+          "sur027",
+          "sur028",
+          "sur029",
+          "sur030",
+          "sur031"
+        ]
+      },
+      "ultimo_contacto": {
+        "fecha": "1967-05-04",
+        "eventos": [
+          "sur035",
+          "sur036",
+          "sur037"
+        ]
+      },
+      "fin_oficial": {
+        "fecha": null,
+        "eventos": []
+      }
+    },
+    "misiones_relacionadas": [
+      "apollo12"
+    ],
+    "resumen": {
+      "eventos": 44,
+      "fuentes_unicas": 20,
+      "eventos_por_fase": {
+        "origen": 2,
+        "planificacion_y_desarrollo": 9,
+        "lanzamiento_y_viaje": 8,
+        "aterrizaje": 5,
+        "operaciones": 11,
+        "fin_de_mision": 2,
+        "legado": 7
+      }
+    }
+  },
+  "titulo": "Línea de tiempo de Surveyor 3: del programa Surveyor al alunizaje suave y la visita de Apollo 12",
+  "idioma": "es",
+  "generado": "2026-11-15",
+  "version": "0.1",
+  "alcance": "Desde el origen del programa Surveyor hasta la visita de Apollo 12 (1969) y el análisis de las piezas recuperadas: desarrollo, lanzamiento, alunizaje, operaciones, fin de comunicación y legado.",
+  "como_leer": {
+    "fechas": "fecha_inicio / fecha_fin en ISO parcial (AAAA, AAAA-MM, AAAA-MM-DD). precision_fecha indica año, mes, día, rango, aproximada o década. En la Luna sol es siempre null; el tiempo transcurrido de misión va en sol_texto cuando la fuente lo da."
+  },
+  "aviso_verificacion": "Borrador de trabajo (v0). Cada fuente declara su nivel de verificación; nada se completó de memoria.",
+  "ficha_tecnica": {},
+  "equipo": [],
+  "totales_de_la_mision": {},
+  "records": [],
+  "discrepancias": [],
+  "pendientes_de_verificar": [],
+  "recursos_para_la_plataforma": {
+    "modelos_3d": [],
+    "imagenes_y_panoramicas": [],
+    "vistas_desde_orbita": [],
+    "videos": [],
+    "documentales": [],
+    "datos": [],
+    "educacion": [],
+    "historias": [],
+    "portales": [],
+    "nota": "No hay modelo 3D de Surveyor en NASA-3D-Resources (verificado). Sí hay Apollo Lunar Module.glb y STL del sitio de Apollo 12."
+  },
+  "eventos": [
+    {
+      "fecha_inicio": "1960-05",
+      "fecha_fin": null,
+      "precision_fecha": "aproximada",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "NASA aprueba Surveyor y lo asigna al JPL",
+      "detalle": "En la primavera de 1960 NASA aprobó formalmente Surveyor y encargó su desarrollo al Laboratorio de Propulsión a Chorro (JPL). Nació para estudiar científicamente la superficie lunar y después se reorientó a apoyar el programa Apollo. Su diseño preveía un alunizaje suave con retrocohetes regulables guiados por radar.",
+      "datos_clave": [
+        "Aprobación formal: primavera de 1960",
+        "Programa: 7 vuelos de alunizaje suave",
+        "Coste total del programa: 469 millones de dólares"
+      ],
+      "etapa": "Origen del programa Surveyor",
+      "fase": "origen",
+      "categoria": "origen",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Una fuente da primavera de 1960 y otra mayo de 1960; son compatibles. El mes es aproximado.",
+      "fuentes": [
+        {
+          "titulo": "Apollo Expeditions to the Moon, cap. 5",
+          "editor": "NASA History (SP-350)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDCA",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 1,
+      "id": "sur001"
+    },
+    {
+      "fecha_inicio": "1960-05",
+      "fecha_fin": null,
+      "precision_fecha": "aproximada",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Plan inicial: unos 157 kg de instrumentos con cuatro cámaras y un taladro",
+      "detalle": "El concepto original de mayo de 1960 era un módulo cargado de ciencia: unos 157 kg de instrumentos, incluidas cuatro cámaras de televisión y un taladro. Las limitaciones del cohete lanzador harían descartar buena parte de ese plan en los años siguientes.",
+      "datos_clave": [
+        "~157 kg de instrumentos previstos",
+        "4 cámaras de TV y un taladro"
+      ],
+      "etapa": "Origen del programa Surveyor",
+      "fase": "origen",
+      "categoria": "planificacion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "Una sola fuente (comunitaria).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 2,
+      "id": "sur002"
+    },
+    {
+      "fecha_inicio": "1961-01-19",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Hughes Aircraft, contratista para construir Surveyor",
+      "detalle": "Tras una convocatoria de estudios preliminares y una junta de evaluación de fuentes, el JPL recomendó a Hughes Aircraft (Los Ángeles) y NASA lo aprobó. Según una crónica, Hughes recibió el contrato el 19 de enero de 1961 para construir los Surveyor. El JPL gestionaba el proyecto y Hughes fabricaba la nave.",
+      "datos_clave": [
+        "Contratista: Hughes Aircraft Co.",
+        "Contrato: 19 ene 1961 (según Drew Ex Machina)",
+        "Gestión: JPL"
+      ],
+      "etapa": "Selección de contratista",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "planificacion",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "La fecha exacta solo aparece en una fuente comunitaria; las oficiales confirman la selección sin fecha.",
+      "fuentes": [
+        {
+          "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+          "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+          "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Apollo Expeditions to the Moon, cap. 5",
+          "editor": "NASA History (SP-350)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 3,
+      "id": "sur003"
+    },
+    {
+      "fecha_inicio": "1961-05-08",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El primer Atlas-Centaur falla y compromete el calendario de Surveyor",
+      "detalle": "Surveyor dependía del Centaur, la primera etapa superior de hidrógeno líquido de EE. UU. El primer vuelo de prueba, el Atlas-Centaur 1, falló unos 55 segundos tras el despegue al desprenderse paneles aislantes. Los fallos de Centaur retrasaron el programa durante años.",
+      "datos_clave": [
+        "Atlas-Centaur 1: 8 may 1961, fallo a ~55 s",
+        "Otros fallos: AC-3, 30 jun 1964; AC-4, 11 dic 1964; AC-5, 2 mar 1965"
+      ],
+      "etapa": "Dependencia del cohete Centaur",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "SP-350 dice que el primer vuelo de prueba de Centaur fue en 1962; Drew Ex Machina da el 8 may 1961. Sin resolver con fuente primaria.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Apollo Expeditions to the Moon, cap. 5",
+          "editor": "NASA History (SP-350)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 4,
+      "id": "sur004"
+    },
+    {
+      "fecha_inicio": "1962",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Fracasan los tres Ranger de bloque II y crecen los temores para Surveyor",
+      "detalle": "En 1962 los tres intentos de alunizaje de los Ranger de bloque II fallaron, lo que hizo temer problemas parecidos en Surveyor. Después, los Ranger de bloque III (1964-65) fotografiaron mares ecuatoriales y mostraron que eran los sitios más seguros. Los fallos del Ranger también absorbieron recursos del JPL que Surveyor necesitaba.",
+      "datos_clave": [
+        "3 intentos fallidos Ranger bloque II en 1962",
+        "Ranger bloque III: 1964 y 1965"
+      ],
+      "etapa": "Contexto del JPL y Ranger",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "problema",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+          "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+          "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 5,
+      "id": "sur005"
+    },
+    {
+      "fecha_inicio": "1962",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Pruebas de caída del retrocohete desde globo sobre Holloman",
+      "detalle": "En la primera mitad de 1962 empezaron en la base de Holloman pruebas de caída de retrocohetes llevados por globo. La primera falló y las siguientes dieron resultados mixtos; las últimas, antes del primer vuelo, tuvieron éxito. Formaron parte del banco de pruebas en tierra del sistema de frenado.",
+      "datos_clave": [
+        "Inicio: primera mitad de 1962",
+        "Primera prueba fallida; las últimas, exitosas"
+      ],
+      "etapa": "Pruebas en tierra",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "pruebas",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "Una sola fuente (comunitaria).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 6,
+      "id": "sur006"
+    },
+    {
+      "fecha_inicio": "1962-10",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El programa Centaur pasa del Marshall al Centro Lewis",
+      "detalle": "En octubre de 1962 la dirección del Atlas-Centaur se trasladó del Marshall Space Flight Center al Lewis Research Center de NASA, bajo Abe Silverstein, para rescatar un cohete en crisis. Wernher von Braun había llegado a recomendar cancelar Centaur a favor de una combinación Saturn-Agena.",
+      "datos_clave": [
+        "Cambio de gestión: oct 1962",
+        "Objetivo inicial de carga lunar: 2.150 libras",
+        "Estimación previa de carga: de 2.500 a 1.800 libras o menos"
+      ],
+      "etapa": "Dependencia del cohete Centaur",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "solucion",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Mes tomado de la crónica comunitaria; SP-350 no da fecha.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Apollo Expeditions to the Moon, cap. 5",
+          "editor": "NASA History (SP-350)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 7,
+      "id": "sur007"
+    },
+    {
+      "fecha_inicio": "1962-12",
+      "fecha_fin": null,
+      "precision_fecha": "aproximada",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Rediseño: Surveyor adelgaza a unos 950 kg con 52 kg de instrumentos",
+      "detalle": "Como el Centaur levantaba menos de lo previsto, Surveyor tuvo que reducir masa varias veces. A finales de 1962 se planteó un módulo de 950 kg con 52 kg de instrumentos; en 1963 la estimación operativa fue de unos 975 kg con 30 kg de instrumentos, y hacia 1965 se eligió un modelo de ingeniería recortado de unos 1.000 kg para los siete vuelos.",
+      "datos_clave": [
+        "Finales de 1962: 950 kg, 52 kg de instrumentos",
+        "1963: ~975 kg, 30 kg de instrumentos",
+        "~1965: ~1.000 kg para los 7 vuelos"
+      ],
+      "etapa": "Rediseño por límite de masa",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "solucion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+          "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+          "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 8,
+      "id": "sur008"
+    },
+    {
+      "fecha_inicio": "1964-09",
+      "fecha_fin": null,
+      "precision_fecha": "aproximada",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Surveyor se reduce a proyecto de apoyo a Apollo",
+      "detalle": "Tras los retrasos y la presión de Apollo, en el otoño de 1964 el programa se recortó a un proyecto discreto de apoyo a Apollo. NASA ordenó prioridad alta, aunque el JPL, con personal limitado, tardó en responder. Hughes también aceptó modificar su contrato antes del primer lanzamiento, cediendo parte del beneficio ganado a cambio de incentivos ligados al éxito.",
+      "datos_clave": [
+        "Recorte: otoño de 1964",
+        "Hughes y JPL reorganizaron desarrollo y pruebas"
+      ],
+      "etapa": "Reorientación hacia Apollo",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "planificacion",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+          "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+          "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Apollo Expeditions to the Moon, cap. 5",
+          "editor": "NASA History (SP-350)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 9,
+      "id": "sur009"
+    },
+    {
+      "fecha_inicio": "1965-08-11",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Atlas-Centaur 6 triunfa: el cohete queda listo para lanzar Surveyor",
+      "detalle": "Tras cinco vuelos de prueba con resultados desiguales, el Atlas-Centaur 6 voló con éxito el 11 de agosto de 1965 y Centaur se consideró listo para el servicio. Abrió el camino al primer Surveyor, lanzado el 30 o 31 de mayo de 1966.",
+      "datos_clave": [
+        "AC-6: 11 ago 1965, éxito",
+        "Surveyor 1: 30/31 may 1966"
+      ],
+      "etapa": "Dependencia del cohete Centaur",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "hito",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "Fuentes discrepan en el lanzamiento de Surveyor 1: 30 mayo (SP-4901) y 31 mayo (SP-350).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 1: America's first lunar landing",
+          "editor": "Drew Ex Machina",
+          "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+          "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+          "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 10,
+      "id": "sur010"
+    },
+    {
+      "fecha_inicio": "1967",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Surveyor 3 sustituye la cámara de aproximación por un brazo excavador",
+      "detalle": "A diferencia de Surveyor 1 y 2, Surveyor 3 sustituyó la cámara de aproximación por un muestreador de superficie: una pala de 12 x 5 cm en un brazo pantógrafo de 1,5 m que Hughes construyó. Con ella el equipo midió la resistencia del suelo, clave para saber si el Apollo podía posarse. El concepto lo propuso el ingeniero de Caltech Ronald Scott.",
+      "datos_clave": [
+        "Pala de 12 x 5 cm, brazo de 1,5 m",
+        "Excavación hasta 18 cm de profundidad",
+        "Nave: 1.026 kg al lanzamiento, 296 kg al alunizar"
+      ],
+      "etapa": "Instrumentos de Surveyor 3",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "desarrollo",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Smithsonian nombra a Gene Shoemaker como investigador principal del muestreador en Surveyor 3; la memoria de Scott y Wikipedia lo nombran a él. El año del cambio de instrumento no tiene fecha exacta verificada.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDCA",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Soil mechanics surface sampler",
+          "editor": "Caltech (CaltechAUTHORS)",
+          "url": "https://resolver.caltech.edu/CaltechAUTHORS:20141107-110442777",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Soil Surface Sampler",
+          "editor": "Smithsonian NASM",
+          "url": "https://www.airandspace.si.edu/es/collection-objects/soil-sampler-lunar-lander-surveyor/nasm_A19700123000",
+          "tipo": "libro/medio",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 11,
+      "id": "sur011"
+    },
+    {
+      "fecha_inicio": "1967-04",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El suelo lunar aguanta: parecido a arena húmeda",
+      "detalle": "Las pruebas de carga y zanjas mostraron un suelo de consistencia similar a la arena húmeda, con una resistencia de unos 10 psi (98 kPa). Los científicos concluyeron que la superficie era lo bastante sólida para soportar un módulo lunar Apollo, dato clave para los alunizajes tripulados.",
+      "datos_clave": [
+        "Resistencia ~10 psi (0,7 kg/cm², 98 kPa)",
+        "Consistencia como arena húmeda",
+        "Superficie apta para un módulo lunar Apollo"
+      ],
+      "etapa": "Mecánica del suelo",
+      "fase": "operaciones",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Otro informe de JPL (NTRS) citado por un buscador da 3-8 psi para la carga estática; no se abrió el documento original.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 (informe JPL en NTRS 19690074497)",
+          "editor": "NASA NTRS",
+          "url": "https://ntrs.nasa.gov/api/citations/19690074497/downloads/19690074497.pdf",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 12,
+      "id": "sur012"
+    },
+    {
+      "fecha_inicio": "1967-04",
+      "fecha_fin": "1967-05",
+      "precision_fecha": "rango",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Cuántos ensayos hizo el brazo: las fuentes no coinciden",
+      "detalle": "NASA cuenta cuatro ensayos de carga y trece de impacto; Wikipedia habla de siete de carga, cuatro de zanja y trece de impacto en diez sesiones; otro resumen de resultados preliminares da 8 de carga y 14 de impacto. Conviene citar las cifras de NASA y avisar de la discrepancia.",
+      "datos_clave": [
+        "NASA: 4 zanjas, 4 ensayos de carga, 13 de impacto",
+        "Wikipedia: 7 de carga, 4 de zanja, 13 de impacto, 10 sesiones",
+        "Otro resumen: 8 de carga, 14 de impacto"
+      ],
+      "etapa": "Pruebas del brazo excavador",
+      "fase": "operaciones",
+      "categoria": "pruebas",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Discrepancia en número de ensayos de carga (4/7/8) e impacto (13/14); el párrafo de Wikipedia lleva etiqueta de cita requerida.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 13,
+      "id": "sur013"
+    },
+    {
+      "fecha_inicio": "1967-04",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Imágenes con brillo excesivo por polvo en el espejo",
+      "detalle": "Algunas fotos salieron con exceso de brillo (glare). NSSDC lo atribuye al polvo o erosión en el espejo de la cámara causados por el funcionamiento prolongado de los motores durante el alunizaje.",
+      "datos_clave": [
+        "Causa: polvo/erosión en el espejo tras el descenso con motores",
+        "Afectó a parte de las imágenes"
+      ],
+      "etapa": "Problemas de cámara",
+      "fase": "operaciones",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Fecha aproximada: el problema aparece desde las primeras imágenes. No se encontró una solución operativa documentada.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 14,
+      "id": "sur014"
+    },
+    {
+      "fecha_inicio": "1967-04",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Sin telemetría de corriente y fuerza del brazo",
+      "detalle": "Por el estado de la telemetría tras el alunizaje, no se obtuvieron las medidas de corriente del motor y fuerza del sampler. Los valores de esfuerzo sobre el suelo se estimaron.",
+      "datos_clave": [
+        "Medidas de corriente y fuerza no obtenidas",
+        "Valores estimados"
+      ],
+      "etapa": "Problemas con el brazo",
+      "fase": "operaciones",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Solo respaldado por Wikipedia (comunitaria); falta confirmar en el informe de Scott et al. (NTRS 19670023255).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Soil Mechanics Surface Sampler on Surveyor III (Scott, Roberson, Clary)",
+          "editor": "NASA NTRS",
+          "url": "https://ntrs.nasa.gov/citations/19670023255",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 15,
+      "id": "sur015"
+    },
+    {
+      "fecha_inicio": "1967-04-17",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Ventana de lanzamiento y elección del 17 de abril",
+      "detalle": "Tras perder Surveyor 2, se descartó un sitio en Sinus Medii y se eligió Oceanus Procellarum. Lanzar el 16 de abril habría hecho llegar la nave una hora antes del amanecer local, así que la primera ventana útil fue la madrugada del 17. Las ventanas diarias duraban hasta unas 2,5 horas y se retrasaban unos 1,75 h por día hasta el 21 de abril.",
+      "datos_clave": [
+        "Primera ventana: 1:24 a 4:09 AM EST del 17 abr 1967",
+        "Ventanas de hasta ~2,5 h hasta el 21 abr"
+      ],
+      "etapa": "Preparación del lanzamiento",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "planificacion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3: Touching the Face of the Moon",
+          "editor": "Drew Ex Machina (A. LePage)",
+          "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 16,
+      "id": "sur016"
+    },
+    {
+      "fecha_inicio": "1967-04-17",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Despegue del Atlas-Centaur AC-12 desde LC-36B",
+      "detalle": "El Atlas-Centaur AC-12 (Atlas D n.º 292, Centaur D) despegó del complejo 36B de Cabo Cañaveral con la sonda Surveyor 3. La fuente no menciona retrasos en la cuenta atrás.",
+      "datos_clave": [
+        "07:05:01 UT (2:05:01 EST según NSSDC)",
+        "Masa al lanzamiento: 1026 kg (NSSDC)"
+      ],
+      "etapa": "Lanzamiento",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "lanzamiento",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Hora local: NSSDC dice 2:05:01 EST y LePage 3:05:01 EST (probable EDT); masa: NSSDC 1026 kg vs NASA Science ~997,9 kg. No se encontró fuente de un retraso real en la cuenta atrás (hueco).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3: Touching the Face of the Moon",
+          "editor": "Drew Ex Machina (A. LePage)",
+          "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 17,
+      "id": "sur017"
+    },
+    {
+      "fecha_inicio": "1967-04-17",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Primera ignición del Centaur y órbita de estacionamiento",
+      "detalle": "Tras separarse el Atlas, el Centaur encendió sus motores RL-10 unos 10 s después y quemó unos 340 s para dejar la nave en una órbita terrestre de espera casi circular.",
+      "datos_clave": [
+        "Quemado ~5 min / 340 s",
+        "Órbita 163 x 174 km (LePage); 167 km circular (NSSDC)",
+        "Inclinación 30,0°"
+      ],
+      "etapa": "Ascenso a órbita terrestre",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "lanzamiento",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "NSSDC da 167 km circular; LePage 163 x 174 km: compatibles pero con distinto detalle.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3: Touching the Face of the Moon",
+          "editor": "Drew Ex Machina (A. LePage)",
+          "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 18,
+      "id": "sur018"
+    },
+    {
+      "fecha_inicio": "1967-04-17",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Segunda ignición del Centaur: inyección hacia la Luna",
+      "detalle": "Tras una costa de 22 min 9 s, el Centaur se reencendió unos 111 s y puso a Surveyor 3 en trayectoria lunar. Fue un vuelo operativo de Surveyor con reencendido del Centaur.",
+      "datos_clave": [
+        "Costa: 22 min 9 s",
+        "Segunda quema: 1 min 51,3 s, a las 07:36:58 UT",
+        "Órbita geocéntrica de la sonda: 169 x 497 393 km"
+      ],
+      "etapa": "Inyección translunar",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "viaje",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3: Touching the Face of the Moon",
+          "editor": "Drew Ex Machina (A. LePage)",
+          "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 essay",
+          "editor": "Honeysuckle Creek (H. Lindsay)",
+          "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 19,
+      "id": "sur019"
+    },
+    {
+      "fecha_inicio": "1967-04-17",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": "GET ~0 h 35 min",
+      "titulo": "Separación del Centaur y despliegue solar",
+      "detalle": "La sonda se separó del Centaur a las 07:39:54 UT; el Centaur venteó propelente residual para alejarse. Hacia las 07:48 UT se desplegó el panel solar y la adquisición del Sol tardó unos 7 minutos.",
+      "datos_clave": [
+        "Separación 07:39:54 UT",
+        "Panel solar desplegado ~07:48 UT",
+        "Centaur: órbita 167 x 353 419 km"
+      ],
+      "etapa": "Crucero inicial",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "viaje",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3: Touching the Face of the Moon",
+          "editor": "Drew Ex Machina (A. LePage)",
+          "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 essay",
+          "editor": "Honeysuckle Creek (H. Lindsay)",
+          "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 20,
+      "id": "sur020"
+    },
+    {
+      "fecha_inicio": "1967-04-17",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Primeros contactos de seguimiento: Carnarvon y Tidbinbilla",
+      "detalle": "Carnarvon (Australia Occidental) adquirió la nave a las 07:48:01 UT con telemetría débil por distancia e interferencia de señales DME del aeropuerto local; el radar en banda C dio 68 min 20 s de seguimiento. Tidbinbilla (DSS-42) hizo la primera adquisición bidireccional a las 08:01:50 UT.",
+      "datos_clave": [
+        "Carnarvon 07:48:01 UT",
+        "Tidbinbilla adquisición 07:55:42 UT; bidireccional 08:01:50 UT",
+        "Enlace Bell Modem a 550 bps extendió 10 min 49 s"
+      ],
+      "etapa": "Crucero inicial",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "problema",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 essay",
+          "editor": "Honeysuckle Creek (H. Lindsay)",
+          "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 21,
+      "id": "sur021"
+    },
+    {
+      "fecha_inicio": "1967-04-17",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": "GET ~9 h 23 min",
+      "titulo": "Canopus localizado automáticamente por primera vez",
+      "detalle": "A las 16:27:51 UT el sensor de estrella halló Canopus, la referencia de orientación. Fue la primera vez que se adquirió de forma automática en una Surveyor; antes, la señal de Canopus superaba el umbral de bloqueo automático.",
+      "datos_clave": [
+        "16:27:51 UT del 17 abr 1967",
+        "Primera adquisición automática de Canopus"
+      ],
+      "etapa": "Crucero",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "solucion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "Fuente única comunitaria (ensayo de Honeysuckle Creek); NTRS mencionaba el problema de nivel de señal pero no se abrió el documento completo.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 essay",
+          "editor": "Honeysuckle Creek (H. Lindsay)",
+          "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 22,
+      "id": "sur022"
+    },
+    {
+      "fecha_inicio": "1967-04-18",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": "GET ~21 h 52 min",
+      "titulo": "Corrección de rumbo hacia el punto de aterrizaje",
+      "detalle": "Una maniobra a mitad de camino acercó la nave al punto elegido y redujo la elipse de objetivo a 15,1 x 10,6 km (antes un círculo de unos 30 km). La nueva diana fue 2,92° S, 23,25° O, y el tránsito duró casi 65 horas.",
+      "datos_clave": [
+        "Quema de 4,278 s a las 04:57:24 UT del 18 abr",
+        "Delta-v 4,2 m/s",
+        "Elipse 15,1 x 10,6 km",
+        "Tránsito ~65 h"
+      ],
+      "etapa": "Crucero",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "viaje",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Momento de la corrección: NSSDC 21,9 h tras el despegue, LePage 21 h 41 min tras la inyección; cifras cercanas pero no idénticas. NASA Science no menciona la corrección.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3: Touching the Face of the Moon",
+          "editor": "Drew Ex Machina (A. LePage)",
+          "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 essay",
+          "editor": "Honeysuckle Creek (H. Lindsay)",
+          "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 23,
+      "id": "sur023"
+    },
+    {
+      "fecha_inicio": "1967-04-20",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": "Retrocohete a las 00:01:06 UT",
+      "titulo": "Encendido del retrocohete principal a 76 km de altura",
+      "detalle": "Poco antes del alunizaje, el radar marcador de altitud disparó el retrocohete principal para el frenado primario. La nave descendía a 2626 m/s. Al agotarse el retrocohete, este y el radar marcador se soltaron y quedaron activos el radar Doppler y el altímetro para guiar los motores vernier.",
+      "datos_clave": [
+        "Ignición: 00:01:06 UT del 20 abr 1967",
+        "Altura: 76 km",
+        "Velocidad: 2626 m/s",
+        "Tras el corte la nave iba a 137 m/s"
+      ],
+      "etapa": "Descenso y alunizaje",
+      "fase": "aterrizaje",
+      "categoria": "aterrizaje",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 24,
+      "id": "sur024"
+    },
+    {
+      "fecha_inicio": "1967-04-20",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El radar pierde el enlace por reflejos del terreno",
+      "detalle": "Unos segundos antes del contacto, los radares perdieron el enlace, al parecer por intensos reflejos centelleantes del sitio. El sistema de guiado pasó automáticamente a modo inercial. NASA lo resume diciendo que rocas muy reflectantes confundieron el radar de descenso.",
+      "datos_clave": [
+        "Pérdida de enlace de los radares segundos antes del toque",
+        "Cambio automático a guiado inercial",
+        "Causa atribuida a reflejos centelleantes / rocas reflectantes"
+      ],
+      "etapa": "Descenso y alunizaje",
+      "fase": "aterrizaje",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Cita NASA: \"Highly reflective rocks confused the lander's descent radar.\" NSSDC dice 'apparently' (al parecer): causa no cerrada.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 25,
+      "id": "sur025"
+    },
+    {
+      "fecha_inicio": "1967-04-20",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Los motores no se apagan: la nave rebota dos veces",
+      "detalle": "El motor no se cortó a la altura prevista (unos 4,3 m) y los vernier siguieron empujando tras el primer contacto, de modo que la nave volvió a despegar de la superficie. Rebotó dos veces antes de posarse al tercer contacto.",
+      "datos_clave": [
+        "Primer toque: 00:04:17 UT",
+        "Toque final: 00:04:53 UT",
+        "Rebotes de unos 10 m y 3 m (NASA Science)",
+        "Distancias entre toques: unos 20 m y 11 m (NSSDC)"
+      ],
+      "etapa": "Descenso y alunizaje",
+      "fase": "aterrizaje",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "NASA Science da alturas de rebote (10 m y 3 m); NSSDC da distancias horizontales entre toques (20 m y 11 m). Son magnitudes distintas, no necesariamente contradictorias, pero no se contrastaron con el informe JPL 32-1177 (solo extracto de búsqueda).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor III Mission Report (JPL TR 32-1177)",
+          "editor": "NASA ALSJ / JPL",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a12/Surveyor-III-MIssionRpt1967028267.pdf",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 26,
+      "id": "sur026"
+    },
+    {
+      "fecha_inicio": "1967-04-20",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Corte de motores por comando desde la Tierra",
+      "detalle": "Como el sistema automático no apagó los vernier, se envió una orden de corte desde la Tierra 34 segundos después del primer contacto. La nave quedó en reposo tras el tercer toque, deslizándose unos 30 cm.",
+      "datos_clave": [
+        "Orden de corte: 34 s tras el toque inicial",
+        "Toque final: 00:04:53 UT",
+        "Deslizamiento final: unos 30 cm"
+      ],
+      "etapa": "Descenso y alunizaje",
+      "fase": "aterrizaje",
+      "categoria": "solucion",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 27,
+      "id": "sur027"
+    },
+    {
+      "fecha_inicio": "1967-04-20",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Sitio final: un cráter suave de 200 m en Oceanus Procellarum",
+      "detalle": "La nave quedó en el sureste de Oceanus Procellarum, dentro de un cráter suavizado de unos 200 m, a unos 370 km al sur del cráter Copérnico, sobre una pendiente de 14 grados. Las coordenadas precisas se obtuvieron después con imágenes del Lunar Reconnaissance Orbiter.",
+      "datos_clave": [
+        "3,0162 S, 336,582 E (LRO)",
+        "Cráter de ~200 m",
+        "~370 km al sur de Copérnico",
+        "Pendiente de 14 grados",
+        "NASA Science: 3 S, 23,41 O"
+      ],
+      "etapa": "Descenso y alunizaje",
+      "fase": "aterrizaje",
+      "categoria": "aterrizaje",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Las coordenadas de NASA Science (23,41 O = 336,59 E) concuerdan con las de LRO dentro del redondeo. NASA Science no menciona el cráter; lo aporta NSSDC.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 28,
+      "id": "sur028"
+    },
+    {
+      "fecha_inicio": "1967-04-20",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Llegan las primeras imágenes de TV en menos de una hora",
+      "detalle": "Menos de una hora después del alunizaje empezó la transmisión de la primera de 6326 fotos de televisión. La cámara tardaba unos 20 segundos en enviar una imagen de 200 líneas y también podía dar imágenes digitales de 600 líneas.",
+      "datos_clave": [
+        "6326 imágenes en total",
+        "~20 s por imagen de 200 líneas",
+        "Modo digital de 600 líneas"
+      ],
+      "etapa": "Primeros días en la superficie",
+      "fase": "operaciones",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 29,
+      "id": "sur029"
+    },
+    {
+      "fecha_inicio": "1967-04-20",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Destello en las fotos: espejo de la cámara con polvo",
+      "detalle": "Algunas imágenes mostraron un deslumbramiento excesivo. Se atribuyó a polvo o erosión sobre el espejo de la cámara, causado por el funcionamiento de los motores durante el aterrizaje.",
+      "datos_clave": [
+        "Causa atribuida: polvo/erosión en el espejo",
+        "Origen: motores durante el toque"
+      ],
+      "etapa": "Estado de la nave",
+      "fase": "operaciones",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 30,
+      "id": "sur030"
+    },
+    {
+      "fecha_inicio": "1967-04-20",
+      "fecha_fin": "1967-05-03",
+      "precision_fecha": "rango",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Total de fotos de TV: 6.326 o 6.315",
+      "detalle": "La cámara de Surveyor 3 envió más de 6.300 imágenes entre el alunizaje y el atardecer lunar. NASA Science y NSSDC dan 6.326; el informe preliminar SP-146 y Wikipedia dan 6.315.",
+      "datos_clave": [
+        "6.326 imágenes (NASA Science, NSSDC)",
+        "6.315 imágenes (SP-146, Wikipedia)"
+      ],
+      "etapa": "Fotografías de TV",
+      "fase": "operaciones",
+      "categoria": "operacion",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Discrepancia 6.326 vs 6.315 entre fuentes oficiales; no resuelta.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor III: A Preliminary Report (NASA SP-146)",
+          "editor": "NASA NTRS",
+          "url": "https://ntrs.nasa.gov/citations/19670023253",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 31,
+      "id": "sur031"
+    },
+    {
+      "fecha_inicio": "1967-04-22",
+      "fecha_fin": null,
+      "precision_fecha": "aproximada",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Primer uso de la pala excavadora dos días después",
+      "detalle": "La pala superficial se usó por primera vez unos dos días tras el alunizaje. Alcanzaba 1,5 m desde la nave y cavaba hasta 18 cm. Con órdenes de la Tierra hizo cuatro zanjas, cuatro pruebas de carga y trece de impacto; el suelo se parecía a arena húmeda, con unos 98 kPa de resistencia.",
+      "datos_clave": [
+        "Alcance 1,5 m; profundidad hasta 18 cm",
+        "4 zanjas, 4 pruebas de carga, 13 de impacto",
+        "Resistencia ~98 kPa (10 psi)",
+        "Operación total de la pala: 18 h 22 min"
+      ],
+      "etapa": "Primeros días en la superficie",
+      "fase": "operaciones",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "La fecha (22 abr) se deduce de 'dos días después' (NSSDC); no se encontró fecha exacta.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "thelivingmoon.com",
+          "url": "https://thelivingmoon.com/43ancients/02files/Surveyor_03.html",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 32,
+      "id": "sur032"
+    },
+    {
+      "fecha_inicio": "1967-04-22",
+      "fecha_fin": "1967-05-03",
+      "precision_fecha": "rango",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Balance del brazo: 4 zanjas y 18 h 22 min de operación",
+      "detalle": "A lo largo de la misión el sampler cavó cuatro zanjas de hasta unos 18 cm de profundidad y realizó ensayos de carga e impacto sobre el suelo. En total trabajó 18 horas y 22 minutos.",
+      "datos_clave": [
+        "4 zanjas",
+        "Profundidad hasta 18 cm",
+        "18 h 22 min de operación total"
+      ],
+      "etapa": "Pruebas del brazo excavador",
+      "fase": "operaciones",
+      "categoria": "pruebas",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Fechas de inicio y fin del rango son aproximadas (NSSDC y NASA no dan días concretos).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 33,
+      "id": "sur033"
+    },
+    {
+      "fecha_inicio": "1967-04-24",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Eclipse de Sol por la Tierra visto desde la Luna",
+      "detalle": "Gracias a que la nave quedó inclinada, la cámara pudo fotografiar un eclipse de Sol producido por la Tierra, algo que nunca se había observado desde la superficie lunar. También se registraron medidas térmicas asociadas.",
+      "datos_clave": [
+        "Primer eclipse solar fotografiado desde la Luna",
+        "Fecha 24 abr 1967 según Wikipedia (citando NSSDC)",
+        "Medidas térmicas durante el evento"
+      ],
+      "etapa": "Observaciones científicas",
+      "fase": "operaciones",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "La fecha 24 abr viene de Wikipedia y de un extracto de búsqueda de un informe JPL; la página NSSDC abierta no da fecha. Verificar con el informe original.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor III: A Preliminary Report (NASA SP-146)",
+          "editor": "NASA NTRS",
+          "url": "https://ntrs.nasa.gov/citations/19670023253",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 34,
+      "id": "sur034"
+    },
+    {
+      "fecha_inicio": "1967-05-03",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Anochecer lunar: la nave se apaga",
+      "detalle": "Las operaciones continuaron hasta pasado el ocaso local del 3 de mayo de 1967. Sin luz, los paneles solares dejaron de generar energía y la nave se apagó al comenzar la primera noche lunar.",
+      "datos_clave": [
+        "Ocaso local: 3 may 1967",
+        "Paneles solares sin producción eléctrica",
+        "Noche lunar de ~14 días terrestres"
+      ],
+      "etapa": "Anochecer lunar",
+      "fase": "operaciones",
+      "categoria": "operacion",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 35,
+      "id": "sur035"
+    },
+    {
+      "fecha_inicio": "1967-05-04",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Último contacto y noche sin despertar",
+      "detalle": "Los últimos datos llegaron el 4 de mayo de 1967 a las 00:04 UT, ya iniciada la noche. Al llegar el siguiente amanecer lunar la nave no pudo reactivarse, probablemente por el frío extremo, a diferencia de Surveyor 1.",
+      "datos_clave": [
+        "Último dato: 4 may 1967, 00:04 UT",
+        "Sin reactivación tras ~336 h de noche",
+        "Causa probable: frío extremo (fuente comunitaria)"
+      ],
+      "etapa": "Intentos de reactivación",
+      "fase": "fin_de_mision",
+      "categoria": "fin_de_mision",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Ninguna fuente abierta describe fechas ni comandos concretos de intentos de reactivación: hueco. La causa 'frío extremo' viene de Wikipedia (cita a Krebs).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 36,
+      "id": "sur036"
+    },
+    {
+      "fecha_inicio": "1967-05-04",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Balance de Surveyor 3: 6.326 fotos y 18 h 22 min de brazo excavador",
+      "detalle": "Al cerrar la misión, la cámara había enviado 6.326 imágenes y el muestreador de superficie había trabajado 18 horas y 22 minutos, cavando zanjas de hasta 18 cm. Esos datos sobre la mecánica del suelo lunar ayudaron a preparar los aterrizajes tripulados de Apollo.",
+      "datos_clave": [
+        "6.326 imágenes",
+        "18 h 22 min de operación del muestreador",
+        "Zanjas de hasta 18 cm de profundidad",
+        "Brillo excesivo en algunas imágenes atribuido a polvo o erosión del espejo por el motor en el toque"
+      ],
+      "etapa": "Fin de la misión",
+      "fase": "fin_de_mision",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "La conexión explícita con las conclusiones para Apollo no aparece en la fuente abierta; se deja solo como contexto del objetivo del programa.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 37,
+      "id": "sur037"
+    },
+    {
+      "fecha_inicio": "1969",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Apollo 12 elige el Sitio 7 junto a Surveyor 3",
+      "detalle": "Los planificadores escogieron el Sitio 7 en Oceanus Procellarum en parte porque Surveyor 3 ofrecía un blanco de navegación para un aterrizaje de precisión, aunque el terreno era más accidentado que otros candidatos. Se fijó el Sitio 5 como respaldo para una ventana de lanzamiento posterior.",
+      "datos_clave": [
+        "Sitio 7, Oceanus Procellarum",
+        "Surveyor 3 en 2,94° S, 23,34° O",
+        "Respaldo: Sitio 5"
+      ],
+      "etapa": "Visita de Apollo 12",
+      "fase": "legado",
+      "categoria": "planificacion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "Fuente secundaria (blog de historia espacial); el año/fecha de la decisión no se verificó en documento primario.",
+      "fuentes": [
+        {
+          "titulo": "The Apollo 12 Visit to Surveyor 3: A Preview of Space Archaeology",
+          "editor": "Drew Ex Machina",
+          "url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 38,
+      "id": "sur038"
+    },
+    {
+      "fecha_inicio": "1969-11-19",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Intrepid aluniza a unos 155-180 m de Surveyor 3",
+      "detalle": "El módulo lunar de Apollo 12, con Conrad y Bean, alunizó junto al cráter Surveyor, a pocos cientos de metros de la nave inactiva. Fue una demostración de aterrizaje de precisión tras el viaje que había empezado el 14 nov 1969.",
+      "datos_clave": [
+        "Distancia: ~155 m (LRO/NASA) o ~180 m (NASA Science, NSSDC)",
+        "Lanzamiento Apollo 12: 14 nov 1969",
+        "Aterrizaje: 19 nov 1969"
+      ],
+      "etapa": "Visita de Apollo 12",
+      "fase": "legado",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Las fuentes discrepan: NASA Science y NSSDC dan ~180 m (197 yardas); la nota de LRO de NASA da ~155 m (170 yardas). NASA Science fecha el aterrizaje el 18 nov (hora de EE. UU.), NSSDC y otras el 19 nov (UTC).",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/mission/surveyor-3/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "LRO looks at Apollo 12 and Surveyor 3 landing sites",
+          "editor": "NASA",
+          "url": "https://www.nasa.gov/missions/lunar-reconnaissance-orbiter-looks-at-apollo-12-surveyor-3-landing-sites/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 39,
+      "id": "sur039"
+    },
+    {
+      "fecha_inicio": "1969-11-20",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Conrad y Bean cortan piezas de Surveyor 3 en la segunda caminata",
+      "detalle": "Durante la segunda actividad extravehicular, Conrad usó cortadores de pernos para retirar la cámara de TV, un tramo de su cableado, un tubo de aluminio y la pala del brazo muestreador. Pasaron unos 33 minutos en la nave y recuperaron unos 10 kg de piezas para estudiarlas en la Tierra.",
+      "datos_clave": [
+        "~10 kg de piezas",
+        "~33 minutos en Surveyor 3",
+        "Cámara de TV, pala del muestreador, tubo de aluminio sin pintar, tubo con pintura blanca inorgánica, cable envuelto en plástico aluminizado",
+        "EVA 2: 20 nov 1969"
+      ],
+      "etapa": "Visita de Apollo 12",
+      "fase": "legado",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "NASA Science sitúa la caminata el 19 nov (fecha de EE. UU.); NSSDC y collectSPACE, el 20 nov. La duración de 33 min proviene de una fuente secundaria.",
+      "fuentes": [
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Apollo 12 Surveyor parts, 50 years on",
+          "editor": "collectSPACE",
+          "url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "The Apollo 12 Visit to Surveyor 3",
+          "editor": "Drew Ex Machina",
+          "url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 40,
+      "id": "sur040"
+    },
+    {
+      "fecha_inicio": "1970",
+      "fecha_fin": "2011",
+      "precision_fecha": "rango",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Streptococcus mitis en la cámara: hallazgo y refutación",
+      "detalle": "Se aisló Streptococcus mitis de la espuma interior de la cámara devuelta, lo que sugería que sobrevivió unos dos años y medio en la Luna. Estudios posteriores, entre ellos uno de 2011 de Rummel, Allton y Morrison, concluyeron que lo más probable es que fuera contaminación en la Tierra durante la inspección, con procedimientos de sala limpia deficientes y la cámara devuelta en una bolsa de nailon.",
+      "datos_clave": [
+        "Ninguna bacteria hallada en la muestra de cable",
+        "Cámara traída en bolsa de nailon, no en contenedor sellado",
+        "La prueba no puede repetirse: las piezas se reexpusieron al ambiente terrestre"
+      ],
+      "etapa": "Estudio de las piezas",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "Hallazgo original frente a revisión posterior: la refutación proviene de resúmenes secundarios (Space.com solo extracto de búsqueda); no se leyó el artículo de 2011 completo.",
+      "fuentes": [
+        {
+          "titulo": "Moon Microbe Mystery Finally Solved",
+          "editor": "Space.com",
+          "url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        },
+        {
+          "titulo": "Apollo 12 Surveyor parts, 50 years on",
+          "editor": "collectSPACE",
+          "url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "The Apollo 12 Visit to Surveyor 3",
+          "editor": "Drew Ex Machina",
+          "url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 41,
+      "id": "sur041"
+    },
+    {
+      "fecha_inicio": "1970-04",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Estudio en la Tierra de las piezas expuestas 31 meses a la Luna",
+      "detalle": "Hughes Aircraft, constructora de Surveyor, coordinó unos 36 estudios con 80 investigadores. Los componentes estaban en muy buen estado tras 32 ciclos día-noche lunares. La mayor parte del polvo llegó durante el propio aterrizaje de Surveyor, aunque hay indicios de que el aterrizaje de Apollo 12 también sopló material sobre la nave.",
+      "datos_clave": [
+        "36 estudios",
+        "80 investigadores",
+        "32 ciclos día-noche lunares",
+        "Informe del gerente Benjamin Milwitzky, 1971"
+      ],
+      "etapa": "Estudio de las piezas",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "Abril de 1970 es la fecha del examen de la cámara según una fuente secundaria; el informe de 1971 es de collectSPACE.",
+      "fuentes": [
+        {
+          "titulo": "The Apollo 12 Visit to Surveyor 3",
+          "editor": "Drew Ex Machina",
+          "url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Apollo 12 Surveyor parts, 50 years on",
+          "editor": "collectSPACE",
+          "url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 42,
+      "id": "sur042"
+    },
+    {
+      "fecha_inicio": "2009-09",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "LRO fotografía Surveyor 3 y el sitio de Apollo 12",
+      "detalle": "La cámara LROC del Lunar Reconnaissance Orbiter captó el descensor Intrepid, el paquete ALSEP, Surveyor 3 y las huellas de los astronautas en Oceanus Procellarum. Comparada con una imagen de Lunar Orbiter 3, el área aparece más brillante por el efecto del escape del motor de descenso.",
+      "datos_clave": [
+        "Imagen de 824 m de ancho (primera publicación)",
+        "Pareja con Lunar Orbiter 3 (LO3-154-H2)",
+        "Crédito: NASA/GSFC/Arizona State University"
+      ],
+      "etapa": "Legado",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Fecha (sept 2009) basada en extracto de búsqueda (URL phys.org 2009-09); la nota de NASA no da fecha de captura.",
+      "fuentes": [
+        {
+          "titulo": "LRO looks at Apollo 12 and Surveyor 3 landing sites",
+          "editor": "NASA",
+          "url": "https://www.nasa.gov/missions/lunar-reconnaissance-orbiter-looks-at-apollo-12-surveyor-3-landing-sites/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Apollo 12 and Surveyor 3 (LRO)",
+          "editor": "Phys.org",
+          "url": "https://phys.org/news/2009-09-apollo-surveyor.pdf",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 43,
+      "id": "sur043"
+    },
+    {
+      "fecha_inicio": "2019-11-22",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Dónde están hoy las piezas de Surveyor 3",
+      "detalle": "La cámara de TV, entregada a William Pickering al retirarse como director de JPL en 1976, está prestada por NASA al Museo Nacional del Aire y el Espacio. La pala se halla en el Cosmosphere de Kansas, un fragmento en JPL, la cubierta de la caja de engranajes en la sede de NASA y la rueda de filtros de color en manos de la familia Cortright.",
+      "datos_clave": [
+        "Cámara: Smithsonian NASM (en préstamo)",
+        "Pala: Cosmosphere, Hutchinson, Kansas",
+        "Fragmento de pala: JPL, Pasadena",
+        "Cubierta de caja de engranajes: NASA HQ, devuelta tras la muerte de John Naugle (2013)"
+      ],
+      "etapa": "Legado",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Estado al 22 nov 2019 según collectSPACE. NSSDC dice que la cámara está expuesta en el Smithsonian; collectSPACE dice que estaba almacenada en préstamo y volvería a exhibirse hacia 2022. Estado actual sin verificar.",
+      "fuentes": [
+        {
+          "titulo": "Apollo 12 Surveyor parts, 50 years on",
+          "editor": "collectSPACE",
+          "url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Surveyor 3 (1967-035A)",
+          "editor": "NASA NSSDC",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 44,
+      "id": "sur044"
+    }
+  ],
+  "fuentes_no_citadas_en_eventos": [],
+  "indice_fuentes": [
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "titulo": "Surveyor 3 (1967-035A)",
+      "editor": "NASA NSSDCA",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur001",
+        "sur011",
+        "sur014",
+        "sur017",
+        "sur018",
+        "sur019",
+        "sur023",
+        "sur024",
+        "sur025",
+        "sur026",
+        "sur027",
+        "sur028",
+        "sur029",
+        "sur030",
+        "sur032",
+        "sur033",
+        "sur034",
+        "sur035",
+        "sur036",
+        "sur037",
+        "sur039",
+        "sur040",
+        "sur044"
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/mission/surveyor-3/",
+      "titulo": "Surveyor 3",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur012",
+        "sur013",
+        "sur017",
+        "sur025",
+        "sur026",
+        "sur028",
+        "sur029",
+        "sur031",
+        "sur032",
+        "sur033",
+        "sur036",
+        "sur039"
+      ]
+    },
+    {
+      "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "titulo": "Surveyor 1: America's first lunar landing",
+      "editor": "Drew Ex Machina",
+      "tipo": "comunitaria",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur001",
+        "sur002",
+        "sur003",
+        "sur004",
+        "sur005",
+        "sur006",
+        "sur007",
+        "sur008",
+        "sur010"
+      ]
+    },
+    {
+      "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+      "titulo": "Surveyor 3: Touching the Face of the Moon",
+      "editor": "Drew Ex Machina (A. LePage)",
+      "tipo": "libro/medio",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur016",
+        "sur017",
+        "sur018",
+        "sur019",
+        "sur020",
+        "sur023"
+      ]
+    },
+    {
+      "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+      "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+      "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+      "tipo": "libro/medio",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur003",
+        "sur005",
+        "sur008",
+        "sur009",
+        "sur010"
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "titulo": "Surveyor 3",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur013",
+        "sur015",
+        "sur034",
+        "sur035",
+        "sur036"
+      ]
+    },
+    {
+      "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+      "titulo": "Surveyor 3 essay",
+      "editor": "Honeysuckle Creek (H. Lindsay)",
+      "tipo": "comunitaria",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur019",
+        "sur020",
+        "sur021",
+        "sur022",
+        "sur023"
+      ]
+    },
+    {
+      "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+      "titulo": "Apollo Expeditions to the Moon, cap. 5",
+      "editor": "NASA History (SP-350)",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur001",
+        "sur003",
+        "sur004",
+        "sur007",
+        "sur009"
+      ]
+    },
+    {
+      "url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "titulo": "The Apollo 12 Visit to Surveyor 3: A Preview of Space Archaeology",
+      "editor": "Drew Ex Machina",
+      "tipo": "libro/medio",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur038",
+        "sur040",
+        "sur041",
+        "sur042"
+      ]
+    },
+    {
+      "url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+      "titulo": "Apollo 12 Surveyor parts, 50 years on",
+      "editor": "collectSPACE",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur040",
+        "sur041",
+        "sur042",
+        "sur044"
+      ]
+    },
+    {
+      "url": "https://ntrs.nasa.gov/citations/19670023253",
+      "titulo": "Surveyor III: A Preliminary Report (NASA SP-146)",
+      "editor": "NASA NTRS",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur031",
+        "sur034"
+      ]
+    },
+    {
+      "url": "https://www.nasa.gov/missions/lunar-reconnaissance-orbiter-looks-at-apollo-12-surveyor-3-landing-sites/",
+      "titulo": "LRO looks at Apollo 12 and Surveyor 3 landing sites",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur039",
+        "sur043"
+      ]
+    },
+    {
+      "url": "https://ntrs.nasa.gov/api/citations/19690074497/downloads/19690074497.pdf",
+      "titulo": "Surveyor 3 (informe JPL en NTRS 19690074497)",
+      "editor": "NASA NTRS",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "sur012"
+      ]
+    },
+    {
+      "url": "https://ntrs.nasa.gov/citations/19670023255",
+      "titulo": "Soil Mechanics Surface Sampler on Surveyor III (Scott, Roberson, Clary)",
+      "editor": "NASA NTRS",
+      "tipo": "científica",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "sur015"
+      ]
+    },
+    {
+      "url": "https://phys.org/news/2009-09-apollo-surveyor.pdf",
+      "titulo": "Apollo 12 and Surveyor 3 (LRO)",
+      "editor": "Phys.org",
+      "tipo": "prensa",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "sur043"
+      ]
+    },
+    {
+      "url": "https://resolver.caltech.edu/CaltechAUTHORS:20141107-110442777",
+      "titulo": "Soil mechanics surface sampler",
+      "editor": "Caltech (CaltechAUTHORS)",
+      "tipo": "científica",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "sur011"
+      ]
+    },
+    {
+      "url": "https://thelivingmoon.com/43ancients/02files/Surveyor_03.html",
+      "titulo": "Surveyor 3",
+      "editor": "thelivingmoon.com",
+      "tipo": "comunitaria",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "sur032"
+      ]
+    },
+    {
+      "url": "https://www.airandspace.si.edu/es/collection-objects/soil-sampler-lunar-lander-surveyor/nasm_A19700123000",
+      "titulo": "Soil Surface Sampler",
+      "editor": "Smithsonian NASM",
+      "tipo": "libro/medio",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "sur011"
+      ]
+    },
+    {
+      "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a12/Surveyor-III-MIssionRpt1967028267.pdf",
+      "titulo": "Surveyor III Mission Report (JPL TR 32-1177)",
+      "editor": "NASA ALSJ / JPL",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "sur026"
+      ]
+    },
+    {
+      "url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "titulo": "Moon Microbe Mystery Finally Solved",
+      "editor": "Space.com",
+      "tipo": "prensa",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "sur041"
+      ]
+    }
+  ]
+}
