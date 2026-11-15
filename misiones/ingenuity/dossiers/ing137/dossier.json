@@ -1,0 +1,175 @@
+{
+  "evento_id": "ing137",
+  "titulo": "NASA presenta el concepto «Mars Chopper», sucesor de Ingenuity (11 dic 2024)",
+  "contexto_ampliado": "El 11 de diciembre de 2024, durante la reunión anual de la Unión Geofísica Americana (AGU) en Washington D.C., Teddy Tzanetos, director del proyecto en el Laboratorio de Propulsión a Chorro (JPL) de la NASA, presentó ante la comunidad científica dos grandes novedades: el concepto de un nuevo helicóptero marciano llamado Mars Chopper y los resultados de la investigación del accidente de Ingenuity.\n\nMars Chopper es un concepto de helicóptero de segunda generación para Marte, con un tamaño aproximado al de un SUV. A diferencia de su predecesor, este vehículo contaría con seis rotores, cada uno equipado con seis aspas, sumando un total de 36 aspas. Según las fuentes consultadas, sería unas 20 veces más pesado que Ingenuity, lo que refleja un salto enorme en escala y ambición.\n\nLas capacidades proyectadas de Mars Chopper superan ampliamente lo que logró Ingenuity: podría transportar hasta 5 kg (11 libras) de instrumentos científicos y recorrer hasta 3 km por cada sol marciano. Esto permitiría a los científicos estudiar grandes extensiones de terreno de forma rápida y detallada, incluyendo zonas donde los rovers no pueden desplazarse con seguridad.\n\nEl diseño es fruto de la colaboración entre el JPL, el Centro de Investigación Ames de la NASA y la empresa AeroVironment Inc. Sin embargo, según el propio JPL, el proyecto se encuentra todavía en «etapas conceptuales y de diseño tempranas», y no se ha anunciado ninguna fecha de lanzamiento ni misión oficial asociada.\n\nEn esa misma presentación, Tzanetos informó sobre el estado actual de Ingenuity. Aunque el accidente durante el vuelo 72 dañó sus rotores y lo dejó permanentemente en tierra, sus sistemas de aviónica, batería y sensores siguen siendo completamente funcionales. Además, Ingenuity dispone de capacidad de almacenamiento suficiente para seguir registrando mediciones e imágenes cada sol marciano durante aproximadamente 20 años más.\n\nEl principal obstáculo para aprovechar esos datos es la comunicación: el rover Perseverance, que actúa como enlace de radio entre Ingenuity y la Tierra, se encontraba a 3 km del helicóptero en diciembre de 2024. El propio Tzanetos estimó que el contacto podría perderse de forma definitiva en el plazo de un mes.\n\nLa investigación del accidente determinó que el sistema de navegación de Ingenuity no pudo rastrear suficientes características en la superficie marciana debido a su textura uniforme y monótona, lo que provocó la pérdida de control. Håvard Grip, el primer piloto de Ingenuity, subrayó la enorme dificultad de la investigación: el lugar del accidente se encuentra a más de 160 millones de kilómetros de la Tierra, sin caja negra, sin testigos y sin posibilidad de inspección directa.\n\nA pesar de todo, el balance de Ingenuity es extraordinario: diseñado originalmente para realizar solo cinco vuelos de prueba, completó 72 vuelos, voló 14 veces más lejos de lo planificado y acumuló un tiempo total de vuelo de dos horas. Fue esa demostración pionera de vuelo en la delgada atmósfera marciana la que hizo posible pensar en conceptos como Mars Chopper.",
+  "datos_reales": [
+    {
+      "afirmacion": "El concepto Mars Chopper fue presentado el 11 de diciembre de 2024 en la reunión anual de la AGU en Washington D.C. por Teddy Tzanetos, director del proyecto en JPL.",
+      "fuente_url": "https://gizmodo.com/nasas-proposed-mars-chopper-is-ingenuity-on-steroids-2000541828",
+      "cita": "Chopper project manager Teddy Tzanetos also presented the concept during a briefing at the annual meeting of the American Geophysical Union in Washington on December 11.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Chopper tiene seis rotores, cada uno con seis aspas, lo que da un total de 36 aspas.",
+      "fuente_url": "https://gizmodo.com/nasas-proposed-mars-chopper-is-ingenuity-on-steroids-2000541828",
+      "cita": "NASA's Mars Chopper, as it's called, is about the same size as an SUV, fitted with six rotors, with each rotor hosting six blades (I already did the math for you, that's a whopping 36 blades).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Chopper es un concepto que se encuentra en etapas conceptuales y de diseño tempranas, sin una fecha de lanzamiento definida.",
+      "fuente_url": "https://interestingengineering.com/space/nasa-plans-suv-sized-mars-helicopter",
+      "cita": "As per NASA's Jet Propulsion Laboratory (JPL), Chopper is currently in \"early conceptual and design stages.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El diseño de Mars Chopper ha sido desarrollado por el JPL, el Centro de Investigación Ames de la NASA y AeroVironment Inc.",
+      "fuente_url": "https://interestingengineering.com/space/nasa-plans-suv-sized-mars-helicopter",
+      "cita": "NASA's JPL, Ames Research Center, and AeroVironment Inc. have collaborated to develop this proposed design.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Chopper es 20 veces más pesado que Ingenuity.",
+      "fuente_url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "cita": "JPL is envisioning a six-rotor concept that is 20 times heavier than Ingenuity and could carry \"several pounds of science equipment and autonomously explore remote Martian locations while traveling up to 2 miles (3 kilometers) in a day,\" according to a JPL statement.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Chopper tiene el tamaño aproximado de un SUV.",
+      "fuente_url": "https://interestingengineering.com/space/nasa-plans-suv-sized-mars-helicopter",
+      "cita": "This proposed Mars Chopper will be a larger helicopter — about the size of an SUV. Furthermore, it would feature six rotors, each equipped with six blades.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Después del accidente, los sistemas de aviónica, batería y sensores de Ingenuity siguen siendo completamente funcionales.",
+      "fuente_url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "cita": "\"We are very proud to report that, even after the hard landing on flight 72, avionics, battery, [and] sensors have all been functional.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity tiene capacidad de almacenamiento para registrar mediciones e imágenes cada sol marciano durante aproximadamente 20 años más.",
+      "fuente_url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "cita": "Tzanetos added that Ingenuity has around 20 years' worth of onboard storage remaining, meaning it can keep taking measurements and images every Martian sol.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Perseverance se encontraba a 3 km (1,8 millas) de Ingenuity en diciembre de 2024, poniendo en riesgo la comunicación con la Tierra.",
+      "fuente_url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "cita": "The Perseverance rover, through which Ingenuity communicates via radio link in order to send its data back to its mission team, is now 1.8 miles (3 km) away from the helicopter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tzanetos estimó que en diciembre de 2024 el contacto con Ingenuity podría perderse de forma permanente en el plazo de un mes.",
+      "fuente_url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "cita": "\"I think it's a good bet that, within the next month, we'll lose contact forever, or until we come back in 20 years with astronauts, or until we turn back for sample return,\" Tzanetos said during the presentation at AGU.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La causa del accidente de Ingenuity fue que el sistema de navegación tenía insuficiente información por la textura uniforme y monótona de la superficie marciana.",
+      "fuente_url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "cita": "JPL has spent months investigating Ingenuity's crash, and determined that the helicopter's navigation systems had too little information to go with due to the monotone, bland texture of the Martian surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Håvard Grip, el primer piloto de Ingenuity, señaló que el lugar del accidente está a más de 160 millones de km de la Tierra y no hay caja negra ni testigos.",
+      "fuente_url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "cita": "\"The accident site itself is about, you know — it's more than 100 million miles [160 million kilometers] away. There's no black box, there are no eyewitnesses. We can't walk up and touch anything, so we have to work with the small pieces of information that we have.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity completó 72 vuelos y voló 14 veces más lejos de lo planificado originalmente, con un tiempo total de vuelo de dos horas.",
+      "fuente_url": "https://gizmodo.com/nasas-proposed-mars-chopper-is-ingenuity-on-steroids-2000541828",
+      "cita": "performing 72 flights, and flying 14 times farther than planned for a total flight time of two hours.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity fue diseñado para hacer solo cinco vuelos de prueba en Marte.",
+      "fuente_url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "cita": "The helicopter was designed to make only five flights on Mars, and ended up making 72.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Chopper podría explorar áreas donde los rovers no pueden viajar de forma segura.",
+      "fuente_url": "https://gizmodo.com/nasas-proposed-mars-chopper-is-ingenuity-on-steroids-2000541828",
+      "cita": "\"Scientists could use Chopper to study large swaths of terrain in detail, quickly – including areas where rovers cannot safely travel,\" NASA explained.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "After accident on Mars, NASA's Ingenuity helicopter could live on as a weather station for 20 years",
+      "url": "https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years",
+      "editor": "Space.com",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "NASA's Proposed Mars 'Chopper' Is Ingenuity on Steroids",
+      "url": "https://gizmodo.com/nasas-proposed-mars-chopper-is-ingenuity-on-steroids-2000541828",
+      "editor": "Gizmodo",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Mars Chopper: NASA works on SUV-sized helicopter after Ingenuity",
+      "url": "https://interestingengineering.com/space/nasa-plans-suv-sized-mars-helicopter",
+      "editor": "Interesting Engineering",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "PIA26375: NASA's Mars Chopper Concept (Rendering, 11 dic 2024)",
+      "url": "https://www.jpl.nasa.gov/images/pia26375-nasas-mars-chopper-concept-rendering/",
+      "editor": "JPL/NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA Performs First Aircraft Accident Investigation on Another World",
+      "url": "https://www.jpl.nasa.gov/news/nasa-performs-first-aircraft-accident-investigation-on-another-world/",
+      "editor": "JPL/NASA",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "La distancia de vuelo diaria de Mars Chopper por sol se expresa de forma ligeramente diferente en millas según la fuente: Space.com dice 'up to 2 miles (3 kilometers) in a day' (https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years), mientras que Gizmodo e Interesting Engineering dicen '1.9 miles (3 kilometers)' (https://gizmodo.com/nasas-proposed-mars-chopper-is-ingenuity-on-steroids-2000541828 y https://interestingengineering.com/space/nasa-plans-suv-sized-mars-helicopter). Ambas coinciden en la cifra en km (3 km), pero difieren en la conversión a millas.",
+    "El evento original describe que Tzanetos dijo que 'Ingenuity pudo ser una estación meteorológica por unos 20 años'. Sin embargo, la cita textual del dato [8] (Space.com: https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years) habla de '20 years' worth of onboard storage remaining' para 'taking measurements and images every Martian sol', sin usar el término 'estación meteorológica' ni especificar que las mediciones sean meteorológicas. La etiqueta de 'estación meteorológica' aparece solo en el título del artículo de Space.com, no en la cita literal aportada."
+  ],
+  "huecos": [
+    "No se pudo acceder al contenido completo de la página oficial de JPL (PIA26375 ni el comunicado de prensa de JPL del 11 de diciembre de 2024), que devolvieron contenido vacío al intentar leerlas.",
+    "No se confirmó el peso exacto en kg o libras de Mars Chopper (solo se sabe que es '20 veces más pesado que Ingenuity').",
+    "No se identificaron por nombre a los 'exintegrantes del equipo de Ingenuity' que participan en el diseño de Mars Chopper, mencionados en el evento original.",
+    "No se pudo confirmar si existe ya un informe técnico (NASA technical report) publicado sobre la investigación del accidente de Ingenuity, ni su URL o número de referencia.",
+    "No se obtuvo información verificable sobre si Ingenuity mantuvo o perdió finalmente el contacto con Perseverance después de diciembre de 2024.",
+    "El relato del borrador afirmaba que Ingenuity 'recorrió más de 17 km' en total, pero ningún dato del dossier respalda esa cifra concreta; se ha eliminado del contexto ampliado.",
+    "El borrador mencionaba una 'animación de 30 segundos' publicada por la NASA mostrando a Mars Chopper en vuelo, pero ningún dato del dossier confirma la existencia o duración de dicha animación.",
+    "El borrador calificaba la investigación del accidente como 'la primera investigación de un accidente de aeronave en otro mundo', pero ninguna cita del dossier respalda literalmente esa frase.",
+    "El borrador indicaba que Ingenuity pesaba 1,8 kg y tenía 'dos rotores coaxiales', pero esas especificaciones no aparecen en ninguna cita del dossier."
+  ],
+  "ideas_visuales": [
+    "Comparación a escala entre Ingenuity (pequeño, dos rotores) y Mars Chopper (tamaño SUV, seis rotores con seis aspas cada uno), mostrando las 36 aspas en detalle.",
+    "Vista cenital de Mars Chopper sobrevolando terreno marciano accidentado donde un rover no podría transitar, con indicación de la distancia de 3 km por sol.",
+    "Diagrama del sistema de comunicación: Ingenuity en tierra con sistemas funcionales (aviónica, batería, sensores señalados), Perseverance a 3 km de distancia y la Tierra al fondo.",
+    "Infografía del terreno uniforme y monótono de Marte que causó el fallo de navegación de Ingenuity, ilustrando la ausencia de puntos de referencia visuales.",
+    "Línea temporal de los logros de Ingenuity: de 5 vuelos planificados a 72 realizados, con dos horas de vuelo total y 14 veces más lejos de lo previsto."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Mars Chopper podría transportar hasta 5 kg (11 libras) de equipamiento científico y recorrer hasta 3 km (1,9 millas) por sol marciano.",
+      "fuente_url": "https://gizmodo.com/nasas-proposed-mars-chopper-is-ingenuity-on-steroids-2000541828",
+      "cita": "The future Mars Chopper could transport science payloads weighing up to 11 pounds (5 kilograms) over distances of 1.9 miles (3 kilometers) per Martian day, or sol.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

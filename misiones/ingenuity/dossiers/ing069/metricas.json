@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.24725370000000002,
+  "turnos": 17,
+  "duracion_s": 139.1,
+  "duracion_api_s": 107.9,
+  "tokens": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 11658,
+    "cache_read_input_tokens": 47804,
+    "output_tokens": 12501,
+    "output_tokens_details": {
+      "thinking_tokens": 4809
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 11658
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1458,
+      "outputTokens": 39,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0016530000000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 9,
+      "outputTokens": 12501,
+      "cacheReadInputTokens": 47804,
+      "cacheCreationInputTokens": 11658,
+      "webSearchRequests": 0,
+      "costUSD": 0.2456007,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 4809,
+      "cacheCreationEphemeral5mInputTokens": 11658,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 8,
+    "buscar_web": 5,
+    "buscar_papers_ntrs": 2,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.29406875,
+    "turnos": 2,
+    "duracion_s": 118.7,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5455,
+        "outputTokens": 41,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.00566,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 9921,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6459,
+        "webSearchRequests": 0,
+        "costUSD": 0.28840875,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 8071,
+        "cacheCreationEphemeral5mInputTokens": 6459,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 21,
+      "datos_despues": 20,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se eliminó el dato [17] porque su cita solo describe la formación geológica del delta sin respaldar la afirmación de que fuera la «nueva zona de operaciones» de Ingenuity tras el vuelo 26. En el relato se eliminaron afirmaciones sin respaldo en los datos (ruta detallada sureste-suroeste-noroeste, mención de Ian Clark, tareas futuras específicas de Ingenuity y la calificación de «primera aeronave e"
+    }
+  },
+  "costo_usd_referencia_total": 0.54132245,
+  "costos": {
+    "total_usd": 0.541323,
+    "por_paso": {
+      "investigacion": 0.247254,
+      "revision": 0.294069
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.007313,
+        "entrada": 6913,
+        "salida": 80,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.245601,
+        "entrada": 9,
+        "salida": 12501,
+        "cache_leida": 47804,
+        "cache_escrita": 11658,
+        "razonamiento": 4809
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.288409,
+        "entrada": 3,
+        "salida": 9921,
+        "cache_leida": 0,
+        "cache_escrita": 6459,
+        "razonamiento": 8071
+      }
+    }
+  }
+}

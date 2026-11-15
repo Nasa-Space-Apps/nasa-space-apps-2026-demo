@@ -1,0 +1,14 @@
+{
+  "id": "ingenuity",
+  "nombre": "Ingenuity",
+  "tipo": "helicóptero",
+  "cuerpo": "Marte",
+  "agencia": "NASA/JPL",
+  "prefijo_eventos": "ing",
+  "publico": "estudiantes de 5.º de secundaria (17 años)",
+  "sol": {
+    "cero": "2021-02-18",
+    "offset": 0
+  },
+  "creada": "2026-11-14"
+}

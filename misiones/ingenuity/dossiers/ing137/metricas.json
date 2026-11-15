@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.1965014,
+  "turnos": 14,
+  "duracion_s": 111.8,
+  "duracion_api_s": 81.6,
+  "tokens": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 8942,
+    "cache_read_input_tokens": 34013,
+    "output_tokens": 10068,
+    "output_tokens_details": {
+      "thinking_tokens": 3472
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8942
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1601,
+      "outputTokens": 24,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001721,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 8,
+      "outputTokens": 10068,
+      "cacheReadInputTokens": 34013,
+      "cacheCreationInputTokens": 8942,
+      "webSearchRequests": 0,
+      "costUSD": 0.19478040000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 3472,
+      "cacheCreationEphemeral5mInputTokens": 8942,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 5,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 6,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.18382275,
+    "turnos": 2,
+    "duracion_s": 68.9,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4759,
+        "outputTokens": 31,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004914,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 5715,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5763,
+        "webSearchRequests": 0,
+        "costUSD": 0.17890875,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 3648,
+        "cacheCreationEphemeral5mInputTokens": 5763,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 16,
+      "datos_despues": 16,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 4,
+      "observaciones": "Se conservaron los 16 datos porque todos tienen citas que respaldan claramente sus afirmaciones. El cambio principal fue depurar el relato narrativo, eliminando cuatro afirmaciones concretas (17 km recorridos, animación de 30 s, «primera investigación de accidente en otro mundo», peso y rotores de Ingenuity) que aparecían en la redacción del borrador pero no estaban respaldadas por ningún dato cit"
+    }
+  },
+  "costo_usd_referencia_total": 0.38032414999999997,
+  "costos": {
+    "total_usd": 0.380324,
+    "por_paso": {
+      "investigacion": 0.196501,
+      "revision": 0.183823
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006635,
+        "entrada": 6360,
+        "salida": 55,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.19478,
+        "entrada": 8,
+        "salida": 10068,
+        "cache_leida": 34013,
+        "cache_escrita": 8942,
+        "razonamiento": 3472
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.178909,
+        "entrada": 3,
+        "salida": 5715,
+        "cache_leida": 0,
+        "cache_escrita": 5763,
+        "razonamiento": 3648
+      }
+    }
+  }
+}

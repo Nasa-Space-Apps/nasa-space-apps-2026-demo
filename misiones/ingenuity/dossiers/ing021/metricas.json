@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.54679405,
+  "turnos": 21,
+  "duracion_s": 222.9,
+  "duracion_api_s": 189.3,
+  "tokens": {
+    "input_tokens": 13,
+    "cache_creation_input_tokens": 45745,
+    "cache_read_input_tokens": 216061,
+    "output_tokens": 20586,
+    "output_tokens_details": {
+      "thinking_tokens": 9251
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 45745
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1418,
+      "outputTokens": 37,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001603,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 13,
+      "outputTokens": 20586,
+      "cacheReadInputTokens": 216061,
+      "cacheCreationInputTokens": 45745,
+      "webSearchRequests": 0,
+      "costUSD": 0.54519105,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 9251,
+      "cacheCreationEphemeral5mInputTokens": 45745,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 4,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 13,
+    "StructuredOutput": 2
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.47567625,
+    "turnos": 2,
+    "duracion_s": 206.5,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 3945,
+        "outputTokens": 37,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.00413,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 17624,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 4949,
+        "webSearchRequests": 0,
+        "costUSD": 0.47154625,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 15787,
+        "cacheCreationEphemeral5mInputTokens": 4949,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 12,
+      "datos_despues": 12,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 3,
+      "huecos_nuevos": 2,
+      "observaciones": "Se conservan los 12 datos porque su núcleo está respaldado por las citas, pero se eliminaron del relato varias afirmaciones del borrador original que excedían lo citado: la fecha del 19 de abril, el nombre «Wright Brothers Field», los «cables» del Skycrane, el despliegue de patas, la fecha del 3 de abril y la distancia de 100 m del rover, entre otras. Las tres contradicciones nuevas señalan casos "
+    }
+  },
+  "costo_usd_referencia_total": 1.0224703000000002,
+  "costos": {
+    "total_usd": 1.02247,
+    "por_paso": {
+      "investigacion": 0.546794,
+      "revision": 0.475676
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.005733,
+        "entrada": 5363,
+        "salida": 74,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.545191,
+        "entrada": 13,
+        "salida": 20586,
+        "cache_leida": 216061,
+        "cache_escrita": 45745,
+        "razonamiento": 9251
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.471546,
+        "entrada": 3,
+        "salida": 17624,
+        "cache_leida": 0,
+        "cache_escrita": 4949,
+        "razonamiento": 15787
+      }
+    }
+  }
+}

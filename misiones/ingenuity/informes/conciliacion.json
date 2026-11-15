@@ -1,0 +1,542 @@
+{
+  "mision": "ingenuity",
+  "generado": "2026-11-15T00:40:23",
+  "eventos": 20,
+  "sin_dossier": [],
+  "fragiles": [
+    "ing018"
+  ],
+  "datos_verificados": 271,
+  "datos_sin_verificar": 27,
+  "filas": [
+    {
+      "titulo": "Una estudiante de 11.º grado de Alabama nombra al helicóptero «Ingenuity»",
+      "verificados": 8,
+      "no_verificados": 7,
+      "fuentes_total": 4,
+      "fuentes_fuertes": 4,
+      "contradicciones": [
+        "El dato [8] afirma que el lanzamiento sería en «julio o agosto de 2020», pero la cita textual de JPL (https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/) solo dice «in July», sin mencionar agosto. El relato corregido usa solo «julio»."
+      ],
+      "huecos": [
+        "No se pudo leer la entrevista (Q&A) directa con Vaneeza Rupani publicada por JPL (la URL https://www.jpl.nasa.gov/news/news.php?feature=7651 devolvió una página vacía); sus respuestas personales sobre su motivación y reacción al ser elegida no están confirmadas desde fuentes primarias.",
+        "No se confirmó si Vaneeza Rupani asistió al lanzamiento de julio de 2020 ni a otros eventos de la NASA relacionados con la misión.",
+        "No se confirmó la fecha exacta en que se anunció el nombre del rover «Perseverance» ganado por Alexander Mather (solo se sabe que fue «en marzo» de 2020, según el artículo de JPL sobre Ingenuity).",
+        "No está confirmado si la propuesta de Rupani figuraba entre los 155 semifinalistas del concurso o si fue recuperada del conjunto completo de las 28.000 propuestas.",
+        "No se hallaron datos sobre el grado académico exacto ni la edad de Vaneeza Rupani al momento del concurso en ninguna fuente oficial leída.",
+        "El relato del borrador afirmaba que el concurso fue «el mayor concurso de nombres en la historia de la agencia», pero ninguna de las fuentes citadas respalda esa afirmación; se eliminó del contexto ampliado.",
+        "Ninguna fuente citada confirma explícitamente que Alexander Mather fuera de Virginia; el dato se infiere solo del título de la URL de NASA (https://www.nasa.gov/press-release/virginia-middle-school-student-earns-honor-of-naming-nasas-next-mars-rover/), no del texto de la cita."
+      ],
+      "fragil": true,
+      "motivos_fragil": [
+        "7 de 15 datos sin verificar"
+      ],
+      "id": "ing018",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "La tela del Flyer 1 a bordo de Ingenuity: de Kitty Hawk a Marte",
+      "verificados": 13,
+      "no_verificados": 4,
+      "fuentes_total": 6,
+      "fuentes_fuertes": 3,
+      "contradicciones": [
+        "DURACIÓN DEL PRIMER VUELO DEL FLYER 1: Smithsonian Magazine (https://www.smithsonianmag.com/smart-news/mars-helicopter-ingenuity-holds-piece-wright-brothers-history-180977381/) afirma 'flew 120 feet for 20 seconds'; sma.nasa.gov (https://sma.nasa.gov/news/articles/newsitem/2021/04/08/ingenuity-helicopter-to-take-flight-in-april) dice 'Orville Wright covered 120 feet in 12 seconds', cifra que también coincide con collectSPACE ('12-second flight'). Las dos fuentes oficiales NASA y collectSPACE coinciden en 12 segundos; Smithsonian parece errar.",
+        "DIMENSIONES EXACTAS DEL TROZO DE TELA: science.nasa.gov (PIA24438, https://science.nasa.gov/photojournal/pride-of-the-west-and-mars/) da '0.5-inch x 0.5-inch (1.3 x 1.3 centimeter)'; sma.nasa.gov (https://sma.nasa.gov/news/articles/newsitem/2021/04/08/ingenuity-helicopter-to-take-flight-in-april) indica '1 centimeter by 1 centimeter by 0.05 centimeter'. La diferencia es de ~1,3 cm vs 1 cm en el lado; ambas son fuentes oficiales NASA pero no coinciden exactamente.",
+        "DESCRIPCIÓN FÍSICA DE LA PIEZA: Space.com y Smithsonian la describen como 'about the size of a postage stamp' (cuadrado); collectSPACE la describe inicialmente como 'strip of muslin... wrapped around a cable' (tira), aunque más adelante usa también el término 'swatch'. La descripción de JPL/science.nasa.gov de 'square' (cuadrado) es la más detallada y autorizada.",
+        "El evento original describe la tela sujeta «con cinta aislante», pero el dato [3] (https://science.nasa.gov/photojournal/swatch-of-wright-brothers-flyer-1-attached-to-mars-helicopter/) especifica «dark orange polymide tape» (cinta de poliimida), un material aeroespacial especializado (tipo Kapton) distinto de la cinta aislante convencional.",
+        "El relato del borrador llama a Amanda Wright Lane y Stephen Wright «bisnieta y bisnieto» (great-grandchildren), pero la cita del dato [16] (https://www.collectspace.com/news/news-032821a-ingenuity-mars-helicopter-wright-flyer-fabric.html) dice textualmente «great grand-niece and nephew», que corresponde a «sobrina bisnieta y sobrino bisnieto» (relación colateral, no descendencia directa). Los hermanos Wright nunca tuvieron hijos, por lo que no pueden tener bisnietos."
+      ],
+      "huecos": [
+        "No se pudo confirmar la fecha exacta en que el equipo del JPL contactó por primera vez al Carillon Historical Park para solicitar la pieza de tela.",
+        "No está disponible el número de sol marciano correspondiente al día del anuncio (23 de marzo de 2021); el campo 'sol' del evento consta como nulo.",
+        "No se pudo verificar cuántas piezas adicionales de la tela del Flyer 1 existen actualmente en colecciones privadas o museos, ni cuántas se subastaron y por cuánto. collectSPACE menciona precios de hasta 275.000 dólares para artefactos del Apollo 11, no para las piezas de tela en general.",
+        "No hay fuente oficial que confirme si la pieza de tela sigue físicamente intacta tras los múltiples vuelos de Ingenuity (el helicóptero completó 72 vuelos antes de dañarse en enero de 2024).",
+        "No se encontró el texto completo del comunicado oficial de NASA del 23 de marzo de 2021 en ninguna URL de jpl.nasa.gov o nasa.gov (las páginas de imágenes JPL devolvieron contenido vacío al leer).",
+        "El umbral específico de 300 esporas por metro cuadrado para Protección Planetaria, incluido en el relato del borrador, no aparece en la cita del dato [7] (https://sma.nasa.gov/news/articles/newsitem/2021/04/08/ingenuity-helicopter-to-take-flight-in-april); la fuente solo confirma esterilización por autoclave para cumplir requisitos de Protección Planetaria, sin dar cifra alguna.",
+        "El borrador narra que un fragmento de la tela voló a la Estación Espacial Internacional en la misión STS-92, pero ningún dato del dossier respalda esta afirmación.",
+        "El dato [4] describe el cordón de fijación como «blanco de poliéster», pero ninguna cita del dossier confirma el color ni el material del cordón: las fuentes solo dicen «cord» sin más detalle.",
+        "Ninguna cita del dossier confirma el cargo exacto de Bob Balaram como «ingeniero jefe» (chief engineer) de Ingenuity; las citas lo mencionan solo por su apellido."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing023",
+      "discutido_en_base": false,
+      "nota_base": "Las fuentes difieren en detalles menores: Space.com habla de un trozo del tamaño de un sello; collectSPACE lo describe como tira envuelta en un cable sin dar medidas. Space.com añade que otras piezas del Flyer viajaron a la Luna en el Apollo 11. La fecha del anuncio es la de la conferencia (23 de marzo de 2021)."
+    },
+    {
+      "titulo": "Vuelo 1 de Ingenuity: Wright Brothers Field — El primer vuelo propulsado en otro planeta (19 de abril de 2021)",
+      "verificados": 17,
+      "no_verificados": 0,
+      "fuentes_total": 4,
+      "fuentes_fuertes": 4,
+      "contradicciones": [
+        "Distancia horizontal del vuelo: el registro oficial del evento (datos_clave) indica 0 m, mientras que la tabla de Wikipedia (datos_wikipedia.distancia_horizontal_m) indica 0,05 m. El PDF oficial del Flight Log de NASA (https://science.nasa.gov/wp-content/uploads/2024/06/ingenuity-helicopter-flight-log.pdf) no pudo ser leído para dirimir la diferencia. La nota de prensa de NASA (https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/) no especifica distancia horizontal, solo menciona altitud y tiempo total.",
+        "El borrador narrativo atribuye a Zurbuchen el anuncio del designador OACI «IGY», pero la cita literal de [9] (https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/) indica que fue Håvard Grip, piloto jefe de Ingenuity, quien hizo ese anuncio.",
+        "El borrador describe la tela del Wright Flyer como «encapsulado en una película de poliimida», pero la cita de [13] (https://science.nasa.gov/photojournal/swatch-of-wright-brothers-flyer-1-attached-to-mars-helicopter/) dice «attached with dark orange polymide tape to a cable extending from the panel», es decir, la cinta de poliimida es el medio de fijación, no una película que encapsula la tela.",
+        "El dato [16] afirma que Ingenuity completó 72 vuelos y que la misión concluyó el 25 de enero de 2024, pero la cita literal proporcionada (https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/) solo menciona 128,8 minutos de vuelo, 17,0 km recorridos y altitud máxima de 24,0 m, sin incluir el número de vuelos ni la fecha de cierre de la misión."
+      ],
+      "huecos": [
+        "No se pudo confirmar con cita literal la rotación de 96° durante el vuelo mencionada en los datos del evento; la nota de prensa oficial solo indica ascenso, hover de 30 s y descenso, sin mencionar la rotación.",
+        "El PDF oficial del Flight Log de NASA (ingenuity-helicopter-flight-log.pdf) no pudo ser descargado ni leído, por lo que no se pudieron verificar directamente los datos tabulados del vuelo 1.",
+        "No se encontró en las fuentes leídas la velocidad de rotación exacta durante el Vuelo 1 (el dato de 2.400 rpm es el máximo de diseño, no necesariamente el usado en el vuelo 1).",
+        "No se confirma en las fuentes leídas el número de sol de Perseverance (58) en que ocurrió el vuelo; la prensa oficial solo menciona 'the 16th sol of its 30-sol flight test window' referido al helicóptero, no al contador de sol de Perseverance.",
+        "El evento original indica la hora UTC del despegue como 07:34 UTC, pero ninguna fuente citada en el dossier proporciona explícitamente la hora en formato UTC; solo se citan EDT y hora solar local marciana.",
+        "El evento original establece una velocidad máxima de suelo de 0 m/s para el vuelo 1, pero ninguna fuente consultada confirma este dato con cita literal.",
+        "El borrador narrativo menciona que Perseverance registró el vuelo con las cámaras Mastcam-Z y Navcam, pero ningún dato del dossier identifica esas cámaras por nombre; la cita de [8] solo dice «chronicled the flight operations with its cameras».",
+        "El borrador menciona que el último vuelo fue el 18 de enero de 2024, pero ninguna cita del dossier respalda esta fecha."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing032",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Primera pérdida de comunicación: Ingenuity falta a su cita con el rover (Sol 427–429, mayo 2022)",
+      "verificados": 11,
+      "no_verificados": 1,
+      "fuentes_total": 5,
+      "fuentes_fuertes": 2,
+      "contradicciones": [
+        "El dato [10] afirma que el umbral de activación de los calentadores se bajó 'de -15 °C a -40 °C', pero la cita de Space.com dice literalmente 'changed the point at which the battery turns on, to minus 40 degrees F (minus 40 degrees C)': no menciona -15 °C como valor original ni habla explícitamente de calentadores sino de la batería. La cifra -15 °C no tiene respaldo en ninguna fuente del dossier.",
+        "El dato [12] afirma que las condiciones difíciles durarían 'hasta alrededor del sol 600', pero la cita del blog de NASA solo dice 'until September/October' sin mencionar el sol 600. Esa equivalencia sol-fecha es una inferencia del investigador, no un dato de la fuente.",
+        "El dato [14] atribuye el blog oficial a 'Teddy Tzanetos, líder del equipo Ingenuity en JPL', pero la cita proporcionada no contiene esa atribución de autoría; solo incluye el texto sobre operar 'far outside our original design limits'.",
+        "El dato [15] afirma contacto diario 'hasta el sol 446', pero la cita del blog de NASA dice 'every sol since' de forma abierta, sin especificar sol 446 como punto final. El dato agrega una fecha de corte no presente en la fuente."
+      ],
+      "huecos": [
+        "No se pudo confirmar el valor exacto de tau (densidad de polvo atmosférico) registrado en Jezero Crater durante los soles 426–428, más allá de que era el pico estacional.",
+        "No hay datos de telemetría pública sobre la temperatura exacta de la batería en el momento del primer apagón del sol 426.",
+        "No se pudo confirmar si la reducción del umbral del calentador a -40 °C fue suficiente para evitar nuevas pérdidas de comunicación o si hubo más episodios similares antes del sol 500.",
+        "No se halló información sobre el impacto exacto de los ciclos de frío en cada componente individual del ECM (módulo de electrónica central) a lo largo del invierno.",
+        "El evento original menciona que el equipo bajó 'la temperatura a la que se encienden los calentadores' como ejemplo de comando para ahorrar energía. Tras descartar el dato [10] por discrepancia con su cita, no queda confirmado en las fuentes conservadas ni el valor original ni el nuevo de ese umbral.",
+        "El evento original no especifica cuántos vuelos había completado Ingenuity antes del sol 427, y ninguna fuente del dossier confirma la cifra de 28 vuelos ni los 6,9 km que el borrador narrativo incluía.",
+        "Tras descartar el dato [15], no queda confirmado en fuentes conservadas el protocolo de búsqueda matutina diaria que Perseverance habría seguido de forma rutinaria tras el sol 429 para reprogramar el reloj de Ingenuity cada día."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing072",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Pruebas en Jurabi Point: aterrizajes suaves y récords absolutos de altitud y velocidad (Vuelos 61–62, oct. 2023)",
+      "verificados": 10,
+      "no_verificados": 3,
+      "fuentes_total": 4,
+      "fuentes_fuertes": 3,
+      "contradicciones": [
+        "Velocidad máxima convertida a mph: La fuente oficial NASA Science/JPL (https://science.nasa.gov/resource/mars-report-the-most-extreme-flights-of-nasas-ingenuity-mars-helicopter/) indica 22,4 mph para los 10 m/s; la prensa especializada (https://www.therobotreport.com/remembering-ingenuitys-historic-flights-on-mars/) indica 22,3 mph. Ambas provienen del mismo valor en m/s (10 m/s = 22,369 mph) y la diferencia es sólo de redondeo; no afecta al dato en m/s.",
+        "Velocidad base al inicio de la campaña: El mismo blog 'The Right Stuff' (https://science.nasa.gov/blog/the-right-stuff/) menciona '5 meters per second (11 mph)' como velocidad de Flight 10 y luego en el resumen dice 'nearly doubled our max speed from 5.5 m/s to 10 m/s'. No queda claro en qué vuelo exacto se fijó el 5,5 m/s como techo anterior a la campaña de Jurabi Point.",
+        "Récord de velocidad de 10 m/s: El evento (datos_clave) atribuye los 10 m/s exclusivamente al vuelo 62, pero la fuente oficial NASA Science (https://science.nasa.gov/resource/mars-report-the-most-extreme-flights-of-nasas-ingenuity-mars-helicopter/) confirma que esa velocidad también se alcanzó en los vuelos 68 y 69.",
+        "El evento original describe los aterrizajes suaves realizados 'en terreno plano de Jurabi Point', pero el dato [1] (blog 'The Right Stuff', https://science.nasa.gov/blog/the-right-stuff/) confirma que se validaron 'on both flat and sloped terrain' (terreno plano e inclinado), no solo en terreno plano."
+      ],
+      "huecos": [
+        "Sol exacto de inicio de la campaña de Jurabi Point: el evento indica 'septiembre de 2023' como fecha de inicio, pero el sol específico no pudo confirmarse; la tabla de Wikipedia sitúa a Ingenuity en 'Airfield Rho' durante los vuelos 57-58 (soles 902 y 910), no en Jurabi Point propiamente dicho.",
+        "Ubicación precisa de Jurabi Point: las fuentes consultadas no proporcionan coordenadas ni una descripción cartográfica detallada de esta zona dentro del cráter Jezero.",
+        "Vuelo específico en que se estableció por primera vez el récord de 5,5 m/s (el techo de velocidad anterior al inicio de la campaña): el blog 'The Right Stuff' lo menciona en el resumen pero no lo asocia a un número de vuelo concreto.",
+        "Contenido completo del blog 'Flight 62 Preview – By the Numbers' (https://science.nasa.gov/blog/flight-62-preview-by-the-numbers/): la página no devolvió el texto del artículo durante la consulta, sólo la navegación del sitio.",
+        "El relato del borrador incluía detalles específicos de los vuelos 59 (pop-up a 20 m, sol 915) y 60 (8 m/s, sol 924) que no están respaldados por ningún dato del dossier; la progresión intermedia de altitud y velocidad entre los vuelos de aterrizaje suave (57-59) y los récords (61-62) queda sin documentar.",
+        "Ningún dato del dossier confirma cuál era la velocidad estándar de descenso antes de las pruebas de aterrizaje suave; el borrador mencionaba 1 m/s como referencia, pero ninguna cita lo respalda."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing107",
+      "discutido_en_base": false,
+      "nota_base": "El blog dice que las pruebas en Jurabi Point empezaron en septiembre de 2023; las fechas de los vuelos 61 y 62 provienen del registro oficial. El sol de inicio del rango no se verificó."
+    },
+    {
+      "titulo": "Vuelo 72 de Ingenuity: pérdida de comunicación a 1 metro del suelo (18 enero 2024)",
+      "verificados": 14,
+      "no_verificados": 0,
+      "fuentes_total": 4,
+      "fuentes_fuertes": 4,
+      "contradicciones": [
+        "Distancia total recorrida por Ingenuity (en relación al plan original): el comunicado oficial de NASA del 25 de enero de 2024 indica 'flew more than 14 times farther than planned' (https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/), mientras que el informe de investigación de accidente de diciembre de 2024 indica 'flew more than 30 times farther than planned' (https://www.nasa.gov/missions/mars-2020-perseverance/ingenuity-helicopter/nasa-performs-first-aircraft-accident-investigation-on-another-world/). Ambas son fuentes oficiales NASA/JPL con cifras distintas.",
+        "El dato [11] (eliminado) afirma que se realizó «la primera investigación de accidente aeronáutico en otro mundo», pero su cita textual (https://www.nasa.gov/missions/mars-2020-perseverance/ingenuity-helicopter/nasa-performs-first-aircraft-accident-investigation-on-another-world/) solo describe que ingenieros de JPL y AeroVironment están completando una «detailed assessment» del vuelo final; la calificación de «primera investigación» no aparece en el fragmento citado, por lo que se eliminó el dato.",
+        "El dato [8] traduce «sand ripples» como «dunas de arena», pero en geología las ondulaciones de arena (ripples) y las dunas son formaciones de escalas distintas; la fuente original (https://www.nasa.gov/missions/mars-2020-perseverance/ingenuity-helicopter/nasa-performs-first-aircraft-accident-investigation-on-another-world/) dice «steep, relatively featureless sand ripples», no «sand dunes».",
+        "El dato [9] atribuye la rotura de las palas a «el impacto en la ladera de la duna», pero su cita textual (https://science.nasa.gov/photojournal/ingenuitys-hard-landing/) solo describe el resultado de la rotura («snapping all four of them off at their weakest point – about a third of the way from the tip») sin mencionar explícitamente la ladera de una duna como punto de impacto. Se conservó el dato por la información factual sobre las palas, pero la causa específica no está en la cita."
+      ],
+      "huecos": [
+        "No se pudo verificar el número de sol marciano exacto (sol 1035) del vuelo 72 en ninguna de las páginas leídas; las fuentes oficiales solo mencionan la fecha terrestre (18 de enero de 2024).",
+        "El evento menciona que Perseverance estaba temporalmente fuera de la línea de vista de Ingenuity durante el vuelo 72, pero las fuentes oficiales leídas no confirman ni niegan este detalle explícitamente; solo señalan que las comunicaciones se interrumpieron.",
+        "No se verificaron los detalles específicos del vuelo 71 (el aterrizaje de emergencia no planeado que precedió al vuelo 72): sus causas, duración y sol marciano correspondiente.",
+        "La causa exacta de la interrupción de comunicaciones durante el descenso (antes del impacto) y la orientación del helicóptero en el momento del aterrizaje siguen siendo objeto de investigación según el comunicado de enero de 2024.",
+        "No se encontró en las fuentes leídas confirmación de que JPL planeara acercar a Perseverance para una inspección visual de Ingenuity tras el vuelo 72.",
+        "El evento original indica «Vuelo planeado: 32,08 s», pero ninguna fuente del dossier confirma esta cifra exacta como duración planificada; el dato [6] da 32 segundos como tiempo real transcurrido entre despegue y aterrizaje, sin especificar si coincide con lo planeado.",
+        "El relato del borrador incluía detalles no respaldados por ningún dato citado: el concepto Mars Chopper (20 veces más pesado), la supervivencia a tormentas de polvo, la congelación periódica de la computadora de vuelo y el cabeceo/rodamiento del helicóptero durante el impacto. Estas afirmaciones fueron eliminadas del contexto ampliado por carecer de cita."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing127",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "NASA da por terminada la misión de Ingenuity (25 de enero de 2024)",
+      "verificados": 17,
+      "no_verificados": 0,
+      "fuentes_total": 5,
+      "fuentes_fuertes": 5,
+      "contradicciones": [
+        "Distancia total recorrida: la página 'Key Facts' de science.nasa.gov indica 10,5 millas (17,0 km) — https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/ — mientras que la página 'By the Numbers' del mismo dominio indica 11 millas — https://science.nasa.gov/resource/ingenuity-mars-helicopter-by-the-numbers/. La discrepancia puede ser por redondeo o por distintas fechas de actualización.",
+        "Altitud máxima: la página 'Key Facts' de science.nasa.gov indica 78,7 pies (24,0 metros) — https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/ — mientras que la página 'Extreme Flights' y 'By the Numbers' del mismo dominio indican 79 pies (24 metros) — https://science.nasa.gov/resource/mars-report-the-most-extreme-flights-of-nasas-ingenuity-mars-helicopter/. Se trata de redondeo, pero las cifras no son idénticas en las fuentes oficiales.",
+        "Dato [4] afirma 'Ingenuity realizó 72 vuelos en total', pero la cita textual de su fuente (science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/) solo menciona minutos de vuelo, distancia y altitud, sin incluir el número de vuelos. El dato de 72 vuelos está respaldado únicamente por la cita de dato [5] (nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/).",
+        "Dato [7] describe 'reinicios del ordenador de vuelo' como causa de la reestructuración invernal, pero su propia cita (nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/) dice textualmente 'power brownouts', es decir cortes de energía, sin mencionar específicamente reinicios del ordenador. La afirmación del dato interpreta más allá de lo que la cita respalda."
+      ],
+      "huecos": [
+        "La causa exacta del corte de comunicaciones durante el vuelo 72 no se ha confirmado: la NASA declaró que 'the cause of the communications dropout and the helicopter's orientation at time of touchdown are still being investigated' al momento del comunicado (25 ene 2024). No se encontró un informe posterior que lo resuelva.",
+        "No se pudo confirmar el número total de imágenes tomadas por Ingenuity durante su misión.",
+        "No se pudo leer el artículo de Scientific American ni el de NBC News (acceso restringido), que podrían contener declaraciones adicionales de Lori Glaze.",
+        "No se encontró en fuentes leídas la masa exacta ni las dimensiones del trozo de tela del Wright Flyer a bordo.",
+        "El valor exacto del sol 1043 mencionado en el evento no pudo verificarse directamente en las fuentes oficiales leídas (el comunicado de NASA no menciona el número de sol).",
+        "El evento original afirma que tras el daño Ingenuity 'seguía erguido y comunicándose con Perseverance'; los datos confirman que la comunicación se restableció (dato [1]), pero ninguna fuente del dossier confirma que el helicóptero quedó erguido (de hecho, la NASA declaraba que la orientación al aterrizar seguía bajo investigación).",
+        "El evento menciona como participantes a Lori Glaze (directora de Ciencias Planetarias), Laurie Leshin (directora de JPL) y Dave Lavery (ejecutivo del programa), pero ningún dato del dossier los cita ni describe sus declaraciones.",
+        "El evento dice que en 2023 Ingenuity 'hizo dos pruebas de vuelo que ampliaron el conocimiento de sus límites aerodinámicos'; el dato [14] confirma pruebas de límites aerodinámicos, pero no especifica que fueran exactamente dos vuelos."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing130",
+      "discutido_en_base": false,
+      "nota_base": "La página oficial de la misión da como fin el 25 de ene de 2024; el sol 1043 es el valor de la prensa (Space.com)."
+    },
+    {
+      "titulo": "Balaram imagina un helicóptero para Marte: el origen de Ingenuity en los años 90",
+      "verificados": 11,
+      "no_verificados": 0,
+      "fuentes_total": 6,
+      "fuentes_fuertes": 3,
+      "contradicciones": [
+        "Fecha de ingreso de Balaram a JPL: la página de JPL Robotics indica que obtuvo su Ph.D. en 1985 y que 'ha estado en JPL desde entonces' (https://www-robotics.jpl.nasa.gov/who-we-are/people/j_balaram/), mientras que American Bazaar afirma que 'joined NASA in 1986' (https://americanbazaaronline.com/?p=445005). La fuente oficial JPL es la más fiable.",
+        "El borrador describe a Balaram como 'ingeniero indio-americano', pero ninguna de las fuentes citadas en el dossier (ni https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/ ni https://www-robotics.jpl.nasa.gov/who-we-are/people/j_balaram/) menciona su origen étnico o nacionalidad.",
+        "El dato [0] cita la fuente NASA usando el nombre 'NASA Innovative Advanced Concepts' (nombre del programa relanzado en 2011), mientras que el borrador usa 'NASA Institute for Advanced Concepts' (nombre original 1998-2007). Dado que el estudio del mesicopter fue de 1999-2001, el nombre histórico correcto sería el segundo, pero la cita literal de la fuente (https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/) dice 'Innovative', no 'Institute'."
+      ],
+      "huecos": [
+        "Año exacto de la conferencia en que Balaram escuchó a Ilan Kroo: las fuentes solo indican 'en los años 90' sin precisar el año.",
+        "Nombre o convocatoria específica del NASA Research Announcement al que se presentó la propuesta de Balaram.",
+        "Resultados detallados de la prueba de pala-rotor bajo condiciones marcianas en JPL a fines de los 90.",
+        "Año exacto en que el concepto fue inicialmente propuesto antes de quedar 15 años sin fondos (sabemos que el estudio NIAC del mesicopter fue Fase II en 1999-2001, pero el momento preciso en que Balaram lo escuchó y presentó la propuesta no está documentado con año exacto).",
+        "Detalles sobre qué revisores evaluaron la propuesta y por qué no fue seleccionada para financiamiento.",
+        "El borrador afirma que la atmósfera marciana 'es apenas el 1% de la densidad de la terrestre', pero ninguna de las fuentes citadas incluye esa cifra; solo se cita la equivalencia de volar a 100 000 pies.",
+        "El borrador detalla trabajo intermedio de Balaram en JPL (brazos robóticos para rovers, globos para Venus, simuladores de entrada/descenso/aterrizaje de Mars Science Laboratory), pero ningún dato citado en el dossier respalda esos detalles específicos.",
+        "El borrador cierra mencionando 'un encuentro fortuito entre el director de JPL y una demostración de drones a principios de la década de 2010', pero ningún dato del dossier documenta este episodio.",
+        "El borrador afirma que en los años 90 no existían 'materiales suficientemente ligeros, baterías suficientemente potentes ni sistemas de control suficientemente pequeños'; esta explicación técnica del retraso no aparece en ninguna de las fuentes citadas."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing001",
+      "discutido_en_base": false,
+      "nota_base": "Año exacto no indicado en las fuentes (década de 1990)."
+    },
+    {
+      "titulo": "Aterrizaje de Perseverance con Ingenuity en el cráter Jezero – Sol 0, 18 feb 2021",
+      "verificados": 11,
+      "no_verificados": 1,
+      "fuentes_total": 7,
+      "fuentes_fuertes": 6,
+      "contradicciones": [
+        "La afirmación del dato [10] incluye la fecha «19 de abril de 2021» y la expresión «primer vuelo motorizado y controlado en otro planeta», pero la cita extraída de science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/ no contiene ni esa fecha ni esa caracterización; solo menciona los 5 vuelos de diseño y los 72 completados.",
+        "La afirmación del dato [3] dice que el rover fue bajado «con cables», pero la cita de ntrs.nasa.gov/citations/20210021984 solo indica «slowly lowered the rover while hovering above the ground», sin mencionar cables.",
+        "La afirmación del dato [5] nombra el aeródromo «Wright Brothers Field», pero la cita de nasa.gov/news-release/nasa-ingenuity-mars-helicopter-prepares-for-first-flight no incluye ese nombre en el fragmento citado."
+      ],
+      "huecos": [
+        "No se encontró documentación oficial sobre el momento exacto (en horas desde el aterrizaje) en que el equipo de Ingenuity comenzó la búsqueda activa del aeródromo el Sol 0.",
+        "No se halló una fuente oficial que describa paso a paso cómo se usaron las imágenes del propio rover (en contraposición a las imágenes HiRISE del orbitador) para confirmar o ajustar la selección del aeródromo.",
+        "No se verificaron las coordenadas exactas del sitio de aterrizaje (latitud ~18° N, longitud ~77° E) mediante una página leída directamente; ese dato proviene solo de un fragmento de búsqueda sin verificar con leer_pagina.",
+        "No se encontró información detallada sobre los criterios técnicos completos que el equipo aplicó para descartar zonas y seleccionar el aeródromo definitivo (p. ej., pendiente máxima admisible o tamaño mínimo de obstáculos).",
+        "El dato [4] confirma que se marcaron ubicaciones sobre imágenes HiRISE, pero ningún dato respalda que el equipo «empezó a buscar» activamente el aeródromo con esas imágenes a las pocas horas del aterrizaje, tal como afirma el evento original; marcar posiciones conocidas y realizar una búsqueda activa son procesos distintos.",
+        "Ninguna cita del dossier confirma la fecha concreta del primer vuelo de Ingenuity (19 de abril de 2021), que el borrador incluye en su relato apoyándose en la afirmación del dato [10] pero no en su cita."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing021",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Ingenuity se posa en el suelo de Marte (Sol 43)",
+      "verificados": 12,
+      "no_verificados": 2,
+      "fuentes_total": 5,
+      "fuentes_fuertes": 3,
+      "contradicciones": [
+        "FECHA DE DESPLIEGUE — La descripción del GIF en science.nasa.gov dice que la secuencia va 'from March 26 to April 3, 2021' (https://science.nasa.gov/resource/ingenuitys-complete-deployment/), lo que sugiere que el 3 de abril es la fecha final. Sin embargo, la página oficial de misiones del JPL afirma que 'Ingenuity was deployed to the surface on April 4, 2021' (https://www.jpl.nasa.gov/missions/ingenuity/), y la fuente SpaceUpClose confirma que las imágenes del Sol 43 fueron tomadas 'on April 4, 2021' (https://www.spaceupclose.com/2021/04/touchdown-confirmed-ingenuity-helicopter-deployed-on-martian-flight-field-for-historic-flight/). La discrepancia entre April 3 y April 4 podría deberse a diferencias de zona horaria entre equipos en EE.UU. y el tiempo Mars/UTC.",
+        "DISTANCIA A LA QUE SE ALEJÓ EL ROVER — La imagen oficial en science.nasa.gov indica que el rover se alejó 'about 13 feet (4 meters)' (https://science.nasa.gov/resource/ingenuitys-complete-deployment/), mientras que el artículo de SpaceUpClose señala 'about 16 feet (5 meters)' (https://www.spaceupclose.com/2021/04/touchdown-confirmed-ingenuity-helicopter-deployed-on-martian-flight-field-for-historic-flight/). Las cifras son distintas y no se pudo resolver la contradicción con las fuentes disponibles.",
+        "El dato [14] (eliminado) afirmaba «72 vuelos históricos» y fin de operaciones «el 25 de enero de 2024», pero su propia cita en science.nasa.gov (https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/) solo dice «It flew for the last time on Jan. 18, 2024» y no menciona ningún número de vuelos. La fecha (25 ene vs. 18 ene) y la cifra de 72 vuelos no están respaldadas por la cita."
+      ],
+      "huecos": [
+        "No se encontró el texto completo del blog de Bob Balaram del 2 de abril de 2021 ('pre-drop blog post') para verificar sus palabras directamente en la fuente primaria; solo fue citado a través de Spaceflightnow y SpaceUpClose.",
+        "No se confirmó si Ingenuity sobrevivió efectivamente su primera noche marciana (ese resultado es posterior al evento de despliegue documentado aquí).",
+        "No se encontró en las fuentes leídas la velocidad exacta de giro de las aspas durante el despliegue o las pruebas previas al primer vuelo en el Sol 43.",
+        "El sol exacto en que comenzó la secuencia de despliegue no pudo confirmarse en fuentes oficiales leídas: SpaceUpClose menciona Sol 30 (21 de marzo) para la eyección del escudo de escombros, pero no lo respalda una fuente JPL/NASA leída directamente.",
+        "No fue posible confirmar el costo total del proyecto ($80 millones) mediante una fuente oficial NASA/JPL; solo aparece en la prensa (Spaceflight Now).",
+        "Las fechas exactas del proceso de despliegue (26 de marzo a 3 de abril) aparecen en la afirmación del dato [2] pero no en su cita textual de science.nasa.gov; probablemente figuran en otra parte de la misma página, pero no fueron citadas directamente, por lo que no pueden verificarse con el material disponible.",
+        "El evento original afirma que Ingenuity dependía «solo» de su panel solar y su sistema de calefacción propio para sobrevivir; el dossier describe ambos sistemas ([5], [7], [12]) pero ninguna fuente emplea lenguaje de exclusividad que confirme que no existía ningún otro recurso de respaldo."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing026",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Ingenuity sobrevive su primera noche fría en Marte (Sol 44, 4-5 de abril de 2021)",
+      "verificados": 16,
+      "no_verificados": 0,
+      "fuentes_total": 4,
+      "fuentes_fuertes": 2,
+      "contradicciones": [
+        "El costo total del helicóptero Ingenuity difiere entre fuentes de prensa: Space.com (https://www.space.com/mars-helicopter-ingenuity-touches-down-martian-surface) lo cifra en 85 millones de dólares, mientras que SpaceUpClose (https://www.spaceupclose.com/2021/04/ingenuity-helicopter-survives-1st-frigid-martian-night-alone-and-readies-for-historic-flight/) indica 80 millones de dólares. Ninguna fuente oficial NASA/JPL leída confirma una cifra específica.",
+        "El artículo de Space.com presenta dos temperaturas distintas del sistema de calentamiento interno en la misma página: una cita de Bob Balaram (jefe de ingeniería) habla de ~45 °F (~7 °C) como temperatura interior mantenida por el calentador durante la noche, mientras que otro párrafo del mismo artículo menciona ~5 °F (−15 °C). No queda claro si se trata de dos modos de operación, umbrales distintos o un error editorial. URL: https://www.space.com/mars-helicopter-ingenuity-touches-down-martian-surface",
+        "El borrador narrativo afirma que Ingenuity dependía del 'sistema nuclear de Perseverance' para mantenerse caliente, pero la cita de la fuente NASA.gov (dato [8]) solo dice 'receiving power from Perseverance', sin especificar el tipo de fuente de energía. Aunque Perseverance efectivamente usa un generador termoeléctrico de radioisótopos, ninguna cita del dossier lo menciona, por lo que el adjetivo 'nuclear' es una inferencia no respaldada por las fuentes consultadas. URL: https://www.nasa.gov/solar-system/nasas-mars-helicopter-survives-first-cold-martian-night-on-its-own/"
+      ],
+      "huecos": [
+        "No se encontró en fuentes oficiales leídas el nivel exacto de carga de la batería de Ingenuity registrado durante la primera noche fría en Marte.",
+        "No se encontraron artículos técnicos en NTRS (ntrs.nasa.gov) sobre el diseño del sistema térmico o de energía de Ingenuity que permitieran profundizar en los materiales de aislamiento usados.",
+        "No se pudo confirmar con exactitud si el sol 44 corresponde al 4 o al 5 de abril de 2021 en hora terrestre: la fuente oficial NASA.gov sitúa la descarga de las primeras imágenes el 4 de abril, pero SpaceUpClose indica que la confirmación de supervivencia llegó el 5 de abril y lo asocia también al sol 44.",
+        "La temperatura interior exacta mantenida por el sistema de calentamiento durante la primera noche no pudo confirmarse con una sola cifra coherente a partir de fuentes oficiales (ver sección contradicciones).",
+        "No se pudo verificar en fuentes oficiales el dato de las '25 horas' que el equipo tuvo para preparar el despliegue antes del anochecer marciano (dato solo encontrado en fuente comunitaria SpaceUpClose).",
+        "El borrador narrativo afirma que Ingenuity fue 'diseñado para realizar no más de cinco vuelos de prueba en 30 sols', pero ninguna cita del dossier respalda el número específico de cinco vuelos; la cita de [5] solo menciona '30 Martian days' como plazo de pruebas, sin indicar cuántos vuelos se planificaron.",
+        "El dato [11] afirmaba que Ingenuity completó 72 vuelos en total, pero la cita proporcionada (science.nasa.gov) solo menciona minutos de vuelo, distancia recorrida y altitud máxima, sin incluir el número de vuelos ni la duración total de la misión. El dato se retiró por falta de respaldo en la cita, dejando sin confirmar las estadísticas finales completas de la misión."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing027",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "La prueba de giro rápido se corta por el temporizador «watchdog» (Sol 49)",
+      "verificados": 11,
+      "no_verificados": 2,
+      "fuentes_total": 6,
+      "fuentes_fuertes": 3,
+      "contradicciones": [
+        "El evento registrado indica que el primer vuelo estaba previsto originalmente para el 11 de abril. El blog oficial de NASA (https://science.nasa.gov/blog/mars-helicopter-flight-delayed-to-no-earlier-than-april-14/) anuncia el reprogramado a 'no antes del 14 de abril', pero no menciona explícitamente el 11 de abril como fecha original. Ninguna fuente oficial leída confirma directamente '11 de abril' como fecha inicial; el dato procede del evento catalogado.",
+        "El evento original describe la transición como paso del 'modo de preparación' al 'modo de vuelo', pero la fuente oficial de NASA (dato [0], https://science.nasa.gov/blog/mars-helicopter-flight-delayed-to-no-earlier-than-april-14/) usa los términos específicos 'Pre-Flight mode' y 'Flight mode'. 'Modo de preparación' no es traducción exacta de 'Pre-Flight' (pre-vuelo); es una paráfrasis que podría inducir a confusión sobre la terminología real del sistema.",
+        "El relato del borrador afirmaba que la solución fue anunciada 'el 12 de abril, tres días después del incidente', pero ninguna de las fuentes citadas (ni https://science.nasa.gov/blog/work-progresses-toward-ingenuitys-first-flight-on-mars/ ni otras) proporciona la fecha exacta de ese anuncio. El '12 de abril' era una inferencia no respaldada por cita literal."
+      ],
+      "huecos": [
+        "No se encontró en ninguna fuente oficial leída la velocidad de rotación exacta (en rpm) que se buscaba alcanzar durante la prueba de alta velocidad interrumpida.",
+        "No se confirmó mediante fuente oficial si se realizó una prueba de alta velocidad exitosa entre la actualización de software (≈12-14 de abril) y el primer vuelo del 19 de abril.",
+        "No se pudo verificar en fuentes oficiales el detalle técnico exacto del error de software que causó la no-reiniciación del watchdog (p. ej., condición de carrera, desbordamiento de tiempo de proceso, etc.).",
+        "No se confirmó mediante fuente oficial la velocidad de 50 rpm mencionada para la prueba de baja velocidad previa (dato aparece solo en fuente comunitaria spaceexplored.com).",
+        "La fecha de '11 de abril' como fecha original del primer vuelo no pudo ser verificada con una cita literal de fuente oficial.",
+        "El borrador describía la cadena de retransmisión del parche de software (JPL → Perseverance → estación base de Ingenuity), pero ninguna de las fuentes citadas detalla explícitamente ese recorrido de la actualización. El mecanismo de relevo a través del rover es conocimiento general, no dato confirmado por las fuentes del dossier.",
+        "Ninguna fuente citada indica la fecha exacta en que la actualización de software fue finalmente cargada con éxito en Ingenuity ni confirma cuándo se completó el proceso de validación en los bancos de prueba del JPL."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing029",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Primera imagen aérea en color de la superficie de Marte (Vuelo 2 de Ingenuity, 22 de abril de 2021)",
+      "verificados": 12,
+      "no_verificados": 0,
+      "fuentes_total": 5,
+      "fuentes_fuertes": 5,
+      "contradicciones": [
+        "La altitud en el momento de la fotografía difiere según la fuente: la descripción de la imagen (https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/) indica 17 pies / 5,2 metros, mientras que el informe del segundo vuelo (https://www.nasa.gov/solar-system/nasas-ingenuity-mars-helicopter-logs-second-successful-flight/) señala que la altitud máxima del vuelo 2 fue de 16 pies / 5 metros. La diferencia (16 ft = 4,88 m vs. 17 ft = 5,18 m) podría deberse a que la fotografía fue tomada en un momento puntual distinto al máximo de vuelo, o a redondeo de cifras entre dos equipos de redacción distintos dentro de la NASA.",
+        "El evento original indica que la imagen fue 'Publicada por JPL el 23 de abril de 2021', pero ninguno de los datos conservados del dossier confirma esa fecha de publicación específica. La URL de la NASA (https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/) describe la imagen pero no incluye en la cita proporcionada la fecha de publicación.",
+        "El evento original describe que se ven 'partes de dos plataformas de aterrizaje' (expresión que podría interpretarse como estructuras independientes), mientras que la cita de la fuente (https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/) especifica con más precisión 'landing pads on two of the helicopter's four landing legs', es decir, los patines integrados en las patas del propio helicóptero. No es una contradicción directa, pero la terminología del evento es ambigua."
+      ],
+      "huecos": [
+        "No se pudo confirmar por qué no se tomó ninguna imagen en color durante el primer vuelo (19 de abril de 2021): las fuentes no explican si la cámara de color no fue activada o si la imagen no tuvo calidad suficiente.",
+        "No se encontró el timestamp exacto (hora local marciana) del momento preciso en que se disparó la fotografía PIA24593 durante el vuelo.",
+        "No se hallaron especificaciones técnicas completas de la cámara de color (tipo de lente, distancia focal, fabricante del sensor).",
+        "No se pudo verificar mediante fuente directa cuánto tiempo transcurrió entre la toma de la fotografía y la recepción de los datos en el JPL.",
+        "Las fuentes no especifican si hubo imágenes de color adicionales tomadas durante el segundo vuelo además de PIA24593 (primera) y PIA24500 (segunda) ni en qué momento del vuelo fue tomada cada una.",
+        "El evento original afirma que la foto fue tomada en 'sol 61', pero ningún dato conservado del dossier confirma explícitamente este número de sol marciano.",
+        "El evento original indica que la imagen fue 'Publicada por JPL el 23 de abril de 2021', pero ninguna cita del dossier respalda esta fecha concreta de publicación ni el identificador PIA24593 mencionado en el relato original del borrador.",
+        "El dato [13] fue eliminado porque la cita no respaldaba el número de 72 vuelos totales ni la fecha de fin de misión (25 de enero de 2024); queda sin confirmar en el dossier un resumen fiable del total de la misión de Ingenuity.",
+        "El dato [7] fue eliminado porque la cita no mencionaba a Thomas Zurbuchen; queda sin confirmar por fuente directa quién anunció formalmente el nombre Wright Brothers Field."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing034",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Vuelo 6 de Ingenuity: cuando un sello de tiempo perdido casi tumba al helicóptero marciano",
+      "verificados": 15,
+      "no_verificados": 1,
+      "fuentes_total": 4,
+      "fuentes_fuertes": 1,
+      "contradicciones": [
+        "DISTANCIA RECORRIDA: El evento (basado en el detalle narrativo) indica 'unos 215 metros', cifra que coincide con la suma de los tramos planificados (150 + 15 + 50 m = 215 m según el blog de NASA https://science.nasa.gov/blog/surviving-an-in-flight-anomaly-what-happened-on-ingenuitys-sixth-flight/). Sin embargo, el registro de vuelos oficial de NASA (citado en https://en.wikipedia.org/wiki/List_of_Ingenuity_flights) registra 202,39 m como distancia real recorrida. La diferencia refleja la ruta planificada vs. la distancia real medida por telemetría.",
+        "FECHA/HORA DE DESPEGUE: Space.com (https://www.space.com/mars-helicopter-ingenuity-sixth-flight-success) indica 'May 23 at around 1:20 a.m. EDT (0520 GMT)'. Wikipedia (https://en.wikipedia.org/wiki/List_of_Ingenuity_flights) registra 'May 23, 2021 at 5:20' (UTC), que es equivalente. Ambas apuntan a las 22:20 PDT del 22 de mayo (hora en JPL, California). El evento usa 2021-05-22 siguiendo la convención del registro oficial que emplea la fecha local del JPL; la nota del evento documenta explícitamente esta discrepancia.",
+        "El dato [0] afirma que el vuelo 6 'fue el primero de la misión extendida', pero su cita de respaldo (https://science.nasa.gov/blog/surviving-an-in-flight-anomaly-what-happened-on-ingenuitys-sixth-flight/) solo dice que Ingenuity realizó su sexto vuelo en el sol 91, sin mencionar 'misión extendida'. Esa información sí aparece en la cita del dato [14] (https://www.space.com/mars-helicopter-ingenuity-sixth-flight-success), por lo que el dato [0] dice más de lo que su propia cita respalda, aunque el hecho es verificable por otra fuente del dossier."
+      ],
+      "huecos": [
+        "No se encontraron artículos científicos revisados por pares (NTRS) específicos sobre la anomalía del vuelo 6; las búsquedas en ntrs.nasa.gov no devolvieron resultados.",
+        "El PDF del registro oficial de vuelos (https://science.nasa.gov/wp-content/uploads/2024/06/ingenuity-helicopter-flight-log.pdf) no pudo ser leído directamente; los datos de duración y distancia provienen de Wikipedia citando ese documento.",
+        "No se pudo confirmar directamente de fuente primaria la cifra exacta de duración (139,9 s); está en Wikipedia como dato derivado del flight log oficial.",
+        "El blog de NASA no especifica qué subsistema causó exactamente la pérdida de la imagen (bug de hardware o software del pipeline); solo describe el efecto.",
+        "No se documentó públicamente el detalle técnico de la solución de software aplicada antes del vuelo 7 para corregir la vulnerabilidad de sellos de tiempo.",
+        "La nota del evento indica que la hora solar local del despegue en Marte fue 12:35, pero ninguna fuente del dossier confirma esta hora local marciana específica.",
+        "Ninguna fuente del dossier cuantifica la magnitud de los picos de consumo eléctrico mencionados en el evento y confirmados cualitativamente por el dato [4]; no se conoce el consumo en vatios ni el porcentaje de aumento respecto al régimen normal.",
+        "El relato del borrador incluye una cita atribuida a Håvard Grip ('en un sentido muy real, Ingenuity se abrió paso a la fuerza') que no aparece en ninguna de las citas textuales recogidas en los datos; no se pudo verificar con las fuentes disponibles."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing043",
+      "discutido_en_base": false,
+      "nota_base": "Space.com da el despegue el 23 de mayo a las 1:20 EDT (12:35 hora solar local en Marte); el registro oficial de vuelos lo fecha el 22 de mayo, que se usa aquí. Complementa el vuelo 6 ya incluido."
+    },
+    {
+      "titulo": "Vuelo 34 de Ingenuity: breve pero decisivo, el estreno del nuevo cerebro navegador",
+      "verificados": 12,
+      "no_verificados": 3,
+      "fuentes_total": 4,
+      "fuentes_fuertes": 2,
+      "contradicciones": [
+        "FECHA DEL VUELO 34: El blog oficial de NASA (https://science.nasa.gov/missions/mars-2020-perseverance/ingenuity-helicopter/flight-34-was-short-but-significant/) fue publicado el 23 de noviembre de 2022 y habla de 'yesterday's successful 18-second flight', lo que implicaría que el vuelo ocurrió el 22 de noviembre. Sin embargo, Wikipedia (https://en.wikipedia.org/wiki/List_of_Ingenuity_flights) registra la hora como 'November 23, 2022 at 01:25' en UTC. La diferencia puede deberse al uso de UTC vs. hora local del equipo (JPL, California) o Mars Local Solar Time. El evento usa 2022-11-22 como fecha.",
+        "FECHA DEL ÚLTIMO VUELO PREVIO AL VUELO 34: Space.com (https://www.space.com/ingenuity-mars-helicopter-flight-34-new-software) indica que el vuelo 34 fue 'the first since Sept. 29', mientras que Wikipedia (https://en.wikipedia.org/wiki/List_of_Ingenuity_flights) registra el vuelo 33 el 24 de septiembre de 2022. Podría referirse a la fecha en que se recibieron los datos del vuelo 33, pero no se puede confirmar.",
+        "El dato [11] (Wikipedia, lista de vuelos de Ingenuity) menciona tormentas de arena y temperaturas de −87 °C 'during the Martian winter', pero según los propios huecos del borrador, esa cita pertenece al contexto del vuelo 30, no del vuelo 34. El evento original dice 'Tras el invierno' refiriéndose al vuelo 34, y el relato conecta [11] con la pausa antes del vuelo 34, lo cual es plausible pero no está respaldado de forma directa por la fuente citada (https://en.wikipedia.org/wiki/List_of_Ingenuity_flights)."
+      ],
+      "huecos": [
+        "No se pudo confirmar en las fuentes leídas el motivo exacto de la pausa de ~58 sols entre los vuelos 33 y 34: si fue exclusivamente por la temporada de polvo y el invierno marciano, por el tiempo de instalación del software, o por ambos.",
+        "No se detallan los autores técnicos del código de la cuarta actualización de software ni el proceso de desarrollo y verificación en Tierra antes de su envío a Marte.",
+        "No se especifica cómo se generaron los mapas digitales de elevación cargados en Ingenuity ni cuántos datos abarcaban (resolución, cobertura geográfica).",
+        "No se confirma la temperatura o nivel de energía solar de Ingenuity durante la pausa entre vuelos 33 y 34 en particular (el dato de −87 °C se refiere al invierno previo al vuelo 30, no al período previo al vuelo 34).",
+        "El PDF del flight log oficial (https://science.nasa.gov/wp-content/uploads/2024/06/ingenuity-helicopter-flight-log.pdf) no pudo leerse (la herramienta devolvió texto vacío), por lo que no se pudo verificar de forma independiente la tabla completa de vuelos.",
+        "La nota del evento dice que la entrada del blog fue publicada el 23 de noviembre de 2022; ningún dato del dossier confirma explícitamente esa fecha de publicación (solo se infiere de la palabra 'yesterday's' en la cita de [0]).",
+        "El borrador narrativo afirmaba que Ingenuity fue diseñado para 'solo cinco vuelos de prueba', pero ningún dato del dossier respalda esa cifra concreta; solo [2] confirma que fue una 'technology demonstration' para terreno plano."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing083",
+      "discutido_en_base": false,
+      "nota_base": "La entrada del blog es del 23 de noviembre de 2022 y habla del vuelo «de ayer». Complementa el vuelo 34 ya incluido."
+    },
+    {
+      "titulo": "Primer vuelo libre de un prototipo a escala real en condiciones marcianas simuladas (31 de mayo de 2016)",
+      "verificados": 14,
+      "no_verificados": 1,
+      "fuentes_total": 5,
+      "fuentes_fuertes": 5,
+      "contradicciones": [
+        "El evento original indica que la cámara mide '7,62 m × 26 m', pero la cita de la fuente NASA Science (https://science.nasa.gov/resource/first-controlled-flight-of-mars-helicopter-prototype/?site=msl) da la conversión métrica como '8-meter-by-26-meter'. Ambas corresponden a 25 pies, pero difieren en el redondeo métrico (7,62 m exacto vs. 8 m redondeado).",
+        "El evento original dice que el prototipo fue 'construido por AeroVironment', pero la cita de la misma fuente NASA Science (https://science.nasa.gov/resource/first-controlled-flight-of-mars-helicopter-prototype/?site=msl) aclara que 'AeroVironment Inc., Qualcomm, and SolAero also provided design assistance and major vehicle components', indicando una colaboración de al menos tres empresas, no construcción exclusiva de AeroVironment."
+      ],
+      "huecos": [
+        "Masa exacta del prototipo volado en mayo de 2016: el evento menciona ~850 g, pero ninguna fuente leída confirma este valor. La cifra de 1,8 kg corresponde al helicóptero de vuelo final (Ingenuity), no al prototipo de 2016.",
+        "Número exacto de vuelos y duración individual de cada ensayo realizados dentro de la cámara durante mayo de 2016: las fuentes solo mencionan el 31 de mayo como fecha de la prueba exitosa.",
+        "Altitud máxima alcanzada durante las pruebas de hovering en la cámara termovacío: las fuentes indican que era muy modesta (vuelo básicamente estacionario) pero no dan una cifra precisa.",
+        "Acceso completo al artículo técnico Balaram et al. AIAA 2018-0023 y al Grip et al. AIAA 2018-1849: ambos PDFs devolvieron contenido vacío al intentar leerlos; los datos de esos papeles provienen solo de fragmentos de búsqueda.",
+        "El evento original menciona que la atmósfera simulada tenía 'la densidad marciana', pero ninguna de las fuentes citadas confirma explícitamente que la densidad dentro de la cámara igualara la densidad atmosférica de Marte; solo dicen 'thin carbon dioxide atmosphere' o 'simulated Mars atmosphere conditions'.",
+        "El borrador narrativo afirmaba que el blog 'The Right Stuff' fue escrito por 'los ingenieros jefe Travis Brown y Martin Cacan', pero ningún dato del dossier respalda la autoría; se eliminó del relato.",
+        "No se confirma en ninguna fuente la descripción de los rotores coaxiales como 'girando en sentidos opuestos'; la cita de Balaram et al. solo dice 'co-axial rotor design' sin detallar el sentido de giro."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing010",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Lanzamiento de Mars 2020: Perseverance e Ingenuity despegan a bordo del Atlas V 541 (30 de julio de 2020)",
+      "verificados": 14,
+      "no_verificados": 1,
+      "fuentes_total": 6,
+      "fuentes_fuertes": 3,
+      "contradicciones": [
+        "DISTANCIA DEL VIAJE: El evento indica '~471 millones de km', pero el comunicado oficial de la NASA cita al jefe del proyecto John McNamee diciendo '290 million miles' (≈467 millones de km) — https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/. La diferencia (~4 millones de km) puede deberse a distintos momentos de cálculo de la trayectoria, pero no es posible confirmar '471 millones' desde ninguna fuente oficial consultada.",
+        "El evento original describe el debris shield como protección 'contra escombros' durante 'el viaje', pero la fuente de la NASA (https://science.nasa.gov/resource/perseverance-rover-drops-its-debris-shield/) precisa que el debris shield protegía a Ingenuity específicamente 'during landing' (durante el aterrizaje), no durante el tránsito interplanetario."
+      ],
+      "huecos": [
+        "No se pudo confirmar, con cita directa de fuente oficial, que Ingenuity dependiera de la energía eléctrica del rover Perseverance durante la fase de crucero interplanetaria (dentro del aeroshell los paneles solares del helicóptero no funcionan, pero no se leyó cita textual al respecto en ninguna fuente consultada).",
+        "No se pudo acceder al contenido completo del press kit oficial de JPL (https://www.jpl.nasa.gov/news/press_kits/ingenuity/landing/ y subpáginas) porque la herramienta devolvió texto vacío; la cita del PDF del press kit proviene solo del fragmento de búsqueda.",
+        "No se verificó el dato exacto '471 millones de km' en ninguna fuente oficial; la cifra más cercana hallada es '290 million miles' (~467 millones de km) en el comunicado de la NASA.",
+        "No se confirmó si el cohete Atlas V 541 de Mars 2020 fue exactamente el mismo que transportó Curiosity (el comunicado de ULA menciona que un 541 llevó Curiosity en un 'viaje de 354 millones de millas', distinto al de Mars 2020), lo que podría indicar diferencias en la trayectoria según la oportunidad de lanzamiento.",
+        "No se encontró en fuentes oficiales consultadas el desglose técnico completo de la dependencia de comunicaciones de Ingenuity respecto a Perseverance durante el crucero.",
+        "El evento original afirma que Ingenuity dependía del rover para 'protección' durante el viaje, pero ningún dato del dossier establece explícitamente que Perseverance proporcionara protección a Ingenuity de forma activa: los datos solo indican que ambos iban encapsulados dentro del mismo aeroshell [9] y que el debris shield protegía al helicóptero durante el aterrizaje [10], sin atribuir una función protectora específica del rover sobre Ingenuity durante el crucero.",
+        "El borrador narrativo mencionaba la hora de recepción de la primera señal (9:15 a.m. EDT) y la hora del reporte de safe mode (11:30 a.m. EDT), pero ningún dato del dossier respalda esas horas concretas; se eliminaron del relato reescrito."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing019",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Ingenuity: de demostración tecnológica a explorador aéreo de Marte (30 abr 2021)",
+      "verificados": 18,
+      "no_verificados": 0,
+      "fuentes_total": 3,
+      "fuentes_fuertes": 1,
+      "contradicciones": [
+        "El evento original describe la extensión como '+30 soles', lo que sugiere un período fijo de prolongación. Sin embargo, el dato [10] (Space.com, https://www.space.com/nasa-mars-helicopter-ingenuity-mission-extended) aclara explícitamente que 'that 30-sol target is not a hard deadline for the extended mission', y el dato [6] (nasa.gov, https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/) indica que los 30 soles eran un punto de evaluación ('will assess flight operations after 30 sols'), mientras que el límite real era finales de agosto. La extensión podía durar más de 30 soles si las condiciones lo permitían.",
+        "El dato [4] (nasa.gov) describe el vuelo 4 en tiempo futuro ('Flight four will send the rotorcraft…'), indicando que al momento del anuncio del 30 de abril aún no se había ejecutado. El borrador narrativo original afirmaba que 'el vuelo 4 se ejecutó el mismo día del anuncio', pero la cita no respalda esa simultaneidad."
+      ],
+      "huecos": [
+        "No se pudo confirmar el sol marciano exacto (número de sol de la misión) en que comenzó oficialmente la fase de demostración de operaciones con el sexto vuelo.",
+        "No se encontraron artículos científicos ni informes técnicos en NTRS específicos sobre esta decisión de extensión de misión del 30 de abril de 2021.",
+        "No se confirmó el número exacto de vuelos que Ingenuity completó durante los primeros 30 soles de la fase extendida, ni si el plazo de 30 soles fue eventualmente ampliado.",
+        "No se pudo leer directamente el comunicado original de JPL (jpl.nasa.gov) porque la página devolvió contenido vacío; se utilizó la versión idéntica publicada en nasa.gov.",
+        "El evento original no lo menciona, pero el borrador narrativo afirmaba que Ingenuity debía 'realizar no más de cinco vuelos de prueba' en su fase tecnológica; ningún dato del dossier confirma ese número específico de cinco vuelos.",
+        "Ningún dato del dossier confirma la fecha exacta en que se ejecutó el vuelo 4 ni si coincidió con el día del anuncio (30 de abril); la cita de nasa.gov solo describe el plan en tiempo futuro."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing038",
+      "discutido_en_base": false,
+      "nota_base": null
+    },
+    {
+      "titulo": "Vuelo 26 de Ingenuity: fotografiando los restos del aterrizaje de Perseverance",
+      "verificados": 20,
+      "no_verificados": 0,
+      "fuentes_total": 4,
+      "fuentes_fuertes": 3,
+      "contradicciones": [
+        "Distancia recorrida al sureste en el vuelo 26: La fuente oficial NASA (nasa.gov) indica '630 feet (192 meters)', mientras que el artículo de Science Times indica '639 feet (192 meters)'. La conversión métrica (192 m ≈ 630 ft) coincide con la cifra oficial; la cifra '639' en la prensa parece un error tipográfico. URLs: https://www.nasa.gov/missions/mars-2020-perseverance/ingenuity-helicopter/nasas-mars-helicopter-spots-gear-that-helped-perseverance-rover-land/ vs https://www.sciencetimes.com/articles/37376/20220428/nasas-ingenuity-mars-helicopter-captured-image-perseverances-backshell-parachute-26th.htm",
+        "El evento original afirma «La cubierta trasera tocó el suelo a unos 126 km/h», refiriéndose solo a la cubierta trasera. Sin embargo, el dato [11] (URL: https://science.nasa.gov/resource/debris-field-from-perseverance-landing-gear-seen-by-mars-helicopter/) cita: «The parachute and backshell continued to descend and impacted the ground at approximately 78 mph (126 kph)», indicando que tanto el paracaídas como la cubierta trasera impactaron juntos a esa velocidad, no solo la cubierta."
+      ],
+      "huecos": [
+        "El número de sol exacto (sol 414) no fue confirmado en ninguna de las fuentes oficiales leídas.",
+        "Los resultados finales del análisis de ingeniería sobre el paracaídas y la cubierta trasera —que según el artículo original requeriría 'several weeks'— no están recogidos en las fuentes consultadas.",
+        "No se encontró en las fuentes oficiales leídas confirmación del posible mensaje oculto en el diseño del paracaídas, mencionado de pasada en la prensa.",
+        "No se pudo acceder al PDF del registro de vuelos de Ingenuity (ingenuity-helicopter-flight-log.pdf) ni al comunicado original de JPL (jpl.nasa.gov) para verificar datos secundarios; la página devolvió contenido vacío.",
+        "El evento menciona «el campo de escombros del impacto» como uno de los elementos visibles en las imágenes, pero ninguna cita textual de los datos del dossier confirma explícitamente la presencia o descripción de un campo de escombros (aunque la URL del dato [11] contiene la frase 'debris-field').",
+        "El evento describe la cubierta trasera como «cónica» (cubierta cónica), pero ninguna de las citas literales de las fuentes consultadas utiliza explícitamente esa descripción geométrica para la cubierta trasera."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing069",
+      "discutido_en_base": false,
+      "nota_base": "El comunicado se publicó el 27 de abril de 2022; el vuelo fue el 19 de abril de 2022. Complementa el vuelo 26 ya incluido."
+    },
+    {
+      "titulo": "NASA presenta el concepto «Mars Chopper», sucesor de Ingenuity (11 dic 2024)",
+      "verificados": 15,
+      "no_verificados": 1,
+      "fuentes_total": 5,
+      "fuentes_fuertes": 2,
+      "contradicciones": [
+        "La distancia de vuelo diaria de Mars Chopper por sol se expresa de forma ligeramente diferente en millas según la fuente: Space.com dice 'up to 2 miles (3 kilometers) in a day' (https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years), mientras que Gizmodo e Interesting Engineering dicen '1.9 miles (3 kilometers)' (https://gizmodo.com/nasas-proposed-mars-chopper-is-ingenuity-on-steroids-2000541828 y https://interestingengineering.com/space/nasa-plans-suv-sized-mars-helicopter). Ambas coinciden en la cifra en km (3 km), pero difieren en la conversión a millas.",
+        "El evento original describe que Tzanetos dijo que 'Ingenuity pudo ser una estación meteorológica por unos 20 años'. Sin embargo, la cita textual del dato [8] (Space.com: https://www.space.com/space-exploration/mars-rovers/after-crashing-on-mars-nasas-ingenuity-helicopter-could-live-on-as-a-weather-station-for-20-years) habla de '20 years' worth of onboard storage remaining' para 'taking measurements and images every Martian sol', sin usar el término 'estación meteorológica' ni especificar que las mediciones sean meteorológicas. La etiqueta de 'estación meteorológica' aparece solo en el título del artículo de Space.com, no en la cita literal aportada."
+      ],
+      "huecos": [
+        "No se pudo acceder al contenido completo de la página oficial de JPL (PIA26375 ni el comunicado de prensa de JPL del 11 de diciembre de 2024), que devolvieron contenido vacío al intentar leerlas.",
+        "No se confirmó el peso exacto en kg o libras de Mars Chopper (solo se sabe que es '20 veces más pesado que Ingenuity').",
+        "No se identificaron por nombre a los 'exintegrantes del equipo de Ingenuity' que participan en el diseño de Mars Chopper, mencionados en el evento original.",
+        "No se pudo confirmar si existe ya un informe técnico (NASA technical report) publicado sobre la investigación del accidente de Ingenuity, ni su URL o número de referencia.",
+        "No se obtuvo información verificable sobre si Ingenuity mantuvo o perdió finalmente el contacto con Perseverance después de diciembre de 2024.",
+        "El relato del borrador afirmaba que Ingenuity 'recorrió más de 17 km' en total, pero ningún dato del dossier respalda esa cifra concreta; se ha eliminado del contexto ampliado.",
+        "El borrador mencionaba una 'animación de 30 segundos' publicada por la NASA mostrando a Mars Chopper en vuelo, pero ningún dato del dossier confirma la existencia o duración de dicha animación.",
+        "El borrador calificaba la investigación del accidente como 'la primera investigación de un accidente de aeronave en otro mundo', pero ninguna cita del dossier respalda literalmente esa frase.",
+        "El borrador indicaba que Ingenuity pesaba 1,8 kg y tenía 'dos rotores coaxiales', pero esas especificaciones no aparecen en ninguna cita del dossier."
+      ],
+      "fragil": false,
+      "motivos_fragil": [],
+      "id": "ing137",
+      "discutido_en_base": false,
+      "nota_base": null
+    }
+  ]
+}

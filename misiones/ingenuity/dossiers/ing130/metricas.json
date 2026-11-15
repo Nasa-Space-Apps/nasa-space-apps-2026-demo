@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.17570775,
+  "turnos": 12,
+  "duracion_s": 85.9,
+  "duracion_api_s": 73.1,
+  "tokens": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 10061,
+    "cache_read_input_tokens": 45410,
+    "output_tokens": 8108,
+    "output_tokens_details": {
+      "thinking_tokens": 1603
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 10061
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 2577,
+      "outputTokens": 27,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.002712,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 8,
+      "outputTokens": 8108,
+      "cacheReadInputTokens": 45410,
+      "cacheCreationInputTokens": 10061,
+      "webSearchRequests": 0,
+      "costUSD": 0.17299575,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1603,
+      "cacheCreationEphemeral5mInputTokens": 10061,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 7,
+    "buscar_papers_ntrs": 2,
+    "buscar_web": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.30400974999999997,
+    "turnos": 2,
+    "duracion_s": 124.5,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5091,
+        "outputTokens": 27,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.005226,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 10427,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6095,
+        "webSearchRequests": 0,
+        "costUSD": 0.29878374999999996,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 8232,
+        "cacheCreationEphemeral5mInputTokens": 6095,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 17,
+      "datos_despues": 17,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 3,
+      "observaciones": "Se conservaron todos los datos porque sus citas respaldan las afirmaciones centrales, pero se detectaron dos desajustes internos: dato [4] incluye «72 vuelos» sin que su cita lo mencione, y dato [7] traduce «power brownouts» como «reinicios del ordenador». En el relato se eliminaron la mención a Travis Brown, la misión SkyFall y el propósito específico del vuelo 72 (localización tras aterrizaje de"
+    }
+  },
+  "costo_usd_referencia_total": 0.47971749999999996,
+  "costos": {
+    "total_usd": 0.479718,
+    "por_paso": {
+      "investigacion": 0.175708,
+      "revision": 0.30401
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.007938,
+        "entrada": 7668,
+        "salida": 54,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.172996,
+        "entrada": 8,
+        "salida": 8108,
+        "cache_leida": 45410,
+        "cache_escrita": 10061,
+        "razonamiento": 1603
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.298784,
+        "entrada": 3,
+        "salida": 10427,
+        "cache_leida": 0,
+        "cache_escrita": 6095,
+        "razonamiento": 8232
+      }
+    }
+  }
+}

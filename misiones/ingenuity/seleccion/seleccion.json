@@ -1,0 +1,102 @@
+{
+  "mision": "ingenuity",
+  "n": 20,
+  "generado": "2026-11-15T00:36:35",
+  "ids": [
+    "ing001",
+    "ing010",
+    "ing018",
+    "ing019",
+    "ing021",
+    "ing023",
+    "ing026",
+    "ing027",
+    "ing029",
+    "ing032",
+    "ing034",
+    "ing038",
+    "ing043",
+    "ing069",
+    "ing072",
+    "ing083",
+    "ing107",
+    "ing127",
+    "ing130",
+    "ing137"
+  ],
+  "actos": [
+    {
+      "n": 1,
+      "titulo": "Soñar un helicóptero"
+    },
+    {
+      "n": 2,
+      "titulo": "Viajar y llegar"
+    },
+    {
+      "n": 3,
+      "titulo": "Volar en otro mundo"
+    },
+    {
+      "n": 4,
+      "titulo": "Resistir"
+    },
+    {
+      "n": 5,
+      "titulo": "El último vuelo y el legado"
+    }
+  ],
+  "asignacion": {
+    "ing001": 1,
+    "ing010": 1,
+    "ing018": 1,
+    "ing019": 2,
+    "ing021": 2,
+    "ing023": 2,
+    "ing026": 2,
+    "ing027": 2,
+    "ing029": 3,
+    "ing032": 3,
+    "ing034": 3,
+    "ing038": 3,
+    "ing043": 4,
+    "ing069": 4,
+    "ing072": 4,
+    "ing083": 4,
+    "ing107": 4,
+    "ing127": 5,
+    "ing130": 5,
+    "ing137": 5
+  },
+  "razones": {
+    "ing001": "Origen: una idea de un tecnólogo de JPL que parecía imposible (aire de Marte ~1% de la Tierra).",
+    "ing010": "Primera prueba real: un prototipo a escala real vuela en condiciones marcianas simuladas; la idea deja de ser teoría.",
+    "ing018": "Humano y cercano: una estudiante de secundaria de Alabama le pone el nombre (conecta con el público de 17 años).",
+    "ing019": "El viaje empieza: el helicóptero va escondido en el vientre del rover.",
+    "ing021": "El aterrizaje en Jezero: el momento de máxima tensión del viaje.",
+    "ing023": "Giro emotivo: lleva tela del ala del Wright Flyer de 1903.",
+    "ing026": "Primera vez que toca suelo marciano; empieza el desafío en solitario.",
+    "ing027": "Tensión: sobrevivir la primera noche a unos -90 °C con solo su batería.",
+    "ing029": "Fallo antes del vuelo: el temporizador watchdog corta la prueba y pone en riesgo todo.",
+    "ing032": "Vuelo 1: el primer vuelo propulsado en otro planeta. Clímax del acto.",
+    "ing034": "Se puede ver e ilustrar: primera imagen aérea en color de Marte.",
+    "ing038": "Giro: de demostración tecnológica a misión extendida; la apuesta funcionó.",
+    "ing043": "Crisis en pleno vuelo: un error de sellos de tiempo lo desestabiliza y aun así se recupera.",
+    "ing069": "Ingenuity pasa de probar a explorar: fotografía el paracaídas y la cubierta del aterrizaje de Perseverance.",
+    "ing072": "Primera pérdida de comunicación: Ingenuity falta a su cita con el rover (sol 427) por el invierno marciano y su energía limitada.",
+    "ing083": "Evoluciona: gran actualización de navegación para evitar peligros por sí solo.",
+    "ing107": "Récords de altitud y velocidad en Jurabi Point; el helicóptero se exige más allá de lo previsto.",
+    "ing127": "Desenlace: el vuelo 72, la comunicación se corta a ~1 m del suelo.",
+    "ing130": "NASA da por terminada la misión: cierre emocional del arco.",
+    "ing137": "Legado: el concepto Mars Chopper, sucesor de Ingenuity."
+  },
+  "cobertura_fases": {
+    "origen": "1/3",
+    "planificacion_y_desarrollo": "2/15",
+    "lanzamiento_y_viaje": "1/2",
+    "aterrizaje": "1/1",
+    "operaciones": "12/105",
+    "fin_de_mision": "2/9",
+    "legado": "1/6"
+  }
+}
