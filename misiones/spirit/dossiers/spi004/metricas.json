@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.2667218,
+  "turnos": 15,
+  "duracion_s": 128.2,
+  "duracion_api_s": 106.2,
+  "tokens": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 16436,
+    "cache_read_input_tokens": 67596,
+    "output_tokens": 12207,
+    "output_tokens_details": {
+      "thinking_tokens": 6206
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 16436
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1498,
+      "outputTokens": 35,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001673,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 10,
+      "outputTokens": 12207,
+      "cacheReadInputTokens": 67596,
+      "cacheCreationInputTokens": 16436,
+      "webSearchRequests": 0,
+      "costUSD": 0.2650488,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 6206,
+      "cacheCreationEphemeral5mInputTokens": 16436,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 10,
+    "buscar_web": 3,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "4",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.0915445,
+    "turnos": 2,
+    "duracion_s": 26.9,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 3837,
+        "outputTokens": 36,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004017,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 2292,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 4834,
+        "webSearchRequests": 0,
+        "costUSD": 0.08752750000000001,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 651,
+        "cacheCreationEphemeral5mInputTokens": 4834,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 14,
+      "datos_despues": 14,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Todos los datos del borrador están bien respaldados por sus citas, por lo que se conservan los 14. El relato se ajustó para eliminar detalles no respaldados (como la ubicación geográfica de los equipos en Colorado y California) y para no afirmar como hecho confirmado la llegada de Spirit y Opportunity en enero de 2004, dato que no aparece en las fuentes citadas."
+    }
+  },
+  "costo_usd_referencia_total": 0.35826630000000004,
+  "costos": {
+    "total_usd": 0.358267,
+    "por_paso": {
+      "investigacion": 0.266722,
+      "revision": 0.091545
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.00569,
+        "entrada": 5335,
+        "salida": 71,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.265049,
+        "entrada": 10,
+        "salida": 12207,
+        "cache_leida": 67596,
+        "cache_escrita": 16436,
+        "razonamiento": 6206
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.087528,
+        "entrada": 3,
+        "salida": 2292,
+        "cache_leida": 0,
+        "cache_escrita": 4834,
+        "razonamiento": 651
+      }
+    }
+  }
+}

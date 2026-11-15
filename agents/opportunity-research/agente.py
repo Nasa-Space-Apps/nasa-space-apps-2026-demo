@@ -91,6 +91,15 @@ class ErrorProveedor(Exception):
     """El proveedor falló antes de que el agente hiciera trabajo útil (credenciales, acceso al modelo, red)."""
 
 
+def evento_json(evento: dict, contexto: dict | None = None) -> str:
+    """Evento tal como lo ve el modelo. Las fuentes semilla de la misión (ficha.json) van primero para no perderse al recortar."""
+    ev = {k: v for k, v in evento.items() if k != "fuentes_extra"}
+    semilla = (contexto or {}).get("fuentes_semilla")
+    if semilla:
+        ev = {"fuentes_semilla_de_la_mision": semilla, **ev}
+    return json.dumps(ev, ensure_ascii=False, indent=1)[:9000]
+
+
 async def investigar(evento: dict, max_turnos: int, prov: proveedores.Proveedor, contexto: dict | None = None) -> tuple[Dossier, str, dict]:
     proveedores.aplicar(prov)
     sistema, version_sistema = prompts.sistema(contexto)
@@ -100,8 +109,7 @@ async def investigar(evento: dict, max_turnos: int, prov: proveedores.Proveedor,
         max_budget_usd=float(os.environ.get("PRESUPUESTO_USD", "2.0")) if prov.con_tope else None,
         output_format={"type": "json_schema", "schema": Dossier.model_json_schema()},
     )
-    prompt, version_usuario = prompts.mensaje_usuario(
-        json.dumps({k: v for k, v in evento.items() if k != "fuentes_extra"}, ensure_ascii=False, indent=1)[:9000])
+    prompt, version_usuario = prompts.mensaje_usuario(evento_json(evento, contexto))
     salida, met, llamadas = None, {}, {}
     print(f"Modo: {prov.etiqueta}")
     try:

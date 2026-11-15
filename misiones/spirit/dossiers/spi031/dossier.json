@@ -1,0 +1,168 @@
+{
+  "evento_id": "spi031",
+  "titulo": "Comanche: carbonatos de magnesio y hierro, prueba de un Marte húmedo y poco ácido",
+  "contexto_ampliado": "A finales de 2005, el rover Spirit de la NASA recorría las laderas de las Columbia Hills en el cráter Gusev, descendiendo desde la cima del Husband Hill hacia la cuenca interior, en dirección al campo de dunas El Dorado [10]. En diciembre de ese año, Spirit visitó un afloramiento rocoso al que los científicos bautizaron «Comanche» [0]. El afloramiento principal medía entre 4 y 5 metros de largo, y uno contiguo, llamado Comanche Spur, entre 1 y 2 metros [13]. Las rocas eran ricas en olivino, un mineral volcánico, pero mostraban signos claros de haber estado bañadas en agua [12]. Sin embargo, las lecturas del Espectrómetro Térmico en Miniatura (Mini-TES) resultaban difíciles de interpretar: el instrumento había quedado cubierto de polvo marciano meses antes de que Spirit llegara al lugar, y en aquel momento no existía una forma fiable de corregir esa distorsión [5].\n\nLos datos de Comanche permanecieron sin interpretación definitiva durante cuatro años. Lo que finalmente permitió descifrarlos fue el desarrollo de una calibración matemática capaz de eliminar los efectos espectrales del polvo sobre Mini-TES [6]. Con esa corrección en mano, un equipo liderado por Richard V. Morris, del Centro Espacial Johnson de la NASA [14], cruzó los datos de tres instrumentos —el espectrómetro Mössbauer, Mini-TES y el Espectrómetro de Rayos X de Partículas Alfa (APXS)— y todos coincidieron: el carbonato de magnesio y hierro representaba entre el 16 y el 34 % del peso de las rocas de Comanche [4]. Los resultados se publicaron el 3 de junio de 2010 en la revista Science [1].\n\nLa concentración hallada fue extraordinaria: aproximadamente un 25 % de carbonato en peso, la mayor abundancia detectada hasta entonces en Marte [2], diez veces superior a la de cualquier otra roca marciana estudiada previamente [3]. Los carbonatos solo se forman y sobreviven en presencia de agua con pH cercano al neutro, ya que el agua ácida los destruye rápidamente. Mientras que en otras regiones el rover Opportunity encontraba evidencia de agua fuertemente ácida, Comanche contaba una historia diferente: el agua que formó esos carbonatos fue líquida, químicamente neutra y abundante [7].\n\nLos científicos determinaron que los carbonatos de Comanche precipitaron en condiciones hidrotermales, con pH casi neutro, asociadas a actividad volcánica durante el período Noáquico, hace más de 3 500 millones de años [8]. Aquellas condiciones —un Marte cálido y húmedo, con una atmósfera de CO₂ más densa y agua de pH casi neutro— habrían sido mucho más favorables para la vida que el entorno ácido encontrado en otros sitios [15].\n\nAdemás, la alta concentración de carbonatos en Comanche respalda los modelos climáticos que postulan un Marte antiguo con un fuerte efecto invernadero de CO₂ y posterior secuestro de al menos parte de esa atmósfera en minerales carbonatados [9]. Un detalle adicional conecta este hallazgo con décadas de investigación: la composición promedio del carbonato de Comanche se aproxima notablemente a la de los glóbulos de carbonato del meteorito marciano ALH 84001 [11], uno de los fragmentos de Marte más estudiados en la Tierra.\n\nEste descubrimiento ilustra un aspecto poco conocido de la exploración espacial: las misiones robóticas generan archivos científicos enormes que los investigadores siguen analizando años después de la exploración original. Los datos de Comanche habían estado disponibles desde 2005, pero sin la herramienta correcta para interpretarlos, su verdadero significado permaneció oculto hasta 2010.",
+  "datos_reales": [
+    {
+      "afirmacion": "Spirit visitó el afloramiento Comanche en diciembre de 2005",
+      "fuente_url": "https://www.eurekalert.org/news-releases/534774",
+      "cita": "Spirit visited the outcrop, dubbed Comanche, back in December 2005.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El artículo científico sobre Comanche se publicó el 3 de junio de 2010 en la revista Science (Morris et al., Science, 329, 421-424)",
+      "fuente_url": "https://www.eurekalert.org/news-releases/534774",
+      "cita": "a report published online June 3 in the journal Science",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las rocas de Comanche son aproximadamente 25% carbonato en peso, la mayor abundancia detectada hasta entonces en Marte",
+      "fuente_url": "https://www.eurekalert.org/news-releases/534774",
+      "cita": "The rocks are about 25 percent carbonate by weight, by far the highest abundance we've seen on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La abundancia de carbonatos en Comanche es 10 veces mayor que en cualquier otra roca marciana estudiada anteriormente",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+      "cita": "Spirit found rocks 10 times richer in key chemicals (magnesium and iron carbonates) than any other Martian rocks studied before.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los tres instrumentos de Spirit (MB, Mini-TES, APXS) coincidieron en que el carbonato de Mg-Fe ocupa entre el 16 y el 34% del peso de las rocas de Comanche",
+      "fuente_url": "https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20100039619.pdf",
+      "cita": "The data from all three instruments in combination are best matched by Mg-Fe carbonate with an abundance of 16-34 wt%.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El descubrimiento tardó cuatro años porque Mini-TES había quedado cubierto de polvo marciano meses antes de que Spirit llegara a Comanche",
+      "fuente_url": "https://www.eurekalert.org/news-releases/534774",
+      "cita": "Mini-TES got dusted months before Spirit reached Comanche, and we didn't have a good way to correct for the dust effects at the time.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Lo que permitió identificar los carbonatos fue el desarrollo de una calibración para eliminar los efectos espectrales del polvo en Mini-TES",
+      "fuente_url": "https://www.eurekalert.org/news-releases/534774",
+      "cita": "What finally did the trick was developing a calibration to remove the spectral effects of the dust on the instrument.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El agua que formó los carbonatos de Comanche fue líquida, químicamente neutra y abundante (a diferencia del agua ácida de Meridiani)",
+      "fuente_url": "https://www.eurekalert.org/news-releases/534774",
+      "cita": "finding outcrops of carbonate rock shows that the hydrothermal water at Comanche was liquid, chemically neutral, and abundant.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit analizó los afloramientos de Comanche mientras descendía desde la cima del Husband Hill hacia la cuenca interior de las Columbia Hills en el cráter Gusev, en dirección al campo de dunas El Dorado, a finales de 2005",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20100042326",
+      "cita": "Spirit analyzed a series of olivine-rich outcrops while descending from the summit region of Husband Hill into the Inner Basin of the Columbia Hills of Gusev Crater to the eastern edge of the El Dorado ripple field in late 2005.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las rocas de Comanche son ricas en olivino (mineral volcánico) pero muestran signos de haber estado bañadas en agua",
+      "fuente_url": "https://www.eurekalert.org/news-releases/534774",
+      "cita": "The outcrops are very rich in olivine, a volcanic mineral, but they appear to have been soaked in water.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El afloramiento Comanche mide 4-5 metros de largo y el contiguo Comanche Spur mide 1-2 metros",
+      "fuente_url": "https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20100039619.pdf",
+      "cita": "Mini-TES spectra were acquired for 12 targets at various locations on the Comanche (4-5 m long) and Comanche Spur (1-2 m long) outcrops",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El autor principal del artículo científico es Richard V. Morris, del Centro Espacial Johnson de la NASA",
+      "fuente_url": "https://www.eurekalert.org/news-releases/534774",
+      "cita": "whose lead author is Richard V. Morris of NASA's Johnson Space Center in Houston",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las rocas de Comanche se formaron cuando Marte era cálido y húmedo, con una atmósfera de CO₂ más densa y agua de pH casi neutro, condiciones más favorables para la vida",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+      "cita": "These rocks formed when Mars was warm and wet (with a thicker carbon-dioxide atmosphere and near-neutral-pH water). This warmer, watery environment could have supported life much better than the harshly acidic conditions the rover found elsewhere.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Discovery of Carbonate-Rich Outcrops in the Gusev Crater Columbia Hills by the MER Rover Spirit (Morris et al., 2010) — NTRS Abstract",
+      "url": "https://ntrs.nasa.gov/citations/20100042326",
+      "editor": "NASA NTRS / Johnson Space Center",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Mini-TES Observations of Comanche Carbonate and Its Distribution (Ruff & Morris, 2010) — NTRS Extended Abstract",
+      "url": "https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20100039619.pdf",
+      "editor": "NASA NTRS / Johnson Space Center",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "ASU instrument on NASA rover helps identify outcrop of long-sought carbonate minerals on Mars (EurekAlert, junio 2010)",
+      "url": "https://www.eurekalert.org/news-releases/534774",
+      "editor": "EurekAlert / Arizona State University",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "MER Science Highlights — Bathing in Neutral Water in a Warmer Climate",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "El evento original indica que los datos se recogieron 'a fines de 2005' sin precisar mes, mientras que el dato [0] (eurekalert.org/news-releases/534774) especifica 'diciembre de 2005'. No es una contradicción propiamente dicha, pero el evento original es más vago que la fuente.",
+    "El evento original dice 'unas 10 veces más carbonatos de magnesio y hierro que en cualquier otra roca marciana estudiada'. El dato [2] (misma URL de EurekAlert) cifra la abundancia en 'about 25 percent carbonate by weight', mientras que el dato [4] (ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20100039619.pdf) da un rango de 16-34 wt%. Ambas cifras son compatibles, pero el evento original no menciona ningún porcentaje concreto, lo cual impide verificar si el '~10×' se refiere al 25 % o al extremo del rango."
+  ],
+  "huecos": [
+    "No se pudo acceder al comunicado de prensa original de JPL del 3 de junio de 2010 (la página jpl.nasa.gov/news/nasa-rover-finds-clue-to-mars-past-and-environment-for-life/ devolvió contenido vacío).",
+    "No se verificó el número de sol exacto en que Spirit llegó y analizó el afloramiento Comanche (solo se confirmó 'diciembre de 2005').",
+    "No se pudo leer el texto completo del artículo original en Science (Morris et al., Science, 329, 421-424, 2010); solo se dispone de los resúmenes de los abstracts de NTRS.",
+    "No se verificó si Comanche Spur aportó datos independientes al artículo o si se trató exclusivamente de Comanche para las conclusiones principales.",
+    "No se confirmó el porcentaje exacto de cada componente del carbonato (Mc62Sd25Cc11Rh2 se menciona en el abstract de NTRS pero no pudo verificarse en el artículo publicado).",
+    "El borrador narrativo incluía una cita atribuida al científico Steve Ruff de la ASU ('El nuevo hallazgo muestra que este conjunto de datos todavía alberga descubrimientos potencialmente importantes'), pero ningún dato numerado del dossier la respalda con cita literal; se eliminó del relato.",
+    "No se confirma en ninguna fuente del dossier que Mini-TES fuera desarrollado por la Universidad Estatal de Arizona (ASU), aunque Steve Ruff aparece asociado a esa institución en la fuente de EurekAlert. El dato no está documentado formalmente.",
+    "El evento original menciona que 'indica agua de pH casi neutro en un Marte más cálido y con una atmósfera de CO₂ más densa'; los datos [8], [9] y [15] respaldan cada parte por separado, pero no se encontró una fuente única que reúna las tres afirmaciones en una sola oración tal como las formula el evento."
+  ],
+  "ideas_visuales": [
+    "Vista del rover Spirit descendiendo por la ladera del Husband Hill con los afloramientos de Comanche (4-5 m) y Comanche Spur (1-2 m) visibles en primer plano, basada en datos [10] y [13].",
+    "Primer plano del instrumento Mini-TES cubierto de polvo marciano, mostrando la capa que distorsionaba las mediciones espectrales, según dato [5].",
+    "Diagrama comparativo: barra de carbonatos en Comanche (~25 % en peso) frente a una barra 10 veces menor representando otras rocas marcianas, basado en datos [2] y [3].",
+    "Esquema de corte transversal del subsuelo marciano noáquico: fuente hidrotermal volcánica empujando agua neutra hacia la superficie, donde precipitan carbonatos de Mg-Fe sobre rocas de olivino, según datos [7], [8] y [12].",
+    "Comparación visual lado a lado del carbonato de Comanche y los glóbulos de carbonato del meteorito ALH 84001, ilustrando la similitud composicional del dato [11]."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Los carbonatos de Comanche precipitaron en condiciones hidrotermales con pH casi neutro, asociadas a actividad volcánica durante el Noáquico",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20100042326",
+      "cita": "Comanche carbonate precipitated from aqueous solutions under hydrothermal conditions at near neutral pH in association with volcanic activity during the Noachian era.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La alta concentración de carbonatos en Comanche respalda modelos climáticos de un Marte antiguo cálido y húmedo con efecto invernadero de CO₂, parte del cual quedó secuestrado en minerales carbonatados",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20100042326",
+      "cita": "The high carbonate concentration in the Comanche outcrops supports climate models involving a CO2 greenhouse gas on a wet and warm early Mars and subsequent sequestering of at least part of that atmosphere in carbonate minerals.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La composición del carbonato de Comanche es similar a la de los glóbulos de carbonato del meteorito marciano ALH 84001",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20100042326",
+      "cita": "The average composition of Comanche carbonate approximates the average composition of the carbonate globules in Martian meteorite ALH 84001.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

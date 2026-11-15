@@ -1,0 +1,102 @@
+{
+  "mision": "spirit",
+  "n": 20,
+  "generado": "2026-11-15T02:17:59",
+  "ids": [
+    "spi001",
+    "spi004",
+    "spi006",
+    "spi010",
+    "spi011",
+    "spi013",
+    "spi017",
+    "spi021",
+    "spi028",
+    "spi031",
+    "spi035",
+    "spi037",
+    "spi040",
+    "spi048",
+    "spi057",
+    "spi061",
+    "spi066",
+    "spi069",
+    "spi076",
+    "spi080"
+  ],
+  "actos": [
+    {
+      "n": 1,
+      "titulo": "Nacer: de una idea a dos rovers"
+    },
+    {
+      "n": 2,
+      "titulo": "Llegar y casi perderlo"
+    },
+    {
+      "n": 3,
+      "titulo": "Escalar y descubrir"
+    },
+    {
+      "n": 4,
+      "titulo": "Resistir con una rueda rota"
+    },
+    {
+      "n": 5,
+      "titulo": "El silencio y el legado"
+    }
+  ],
+  "asignacion": {
+    "spi001": 1,
+    "spi006": 1,
+    "spi004": 1,
+    "spi010": 1,
+    "spi011": 1,
+    "spi013": 2,
+    "spi017": 2,
+    "spi021": 2,
+    "spi037": 3,
+    "spi031": 3,
+    "spi035": 3,
+    "spi048": 3,
+    "spi028": 4,
+    "spi040": 4,
+    "spi057": 4,
+    "spi061": 4,
+    "spi066": 4,
+    "spi069": 5,
+    "spi076": 5,
+    "spi080": 5
+  },
+  "razones": {
+    "spi001": "Origen: Steve Squyres concibe un rover científico en 1987; una idea que tardó 16 años en volar.",
+    "spi006": "Giro: en una reunión Goldin pregunta «¿y si son dos rovers?», y nace la misión gemela.",
+    "spi004": "Tensión: se pierden el Mars Climate Orbiter y el Mars Polar Lander; la misión no puede fallar.",
+    "spi010": "Humano y cercano: se revelan los nombres Spirit y Opportunity.",
+    "spi011": "El viaje empieza: lanzamiento de Spirit el 10 jun 2003.",
+    "spi013": "Aterrizaje en Gusev: momento de máxima tensión (discutido: fecha PST vs UTC).",
+    "spi017": "Crisis: el sol 18 Spirit deja de comunicarse por un fallo de la memoria flash.",
+    "spi021": "Solución: reformatean la memoria y Spirit vuelve a estar sano; cierra el arco del susto.",
+    "spi037": "Hito: Spirit corona Husband Hill, la primera colina escalada por un rover (discutido).",
+    "spi031": "Ciencia: Comanche, carbonatos que prueban un Marte húmedo y poco ácido.",
+    "spi035": "Imagen memorable: un remolino de polvo limpia los paneles solares (discutido).",
+    "spi048": "El gran hallazgo: sílice casi pura, descubierta por una rueda rota (discutido).",
+    "spi028": "Problema y solución: la rueda delantera derecha falla y Spirit conduce hacia atrás.",
+    "spi040": "Falla: se rompe el motor de la rueda delantera derecha (sol 779).",
+    "spi057": "Clímax: Spirit rompe la costra de arena y queda atrapado en Troy (discutido).",
+    "spi061": "Esfuerzo: el intento de «liberar a Spirit» con un rover de pruebas en la Tierra.",
+    "spi066": "Giro: NASA declara a Spirit una plataforma de investigación estacionaria.",
+    "spi069": "Desenlace: la última comunicación de Spirit el 22 de marzo de 2010 (discutido).",
+    "spi076": "NASA anuncia que cesa los intentos de contactarlo.",
+    "spi080": "Legado: un análisis de 2026 de datos antiguos sugiere hematita y magnetita alterada (discutido)."
+  },
+  "cobertura_fases": {
+    "origen": "3/6",
+    "planificacion_y_desarrollo": "1/4",
+    "lanzamiento_y_viaje": "1/2",
+    "aterrizaje": "3/10",
+    "operaciones": "9/47",
+    "fin_de_mision": "2/8",
+    "legado": "1/3"
+  }
+}

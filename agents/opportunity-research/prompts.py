@@ -6,6 +6,7 @@ La clave `version` se guarda en metricas.json para comparar corridas entre versi
 Los prompts son neutros a la misión: `{mision}` y `{publico}` se reemplazan con el contexto de la misión
 (ver `mision.contexto_prompt`). Sin contexto se usan valores neutros.
 """
+import os
 from pathlib import Path
 
 CARPETA = Path(__file__).parent / "prompts"
@@ -31,7 +32,8 @@ def cargar(nombre: str, contexto: dict | None = None) -> tuple[str, str]:
 
 
 def sistema(contexto: dict | None = None) -> tuple[str, str]:
-    return cargar("investigador", contexto)
+    """PROMPT_INVESTIGADOR elige otro archivo de prompts/ (p. ej. `investigador_v3` para comparar o volver atrás)."""
+    return cargar(os.environ.get("PROMPT_INVESTIGADOR") or "investigador", contexto)
 
 
 def mensaje_usuario(evento_json: str) -> tuple[str, str]:

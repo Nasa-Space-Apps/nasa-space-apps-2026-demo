@@ -18,6 +18,8 @@ CACHE.mkdir(exist_ok=True)
 CORPUS_F = CACHE / "corpus.json"
 UA = {"User-Agent": "opportunity-research-agent/0.1 (proyecto educativo)"}
 MAX_CHARS = 12000
+PRESUPUESTO_RECORTE = 7000  # tope de caracteres cuando leer_pagina recibe `palabras` y la página es larga
+CORTE = "\n[…]\n"
 
 try:
     CORPUS: dict[str, str] = json.loads(CORPUS_F.read_text(encoding="utf-8"))
@@ -119,8 +121,42 @@ async def _extraer_crawl4ai(url: str) -> str:
         return (r.markdown or "") if r.success else ""
 
 
-@tool("leer_pagina", "Descarga una página web y devuelve su texto limpio (hasta 12.000 caracteres). Úsala para leer una fuente antes de citarla.",
-      {"url": str, "desde_caracter": int})
+def recortar(texto: str, palabras: str | None, presupuesto: int = PRESUPUESTO_RECORTE, cabeza: int = 2000, ventana: int = 600) -> str:
+    """Si la página es larga y hay `palabras` (términos separados por comas), devuelve el inicio más los pasajes que las
+    contienen, en orden y sin superar `presupuesto`. Todo trozo es literal del original, así las citas siguen verificándose
+    contra el texto completo guardado en el corpus. Sin palabras, sin coincidencias o con página corta: el comportamiento de siempre."""
+    claves = [p.strip().lower() for p in (palabras or "").split(",") if len(p.strip()) >= 3]
+    if not claves or len(texto) <= presupuesto:
+        return texto[:MAX_CHARS]
+    bajo, tramos = texto.lower(), []
+    for k in claves:
+        i = bajo.find(k)
+        for _ in range(20):
+            if i < 0:
+                break
+            tramos.append((max(0, i - ventana), min(len(texto), i + len(k) + ventana)))
+            i = bajo.find(k, i + len(k))
+    if not tramos:
+        return texto[:MAX_CHARS]
+    unidos: list[list[int]] = []
+    for a, b in sorted(tramos + [(0, min(cabeza, len(texto)))]):
+        if unidos and a <= unidos[-1][1]:
+            unidos[-1][1] = max(unidos[-1][1], b)
+        else:
+            unidos.append([a, b])
+    piezas, usado = [], 0
+    for a, b in unidos:
+        if piezas and usado + (b - a) > presupuesto:
+            break
+        piezas.append(texto[a:b])
+        usado += b - a
+    return CORTE.join(piezas)
+
+
+@tool("leer_pagina", "Descarga una página web y devuelve su texto limpio (hasta 12.000 caracteres). Úsala para leer una fuente antes de citarla. "
+      "En `palabras` pasa 3-6 términos del evento separados por comas (o vacío): si la página es larga devuelve el inicio y los pasajes "
+      "con esos términos, marcando los saltos con […]. `desde_caracter` mayor que 0 lee ese tramo completo.",
+      {"url": str, "desde_caracter": int, "palabras": str})
 async def leer_pagina(args):
     url, ini = args["url"], int(args.get("desde_caracter") or 0)
     if not await asyncio.to_thread(url_segura, url):
@@ -140,7 +176,9 @@ async def leer_pagina(args):
                     return _err(f"no se pudo leer: {type(e).__name__}: {str(e)[:150]}")
         _cache_set(f"pag|{url}", texto)
     guardar_corpus(url, texto)
-    return _ok({"url": url, "total_caracteres": len(texto), "desde": ini, "texto": texto[ini:ini + MAX_CHARS]})
+    mostrado = recortar(texto, args.get("palabras")) if ini == 0 else texto[ini:ini + MAX_CHARS]
+    return _ok({"url": url, "total_caracteres": len(texto), "desde": ini, "texto": mostrado,
+                **({"recortado": True} if mostrado != texto[:MAX_CHARS] else {})})
 
 
 # ---------------- NTRS ----------------

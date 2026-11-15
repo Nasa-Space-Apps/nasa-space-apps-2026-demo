@@ -1,0 +1,147 @@
+{
+  "evento_id": "spi080",
+  "titulo": "Un nuevo análisis de datos antiguos de Spirit revela hematita y magnetita alterada en el suelo de Marte",
+  "contexto_ampliado": "El rover Spirit aterrizó en el cráter Gusev el 3 de enero de 2004 con la misión de buscar señales de agua pasada en Marte. Tras años de trabajo, concluyó su misión en 2010, pero las miles de mediciones que realizó quedaron almacenadas en archivos digitales, esperando nuevas preguntas.\n\nEn 2026, el profesor Paulo de Souza, investigador de Edith Cowan University, publicó un estudio en la revista Interactions (Springer, volumen 247, artículo 278) donde revisitó esos datos con una estrategia ingeniosa. El instrumento protagonista es el MIMOS II, un espectrómetro Mössbauer miniaturizado que Spirit llevaba a bordo. Este equipo opera en geometría de retrodispersión con cuatro diodos Si-PIN capaces de detectar rayos gamma de 14,4 keV del Fe-57: en términos más simples, mide cómo los átomos de hierro de una muestra absorben radiación, y cada mineral con hierro deja una \"huella espectral\" única.\n\nEl problema durante la misión era que todos los equipos científicos competían por los recursos limitados del rover —tiempo, energía y memoria—, así que las mediciones individuales resultaban estadísticamente pobres. Por ello, las fases minerales de hierro presentes en cantidades menores al 5 % eran muy difíciles de identificar. Las fases más comunes que sí se detectaron en el suelo de Gusev fueron olivino, piroxenos, una fase de Fe³⁺ no cristalino (npFe³⁺) y, en algunos casos, magnetita.\n\nLa solución de De Souza fue acumular. Seleccionó 32 puntos de suelo sin alterar que MIMOS II midió durante los 2 062 soles de operación de Spirit en Gusev y los combinó en un único espectro compuesto. Para que la combinación fuese válida, tuvo en cuenta que en muestras basálticas las variaciones de temperatura entre 190 K y 270 K no afectan significativamente los espectros Mössbauer, lo que permite integrar datos tomados en distintos momentos del día marciano. El espectro resultante equivale aproximadamente a seis días continuos de medición, un volumen de datos muy superior al de cualquier experimento individual.\n\nEse espectro compuesto reveló señales más claras de magnetita y hematita cristalina de las que los análisis individuales habían podido detectar. Según de Souza, encontrar hematita cristalina en suelo marciano ordinario —no en una región geológicamente excepcional— fue uno de los hallazgos más importantes del estudio.\n\n¿Por qué importa la hematita cristalina? De Souza afirma que la presencia generalizada de este mineral sugiere que el agua estuvo presente y que áreas significativas de Marte pudieron haber estado cubiertas por agua. Es importante subrayar que esta interpretación se presenta como una hipótesis sugerida por los datos, no como una conclusión definitiva.\n\nFinalmente, el estudio demuestra que los archivos de misiones pasadas siguen siendo una fuente viva de información. Los investigadores planean aplicar el mismo método a los datos del rover Opportunity en Meridiani Planum, lo que podría ofrecer una comparación entre dos regiones muy distintas de Marte y ampliar el retrato del planeta en su pasado húmedo.",
+  "datos_reales": [
+    {
+      "afirmacion": "Las fases de hierro más comunes detectadas en el suelo del cráter Gusev durante la misión original fueron olivino, piroxenos, Fe³⁺ no cristalino (npFe³⁺) y, en ocasiones, magnetita.",
+      "fuente_url": "https://doi.org/10.1007/s10751-026-02625-4",
+      "cita": "The most common phases present on the soil targets analyzed at the Gusev crater were olivine, pyroxenes, npFe3+, and eventually magnetite",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las mediciones individuales de MIMOS II tenían estadísticas relativamente pobres porque todos los equipos científicos competían por los recursos limitados del rover (tiempo, energía y memoria), dificultando la detección de fases menores de hierro por debajo del 5 % WSA.",
+      "fuente_url": "https://doi.org/10.1007/s10751-026-02625-4",
+      "cita": "Mössbauer experiments on Mars were time-constrained as all scientific teams competed for a resource-limited rover. Resources include mostly time, power, and memory. Therefore, one could expect all Mössbauer experiments to have limited accumulation time resulting in relatively of poor statistics. Therefore, minor Fe-bearing mineral phases were difficult to identify.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En muestras basálticas, las variaciones de temperatura entre 190 K y 270 K no afectan significativamente los espectros Mössbauer, lo que permite integrar datos tomados en diferentes intervalos de temperatura.",
+      "fuente_url": "https://doi.org/10.1007/s10751-026-02625-4",
+      "cita": "temperature variations between 190 K and 270 K in basaltic samples do not significantly impact the spectra, allowing data from all intervals to be integrated",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El estudio combinó 32 puntos de suelo sin alterar medidos por MIMOS II durante los 2 062 soles de operación de Spirit en Gusev.",
+      "fuente_url": "https://doi.org/10.1007/s10751-026-02625-4",
+      "cita": "32 undisturbed soil spots were analyzed by MIMOS II on Spirit rover. The results of these experiments were recorded at different local time on Mars and therefore conducted over a wide range of temperature ranges.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El espectro compuesto resultante equivale aproximadamente a seis días continuos de tiempo de medición.",
+      "fuente_url": "https://www.sci.news/space/early-mars-water-14954.html",
+      "cita": "The result was roughly six days worth of equivalent measurement time packed into a single dataset.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El espectro compuesto reveló señales más claras de magnetita y hematita cristalina de las que los análisis individuales habían podido detectar.",
+      "fuente_url": "https://www.sci.news/space/early-mars-water-14954.html",
+      "cita": "it also revealed clearer signatures of magnetite and crystalline hematite than earlier single-experiment analyses were able to pick out",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según de Souza, encontrar hematita cristalina en suelo marciano ordinario fue uno de los hallazgos más importantes del estudio.",
+      "fuente_url": "https://www.sci.news/space/early-mars-water-14954.html",
+      "cita": "\"One of the most important discoveries was finding crystalline hematite in ordinary Martian soil,\" Professor de Souza said.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "De Souza afirma que la presencia generalizada de hematita cristalina sugiere que el agua estuvo presente y que significativas áreas de Marte pudieron haber estado cubiertas por agua.",
+      "fuente_url": "https://www.sci.news/space/early-mars-water-14954.html",
+      "cita": "\"This mineral's widespread presence suggests not only that water was present, but that significant areas of Mars may have once been covered by water.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El artículo fue publicado en la revista Interactions (Springer), volumen 247, artículo 278, con DOI 10.1007/s10751-026-02625-4, bajo el título 'A consolidated Mössbauer spectrum for undisturbed soils from Gusev Crater, Mars'.",
+      "fuente_url": "https://www.sci.news/space/early-mars-water-14954.html",
+      "cita": "P. de Souza. 2026. A consolidated Mössbauer spectrum for undisturbed soils from Gusev Crater, Mars. Interactions 247, 278; doi: 10.1007/s10751-026-02625-4",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El autor es el profesor Paulo de Souza, investigador de Edith Cowan University.",
+      "fuente_url": "https://www.sci.news/space/early-mars-water-14954.html",
+      "cita": "said Professor Paulo de Souza, a researcher at Edith Cowan University.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit aterrizó en el cráter Gusev el 3 de enero de 2004 con el objetivo de buscar señales de agua pasada en Marte, y concluyó su misión en 2010.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "(Spirit) Jan. 3, 2004 [...] Spirit concluded its mission in 2010.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los investigadores planean aplicar el mismo método a los datos del rover Opportunity en Meridiani Planum para crear una imagen comparativa del agua marciana.",
+      "fuente_url": "https://www.sciencetimes.com/articles/62313/20260805/nasas-spirit-rover-data-reveals-strong-new-evidence-that-ancient-mars-had-more-water.htm",
+      "cita": "Researchers plan to examine Opportunity rover soils from Meridiani Planum, potentially creating another detailed picture of water on Mars.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "A consolidated Mössbauer spectrum for undisturbed soils from Gusev Crater, Mars (artículo original)",
+      "url": "https://doi.org/10.1007/s10751-026-02625-4",
+      "editor": "Springer / Interactions",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Hidden Clues in Spirit Rover Data Suggest Mars Once Had Far More Water than Scientists Realized",
+      "url": "https://www.sci.news/space/early-mars-water-14954.html",
+      "editor": "Sci.News",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "NASA's Spirit Rover Data Reveals Strong New Evidence That Ancient Mars Had More Water",
+      "url": "https://www.sciencetimes.com/articles/62313/20260805/nasas-spirit-rover-data-reveals-strong-new-evidence-that-ancient-mars-had-more-water.htm",
+      "editor": "Science Times",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Mars Exploration Rovers Spirit and Opportunity – NASA Science",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Rango de temperaturas de medición: Sci.News indica que los datos de Spirit abarcaron temperaturas 'from 180 to 300 K' (https://www.sci.news/space/early-mars-water-14954.html), mientras que el artículo original en Interactions menciona que las variaciones en muestras basálticas 'between 190 K and 270 K do not significantly impact the spectra' (https://doi.org/10.1007/s10751-026-02625-4). Podrían no ser contradictorios —180-300 K como rango total de medición y 190-270 K como sub-rango de estabilidad basáltica—, pero los valores no son idénticos y no es posible confirmar cuál corresponde al rango global declarado en el artículo a partir del texto disponible.",
+    "El evento original describe el hallazgo como 'hematita cristalina y magnetita alterada', pero ninguna de las fuentes citadas en el dossier (ni el artículo en Interactions vía DOI ni Sci.News) usa la expresión 'magnetita alterada': el dato [6] (Sci.News) solo habla de 'magnetite and crystalline hematite' y el dato [1] (artículo original) menciona 'magnetite' sin calificarla como 'alterada'. No queda claro de dónde procede el adjetivo 'alterada' del evento.",
+    "El título del borrador dice que el análisis 'revela' hematita y magnetita, mientras que el evento original usa 'sugiere', coherente con el tono cauteloso del dato [8] donde de Souza emplea 'suggests' y 'may have'. El verbo 'revela' sobreinterpreta las fuentes."
+  ],
+  "huecos": [
+    "El texto completo del artículo accedido vía DOI fue recortado; no se pudo leer la sección de resultados detallados ni los porcentajes exactos de hematita y magnetita detectados en el espectro compuesto.",
+    "Science Times no identifica al autor ni cita la revista, por lo que su cobertura no puede usarse como fuente independiente de verificación del autor o la publicación.",
+    "No se encontraron artículos en NTRS relacionados con este estudio específico de 2026, lo que impide triangular los datos con literatura técnica de la NASA.",
+    "No se ha podido confirmar si el estudio ha recibido revisión crítica independiente por otros especialistas en espectroscopía Mössbauer marciana ni si el consenso científico más amplio respalda la interpretación sobre cobertura de agua extensa.",
+    "El evento original menciona 'temperaturas de medición de entre 180 y 300 K' como dato clave, pero el dossier solo confirma el sub-rango de estabilidad basáltica (190-270 K, dato [3]). La cifra 180-300 K aparece atribuida a Sci.News en la contradicción del borrador, pero ningún dato numerado la respalda con cita textual.",
+    "El relato del borrador afirmaba que 'el vulcanismo también puede producir hematita', pero ninguno de los 13 datos del dossier respalda esa afirmación; se eliminó del contexto ampliado.",
+    "No se confirma en ninguna fuente el mecanismo específico de formación de la hematita cristalina (interacción hierro-agua durante períodos prolongados) que el borrador mencionaba; los datos solo recogen la sugerencia general de de Souza sobre presencia de agua."
+  ],
+  "ideas_visuales": [
+    "Diagrama del espectrómetro MIMOS II en el brazo robótico de Spirit, mostrando los cuatro diodos Si-PIN y la geometría de retrodispersión (dato [0]).",
+    "Mapa o esquema del cráter Gusev señalando los 32 puntos de suelo sin alterar analizados a lo largo de la travesía de Spirit (datos [4] y [11]).",
+    "Comparación visual entre un espectro Mössbauer individual (con señales débiles y ruidosas) y el espectro compuesto de seis días equivalentes, destacando los picos de hematita cristalina y magnetita (datos [2], [5] y [6]).",
+    "Infografía tipo línea de tiempo: Spirit aterriza en 2004, concluye en 2010, y en 2026 de Souza publica el reanálisis (datos [9], [10] y [11]).",
+    "Ilustración conceptual de Marte con áreas extensas cubiertas por agua, con un asterisco indicando que es una hipótesis (dato [8])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El espectrómetro MIMOS II, a bordo de Spirit, es un espectrómetro Mössbauer miniaturizado que opera en geometría de retrodispersión con cuatro diodos Si-PIN para detectar rayos gamma de 14,4 keV del Fe-57.",
+      "fuente_url": "https://doi.org/10.1007/s10751-026-02625-4",
+      "cita": "MIMOS II instrument utilized by the Mars Exploration Rover (MER) is a miniaturized Mössbauer spectrometer that operates in backscattering geometry using four Si-PIN diodes. These diodes can detect both the recoilless emission and absorption of the 14.4 keV γ-rays of 57Fe",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

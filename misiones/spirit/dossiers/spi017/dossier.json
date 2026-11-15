@@ -1,0 +1,135 @@
+{
+  "evento_id": "spi017",
+  "titulo": "Sol 18: Spirit entra en un ciclo de más de 125 reinicios por saturación de la memoria flash",
+  "contexto_ampliado": "El Sol 18 de la misión (21 de enero de 2004) debía ser un día importante para Spirit: el rover tenía su brazo robótico —el IDD, Instrument Deployment Device— extendido hacia la roca Adirondack y se preparaba para usar sobre ella el instrumento de abrasión de rocas, conocido como RAT [5]. Sin embargo, algo salió muy mal.\n\nSpirit entró en un bucle de reinicios continuos: su computadora se reinició más de 125 veces sin lograr completar el arranque ni apagarse para entrar en modo de reposo. Al no poder descansar, el rover terminó agotando su energía y entrando en modo de bajo consumo [0].\n\n¿Cuál fue la causa? Spirit contaba con 256 megabytes de memoria flash, un sistema de almacenamiento similar a las tarjetas de memoria de las cámaras digitales, donde se guardaban datos de forma permanente [1]. Además, disponía de 128 megabytes de RAM, una memoria de trabajo que se borraba cada vez que la computadora se apagaba [2]. Tras siete meses de viaje desde la Tierra más 18 días de operaciones en Marte, se habían acumulado tantos archivos en la flash que la RAM ya no tenía capacidad suficiente para gestionarlos [3]. Como explicó la directora de misión Jennifer Trosper, «el espacio de RAM requerido para gestionar todos los archivos de la flash era claramente mayor de lo que habíamos anticipado» [4].\n\nUn factor que hizo difícil prever el problema fue que el test operacional más largo realizado antes del lanzamiento había durado solo 10 días. En el Sol 18, Spirit ya llevaba bastante más tiempo funcionando con operaciones reales, en un escenario que ninguna prueba previa había cubierto [6].\n\nLos intentos de comunicación fueron angustiantes. Cuando por fin se logró establecer una sesión, los datos recibidos estaban corrompidos: las marcas de tiempo indicaban el año 2053 [7]. La velocidad de transmisión había caído a apenas 10 bits por segundo y la sesión se cortó tras solo 9 minutos [8].\n\nEl equipo del JPL manejó tres hipótesis para explicar lo sucedido: corrupción del módulo de gestión de archivos en la memoria flash, un posible fallo de hardware en la placa de control de motores, y un evento solar —una llamarada detectada por el orbitador Mars Odyssey— que habría bombardeado la superficie marciana con iones y neutrones energéticos [10].\n\nLa solución llegó gracias a la intuición del arquitecto jefe de software del equipo. Se envió un comando de hardware para que, durante la inicialización, el sistema operativo no intentara montar la memoria flash. Con esa maniobra, el software arrancó con normalidad por primera vez en días [11]. Luego, los ingenieros prepararon la eliminación de cientos de archivos del viaje interplanetario para aliviar la carga sobre la flash [12].\n\nEl estado oficial del rover pasó de «crítico» a «grave» y finalmente a «en recuperación», según anunció el director del proyecto, Pete Theisinger [9]. El incidente dejó una lección clara: incluso las pruebas más rigurosas en la Tierra no pueden replicar exactamente lo que ocurre cuando un sistema real acumula meses de operación continua en otro planeta.",
+  "datos_reales": [
+    {
+      "afirmacion": "Spirit se reinició de forma continua más de 125 veces durante la crisis, sin poder apagarse ni entrar en modo de reposo.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "Spirit rebooted itself more than 125 times, was unable to shut down and go to sleep, and wound up going to low power.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La memoria flash de Spirit tenía 256 megabytes y funcionaba de forma similar a las tarjetas de memoria de las cámaras digitales.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "the robot field geologist's flash memory, a 256-megabyte, short-term memory system similar to the memory sticks used in digital camera, became corrupted, specifically in the file management software module.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La computadora de Spirit contaba con 128 megabytes de RAM, memoria que se borraba cada vez que el rover se apagaba.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "Spirit's computer has 128 megabytes of RAM, which is used to temporarily store data and administer computer operations. It is erased, as previously reported, when the computer shuts down.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La causa del fallo era que la RAM no tenía suficiente capacidad para gestionar todos los archivos acumulados en la flash —incluyendo los datos del viaje desde la Tierra y los 18 días en Marte.",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040126spirit.html",
+      "cita": "Spirit bogged down because it didn't have enough random access memory, or RAM, to handle the current amount of files in the flash -- including data recorded during its cruise from Earth to Mars and the 18 days of operations on the red planet's surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Jennifer Trosper confirmó que el espacio de RAM necesario para gestionar los archivos de la flash superó lo que el equipo había anticipado.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "The amount of space required in RAM to manage all of the files we have in flash is apparently more than we anticipated.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El problema ocurrió mientras Spirit tenía el brazo robótico IDD extendido hacia la roca Adirondack, preparándose para usar el instrumento de abrasión de rocas (RAT).",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "we were using the Instrument Deployment Device (IDD) [the robot arm], and we were getting ready to RAT [use the rock abrasion device on Adirondack before which Spirit now still stands].",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El test operacional más largo realizado antes del lanzamiento duró solo 10 días, y el fallo ocurrió precisamente en el Sol 18.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "the longest operational was 10 days -- 'and we were on Sol 18, when the problem occurred'",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit envió datos corruptos con marcas de tiempo del año 2053.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "we started to decode it and it was from the year 2053. We said, 'This is not good'",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las comunicaciones con Spirit cayeron a la velocidad de 10 bits por segundo y la sesión se cortó tras 9 minutos.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "returning information at the excruciatingly slow rate of 10 bits per second, then dropped out after 9 minutes",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El estado oficial del rover pasó de 'crítico' a 'grave' y luego a 'en recuperación', según el director del proyecto Pete Theisinger.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "The first Mars Exploration Rover Spirit has gone from 'critical' to 'serious' and now is 'in recovery,' MER Project Manager Pete Theisinger has announced",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La solución consistió en enviar un comando de hardware para que, durante la inicialización, el sistema no intentara montar la memoria flash.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "based on the hunch of our lead software architect, [who] believed that the problem was probably associated with the mounting of flash and the initialization, the team decided to send a command to the hardware to bypass the software, to not allow the use of flash on initialization.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los ingenieros prepararon la eliminación de cientos de archivos del viaje interplanetario para aliviar la carga de la flash.",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040126spirit.html",
+      "cita": "Controllers are preparing to delete hundreds of cruise files in hopes of lessening the burden.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Spirit is 'In Recovery' (26 enero 2004) — A.J.S. Rayl",
+      "url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "editor": "The Planetary Society",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Reconstructing Spirit's hopeful road to recovery",
+      "url": "https://spaceflightnow.com/mars/mera/040126spirit.html",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "El evento original dice que Spirit 'analizaba la roca Adirondack' cuando ocurrió el fallo, pero la fuente [5] (planetary.org) indica que el rover se estaba 'preparando para usar el RAT' (getting ready to RAT) sobre Adirondack, es decir, aún no había comenzado el análisis propiamente dicho.",
+    "El dato [13] afirma que las comunicaciones se retransmitían también mediante los orbitadores Mars Odyssey y Mars Global Surveyor, pero la cita solo menciona la estación de Canberra/DSN; los orbitadores no están respaldados por esa cita como vías de retransmisión, por lo que se descartó ese dato."
+  ],
+  "huecos": [
+    "La causa exacta del primer reinicio que desencadenó el bucle no fue identificada en las fuentes consultadas: Trosper afirmó que 'no entendemos exactamente de dónde vino ese reinicio'.",
+    "El paper técnico oficial de JPL ('The Mars Rover Spirit FLASH Anomaly', Reeves y Neilson) no pudo leerse porque la URL del PDF no estaba accesible; los detalles de ingeniería de bajo nivel no pudieron verificarse.",
+    "No se encontró confirmación posterior sobre si el evento solar detectado por Mars Odyssey fue definitivamente descartado o confirmado como factor contribuyente al fallo.",
+    "No se verificó si todos los archivos del crucero fueron efectivamente eliminados ni cuántos se conservaron una vez resuelta la crisis.",
+    "El artículo de Planetary Society menciona que las 'otras dos teorías no pueden descartarse' a fecha 26 de enero: no se encontró en estas fuentes el resultado final de la investigación de la A-Team sobre las tres hipótesis.",
+    "El evento original describe a los ingenieros diciendo que era 'un problema muy grave, pero potencialmente recuperable'; aunque el dato [9] muestra la progresión de estados (crítico → grave → en recuperación), no se encontró esa frase textual en las fuentes del borrador.",
+    "No hay datos en el borrador que confirmen la cronología día a día de los Soles 19 y 20 (dos minutos de datos vacíos, ausencia total de respuesta), que el relato original del investigador narraba con detalle pero sin dato numerado que lo respalde.",
+    "El evento original no menciona el número de reinicios (125+); aunque el dato [0] lo respalda con fuente, el evento en sí solo habla de 'ciclo de reinicios' sin cifra."
+  ],
+  "ideas_visuales": [
+    "Spirit con el brazo robótico IDD extendido hacia la roca Adirondack en el momento previo al fallo, mostrando el instrumento RAT listo para usarse [5].",
+    "Diagrama esquemático del sistema de memoria de Spirit: 256 MB de flash (almacenamiento permanente) frente a 128 MB de RAM (memoria de trabajo), con iconos de archivos acumulados desbordando la capacidad [1][2][3].",
+    "Pantalla de control en el JPL mostrando datos corrompidos con la marca de tiempo '2053' y la velocidad de 10 bits por segundo, representando la dificultad de comunicación [7][8].",
+    "Secuencia de estado del rover representada como un semáforo o indicador médico: rojo (crítico), naranja (grave), amarillo-verde (en recuperación) [9].",
+    "Representación del comando de bypass: un esquema del arranque del sistema donde la flash queda desconectada durante la inicialización, permitiendo que el software cargue con normalidad [11]."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El equipo manejó tres hipótesis: corrupción de la flash, fallo en la placa de control de motores y un evento solar detectado por Mars Odyssey.",
+      "fuente_url": "https://www.planetary.org/articles/0126_spirit_is_in_recovery",
+      "cita": "One is that some kind of error or hardware issue occurred on the motor control board, the circuit board with the electronics that controls the motors. The other is a solar event or flare that blasted the Martian surface with heavy ions and neutrons.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

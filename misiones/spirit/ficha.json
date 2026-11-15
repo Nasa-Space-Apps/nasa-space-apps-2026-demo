@@ -1,0 +1,17 @@
+{
+  "id": "spirit",
+  "nombre": "Spirit",
+  "tipo": "rover",
+  "cuerpo": "Marte",
+  "agencia": "NASA/JPL",
+  "prefijo_eventos": "spi",
+  "publico": "estudiantes de 5.º de secundaria (17 años)",
+  "sol": {
+    "cero": "2004-01-04",
+    "offset": 1
+  },
+  "creada": "2026-11-15",
+  "fuentes_semilla": [
+    "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+  ]
+}

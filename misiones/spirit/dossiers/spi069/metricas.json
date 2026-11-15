@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.15103290000000003,
+  "turnos": 8,
+  "duracion_s": 74.9,
+  "duracion_api_s": 68.4,
+  "tokens": {
+    "input_tokens": 5,
+    "cache_creation_input_tokens": 8726,
+    "cache_read_input_tokens": 13158,
+    "output_tokens": 7508,
+    "output_tokens_details": {
+      "thinking_tokens": 2833
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8726
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1608,
+      "outputTokens": 24,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0017280000000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 5,
+      "outputTokens": 7508,
+      "cacheReadInputTokens": 13158,
+      "cacheCreationInputTokens": 8726,
+      "webSearchRequests": 0,
+      "costUSD": 0.14930490000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 2833,
+      "cacheCreationEphemeral5mInputTokens": 8726,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 4,
+    "buscar_web": 2,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "4",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.10977075,
+    "turnos": 2,
+    "duracion_s": 37.5,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 3742,
+        "outputTokens": 24,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.003862,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 3051,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 4739,
+        "webSearchRequests": 0,
+        "costUSD": 0.10590875,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 1289,
+        "cacheCreationEphemeral5mInputTokens": 4739,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 14,
+      "datos_despues": 14,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 3,
+      "observaciones": "Se conservaron los 14 datos porque todas las citas respaldan adecuadamente sus afirmaciones. Se eliminó del relato la fecha «mayo de 2009» para el atasco en Troy y la mención a evidencias de agua en Marte, ya que ninguna cita recopilada las sustenta; también se añadieron matices sobre la interpretación del umbral de 155 Wh."
+    }
+  },
+  "costo_usd_referencia_total": 0.26080365000000005,
+  "costos": {
+    "total_usd": 0.260804,
+    "por_paso": {
+      "investigacion": 0.151033,
+      "revision": 0.109771
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.00559,
+        "entrada": 5350,
+        "salida": 48,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.149305,
+        "entrada": 5,
+        "salida": 7508,
+        "cache_leida": 13158,
+        "cache_escrita": 8726,
+        "razonamiento": 2833
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.105909,
+        "entrada": 3,
+        "salida": 3051,
+        "cache_leida": 0,
+        "cache_escrita": 4739,
+        "razonamiento": 1289
+      }
+    }
+  }
+}

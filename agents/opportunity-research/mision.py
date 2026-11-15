@@ -72,5 +72,8 @@ def contexto_prompt(mision: str | None = None, base: dict | None = None, publico
     tipo = ficha.get("tipo") or m.get("tipo")
     cuerpo = ficha.get("cuerpo") or m.get("cuerpo")
     detalle = ", ".join(x for x in (tipo, cuerpo) if x)
-    return {"mision": f"{nombre} ({detalle})" if detalle else nombre,
-            "publico": publico or ficha.get("publico") or "estudiantes de 5.º de secundaria (17 años)"}
+    ctx = {"mision": f"{nombre} ({detalle})" if detalle else nombre,
+           "publico": publico or ficha.get("publico") or "estudiantes de 5.º de secundaria (17 años)"}
+    if ficha.get("fuentes_semilla"):  # páginas oficiales generales de la misión que el investigador puede leer primero
+        ctx["fuentes_semilla"] = list(ficha["fuentes_semilla"])
+    return ctx
