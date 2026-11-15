@@ -1,0 +1,142 @@
+{
+  "evento_id": "ins063",
+  "titulo": "S1222a: el mayor martemoto registrado por InSight (Sol 1222, 4 de mayo de 2022)",
+  "contexto_ampliado": "En la noche terrestre del 4 de mayo de 2022 —Sol 1222 en el calendario marciano—, el sismómetro de la sonda InSight de la NASA captó un evento sin precedentes en la exploración de Marte. El sismo, catalogado como S1222a, fue al menos cinco veces más grande que el mayor martemoto registrado hasta ese momento. InSight llevaba operando en el planeta rojo desde el 26 de noviembre de 2018, cuando aterrizó en una llanura conocida como Elysium Planitia.\n\nLa magnitud revisada de S1222a es 4,7 (Mw). El récord anterior, registrado en agosto de 2021 (Sol 976), tenía una magnitud de aproximadamente 4,2. Aunque la diferencia numérica parece pequeña, la escala de magnitud es logarítmica: cada incremento representa un aumento considerable de energía. De hecho, la energía liberada por este único evento fue equivalente a la energía acumulada de todos los demás marteremostos detectados por InSight durante toda su misión. Las señales fueron tan intensas que, a pesar de estar a más de 2.000 kilómetros (1.200 millas) del epicentro, casi saturaron el sismómetro.\n\nLo más llamativo fue la duración: las ondas sísmicas de S1222a se prolongaron durante aproximadamente diez horas. Para dar perspectiva, ningún martemoto anterior había superado siquiera una hora de duración. Este hecho convirtió a S1222a en un evento absolutamente excepcional dentro del catálogo sísmico marciano.\n\nGracias a la potencia de S1222a, los científicos lograron algo inédito en Marte: identificar ondas de superficie que habían viajado múltiples veces alrededor del planeta, desplazándose por la corteza y el manto superior. Este tipo de observación es fundamental para conocer la estructura interna de un planeta, y nunca antes se había conseguido en Marte.\n\nEl epicentro del sismo se ubicó cerca, pero fuera, de la región de Cerberus Fossae, la zona más sísmicamente activa del planeta rojo. S1222a también fue peculiar porque exhibió características de los dos tipos de marteremostos reconocidos: los de alta frecuencia y los de baja frecuencia, algo poco habitual que desafía la clasificación estándar.\n\nInSight se encontraba entonces cerca del final de su vida operativa. Durante sus cuatro años en Marte, el polvo había ido cubriendo progresivamente sus paneles solares, reduciendo la energía disponible. La misión terminó oficialmente el 15 de diciembre de 2022. Taichi Kawamura, científico planetario del Institut de physique du globe de Paris y autor principal del estudio sobre S1222a, expresó que los datos recogidos a partir de este sismo demostraban que la misión había sido «un éxito extraordinario».\n\nEl debate sobre el origen de S1222a sigue abierto en la comunidad científica. Según la nota asociada a este evento, Fernando et al. (2023, publicado en Geophysical Research Letters) concluyó un origen tectónico tras no encontrar cráter de impacto en imágenes orbitales, mientras que un preprint de 2026 reinterpreta el evento como posiblemente causado por un impacto. Esta discusión ilustra cómo funciona la ciencia: los mismos datos pueden dar lugar a interpretaciones diferentes que requieren más investigación para resolverse.",
+  "datos_reales": [
+    {
+      "afirmacion": "S1222a fue detectado en la noche del 4 de mayo de 2022 (Sol 1222 en Marte) por el sismómetro de InSight.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "Late on the Earth night of May 4, or Sol 1222 on Mars, the seismometer aboard NASA's InSight Mars Lander detected a quake on the Red Planet, with reverberations lasting many hours.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La magnitud revisada de S1222a es 4,7; el anterior récord (Sol 976, agosto 2021) fue de magnitud 4,2.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "The previous biggest Marsquake, recorded in August 2021 (Sol 976 on Mars), was around a magnitude of 4.2, while the May quake had a magnitude of 4.7. (Marsquake magnitudes are comparable to those of earthquakes.)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La energía liberada por S1222a fue equivalente a la energía acumulada de todos los demás marteremostos registrados hasta entonces.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "The energy released by this single marsquake is equivalent to the cumulative energy from all other Marsquakes we've seen so far, and although the event was over 2000 kilometers (1200 miles) distant, the waves recorded at InSight were so large they almost saturated our seismometer.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las ondas sísmicas de S1222a duraron aproximadamente diez horas; ningún martemoto anterior había superado la hora.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "The waves from the record-breaking quake lasted about 10 hours — quite a while, considering no previous Marsquakes exceeded an hour.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Por primera vez se identificaron ondas de superficie que habían viajado múltiples veces alrededor del planeta.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "For the first time we were able to identify surface waves, moving along the crust and upper mantle, that have travelled around the planet multiple times.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "S1222a exhibió características tanto de marteremostos de alta como de baja frecuencia, siendo inusual por esa dualidad.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "This recent seismic event is rare in that it exhibited characteristics of both high- and low-frequency quakes.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight estaba cerca del final de su misión cuando detectó S1222a, debido al polvo acumulado en sus paneles solares durante cuatro años.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "InSight is thought to be near its operational end because dust has progressively covered its solar panels and reduced its power during the four years since its landing in November 2018.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La misión InSight terminó oficialmente el 15 de diciembre de 2022.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "End of Mission: Dec. 15, 2022",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight aterrizó en Marte el 26 de noviembre de 2018 en Elysium Planitia.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Landed: Nov. 26, 2018, at 11:52:59 a.m. PT (2:52:59 p.m. ET) — Landing Site: Elysium Planitia, Mars",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Kawamura calificó a la misión InSight como un éxito extraordinario a partir de los datos recogidos por S1222a.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "\"We are impressed that almost at the end of the extended mission, we had this very remarkable event,\" Kawamura said. Based on the data gathered from this quake, \"I would say this mission was an extraordinary success.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "The biggest Marsquake was 5 times larger than previous record holder (AGU Press Release)",
+      "url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "editor": "AGU (American Geophysical Union)",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "InSight Mission Overview – NASA Science",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "S1222a – The Largest Marsquake Detected by InSight (Kawamura et al., GRL 2022)",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022GL101543",
+      "editor": "Geophysical Research Letters / AGU",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "A Tectonic Origin for the Largest Marsquake Observed by InSight (Fernando et al., GRL 2023)",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL103619",
+      "editor": "Geophysical Research Letters / AGU",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "MAGNITUD PRELIMINAR vs. REVISADA: La nota del evento indica que la NASA anunció el 9 de mayo de 2022 una magnitud estimada de 5 (M5) para S1222a. Sin embargo, la investigación publicada en Geophysical Research Letters (Kawamura et al., diciembre 2022) establece la magnitud revisada en 4,7. La página oficial de JPL (https://www.jpl.nasa.gov/news/nasas-insight-records-monster-quake-on-mars/) no pudo ser leída para verificar la cifra preliminar de M5; la AGU (https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/) solo cita 4,7.",
+    "ORIGEN TECTÓNICO vs. IMPACTO: Fernando et al. (2023, GRL, https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL103619) concluye que S1222a fue muy probablemente de origen tectónico tras no hallar cráter en imágenes orbitales. Un preprint de 2026 (mencionado en la nota editorial del evento, URL no disponible) reinterpreta el mismo evento como probable impacto. Ambas interpretaciones coexisten en la literatura científica sin resolución definitiva confirmada.",
+    "El evento original indica que 'NASA lo anunció el 9 de mayo con magnitud estimada de 5', pero ninguno de los datos conservados del borrador (todos provenientes de https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/ y https://science.nasa.gov/mission/insight/) mencionan esa fecha de anuncio ni la cifra preliminar de M5. La única magnitud citada en las fuentes consultadas es 4,7."
+  ],
+  "huecos": [
+    "Hora UTC exacta del evento (23:23:07 UTC según fragmento de búsqueda de Kawamura et al., pero no verificada mediante leer_pagina).",
+    "Contenido completo del comunicado original de JPL del 9 de mayo de 2022 (página vacía al leer); no se pudo confirmar directamente que NASA anunció M5 en esa fecha.",
+    "URL y texto del preprint de 2026 que propone origen por impacto para S1222a; no se encontró ni se pudo leer.",
+    "Texto completo de Fernando et al. (GRL, 2023) sobre origen tectónico; la página Wiley y ResearchGate devolvieron contenido vacío.",
+    "Localización geográfica precisa del epicentro en coordenadas marcianas.",
+    "Detalles del mecanismo focal (tipo de falla) determinado para S1222a en los estudios publicados.",
+    "El borrador narrativo menciona ondas de tipo 'Rayleigh y Love' específicamente, pero la cita de [5] solo habla de 'surface waves' sin nombrar esos tipos; no hay fuente consultada que confirme la identificación de ambos tipos por separado.",
+    "No se encontró fuente que respalde la afirmación del borrador narrativo de que la dualidad alta/baja frecuencia de S1222a 'podría significar que ambos tipos no son tan distintos como se pensaba'; la cita [7] solo dice que el evento exhibió ambas características, sin esa inferencia.",
+    "La fecha exacta de publicación del artículo (14 de diciembre de 2022) y la participación de John Clinton (ETH Zúrich) como autor correspondiente no están respaldadas por ninguna cita del borrador; solo se confirma a Kawamura como autor principal."
+  ],
+  "ideas_visuales": [
+    "Ilustración del sismómetro SEIS sobre la superficie de Marte en Elysium Planitia, con ondas concéntricas propagándose desde un epicentro lejano (a más de 2.000 km).",
+    "Gráfico comparativo de duración: una barra corta (menos de 1 hora) para marteremostos anteriores frente a una barra larga (≈10 horas) para S1222a.",
+    "Diagrama de Marte visto desde arriba mostrando ondas de superficie recorriendo varias veces la circunferencia del planeta.",
+    "Mapa de la superficie marciana señalando Elysium Planitia (ubicación de InSight), la región de Cerberus Fossae y la posición aproximada del epicentro de S1222a, fuera de dicha región.",
+    "Imagen de los paneles solares de InSight cubiertos de polvo marciano, representando el final de su vida operativa en diciembre de 2022."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "S1222a fue al menos cinco veces más grande que el siguiente martemoto más grande registrado en Marte.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "The Marsquake was at least five times as large as the next largest quake recorded on the planet, according to new research published Wednesday in Geophysical Research Letters, an AGU journal.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El epicentro de S1222a estuvo cerca pero fuera de la región Cerberus Fossae, la zona más sísmicamente activa de Marte.",
+      "fuente_url": "https://news.agu.org/press-release/the-biggest-marsquake-was-5-times-larger-than-previous-record-holder/",
+      "cita": "It was also curious because the epicenter was close to but outside the Cerberus Fossae region, which is the most seismically active region on the Red Planet.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.16740735,
+  "turnos": 8,
+  "duracion_s": 73.3,
+  "duracion_api_s": 69.5,
+  "tokens": {
+    "input_tokens": 5,
+    "cache_creation_input_tokens": 13049,
+    "cache_read_input_tokens": 11682,
+    "output_tokens": 7564,
+    "output_tokens_details": {
+      "thinking_tokens": 1914
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 13049
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1369,
+      "outputTokens": 25,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001494,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 5,
+      "outputTokens": 7564,
+      "cacheReadInputTokens": 11682,
+      "cacheCreationInputTokens": 13049,
+      "webSearchRequests": 0,
+      "costUSD": 0.16591335000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1914,
+      "cacheCreationEphemeral5mInputTokens": 13049,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 1,
+    "leer_pagina": 5,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "4",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.115883,
+    "turnos": 2,
+    "duracion_s": 38.9,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4548,
+        "outputTokens": 29,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004693,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 3060,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5548,
+        "webSearchRequests": 0,
+        "costUSD": 0.11119,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 1230,
+        "cacheCreationEphemeral5mInputTokens": 5548,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 15,
+      "datos_despues": 15,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se conservaron todos los datos (0-14) porque cada cita respalda su afirmación. El cambio principal en el relato fue eliminar contenido no respaldado por citas (declaraciones de Grunsfeld, razones de la selección, detalles sobre la ciencia del interior planetario, el retraso a 2018 y el aterrizaje ecuatorial). También se corrigió la supuesta contradicción sobre el número de propuestas: ambas fuente"
+    }
+  },
+  "costo_usd_referencia_total": 0.28329035,
+  "costos": {
+    "total_usd": 0.28329,
+    "por_paso": {
+      "investigacion": 0.167407,
+      "revision": 0.115883
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006187,
+        "entrada": 5917,
+        "salida": 54,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.165913,
+        "entrada": 5,
+        "salida": 7564,
+        "cache_leida": 11682,
+        "cache_escrita": 13049,
+        "razonamiento": 1914
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.11119,
+        "entrada": 3,
+        "salida": 3060,
+        "cache_leida": 0,
+        "cache_escrita": 5548,
+        "razonamiento": 1230
+      }
+    }
+  }
+}

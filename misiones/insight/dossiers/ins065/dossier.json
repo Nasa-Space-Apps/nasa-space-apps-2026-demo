@@ -1,0 +1,132 @@
+{
+  "evento_id": "ins065",
+  "titulo": "Solo SEIS sigue vivo: el plan se acorta a finales de agosto o principios de septiembre",
+  "contexto_ampliado": "En junio de 2022, la misión InSight de la NASA llevaba ya varios años sobre la superficie de Marte. Sus paneles solares, cubiertos de polvo, apenas generaban electricidad suficiente. Uno a uno, todos los instrumentos científicos habían sido apagados para ahorrar energía, y solo quedaba encendido el sismómetro SEIS (Seismic Experiment for Interior Structure), proporcionado a la NASA por el Centro Nacional de Estudios Espaciales (CNES) de Francia, con el investigador principal en el IPGP (Institut de Physique du Globe de Paris).\n\nSEIS no era un instrumento cualquiera: desde que InSight tocó suelo marciano en 2018, había detectado más de 1.300 marsisismos —terremotos marcianos—, proporcionando información que permitió a los científicos medir por primera vez la profundidad y composición de la corteza, el manto y el núcleo de Marte. Apagarlo significaba perder la única herramienta que la humanidad tenía para escuchar el interior del planeta rojo.\n\nEl plan original era conservador: apagar el sismómetro antes de que terminara junio de 2022 para conservar energía, de modo que el lander pudiera sobrevivir con la poca electricidad que sus paneles cubiertos de polvo generaban hasta aproximadamente diciembre. Pero el equipo de la misión decidió cambiar de estrategia: programar el lander para que SEIS siguiera operando, quizás hasta finales de agosto o principios de septiembre de 2022.\n\nMantener el sismómetro encendido más tiempo tenía un precio claro: descargaría las baterías antes, haciendo que la nave se quedara sin energía al mismo tiempo, pero a cambio podría detectar marsisismos adicionales. Para hacer esto posible, el equipo fue un paso más allá y desactivó el sistema de protección contra fallos de InSight. Normalmente, ese sistema activaba automáticamente un «modo seguro» en situaciones amenazantes, apagando todo excepto las funciones más esenciales y permitiendo que los ingenieros evaluaran la situación. Sin esa protección, el sismómetro podía operar más tiempo, pero el lander quedaba desprotegido ante eventos repentinos e inesperados a los que los controladores en Tierra no habrían tenido tiempo de responder.\n\n«InSight aún no ha terminado de enseñarnos sobre Marte», declaró Lori Glaze, directora de la División de Ciencias Planetarias de la NASA en Washington. «Vamos a obtener cada último dato científico que podamos antes de que el lander concluya sus operaciones.» Por su parte, Chuck Scott, director del proyecto InSight en el Laboratorio de Propulsión a Reacción (JPL) de la NASA en el sur de California, explicó: «El objetivo es obtener datos científicos hasta el punto en que InSight no pueda operar en absoluto, en lugar de conservar energía y operar el lander sin ningún beneficio científico.»\n\nLa estimación del equipo apuntaba a agosto o septiembre de 2022 como el momento en que se agotaría la energía. Sin embargo, el registro oficial de la NASA indica que el fin de misión se produjo el 15 de diciembre de 2022, casi tres meses después de lo previsto. InSight sobrevivió mucho más de lo que los modelos anticipaban.\n\nEste episodio ilustra una de las decisiones más difíciles en exploración espacial: elegir entre la prudencia operativa —conservar recursos para durar más— y la urgencia científica —exprimir cada dato posible antes del final. El equipo de InSight eligió la ciencia, desactivó las salvaguardas y le dio al sismómetro la oportunidad de escuchar Marte el mayor tiempo posible.",
+  "datos_reales": [
+    {
+      "afirmacion": "La NASA planeó mantener el sismómetro SEIS operativo quizás hasta finales de agosto o principios de septiembre de 2022, en lugar de apagarlo a finales de junio.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "the team now plans to program the lander so that the seismometer can operate longer, perhaps until the end of August or into early September.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El plan original era apagar el sismómetro antes de que terminara junio de 2022 para conservar energía y sobrevivir hasta aproximadamente diciembre.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "The lander was projected to automatically shut down the seismometer – InSight's last operational science instrument – by the end of June in order to conserve energy, surviving on what power its dust-laden solar panels can generate until around December.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mantener SEIS más tiempo descargaría las baterías antes, haciendo que el lander se quedara sin energía al mismo tiempo.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "Doing so will discharge the lander's batteries sooner and cause the spacecraft to run out of power at that time as well, but it might enable the seismometer to detect additional marsquakes.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sismómetro SEIS era el único instrumento científico de InSight que seguía operativo en ese momento; todos los demás habían sido apagados.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "All instruments but the seismometer have already been powered down.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Para permitir que el sismómetro funcionara el mayor tiempo posible, el equipo desactivó el sistema de protección contra fallos de InSight.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "To enable the seismometer to continue to run for as long as possible, the mission team is turning off InSight's fault protection system.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sistema de protección contra fallos activa automáticamente el 'modo seguro' en situaciones amenazantes, apagando todo menos las funciones esenciales.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "InSight has a fault protection system that automatically triggers 'safe mode' in threatening situations and shuts down all but its most essential functions, allowing engineers to assess the situation.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Desactivar la protección contra fallos dejaba al lander desprotegido ante eventos repentinos e inesperados a los que los controladores en Tierra no habrían tenido tiempo de responder.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "While this will enable the instrument to operate longer, it leaves the lander unprotected from sudden, unexpected events that ground controllers wouldn't have time to respond to.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight había detectado más de 1.300 marsissmos desde su llegada a Marte en 2018, permitiendo medir la profundidad y composición de la corteza, el manto y el núcleo de Marte.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "The lander has detected more than 1,300 marsquakes since touching down on Mars in 2018, providing information that has allowed scientists to measure the depth and composition of Mars' crust, mantle, and core.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Lori Glaze, directora de la División de Ciencias Planetarias de la NASA en Washington, declaró que el equipo obtendría cada último dato científico posible antes del final.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "\"InSight hasn't finished teaching us about Mars yet,\" said Lori Glaze, director of NASA's Planetary Science Division in Washington. \"We're going to get every last bit of science we can before the lander concludes operations.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Chuck Scott, director del proyecto InSight en JPL, explicó que el objetivo era obtener datos científicos hasta el punto en que InSight no pudiera operar en absoluto.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "\"The goal is to get scientific data all the way to the point where InSight can't operate at all, rather than conserve energy and operate the lander with no science benefit,\" said Chuck Scott, InSight's project manager at NASA's Jet Propulsion Laboratory in Southern California.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El instrumento SEIS fue proporcionado a la NASA por el Centro Nacional de Estudios Espaciales (CNES) de Francia, con el investigador principal en el IPGP (Institut de Physique du Globe de Paris).",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "cita": "CNES provided the Seismic Experiment for Interior Structure (SEIS) instrument to NASA, with the principal investigator at IPGP (Institut de Physique du Globe de Paris).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El fin oficial de la misión InSight fue el 15 de diciembre de 2022, superando la estimación revisada de agosto o septiembre de 2022.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "End of Mission: Dec. 15, 2022",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's InSight Gets a Few Extra Weeks of Mars Science",
+      "url": "https://www.nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "InSight Lander – NASA Science Mission",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Despite its draining power, NASA's InSight is determined to squeeze as much science as it can",
+      "url": "https://www.universetoday.com/156454/despite-its-draining-power-nasas-insight-mars-lander-is-determined-to-squeeze-as-much-science-as-it-can-until-the-very-last-moment",
+      "editor": "Universe Today",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "La nota oficial de la NASA (nasa.gov, 21-23 jun. 2022) estimaba que InSight se quedaría sin energía 'hacia finales de agosto o principios de septiembre de 2022' tras desactivar la protección contra fallos. Sin embargo, la página de misión de NASA Science (science.nasa.gov/mission/insight/) registra el fin de misión el 15 de diciembre de 2022, casi tres meses más tarde de lo estimado. El evento sobrevivió muy por encima de las proyecciones del equipo.",
+    "El evento original afirma que 'el equipo apagó la protección contra fallos' (en pasado, como acción completada), pero la cita del dato [4] dice 'the mission team is turning off InSight's fault protection system' (en presente progresivo, como anuncio de intención). La fuente (nasa.gov/missions/insight/nasas-insight-gets-a-few-extra-weeks-of-mars-science/) no confirma que la acción se haya ejecutado, solo que se estaba procediendo a hacerlo.",
+    "La nota del evento original menciona que NASA atribuyó el fin a 'batería agotada (dead bus)', pero ninguna de las fuentes citadas en el dossier (ni nasa.gov ni science.nasa.gov/mission/insight/) utiliza el término 'dead bus'. Solo el dato [11] confirma la fecha del fin de misión, no la terminología técnica."
+  ],
+  "huecos": [
+    "Fecha exacta en que se ejecutó el comando para desactivar el sistema de protección contra fallos (la nota de junio de 2022 anuncia la intención, pero no confirma el momento de ejecución).",
+    "Número exacto de marsismos adicionales detectados por SEIS entre junio de 2022 y el fin de misión el 15 de diciembre de 2022 gracias a esta decisión.",
+    "Detalles técnicos precisos del agotamiento final de la batería ('dead bus') el 15 de diciembre de 2022, incluyendo niveles de voltaje registrados.",
+    "Razón por la que el lander sobrevivió hasta diciembre en lugar de agosto/septiembre, si acaso hubo una mejora inesperada en la generación de energía o si los modelos simplemente fueron conservadores.",
+    "El evento original menciona 'Elysium Planitia' como ubicación de InSight, pero ningún dato del dossier confirma este dato geográfico a partir de las fuentes citadas.",
+    "No se encontró fuente que explique si el sismómetro SEIS efectivamente funcionó de forma continua desde junio hasta diciembre de 2022 o si hubo interrupciones intermedias."
+  ],
+  "ideas_visuales": [
+    "Panel informativo que muestre el lander InSight con todos los instrumentos apagados (representados en gris) excepto SEIS (iluminado), basado en datos [3] y [4].",
+    "Diagrama comparativo tipo línea de tiempo: plan original (SEIS apagado en junio → lander sobrevive hasta diciembre) vs. plan revisado (SEIS hasta agosto/septiembre → baterías agotadas al mismo tiempo), basado en datos [0], [1] y [2].",
+    "Esquema explicativo del sistema de protección contra fallos: cómo activa el 'modo seguro' normalmente y qué pasa cuando se desactiva, basado en datos [5] y [6].",
+    "Corte transversal de Marte mostrando corteza, manto y núcleo, con la etiqueta '1.300+ marsisismos detectados', basado en dato [7].",
+    "Línea de tiempo final: estimación de agosto/septiembre 2022 frente al fin de misión real el 15 de diciembre de 2022, basado en datos [0] y [11]."
+  ],
+  "datos_no_verificados": []
+}

@@ -1,0 +1,126 @@
+{
+  "evento_id": "ins038",
+  "titulo": "El topo sale parcialmente del suelo (26–27 octubre 2019)",
+  "contexto_ampliado": "La misión InSight de la NASA llevó a Marte un instrumento llamado HP³ (Heat Flow and Physical Properties Package), desarrollado por DLR, la agencia espacial alemana [6]. Su pieza central era el \"topo\": un penetrador metálico de 40 centímetros de largo [2] diseñado para clavarse hasta 5 metros de profundidad en el suelo marciano, más que cualquier sonda anterior en el planeta rojo [3]. Detrás de él arrastraba una cinta con sensores para medir el flujo de calor interno de Marte.\n\nEl topo había sido diseñado para funcionar en suelos sin cohesión, similares a arena de cuarzo, que se consideraba un buen análogo de la arena marciana [10]. Pero el 28 de febrero de 2019, apenas minutos después de empezar a cavar, el topo se detuvo [11]. Las inspecciones con la cámara del brazo robótico revelaron la presencia de una capa de duricrust —suelo cementado— de entre 5 y 10 centímetros de espesor, más gruesa que cualquier capa similar encontrada en misiones anteriores a Marte [4]. Esta capa cohesiva no proporcionaba la fricción lateral que el topo necesitaba para avanzar [9].\n\nEl topo logró penetrar hasta 40 cm de profundidad (justo su propia longitud) gracias a la fricción que le daban los resortes de la estructura de soporte desde la que fue desplegado, pero no pudo ir más allá [8]. El fracaso para penetrar más profundamente se debió en gran medida a esa capa de duricrust de unas pocas decenas de centímetros de espesor [9].\n\nEl equipo de tierra ideó una solución ingeniosa: usar la pala del brazo robótico para sujetar al topo contra la pared del hoyo, proporcionándole artificialmente la fricción que el suelo no le daba [5]. El 17 de octubre de 2019, el JPL reportó que el topo había avanzado unos 2 centímetros (tres cuartos de pulgada) desde que el brazo robótico empezó a asistirlo, el primer progreso medible en más de siete meses [1].\n\nSin embargo, ese avance fue efímero. El fin de semana del 26 al 27 de octubre de 2019, el topo retrocedió y salió parcialmente de su agujero, quedando aproximadamente a la mitad fuera del suelo [0]. El comunicado oficial señaló que las evaluaciones preliminares apuntaban a las condiciones inusuales del suelo marciano como causa del retroceso [0].\n\nLas mediciones de flujo de calor del HP³ formaban parte de los requisitos de Nivel 1 de la misión InSight, pero estaban clasificadas como metas adicionales (baseline), no como requisitos mínimos de éxito (threshold). Según explicó el equipo de la misión, se trataba de ciencia \"deseable\" pero considerada más arriesgada o no tan prioritaria como otros objetivos [7]. Esto significaba que la misión podía considerarse exitosa incluso sin estas mediciones.",
+  "datos_reales": [
+    {
+      "afirmacion": "El JPL reportó el 17 de octubre de 2019 que el topo había avanzado unos 2 centímetros (tres cuartos de pulgada) desde que el brazo robótico empezó a asistirlo, el primer progreso medible en más de siete meses.",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "JPL reported Oct. 17 that the mole had dug about three-quarters of an inch (2 centimeters) since the robotic arm started assisting, the first measurable progress in more than seven months.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El topo mide 40 centímetros de largo (1,3 pies).",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "ground controllers at NASA's Jet Propulsion Laboratory in California commanded the lander's robotic arm to assist the 1.3-foot (40-centimeter) mole.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El HP³ estaba diseñado para cavar hasta 5 metros de profundidad, más que cualquier sonda anterior en Marte.",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "The device stalled within minutes after beginning to burrow to a planned depth of 16 feet (5 meters) beneath the Martian surface, deeper than any probe has dug into the Red Planet's crust.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las inspecciones con la cámara del brazo robótico revelaron una capa de duricrust de 5 a 10 centímetros de espesor, más gruesa que cualquier suelo cementado encontrado en misiones anteriores a Marte.",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "Inspections using InSight's robot arm camera indicated the presence of 2 to 4 inches (5 to 10 centimeters) of duricrust, a type of cemented soil thicker than anything encountered on other Mars missions, according to JPL.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La técnica de sujetar el topo con la pala del brazo robótico para darle fricción fue el principal método de rescate del equipo de tierra antes del retroceso de octubre.",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "A scoop on the end of the arm has been used in recent weeks to 'pin' the mole against the wall of its hole, providing friction it needs to dig.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El HP³ fue desarrollado por DLR, la agencia espacial alemana.",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "Developed by DLR, the German space agency, the HP3 instrument includes the metallic mole and a ribbon-like tether trailing behind it.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las mediciones de flujo de calor del HP³ eran parte de los requisitos de Nivel 1 de InSight, pero clasificadas como meta adicional (baseline), no como requisito mínimo de éxito (threshold).",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "The heat flow measurements are part of four additional Level 1 requirements for InSight [...] These four additional ones are extra science that we really want to get done — it's really great science — but either we thought that it was a little bit riskier, or some of them maybe aren't quite as important as the other ones, so they're considered nice to have.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El topo no penetró más allá de su propia longitud de 40 cm, en parte por la fricción inicial de los resortes de la estructura de soporte.",
+      "fuente_url": "https://arxiv.org/abs/2112.03234",
+      "cita": "The mole penetrated to 40 cm depth benefiting from friction provided by springs in the support structure from which it was deployed.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El fracaso del topo se debió en gran parte a una capa cohesiva de duricrust de unas pocas decenas de centímetros que no proporcionó la fricción necesaria.",
+      "fuente_url": "https://arxiv.org/abs/2112.03234",
+      "cita": "The failure to penetrate deeper was largely due to a few tens of centimeter thick cohesive duricrust that failed to provide the required friction.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El topo fue diseñado para suelos sin cohesión similares a arena de cuarzo, que se esperaba fuera un buen análogo para la arena marciana.",
+      "fuente_url": "https://arxiv.org/abs/2112.03234",
+      "cita": "The mole was designed to penetrate cohesionless soil similar to Quartz sand which was expected to provide a good analogue material for Martian sand.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El topo se detuvo por primera vez el 28 de febrero de 2019.",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "The Heat Flow and Physical Properties Package, or HP3 instrument, has been unable to dig into Mars since Feb. 28.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Ground teams studying setback with InSight's subsurface heat probe",
+      "url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "The InSight HP³ mole on Mars: Lessons learned from attempts to penetrate to depth in the Martian soil (arXiv 2112.03234)",
+      "url": "https://arxiv.org/abs/2112.03234",
+      "editor": "arXiv",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "La medida exacta de salida del topo difiere entre fuentes: el artículo de Spaceflight Now (y el comunicado oficial de JPL citado en él) dice 'backed about halfway out' (aproximadamente la mitad fuera), lo que implicaría unos ~20 cm para un topo de 40 cm. El evento señala '18 cm según el preprint' (arXiv 2112.03234), pero el PDF de dicho preprint no fue accesible para verificar esa cifra concreta. No se puede confirmar el valor exacto de 18 cm desde las fuentes leídas. URL1: https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/ — URL2: https://arxiv.org/abs/2112.03234",
+    "El evento original dice que el topo 'salió hasta unos 18 cm según el preprint', pero el dato [0] (basado en la declaración oficial del JPL citada en Spaceflight Now) dice que retrocedió 'about halfway out', lo que para un topo de 40 cm implicaría ~20 cm fuera, no 18 cm. Los datos del preprint de arXiv ([8], [9]) no mencionan la cifra de 18 cm en las citas disponibles. Hay una discrepancia numérica menor (18 vs ~20 cm) que no puede resolverse con las fuentes leídas. URLs: https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/ y https://arxiv.org/abs/2112.03234"
+  ],
+  "huecos": [
+    "El valor exacto de 18 cm de salida del topo citado en los datos del evento ('Salió hasta unos 18 cm según el preprint') no pudo verificarse directamente: el PDF de arXiv 2112.03234 no fue accesible con la herramienta, y el resumen HTML solo menciona la profundidad máxima alcanzada (40 cm), no la medida de retroceso.",
+    "El avance de 2 cm del 17 de octubre solo cuenta con fuente de prensa (Spaceflight Now); no se encontró confirmación en una fuente oficial NASA/JPL leída directamente.",
+    "No se pudo confirmar la fecha exacta en que el topo comenzó a retroceder (si fue el 26 o el 27 de octubre) ni en qué sol marciano ocurrió; las fuentes disponibles usan el rango 'this past weekend'.",
+    "No se pudo leer directamente la página oficial de NASA/JPL sobre este evento concreto (la búsqueda en jpl.nasa.gov y science.nasa.gov no devolvió resultados para este suceso).",
+    "El relato del borrador incluye citas atribuidas a Bruce Banerdt (director de la misión) que no están respaldadas por ninguno de los 12 datos numerados ni por sus citas verificables; no se puede confirmar su literalidad.",
+    "El evento original no especifica el sol marciano del incidente (campo sol: null) y ninguna fuente del dossier proporciona ese dato tampoco."
+  ],
+  "ideas_visuales": [
+    "El topo de 40 cm junto a una regla o escala humana, mostrando su tamaño real y la cinta de sensores que arrastra [2, 6].",
+    "Corte transversal del suelo marciano mostrando la capa de duricrust de 5-10 cm de espesor sobre terreno más blando, con el topo atascado justo en esa capa [4, 9].",
+    "La pala del brazo robótico de InSight presionando lateralmente al topo contra la pared del hoyo para darle fricción [5].",
+    "Secuencia antes/después: el topo con 2 cm de avance el 17 de octubre frente al topo salido a la mitad del hoyo el 26-27 de octubre [0, 1].",
+    "Diagrama comparativo: profundidad objetivo de 5 metros vs. los 40 cm máximos realmente alcanzados [3, 8]."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El topo salió parcialmente de su agujero el fin de semana del 26-27 de octubre de 2019, retrocediendo hasta quedar aproximadamente a la mitad fuera del suelo.",
+      "fuente_url": "https://spaceflightnow.com/2019/10/29/ground-teams-studying-setback-with-insights-subsurface-heat-probe/",
+      "cita": "InSight's mole has backed about halfway out of its hole this past weekend. Preliminary assessments point to unusual soil conditions on the Red Planet.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "evento_id": "ins003",
+  "titulo": "NASA selecciona InSight como misión Discovery (20 agosto 2012)",
+  "contexto_ampliado": "El 20 de agosto de 2012, la NASA anunció la selección de InSight como la siguiente misión de su programa Discovery, una línea de proyectos de exploración planetaria que permite a los científicos usar enfoques innovadores para responder preguntas fundamentales sobre el sistema solar. La misión tendría como objetivo investigar el interior de Marte.\n\nLa historia de InSight comenzó dos años antes: en septiembre de 2010, un equipo liderado por W. Bruce Banerdt, geofísico planetario del Laboratorio de Propulsión a Chorro (JPL), presentó a la NASA una propuesta bajo el nombre GEMS, siglas de *Geophysical Monitoring Station*. Sin embargo, la NASA pidió que ese nombre se reservara para otra misión de astrofísica ya en desarrollo (la Gravity and Extreme Magnetism Small Explorer), y el equipo adoptó el nombre InSight: *Interior Exploration using Seismic Investigations, Geodesy and Heat Transport*.\n\nLa competencia fue amplia. En mayo de 2011, la NASA redujo el campo de 28 propuestas Discovery a tres conceptos finalistas: InSight, que exploraría Marte; TiME (Titan Mare Explorer), un aterrizador que habría flotado sobre un mar de metano y etano en Titán; y Comet Hopper, que habría aterrizado múltiples veces sobre un cometa. InSight fue seleccionado en agosto de 2012 como la propuesta ganadora.\n\nLa misión contaría con tres grandes investigaciones internacionales. Primera: la agencia espacial francesa CNES encabezaría un consorcio europeo para proveer el sismómetro, encargado de detectar la actividad sísmica del planeta. Segunda: el Centro Aeroespacial Alemán (DLR) aportaría una sonda de flujo de calor diseñada para introducirse cinco metros en el subsuelo marciano —más profundo que cualquier brazo, pala, taladro o sonda anterior— con el fin de medir cuánto calor emana del interior de Marte. Tercera: el experimento RISE (*Rotation and Interior Structure Experiment*), dirigido por JPL, usaría el sistema de comunicaciones de la nave para obtener mediciones precisas de la rotación planetaria y, a partir del bamboleo detectado, deducir información sobre la distribución de las estructuras internas de Marte.\n\nLa nave no se diseñaría desde cero. InSight emplearía muchos aspectos del diseño de aterrizador estacionario ya probados por la misión Mars Phoenix de la NASA, que en 2008 había investigado hielo, suelo y atmósfera en el Ártico marciano. Al igual que Phoenix, la nave sería construida por Lockheed Martin y funcionaría con paneles solares como fuente de energía.\n\nComo misión del programa Discovery, el costo de InSight —sin incluir el vehículo lanzador ni los servicios relacionados— estaba limitado a 425 millones de dólares en dólares de 2010. El aterrizaje estaba programado para septiembre de 2016, momento en que iniciaría una misión científica de dos años en la superficie marciana.",
+  "datos_reales": [
+    {
+      "afirmacion": "NASA anunció la selección de InSight el 20 de agosto de 2012 como misión de clase Discovery para sondear el interior de Marte.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "As part of its Discovery program, today NASA announced the selection of the InSight lander mission to investigate the interior of Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "W. Bruce Banerdt, geofísico planetario del JPL, es el investigador principal de InSight.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "InSight is led by W. Bruce Banerdt, a planetary geophysicist at JPL.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El aterrizaje de InSight estaba programado para septiembre de 2016 para iniciar una misión científica de dos años.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "InSight is scheduled to land on Mars in September 2016 to begin its two-year scientific mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El nombre original de la misión era GEMS (Geophysical Monitoring Station); se cambió a InSight a pedido de la NASA para reservar ese acrónimo a otra misión.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "InSight was formerly known as the Geophysical Monitoring Station (GEMS), but NASA requested that name be reserved for an astrophysics mission known as the Gravity and Extreme Magnetism Small Explorer that was already in development.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La propuesta de la misión fue presentada a la NASA por el equipo de Banerdt en septiembre de 2010 y compitió con otras propuestas por la oportunidad de lanzamiento de 2016 del programa Discovery.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/science",
+      "cita": "Bruce Banerdt of NASA's Jet Propulsion Laboratory in Pasadena, California, now the principal investigator for InSight, led the team that prepared the mission proposal -- originally called Geophysical Monitoring Station (GEMS) -- submitted to NASA in September 2010.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En mayo de 2011, la NASA seleccionó tres conceptos finalistas de entre 28 propuestas Discovery: InSight, TiME (explorador de Titán) y Comet Hopper (aterrizador de cometa).",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "In May 2011, NASA selected three mission concepts from 28 Discovery proposals for funding to conduct preliminary design studies and analyses. In addition to InSight, there was the Titan Mare Explorer (TiME), a Titan lander that would have floated on a methane-ethane sea, and Comet Hopper that would have landed on a comet multiple times.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La agencia espacial francesa CNES encabeza el consorcio que provee el sismómetro de InSight.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "The French space agency Centre National d'Etudes Spatiales (CNES) is leading a consortium of European groups providing the seismic instrument.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Centro Aeroespacial Alemán (DLR) aporta la sonda de flujo de calor que se introduce en el subsuelo marciano.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "The German Aerospace Center, or DLR, is contributing the heat flow probe which will hammer five meters into the Martian subsurface, deeper than all previous arms, scoops, drills and probes, to learn how much heat is coming from Mars' interior.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El experimento RISE (Rotation and Interior Structure Experiment), dirigido por JPL, usará el enlace de radio del aterrizador para medir con precisión la rotación de Marte.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "The Rotation and Interior Structure Experiment (RISE), led by JPL, will use the spacecraft communication system to provide precise measurements of planetary rotation, which will use the wobble it measures to help determine the distribution of Mars' internal structures.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La nave de InSight se basa en el diseño del aterrizador Phoenix y será construida por Lockheed Martin con paneles solares como fuente de energía.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "The spacecraft itself is closely based on the Phoenix lander and will, like Phoenix, be built by Lockheed Martin, and will be solar powered.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El costo de la misión, excluido el vehículo lanzador, estaba limitado a 425 millones de dólares en dólares de 2010.",
+      "fuente_url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "cita": "As a Discovery mission, the cost of the mission, excluding the launch vehicle and related services, is capped at $425 million in 2010 dollars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight utiliza muchos aspectos del diseño de misión de aterrizador estacionario ya probados por la misión Mars Phoenix Lander, que investigó hielo, suelo y atmósfera en el Ártico marciano en 2008.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/science",
+      "cita": "InSight uses many aspects of a stationary-lander mission design already proven by NASA's Phoenix Mars Lander mission, which investigated ice, soil and atmosphere at a site in the Martian arctic in 2008.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight forma parte del programa Discovery de la NASA, que permite a científicos usar enfoques innovadores para responder preguntas fundamentales sobre el sistema solar.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/science",
+      "cita": "InSight is part of NASA's Discovery Program of competitively selected missions for exploring our solar system. The Discovery Program enables scientists to use innovative approaches to answering fundamental questions about our solar system.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El aterrizador fue construido sobre el diseño probado del aterrizador Mars Phoenix de la NASA.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "The lander was built on the proven design of NASA's Mars Phoenix lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight fue seleccionado en agosto de 2012 tras evaluarse 28 propuestas competidoras para misiones a distintos destinos del sistema solar.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/science",
+      "cita": "That proposal and 27 other proposals for missions to various destinations throughout the solar system were evaluated in a competition for the 2016 launch opportunity of the Discovery Program. InSight was selected in August 2012.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "InSight Mission Overview – science.nasa.gov",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "InSight Landing Press Kit: Science – JPL",
+      "url": "https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/science",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA Selects InSight Mars 2016 Lander – The Planetary Society",
+      "url": "https://www.planetary.org/articles/20120820-insight-mars-mission-selected",
+      "editor": "The Planetary Society",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "PROFUNDIDAD DE LA SONDA DE CALOR: La Planetary Society (2012) indica que la sonda HP3 penetraría 'five meters' (5 m) en el subsuelo marciano (https://www.planetary.org/articles/20120820-insight-mars-mission-selected), mientras que el kit de prensa de JPL (2018) señala 'more than 10 feet (3 meters)' (https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/science). Puede reflejar una revisión de la especificación técnica entre 2012 y 2018.",
+    "NÚMERO TOTAL DE PROPUESTAS EN COMPETENCIA: La Planetary Society dice 'three mission concepts from 28 Discovery proposals' (28 en total), mientras que el JPL press kit dice 'That proposal and 27 other proposals' (28 otras, 29 en total). (https://www.planetary.org/articles/20120820-insight-mars-mission-selected vs https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/science)",
+    "NÚMERO DE PROPUESTAS — POSIBLE FALSA CONTRADICCIÓN: El borrador anterior señalaba una discrepancia entre la Planetary Society ('28 Discovery proposals') y el JPL press kit ('That proposal and 27 other proposals'). Sin embargo, la frase del JPL dice literalmente 'That proposal AND 27 other proposals', es decir, la propuesta de InSight más 27 otras = 28 en total, lo cual coincide exactamente con la cifra de la Planetary Society. No parece haber contradicción real; la interpretación del borrador de que el JPL indicaba 29 propuestas es errónea. (https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/science vs https://www.planetary.org/articles/20120820-insight-mars-mission-selected)"
+  ],
+  "huecos": [
+    "No se leyó el comunicado de prensa original de la NASA del 20 de agosto de 2012 (referenciado como HQ_12-288 en el JPL press kit: https://www.nasa.gov/home/hqnews/2012/aug/HQ_12-288-New_Discovery_Mars_Mission.html). Podría contener detalles adicionales del anuncio oficial.",
+    "No se verificó el rol específico de cada uno de los otros países participantes (Austria, Bélgica, Canadá, Italia, Polonia, España, Suiza y Reino Unido) en los instrumentos.",
+    "No se confirmó si el tope de costo de 425 M USD se mantuvo o se ajustó durante el desarrollo de la misión (el lanzamiento se retrasó de 2016 a 2018 por problemas técnicos del sismómetro).",
+    "No se verificó la razón exacta por la que el aterrizaje previsto de septiembre de 2016 no se cumplió (aunque se sabe que hubo problemas con el sismómetro SEIS).",
+    "El relato del borrador mencionaba que John Grunsfeld declaró que los tres finalistas tenían ciencia de primera calidad y que los paneles de revisión consideraron que InSight ofrecía mayor probabilidad de cumplir objetivos dentro del presupuesto, pero ninguno de los datos conservados respalda esa afirmación con cita literal. Se eliminó del contexto ampliado.",
+    "El evento original no especifica la fuente de la nota de Lockheed Martin mencionada en la 'nota' del evento. No hay datos del dossier procedentes de Lockheed Martin que confirmen o contradigan la ausencia de mención al vínculo con Phoenix en su comunicado."
+  ],
+  "ideas_visuales": [
+    "Diagrama con los tres finalistas Discovery de 2011: InSight (aterrizador en Marte), TiME (bote flotando en un mar de Titán) y Comet Hopper (nave posándose sobre un cometa), con flechas que muestran la selección final de InSight en 2012.",
+    "Esquema del aterrizador InSight mostrando sus tres instrumentos principales: el sismómetro (CNES/Francia), la sonda de calor HP3 (DLR/Alemania) penetrando 5 metros bajo la superficie, y la antena del experimento RISE (JPL).",
+    "Comparación visual lado a lado del aterrizador Phoenix (2008, Ártico marciano) y el diseño de InSight, resaltando las similitudes de estructura y los paneles solares.",
+    "Línea de tiempo desde septiembre de 2010 (presentación de la propuesta GEMS) pasando por mayo de 2011 (selección de tres finalistas de entre 28 propuestas) hasta agosto de 2012 (selección definitiva de InSight).",
+    "Infografía del presupuesto: representación gráfica del tope de 425 millones de dólares (en dólares de 2010) con una nota aclarando que excluye el vehículo lanzador."
+  ],
+  "datos_no_verificados": []
+}

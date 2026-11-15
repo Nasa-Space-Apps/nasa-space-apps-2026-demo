@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.27742485,
+  "turnos": 9,
+  "duracion_s": 135.9,
+  "duracion_api_s": 120.4,
+  "tokens": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 18063,
+    "cache_read_input_tokens": 25292,
+    "output_tokens": 13345,
+    "output_tokens_details": {
+      "thinking_tokens": 6786
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 18063
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1768,
+      "outputTokens": 28,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001908,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 6,
+      "outputTokens": 13345,
+      "cacheReadInputTokens": 25292,
+      "cacheCreationInputTokens": 18063,
+      "webSearchRequests": 0,
+      "costUSD": 0.27551685000000004,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 6786,
+      "cacheCreationEphemeral5mInputTokens": 18063,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 1,
+    "leer_pagina": 6,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "4",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.12137650000000001,
+    "turnos": 2,
+    "duracion_s": 40.4,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5034,
+        "outputTokens": 28,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.005174000000000001,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 3139,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6034,
+        "webSearchRequests": 0,
+        "costUSD": 0.11620250000000001,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 1278,
+        "cacheCreationEphemeral5mInputTokens": 6034,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 17,
+      "datos_despues": 16,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se descartó el dato [14] porque su cita es una predicción condicional pre-lanzamiento ('could be visible') que el dato presenta como hecho consumado, y además el evento original menciona niebla durante el despegue, lo cual contradice la supuesta visibilidad. El resto de datos (16 de 17) se conservan íntegramente; el relato se reescribió eliminando detalles narrativos no respaldados por citas (tiem"
+    }
+  },
+  "costo_usd_referencia_total": 0.39880135,
+  "costos": {
+    "total_usd": 0.398802,
+    "por_paso": {
+      "investigacion": 0.277425,
+      "revision": 0.121377
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.007082,
+        "entrada": 6802,
+        "salida": 56,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.275517,
+        "entrada": 6,
+        "salida": 13345,
+        "cache_leida": 25292,
+        "cache_escrita": 18063,
+        "razonamiento": 6786
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.116203,
+        "entrada": 3,
+        "salida": 3139,
+        "cache_leida": 0,
+        "cache_escrita": 6034,
+        "razonamiento": 1278
+      }
+    }
+  }
+}

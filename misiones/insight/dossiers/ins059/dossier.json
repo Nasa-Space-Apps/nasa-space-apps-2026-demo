@@ -1,0 +1,147 @@
+{
+  "evento_id": "ins059",
+  "titulo": "S1094b: el mayor impacto detectado por InSight (24 de diciembre de 2021)",
+  "contexto_ampliado": "La Nochebuena de 2021 —sol 1094 de la misión InSight— un meteoroide impactó contra la superficie de Marte en la región de Amazonis Planitia, a unos 3 500 km del lugar de aterrizaje del lander. El sismómetro SEIS registró la sacudida como un marcosismo de magnitud 4 (según la NASA) o superior a 4 (según el IPGP y el USGS). Solo meses después se descubrió que la causa había sido la caída de una roca espacial, y no un proceso geológico interno del planeta.\n\nEl cráter resultante midió aproximadamente 150 metros de diámetro y 21 metros de profundidad. Se cree que es uno de los cráteres más grandes jamás observados formarse en cualquier lugar del sistema solar, y supera incluso al cráter de Wabar (Arabia Saudí, 120 m de diámetro), considerado el mayor impacto reciente registrado en la superficie terrestre. Los escombros eyectados llegaron a dispersarse hasta 37 km del punto de impacto.\n\nEl meteoroide tenía entre 5 y 12 metros de diámetro, con una masa estimada de 250 a 650 toneladas y una velocidad de impacto de unos 7,5 km/s. En la Tierra se habría desintegrado al atravesar la atmósfera, pero la de Marte es apenas el 1 % de densa que la nuestra, lo que permitió que la roca llegara intacta hasta el suelo.\n\nEl aspecto más relevante para la ciencia fue que S1094b generó las primeras ondas superficiales claramente observadas en un sismograma marciano: ondas que viajan a lo largo de la corteza, en lugar de penetrar hacia el interior del planeta. Gracias a ellas, los investigadores pudieron medir por primera vez la estructura promedio de la corteza de Marte entre el punto de impacto y el lander, algo que antes solo se había logrado justo debajo de InSight.\n\nEl impacto, ocurrido a 35°N de latitud, excavó bloques de hielo de agua del subsuelo marciano. Se trata de la latitud más baja en la que se ha observado directamente hielo en Marte, lo que tiene implicaciones para la exploración humana futura, ya que las zonas ecuatoriales son las más cálidas y atractivas para posibles asentamientos.\n\nEl cráter fue identificado por primera vez el 11 de febrero de 2022, por científicos de Malin Space Science Systems que operan dos cámaras a bordo del Mars Reconnaissance Orbiter (MRO). Ese orbitador no había detectado ningún impacto de semejante tamaño en sus 16 años de misión. Dos estudios que reúnen todos estos hallazgos fueron publicados el 27 de octubre de 2022 en la revista Science, consolidando a S1094b como uno de los eventos sísmicos más informativos de toda la misión InSight.",
+  "datos_reales": [
+    {
+      "afirmacion": "El impacto S1094b ocurrió el 24 de diciembre de 2021, en el sol 1094 de la misión InSight, en la región de Amazonis Planitia.",
+      "fuente_url": "https://mars.nasa.gov/news/9289/",
+      "cita": "NASA's InSight lander recorded a magnitude 4 marsquake last Dec. 24, but scientists learned only later the cause of that quake: a meteoroid strike estimated to be one of the biggest seen on Mars since NASA began exploring the cosmos.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cráter formado por el impacto mide aproximadamente 150 metros de diámetro y 21 metros de profundidad.",
+      "fuente_url": "https://mars.nasa.gov/news/9289/",
+      "cita": "The impact, in a region called Amazonis Planitia, blasted a crater roughly 492 feet (150 meters) across and 70 feet (21 meters) deep.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El meteoroide tenía entre 5 y 12 metros de diámetro; en la Tierra se habría desintegrado en la atmósfera, pero la de Marte es solo el 1 % de densa.",
+      "fuente_url": "https://mars.nasa.gov/news/9289/",
+      "cita": "The meteoroid is estimated to have spanned 16 to 39 feet (5 to 12 meters) – small enough that it would have burned up in Earth's atmosphere, but not in Mars' thin atmosphere, which is just 1% as dense as our planet's.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los escombros eyectados por el impacto llegaron a dispersarse hasta 37 km del punto de impacto.",
+      "fuente_url": "https://mars.nasa.gov/news/9289/",
+      "cita": "Some of the ejecta thrown by the impact flew as far as 23 miles (37 kilometers) away.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Este impacto es uno de los cráteres más grandes jamás observados formarse en cualquier lugar del sistema solar.",
+      "fuente_url": "https://mars.nasa.gov/news/9289/",
+      "cita": "With images and seismic data documenting the event, this is believed to be one of the largest craters ever witnessed forming any place in the solar system.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El marcosismo del 24 de diciembre de 2021 fue el primero en Marte con ondas superficiales claramente visibles, que viajan a lo largo de la corteza del planeta.",
+      "fuente_url": "https://mars.nasa.gov/news/9289/",
+      "cita": "the quake resulting from last December's impact was the first observed to have surface waves – a kind of seismic wave that ripples along the top of a planet's crust.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El impacto S1094b ocurrió a 3.500 km del lugar de aterrizaje de InSight; la masa del impactor se estima entre 250 y 650 toneladas con una velocidad de impacto de 7,5 km/s.",
+      "fuente_url": "https://www.ipgp.fr/en/news-and-agenda/news/two-major-meteorite-impacts-shed-light-on-the-interior-of-mars/",
+      "cita": "The two meteorites hit Mars 3500 km and 7500 km from the Insight landing site. The larger one has an estimated mass of 250-650 tons, for an impact speed of 7.5 km/s.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "S1094b es el cráter de impacto más grande de los últimos siglos detectado en un planeta terrestre, superando los 120 m del cráter de Wabar (Arabia Saudí).",
+      "fuente_url": "https://www.ipgp.fr/en/news-and-agenda/news/two-major-meteorite-impacts-shed-light-on-the-interior-of-mars/",
+      "cita": "S1094b is even the largest impact crater of the last few centuries detected on a terrestrial planet, as its 150-metre diameter exceeds the 120-metre diameter of the Wabar crater in Saudi Arabia, which is considered to be the largest impact on the Earth's surface during this period.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las ondas superficiales de S1094b permitieron medir la estructura promedio de la corteza marciana entre el punto de impacto e InSight, una información que antes solo era posible obtener bajo el propio lander.",
+      "fuente_url": "https://www.ipgp.fr/en/news-and-agenda/news/two-major-meteorite-impacts-shed-light-on-the-interior-of-mars/",
+      "cita": "These are the first events for which surface waves are clearly visible. This makes it possible to determine the average structure of the Mars crust between the point of impact and InSight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El impacto en 35°N excavó bloques de hielo de agua, siendo la latitud más baja donde el hielo ha sido directamente observado en Marte.",
+      "fuente_url": "https://www.usgs.gov/publications/largest-recent-impact-craters-mars-orbital-imaging-and-surface-seismic-co",
+      "cita": "The impact at 35°N excavated blocks of water ice, which is the lowest latitude ice has been directly observed on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cráter fue identificado por primera vez el 11 de febrero de 2022, por científicos de Malin Space Science Systems que operan las cámaras CTX y MARCI a bordo del MRO.",
+      "fuente_url": "https://mars.nasa.gov/news/9289/",
+      "cita": "The crater was first spotted on Feb. 11, 2022, by scientists working at Malin Space Science Systems (MSSS), which built and operates two cameras aboard MRO.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los dos artículos científicos resultado de este hallazgo fueron publicados el 27 de octubre de 2022 en la revista Science.",
+      "fuente_url": "https://www.ipgp.fr/en/news-and-agenda/news/two-major-meteorite-impacts-shed-light-on-the-interior-of-mars/",
+      "cita": "Two studies published on 27 October in the journal Science, involving numerous co-authors from French institutions and laboratories.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El MRO no había detectado ningún impacto de este tamaño en sus 16 años de misión orbital alrededor de Marte.",
+      "fuente_url": "https://www.usgs.gov/publications/largest-recent-impact-craters-mars-orbital-imaging-and-surface-seismic-co",
+      "cita": "These are the two largest fresh impact craters discovered by the Mars Reconnaissance Orbiter since operations started 16 years ago.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's InSight Lander Detects Stunning Meteoroid Impact on Mars",
+      "url": "https://mars.nasa.gov/news/9289/",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Two major meteorite impacts shed light on the interior of Mars",
+      "url": "https://www.ipgp.fr/en/news-and-agenda/news/two-major-meteorite-impacts-shed-light-on-the-interior-of-mars/",
+      "editor": "IPGP (Institut de Physique du Globe de Paris)",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Largest recent impact craters on Mars: Orbital imaging and surface seismic co-investigation (Posiolova et al., Science 2022)",
+      "url": "https://www.usgs.gov/publications/largest-recent-impact-craters-mars-orbital-imaging-and-surface-seismic-co",
+      "editor": "USGS / Science journal (DOI: 10.1126/science.abq7704)",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Surface waves and crustal structure on Mars (Science, 2022)",
+      "url": "https://www.science.org/doi/10.1126/science.abq7157",
+      "editor": "Science / AAAS",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "MAGNITUD del marcosismo S1094b: NASA/JPL (mars.nasa.gov/news/9289/) usa 'magnitude 4' sin calificativo ('NASA's InSight lander recorded a magnitude 4 marsquake'), mientras que el IPGP (ipgp.fr) dice explícitamente 'magnitude greater than 4' y el USGS (usgs.gov/publications/...) también escribe 'magnitudes greater than 4'. La diferencia puede deberse al redondeo informativo de la nota de prensa de la NASA frente a la precisión técnica de las instituciones científicas.",
+    "SOL DEL EVENTO: La nota del evento advierte que el sol 1043 circulaba sin fuente. Las tres fuentes consultadas coinciden en Sol 1094 / 24 de diciembre de 2021, confirmando que Sol 1094 es el dato correcto y descartando 1043.",
+    "El relato del borrador menciona que el MRO fotografió el cráter 'gracias a sus cámaras CTX, MARCI y HiRISE', pero la cita de [11] (mars.nasa.gov/news/9289/) solo habla de 'two cameras' operadas por MSSS, que son CTX y MARCI. HiRISE no aparece en ninguna de las citas del dossier, por lo que su participación en la documentación del cráter no está respaldada por las fuentes recopiladas.",
+    "El borrador afirma que el hielo subterráneo podría servir para 'producir combustible de cohete', pero ninguna de las citas del dossier menciona esa aplicación. La cita de [6] (mars.nasa.gov/news/9289/) solo dice que la zona ecuatorial es 'an appealing location for astronauts'."
+  ],
+  "huecos": [
+    "Profundidad exacta a la que estaba enterrado el hielo de agua antes del impacto (solo se sabe que fue excavado y quedó visible en superficie).",
+    "Composición detallada del meteoroide (tipo espectral, composición mineralógica); las fuentes solo dan tamaño y masa estimados.",
+    "Si la cámara HiRISE capturó el cráter en color durante el primer sobrevuelo del MRO o en uno posterior; solo se confirma la fecha de detección por CTX/MARCI (11 de febrero de 2022).",
+    "Número exacto de artículos científicos derivados del evento S1094b más allá de los dos publicados en Science el 27 de octubre de 2022.",
+    "Relación precisa entre S1094b y los cuatro impactos de 2020-2021 del estudio de Garcia et al. mencionado en la nota del evento; no se encontró información para comparar directamente.",
+    "No se encontró en las fuentes la cita exacta que vincule la cámara MARCI con la determinación de una 'ventana de 24 horas' para el impacto, como afirma el relato del borrador.",
+    "Ninguna fuente del dossier confirma explícitamente el sol 1094; el número se infiere del nombre del evento (S1094b) y de la fecha 24 de diciembre de 2021, pero las citas literales no lo mencionan."
+  ],
+  "ideas_visuales": [
+    "Corte transversal del cráter de 150 m de diámetro y 21 m de profundidad en Amazonis Planitia, con escala humana para comparación.",
+    "Comparación a escala entre el cráter S1094b (150 m) y el cráter de Wabar (120 m), ambos con sus dimensiones anotadas.",
+    "Diagrama del meteoroide (5-12 m) atravesando la delgada atmósfera marciana (1 % de la terrestre) frente a uno desintegrándose en la atmósfera de la Tierra.",
+    "Mapa de Marte mostrando la posición de InSight y el cráter S1094b a 3 500 km de distancia, con las ondas superficiales representadas viajando por la corteza.",
+    "Vista orbital tipo MRO del cráter con bloques de hielo de agua visibles alrededor, a 35°N de latitud."
+  ],
+  "datos_no_verificados": []
+}

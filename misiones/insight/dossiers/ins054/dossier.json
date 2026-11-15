@@ -1,0 +1,133 @@
+{
+  "evento_id": "ins054",
+  "titulo": "Se mide la corteza, el manto y el núcleo de Marte (julio de 2021)",
+  "contexto_ampliado": "Cuando la sonda InSight aterrizó en la llanura marciana de Elysium Planitia en noviembre de 2018, trajo consigo algo que ninguna misión anterior había llevado a Marte: un sismómetro de precisión extrema llamado SEIS (Seismic Experiment for Interior Structure). Mientras que rovers y orbitadores anteriores se habían dedicado a estudiar la superficie, InSight tenía un objetivo distinto: escuchar lo que ocurre en las profundidades del planeta rojo y descubrir cómo está organizado su interior.\n\nA lo largo de los primeros años de misión, el sismómetro SEIS detectó 733 martemotos distintos. Sin embargo, para las tres investigaciones publicadas en la revista Science, los científicos solo necesitaron los más útiles: unos 35 de esos eventos, todos con magnitudes entre 3,0 y 4,0, proporcionaron las señales sísmicas necesarias para medir las capas internas del planeta.\n\nLa técnica funciona como una escucha de ecos. Las ondas sísmicas generadas por un martemoto se propagan a través del planeta y cambian de velocidad según el material por el que viajan. Cuando encuentran el límite entre dos capas distintas —por ejemplo, entre el manto y el núcleo—, parte de la onda rebota y regresa al sismómetro. Detectando esos rebotes, los científicos calculan a qué profundidad está cada frontera, de forma similar a como un ultrasonido médico revela capas internas de un cuerpo.\n\nLos resultados se repartieron en tres artículos independientes publicados en Science en julio de 2021, cada uno liderado por un investigador diferente: Brigitte Knapmeyer-Endrun (Universidad de Colonia) se ocupó de la corteza, Amir Khan (ETH Zúrich) del manto, y Simon Stähler (ETH Zúrich) del núcleo. La corteza marciana resultó ser más delgada de lo esperado: si tiene dos subcapas, se extiende hasta unos 20 kilómetros de profundidad; si tiene tres, llega a los 37 kilómetros. Debajo de ella, el manto se prolonga hasta unos 1.560 kilómetros desde la superficie. Y en el corazón del planeta, el núcleo tiene un radio de 1.830 ± 40 kilómetros y se confirmó que es líquido. Ese núcleo, compuesto de hierro y níquel con una cantidad sustancial de elementos ligeros, presentó una densidad estimada de entre 5,7 y 6,3 g/cm³.\n\nCabe destacar que la mayoría de los martemotos significativos detectados por InSight provenían de una sola zona: Cerberus Fossae, una región con actividad volcánica lo bastante reciente como para que la lava haya fluido allí hace apenas unos pocos millones de años.\n\nDos años después, en 2023, el análisis de nuevos datos obligó a revisar las cifras del núcleo. En agosto y septiembre de 2021, el sismómetro había registrado dos martemotos en el lado opuesto de Marte cuyas ondas atravesaron el núcleo; uno de ellos fue causado por el impacto de un meteorito. Gracias a estos datos, los investigadores descubrieron que entre el núcleo de hierro líquido y el manto sólido existe una capa de silicato fundido (magma) de unos 150 kilómetros de espesor, algo que no existe en la Tierra. Al excluir esa capa de la medición del núcleo propiamente dicho, el radio quedó reducido a entre 1.650 y 1.700 kilómetros.\n\nEn conjunto, estos resultados representan la primera radiografía sísmica completa del interior de un planeta rocoso distinto de la Tierra, y permiten a los científicos comparar cómo se formaron y diferenciaron los planetas interiores del sistema solar.",
+  "datos_reales": [
+    {
+      "afirmacion": "El sismómetro SEIS de InSight registró 733 martemotos distintos; unos 35, con magnitudes entre 3,0 y 4,0, proporcionaron los datos para los tres artículos sobre el interior de Marte.",
+      "fuente_url": "https://www.nasa.gov/centers-and-facilities/jpl/nasas-insight-reveals-the-deep-interior-of-mars/",
+      "cita": "InSight's seismometer, called the Seismic Experiment for Interior Structure (SEIS), has recorded 733 distinct marsquakes. About 35 of those – all between magnitudes 3.0 and 4.0 – provided the data for the three papers.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tres artículos sobre la corteza, el manto y el núcleo de Marte fueron publicados en la revista Science confirmando que el centro del planeta es fundido.",
+      "fuente_url": "https://www.nasa.gov/centers-and-facilities/jpl/nasas-insight-reveals-the-deep-interior-of-mars/",
+      "cita": "Three papers based on the seismometer's data were published today in Science, providing details on the depth and composition of Mars' crust, mantle, and core, including confirmation that the planet's center is molten.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La corteza marciana se extiende hasta unos 20 km si tiene dos subcapas, o hasta 37 km si tiene tres subcapas.",
+      "fuente_url": "https://www.nasa.gov/centers-and-facilities/jpl/nasas-insight-reveals-the-deep-interior-of-mars/",
+      "cita": "It goes as deep as 12 miles (20 kilometers) if there are two sub-layers, or 23 miles (37 kilometers) if there are three.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El manto de Marte se extiende hasta unos 1.560 km por debajo de la superficie.",
+      "fuente_url": "https://www.nasa.gov/centers-and-facilities/jpl/nasas-insight-reveals-the-deep-interior-of-mars/",
+      "cita": "Beneath that is the mantle, which extends 969 miles (1,560 kilometers) below the surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El radio del núcleo líquido de Marte fue determinado en 1.830 ± 40 kilómetros mediante la detección de reflexiones de ondas sísmicas en el límite manto-núcleo.",
+      "fuente_url": "https://research-information.bris.ac.uk/en/publications/seismic-detection-of-the-martian-core/",
+      "cita": "We detected reflections of seismic waves from the core-mantle boundary of Mars using InSight seismic data and inverted these together with geodetic data to constrain the radius of the liquid metal core to 1830 ± 40 kilometers.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La densidad media del núcleo marciano se estimó en 5,7 a 6,3 g/cm³, lo que requiere una cantidad sustancial de elementos ligeros disueltos en el núcleo de hierro-níquel.",
+      "fuente_url": "https://research-information.bris.ac.uk/en/publications/seismic-detection-of-the-martian-core/",
+      "cita": "We inferred a mean core density of 5.7 to 6.3 grams per cubic centimeter, which requires a substantial complement of light elements dissolved in the iron-nickel core.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los autores principales de los tres artículos son Simon Stähler (núcleo, ETH Zúrich), Amir Khan (manto, ETH Zúrich) y Brigitte Knapmeyer-Endrun (corteza, Universidad de Colonia).",
+      "fuente_url": "https://www.nasa.gov/centers-and-facilities/jpl/nasas-insight-reveals-the-deep-interior-of-mars/",
+      "cita": "\"This study is a once-in-a-lifetime chance,\" said Simon Stähler of the Swiss research university ETH Zurich, lead author of the core paper. [...] \"What we're looking for is an echo,\" said Amir Khan of ETH Zurich, lead author of the paper on the mantle. [...] said Brigitte Knapmeyer-Endrun of the University of Cologne, lead author on the paper about the crust.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La mayoría de los martemotos significativos detectados por InSight provenían de Cerberus Fossae, una región donde la lava puede haber fluido hace apenas unos pocos millones de años.",
+      "fuente_url": "https://www.nasa.gov/centers-and-facilities/jpl/nasas-insight-reveals-the-deep-interior-of-mars/",
+      "cita": "all of InSight's most significant quakes appear to have come from one area, Cerberus Fossae, a region volcanically active enough that lava may have flowed there within the last few million years.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En 2023, una revisión con nuevos datos redujo el radio del núcleo marciano a entre 1.650 y 1.700 km, al descubrirse que lo que antes se atribuía al núcleo era en parte una capa de silicato fundido.",
+      "fuente_url": "https://ethz.ch/en/news-and-events/eth-news/news/2023/10/mystery-of-the-martian-resolved.html",
+      "cita": "The new observations show that the radius of the Martian core has decreased from the initially determined range of 1,800–1,850 kilometres to somewhere in the range of 1,650– 1,700 kilometres.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Entre el núcleo de hierro líquido de Marte y su manto sólido existe una capa de silicato fundido (magma) de unos 150 km de espesor, algo que no existe en la Tierra.",
+      "fuente_url": "https://ethz.ch/en/news-and-events/eth-news/news/2023/10/mystery-of-the-martian-resolved.html",
+      "cita": "Sandwiched between Mars's liquid iron alloy core and its solid silicate mantle lies a layer of liquid silicate (magma) about 150 kilometres thick. \"Earth doesn't have a completely molten silicate layer like that,\" Khan says.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La revisión de 2023 se basó en dos martemotos de agosto y septiembre de 2021 cuyas ondas atravesaron el núcleo; uno de ellos fue causado por el impacto de un meteorito.",
+      "fuente_url": "https://ethz.ch/en/news-and-events/eth-news/news/2023/10/mystery-of-the-martian-resolved.html",
+      "cita": "in August and September 2021, the seismometer registered two quakes on the opposite side of Mars. One of them was caused by a meteorite impact. \"These quakes produced seismic waves that traversed the core,\" explains Cecilia Duran.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's InSight Reveals the Deep Interior of Mars (NASA.gov/JPL mirror)",
+      "url": "https://www.nasa.gov/centers-and-facilities/jpl/nasas-insight-reveals-the-deep-interior-of-mars/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Seismic detection of the Martian core – Stähler et al. 2021 (University of Bristol Research Information)",
+      "url": "https://research-information.bris.ac.uk/en/publications/seismic-detection-of-the-martian-core/",
+      "editor": "Universidad de Bristol / Science, vol. 373",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Mystery of the Martian core solved (ETH Zurich, octubre 2023)",
+      "url": "https://ethz.ch/en/news-and-events/eth-news/news/2023/10/mystery-of-the-martian-resolved.html",
+      "editor": "ETH Zurich",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "InSight Lander – Mission Overview (science.nasa.gov)",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "FECHA DE PUBLICACIÓN: El comunicado NASA.gov (https://www.nasa.gov/centers-and-facilities/jpl/nasas-insight-reveals-the-deep-interior-of-mars/) lleva fecha 22 de julio de 2021 y dice «published today in Science». La ficha de la Universidad de Bristol (https://research-information.bris.ac.uk/en/publications/seismic-detection-of-the-martian-core/) registra el artículo de Stähler et al. con fecha year=2021, month=jul, day=23 en la revista Science. La diferencia podría deberse a que el comunicado de prensa se distribuyó un día antes que el número impreso de la revista.",
+    "RADIO DEL NÚCLEO: Stähler et al. 2021 (https://research-information.bris.ac.uk/en/publications/seismic-detection-of-the-martian-core/) determinaron un radio de 1.830 ± 40 km. La revisión de ETH Zurich de 2023 (https://ethz.ch/en/news-and-events/eth-news/news/2023/10/mystery-of-the-martian-resolved.html) reduce ese rango a 1.650–1.700 km al identificar una capa de silicato fundido de ~150 km que antes se atribuía al núcleo externo.",
+    "La nota del evento original menciona que estudios posteriores estimaron el radio del núcleo en '1.780-1.810 km' como valor intermedio, pero ninguna de las fuentes del dossier respalda ese rango específico. La fuente de ETH Zurich 2023 (https://ethz.ch/en/news-and-events/eth-news/news/2023/10/mystery-of-the-martian-resolved.html) indica que el rango inicial era '1,800–1,850 kilometres' y el revisado '1,650–1,700 kilometres', sin mención de un valor intermedio de 1.780-1.810 km."
+  ],
+  "huecos": [
+    "No se pudo acceder al texto completo del artículo de manto (Khan et al., Science doi:10.1126/science.abf2966) ni al de corteza (Knapmeyer-Endrun et al.) desde sus páginas primarias en Science.org, que no devolvieron contenido.",
+    "El comunicado JPL original (https://www.jpl.nasa.gov/news/nasas-insight-reveals-the-deep-interior-of-mars/) devolvió una página vacía; solo se pudo leer el espejo en nasa.gov.",
+    "No se confirmó en ninguna fuente leída si Marte tiene también un núcleo interno sólido (análogo al núcleo interno de la Tierra).",
+    "El número de sol exacto en que se publicaron o anunciaron los resultados no aparece en ninguna de las fuentes leídas.",
+    "No se verificaron los detalles del tercer artículo revisado en 2023 (Samuel et al., Institut de Physique du Globe de Paris) directamente desde la fuente primaria.",
+    "La nota del evento original menciona un valor revisado de '1.650 km' (sin rango), mientras que el dato [8] da un rango de 1.650-1.700 km. No se encontró ninguna fuente que respalde un valor puntual de exactamente 1.650 km.",
+    "El relato del borrador afirmaba que 'el manto de Marte tiene una sola capa rocosa, a diferencia de la Tierra', pero ningún dato del dossier respalda esa afirmación concreta; se ha eliminado del contexto ampliado.",
+    "No se encontró información sobre la composición detallada de la capa de silicato fundido descubierta en 2023 ni sobre su origen (¿residuo de un océano de magma primordial u otro mecanismo?)."
+  ],
+  "ideas_visuales": [
+    "Corte transversal de Marte mostrando las tres capas medidas: corteza (20-37 km), manto (hasta 1.560 km) y núcleo líquido (1.830 km de radio), con etiquetas y escala.",
+    "Diagrama comparativo del núcleo de Marte según las mediciones de 2021 (1.830 km) y la revisión de 2023 (1.650-1.700 km), señalando la capa de silicato fundido de 150 km entre el manto y el núcleo.",
+    "Mapa de la superficie de Marte indicando la posición de InSight en Elysium Planitia y la zona de Cerberus Fossae, origen de la mayoría de los martemotos significativos.",
+    "Esquema del funcionamiento de la sismología: ondas sísmicas viajando desde Cerberus Fossae, rebotando en los límites entre capas y regresando al sismómetro SEIS.",
+    "Representación del sismómetro SEIS en la superficie marciana, cubierto por su escudo protector, registrando las vibraciones de un martemoto."
+  ],
+  "datos_no_verificados": []
+}

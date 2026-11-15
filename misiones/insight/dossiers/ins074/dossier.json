@@ -1,0 +1,147 @@
+{
+  "evento_id": "ins074",
+  "titulo": "NASA da por terminada la misión InSight (diciembre 2022)",
+  "contexto_ampliado": "El 15 de diciembre de 2022 fue la última vez que la sonda InSight se comunicó con la Tierra. Tras ese silencio, los controladores de misión en el Laboratorio de Propulsión a Chorro (JPL) de la NASA intentaron establecer contacto en dos ocasiones consecutivas sin éxito. Cuando un vehículo espacial no responde dos veces seguidas, la agencia interpreta que sus baterías se han agotado por completo, un estado que los ingenieros llaman \"dead bus\". Con esa certeza, la NASA declaró oficialmente el fin de la misión. Cabe señalar que el DLR (la agencia aeroespacial alemana) sitúa esa declaración el 20 de diciembre, mientras que el evento oficial de la NASA se registra con fecha del 21.\n\nLa causa del silencio definitivo fue el polvo marciano. Durante más de cuatro años, una fina capa de polvo se fue depositando sobre los paneles solares de InSight, reduciendo cada vez más la energía que podían captar del Sol. Sin electricidad suficiente para recargar las baterías, los instrumentos se fueron apagando uno a uno. El último en quedar activo fue el sismómetro SEIS, construido por la agencia espacial francesa CNES, que siguió registrando datos hasta el final.\n\nInSight había aterrizado en Marte el 26 de noviembre de 2018 en Elysium Planitia, tras ser lanzado el 5 de mayo de ese mismo año desde la base de Vandenberg, en California. La misión fue diseñada para durar un año marciano —equivalente a dos años terrestres—, pero sus paneles solares aguantaron lo suficiente para extenderla un segundo año marciano, duplicando así la duración prevista.\n\nA lo largo de su vida útil, el sismómetro de InSight detectó 1.319 sismos marcianos (marsquakes), incluyendo algunos provocados por impactos de meteoroides. Muchos de esos temblores se originaron en la región de Cerberus Fossae, una zona geológicamente activa situada a unos 1.500 kilómetros del lugar de aterrizaje, una distancia comparable, según el DLR, a la que separa Colonia del volcán Etna en Sicilia.\n\nGracias a las ondas sísmicas registradas, los científicos lograron determinar que el diámetro del núcleo de Marte se encuentra entre 3.600 y 3.700 kilómetros, en el extremo superior de las estimaciones previas a la misión. También se midió por primera vez el grosor promedio de la corteza marciana: entre 24 y 72 kilómetros, algo más delgada de lo que indicaban estudios anteriores más indirectos.\n\nNo todo fue un éxito completo. El instrumento HP3 —la famosa \"topo\", construida por el DLR alemán— tenía como objetivo enterrarse hasta cinco metros de profundidad para medir el flujo de calor interior del planeta. Sin embargo, el suelo de Elysium Planitia resultó ser inesperadamente compacto, y la sonda apenas logró hundir sus 40 centímetros ligeramente por debajo de la superficie. Aun así, recogió datos valiosos sobre las propiedades físicas y térmicas del suelo marciano.\n\nInSight marcó un hito en la exploración planetaria: fue la primera vez que la sismología fue el eje central de una misión más allá de la Tierra desde las misiones Apolo, cuando los astronautas llevaron sismómetros a la Luna. Su legado incluye haber demostrado que es posible \"escuchar\" el interior de otro planeta y, con ello, entender mejor la estructura interna de los mundos rocosos del sistema solar.",
+  "datos_reales": [
+    {
+      "afirmacion": "La NASA declaró el fin de la misión InSight tras dos intentos consecutivos fallidos de contacto, concluyendo que las baterías de la sonda se habían agotado ('dead bus').",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "Mission controllers at the agency's Jet Propulsion Laboratory (JPL) in Southern California were unable to contact the lander after two consecutive attempts, leading them to conclude the spacecraft's solar-powered batteries have run out of energy – a state engineers refer to as 'dead bus.'",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El último contacto de InSight con la Tierra fue el 15 de diciembre de 2022.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "The last time InSight communicated with Earth was Dec. 15.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sismómetro de InSight detectó 1.319 maremotos marcianos (marsquakes), incluyendo algunos causados por impactos de meteoroides.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "Its highly sensitive seismometer, along with daily monitoring performed by the French space agency Centre National d'Etudes Spatiales (CNES) and the Marsquake Service managed by ETH Zurich, detected 1,319 marsquakes, including quakes caused by meteoroid impacts.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sismómetro SEIS fue el último instrumento científico que permaneció encendido mientras la acumulación de polvo en los paneles solares reducía progresivamente la energía disponible.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "The seismometer was the last science instrument that remained powered on as dust accumulating on the lander's solar panels gradually reduced its energy.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La misión InSight recopiló datos científicos únicos en Marte durante más de cuatro años.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "NASA's InSight mission has ended after more than four years of collecting unique science on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El instrumento HP3 (la 'topo') del DLR solo logró enterrar su sonda de 40 centímetros ligeramente por debajo de la superficie, en lugar de alcanzar los 5 metros previstos.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "The instrument, which was provided by the German Aerospace Center (DLR), eventually buried its 16-inch (40-centimeter) probe just slightly below the surface, collecting valuable data on the physical and thermal properties of the Martian soil along the way.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según el DLR, la NASA declaró el fin de la misión el 20 de diciembre de 2022.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2022/04/insight-mission-ends",
+      "cita": "On 20 December 2022, NASA declared the mission over. The two attempts from Mission Control Centre at NASA's Jet Propulsion Laboratory (JPL) in Southern California to reach the lander via relay satellites in Mars orbit have been unsuccessful.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La acumulación de polvo en los paneles solares impidió la recarga de las baterías, causando el fin de la misión.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2022/04/insight-mission-ends",
+      "cita": "InSight uses solar energy to recharge the batteries, which is currently no longer sufficiently possible due to the dust accumulation on the solar panels.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los datos sísmicos de InSight permitieron determinar que el diámetro del núcleo de Marte se encuentra entre 3.600 y 3.700 kilómetros.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2022/04/insight-mission-ends",
+      "cita": "Its diameter is between 3600 and 3700 kilometres, which is at the upper end of the size estimated before the mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La corteza marciana tiene un grosor promedio de entre 24 y 72 kilómetros, algo más delgada de lo indicado por investigaciones previas.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2022/04/insight-mission-ends",
+      "cita": "The average thickness of the crust is between 24 and 72 kilometres, which is somewhat thinner than earlier, more indirect investigations had shown.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Muchos de los sismos marcianos registrados por InSight se originaron en la región Cerberus Fossae, a 1.500 kilómetros del lugar de aterrizaje.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2022/04/insight-mission-ends",
+      "cita": "Many of them originated in the Cerberus Fossae region, 1500 kilometres away from InSight. This corresponds roughly to the distance between Cologne and Mount Etna in Sicily.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight aterrizó en Marte el 26 de noviembre de 2018 en Elysium Planitia, y fue lanzado el 5 de mayo de 2018 desde Vandenberg Air Force Base.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Launched: May 5, 2018 (4:05 a.m. PT/7:05 a.m. ET) [...] Landed: Nov. 26, 2018, at 11:52:59 a.m. PT (2:52:59 p.m. ET) [...] Landing Site: Elysium Planitia, Mars",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA Retires InSight Mars Lander Mission After Years of Science",
+      "url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "InSight – the end of a scientific success story",
+      "url": "https://www.dlr.de/en/latest/news/2022/04/insight-mission-ends",
+      "editor": "DLR (Deutsches Zentrum für Luft- und Raumfahrt)",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "InSight Lander – Mission Overview",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "FECHA DE DECLARACIÓN OFICIAL: El DLR afirma explícitamente 'On 20 December 2022, NASA declared the mission over' (https://www.dlr.de/en/latest/news/2022/04/insight-mission-ends), mientras que el evento registrado tiene fecha del 21 de diciembre de 2022. La página principal del anuncio de la NASA (https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/) no menciona la fecha explícita de la declaración, solo que el último contacto fue el 15 de diciembre.",
+    "FECHA 'END OF MISSION' EN SCIENCE.NASA.GOV: La página de misión de NASA Science (https://science.nasa.gov/mission/insight/) lista 'End of Mission: Dec. 15, 2022', que coincide con la fecha del último contacto, no con la declaración oficial. Esto genera ambigüedad sobre qué fecha toma la NASA como fecha oficial de fin de misión en sus registros públicos.",
+    "El evento original lista 'science.nasa.gov/mission/insight/' con 'End of Mission: Dec. 15, 2022', que corresponde al último contacto (dato [1]), no a la declaración oficial. Esto contradice tanto la fecha del evento original (21 de diciembre) como la del DLR (20 de diciembre, dato [6]). Son tres fechas distintas según la fuente: 15, 20 y 21 de diciembre de 2022."
+  ],
+  "huecos": [
+    "No se pudo confirmar en ninguna de las páginas leídas la fecha del 21 de diciembre en un documento oficial de la NASA; la página principal del anuncio no incluye fecha explícita para el momento de la declaración.",
+    "No se pudo confirmar el número exacto de sols (días marcianos) activos que registró la misión desde el aterrizaje hasta el último contacto.",
+    "No se leyó el registro del PDS (Planetary Data System) que según la nota del evento también indica el 20 de diciembre; esta fuente podría despejar la contradicción de fecha.",
+    "No se pudo confirmar si, tras la declaración oficial, llegó algún tipo de señal parcial o débil de InSight, como mencionaba la NASA como posibilidad remota.",
+    "El borrador original atribuye a Philippe Lognonné (Institut de Physique du Globe de Paris) y a Bruce Banerdt (JPL) declaraciones textuales, pero ningún dato del dossier respalda esas citas con nombre y apellido; el dato [13] recoge la idea de la sismología post-Apolo sin atribución personal.",
+    "No se confirma en los datos conservados si InSight recopiló datos sobre el clima marciano (vientos, presión atmosférica) además de los sísmicos, aspecto que suele mencionarse en resúmenes de la misión."
+  ],
+  "ideas_visuales": [
+    "Paneles solares de InSight cubiertos de polvo marciano, mostrando la diferencia entre un panel limpio (2018) y uno cubierto (2022).",
+    "Mapa de Elysium Planitia con InSight señalado y una línea de 1.500 km hasta Cerberus Fossae, con la comparación Colonia-Etna superpuesta.",
+    "Corte transversal de Marte mostrando corteza (24-72 km), manto y núcleo (3.600-3.700 km de diámetro), basado en los datos sísmicos de InSight.",
+    "La sonda HP3 ('topo') junto a una escala que muestre los 40 cm alcanzados frente a los 5 metros previstos.",
+    "Línea de tiempo visual: lanzamiento (mayo 2018), aterrizaje (noviembre 2018), duración prevista (2 años), duración real (4+ años), último contacto (15 dic 2022)."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "La misión InSight superó el doble de su duración original: fue diseñada para un año marciano (dos años terrestres) y acabó durando un segundo año marciano adicional.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2022/04/insight-mission-ends",
+      "cita": "After more than four years, the mission duration had exceeded expectations by a factor of two. The solar panels were designed in such a way that they would provide enough energy for the originally planned lifetime of one Mars year (two Earth years), despite dust accumulation. In the end, they lasted long enough to extend the mission duration by a second Mars year.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "InSight fue la primera misión de sismología planetaria más allá de la Tierra desde las misiones Apolo, cuando los astronautas llevaron sismómetros a la Luna.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "With InSight, seismology was the focus of a mission beyond Earth for the first time since the Apollo missions, when astronautas brought seismometers to the Moon.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

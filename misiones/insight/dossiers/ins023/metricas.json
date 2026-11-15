@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.21928969999999998,
+  "turnos": 12,
+  "duracion_s": 120.3,
+  "duracion_api_s": 94.9,
+  "tokens": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 11760,
+    "cache_read_input_tokens": 37959,
+    "output_tokens": 10814,
+    "output_tokens_details": {
+      "thinking_tokens": 5413
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 11760
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1443,
+      "outputTokens": 25,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001568,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 8,
+      "outputTokens": 10814,
+      "cacheReadInputTokens": 37959,
+      "cacheCreationInputTokens": 11760,
+      "webSearchRequests": 0,
+      "costUSD": 0.2177217,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 5413,
+      "cacheCreationEphemeral5mInputTokens": 11760,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 8,
+    "buscar_web": 2,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "4",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.10354200000000001,
+    "turnos": 2,
+    "duracion_s": 32.2,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 3752,
+        "outputTokens": 25,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0038770000000000002,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 2798,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 4752,
+        "webSearchRequests": 0,
+        "costUSD": 0.099665,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 1282,
+        "cacheCreationEphemeral5mInputTokens": 4752,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 13,
+      "datos_despues": 13,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se eliminó el párrafo sobre los socios europeos (Francia, Alemania, España) porque ninguna cita del dossier respalda esas atribuciones. Se conservaron los 13 datos ya que sus citas son fieles a las afirmaciones; solo se señaló que en [6] la mención de Elysium Planitia no procede de su propia cita sino de [7]."
+    }
+  },
+  "costo_usd_referencia_total": 0.3228317,
+  "costos": {
+    "total_usd": 0.322832,
+    "por_paso": {
+      "investigacion": 0.21929,
+      "revision": 0.103542
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.005445,
+        "entrada": 5195,
+        "salida": 50,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.217722,
+        "entrada": 8,
+        "salida": 10814,
+        "cache_leida": 37959,
+        "cache_escrita": 11760,
+        "razonamiento": 5413
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.099665,
+        "entrada": 3,
+        "salida": 2798,
+        "cache_leida": 0,
+        "cache_escrita": 4752,
+        "razonamiento": 1282
+      }
+    }
+  }
+}

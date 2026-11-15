@@ -1,0 +1,131 @@
+{
+  "evento_id": "ins072",
+  "titulo": "'Mi energía es muy baja': el último mensaje de InSight en redes sociales (19 de diciembre de 2022)",
+  "contexto_ampliado": "El 19 de diciembre de 2022, la cuenta oficial @NASAInSight publicó en redes sociales un mensaje que marcó el final simbólico de una misión histórica: \"My power's really low, so this may be the last image I can send. Don't worry about me though: my time here has been both productive and serene. If I can keep talking to my mission team, I will – but I'll be signing off here soon. Thanks for staying with me.\" Junto al texto se compartió una imagen de la superficie marciana, avisando de que podría ser la última.\n\nEse mensaje respondía a una realidad técnica que se venía anunciando desde hacía meses. El polvo marciano se había acumulado gradualmente sobre los paneles solares del lander, reduciendo la energía disponible. A medida que la situación empeoraba, los instrumentos científicos fueron apagándose uno a uno. El sismógrafo fue el último en permanecer encendido, al ser el que menos energía consumía.\n\nLos registros indican que la última vez que InSight se comunicó con la Tierra fue el 15 de diciembre de 2022. Tres días después, el 18 de diciembre, la nave no respondió a un intento de contacto desde la Tierra; la NASA asumió entonces que InSight podría haber llegado al fin de sus operaciones. La agencia había establecido previamente que declararía la misión concluida si el lander fallaba en dos intentos consecutivos de comunicación. Así ocurrió: los controladores de misión en el Laboratorio de Propulsión a Chorro (JPL) no lograron contactar al lander tras dos intentos consecutivos, lo que los llevó a concluir que las baterías alimentadas por energía solar se habían agotado.\n\nInSight había aterrizado en Elysium Planitia, Marte, el 26 de noviembre de 2018, y su misión se extendió durante más de cuatro años. A lo largo de ese tiempo, su sismógrafo de alta sensibilidad detectó 1.319 maremotos (marsquakes), incluyendo sismos causados por impactos de meteoroides. Los datos recopilados revelaron detalles sobre las capas interiores de Marte —corteza, manto y núcleo—, así como sobre los restos de su extinto dinamo magnético y las condiciones meteorológicas en esa zona del planeta.\n\nPhilippe Lognonné, investigador principal del sismógrafo, destacó la importancia histórica del instrumento: con InSight, la sismología fue el foco de una misión más allá de la Tierra por primera vez desde las misiones Apolo, cuando los astronautas llevaron sismómetros a la Luna. Bruce Banerdt, investigador principal de la misión en JPL, resumió el sentimiento de su equipo al señalar que habían pensado en InSight como \"nuestro amigo y colega en Marte durante los últimos cuatro años\" y que se había ganado \"su merecida jubilación\".\n\nAsí terminó, en silencio y a cientos de millones de kilómetros, una de las misiones más reveladoras sobre el interior de otro planeta.",
+  "datos_reales": [
+    {
+      "afirmacion": "El 19 de diciembre de 2022, la cuenta @NASAInSight publicó el mensaje 'My power's really low, so this may be the last image I can send. Don't worry about me though: my time here has been both productive and serene. If I can keep talking to my mission team, I will – but I'll be signing off here soon. Thanks for staying with me.'",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "My power's really low, so this may be the last image I can send. Don't worry about me though: my time here has been both productive and serene. If I can keep talking to my mission team, I will – but I'll be signing off here soon. Thanks for staying with me.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La última vez que InSight se comunicó con la Tierra fue el 15 de diciembre de 2022.",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "The last time InSight communicated with Earth was Dec. 15.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El 18 de diciembre de 2022, InSight no respondió a las comunicaciones desde la Tierra.",
+      "fuente_url": "https://science.nasa.gov/blogs/insight/2022/12/19/nasa-insight-dec-19-2022/",
+      "cita": "On Dec. 18, 2022, NASA's InSight did not respond to communications from Earth. The lander's power has been declining for months, as expected, and it's assumed InSight may have reached its end of operations.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los controladores de misión en JPL no pudieron contactar al lander tras dos intentos consecutivos, lo que llevó a concluir que las baterías de la nave solar se habían agotado.",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "Mission controllers at the agency's Jet Propulsion Laboratory in Southern California were unable to contact the lander after two consecutive attempts, leading them to conclude the spacecraft's solar-powered batteries have run out of energy.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA había decidido previamente declarar el fin de la misión si el lander fallaba en dos intentos de comunicación consecutivos.",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "NASA had previously decided to declare the mission over if the lander missed two communication attempts.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sismógrafo fue el último instrumento científico que permaneció encendido, ya que el polvo acumulado en los paneles solares fue reduciendo gradualmente la energía disponible.",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "The seismometer was the last science instrument that remained powered on as dust accumulating on the lander's solar panels gradually reduced its energy.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sismógrafo de InSight detectó 1.319 maremotos (marsquakes), incluyendo quakes causados por impactos de meteoroides.",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "Its highly sensitive seismometer detected 1,319 marsquakes, including quakes caused by meteoroid impacts, the largest of which unearthed boulder-size chunks of ice late last year.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Philippe Lognonné, investigador principal del sismógrafo, señaló que fue la primera vez que la sismología fue el foco de una misión más allá de la Tierra desde las misiones Apolo.",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "With InSight, seismology was the focus of a mission beyond Earth for the first time since the Apollo missions, when astronauts brought seismometers to the moon.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Bruce Banerdt de JPL, investigador principal de la misión, declaró que InSight había sido 'nuestro amigo y colega en Marte durante los últimos cuatro años'.",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "We've thought of InSight as our friend and colleague on Mars for the past four years, so it's hard to say goodbye. But it has earned its richly deserved retirement.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight aterrizó en Elysium Planitia, Marte, el 26 de noviembre de 2018, y la misión duró más de cuatro años.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Landed: Nov. 26, 2018, at 11:52:59 a.m. PT (2:52:59 p.m. ET) … Landing Site: Elysium Planitia, Mars … End of Mission: Dec. 15, 2022",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los datos de InSight revelaron detalles sobre las capas interiores de Marte: corteza, manto y núcleo.",
+      "fuente_url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "cita": "The lander data has yielded details about Mars' interior layers, the surprisingly strong remnants beneath the surface of its extinct magnetic dynamo, weather on this part of Mars, and lots of quake activity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA InSight – Dec. 19, 2022 (blog oficial NASA)",
+      "url": "https://science.nasa.gov/blogs/insight/2022/12/19/nasa-insight-dec-19-2022/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "InSight falls silent, NASA declares mission end (reproduce nota NASA del 21 dic. 2022)",
+      "url": "https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+      "editor": null,
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "InSight Lander – Mission Overview (science.nasa.gov)",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA InSight (@NASAInSight) tweet del 19 de diciembre de 2022",
+      "url": "https://x.com/NASAInSight/status/1604955574659035136",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "La página oficial science.nasa.gov/mission/insight/ indica 'End of Mission: Dec. 15, 2022', mientras que el comunicado oficial de la NASA reproducido en earthsky.org especifica que la misión se declaró concluida el 21 de diciembre de 2022, tras dos intentos fallidos de contacto. El 15 de diciembre fue la última comunicación real con la nave; la declaración formal llegó seis días después. URLs: https://science.nasa.gov/mission/insight/ y https://earthsky.org/space/insight-falls-silent-nasa-declares-mission-end/",
+    "El relato del borrador afirma que 'El 21 de diciembre de 2022, tras dos intentos fallidos consecutivos, los controladores de misión en JPL confirmaron oficialmente el fin de la misión', pero ninguna de las citas literales en los datos del dossier menciona la fecha del 21 de diciembre. La cita de [3] habla de dos intentos fallidos sin dar fecha concreta, y la de [9] (science.nasa.gov/mission/insight/) indica 'End of Mission: Dec. 15, 2022'. La fecha del 21 de diciembre no está respaldada por ninguna cita incluida en el borrador.",
+    "El borrador incluye una cita textual atribuida a Thomas Zurbuchen ('while saying goodbye to a spacecraft is always sad, the fascinating science InSight conducted is cause for celebration') y otra a Laurie Leshin ('InSight has more than lived up to its name'), pero ninguna de estas citas aparece en los datos [0]-[10] del dossier ni en sus fuentes citadas. Son afirmaciones sin respaldo documental dentro del borrador.",
+    "El borrador incluye un tuit de la cuenta oficial de la NASA del 21 de diciembre ('After more than four years, 1,300 marsquakes, and countless scientific discoveries…') que no corresponde a ningún dato numerado del dossier ni a ninguna cita literal recogida."
+  ],
+  "huecos": [
+    "El contenido exacto de la imagen publicada junto al tweet del 19 de diciembre (si mostraba el sismógrafo, el brazo robótico u otro elemento de la superficie) no pudo confirmarse directamente de las páginas leídas; solo la prensa lo menciona como la superficie cubierta de polvo.",
+    "No se pudo verificar desde las fuentes leídas si el mensaje en redes fue redactado por el equipo de JPL en primera persona intencionalmente, o si fue una decisión de comunicación pública de la NASA.",
+    "No se confirma en las fuentes leídas el número exacto de seguidores que tenía la cuenta @NASAInSight en el momento de la publicación.",
+    "No se precisa en las fuentes consultadas la fecha exacta en que la NASA declaró formalmente el fin de la misión (el borrador dice 21 de diciembre, science.nasa.gov dice 15 de diciembre, y ninguna cita literal del dossier lo aclara de forma inequívoca).",
+    "No se confirma en las fuentes del dossier si la imagen publicada el 19 de diciembre fue efectivamente la última imagen transmitida por InSight o si hubo alguna transmisión posterior entre el 15 y el 19 de diciembre."
+  ],
+  "ideas_visuales": [
+    "Captura de pantalla estilizada del tuit de @NASAInSight del 19 de diciembre de 2022 con el texto completo del mensaje de despedida.",
+    "Ilustración de los paneles solares de InSight cubiertos progresivamente de polvo marciano, mostrando la pérdida gradual de energía.",
+    "Diagrama de corte de Marte mostrando las tres capas interiores —corteza, manto y núcleo— reveladas por los datos de InSight.",
+    "Infografía con la cifra de 1.319 marsquakes detectados, representados como puntos sobre un mapa de Elysium Planitia.",
+    "Línea de tiempo visual desde el aterrizaje (26 de noviembre de 2018) hasta la última comunicación (15 de diciembre de 2022), marcando los hitos principales."
+  ],
+  "datos_no_verificados": []
+}

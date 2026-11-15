@@ -1,0 +1,151 @@
+{
+  "evento_id": "ins006",
+  "titulo": "NASA suspende el lanzamiento de InSight previsto para marzo de 2016",
+  "contexto_ampliado": "El 22 de diciembre de 2015, la NASA anunció que suspendía el lanzamiento de la misión InSight, cuya ventana estaba programada del 4 al 30 de marzo de 2016. La causa fue un problema recurrente en el sismómetro SEIS (Seismic Experiment for Interior Structure), un instrumento diseñado para medir movimientos del suelo tan pequeños como el diámetro de un átomo. La nave, construida por Lockheed Martin, había sido entregada apenas seis días antes —el 16 de diciembre— en la base aérea de Vandenberg, California.\n\nEl SEIS es un instrumento de una sensibilidad extrema: sus tres sensores principales necesitan operar dentro de un sello de vacío a una presión de no más de una milésima de milibar, aproximadamente una millonésima de la presión atmosférica a nivel del mar en la Tierra. Mantener ese vacío en las condiciones brutales de Marte es un reto enorme, y según Marc Pircher, director del Centro Espacial de Toulouse del CNES (la agencia espacial francesa que desarrolló el instrumento), nunca antes se había construido un instrumento tan sensible.\n\nEl problema no surgió de la nada. John Grunsfeld, administrador asociado de la Dirección de Misiones Científicas de la NASA, reveló que desde agosto de 2015 el equipo había estado «combatiendo una serie de fugas» en el SEIS. Se habían logrado reparaciones anteriores, pero durante las pruebas finales a temperaturas extremas de -49 °F (-45 °C), el instrumento volvió a fallar en mantener el vacío. Los responsables de la NASA determinaron que no había tiempo suficiente para resolver una nueva fuga, completar los trabajos y superar todas las pruebas necesarias antes del cierre de la ventana de lanzamiento.\n\nLas consecuencias eran considerables. Las ventanas de lanzamiento a Marte se abren solo cada 26 meses, de modo que perder la de marzo de 2016 significaba que InSight no podría intentarlo de nuevo hasta mediados de 2018: un retraso de más de dos años. La nave tendría que regresar desde Vandenberg hasta las instalaciones de Lockheed Martin en Denver para ser almacenada.\n\nEl aspecto económico añadía presión. InSight es una misión del programa Discovery de la NASA, que tiene un techo de costes fijo. El presupuesto total de la misión —incluyendo cohete, diseño, ensamblaje, dos años de operaciones y procesamiento de datos— era de 675 millones de dólares, y según Jim Green, director de la División de Ciencia Planetaria de la NASA, ya se habían gastado 525 millones. Grunsfeld admitió que la cancelación completa de la misión estaba «sobre la mesa» si los costes de almacenamiento y mantenimiento superaban significativamente lo presupuestado.\n\nA pesar de la gravedad del momento, varios protagonistas pusieron las cosas en perspectiva. Bruce Banerdt, investigador principal de InSight en el JPL, declaró: «Soy un hombre paciente. Llevo 25 años trabajando en esto; esto es un contratiempo menor, no un desastre.» El director del JPL, Charles Elachi, lo resumió con claridad: «Es más importante hacerlo bien que asumir un riesgo inaceptable.»\n\nFinalmente, la paciencia dio resultado. InSight se lanzó el 5 de mayo de 2018 desde Vandenberg Air Force Base a bordo de un cohete Atlas V-401, aterrizó en Marte el 26 de noviembre de 2018 y operó hasta el final de su misión, el 15 de diciembre de 2022.",
+  "datos_reales": [
+    {
+      "afirmacion": "NASA suspendió el lanzamiento de InSight cuya ventana iba del 4 al 30 de marzo de 2016",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-suspends-2016-launch-of-insight-mission-to-mars/",
+      "cita": "For InSight, that 2016 launch window existed from March 4 to March 30.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El SEIS fue proporcionado por el Centro Nacional de Estudios Espaciales de Francia (CNES) y está diseñado para medir movimientos del suelo tan pequeños como el diámetro de un átomo",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-suspends-2016-launch-of-insight-mission-to-mars/",
+      "cita": "Designed to measure ground movements as small as the diameter of an atom, the instrument requires a vacuum seal around its three main sensors to withstand the harsh conditions of the Martian environment.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante las pruebas finales a -49 °F (-45 °C) el SEIS falló de nuevo en mantener el vacío",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-suspends-2016-launch-of-insight-mission-to-mars/",
+      "cita": "However, during testing on Monday in extreme cold temperature (-49 degrees Fahrenheit/-45 degrees Celsius) the instrument again failed to hold a vacuum.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA determinó que no había tiempo suficiente para resolver una nueva fuga y completar las pruebas necesarias",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-suspends-2016-launch-of-insight-mission-to-mars/",
+      "cita": "NASA officials determined there is insufficient time to resolve another leak, and complete the work and thorough testing required to ensure a successful mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La nave, construida por Lockheed Martin, fue entregada en Vandenberg Air Force Base el 16 de diciembre y debería regresar a las instalaciones de Lockheed en Denver",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-suspends-2016-launch-of-insight-mission-to-mars/",
+      "cita": "The spacecraft, built by Lockheed Martin, was delivered to Vandenberg Air Force Base in California, on Dec. 16. With the 2016 launch canceled, the spacecraft will be returned from Vandenberg to Lockheed's facility in Denver.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Marc Pircher, director del Centro Espacial de Toulouse del CNES, declaró que nunca antes se había construido un instrumento tan sensible",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-suspends-2016-launch-of-insight-mission-to-mars/",
+      "cita": "It's the first time ever that such a sensitive instrument has been built. We were very close to succeeding, but an anomaly has occurred, which requires further investigation.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El director del JPL, Charles Elachi, señaló que es más importante hacer bien la misión que asumir un riesgo inaceptable",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-suspends-2016-launch-of-insight-mission-to-mars/",
+      "cita": "It is more important to do it right than take an unacceptable risk.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El presupuesto total de la misión Discovery InSight era de 675 millones de dólares, de los cuales ya se habían gastado 525 millones",
+      "fuente_url": "https://www.planetary.org/articles/1222-nasas-InSight-mars-mission-delayed",
+      "cita": "The total cost of Discovery missions are capped. For InSight, the total budget, which includes the cost of the rocket, design, assembly, two years of operations, and data processing, is $675 million. Jim Green, the Director of NASA's Planetary Science Division stated that, so far, the InSight project has spent $525 million of that total amount.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "John Grunsfeld admitió que la cancelación completa de la misión estaba 'sobre la mesa'",
+      "fuente_url": "https://www.planetary.org/articles/1222-nasas-InSight-mars-mission-delayed",
+      "cita": "If the cost of storing and maintaining InSight are significantly above the planned budget for the project, it is possible that the mission will be cancelled. \"It's on the table,\" said Grunsfeld.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El retraso implicaba que InSight no podría lanzarse hasta mediados de 2018, más de dos años después",
+      "fuente_url": "https://www.planetary.org/articles/1222-nasas-InSight-mars-mission-delayed",
+      "cita": "Since launch windows to Mars open every 26 months, the earliest InSight can now launch will be mid-2018—a delay of over two years.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El SEIS debía operar a una presión de no más de 1/1000 de un milibar, aproximadamente una millonésima de la presión atmosférica a nivel del mar en la Tierra",
+      "fuente_url": "https://www.planetary.org/articles/1222-nasas-InSight-mars-mission-delayed",
+      "cita": "the instrument must operate in a near vacuum at a pressure of no more than 1/1000 of a millibar—about one millionth the sea-level atmospheric pressure on Earth.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Bruce Banerdt, investigador principal de InSight, llevaba 25 años trabajando en el concepto de la misión y calificó el retraso como un contratiempo menor, no un desastre",
+      "fuente_url": "https://www.planetary.org/articles/1222-nasas-InSight-mars-mission-delayed",
+      "cita": "Bruce Banerdt, the principal investigator on the mission summed it up: \"I'm a patient man. I've been working on this for 25 years, this is a minor setback, not a disaster.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight finalmente lanzó el 5 de mayo de 2018 y aterrizó en Marte el 26 de noviembre de 2018",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Launched: May 5, 2018 (4:05 a.m. PT/7:05 a.m. ET) [...] Landed: Nov. 26, 2018, at 11:52:59 a.m. PT (2:52:59 p.m. ET)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight se lanzó a bordo de un cohete Atlas V-401 desde Vandenberg Air Force Base y la misión concluyó el 15 de diciembre de 2022",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Launch Vehicle: Atlas V-401 [...] Launch Location: Vandenberg Air Force Base, California [...] End of Mission: Dec. 15, 2022",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA Suspends 2016 Launch of InSight Mission to Mars",
+      "url": "https://www.nasa.gov/news-release/nasa-suspends-2016-launch-of-insight-mission-to-mars/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA's Next Mars Mission Delayed for Two Years",
+      "url": "https://www.planetary.org/articles/1222-nasas-InSight-mars-mission-delayed",
+      "editor": "The Planetary Society",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "InSight Lander – Mission Overview",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "El evento original indica que el aterrizaje estaba previsto para el 28 de septiembre de 2016, pero ninguna de las fuentes del dossier (nasa.gov ni planetary.org) menciona esa fecha concreta de aterrizaje, por lo que no se puede confirmar ni desmentir."
+  ],
+  "huecos": [
+    "No se pudo confirmar el coste final adicional causado por el almacenamiento y el retraso de más de dos años; en diciembre de 2015 era aún desconocido.",
+    "No se detalla en las fuentes leídas el proceso técnico exacto mediante el que CNES rediseñó y reparó el sello de vacío del SEIS antes del relanzamiento en 2018.",
+    "No se confirma en las fuentes si el aterrizaje del 28 de septiembre de 2016 era el único disponible en esa ventana o si había flexibilidad en la fecha de aterrizaje.",
+    "El evento original menciona una fecha de aterrizaje prevista del 28 de septiembre de 2016, dato que no aparece en ninguna de las fuentes consultadas (ni en nasa.gov ni en planetary.org).",
+    "El cargo exacto de John Grunsfeld se cita en la fuente de Planetary Society como 'Associate Administrator of NASA's Science Mission Directorate'; el borrador original lo simplificaba como 'administrador científico de la NASA', lo cual se ha corregido en el relato revisado."
+  ],
+  "ideas_visuales": [
+    "La nave InSight empaquetada en Vandenberg Air Force Base el 16 de diciembre de 2015, recién entregada por Lockheed Martin, con el cohete de fondo y el hangar de integración.",
+    "Esquema en corte del sismómetro SEIS mostrando los tres sensores principales dentro del sello de vacío, con una escala que compare la presión interior (1/1000 de milibar) con la presión atmosférica terrestre.",
+    "Cámara de pruebas térmicas simulando -49 °F (-45 °C): el instrumento SEIS dentro del entorno de ensayo donde se detectó la última fuga de vacío.",
+    "Línea de tiempo visual que muestra la ventana perdida de marzo 2016, el período de almacenamiento de más de dos años en Denver, y el lanzamiento exitoso de mayo de 2018.",
+    "El cohete Atlas V-401 despegando desde Vandenberg el 5 de mayo de 2018 con InSight a bordo."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Grunsfeld indicó que desde agosto de 2015 el equipo había estado combatiendo una serie de fugas en el SEIS",
+      "fuente_url": "https://www.planetary.org/articles/1222-nasas-InSight-mars-mission-delayed",
+      "cita": "\"Since last August we've been fighting a series of leaks,\" said John Grunsfeld, Associate Administrator of NASA's Science Mission Directorate.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

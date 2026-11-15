@@ -1,0 +1,17 @@
+{
+  "id": "insight",
+  "nombre": "InSight",
+  "tipo": "lander",
+  "cuerpo": "Marte",
+  "agencia": "NASA/JPL",
+  "prefijo_eventos": "ins",
+  "publico": "estudiantes de 5.º de secundaria (17 años)",
+  "sol": {
+    "cero": "2018-11-26",
+    "offset": 0
+  },
+  "creada": "2026-11-15",
+  "fuentes_semilla": [
+    "https://science.nasa.gov/mission/insight/"
+  ]
+}
