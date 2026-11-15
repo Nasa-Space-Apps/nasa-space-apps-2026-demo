@@ -101,6 +101,22 @@ Las posiciones del 3D **no son un mapa real** (el terreno es una maqueta): `plan
 
 `story/data/juego_opportunity.json` ya define 30 nodos con **6 decisiones** sobre la misma historia (`n03` ¿uno o dos rovers? = `opp008`; `n05` lugar de aterrizaje; `n07` cohete con grieta = `opp015`; `n11` atrapado en la arena = `opp033`; `n13` rumbo a un cráter lejano; `n16` el silencio tras la tormenta = `opp072`). Cuando se construya el modo Decisiones, cada decisión se **inserta antes del beat real correspondiente** (su `correcta` lleva a ese beat y las otras a una rama `hipotetico: true` que acaba en un fallo): la estructura de `story.json` (`beats` ordenados con `part`) es la columna vertebral de [game-design.md](game-design.md#4-la-columna-vertebral-una-sola-línea-de-nodos). **No está implementado.**
 
+## Ilustraciones de otras misiones: Ingenuity (hito 39)
+
+La misma receta que se usó a mano con Opportunity (pasar el dossier a una IA que escribe un prompt de cómic y generar la imagen con Nano Banana) está **automatizada** para cualquier misión de `misiones/<id>/dossiers/`:
+
+```
+misiones/ingenuity/dossiers/ingNNN/dossier.md  ──(prompt escrito a partir del contexto y las «ideas visuales»)──▶  scripts/data/ingenuity-image-prompts.mjs
+npm run story-images -- ingenuity                    # Replicate · google/nano-banana-2.1 · 4:5 · 2K  (necesita REPLICATE_API_KEY en .env.local)
+   ├─ ~/Downloads/images/ingenuity/ingNNN.jpg                    originales de 1856×2304 (fuera del repo, como los de Opportunity)
+   └─ public/models/ingenuity/story/images/ingNNN.jpg + manifest.json   1040 px para la web (≈ 3,7 MB) y el prompt/predicción de cada imagen
+```
+
+- **Los 20 prompts** (uno por dossier: ing001, 010, 018, 019, 021, 023, 026, 027, 029, 032, 034, 038, 043, 069, 072, 083, 107, 127, 130, 137) usan el **mismo bloque de estilo** que Opportunity (novela gráfica sucia, tinta gruesa, paleta naranja quemado/óxido/marrón/crema, una sola luz cálida, grano de risografía) + una escena + una composición + «sin texto». Se escribieron leyendo cada dossier; los vehículos se describen igual en todas para que se reconozcan (Ingenuity: cuerpo cúbico envuelto en lámina dorada, dos rotores finos apilados, cuatro patas largas; Perseverance: seis ruedas, chasis crema, mástil con cabeza de cámara). Las personas son figuras estilizadas anónimas (sin parecido con personas reales).
+- Banderas del script: `--dry-run` (imprime los prompts sin llamar a nada), `--only id,id`, `--force`, `--resolution 1K|2K|4K`, `--aspect`, `--concurrency`. Solo genera lo que falta; reintenta si Replicate limita el ritmo. **La clave solo se lee de `.env.local` y nunca se imprime.**
+- Para regenerar una imagen: edita su `scene`/`composition` en el archivo de prompts y `npm run story-images -- ingenuity --only ing043 --force`. Para otra misión: crea `scripts/data/<id>-image-prompts.mjs` con el mismo formato (`STYLE`, `ENDING`, `PROMPTS`).
+- Hecho: las 20 imágenes de Ingenuity (≈ 25–35 s cada una, 3 en paralelo; revisadas en una hoja de contacto: sin texto ni artefactos y con un estilo coherente con el de Opportunity). **Aún no se usan en la app** (el hito 39 solo genera las imágenes; la historia de Ingenuity —textos, narración y vistas— está por hacer).
+
 ## Pendiente
 
 - **Revisar las 20 narraciones de oído** (voz Bill; si alguna no convence, edita su texto y vuelve a `npm run story-audio`).

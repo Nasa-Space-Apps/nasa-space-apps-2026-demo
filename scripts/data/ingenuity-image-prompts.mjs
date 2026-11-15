@@ -1,0 +1,157 @@
+/**
+ * Image prompts for the Ingenuity story (one per dossier in misiones/ingenuity/dossiers), written for Google's Nano Banana 2.1 on Replicate in the same house
+ * style as the Opportunity illustrations: gritty graphic-novel ink and flat cel-shaded colour, a limited burnt-orange / rust / brown / taupe / cream palette,
+ * one warm light source, no text anywhere (the app adds all the text itself). Each prompt was written from the dossier's context and its «ideas visuales»;
+ * `scene` carries the event, `composition` the framing. The script scripts/generate-story-images.mjs glues STYLE + scene + composition + ENDING.
+ *
+ * Every figure is a stylised, anonymous illustration (no likenesses of real people); the vehicles keep their real silhouettes so the set reads as one story.
+ */
+
+export const STYLE =
+  "Gritty modern graphic-novel illustration, flat cel-shaded color fills with bold, rough black ink linework (dry-brush texture, uneven line weight), heavy hand-inked hatching and solid black spot shadows. Limited muted palette: burnt orange, rust, warm brown, taupe-gray and cream, with desaturated brown-gray walls and a single glowing warm light source as the focal accent. Subtle grainy screen-print / risograph paper texture. Simplified, slightly stylized faces and anatomy with quiet, understated emotion. Melancholic, cinematic, noir-like atmosphere with strong light-and-shadow contrast.";
+
+export const ENDING =
+  "Full-bleed, edge-to-edge image with no border, no frame and no margins. No text, no letters, no numbers, no logos, no speech bubbles, no captions, no watermark.";
+
+export const PROMPTS = [
+  {
+    id: "ing001",
+    title: "Balaram imagines a helicopter for Mars (1990s)",
+    scene: `A dim, half-empty university lecture hall in the 1990s, seen from the back rows. A thoughtful middle-aged engineer in a rumpled short-sleeved shirt sits alone in the dark, a notebook open on his knee, his face lit only by the warm cone of a slide projector. On the screen far ahead, the projected slide shows a tiny insect-sized flying machine with whirling rotors, drawn like a technical blueprint. In his notebook, a half-finished pencil sketch of a small helicopter hovering above a crescent-shaped red planet, with scribbled arrows and a question mark. The projector beam, full of floating dust, is the single warm light source and spills a golden glow across his glasses and the pencil in his hand. A faint ghostly line drawing of the future helicopter (the tiny gold-wrapped body, two stacked thin rotors, four spindly legs) floats in the air above his notebook, as if the idea were already taking shape. Mood: quiet wonder, a seed of an impossible idea, patient curiosity.`,
+    composition:
+      "Medium-wide shot from behind and slightly above the engineer's shoulder, him in the lower left third, the glowing projector screen small and bright in the upper right, the ghostly helicopter sketch floating at the center between them, rows of empty chairs fading into deep black shadow at the edges.",
+  },
+  {
+    id: "ing010",
+    title: "First free flight of a full-scale prototype in simulated Mars air (2016)",
+    scene: `The enormous cylindrical interior of a steel vacuum chamber, a towering metal drum with riveted walls and frosted pipes, filled with a thin pale haze of carbon dioxide. At the exact center, a small full-scale prototype helicopter with two stacked, slender black rotors on a short mast and a tiny boxy body hovers perfectly still in mid-air, held up only by its own spinning rotors, blades blurred into soft translucent discs, thin safety tethers drooping loosely below it. Along one wall stands a rough, hand-built plywood wall of fans, angled to blow air sideways at the hovering machine. Low in the left corner, a thick round porthole window shows the dark silhouettes of a few engineers pressing close to watch, their faces lit orange. Banks of warm floodlights high on the chamber walls cast a single glowing burnt-orange light onto the hovering prototype and the frost-glinting steel, throwing a long shadow down the curved floor. Mood: held breath, a small machine proving the impossible, quiet triumph in a lonely metal cathedral.`,
+    composition:
+      "Tall vertical wide shot looking up from the chamber floor, the hovering prototype small at the exact center of the frame, the curved ribbed walls rising on both sides toward a dark ceiling, the porthole with engineers in the lower left, the plywood fan wall at the right, deep shadows in the corners.",
+  },
+  {
+    id: "ing018",
+    title: "A high-school student names the helicopter «Ingenuity» (2019)",
+    scene: `A teenage girl in a cozy, slightly cluttered bedroom late at night, seated at a wooden desk and writing an essay by hand, her face bent in concentration, a half-drunk mug beside her. The desk lamp is the single glowing warm light source, pooling cream-gold light over her notebook and her hands. Pinned above the desk are star charts, a photo of a red desert planet and a folded paper airplane. Out of the window behind her, the deep brown-black night sky holds one small reddish star, Mars, glowing faintly. Rising from the pages of her notebook like a daydream, a small translucent gold-wrapped helicopter with two stacked thin rotors and four spindly legs hovers a few inches above the paper, its blades blurred, casting a tiny shadow on her handwriting. Stacks of other students' essays are piled in a neat tower at the edge of the desk. Mood: hopeful, intimate, a young mind lending a name to a machine that does not exist yet.`,
+    composition:
+      "Medium shot from across the desk at a slightly low angle, the girl in the lower left third bent over the notebook, the little floating helicopter at the center of the frame in the lamplight, the window with the single red star in the upper right, soft shadows swallowing the corners of the room.",
+  },
+  {
+    id: "ing019",
+    title: "Launch of Mars 2020: Perseverance and Ingenuity ride an Atlas V (2020)",
+    scene: `A tall white rocket on a launch pad at the first light of dawn, just after liftoff, rising on a column of blinding orange fire. Four solid rocket boosters strapped around the base burn with dense, roiling plumes of smoke and steam that billow outward across a flat coastal landscape of palm trees and still water, the plumes catching the warm light. The rocket's wide round white nose fairing, five meters across, points to the lightening sky. A dark gantry tower stands abandoned beside the pad, silhouetted. In the foreground, a small crowd of silhouetted figures stands on the shore with arms raised, their faces glowing. Superimposed faintly inside the fairing, as a ghostly translucent cutaway drawn in thin cream lines, a large six-wheeled rover rides folded in the dark, and under its belly clings a tiny gold-wrapped helicopter, a very small passenger. The fire of the engines is the single warm light source, reflecting orange on the water. Mood: awe, a big journey beginning, a small passenger carried toward another world.`,
+    composition:
+      "Tall wide shot at a low camera angle, the rocket rising along the center-right of the frame with its fire and smoke at the bottom, the ghostly cutaway of the rover and the tiny helicopter inside the fairing near the top, the silhouetted crowd and palms in the lower left foreground, the water reflecting the flames, deep shadows in the corners.",
+  },
+  {
+    id: "ing021",
+    title: "Landing of Perseverance with Ingenuity in Jezero Crater, Sol 0 (2021)",
+    scene: `The sky crane descent over a vast Martian crater floor. A hovering rocket-powered platform with four angled thrusters blazing high above the ground lowers a large six-wheeled rover on three long taut cables, the rover's wheels dangling a few meters above a dusty plain, thruster blasts kicking up great fans of orange dust. Clinging to the very bottom of the rover's belly, half hidden under a guitar-case-shaped protective shield, is a tiny gold-foil-wrapped helicopter with folded legs. In the far background rise the steep, layered cliffs of an ancient river delta and the broken rim of the crater in butterscotch haze. The glowing thrusters and the low rising sun together form the single warm light source, throwing long shadows across the rippled rust-colored plain and the scattered boulders. Mood: held-breath tension, the last meters of a seven-month journey, fragile arrival.`,
+    composition:
+      "Wide shot at a low camera angle, the descent platform high in the upper center, the cables falling to the rover in the center of the frame, its belly and the tiny helicopter clearly visible, huge dust plumes spreading across the bottom, the delta cliffs along the horizon, deep shadows in the corners.",
+  },
+  {
+    id: "ing023",
+    title: "A scrap of the Wright Flyer's wing fabric travels to Mars (1903 → 2021)",
+    scene: `A double-world image split by a single drifting ribbon of pale unbleached cotton cloth. In the lower half, the windswept sand dunes of Kitty Hawk in 1903 at dusk, where a fragile wooden biplane with fabric-covered wings skims just above the dune crest with a lone figure lying flat on the lower wing, tiny onlookers watching from the sand. In the upper half, the dusty rust-red surface of Mars under a butterscotch-pink sky, where a tiny gold-wrapped helicopter with two stacked thin rotors and four spindly legs stands quietly on the ground, a small square patch of cream fabric visible taped under its solar panel. A long, soft cream-colored ribbon of fabric flutters from the wing of the old biplane up through the glowing dusk sky and across the divide to the little helicopter, like a thread connecting two worlds and two eras. The low glowing sun between the two worlds on the horizon is the single warm light source. Mood: reverence, continuity across a century, a torch of curiosity passed from one flyer to another.`,
+    composition:
+      "Tall vertical composition divided horizontally, the old biplane over the dunes in the lower left third, the tiny helicopter on Mars in the upper right third, the cream fabric ribbon sweeping diagonally between them through the middle of the frame, the sun glowing at the center horizon, deep shadows in the corners.",
+  },
+  {
+    id: "ing026",
+    title: "Ingenuity is set down on the surface of Mars, Sol 43 (2021)",
+    scene: `A close, low view underneath the belly of a large rover standing on the rust-red ground of Mars. Dangling from a release mechanism under the rover's belly by its four long spindly legs, a tiny gold-foil-wrapped helicopter with two stacked slender black rotors hangs just a few centimeters above the dusty soil, about to touch the surface for the first time, its shadow reaching up toward its feet. The rover's dark rugged wheel fills the right edge of the frame, its robotic arm with a small instrument turret reaching in from the top as if watching. The low golden sun, blazing through the gap beneath the rover, is the single warm light source, throwing long, striped shadows of the rover's frame across the ground and lighting the foil of the helicopter like a small ember. A few scattered pebbles and rippled sand surround the touchdown point. Mood: tenderness and nervousness, a child's first step, being left alone in a vast new world.`,
+    composition:
+      "Low, ground-level shot looking under the rover, the dangling helicopter in the center of the frame, the big wheel in the right third, the robotic arm in the upper right, the bright sun low on the left horizon, the long shadows leading the eye from the helicopter's feet to the viewer, deep shadows in the corners.",
+  },
+  {
+    id: "ing027",
+    title: "Ingenuity survives its first freezing night on Mars (2021)",
+    scene: `A vast, silent Martian plain at dusk turning to night. In the lower center, a tiny gold-foil-wrapped helicopter with two stacked slender black rotors folded still, and four spindly legs planted in the rippled rust-colored dust, sits utterly alone, its dark solar panel on top catching the very last sliver of golden sunlight. From a small gap in its foil body, a faint warm ember-like glow leaks out onto the ground around it, the heater fighting the cold, the single warm light source in the whole scene. Delicate frost-like crystal glints start to form on its legs and rotor blades. Far behind it, near the horizon, a large six-wheeled rover is driving away, shrinking into the distance and leaving two thin lines of tracks that lead back toward the dying sun. The sky above darkens from butterscotch pink to cold deep brown-black, with a few tiny stars appearing. Mood: loneliness and quiet courage, a small machine having to survive on its own for the first time.`,
+    composition:
+      "Wide shot at a very low camera angle, the helicopter small in the lower center with its warm glow, the rover tiny on the far left horizon, tracks leading from the foreground toward it, the darkening sky filling the upper two thirds with a few stars, deep shadows in the corners.",
+  },
+  {
+    id: "ing029",
+    title: "The rotor spin-up test is cut short by a watchdog timer (2021)",
+    scene: `A small gold-foil-wrapped helicopter with two stacked slender black rotors stands on the rust-red ground of Mars, its rotor blades caught in an impossible moment: half of each blade is a soft blur of speed, the other half frozen sharp and still, as if the spin-up has been stopped by an invisible hand. Dust that was starting to swirl up around its legs is suddenly settling back, motionless in the air. Hanging in the butterscotch-pink sky above it, huge and pale like a second moon, floats a translucent stopwatch dial with its single hand stuck at the end of its sweep, a glowing round clock face with tick marks, watching over the scene like a guard. In the far distance on a low ridge, a large six-wheeled rover stands parked, its camera mast turned toward the helicopter like a patient spectator. The low sun on the horizon is the single warm light source, throwing the helicopter's long shadow across the rippled plain. Mood: suspense turning into anticlimax, patience, a safety system that protects a fragile machine from itself.`,
+    composition:
+      "Medium-wide shot at a low camera angle, the helicopter in the center-left with its half-frozen rotors, the giant translucent stopwatch moon in the upper right, the distant rover small on the far right ridge, long shadows across the foreground, deep shadows in the corners.",
+  },
+  {
+    id: "ing032",
+    title: "Flight 1: the first powered flight on another planet (2021)",
+    scene: `A tiny gold-foil-wrapped helicopter with two stacked slender black carbon-fiber rotors and four spindly legs hovers about three meters above the pale, rust-colored sandy ground of a flat Martian airfield, its rotors spinning so fast they blur into two translucent discs, a faint ripple of dust spreading outward below it. Its small crisp shadow lies on the ground directly beneath, and a small square patch of cream-colored cloth is visible under its dark solar panel, glowing softly. Around it, the flat plain is marked with scattered pebbles and the shallow ripples of sand. Far behind, on a rocky rise at the edge of the frame, a large six-wheeled rover stands small and still, its camera mast pointed at the flyer, a distant witness. The low rising sun sits on the horizon, a hazy butterscotch-pink glow that is the single warm light source, throwing the helicopter's long shadow toward the viewer. Mood: pure, quiet triumph, pride without noise, a machine rising where nothing has ever flown.`,
+    composition:
+      "Wide shot at a low camera angle, the helicopter small and centered slightly above the middle of the frame, its shadow on the ground below it, the distant rover tiny on the right edge, the glowing sun between them on the horizon, deep shadows in the corners.",
+  },
+  {
+    id: "ing034",
+    title: "Flight 2: the first color aerial photo of Mars (2021)",
+    scene: `A bird's-eye, slightly oblique view looking straight down from the helicopter's own point of view at the rust-red surface of Mars. Across the dusty ground winds a pair of long, rippled, deep wheel tracks left by a large rover, curving gently across the rocky, wind-carved plain. In the lower center of the frame lies the long shadow of a tiny helicopter with two stacked slender rotors and four spindly legs, cast by the low golden sun, the shadow's rotors crossed like a dark cross on the ground. At the very bottom edges of the image, the tips of the helicopter's own spindly landing legs poke into view, as if the viewer were looking out from under it. A thin strip of hazy butterscotch-pink horizon with distant brown ridges appears in the two upper corners. The low sun's warm light skimming across the ground is the single warm light source, making each pebble throw a long shadow. Mood: wonder and discovery, a new point of view on a new world, the first time anyone looked down on Mars from the air.`,
+    composition:
+      "Top-down oblique composition, the helicopter's shadow at the lower center, the two curving rover tracks winding from the lower left up toward the horizon strip in the upper right, the tips of the landing legs framing the bottom corners, deep shadows in the corners.",
+  },
+  {
+    id: "ing038",
+    title: "From technology demo to aerial scout (2021)",
+    scene: `A rugged Martian landscape of rust-colored ridges, boulder fields and a deep winding canyon, seen at early morning. High in the upper center, a tiny gold-foil-wrapped helicopter with two stacked slender black rotors flies ahead on its own, scouting, its rotors blurred, a long soft shadow sliding over the cliffs below it. Far back in the lower left, a large six-wheeled rover rolls slowly along the valley floor, small and cautious, leaving two thin lines of tracks, unable to follow the helicopter into the steep rocky terrain it is flying over. Between them, a long dotted trail of tiny pale motes glows along the helicopter's flight path ahead of the rover, like footsteps of light mapping the way across the cliffs, valleys and dunes. The rising sun glowing low at the horizon behind the canyon is the single warm light source, rimming the helicopter in gold. Mood: ambition and promotion, a small experiment becoming an explorer, running ahead to show the way.`,
+    composition:
+      "Wide aerial shot, the helicopter in the upper center-right, the rover small in the lower left, the trail of glowing motes sweeping diagonally from the rover up through the canyon toward the helicopter, the glowing sun between ridges on the horizon, deep shadows in the corners.",
+  },
+  {
+    id: "ing043",
+    title: "Flight 6: a lost time stamp nearly topples the helicopter (2021)",
+    scene: `A tiny gold-foil-wrapped helicopter with two stacked slender black rotors and four spindly legs tilts alarmingly in mid-air about ten meters above a field of rust-colored boulders and sand ripples, rocking and wobbling, its rotors blurred, its body pitched far over to one side as if struggling to stay upright. From its belly, a long ribbon of film unspools through the air behind it, made of many small square snapshots of the ground it has been filming, glowing in soft cream and orange. In the middle of the ribbon one frame is missing, torn out, leaving a dark black gap, and after the gap all the following frames are shifted slightly out of alignment, doubled and ghosted, drifting sideways like a slipping deck of cards. On the ground below, the helicopter's shadow wobbles in sympathy. The low sun on the horizon is the single warm light source, rimming the tilted rotors in gold. Mood: fragile tension, a tiny glitch that could have been a disaster, a machine finding its balance again.`,
+    composition:
+      "Medium-wide shot at a slight low angle, the tilted helicopter in the center-left of the frame, the film ribbon with its missing frame streaming diagonally to the right and down toward the lower right, the boulder field and wobbling shadow below, deep shadows in the corners.",
+  },
+  {
+    id: "ing069",
+    title: "Flight 26: photographing the wreckage of Perseverance's landing (2022)",
+    scene: `A tiny gold-foil-wrapped helicopter with two stacked slender black rotors flies low, eight meters above a dusty rust-colored crater floor, tilting its camera down toward the ground. Below it stands the abandoned remains of a landing: an upright cone-shaped white-and-cream backshell, battered and dusty, standing like a small tower on the plain with long tangled suspension lines trailing from its tip. Beyond it, spread across the ground like a fallen cloth, lies a huge orange-and-white striped parachute, rippled by the wind and half buried in drifting Martian dust, only a third of it still visible. The low late-afternoon sun is the single warm light source, throwing the long shadow of the backshell and the helicopter across the parachute folds. In the far background rise the steep layered cliffs of an ancient river delta in butterscotch haze. Mood: quiet archaeology, a machine visiting the leftovers of its own arrival, the beauty of things left behind.`,
+    composition:
+      "Wide shot at a slightly high angle, the helicopter in the upper left third, the backshell standing at the center-right, the striped parachute spreading across the lower foreground, the delta cliffs on the horizon, deep shadows in the corners.",
+  },
+  {
+    id: "ing072",
+    title: "First loss of communication: Ingenuity misses its appointment with the rover (2022)",
+    scene: `A cold, dim Martian winter dusk over a wide empty plain. At the left, a large six-wheeled rover stands parked in the foreground, its antenna dish tilted up toward the sky, listening, its camera mast bent forward like someone waiting for a call. Far off at the right, tiny against the horizon, a small gold-foil-wrapped helicopter with two stacked slender rotors sits motionless, its dark solar panel coated in a thick film of fine pinkish dust, its body dim and silent. Between them stretches a thin dotted line of faint cream light, a radio link, that fades and breaks halfway across the plain, the dots thinning out and dissolving into the haze before reaching the helicopter. A low, weak, hazy sun hangs at the horizon behind the helicopter, a pale orange smudge, the single warm light source. Frost glints on the ground and on the rover's wheels. Mood: patient waiting, a missed handshake across empty distance, worry softened by faith that the silence will end.`,
+    composition:
+      "Wide shot at a low camera angle, the rover large in the lower left, the broken line of light crossing the middle of the frame, the small dusty helicopter at the far right near the horizon, the pale sun behind it, deep shadows in the corners.",
+  },
+  {
+    id: "ing083",
+    title: "Flight 34: the debut of the new navigation brain (2022)",
+    scene: `A tiny gold-foil-wrapped helicopter with two stacked slender black rotors hovers almost perfectly still, five meters above a rocky, boulder-strewn slope on Mars, its rotors blurred into soft discs, its small downward-looking camera casting a faint cone of cream light toward the ground. Draped over the hills and slopes below, like a translucent sheet of tracing paper, thin cream-colored contour lines trace the shape of the land, rising over every ridge and dipping into every hollow, a map the helicopter is reading. Within the cone of light, among the sharp rocks, a few small glowing cream rings mark the safest flat patches to land. In the background, rolling brown hills and a hazy butterscotch sky stretch to the horizon. The low sun grazing the slope is the single warm light source, making each rock cast a long shadow. Mood: calm confidence, a machine that finally understands the shape of the ground beneath it, learning to see.`,
+    composition:
+      "Medium-wide shot from a slightly high angle, the helicopter in the center-right hovering above the slope, the cone of light reaching down-left to the safe landing rings, the contour lines flowing across the hills at the bottom of the frame, deep shadows in the corners.",
+  },
+  {
+    id: "ing107",
+    title: "Jurabi Point: record altitude and speed (flights 61–62, 2023)",
+    scene: `A tiny gold-foil-wrapped helicopter with two stacked slender black rotors shoots straight upward into a clear, hazy butterscotch-pink sky above a flat, pale, rust-colored plain, its rotors blurred, a bold curved streak of speed lines trailing beneath it. Below it, along its climb, hang two faint, translucent ghost-echoes of the same helicopter, one much lower and one a bit higher, fading like afterimages that show the lower records it has just surpassed. Far below on the ground, tiny by comparison, a large six-wheeled rover stands parked beside a small scatter of rocks, giving the height its scale. The low sun on the horizon is the single warm light source, rimming the helicopter's rotors in gold and stretching its long shadow across the plain. Mood: exhilaration and daring, pushing past every limit it was designed for, a small machine learning how high it can go.`,
+    composition:
+      "Tall vertical shot at a low camera angle, the helicopter near the top of the frame, the two ghost-echoes stacked below it along a vertical line, the tiny rover and rocks at the very bottom for scale, the sun glowing at the left horizon, deep shadows in the corners.",
+  },
+  {
+    id: "ing127",
+    title: "Flight 72: communication lost one meter above the ground (2024)",
+    scene: `A tiny gold-foil-wrapped helicopter with two stacked slender black rotors descends toward a vast, almost featureless field of smooth, steep rust-colored sand ripples at dusk, one meter above the ground, its legs reaching down for the soil. Its rotor blades are cracking: at their weakest point, a third of the way from the tips, the slender blades are snapping, fragments flying off in the air, a puff of dust blooming beneath it. A thin dotted line of cream-colored light runs from the helicopter toward a large six-wheeled rover standing far away on a distant ridge at the horizon, and halfway there the line snaps and the dots scatter into the haze. The plain below is strangely empty, without a single rock or landmark, soft endless ripples. The low, tired sun, a dull orange disc on the horizon, is the single warm light source, casting a long shadow on the ripples. Mood: sudden silence at the end of a perfect flight, fragility, the quiet moment before everything changes.`,
+    composition:
+      "Wide shot at a low camera angle, the helicopter in the center-left just above the ground with the dust puff and flying blade fragments, the broken line of light running toward the tiny rover on the far right ridge, the sun on the horizon between them, deep shadows in the corners.",
+  },
+  {
+    id: "ing130",
+    title: "NASA ends Ingenuity's mission (2024)",
+    scene: `A small gold-foil-wrapped helicopter stands alone and peaceful on a rippled rust-colored sand dune at golden sunset, its four spindly legs planted, its two stacked slender black rotors resting at rest with their blades chipped and broken at the tips, its dark solar panel still facing the sun. Rising behind it across the glowing butterscotch-pink sky, a long graceful arc of seventy-two faint, translucent, paper-thin silhouettes of the same helicopter in flight, each a little different, stretches from the horizon at the left up over the helicopter and down to the horizon on the right, like a constellation of every flight it ever made, the oldest ones almost faded, the newest ones brighter. The setting sun, huge and low behind the arc, is the single warm light source, throwing the long shadow of the resting helicopter toward the viewer. Mood: dignified farewell, gratitude, a small machine that did far more than anyone asked of it.`,
+    composition:
+      "Wide shot at a low camera angle, the resting helicopter in the lower center, the arc of translucent flight silhouettes sweeping across the whole upper half of the frame, the huge low sun behind the center of the arc, the dune ripples in the foreground, deep shadows in the corners.",
+  },
+  {
+    id: "ing137",
+    title: "Mars Chopper: the concept for Ingenuity's successor (2024)",
+    scene: `Above a rugged Martian canyon of layered rust-colored cliffs and boulder fields, a giant, SUV-sized helicopter with six large rotors, each carrying six thin dark blades, flies steadily across the glowing sky, thirty-six blades blurring into overlapping translucent discs, its heavy angular cream-white body and instrument arms hanging beneath it, casting a huge shadow over the canyon. On the ground below, in the lower left foreground, a tiny gold-foil-wrapped helicopter with two stacked slender black rotors and four spindly legs, Ingenuity, stands as a pale, translucent, almost see-through silhouette in the dusty haze, small and still, looking up at the huge newcomer passing overhead, as if watching its successor pass. The low rising sun at the horizon between the cliffs, glowing butterscotch-pink, is the single warm light source, rim-lighting both machines and throwing long shadows. Mood: calm, respectful continuity, a torch passed from one flyer to the next, pride without triumph, the long road continuing.`,
+    composition:
+      "Wide shot at a low camera angle, the huge six-rotor helicopter high in the upper right two thirds, the small ghostly Ingenuity silhouette in the lower left foreground gazing up, the glowing sun between the cliffs on the horizon, deep shadows in the corners.",
+  },
+];

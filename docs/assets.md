@@ -27,6 +27,10 @@ hasta que la tarjeta pasó a dibujar el vehículo procedural. Se conservan como 
 
 `story.json` (los 20 beats: copy, hechos, fuente, ruta 3D), `images/oppNNN.jpg` (20 ilustraciones de IA a 1040 px, 4:5, ≈ 4 MB; originales de 1856×2304 en la carpeta de arte del equipo) y `audio/oppNNN.mp3` + `manifest.json` (narraciones con Bill, ≈ 6,6 MB, ya grabadas). Se generan con `npm run story` y `npm run story-audio`; el detalle está en [story.md](story.md). Además de esto, la carpeta sigue teniendo `opportunity.glb` (referencia de proporciones del vehículo).
 
+## Ilustraciones de Ingenuity (`public/models/ingenuity/story/images`, hito 39)
+
+20 ilustraciones de IA (Nano Banana 2.1 en Replicate, 4:5, 1040 px, ≈ 3,7 MB) `ingNNN.jpg` + `manifest.json` con el prompt de cada una; generadas con `npm run story-images -- ingenuity` (ver [story.md](story.md#ilustraciones-de-otras-misiones-ingenuity-hito-39)). Están en `story/images` para no mezclarse con las fotos de referencia de `public/models/ingenuity/images`. Aún sin uso en la app.
+
 ## Narraciones (`public/narration`)
 
 Un mp3 por checkpoint (16 clips: 5 + 5 + 6; ~300 KB, 20 s, `mp3_44100_128`, voz Bill, modelo `eleven_v4`) + `manifest.json` con los metadatos de cada
