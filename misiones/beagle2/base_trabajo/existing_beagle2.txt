@@ -1,0 +1,44 @@
+1997 | Pillinger propone un módulo de aterrizaje para la Mars Express
+1997 | La ESA abre la Mars Express a un módulo y elige Beagle 2 entre tres propuestas
+1997 | El nombre: Beagle, como el barco de Darwin
+1998 | Un presupuesto que cada fuente cuenta distinto
+1998 | Reparto de papeles: Open University, Astrium y Leicester
+1998-10 | Plazo de financiación incumplido: la ESA aprueba sin fondos completos
+1998-11-11 | Visto bueno de diseño a la Mars Express; Beagle 2 busca fondos propios
+2001-11-14 | Un laboratorio de 60 kg: brazo PAW, topo y análisis de gases
+2001-11-14 | Sin motor: paracaídas y globo para un aterrizaje controlado
+2002-12 | Se fija la entrega de Beagle 2 a Astrium en Toulouse
+2003-03-19 | Mars Express y Beagle 2 salen de Toulouse hacia Baikonur
+2003-06 | Beagle 2 viaja sin motor ni control propio, acoplado a la nave
+2003-06-02 | Despegue de Mars Express con Beagle 2 desde Baikonur
+2003-06-04 | Maniobra de corrección dos días después del lanzamiento
+2003-12-19 | Mars Express suelta a Beagle 2 rumbo a Marte
+2003-12-25 | Mars Express entra en órbita; Beagle 2 no emite señal
+2003-12-25 | Secuencia prevista de entrada: escudo, paracaídas y airbags en menos de siete minutos
+2003-12-25 | Hora prevista de aterrizaje: 02:54 GMT en Isidis Planitia
+2003-12-25 | Lo que se esperaba oír: nueve notas de Blur y un pulso por minuto
+2003-12-25 | Mars Odyssey no recibe nada en el primer contacto previsto
+2003-12-25 | El radiotelescopio Lovell de Jodrell Bank escucha en vano
+2003-12-27 | Se forma un 'tiger team' y se envían órdenes a ciegas para reiniciar el reloj
+2003-12-30 | Plan B: modo de búsqueda de comunicación y calendario con Mars Express
+2004-01-07 | Primer intento con Mars Express: nada a las 13:13 CET
+2004-01-07 | Mars Express intenta contactar con Beagle 2 durante semanas sin respuesta
+2004-01-26 | Tres días de búsqueda intensiva sin resultado y último recurso: la orden 'hail'
+2004-02-06 | El comité de gestión declara perdido a Beagle 2
+2004-02-11 | ESA y el Reino Unido anuncian una comisión de investigación
+2004-04-21 | La comisión entrega su informe: 19 recomendaciones, sin causa técnica única
+2004-05-24 | Causas organizativas: Beagle 2 tratado como instrumento, no como nave
+2004-05-24 | ESA crea una Dirección de Exploración y adopta las lecciones aprendidas
+2005-02-03 | El informe completo se publica casi un año después
+2013-02-28 | HiRISE fotografía por primera vez el lugar donde estaba Beagle 2
+2014-05-07 | Muere Colin Pillinger, líder de Beagle 2, ocho meses antes del hallazgo
+2014-06-29 | Segunda imagen HiRISE confirma el candidato a Beagle 2
+2014-12-15 | La imagen de 15 de diciembre de 2014 muestra el módulo a unos 0,3 m por píxel
+2015-01 | Michael Croon, exmiembro del equipo de Mars Express, detecta el candidato vía HiWish
+2015-01-16 | Beagle 2 aparece parcialmente desplegado en Isidis Planitia
+2015-01-16 | ESA, NASA y UK Space Agency anuncian que Beagle 2 fue hallado
+2015-01-16 | Qué mostraban las imágenes: aterrizó, pero faltó abrir los paneles que liberan la antena
+2015-01-16 | La viuda de Pillinger: casi lo logró, 'dio en el larguero'
+2015-01-16 | Un proyecto que inspiró y formó a un equipo que siguió en otras misiones
+2016-11-10 | Un análisis de reflejos propone tres paneles abiertos y uno atascado
+2016-11-11 | Simulaciones 3D sugieren que un cuarto panel no se abrió y tapó la antena

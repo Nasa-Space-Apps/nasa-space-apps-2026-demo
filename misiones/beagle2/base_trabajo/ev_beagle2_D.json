@@ -1,0 +1,94 @@
+[
+{"fecha_inicio":"2004-01-07","fecha_fin":"2004-02-02","precision_fecha":"rango","sol":null,"sol_texto":null,
+ "titulo":"Mars Express intenta contactar con Beagle 2 durante semanas sin respuesta",
+ "detalle":"Tras la ventana del aterrizaje de diciembre de 2003, la sonda Mars Express escuchó en repetidas ocasiones la señal de Beagle 2. Se cita un primer intento el 7 de enero de 2004 y esperanzas puestas en el 12 de enero y el 2 de febrero, cuando estaba programado un modo de reserva del módulo. Nunca se estableció comunicación.",
+ "datos_clave":["Primer intento citado: 7 de enero de 2004","Fechas de esperanza: 12 de enero y 2 de febrero de 2004","Comunicación establecida: ninguna"],
+ "etapa":"Búsqueda de señal","fase":"fin_de_mision","categoria":"operacion","discutido":false,
+ "nota":"Las fechas de los intentos de enero/febrero proceden solo de un resumen de búsqueda (que se apoya en un archivo de Wikipedia); conviene reforzarlas con una fuente primaria de ESA. La página de ESA abierta confirma solo el primer contacto de radio perdido tras el 25 de diciembre de 2003.",
+ "fuentes":[
+  {"titulo":"UK and ESA announce Beagle 2 inquiry","editor":"ESA","url":"https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"},
+  {"titulo":"Beagle 2 (archivo web de Wikipedia, 2008)","editor":"Wikipedia / UNT Web Archive","url":"https://webarchive.library.unt.edu/web/20081204191643/http://en.wikipedia.org/wiki/Beagle_2","tipo":"comunitaria","verificacion":"solo extracto de búsqueda"}]},
+
+{"fecha_inicio":"2004-02-06","fecha_fin":null,"precision_fecha":"día","sol":null,"sol_texto":null,
+ "titulo":"El comité de gestión declara perdido a Beagle 2",
+ "detalle":"El 6 de febrero de 2004 el Beagle 2 Management Board se reunió en Londres y dio por perdido el módulo, tras agotarse los intentos de contacto. La decisión se hizo pública días después, junto con el anuncio de una investigación.",
+ "datos_clave":["Reunión del comité de gestión en Londres: 6 de febrero de 2004","Aterrizaje previsto: 25 de diciembre de 2003"],
+ "etapa":"Declaración de pérdida","fase":"fin_de_mision","categoria":"fin_de_mision","discutido":false,"nota":null,
+ "fuentes":[
+  {"titulo":"UK and ESA announce Beagle 2 inquiry","editor":"ESA","url":"https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"}]},
+
+{"fecha_inicio":"2004-02-11","fecha_fin":null,"precision_fecha":"día","sol":null,"sol_texto":null,
+ "titulo":"ESA y el Reino Unido anuncian una comisión de investigación",
+ "detalle":"El 11 de febrero de 2004 el ministro británico de Ciencia, Lord Sainsbury, y la ESA anunciaron una comisión para investigar el fracaso. La presidía el inspector general de la ESA, René Bonnefoy, con David Link como vicepresidente británico, y sus miembros no habían participado en Beagle 2. Debía informar a finales de marzo de 2004.",
+ "datos_clave":["Anuncio: 11 de febrero de 2004","Presidente: René Bonnefoy (ESA)","Plazo inicial: finales de marzo de 2004"],
+ "etapa":"Investigación oficial","fase":"fin_de_mision","categoria":"fin_de_mision","discutido":false,"nota":null,
+ "fuentes":[
+  {"titulo":"UK and ESA announce Beagle 2 inquiry","editor":"ESA","url":"https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"}]},
+
+{"fecha_inicio":"2004-04-21","fecha_fin":"2004-05-24","precision_fecha":"rango","sol":null,"sol_texto":null,
+ "titulo":"La comisión entrega su informe y se presentan 19 recomendaciones",
+ "detalle":"Las conclusiones se entregaron el 21 de abril de 2004 y fueron aceptadas por el Reino Unido y la ESA; el 24 de mayo se presentaron en rueda de prensa. La comisión formuló 19 recomendaciones, agrupadas en gestión de proyecto (1-9), factores técnicos (10-19) y mejoras futuras. No identificó un fallo técnico único, solo 'algunas causas creíbles' y razones organizativas que elevaron el riesgo.",
+ "datos_clave":["19 recomendaciones","Entrega de conclusiones: 21 de abril de 2004","Rueda de prensa: 24 de mayo de 2004","Cita: 'a few credible causes'"],
+ "etapa":"Investigación oficial","fase":"fin_de_mision","categoria":"fin_de_mision","discutido":false,"nota":null,
+ "fuentes":[
+  {"titulo":"Beagle 2 lessons learned and the way forward","editor":"ESA","url":"https://www.esa.int/Newsroom/Press_Releases/Beagle_2_lessons_learned_and_the_way_forward","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"},
+  {"titulo":"Spaceflight Now: Beagle 2 report","editor":"Spaceflight Now","url":"https://spaceflightnow.com/news/n0405/24beagle2report/","tipo":"prensa","verificacion":"página abierta (resumen automático de la herramienta)"}]},
+
+{"fecha_inicio":"2004-05-24","fecha_fin":null,"precision_fecha":"día","sol":null,"sol_texto":null,
+ "titulo":"Causas organizativas: Beagle 2 tratado como instrumento, no como nave",
+ "detalle":"La comisión concluyó que el calendario ligado al acercamiento de Marte a la Tierra en 2003, las limitaciones de presupuesto y masa, y una subestimación colectiva de los medios para gestionar riesgos elevaron la probabilidad de fallo. Tratar el módulo como un instrumento científico y no como una nave completa fue una práctica habitual de entonces. No se señaló a ninguna persona; entre los puntos técnicos estaban las especificaciones y pruebas de los airbags.",
+ "datos_clave":["Sin culpables individuales","Calendario fijado por la ventana de Marte de 2003","Airbags: especificación, desarrollo y pruebas"],
+ "etapa":"Causas del fallo","fase":"fin_de_mision","categoria":"problema","discutido":false,"nota":null,
+ "fuentes":[
+  {"titulo":"Spaceflight Now: Beagle 2 report","editor":"Spaceflight Now","url":"https://spaceflightnow.com/news/n0405/24beagle2report/","tipo":"prensa","verificacion":"página abierta (resumen automático de la herramienta)"},
+  {"titulo":"Beagle 2 lessons learned and the way forward","editor":"ESA","url":"https://www.esa.int/Newsroom/Press_Releases/Beagle_2_lessons_learned_and_the_way_forward","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"}]},
+
+{"fecha_inicio":"2004-05-24","fecha_fin":null,"precision_fecha":"día","sol":null,"sol_texto":null,
+ "titulo":"ESA crea una Dirección de Exploración y adopta las lecciones aprendidas",
+ "detalle":"Como respuesta, la ESA planteó que los futuros módulos complejos siguieran el mismo proceso de gestión que los orbitadores, con acuerdos de colaboración desde el inicio. Se creó una Dirección de Exploración dedicada a coordinar requisitos técnicos planetarios. La agencia británica BNSC ya aplicaba ese enfoque al instrumento MIRI del telescopio James Webb.",
+ "datos_clave":["Nueva Dirección de Exploración en ESA","Mismo proceso de gestión para landers y orbitadores","Ejemplo UK: instrumento MIRI del JWST"],
+ "etapa":"Lecciones aprendidas","fase":"legado","categoria":"solucion","discutido":false,"nota":null,
+ "fuentes":[
+  {"titulo":"Spaceflight Now: Beagle 2 report","editor":"Spaceflight Now","url":"https://spaceflightnow.com/news/n0405/24beagle2report/","tipo":"prensa","verificacion":"página abierta (resumen automático de la herramienta)"}]},
+
+{"fecha_inicio":"2005-02-03","fecha_fin":null,"precision_fecha":"día","sol":null,"sol_texto":null,
+ "titulo":"El informe completo se publica casi un año después",
+ "detalle":"Al principio se difundieron solo las recomendaciones, por tratarse de un documento interno y por datos comerciales sensibles. El 3 de febrero de 2005 el Gobierno británico comunicó que el informe se colocaba en la web de BNSC, tras la presión del comité parlamentario de Ciencia y Tecnología. Physics World indica que salió a raíz de una petición de New Scientist bajo la ley de libertad de información.",
+ "datos_clave":["Publicación: 3 de febrero de 2005","Inicialmente solo se publicaron las recomendaciones","Inversión del Gobierno británico: unos 25 millones de libras"],
+ "etapa":"Transparencia","fase":"legado","categoria":"legado","discutido":true,
+ "nota":"Spaceflight Now (2004) dice que la conclusión de contacto imposible fue 'a principios de febrero de 2005', claramente un error por 2004. Hansard no confirma si se publicó íntegro ni menciona la petición de New Scientist; esa causa solo la da Physics World. Pendiente de verificar si hubo partes omitidas.",
+ "fuentes":[
+  {"titulo":"Beagle 2 inquiry (written statement)","editor":"Hansard, Parlamento del Reino Unido","url":"https://api.parliament.uk/historic-hansard/written-statements/2005/feb/03/beagle-2-inquiry","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"},
+  {"titulo":"Lessons from Beagle","editor":"Physics World","url":"https://physicsworld.com/a/lessons-from-beagle/","tipo":"prensa","verificacion":"página abierta (resumen automático de la herramienta)"}]},
+
+{"fecha_inicio":"2013-02-28","fecha_fin":"2014-12-15","precision_fecha":"rango","sol":null,"sol_texto":null,
+ "titulo":"Diez años de silencio: el módulo ya estaba en imágenes de HiRISE",
+ "detalle":"Entre 2004 y 2014 el destino de Beagle 2 siguió siendo un misterio. La detección posterior se apoyó en imágenes de HiRISE tomadas el 28 de febrero de 2013 y el 29 de junio de 2014, además de la del 15 de diciembre de 2014 analizada en el anuncio. Es decir, el módulo estaba en archivo antes de que alguien lo reconociera.",
+ "datos_clave":["Imágenes: 28-feb-2013, 29-jun-2014, 15-dic-2014","Área de aterrizaje esperada: unos 170 x 100 km en Isidis Planitia"],
+ "etapa":"Años sin noticias","fase":"fin_de_mision","categoria":"fin_de_mision","discutido":true,
+ "nota":"Contrasta la tensión (a): HiRISE cita imágenes de 2013 y 2014 para la detección inicial, y la de diciembre de 2014 para el análisis; el anuncio fue el 16 de enero de 2015. Los pies de la ESA hablan de una imagen del 15 de enero de 2015 (fecha de la publicación, no de la toma).",
+ "fuentes":[
+  {"titulo":"Beagle 2 found on Mars (ESP_039308_1915)","editor":"HiRISE, Universidad de Arizona","url":"https://www.uahirise.org/ESP_039308_1915","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"},
+  {"titulo":"Beagle 2 lander on Mars with panels deployed","editor":"NASA Science","url":"https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/","tipo":"oficial NASA/JPL","verificacion":"página abierta (resumen automático de la herramienta)"}]},
+
+{"fecha_inicio":"2015-01-16","fecha_fin":null,"precision_fecha":"día","sol":null,"sol_texto":null,
+ "titulo":"Beagle 2 aparece parcialmente desplegado en Isidis Planitia",
+ "detalle":"El 16 de enero de 2015 se anunció el hallazgo con HiRISE: el módulo, parcialmente desplegado, y cerca los restos de la tapa trasera y el paracaídas. La primera búsqueda y petición de imagen las hizo Michael Croon, ex miembro del equipo de operaciones de Mars Express. Las imágenes sugieren que la entrada y el aterrizaje funcionaron y que la antena no quedó expuesta.",
+ "datos_clave":["Anuncio: 16 de enero de 2015","Menos de 2 m de ancho desplegado","Unos 5 km del centro del objetivo (UKSA)","Descubridor: Michael Croon"],
+ "etapa":"Hallazgo","fase":"legado","categoria":"hito","discutido":true,
+ "nota":"Tensión (c): HiRISE habla de 'dos o tres' paneles motorizados visibles; NASA, de más de un panel desplegado; la UK Space Agency, de despliegue parcial. No hay cifra única. Las estimaciones de distancia al centro (UKSA 5 km; NASA, cerca del centro) no son idénticas.",
+ "fuentes":[
+  {"titulo":"UK-led Beagle 2 lander found on Mars","editor":"UK Space Agency / gov.uk","url":"https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"},
+  {"titulo":"Beagle 2 found on Mars (ESP_039308_1915)","editor":"HiRISE, Universidad de Arizona","url":"https://www.uahirise.org/ESP_039308_1915","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"},
+  {"titulo":"Beagle retrospective","editor":"ESA Mars Express blog","url":"https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/","tipo":"científica","verificacion":"página abierta (resumen automático de la herramienta)"}]},
+
+{"fecha_inicio":"2016-11-11","fecha_fin":null,"precision_fecha":"día","sol":null,"sol_texto":null,
+ "titulo":"Simulaciones 3D sugieren que un cuarto panel no se abrió y tapó la antena",
+ "detalle":"Un equipo de la Universidad De Montfort y la Universidad de Leicester construyó un modelo 3D con reflejos solares y lo comparó con las imágenes de HiRISE. El mejor ajuste fue tres paneles abiertos y uno fallido, que habría bloqueado la antena. El modelo también encaja con los cuatro abiertos, y la causa real quizá nunca se sepa.",
+ "datos_clave":["Publicado: 11 de noviembre de 2016","El módulo ocupa menos de 8 píxeles en HiRISE","Más de 180 sucesos de fallo posibles; si abrieron los 4 paneles quedan unos 25","Cita: 'we may never know exactly'"],
+ "etapa":"Teorías sobre la causa","fase":"legado","categoria":"ciencia","discutido":true,
+ "nota":"Dos medios discrepan en énfasis: Astronomy Now da como más probable 3 paneles abiertos y 1 fallido; Astronomy.com dice que 3 de 4 o los 4 encajan por igual. Los resultados no tenían revista científica citada. Son hipótesis, no un hecho.",
+ "fuentes":[
+  {"titulo":"Did a failed solar panel block Beagle 2's antenna?","editor":"Astronomy Now","url":"https://astronomynow.com/2016/11/11/did-a-failed-solar-panel-block-beagle-2s-antenna/","tipo":"prensa","verificacion":"página abierta (resumen automático de la herramienta)"},
+  {"titulo":"3D models shed some light on Beagle 2 lander's fate, but questions remain","editor":"Astronomy.com","url":"https://www.astronomy.com/space-exploration/3d-models-shed-some-light-on-beagle-2-landers-fate-but-questions-remain/","tipo":"prensa","verificacion":"página abierta (resumen automático de la herramienta)"}]}
+]

@@ -1,0 +1,3043 @@
+{
+  "esquema_version": "2.0",
+  "mision": {
+    "id": "beagle2",
+    "nombre": "Beagle 2",
+    "nombre_completo": "Beagle 2",
+    "agencia": "ESA/Reino Unido",
+    "tipo": "lander",
+    "cuerpo": "Marte",
+    "lugar": "Isidis Planitia",
+    "estado_actual": "Lander que nunca se comunicó tras su llegada en diciembre de 2003; localizado en la superficie en 2015 con imágenes de HiRISE (Mars Reconnaissance Orbiter, NASA).",
+    "sol_cero": "No aplica (el lander nunca operó; no hay conteo de soles)",
+    "fechas_clave": {
+      "lanzamiento": {
+        "fecha": null,
+        "eventos": []
+      },
+      "aterrizaje": {
+        "fecha": null,
+        "eventos": []
+      },
+      "ultimo_contacto": {
+        "fecha": null,
+        "eventos": []
+      },
+      "fin_oficial": {
+        "fecha": null,
+        "eventos": []
+      }
+    },
+    "misiones_relacionadas": [
+      "mars-express",
+      "mro"
+    ],
+    "resumen": {
+      "eventos": 62,
+      "fuentes_unicas": 52,
+      "eventos_por_fase": {
+        "origen": 3,
+        "planificacion_y_desarrollo": 14,
+        "lanzamiento_y_viaje": 4,
+        "aterrizaje": 11,
+        "operaciones": 1,
+        "fin_de_mision": 7,
+        "legado": 22
+      }
+    }
+  },
+  "titulo": "Línea de tiempo de Beagle 2: de la idea al silencio de 2003 y su hallazgo en 2015",
+  "idioma": "es",
+  "generado": "2026-11-15",
+  "version": "0.1",
+  "alcance": "Desde el origen del proyecto hasta su localización con HiRISE en 2015 y lo que se aprendió: concepto, financiamiento, desarrollo, lanzamiento a bordo de Mars Express, separación, aterrizaje y silencio, búsqueda, comisión de investigación, hallazgo y legado. Es una misión de ESA/Reino Unido; el vínculo con la NASA es el hallazgo con HiRISE.",
+  "como_leer": {
+    "fechas": "fecha_inicio / fecha_fin en ISO parcial (AAAA, AAAA-MM, AAAA-MM-DD). precision_fecha indica año, mes, día, rango, aproximada o década. En Marte sin operaciones, sol es siempre null."
+  },
+  "aviso_verificacion": "Borrador de trabajo (v0). Cada fuente declara su nivel de verificación; nada se completó de memoria.",
+  "ficha_tecnica": {},
+  "equipo": [],
+  "totales_de_la_mision": {},
+  "records": [],
+  "discrepancias": [],
+  "pendientes_de_verificar": [],
+  "recursos_para_la_plataforma": {
+    "modelos_3d": [],
+    "imagenes_y_panoramicas": [],
+    "vistas_desde_orbita": [],
+    "videos": [],
+    "documentales": [],
+    "datos": [],
+    "educacion": [],
+    "historias": [],
+    "portales": [],
+    "nota": ""
+  },
+  "eventos": [
+    {
+      "fecha_inicio": "1997",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Pillinger propone un módulo de aterrizaje para la Mars Express",
+      "detalle": "En 1997, cuando la ESA planeaba su primera misión a Marte, el científico Colin Pillinger, de la Open University, consideró que el orbitador necesitaba un módulo de superficie y concibió Beagle 2. Trabajó con colaboradores de la Universidad de Leicester. El proyecto nació de una iniciativa académica británica y no de un encargo de la agencia.",
+      "datos_clave": [
+        "Año: 1997",
+        "Impulsor: Colin Pillinger (Open University)",
+        "Socio académico: Universidad de Leicester"
+      ],
+      "etapa": "Origen del proyecto",
+      "fase": "origen",
+      "categoria": "origen",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2: 20 years later",
+          "editor": "National Space Centre",
+          "url": "https://www.spacecentre.co.uk/news/space-now-blog/beagle-2-20-years-later/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Britain's great Martian adventure",
+          "editor": "Science Museum Group",
+          "url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 1,
+      "id": "bgl001"
+    },
+    {
+      "fecha_inicio": "1997",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "La ESA abre la Mars Express a un módulo y elige Beagle 2 entre tres propuestas",
+      "detalle": "El fracaso de una misión rusa a Marte en 1997 dejó equipos disponibles para una nueva misión. Los Estados miembros de la ESA seleccionaron el orbitador Mars Express y la agencia invitó a presentar módulos de aterrizaje. Tres equipos europeos propusieron uno y se escogió Beagle 2. El calendario era apretado porque Marte estaría en su máxima cercanía a la Tierra en el verano de 2003.",
+      "datos_clave": [
+        "3 propuestas europeas",
+        "Ventana de lanzamiento: verano de 2003 (máxima cercanía Tierra-Marte)"
+      ],
+      "etapa": "Elección de la Mars Express",
+      "fase": "origen",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Lessons learnt from Beagle 2 and plans to implement recommendations",
+          "editor": "Times Higher Education (resumen de la ESA/Reino Unido)",
+          "url": "https://www.timeshighereducation.com/node/51637",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Inquiry finds combination of organisational and resource factors responsible for Beagle 2 failure",
+          "editor": "CORDIS (Comisión Europea)",
+          "url": "https://cordis.europa.eu/article/id/22066-inquiry-finds-combination-of-organisational-and-resource-factors-responsible-for-beagle-2-fail",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 2,
+      "id": "bgl002"
+    },
+    {
+      "fecha_inicio": "1997",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El nombre: Beagle, como el barco de Darwin",
+      "detalle": "Pillinger bautizó la sonda con el nombre del HMS Beagle, el barco que llevó a Charles Darwin, en lugar de usar un acrónimo técnico. El nombre evoca la búsqueda de vida, objetivo central de la misión. Una fuente añade que la idea del nombre fue de su esposa.",
+      "datos_clave": [
+        "Nombre tomado del HMS Beagle (Darwin)",
+        "Investigador principal: Colin Pillinger"
+      ],
+      "etapa": "Origen del proyecto",
+      "fase": "origen",
+      "categoria": "origen",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "La fecha exacta del bautizo no aparece en las fuentes; se usa 1997 por el inicio del proyecto. La atribución a su esposa viene solo de The Space Review.",
+      "fuentes": [
+        {
+          "titulo": "Britain's great Martian adventure",
+          "editor": "Science Museum Group",
+          "url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 article (The Space Review)",
+          "editor": "The Space Review",
+          "url": "https://thespacereview.com/article/2511/1",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 3,
+      "id": "bgl003"
+    },
+    {
+      "fecha_inicio": "1998",
+      "fecha_fin": "2004",
+      "precision_fecha": "rango",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Un presupuesto que cada fuente cuenta distinto",
+      "detalle": "El módulo se financió con una alianza de la Open University, EADS-Astrium, ministerios y consejos británicos y la ESA, con aportes del National Space Science Centre y del Wellcome Trust. El coste total aparece como 25, 45 o 66 millones de libras según la fuente, y la contribución pública directa como unos 22 millones. Las discrepancias reflejan que parte del trabajo se donó o se hizo a precio de coste y que algunos contratistas nunca cobraron.",
+      "datos_clave": [
+        "Cifras citadas: £25 M, £45 M y £66 M",
+        "Aporte del BNSC: £22 M",
+        "Parte del trabajo donada o a coste"
+      ],
+      "etapa": "Financiación",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "planificacion",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "Physics World (2005) habla de unos £25 M del Gobierno; Science Museum y National Space Centre de £45 M para toda la misión; The Space Review de £66 M finales. No se pudo reconciliar con un documento oficial; el informe completo con cifras fue confidencial hasta 2005.",
+      "fuentes": [
+        {
+          "titulo": "Lessons learnt from Beagle 2 and plans to implement recommendations",
+          "editor": "Times Higher Education",
+          "url": "https://www.timeshighereducation.com/node/51637",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2: 20 years later",
+          "editor": "National Space Centre",
+          "url": "https://www.spacecentre.co.uk/news/space-now-blog/beagle-2-20-years-later/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 article (The Space Review)",
+          "editor": "The Space Review",
+          "url": "https://thespacereview.com/article/2511/1",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Lessons from Beagle",
+          "editor": "Physics World",
+          "url": "https://physicsworld.com/a/lessons-from-beagle/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 4,
+      "id": "bgl004"
+    },
+    {
+      "fecha_inicio": "1998",
+      "fecha_fin": null,
+      "precision_fecha": "aproximada",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Reparto de papeles: Open University, Astrium y Leicester",
+      "detalle": "La Open University dirigió el proyecto y aportó el liderazgo científico, mientras EADS-Astrium fue contratista principal del diseño, desarrollo y gestión del módulo. Los equipos de instrumentos británicos procedían de la Open University, la Universidad de Leicester y el Mullard Space Science Laboratory. Más tarde Leicester asumió la gestión de la misión.",
+      "datos_clave": [
+        "Contratista principal: EADS-Astrium",
+        "Equipos: Open University, Leicester, Mullard SSL"
+      ],
+      "etapa": "Equipo y gestión",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "desarrollo",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "Las fuentes no dan una fecha exacta del reparto; el año es aproximado.",
+      "fuentes": [
+        {
+          "titulo": "Lessons learnt from Beagle 2 and plans to implement recommendations",
+          "editor": "Times Higher Education",
+          "url": "https://www.timeshighereducation.com/node/51637",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 (Wikipedia)",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Beagle_2",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 5,
+      "id": "bgl005"
+    },
+    {
+      "fecha_inicio": "1998",
+      "fecha_fin": null,
+      "precision_fecha": "aproximada",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Socios industriales y universitarios que construyeron el módulo",
+      "detalle": "Además de Open University, Leicester y Astrium, Martin-Baker se encargó del sistema de entrada, descenso y aterrizaje y Logica del software de crucero y descenso. SCISYS hizo el segmento terrestre y el software del módulo, la Universidad de Gales en Aberystwyth el brazo robótico y McLaren Applied Technologies los materiales compuestos de los paneles solares.",
+      "datos_clave": [
+        "Martin-Baker: entrada, descenso y aterrizaje",
+        "Logica: software de crucero y descenso",
+        "SCISYS: segmento terrestre y software",
+        "Aberystwyth: brazo robótico",
+        "McLaren Applied Technologies: paneles solares"
+      ],
+      "etapa": "Quién hizo qué",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "desarrollo",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "Las fechas de incorporación de cada socio no aparecen en la fuente; se usa 1998 como fecha aproximada.",
+      "fuentes": [
+        {
+          "titulo": "Beagle 2",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Beagle_2",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 6,
+      "id": "bgl006"
+    },
+    {
+      "fecha_inicio": "1998-10",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Plazo de financiación incumplido: la ESA aprueba sin fondos completos",
+      "detalle": "La comisión de investigación concluyó que la ESA debió exigir que la financiación completa del módulo estuviera asegurada en octubre de 1998. Esa financiación nunca se materializó, pero el proyecto fue aprobado igualmente. Es uno de los fallos de gestión que más pesaron en el informe.",
+      "datos_clave": [
+        "Fecha límite que debió exigirse: octubre de 1998",
+        "El dinero completo nunca llegó"
+      ],
+      "etapa": "Financiación",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "problema",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "El mes se deduce del texto del informe citado por Physics World (2005), no de un documento de 1998.",
+      "fuentes": [
+        {
+          "titulo": "Lessons from Beagle",
+          "editor": "Physics World",
+          "url": "https://physicsworld.com/a/lessons-from-beagle/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 (Physics World)",
+          "editor": "Physics World",
+          "url": "https://physicsworld.com/?p=32974",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 7,
+      "id": "bgl007"
+    },
+    {
+      "fecha_inicio": "1998-11-11",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Visto bueno de diseño a la Mars Express; Beagle 2 busca fondos propios",
+      "detalle": "El 11 de noviembre de 1998 la ESA dio luz verde a la fase de definición del diseño de la Mars Express, con lanzamiento previsto en 2003; la decisión de desarrollo completo quedaba para finales de 1999. Beagle 2 volaría solo si se conseguía financiación independiente, estimada entonces en 40 millones de dólares. Matra Marconi Space lideraba el diseño, con Pillinger como originador del concepto, y la nave pesaba 60 kg.",
+      "datos_clave": [
+        "11 de noviembre de 1998",
+        "Coste estimado: 40 millones de dólares",
+        "Masa: 60 kg",
+        "Socio industrial: Matra Marconi Space"
+      ],
+      "etapa": "Financiación",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "planificacion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "UK's Beagle 2 Mars lander gets initial approval",
+          "editor": "Flight International (Flightglobal)",
+          "url": "https://flightglobal.com/uks-beagle-2-mars-lander-gets-initial-approval/24030.article",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 8,
+      "id": "bgl008"
+    },
+    {
+      "fecha_inicio": "2000",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Requisitos de diseño de los airbags: 33 kg, 30 m/s y 200 g",
+      "detalle": "Un trabajo de análisis de elementos finitos (LS-DYNA) optimizó los airbags de Beagle 2 con estos requisitos: módulo de 33 kg, velocidad de descenso final de 30 m/s y desaceleración máxima de 200 g.",
+      "datos_clave": [
+        "Masa: 33 kg",
+        "Velocidad terminal de descenso: 30 m/s",
+        "Desaceleración máxima: 200 g",
+        "Método: LS-DYNA"
+      ],
+      "etapa": "Pruebas y diseño de aterrizaje",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "pruebas",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "El PDF devolvió error 503 al abrirlo; solo se vio el extracto del buscador. Año tomado del nombre de la conferencia (2000).",
+      "fuentes": [
+        {
+          "titulo": "Design Optimization of the Beagle II Mars Lander Airbags",
+          "editor": "Dynalook (conferencia 2000)",
+          "url": "https://www.dynalook.com/conferences/international-conf-2000/session18-2.pdf",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 9,
+      "id": "bgl009"
+    },
+    {
+      "fecha_inicio": "2001-11-14",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Un laboratorio de 60 kg: brazo PAW, topo y análisis de gases",
+      "detalle": "Por el límite de masa de la Mars Express, los ingenieros miniaturizaron los instrumentos. El brazo PAW (de aproximadamente un metro) llevaba cámaras, microscopio, espectrómetros y taladro; un topo, PLUTO, podía excavar hasta 1,5 m, y un instrumento de gases calentaba muestras para buscar carbonatos y materia orgánica. El paquete completo con escudo, paracaídas y airbags pesaba 69 kg y el módulo aterrizado 33,2 kg.",
+      "datos_clave": [
+        "Límite de masa citado: 60 kg",
+        "Paquete completo: 69 kg; módulo en superficie: 33,2 kg",
+        "Topo PLUTO: hasta 1,5 m de profundidad",
+        "Resultados de gases esperados a inicios de 2004"
+      ],
+      "etapa": "Diseño del paquete científico",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "desarrollo",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Los 60 kg (NASA 2001, Flight 1998) son el límite o estimación de diseño; 69 kg y 33,2 kg corresponden al módulo final (National Space Centre, Wikipedia). La fecha es la de la nota de NASA Astrobiology.",
+      "fuentes": [
+        {
+          "titulo": "Europe heads for Mars",
+          "editor": "NASA Astrobiology Institute",
+          "url": "https://astrobiology.nasa.gov/nai/articles/2001/11/14/europe-heads-for-mars/index.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2: 20 years later",
+          "editor": "National Space Centre",
+          "url": "https://www.spacecentre.co.uk/news/space-now-blog/beagle-2-20-years-later/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 (Wikipedia)",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Beagle_2",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 10,
+      "id": "bgl010"
+    },
+    {
+      "fecha_inicio": "2001-11-14",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Sin motor: paracaídas y globo para un aterrizaje controlado",
+      "detalle": "Beagle 2 viajaba sin propulsión propia y descendería con paracaídas y un airbag que se desinflaría despacio, en un choque controlado. Al posarse debía desplegar cuatro paneles solares y el brazo. La esterilización y limpieza de protección planetaria seguían en curso, con una instalación aún en construcción.",
+      "datos_clave": [
+        "Sin propulsión propia",
+        "4 paneles solares por desplegar",
+        "Esterilización planetaria en curso en 2001"
+      ],
+      "etapa": "Diseño del módulo",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "desarrollo",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Europe heads for Mars",
+          "editor": "NASA Astrobiology Institute",
+          "url": "https://astrobiology.nasa.gov/nai/articles/2001/11/14/europe-heads-for-mars/index.html",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 11,
+      "id": "bgl011"
+    },
+    {
+      "fecha_inicio": "2002",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Un nuevo paracaídas en tres meses y prueba de caída desde globo",
+      "detalle": "Según una fuente del sector, la dirección del programa concluyó que los airbags no resistirían la velocidad de impacto original y se necesitaba una caída más lenta. Astrium desarrolló y probó un nuevo paracaídas principal en unos tres meses, y una prueba de lanzamiento desde un globo cerró la serie de ensayos.",
+      "datos_clave": [
+        "Desarrollo y prueba: unos 3 meses",
+        "Prueba de caída desde plataforma de globo (2002)",
+        "Responsable: Astrium"
+      ],
+      "etapa": "Pruebas de calificación",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "pruebas",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "Solo extracto de búsqueda; la URL redirigía en bucle. Las fechas exactas no se confirmaron.",
+      "fuentes": [
+        {
+          "titulo": "Astrium Develops New High Performance Parachute For Beagle 2",
+          "editor": "Energy Daily / Mars Daily",
+          "url": "https://www.energy-daily.com/reports/Astrium_Develops_New_High_Performance_Parachute_For_Beagle_2.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 12,
+      "id": "bgl012"
+    },
+    {
+      "fecha_inicio": "2002-12",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Se fija la entrega de Beagle 2 a Astrium en Toulouse",
+      "detalle": "La ESA anunció que el módulo británico se entregaría al contratista principal, Astrium SAS, en Toulouse, para integrarlo con la nave Mars Express. Después, la nave completa viajaría al cosmódromo de Baikonur. La fecha acordada con el equipo de Beagle fue el 30 de enero de 2003.",
+      "datos_clave": [
+        "Entrega prevista: 30 de enero de 2003",
+        "Lugar: Astrium SAS, Toulouse",
+        "Anuncio en diciembre de 2002"
+      ],
+      "etapa": "Integración y pruebas finales",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "desarrollo",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Es la fecha planificada en un anuncio de diciembre de 2002; la fuente no confirma que la entrega ocurriera ese día.",
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 delivery for integration on Mars Express",
+          "editor": "ESA",
+          "url": "https://sci.esa.int/web/mars-express/-/31177-beagle-2-delivery-for-integration-on-mars-express",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 13,
+      "id": "bgl013"
+    },
+    {
+      "fecha_inicio": "2003",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Los instrumentos del paquete científico de Beagle 2",
+      "detalle": "El brazo robótico PAW, de 109 cm extendido, llevaba cámaras estéreo, microscopio, espectrómetros Mössbauer y de rayos X, un taladro y una lámpara. El paquete GAP debía medir isótopos de carbono y metano, y el 'topo' PLUTO estaba pensado para excavar hasta 1,5 m. Toda la carga científica pesaba 9 kg.",
+      "datos_clave": [
+        "PAW: 109 cm extendido, alcance de unos 70 cm",
+        "Microscopio con resolución de 6 µm",
+        "GAP: isótopos de carbono y metano",
+        "PLUTO: hasta 1,5 m de profundidad, cable de 3 m",
+        "Carga científica: 9 kg"
+      ],
+      "etapa": "Diseño del laboratorio",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "desarrollo",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "Solo se dispone de Wikipedia (pista); otras fuentes de este mismo tema pueden dar cifras distintas.",
+      "fuentes": [
+        {
+          "titulo": "Beagle 2",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Beagle_2",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 14,
+      "id": "bgl014"
+    },
+    {
+      "fecha_inicio": "2003",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Escudo térmico NORCOAT y diseño de entrada: 69 kg al lanzamiento, 33,2 kg al aterrizar",
+      "detalle": "El escudo era de material ablativo NORCOAT fabricado por EADS y debía soportar un calentamiento máximo estimado de 100 W/cm2. El módulo entraba a unos 20 000 km/h; la masa total de 69 kg al lanzamiento incluía escudo, paracaídas y airbags, y quedaban 33,2 kg al aterrizar.",
+      "datos_clave": [
+        "Escudo NORCOAT (EADS)",
+        "Pico de calentamiento estimado: 100 W/cm2",
+        "Velocidad de entrada: unos 20 000 km/h",
+        "Masa: 69 kg al lanzamiento, 33,2 kg al aterrizar"
+      ],
+      "etapa": "Diseño de entrada",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "desarrollo",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Beagle_2",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 15,
+      "id": "bgl015"
+    },
+    {
+      "fecha_inicio": "2003",
+      "fecha_fin": null,
+      "precision_fecha": "año",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Una carta de calibración firmada por Damien Hirst viaja a Marte",
+      "detalle": "El artista Damien Hirst cedió un diseño de puntos de colores como carta de calibración para los instrumentos de imagen de Beagle 2. Pillinger lo reclutó en parte para atraer atención pública hacia la misión.",
+      "datos_clave": [
+        "Autor: Damien Hirst",
+        "Función: calibrar instrumentos de color",
+        "Reclutado también por publicidad"
+      ],
+      "etapa": "Arte y divulgación",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "hito",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "Una búsqueda mencionó una obra de mano sobre aluminio titulada 'DHS 667 MARS', pero no pude confirmarlo en una página abierta; no se incluye.",
+      "fuentes": [
+        {
+          "titulo": "Britain's great Martian adventure",
+          "editor": "Science Museum Group",
+          "url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+          "tipo": "libro/medio",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2",
+          "editor": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Beagle_2",
+          "tipo": "comunitaria",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 16,
+      "id": "bgl016"
+    },
+    {
+      "fecha_inicio": "2003-03-19",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Mars Express y Beagle 2 salen de Toulouse hacia Baikonur",
+      "detalle": "Tras unos seis meses de pruebas térmicas, ambientales, mecánicas y eléctricas en Toulouse, la nave con Beagle 2 a bordo debía partir en un avión Antonov 124 hacia Kazajistán. Allí se prepararía el lanzamiento previsto para principios de junio.",
+      "datos_clave": [
+        "Salida prevista: 19 de marzo de 2003",
+        "Transporte: Antonov 124",
+        "Unos seis meses de pruebas en Toulouse"
+      ],
+      "etapa": "Pruebas de calificación y envío",
+      "fase": "planificacion_y_desarrollo",
+      "categoria": "pruebas",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "La fuente dice que la salida estaba programada; no se vio una confirmación posterior.",
+      "fuentes": [
+        {
+          "titulo": "Mars Express leaves for Baikonur",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_leaves_for_Baikonur",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 17,
+      "id": "bgl017"
+    },
+    {
+      "fecha_inicio": "2003-06",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Beagle 2 viaja sin motor ni control propio, acoplado a la nave",
+      "detalle": "Beagle 2 iba sujeto a Mars Express mediante un mecanismo de abrazadera y eyección (SUEM, de INSYS) que debía soportar el lanzamiento y luego soltarlo haciéndolo girar como una peonza para estabilizarlo. El módulo no tenía propulsión: su trayectoria dependía de cómo apuntara la nave antes de la separación. Durante el crucero la nave se mantuvo casi desactivada, con un contacto diario con la Tierra.",
+      "datos_clave": [
+        "Cápsula Beagle 2: unos 60 kg",
+        "Masa en superficie: máx. 30 kg",
+        "Crucero: un contacto diario con la Tierra"
+      ],
+      "etapa": "Crucero",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "viaje",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Las masas difieren: 60 kg de cápsula según ESA, unas 72 libras (~33 kg) de masa aterrizada según Spaceflight Now, 71 kg según un extracto de búsqueda; no se conciliaron. Fecha aproximada del periodo de crucero.",
+      "fuentes": [
+        {
+          "titulo": "Mars Express en route for the Red Planet",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 project page (resultado de búsqueda sobre el SUEM)",
+          "editor": "airport-technology.com",
+          "url": "https://www.airport-technology.com/projects/beagle/",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 18,
+      "id": "bgl018"
+    },
+    {
+      "fecha_inicio": "2003-06-02",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Despegue de Mars Express con Beagle 2 desde Baikonur",
+      "detalle": "Un cohete ruso Soyuz-Fregat, operado por Starsem, lanzó la sonda a las 17:45 GMT (23:45 hora local). Tras el primer encendido de la etapa Fregat quedó en una órbita terrestre provisional, y 1 h 32 min después del despegue se inyectó hacia Marte. Fue la primera misión europea a otro planeta.",
+      "datos_clave": [
+        "Fecha: 2 de junio de 2003, 17:45 GMT",
+        "Cohete: Soyuz-Fregat (Starsem)",
+        "Inyección interplanetaria: 1 h 32 min tras el despegue",
+        "Masa de la sonda: 1 120 kg"
+      ],
+      "etapa": "Lanzamiento",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "lanzamiento",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Mars Express en route for the Red Planet",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "The mission (Mars Express)",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 19,
+      "id": "bgl019"
+    },
+    {
+      "fecha_inicio": "2003-06-04",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Maniobra de corrección dos días después del lanzamiento",
+      "detalle": "Dos días tras el despegue, la nave hizo una maniobra para fijar la trayectoria hacia Marte, y la etapa Fregat se alejó a la deriva. El viaje duraría unos seis meses y unos 400 millones de km. Se programó otra corrección a mitad de camino, en septiembre.",
+      "datos_clave": [
+        "Corrección: 2 días tras el lanzamiento",
+        "Viaje: ~6 meses, ~400 millones de km",
+        "Segunda corrección prevista: septiembre de 2003"
+      ],
+      "etapa": "Crucero",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "viaje",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "La fecha 4 de junio se deduce de dos días después del 2 de junio; la fuente no da el día exacto.",
+      "fuentes": [
+        {
+          "titulo": "Mars Express en route for the Red Planet",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 20,
+      "id": "bgl020"
+    },
+    {
+      "fecha_inicio": "2003-12-19",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Mars Express suelta a Beagle 2 rumbo a Marte",
+      "detalle": "A las 08:31 GMT del 19 de diciembre, seis días antes de la llegada, se activó el mecanismo de eyección y Beagle 2 salió girando hacia Marte. Días antes, Mars Express hizo una maniobra de apuntado de precisión para dejarlo en la trayectoria correcta, ya que el módulo no tenía propulsión. Tras unas dos horas sin telemetría, se confirmó que la eyección fue correcta.",
+      "datos_clave": [
+        "Separación: 19 de diciembre de 2003, 08:31 GMT",
+        "Maniobra de apuntado de precisión días antes",
+        "Entrada atmosférica prevista: 25 de diciembre",
+        "Destino: Isidis Planitia"
+      ],
+      "etapa": "Separación",
+      "fase": "lanzamiento_y_viaje",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "El comunicado de ESA de junio de 2003 preveía la separación el 20 de diciembre; las fuentes posteriores dan el 19.",
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 released to hunt for life on Martian surface",
+          "editor": "Spaceflight Now",
+          "url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle retrospective",
+          "editor": "ESA Mars Express blog",
+          "url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Mars Express: no signal from Beagle 2 so far",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_no_signal_from_Beagle_2_so_far",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 21,
+      "id": "bgl021"
+    },
+    {
+      "fecha_inicio": "2003-12-25",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Mars Express entra en órbita; Beagle 2 no emite señal",
+      "detalle": "Mars Express se insertó en órbita de Marte el mismo día en que Beagle 2 debía aterrizar. No se recibió señal tras la hora prevista, y los intentos de las semanas siguientes fallaron. A principios de febrero de 2004 se consideró imposible el contacto y se creó una comisión de investigación.",
+      "datos_clave": [
+        "Inserción orbital: 25 de diciembre de 2003",
+        "Relevo previsto vía Mars Odyssey",
+        "Comisión creada en febrero de 2004"
+      ],
+      "etapa": "Llegada a Marte",
+      "fase": "aterrizaje",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 lessons learned and the way forward",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Newsroom/Press_Releases/Beagle_2_lessons_learned_and_the_way_forward",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 lander failure investigation formally begins",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/mars/marsexpress/040211board.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 22,
+      "id": "bgl022"
+    },
+    {
+      "fecha_inicio": "2003-12-25",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Secuencia prevista de entrada: escudo, paracaídas y airbags en menos de siete minutos",
+      "detalle": "Según el plan, Beagle 2 entraría en la atmósfera a las 02:47 GMT a más de 20.000 km/h, con temperaturas de hasta 1.700 °C en el escudo. A unos 7,1 km de altura se abriría un paracaídas piloto y un minuto después el principal, de 10 m. A pocos cientos de metros del suelo se inflarían tres bolsas de gas, y el impacto se esperaba a unos 60 km/h.",
+      "datos_clave": [
+        "Entrada a las 02:47 GMT a más de 20.000 km/h",
+        "Hasta 1.700 °C",
+        "Paracaídas piloto a unos 7,1 km; principal de 10 m",
+        "Tres bolsas de gas; impacto previsto a unos 60 km/h",
+        "Descenso completo en menos de 7 minutos"
+      ],
+      "etapa": "Entrada, descenso y aterrizaje",
+      "fase": "aterrizaje",
+      "categoria": "aterrizaje",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)",
+          "editor": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/859414",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 23,
+      "id": "bgl023"
+    },
+    {
+      "fecha_inicio": "2003-12-25",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Hora prevista de aterrizaje: 02:54 GMT en Isidis Planitia",
+      "detalle": "El reposo en la superficie estaba previsto para las 02:54 GMT del 25 de diciembre de 2003, en Isidis Planitia (11° N, 90° E), dentro de una elipse de 30 km por 5 km. El sol se pondría a las 07:15 GMT y las noches podían bajar a -80 °C. La Mars Global Surveyor fotografió la zona unos 20 minutos después y mostró buen tiempo.",
+      "datos_clave": [
+        "Reposo previsto 02:54 GMT, 25 dic 2003",
+        "Elipse de 30 km x 5 km, 11° N 90° E",
+        "Puesta de sol 07:15 GMT; amanecer 20:02 GMT",
+        "Imagen de la MGS 20 min después: tiempo despejado"
+      ],
+      "etapa": "Entrada, descenso y aterrizaje",
+      "fase": "aterrizaje",
+      "categoria": "aterrizaje",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)",
+          "editor": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/859414",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Listening for Beagle 2's call home",
+          "editor": "Sky & Telescope",
+          "url": "https://skyandtelescope.org/astronomy-news/listening-for-beagle2scallhome/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 24,
+      "id": "bgl024"
+    },
+    {
+      "fecha_inicio": "2003-12-25",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Lo que se esperaba oír: nueve notas de Blur y un pulso por minuto",
+      "detalle": "La señal de confirmación prevista era una melodía de nueve notas codificada digitalmente, compuesta por el grupo Blur. Si fallaban los contactos programados, el módulo pasaría a transmitir un pulso de 10 s encendido y 50 s apagado, con un transmisor de 5 W a 401,56 MHz. La señal tardaría unos 9 minutos en llegar a la Tierra.",
+      "datos_clave": [
+        "Nueve notas compuestas por Blur",
+        "Transmisor de 5 W a 401,56 MHz",
+        "Pulso: 10 s encendido, 50 s apagado",
+        "Unos 9 minutos de viaje de la señal"
+      ],
+      "etapa": "Escucha de la señal",
+      "fase": "aterrizaje",
+      "categoria": "hito",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)",
+          "editor": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/859414",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 update (comunicado del 26 dic 2003)",
+          "editor": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/899034",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 25,
+      "id": "bgl025"
+    },
+    {
+      "fecha_inicio": "2003-12-25",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Mars Odyssey no recibe nada en el primer contacto previsto",
+      "detalle": "La primera oportunidad de oír a Beagle 2 fue un sobrevuelo de la Mars Odyssey de la NASA, que debía retransmitir la señal de su transmisor. No llegó ninguna. Había 14 contactos con Odyssey programados, y la Mars Express tomaría el relevo como enlace principal.",
+      "datos_clave": [
+        "14 contactos con Odyssey programados",
+        "Primer sobrevuelo hacia las 06:00-06:30 UT del 25 dic 2003",
+        "Sin señal"
+      ],
+      "etapa": "Escucha de la señal",
+      "fase": "aterrizaje",
+      "categoria": "problema",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "La hora del sobrevuelo difiere: Sky & Telescope da 6:30 UT, EurekAlert (26 dic) 'hacia las 06:00 GMT', y el comunicado del 25 dic dice 'tres horas después del aterrizaje'. Todas coinciden en que no hubo señal.",
+      "fuentes": [
+        {
+          "titulo": "Listening for Beagle 2's call home",
+          "editor": "Sky & Telescope",
+          "url": "https://skyandtelescope.org/astronomy-news/listening-for-beagle2scallhome/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 update (comunicado del 26 dic 2003)",
+          "editor": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/899034",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)",
+          "editor": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/859414",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 26,
+      "id": "bgl026"
+    },
+    {
+      "fecha_inicio": "2003-12-25",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El radiotelescopio Lovell de Jodrell Bank escucha en vano",
+      "detalle": "La noche del 25 de diciembre el telescopio Lovell, de 76 m, rastreó la señal portadora de Beagle 2 sin detectar nada. Otra antena, el conjunto de Westerbork (Países Bajos), vio su intento interrumpido por fuertes interferencias. El Lovell solo puede escuchar, no transmitir.",
+      "datos_clave": [
+        "Telescopio Lovell de 76 m (250 pies)",
+        "Sin detección",
+        "Westerbork interrumpido por interferencias"
+      ],
+      "etapa": "Escucha de la señal",
+      "fase": "aterrizaje",
+      "categoria": "problema",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "La ventana de escucha difiere: EurekAlert (26 dic) dice de 19:00 GMT a medianoche; el comunicado del 25 dic, de 22:00 a medianoche GMT; Sky & Telescope, 'unas 16 horas después' del aterrizaje (~19:00 GMT).",
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 update (comunicado del 26 dic 2003)",
+          "editor": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/899034",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)",
+          "editor": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/859414",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Listening for Beagle 2's call home",
+          "editor": "Sky & Telescope",
+          "url": "https://skyandtelescope.org/astronomy-news/listening-for-beagle2scallhome/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 27,
+      "id": "bgl027"
+    },
+    {
+      "fecha_inicio": "2003-12-27",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Se forma un 'tiger team' y se envían órdenes a ciegas para reiniciar el reloj",
+      "detalle": "Ante el silencio, los ingenieros crearon un 'tiger team' para analizar los datos de cada pasada y proponer opciones de recuperación. El viernes por la noche se enviaron órdenes a ciegas para reponer el reloj del módulo; no se pudo confirmar que las recibiera. También se revisó si las llamaradas solares de finales de octubre habían afectado al transmisor de Odyssey.",
+      "datos_clave": [
+        "Órdenes a ciegas para reiniciar el reloj (24 dic noche, 26 dic)",
+        "Posible efecto de llamaradas solares de octubre sobre Odyssey",
+        "Mars Express, enlace principal: su comunicación se probó de extremo a extremo"
+      ],
+      "etapa": "Primeros días de silencio",
+      "fase": "aterrizaje",
+      "categoria": "solucion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "La fuente dice 'el viernes por la noche', que corresponde al 26 de diciembre de 2003; la fecha del evento es la de publicación (27 dic).",
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 tiger team",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/mars/marsexpress/031227tigerteam.html",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 28,
+      "id": "bgl028"
+    },
+    {
+      "fecha_inicio": "2003-12-29",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Mars Global Surveyor halla un cráter de 1 km en el centro de la zona de aterrizaje",
+      "detalle": "Imágenes de la cámara de Mars Global Surveyor, tomadas unos 20 minutos después de la hora prevista de llegada, mostraron un cráter con manto de eyecciones cerca del centro de la elipse. Pillinger lo comparó con el Meteor Crater de Arizona, y la posibilidad de que Beagle 2 hubiera caído allí se barajó desde el principio.",
+      "datos_clave": [
+        "Cráter de unos 1 km de diámetro",
+        "Elipse de aterrizaje de unos 70 km por 10 km",
+        "Hora prevista de llegada: 02:54 GMT del 25-dic-2003"
+      ],
+      "etapa": "La búsqueda tras el silencio",
+      "fase": "aterrizaje",
+      "categoria": "problema",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Scientists find obstacle at heart of Beagle landing zone",
+          "editor": "Spaceflight Now",
+          "url": "https://www.spaceflightnow.com/mars/marsexpress/031229crater.html",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 29,
+      "id": "bgl029"
+    },
+    {
+      "fecha_inicio": "2003-12-30",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Plan B: modo de búsqueda de comunicación y calendario con Mars Express",
+      "detalle": "Tras el décimo intento fallido, Beagle 2 debía entrar en el modo CSM 1, que detecta amanecer y anochecer por la corriente de los paneles y programa contactos sin depender del reloj. La Odyssey tenía su último pase programado el 31 de diciembre y la Mars Express tenía contactos previstos el 6, 12, 13 y 17 de enero; los dos últimos eran 'muy buenas oportunidades'. El Reino Unido planteó un futuro Beagle 3.",
+      "datos_clave": [
+        "CSM 1 tras el décimo intento",
+        "Contactos Mars Express: 6, 12, 13 y 17 de enero de 2004",
+        "Último pase programado de Odyssey: 31 de diciembre",
+        "Imagen de Mars Global Surveyor posible el 5 de enero"
+      ],
+      "etapa": "Primeros días de silencio",
+      "fase": "aterrizaje",
+      "categoria": "solucion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 communication status, 30 Dec 2003",
+          "editor": "ScienceDaily (ESA)",
+          "url": "https://www.sciencedaily.com/releases/2003/12/031230015737.htm",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 30,
+      "id": "bgl030"
+    },
+    {
+      "fecha_inicio": "2004-01-07",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Primer intento con Mars Express: nada a las 13:13 CET",
+      "detalle": "El 7 de enero de 2004, en su primer paso sobre la zona de aterrizaje, la Mars Express intentó oír a Beagle 2 y no detectó señal. Su sistema de comunicaciones se había probado a fondo para este fin, lo que daba confianza a la ESA. David Southwood dijo: 'We have not lost hope yet to contact Beagle 2'.",
+      "datos_clave": [
+        "7 de enero de 2004, 13:13 CET",
+        "Sin señal",
+        "Más intentos previstos en los días siguientes"
+      ],
+      "etapa": "Primeros días de silencio",
+      "fase": "aterrizaje",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Mars Express: no signal from Beagle 2 so far",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_no_signal_from_Beagle_2_so_far",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 31,
+      "id": "bgl031"
+    },
+    {
+      "fecha_inicio": "2004-01-07",
+      "fecha_fin": "2004-02-02",
+      "precision_fecha": "rango",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Mars Express intenta contactar con Beagle 2 durante semanas sin respuesta",
+      "detalle": "Tras la ventana del aterrizaje de diciembre de 2003, la sonda Mars Express escuchó en repetidas ocasiones la señal de Beagle 2. Se cita un primer intento el 7 de enero de 2004 y esperanzas puestas en el 12 de enero y el 2 de febrero, cuando estaba programado un modo de reserva del módulo. Nunca se estableció comunicación.",
+      "datos_clave": [
+        "Primer intento citado: 7 de enero de 2004",
+        "Fechas de esperanza: 12 de enero y 2 de febrero de 2004",
+        "Comunicación establecida: ninguna"
+      ],
+      "etapa": "Búsqueda de señal",
+      "fase": "fin_de_mision",
+      "categoria": "operacion",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "Las fechas de los intentos de enero/febrero proceden solo de un resumen de búsqueda (que se apoya en un archivo de Wikipedia); conviene reforzarlas con una fuente primaria de ESA. La página de ESA abierta confirma solo el primer contacto de radio perdido tras el 25 de diciembre de 2003.",
+      "fuentes": [
+        {
+          "titulo": "UK and ESA announce Beagle 2 inquiry",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 (archivo web de Wikipedia, 2008)",
+          "editor": "Wikipedia / UNT Web Archive",
+          "url": "https://webarchive.library.unt.edu/web/20081204191643/http://en.wikipedia.org/wiki/Beagle_2",
+          "tipo": "comunitaria",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 32,
+      "id": "bgl032"
+    },
+    {
+      "fecha_inicio": "2004-01-07",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Dos aterrizajes, dos destinos: el júbilo de Spirit frente al silencio de Beagle 2",
+      "detalle": "Una semana después de la pérdida de contacto, la prensa científica contrapuso la celebración del equipo de la NASA por el rover Spirit con la espera sin noticias de Beagle 2. Los intentos vía Mars Express, Mars Odyssey y Mars Global Surveyor no obtuvieron respuesta, y se sospechó que una roca pudo estorbar el despliegue.",
+      "datos_clave": [
+        "Spirit: 174 kg, en el cráter Gusev",
+        "Beagle 2: 33 kg según Science News, con cuatro paneles solares",
+        "23 de 34 sondas enviadas antes a Marte habían fallado",
+        "Opportunity debía llegar el 24-ene-2004"
+      ],
+      "etapa": "Contraste con los rovers de la NASA",
+      "fase": "aterrizaje",
+      "categoria": "hito",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "Las fuentes discrepan en fechas: Science News da el aterrizaje de Beagle 2 el 24-dic-2003 y el de Spirit el 3-ene-2004; otras fuentes dan el 25-dic y el 4-ene. Además la masa de 33 kg difiere de la de otras fuentes de la base; verificar.",
+      "fuentes": [
+        {
+          "titulo": "A Tale of Two Landers: NASA's Spirit phones home, but Europe's Beagle 2 remains mum on Mars",
+          "editor": "Science News",
+          "url": "https://sciencenews.org/?p=36222",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 33,
+      "id": "bgl033"
+    },
+    {
+      "fecha_inicio": "2004-01-26",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Tres días de búsqueda intensiva sin resultado y último recurso: la orden 'hail'",
+      "detalle": "Hacia el 26 de enero, tras varios días con Mars Express, Odyssey y Jodrell Bank, Colin Pillinger admitió: 'We haven't found Beagle 2, despite three days of intensive searching'. Mark Sims explicó que el módulo debía estar ya en el modo CSM2 y que la única explicación probable era poca carga de batería. Se planeó pedir a Odyssey una orden 'hail' para reiniciar el software, como último recurso.",
+      "datos_clave": [
+        "CSM2 previsto desde el 22 de enero",
+        "Orden 'hail' a través de Odyssey el 27 de enero",
+        "Mars Express podría enviarla hacia el 2-3 de febrero"
+      ],
+      "etapa": "Primeros días de silencio",
+      "fase": "fin_de_mision",
+      "categoria": "problema",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 search status (26 Jan 2004)",
+          "editor": "ScienceDaily",
+          "url": "https://sciencedaily.com/releases/2004/01/040127083257.htm",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 34,
+      "id": "bgl034"
+    },
+    {
+      "fecha_inicio": "2004-02-06",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El comité de gestión declara perdido a Beagle 2",
+      "detalle": "El 6 de febrero de 2004 el Beagle 2 Management Board se reunió en Londres y dio por perdido el módulo, tras agotarse los intentos de contacto. La decisión se hizo pública días después, junto con el anuncio de una investigación.",
+      "datos_clave": [
+        "Reunión del comité de gestión en Londres: 6 de febrero de 2004",
+        "Aterrizaje previsto: 25 de diciembre de 2003"
+      ],
+      "etapa": "Declaración de pérdida",
+      "fase": "fin_de_mision",
+      "categoria": "fin_de_mision",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "UK and ESA announce Beagle 2 inquiry",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 lander failure investigation formally begins",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/mars/marsexpress/040211board.html",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 35,
+      "id": "bgl035"
+    },
+    {
+      "fecha_inicio": "2004-02-11",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "ESA y el Reino Unido anuncian una comisión de investigación",
+      "detalle": "El 11 de febrero de 2004 el ministro británico de Ciencia, Lord Sainsbury, y la ESA anunciaron una comisión para investigar el fracaso. La presidía el inspector general de la ESA, René Bonnefoy, con David Link como vicepresidente británico, y sus miembros no habían participado en Beagle 2. Debía informar a finales de marzo de 2004.",
+      "datos_clave": [
+        "Anuncio: 11 de febrero de 2004",
+        "Presidente: René Bonnefoy (ESA)",
+        "Plazo inicial: finales de marzo de 2004"
+      ],
+      "etapa": "Investigación oficial",
+      "fase": "fin_de_mision",
+      "categoria": "fin_de_mision",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "UK and ESA announce Beagle 2 inquiry",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 36,
+      "id": "bgl036"
+    },
+    {
+      "fecha_inicio": "2004-03-30",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Mars Express detecta metano en la atmósfera de Marte",
+      "detalle": "El espectrómetro PFS de la propia Mars Express, la nave que llevó a Beagle 2, midió metano en la atmósfera marciana. La ESA presentó una concentración media de unas 10 partes por mil millones y avisó de que eran medidas preliminares. Su origen podía ser geológico o biológico, justo el tipo de pregunta para la que se diseñó Beagle 2.",
+      "datos_clave": [
+        "Aprox. 10 ppbv de metano",
+        "Instrumento: Planetary Fourier Spectrometer (PFS)",
+        "Artículo en Science (Formisano et al., 2004)"
+      ],
+      "etapa": "Ciencia que quedó sin su módulo",
+      "fase": "operaciones",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Mars Express confirms methane in the Martian atmosphere",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_confirms_methane_in_the_Martian_atmosphere",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 37,
+      "id": "bgl037"
+    },
+    {
+      "fecha_inicio": "2004-04-21",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "La comisión entrega su informe: 19 recomendaciones, sin causa técnica única",
+      "detalle": "La comisión conjunta ESA/BNSC entregó el informe el 21 de abril de 2004. No identificó un único fallo técnico, pero citó causas posibles y factores de organización, y presión de presupuesto, masa y calendario. Entre sus recomendaciones: pruebas de choque a nivel de sistema, pruebas de despliegue realistas y más experiencia en paracaídas y airbags.",
+      "datos_clave": [
+        "Informe entregado: 21 de abril de 2004",
+        "19 recomendaciones aceptadas",
+        "Rueda de prensa: 24 de mayo de 2004"
+      ],
+      "etapa": "Investigación del fallo",
+      "fase": "legado",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Tensión (b): ESA dijo que el informe completo seguiría confidencial y solo se publicarían recomendaciones y lecciones; un extracto de búsqueda sugiere publicación completa en 2005, sin verificar. Spaceflight Now no da la fecha de entrega.",
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 lessons learned and the way forward",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Newsroom/Press_Releases/Beagle_2_lessons_learned_and_the_way_forward",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 board of inquiry report",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/news/n0405/24beagle2report/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 inquiry report news",
+          "editor": "Nature",
+          "url": "https://www.nature.com/news/2004/040524/full/news040524-3.html",
+          "tipo": "prensa",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 38,
+      "id": "bgl038"
+    },
+    {
+      "fecha_inicio": "2004-05-24",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Causas organizativas: Beagle 2 tratado como instrumento, no como nave",
+      "detalle": "La comisión concluyó que el calendario ligado al acercamiento de Marte a la Tierra en 2003, las limitaciones de presupuesto y masa, y una subestimación colectiva de los medios para gestionar riesgos elevaron la probabilidad de fallo. Tratar el módulo como un instrumento científico y no como una nave completa fue una práctica habitual de entonces. No se señaló a ninguna persona; entre los puntos técnicos estaban las especificaciones y pruebas de los airbags.",
+      "datos_clave": [
+        "Sin culpables individuales",
+        "Calendario fijado por la ventana de Marte de 2003",
+        "Airbags: especificación, desarrollo y pruebas"
+      ],
+      "etapa": "Causas del fallo",
+      "fase": "fin_de_mision",
+      "categoria": "problema",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Es un balance posterior sobre el desarrollo. Sobre el informe: se publicó solo un resumen en mayo de 2004; Physics World dice que el texto completo salió en febrero de 2005 por una petición de libertad de información, y The Space Review lo sitúa en enero de 2005. No se verificó el texto completo ni la fecha exacta.",
+      "fuentes": [
+        {
+          "titulo": "Spaceflight Now: Beagle 2 report",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/news/n0405/24beagle2report/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 lessons learned and the way forward",
+          "editor": "ESA",
+          "url": "https://www.esa.int/Newsroom/Press_Releases/Beagle_2_lessons_learned_and_the_way_forward",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Lessons learnt from Beagle 2 and plans to implement recommendations",
+          "editor": "Times Higher Education",
+          "url": "https://www.timeshighereducation.com/node/51637",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Inquiry finds combination of organisational and resource factors responsible for Beagle 2 failure",
+          "editor": "CORDIS",
+          "url": "https://cordis.europa.eu/article/id/22066-inquiry-finds-combination-of-organisational-and-resource-factors-responsible-for-beagle-2-fail",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Lessons from Beagle",
+          "editor": "Physics World",
+          "url": "https://physicsworld.com/a/lessons-from-beagle/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 39,
+      "id": "bgl039"
+    },
+    {
+      "fecha_inicio": "2004-05-24",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "ESA crea una Dirección de Exploración y adopta las lecciones aprendidas",
+      "detalle": "Como respuesta, la ESA planteó que los futuros módulos complejos siguieran el mismo proceso de gestión que los orbitadores, con acuerdos de colaboración desde el inicio. Se creó una Dirección de Exploración dedicada a coordinar requisitos técnicos planetarios. La agencia británica BNSC ya aplicaba ese enfoque al instrumento MIRI del telescopio James Webb.",
+      "datos_clave": [
+        "Nueva Dirección de Exploración en ESA",
+        "Mismo proceso de gestión para landers y orbitadores",
+        "Ejemplo UK: instrumento MIRI del JWST"
+      ],
+      "etapa": "Lecciones aprendidas",
+      "fase": "legado",
+      "categoria": "solucion",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Spaceflight Now: Beagle 2 report",
+          "editor": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/news/n0405/24beagle2report/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 40,
+      "id": "bgl040"
+    },
+    {
+      "fecha_inicio": "2004-06-18",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Pillinger pide financiar un segundo módulo, Beagle 3",
+      "detalle": "Colin Pillinger pidió al gobierno británico y a la ESA fondos para una nueva sonda que sustituyera a Beagle 2. Esperaba que el aumento de la inversión científica anunciado por el ministro de Hacienda lo cubriera. Un lanzamiento en 2007 era posible, pero él consideraba más realista 2009, por las ventanas de lanzamiento cada unos 26 meses.",
+      "datos_clave": [
+        "Un sondeo MORI para Demos: 66 % quería que Reino Unido lo intentara de nuevo",
+        "Lanzamiento realista: 2009 (2007 posible)",
+        "Ventanas a Marte cada unos 26 meses"
+      ],
+      "etapa": "Propuestas posteriores del equipo",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Pillinger launches plea for Beagle 3",
+          "editor": "Times Higher Education",
+          "url": "https://www.timeshighereducation.com/node/52089",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 41,
+      "id": "bgl041"
+    },
+    {
+      "fecha_inicio": "2004-08-26",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El informe interno repasa los posibles modos de fallo: atmósfera fina, escudo térmico y electrónica",
+      "detalle": "Un resumen del informe señaló que no se podía identificar una causa única por falta de datos y asignó probabilidades a varios modos de fallo. Entre ellos, una densidad atmosférica inusualmente baja medida por Mars Express y los rovers, que habría impedido un aterrizaje correcto, y la rotura del escudo térmico, que no se podía descartar. También se citaron fallos de electrónica, de antena o de despliegue.",
+      "datos_clave": [
+        "Densidad anómala a 20-40 km de altitud a principios de enero",
+        "Separación de Mars Express el 19-dic-2003 con velocidad y giro correctos",
+        "Pruebas de airbags limitadas por falta de instalaciones en Europa"
+      ],
+      "etapa": "Investigación de modos de fallo",
+      "fase": "fin_de_mision",
+      "categoria": "problema",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": "La fuente no da los niveles de probabilidad; no se citan.",
+      "fuentes": [
+        {
+          "titulo": "Report examines possible reasons for Beagle 2 disappearance",
+          "editor": "CORDIS (Comisión Europea)",
+          "url": "https://cordis.europa.eu/article/id/22527-report-examines-possible-reasons-for-beagle-2-disappearance",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 42,
+      "id": "bgl042"
+    },
+    {
+      "fecha_inicio": "2004-08-31",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "La cámara MOC de Mars Global Surveyor cubre el 36 % de la elipse y no halla el módulo",
+      "detalle": "De enero a abril de 2004 la cámara de Mars Global Surveyor buscó a Beagle 2 con imágenes de 1,5 m por píxel, sobre todo en la mitad este de la elipse. Un punto oscuro, único candidato razonable, resultó a mayor resolución un pequeño cráter erosionado con arena oscura. No hubo evidencia concluyente del módulo.",
+      "datos_clave": [
+        "Cubierto el 36 % de la elipse y el 72 % de su mitad este",
+        "Imagen del candidato a 0,5 m por píxel en un eje",
+        "Candidato en 11,7° N, 269,4° O"
+      ],
+      "etapa": "Búsqueda orbital antes de HiRISE",
+      "fase": "fin_de_mision",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Mars Global Surveyor MOC images, 31 August 2004",
+          "editor": "Malin Space Science Systems",
+          "url": "https://asimov.msss.com/mars_images/moc/2004/08/31/",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 43,
+      "id": "bgl043"
+    },
+    {
+      "fecha_inicio": "2005-02-03",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "El informe completo se publica casi un año después",
+      "detalle": "Al principio se difundieron solo las recomendaciones, por tratarse de un documento interno y por datos comerciales sensibles. El 3 de febrero de 2005 el Gobierno británico comunicó que el informe se colocaba en la web de BNSC, tras la presión del comité parlamentario de Ciencia y Tecnología. Physics World indica que salió a raíz de una petición de New Scientist bajo la ley de libertad de información.",
+      "datos_clave": [
+        "Publicación: 3 de febrero de 2005",
+        "Inicialmente solo se publicaron las recomendaciones",
+        "Inversión del Gobierno británico: unos 25 millones de libras"
+      ],
+      "etapa": "Transparencia",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Spaceflight Now (2004) dice que la conclusión de contacto imposible fue 'a principios de febrero de 2005', claramente un error por 2004. Hansard no confirma si se publicó íntegro ni menciona la petición de New Scientist; esa causa solo la da Physics World. Pendiente de verificar si hubo partes omitidas.",
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 inquiry (written statement)",
+          "editor": "Hansard, Parlamento del Reino Unido",
+          "url": "https://api.parliament.uk/historic-hansard/written-statements/2005/feb/03/beagle-2-inquiry",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Lessons from Beagle",
+          "editor": "Physics World",
+          "url": "https://physicsworld.com/a/lessons-from-beagle/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 44,
+      "id": "bgl044"
+    },
+    {
+      "fecha_inicio": "2006",
+      "fecha_fin": "2014",
+      "precision_fecha": "rango",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Ocho años de búsqueda: 26 imágenes de HiRISE sin resultado",
+      "detalle": "La ESA recalculó la elipse de aterrizaje con datos de trayectoria de la Mars Express y redujo su eje largo de 174 km a 57 km. Entre 2006 y 2014 se examinaron 26 imágenes de HiRISE sin hallar el módulo. Michael Croon, antiguo miembro del equipo de operaciones de la Mars Express, notó un hueco en la cobertura y pidió nuevas imágenes.",
+      "datos_clave": [
+        "Elipse reducida de 174 km a 57 km",
+        "26 imágenes de HiRISE examinadas (2006-2014)",
+        "Croon pidió nuevas imágenes"
+      ],
+      "etapa": "La búsqueda desde órbita",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "How we found our lost Mars lander after a decade of searching, and what's next",
+          "editor": "The Conversation (John Bridges, Univ. de Leicester)",
+          "url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Identification of the Beagle 2 lander on Mars",
+          "editor": "Royal Society Open Science",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5666264",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 45,
+      "id": "bgl045"
+    },
+    {
+      "fecha_inicio": "2013-02-28",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "HiRISE fotografía por primera vez el lugar donde estaba Beagle 2",
+      "detalle": "La cámara HiRISE de la sonda MRO tomó la imagen ESP_030908_1915 de Isidis Planitia. Años después se vería que ya contenía la primera detección del módulo, aunque nadie lo sabía entonces.",
+      "datos_clave": [
+        "ESP_030908_1915",
+        "28 de febrero de 2013"
+      ],
+      "etapa": "Hallazgo",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "La nota de ESA (blog, 2015) habla de que HiRISE vio restos en 2014; la Universidad de Arizona y la NASA citan imágenes de 2013 y 2014. La imagen de 2013 es la primera detección según Arizona.",
+      "fuentes": [
+        {
+          "titulo": "Finding Beagle 2 (ESP_039308_1915)",
+          "editor": "HiRISE / Universidad de Arizona",
+          "url": "https://www.uahirise.org/ESP_039308_1915",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 Lander on Mars, With Panels Deployed",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 46,
+      "id": "bgl046"
+    },
+    {
+      "fecha_inicio": "2014-05-07",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Muere Colin Pillinger, líder de Beagle 2, ocho meses antes del hallazgo",
+      "detalle": "Pillinger, profesor de la Open University, murió a los 70 años por una hemorragia cerebral. Lideró el proyecto y no llegó a ver que el módulo había aterrizado. También murió en 2014 George Fraser, de Leicester.",
+      "datos_clave": [
+        "7 de mayo de 2014",
+        "70 años"
+      ],
+      "etapa": "Legado humano",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Remembering Colin Pillinger",
+          "editor": "BBC Sky at Night Magazine",
+          "url": "https://www.skyatnightmagazine.com/news/remembering-colin-pillinger",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "UK-led Beagle 2 lander found on Mars",
+          "editor": "GOV.UK / UK Space Agency",
+          "url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 47,
+      "id": "bgl047"
+    },
+    {
+      "fecha_inicio": "2014-06-29",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Segunda imagen HiRISE confirma el candidato a Beagle 2",
+      "detalle": "La imagen ESP_037145_1915 se tomó el 29 de junio de 2014. Junto con la de 2013 sirvió para el compuesto que la NASA publicó como el módulo con paneles desplegados.",
+      "datos_clave": [
+        "ESP_037145_1915",
+        "29 de junio de 2014"
+      ],
+      "etapa": "Hallazgo",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2 Lander on Mars, With Panels Deployed",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Finding Beagle 2 (ESP_039308_1915)",
+          "editor": "HiRISE / Universidad de Arizona",
+          "url": "https://www.uahirise.org/ESP_039308_1915",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 48,
+      "id": "bgl048"
+    },
+    {
+      "fecha_inicio": "2014-12-15",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "La imagen de 15 de diciembre de 2014 muestra el módulo a unos 0,3 m por píxel",
+      "detalle": "La imagen destacada de HiRISE se adquirió a las 15:08 hora local marciana. Su escala de unos 0,3 m por píxel (10 pulgadas) es lo bastante fina para ver un objeto de pocos metros como Beagle 2 desplegado.",
+      "datos_clave": [
+        "ESP_039308_1915",
+        "~0,3 m/píxel",
+        "15:08 hora local marciana"
+      ],
+      "etapa": "Hallazgo",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Finding Beagle 2 (ESP_039308_1915)",
+          "editor": "HiRISE / Universidad de Arizona",
+          "url": "https://www.uahirise.org/ESP_039308_1915",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 49,
+      "id": "bgl049"
+    },
+    {
+      "fecha_inicio": "2015-01",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Michael Croon, exmiembro del equipo de Mars Express, detecta el candidato vía HiWish",
+      "detalle": "Michael Croon, de Trier (Alemania), antiguo integrante de operaciones de Mars Express en ESOC, pidió imágenes del sitio mediante HiWish, el programa público de la NASA para sugerir objetivos a HiRISE. Fue el primero en examinarlas y encontrar un candidato en el borde del encuadre. La fecha exacta de su hallazgo no la da la fuente.",
+      "datos_clave": [
+        "HiWish",
+        "Trier, Alemania"
+      ],
+      "etapa": "Hallazgo",
+      "fase": "legado",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "El mes es aproximado: las fuentes solo dicen que el hallazgo se anunció en enero de 2015.",
+      "fuentes": [
+        {
+          "titulo": "Finding Beagle 2 (ESP_039308_1915)",
+          "editor": "HiRISE / Universidad de Arizona",
+          "url": "https://www.uahirise.org/ESP_039308_1915",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "UA-led HiRISE finds lost Beagle 2 (ScienceDaily)",
+          "editor": "ScienceDaily",
+          "url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 50,
+      "id": "bgl050"
+    },
+    {
+      "fecha_inicio": "2015-01-16",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Beagle 2 aparece parcialmente desplegado en Isidis Planitia",
+      "detalle": "El 16 de enero de 2015 se anunció el hallazgo con HiRISE: el módulo, parcialmente desplegado, y cerca los restos de la tapa trasera y el paracaídas. La primera búsqueda y petición de imagen las hizo Michael Croon, ex miembro del equipo de operaciones de Mars Express. Las imágenes sugieren que la entrada y el aterrizaje funcionaron y que la antena no quedó expuesta.",
+      "datos_clave": [
+        "Anuncio: 16 de enero de 2015",
+        "Menos de 2 m de ancho desplegado",
+        "Unos 5 km del centro del objetivo (UKSA)",
+        "Descubridor: Michael Croon"
+      ],
+      "etapa": "Hallazgo",
+      "fase": "legado",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Tensión (c): HiRISE habla de 'dos o tres' paneles motorizados visibles; NASA, de más de un panel desplegado; la UK Space Agency, de despliegue parcial. No hay cifra única. Las estimaciones de distancia al centro (UKSA 5 km; NASA, cerca del centro) no son idénticas.",
+      "fuentes": [
+        {
+          "titulo": "UK-led Beagle 2 lander found on Mars",
+          "editor": "UK Space Agency / gov.uk",
+          "url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 found on Mars (ESP_039308_1915)",
+          "editor": "HiRISE, Universidad de Arizona",
+          "url": "https://www.uahirise.org/ESP_039308_1915",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle retrospective",
+          "editor": "ESA Mars Express blog",
+          "url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 51,
+      "id": "bgl051"
+    },
+    {
+      "fecha_inicio": "2015-01-16",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "ESA, NASA y UK Space Agency anuncian que Beagle 2 fue hallado",
+      "detalle": "El 16 de enero de 2015 se hizo público que HiRISE había localizado el módulo, parcialmente desplegado, en Isidis Planitia. Se vieron también el paracaídas y lo que parece la cubierta trasera. El anuncio se difundió desde la Royal Society, ESA, NASA y el gobierno británico.",
+      "datos_clave": [
+        "16 de enero de 2015",
+        "Isidis Planitia",
+        "paracaídas y cubierta trasera cerca"
+      ],
+      "etapa": "Hallazgo",
+      "fase": "legado",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle retrospective",
+          "editor": "ESA Mars Express blog",
+          "url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "UK-led Beagle 2 lander found on Mars",
+          "editor": "GOV.UK / UK Space Agency",
+          "url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "UK-led Beagle 2 Lander found on Mars",
+          "editor": "Royal Society",
+          "url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 52,
+      "id": "bgl052"
+    },
+    {
+      "fecha_inicio": "2015-01-16",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Qué mostraban las imágenes: aterrizó, pero faltó abrir los paneles que liberan la antena",
+      "detalle": "Según Arizona, las imágenes enseñan solo dos o tres paneles solares y el despliegue completo era necesario para exponer la antena de radio, lo que explicaría el silencio. Mark Sims dijo que la secuencia de entrada, descenso y aterrizaje parecía haber funcionado y que un problema tardío de despliegue frenó la misión. Causas posibles citadas: un airbag que estorbara, un mecanismo dañado o una conexión eléctrica rota.",
+      "datos_clave": [
+        "2 o 3 paneles visibles",
+        "aterrizaje con éxito probable"
+      ],
+      "etapa": "Hallazgo",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Discrepancia sobre los paneles: Arizona dice 2 o 3 visibles; NASA habla de 'más de un panel' sin cifra; el análisis de 2016 propone 3 abiertos y 1 atascado de 4.",
+      "fuentes": [
+        {
+          "titulo": "UA-led HiRISE finds lost Beagle 2 (ScienceDaily)",
+          "editor": "ScienceDaily",
+          "url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "UK-led Beagle 2 lander found on Mars",
+          "editor": "GOV.UK / UK Space Agency",
+          "url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Beagle 2 Lander on Mars, With Panels Deployed",
+          "editor": "NASA Science",
+          "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 53,
+      "id": "bgl053"
+    },
+    {
+      "fecha_inicio": "2015-01-16",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "La viuda de Pillinger: casi lo logró, 'dio en el larguero'",
+      "detalle": "Judith Pillinger expresó orgullo mezclado con tristeza porque Colin no pudo compartirlo. Dijo que él habría comparado la misión con haber dado en el larguero en vez de fallar la portería. La Royal Society ya había creado en diciembre de 2014 el premio Colin Pillinger International Exchanges Award.",
+      "datos_clave": [
+        "premio creado en diciembre de 2014",
+        "Royal Society"
+      ],
+      "etapa": "Legado humano",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "UK-led Beagle 2 Lander found on Mars",
+          "editor": "Royal Society",
+          "url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 54,
+      "id": "bgl054"
+    },
+    {
+      "fecha_inicio": "2015-01-16",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Un proyecto que inspiró y formó a un equipo que siguió en otras misiones",
+      "detalle": "El módulo pesaba solo 69 kg con paracaídas, escudo y airbags, y su brazo PAW llevaba cámaras, microscopio y espectrómetros. Muchos miembros del equipo trabajaron después en otras grandes misiones. Pillinger impulsó además Philae, el módulo de Rosetta, primer aterrizaje en un cometa.",
+      "datos_clave": [
+        "69 kg",
+        "brazo PAW de 1 m",
+        "Philae"
+      ],
+      "etapa": "Legado técnico",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2: 20 years later",
+          "editor": "National Space Centre",
+          "url": "https://www.spacecentre.co.uk/news/space-now-blog/beagle-2-20-years-later/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 55,
+      "id": "bgl055"
+    },
+    {
+      "fecha_inicio": "2015-01-16",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "A cuántos kilómetros del objetivo: 5 km según JPL, unos 20 km según Bridges",
+      "detalle": "La nota de JPL sitúa el hallazgo a unos 5 km del centro de la zona de aterrizaje prevista y estima el módulo desplegado en unos 2 m. El artículo de Bridges, en cambio, habla de un objeto brillante a unos 20 km del objetivo original, y el artículo científico da coordenadas muy próximas al blanco (90,43 E frente a 90,50 E). Las cifras dependen de qué punto se tome como objetivo.",
+      "datos_clave": [
+        "JPL: ~5 km del centro previsto",
+        "The Conversation: ~20 km del objetivo original",
+        "Paper: 90,43 E, 11,53 N frente a 90,50 E, 11,53 N",
+        "Tamaño: ~2 m (JPL) frente a ~1,5 m (paper)"
+      ],
+      "etapa": "Identificación",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Las fuentes difieren en la distancia al objetivo y en el tamaño del módulo; no se resolvió qué referencia (elipse original o recalculada) usa cada una.",
+      "fuentes": [
+        {
+          "titulo": "Lost 2003 Mars Lander Found by Mars Reconnaissance Orbiter",
+          "editor": "NASA/JPL",
+          "url": "https://jpl.nasa.gov/news/lost-2003-mars-lander-found-by-mars-reconnaissance-orbiter",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "How we found our lost Mars lander after a decade of searching, and what's next",
+          "editor": "The Conversation",
+          "url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Identification of the Beagle 2 lander on Mars",
+          "editor": "Royal Society Open Science",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5666264",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 56,
+      "id": "bgl056"
+    },
+    {
+      "fecha_inicio": "2015-01-16",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Mark Sims y los científicos de JPL reaccionan al hallazgo",
+      "detalle": "Mark Sims, director de misión de Beagle 2 en la Universidad de Leicester, dijo que se preguntaba por su destino cada Navidad desde 2003 y que las imágenes muestran lo cerca que estuvo el equipo de hacer ciencia en Marte. Tim Parker (JPL) se declaró convencido de que los objetos eran material de Beagle 2, y Richard Zurek, científico del proyecto MRO, subrayó lo difícil de buscar naves pequeñas en grandes áreas. El equipo de Beagle 2, el de HiRISE y JPL volvieron a fotografiar y analizar los objetivos.",
+      "datos_clave": [
+        "Mark Sims, Univ. de Leicester",
+        "Tim Parker y Richard Zurek, JPL",
+        "Coincidencia en tamaño, forma, color y dispersión"
+      ],
+      "etapa": "Reacciones oficiales",
+      "fase": "legado",
+      "categoria": "hito",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Lost 2003 Mars Lander Found by Mars Reconnaissance Orbiter",
+          "editor": "NASA/JPL",
+          "url": "https://jpl.nasa.gov/news/lost-2003-mars-lander-found-by-mars-reconnaissance-orbiter",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 57,
+      "id": "bgl057"
+    },
+    {
+      "fecha_inicio": "2016-10-25",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "La misma cámara fotografía el choque del Schiaparelli de ExoMars",
+      "detalle": "Tras el aterrizaje fallido del módulo de pruebas Schiaparelli el 19 de octubre de 2016, el MRO lo observó con CTX el 20 de octubre y con HiRISE el 25. La imagen mostró tres zonas con restos a menos de 1,5 km entre sí: paracaídas con la carcasa trasera, un posible escudo térmico y una marca oscura de unos 2,4 m, probable cráter. Según datos de ExoMars, impactó a más de 300 km/h. La nota de JPL no menciona Beagle 2.",
+      "datos_clave": [
+        "Aterrizaje: 2016-10-19",
+        "CTX: 20 oct; HiRISE: 25 oct 2016",
+        "Marca de impacto ~2,4 m",
+        "Impacto a más de 300 km/h"
+      ],
+      "etapa": "Otras misiones de la ESA",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": false,
+      "nota": "El vínculo con Beagle 2 es contextual (misma cámara, mismo tipo de búsqueda); la fuente no lo establece.",
+      "fuentes": [
+        {
+          "titulo": "Closer Look at Schiaparelli Impact Site on Mars",
+          "editor": "NASA/JPL",
+          "url": "https://www.jpl.nasa.gov/images/closer-look-at-schiaparelli-impact-site-on-mars",
+          "tipo": "oficial NASA/JPL",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 58,
+      "id": "bgl058"
+    },
+    {
+      "fecha_inicio": "2016-11-10",
+      "fecha_fin": null,
+      "precision_fecha": "mes",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Un análisis de reflejos propone tres paneles abiertos y uno atascado",
+      "detalle": "Un equipo de la Universidad De Montfort, con el de Mark Sims en Leicester, comparó modelos 3D del módulo con las imágenes de MRO. El escenario más probable fue tres paneles desplegados y uno fallido, que pudo bloquear la antena. Sims afirmó que el módulo pudo operar en superficie sin poder enviar datos.",
+      "datos_clave": [
+        "4 paneles en total",
+        "3 abiertos, 1 fallido (más probable)",
+        "técnica de reflection analysis"
+      ],
+      "etapa": "Análisis posterior",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "Contradice parcialmente la cifra de 2 o 3 paneles de 2015; el equipo admite resolución baja y que la causa puede no conocerse. La fecha exacta de publicación (10-11 nov 2016) viene de fuentes secundarias.",
+      "fuentes": [
+        {
+          "titulo": "Did a failed solar panel block Beagle 2's antenna?",
+          "editor": "Astronomy Now",
+          "url": "https://astronomynow.com/2016/11/11/did-a-failed-solar-panel-block-beagle-2s-antenna/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "Scientists solve mystery of Beagle 2 Mars lander",
+          "editor": "De Montfort University",
+          "url": "https://www.dmu.ac.uk/about-dmu/news/2016/november/dmu-may-have.aspx",
+          "tipo": "científica",
+          "verificacion": "solo extracto de búsqueda"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 59,
+      "id": "bgl059"
+    },
+    {
+      "fecha_inicio": "2016-11-11",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Simulaciones 3D sugieren que un cuarto panel no se abrió y tapó la antena",
+      "detalle": "Un equipo de la Universidad De Montfort y la Universidad de Leicester construyó un modelo 3D con reflejos solares y lo comparó con las imágenes de HiRISE. El mejor ajuste fue tres paneles abiertos y uno fallido, que habría bloqueado la antena. El modelo también encaja con los cuatro abiertos, y la causa real quizá nunca se sepa.",
+      "datos_clave": [
+        "Publicado: 11 de noviembre de 2016",
+        "El módulo ocupa menos de 8 píxeles en HiRISE",
+        "Más de 180 sucesos de fallo posibles; si abrieron los 4 paneles quedan unos 25",
+        "Cita: 'we may never know exactly'"
+      ],
+      "etapa": "Teorías sobre la causa",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "secundario",
+      "discutido": true,
+      "nota": "Dos medios discrepan en énfasis: Astronomy Now da como más probable 3 paneles abiertos y 1 fallido; Astronomy.com dice que 3 de 4 o los 4 encajan por igual. Los resultados no tenían revista científica citada. Son hipótesis, no un hecho.",
+      "fuentes": [
+        {
+          "titulo": "Did a failed solar panel block Beagle 2's antenna?",
+          "editor": "Astronomy Now",
+          "url": "https://astronomynow.com/2016/11/11/did-a-failed-solar-panel-block-beagle-2s-antenna/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "3D models shed some light on Beagle 2 lander's fate, but questions remain",
+          "editor": "Astronomy.com",
+          "url": "https://www.astronomy.com/space-exploration/3d-models-shed-some-light-on-beagle-2-landers-fate-but-questions-remain/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 60,
+      "id": "bgl060"
+    },
+    {
+      "fecha_inicio": "2017-10-11",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Royal Society Open Science publica la identificación formal de Beagle 2",
+      "detalle": "Bridges y once coautores (Leicester, Open University, UCL, JPL y otros, con Croon entre ellos) publicaron 'Identification of the Beagle 2 lander on Mars'. Usan imágenes de HiRISE de unos 25-30 cm por píxel y procesado de superresolución que llega a 5-12,5 cm. Concluyen que entrada, paracaídas y aterrizaje parecen haber funcionado, y que un despliegue incompleto de paneles pudo tapar la antena UHF, aunque no está probado.",
+      "datos_clave": [
+        "Royal Society Open Science 4(10):170785",
+        "Aceptado el 13 de septiembre de 2017",
+        "Superresolución: 5-12,5 cm/píxel",
+        "Coordenadas 90,43 E, 11,53 N"
+      ],
+      "etapa": "Análisis científico",
+      "fase": "legado",
+      "categoria": "ciencia",
+      "respaldo": "oficial_o_cientifico",
+      "discutido": true,
+      "nota": "La lista previa cita análisis de 2016-11; esta revista lo publica en octubre de 2017. Las fechas de 2016 no se pudieron contrastar aquí.",
+      "fuentes": [
+        {
+          "titulo": "Identification of the Beagle 2 lander on Mars",
+          "editor": "Royal Society Open Science",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5666264",
+          "tipo": "científica",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        },
+        {
+          "titulo": "How we found our lost Mars lander after a decade of searching, and what's next",
+          "editor": "The Conversation",
+          "url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 61,
+      "id": "bgl061"
+    },
+    {
+      "fecha_inicio": "2023-12-06",
+      "fecha_fin": null,
+      "precision_fecha": "día",
+      "sol": null,
+      "sol_texto": null,
+      "titulo": "Veinte años después: el National Space Centre recuerda Beagle 2",
+      "detalle": "El National Space Centre del Reino Unido, sede del centro de control del módulo, publicó un recuerdo por los 20 años. Repasa la anécdota del cuadro de puntos de Damien Hirst para calibrar las cámaras, la canción de Blur y el hallazgo de 2015 con dos o tres de cuatro paneles desplegados. Indica que el Reino Unido habría sido el tercer país en aterrizar en otro planeta.",
+      "datos_clave": [
+        "Publicado el 6 de diciembre de 2023",
+        "Control en el National Space Centre",
+        "Financiación citada: unos 45 millones de libras"
+      ],
+      "etapa": "Homenajes",
+      "fase": "legado",
+      "categoria": "legado",
+      "respaldo": "secundario",
+      "discutido": false,
+      "nota": null,
+      "fuentes": [
+        {
+          "titulo": "Beagle 2: 20 years later",
+          "editor": "National Space Centre",
+          "url": "https://www.spacecentre.co.uk/news/space-now-blog/beagle-2-20-years-later/",
+          "tipo": "prensa",
+          "verificacion": "página abierta (resumen automático de la herramienta)"
+        }
+      ],
+      "compartido_con": [],
+      "datos_extra": null,
+      "orden": 62,
+      "id": "bgl062"
+    }
+  ],
+  "fuentes_no_citadas_en_eventos": [],
+  "indice_fuentes": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Beagle_2",
+      "titulo": "Beagle 2 (Wikipedia)",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl005",
+        "bgl006",
+        "bgl010",
+        "bgl014",
+        "bgl015",
+        "bgl016"
+      ]
+    },
+    {
+      "url": "https://www.eurekalert.org/news-releases/859414",
+      "titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)",
+      "editor": "EurekAlert",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl023",
+        "bgl024",
+        "bgl025",
+        "bgl026",
+        "bgl027"
+      ]
+    },
+    {
+      "url": "https://www.spacecentre.co.uk/news/space-now-blog/beagle-2-20-years-later/",
+      "titulo": "Beagle 2: 20 years later",
+      "editor": "National Space Centre",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl001",
+        "bgl004",
+        "bgl010",
+        "bgl055",
+        "bgl062"
+      ]
+    },
+    {
+      "url": "https://www.uahirise.org/ESP_039308_1915",
+      "titulo": "Finding Beagle 2 (ESP_039308_1915)",
+      "editor": "HiRISE / Universidad de Arizona",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl046",
+        "bgl048",
+        "bgl049",
+        "bgl050",
+        "bgl051"
+      ]
+    },
+    {
+      "url": "https://physicsworld.com/a/lessons-from-beagle/",
+      "titulo": "Lessons from Beagle",
+      "editor": "Physics World",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl004",
+        "bgl007",
+        "bgl039",
+        "bgl044"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "titulo": "UK-led Beagle 2 lander found on Mars",
+      "editor": "GOV.UK / UK Space Agency",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl047",
+        "bgl051",
+        "bgl052",
+        "bgl053"
+      ]
+    },
+    {
+      "url": "https://www.timeshighereducation.com/node/51637",
+      "titulo": "Lessons learnt from Beagle 2 and plans to implement recommendations",
+      "editor": "Times Higher Education (resumen de la ESA/Reino Unido)",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl002",
+        "bgl004",
+        "bgl005",
+        "bgl039"
+      ]
+    },
+    {
+      "url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+      "titulo": "Britain's great Martian adventure",
+      "editor": "Science Museum Group",
+      "tipo": "libro/medio",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl001",
+        "bgl003",
+        "bgl016"
+      ]
+    },
+    {
+      "url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+      "titulo": "Beagle retrospective",
+      "editor": "ESA Mars Express blog",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl021",
+        "bgl051",
+        "bgl052"
+      ]
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5666264",
+      "titulo": "Identification of the Beagle 2 lander on Mars",
+      "editor": "Royal Society Open Science",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl045",
+        "bgl056",
+        "bgl061"
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "titulo": "Beagle 2 Lander on Mars, With Panels Deployed",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl046",
+        "bgl048",
+        "bgl053"
+      ]
+    },
+    {
+      "url": "https://skyandtelescope.org/astronomy-news/listening-for-beagle2scallhome/",
+      "titulo": "Listening for Beagle 2's call home",
+      "editor": "Sky & Telescope",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl024",
+        "bgl026",
+        "bgl027"
+      ]
+    },
+    {
+      "url": "https://spaceflightnow.com/news/n0405/24beagle2report/",
+      "titulo": "Beagle 2 board of inquiry report",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl038",
+        "bgl039",
+        "bgl040"
+      ]
+    },
+    {
+      "url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "titulo": "How we found our lost Mars lander after a decade of searching, and what's next",
+      "editor": "The Conversation (John Bridges, Univ. de Leicester)",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl045",
+        "bgl056",
+        "bgl061"
+      ]
+    },
+    {
+      "url": "https://www.esa.int/Newsroom/Press_Releases/Beagle_2_lessons_learned_and_the_way_forward",
+      "titulo": "Beagle 2 lessons learned and the way forward",
+      "editor": "ESA",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl022",
+        "bgl038",
+        "bgl039"
+      ]
+    },
+    {
+      "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "titulo": "Mars Express en route for the Red Planet",
+      "editor": "ESA",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl018",
+        "bgl019",
+        "bgl020"
+      ]
+    },
+    {
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "titulo": "UK and ESA announce Beagle 2 inquiry",
+      "editor": "ESA",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl032",
+        "bgl035",
+        "bgl036"
+      ]
+    },
+    {
+      "url": "https://www.eurekalert.org/news-releases/899034",
+      "titulo": "Beagle 2 update (comunicado del 26 dic 2003)",
+      "editor": "EurekAlert",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl025",
+        "bgl026",
+        "bgl027"
+      ]
+    },
+    {
+      "url": "https://astrobiology.nasa.gov/nai/articles/2001/11/14/europe-heads-for-mars/index.html",
+      "titulo": "Europe heads for Mars",
+      "editor": "NASA Astrobiology Institute",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl010",
+        "bgl011"
+      ]
+    },
+    {
+      "url": "https://astronomynow.com/2016/11/11/did-a-failed-solar-panel-block-beagle-2s-antenna/",
+      "titulo": "Did a failed solar panel block Beagle 2's antenna?",
+      "editor": "Astronomy Now",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl059",
+        "bgl060"
+      ]
+    },
+    {
+      "url": "https://cordis.europa.eu/article/id/22066-inquiry-finds-combination-of-organisational-and-resource-factors-responsible-for-beagle-2-fail",
+      "titulo": "Inquiry finds combination of organisational and resource factors responsible for Beagle 2 failure",
+      "editor": "CORDIS (Comisión Europea)",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl002",
+        "bgl039"
+      ]
+    },
+    {
+      "url": "https://jpl.nasa.gov/news/lost-2003-mars-lander-found-by-mars-reconnaissance-orbiter",
+      "titulo": "Lost 2003 Mars Lander Found by Mars Reconnaissance Orbiter",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl056",
+        "bgl057"
+      ]
+    },
+    {
+      "url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "titulo": "UK-led Beagle 2 Lander found on Mars",
+      "editor": "Royal Society",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl052",
+        "bgl054"
+      ]
+    },
+    {
+      "url": "https://spaceflightnow.com/mars/marsexpress/040211board.html",
+      "titulo": "Beagle 2 lander failure investigation formally begins",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl022",
+        "bgl035"
+      ]
+    },
+    {
+      "url": "https://thespacereview.com/article/2511/1",
+      "titulo": "Beagle 2 article (The Space Review)",
+      "editor": "The Space Review",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl003",
+        "bgl004"
+      ]
+    },
+    {
+      "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_no_signal_from_Beagle_2_so_far",
+      "titulo": "Mars Express: no signal from Beagle 2 so far",
+      "editor": "ESA",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl021",
+        "bgl031"
+      ]
+    },
+    {
+      "url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "titulo": "UA-led HiRISE finds lost Beagle 2 (ScienceDaily)",
+      "editor": "ScienceDaily",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl050",
+        "bgl053"
+      ]
+    },
+    {
+      "url": "https://api.parliament.uk/historic-hansard/written-statements/2005/feb/03/beagle-2-inquiry",
+      "titulo": "Beagle 2 inquiry (written statement)",
+      "editor": "Hansard, Parlamento del Reino Unido",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl044"
+      ]
+    },
+    {
+      "url": "https://asimov.msss.com/mars_images/moc/2004/08/31/",
+      "titulo": "Mars Global Surveyor MOC images, 31 August 2004",
+      "editor": "Malin Space Science Systems",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl043"
+      ]
+    },
+    {
+      "url": "https://cordis.europa.eu/article/id/22527-report-examines-possible-reasons-for-beagle-2-disappearance",
+      "titulo": "Report examines possible reasons for Beagle 2 disappearance",
+      "editor": "CORDIS (Comisión Europea)",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl042"
+      ]
+    },
+    {
+      "url": "https://flightglobal.com/uks-beagle-2-mars-lander-gets-initial-approval/24030.article",
+      "titulo": "UK's Beagle 2 Mars lander gets initial approval",
+      "editor": "Flight International (Flightglobal)",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl008"
+      ]
+    },
+    {
+      "url": "https://physicsworld.com/?p=32974",
+      "titulo": "Beagle 2 (Physics World)",
+      "editor": "Physics World",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl007"
+      ]
+    },
+    {
+      "url": "https://sci.esa.int/web/mars-express/-/31177-beagle-2-delivery-for-integration-on-mars-express",
+      "titulo": "Beagle 2 delivery for integration on Mars Express",
+      "editor": "ESA",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl013"
+      ]
+    },
+    {
+      "url": "https://sciencedaily.com/releases/2004/01/040127083257.htm",
+      "titulo": "Beagle 2 search status (26 Jan 2004)",
+      "editor": "ScienceDaily",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl034"
+      ]
+    },
+    {
+      "url": "https://sciencenews.org/?p=36222",
+      "titulo": "A Tale of Two Landers: NASA's Spirit phones home, but Europe's Beagle 2 remains mum on Mars",
+      "editor": "Science News",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl033"
+      ]
+    },
+    {
+      "url": "https://spaceflightnow.com/mars/marsexpress/031227tigerteam.html",
+      "titulo": "Beagle 2 tiger team",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl028"
+      ]
+    },
+    {
+      "url": "https://webarchive.library.unt.edu/web/20081204191643/http://en.wikipedia.org/wiki/Beagle_2",
+      "titulo": "Beagle 2 (archivo web de Wikipedia, 2008)",
+      "editor": "Wikipedia / UNT Web Archive",
+      "tipo": "comunitaria",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "bgl032"
+      ]
+    },
+    {
+      "url": "https://www.airport-technology.com/projects/beagle/",
+      "titulo": "Beagle 2 project page (resultado de búsqueda sobre el SUEM)",
+      "editor": "airport-technology.com",
+      "tipo": "prensa",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "bgl018"
+      ]
+    },
+    {
+      "url": "https://www.astronomy.com/space-exploration/3d-models-shed-some-light-on-beagle-2-landers-fate-but-questions-remain/",
+      "titulo": "3D models shed some light on Beagle 2 lander's fate, but questions remain",
+      "editor": "Astronomy.com",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl060"
+      ]
+    },
+    {
+      "url": "https://www.dmu.ac.uk/about-dmu/news/2016/november/dmu-may-have.aspx",
+      "titulo": "Scientists solve mystery of Beagle 2 Mars lander",
+      "editor": "De Montfort University",
+      "tipo": "científica",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "bgl059"
+      ]
+    },
+    {
+      "url": "https://www.dynalook.com/conferences/international-conf-2000/session18-2.pdf",
+      "titulo": "Design Optimization of the Beagle II Mars Lander Airbags",
+      "editor": "Dynalook (conferencia 2000)",
+      "tipo": "científica",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "bgl009"
+      ]
+    },
+    {
+      "url": "https://www.energy-daily.com/reports/Astrium_Develops_New_High_Performance_Parachute_For_Beagle_2.html",
+      "titulo": "Astrium Develops New High Performance Parachute For Beagle 2",
+      "editor": "Energy Daily / Mars Daily",
+      "tipo": "prensa",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "bgl012"
+      ]
+    },
+    {
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_confirms_methane_in_the_Martian_atmosphere",
+      "titulo": "Mars Express confirms methane in the Martian atmosphere",
+      "editor": "ESA",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl037"
+      ]
+    },
+    {
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_leaves_for_Baikonur",
+      "titulo": "Mars Express leaves for Baikonur",
+      "editor": "ESA",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl017"
+      ]
+    },
+    {
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission",
+      "titulo": "The mission (Mars Express)",
+      "editor": "ESA",
+      "tipo": "científica",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl019"
+      ]
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/images/closer-look-at-schiaparelli-impact-site-on-mars",
+      "titulo": "Closer Look at Schiaparelli Impact Site on Mars",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl058"
+      ]
+    },
+    {
+      "url": "https://www.nature.com/news/2004/040524/full/news040524-3.html",
+      "titulo": "Beagle 2 inquiry report news",
+      "editor": "Nature",
+      "tipo": "prensa",
+      "verificacion": "solo extracto de búsqueda",
+      "eventos": [
+        "bgl038"
+      ]
+    },
+    {
+      "url": "https://www.sciencedaily.com/releases/2003/12/031230015737.htm",
+      "titulo": "Beagle 2 communication status, 30 Dec 2003",
+      "editor": "ScienceDaily (ESA)",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl030"
+      ]
+    },
+    {
+      "url": "https://www.skyatnightmagazine.com/news/remembering-colin-pillinger",
+      "titulo": "Remembering Colin Pillinger",
+      "editor": "BBC Sky at Night Magazine",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl047"
+      ]
+    },
+    {
+      "url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "titulo": "Beagle 2 released to hunt for life on Martian surface",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl021"
+      ]
+    },
+    {
+      "url": "https://www.spaceflightnow.com/mars/marsexpress/031229crater.html",
+      "titulo": "Scientists find obstacle at heart of Beagle landing zone",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl029"
+      ]
+    },
+    {
+      "url": "https://www.timeshighereducation.com/node/52089",
+      "titulo": "Pillinger launches plea for Beagle 3",
+      "editor": "Times Higher Education",
+      "tipo": "prensa",
+      "verificacion": "página abierta (resumen automático de la herramienta)",
+      "eventos": [
+        "bgl041"
+      ]
+    }
+  ]
+}
