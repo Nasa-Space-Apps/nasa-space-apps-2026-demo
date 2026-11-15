@@ -2,14 +2,23 @@
 
 Cada archivo .md puede empezar con un bloque de metadatos entre líneas `---` (clave: valor).
 La clave `version` se guarda en metricas.json para comparar corridas entre versiones del prompt.
+
+Los prompts son neutros a la misión: `{mision}` y `{publico}` se reemplazan con el contexto de la misión
+(ver `mision.contexto_prompt`). Sin contexto se usan valores neutros.
 """
 from pathlib import Path
 
 CARPETA = Path(__file__).parent / "prompts"
+PUBLICO_POR_DEFECTO = "estudiantes de 5.º de secundaria (17 años)"
 
 
-def cargar(nombre: str) -> tuple[str, str]:
-    """Devuelve (texto, versión) del prompt `nombre` (sin extensión)."""
+def _rellenar(texto: str, contexto: dict | None) -> str:
+    c = {"mision": "la misión", "publico": PUBLICO_POR_DEFECTO, **(contexto or {})}
+    return texto.replace("{mision}", c["mision"]).replace("{publico}", c["publico"])
+
+
+def cargar(nombre: str, contexto: dict | None = None) -> tuple[str, str]:
+    """Devuelve (texto, versión) del prompt `nombre` (sin extensión), con {mision} y {publico} ya reemplazados."""
     crudo = (CARPETA / f"{nombre}.md").read_text(encoding="utf-8")
     meta: dict[str, str] = {}
     if crudo.startswith("---\n"):
@@ -18,11 +27,11 @@ def cargar(nombre: str) -> tuple[str, str]:
             if ":" in linea:
                 k, v = linea.split(":", 1)
                 meta[k.strip()] = v.strip()
-    return crudo.strip("\n"), meta.get("version", "sin-version")
+    return _rellenar(crudo.strip("\n"), contexto), meta.get("version", "sin-version")
 
 
-def sistema() -> tuple[str, str]:
-    return cargar("investigador")
+def sistema(contexto: dict | None = None) -> tuple[str, str]:
+    return cargar("investigador", contexto)
 
 
 def mensaje_usuario(evento_json: str) -> tuple[str, str]:

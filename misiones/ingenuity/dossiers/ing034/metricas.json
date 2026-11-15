@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.3475449,
+  "turnos": 19,
+  "duracion_s": 172.9,
+  "duracion_api_s": 145.4,
+  "tokens": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 18930,
+    "cache_read_input_tokens": 79298,
+    "output_tokens": 16749,
+    "output_tokens_details": {
+      "thinking_tokens": 4471
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 18930
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1352,
+      "outputTokens": 29,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0014969999999999998,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 12,
+      "outputTokens": 16749,
+      "cacheReadInputTokens": 79298,
+      "cacheCreationInputTokens": 18930,
+      "webSearchRequests": 0,
+      "costUSD": 0.3460479,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 4471,
+      "cacheCreationEphemeral5mInputTokens": 18930,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 10,
+    "buscar_web": 5,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 2
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.29247074999999995,
+    "turnos": 2,
+    "duracion_s": 117.5,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4567,
+        "outputTokens": 29,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004712,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 10117,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5571,
+        "webSearchRequests": 0,
+        "costUSD": 0.28775874999999995,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 7936,
+        "cacheCreationEphemeral5mInputTokens": 5571,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 14,
+      "datos_despues": 12,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 4,
+      "observaciones": "Se eliminaron los datos [7] y [13] porque sus afirmaciones excedían lo respaldado por las citas: [7] atribuía el nombre Wright Brothers Field a Thomas Zurbuchen sin que la cita lo mencionara, y [13] afirmaba 72 vuelos y una fecha de fin de misión ausentes de la cita. El relato se reescribió sin esos datos, manteniendo la referencia a Wright Brothers Field a través de la cita de [2] que sí lo menci"
+    }
+  },
+  "costo_usd_referencia_total": 0.6400156499999999,
+  "costos": {
+    "total_usd": 0.640016,
+    "por_paso": {
+      "investigacion": 0.347545,
+      "revision": 0.292471
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006209,
+        "entrada": 5919,
+        "salida": 58,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.346048,
+        "entrada": 12,
+        "salida": 16749,
+        "cache_leida": 79298,
+        "cache_escrita": 18930,
+        "razonamiento": 4471
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.287759,
+        "entrada": 3,
+        "salida": 10117,
+        "cache_leida": 0,
+        "cache_escrita": 5571,
+        "razonamiento": 7936
+      }
+    }
+  }
+}

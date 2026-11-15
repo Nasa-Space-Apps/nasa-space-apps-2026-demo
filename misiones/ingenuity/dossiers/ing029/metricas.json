@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.2937864,
+  "turnos": 21,
+  "duracion_s": 138.5,
+  "duracion_api_s": 106.8,
+  "tokens": {
+    "input_tokens": 13,
+    "cache_creation_input_tokens": 22030,
+    "cache_read_input_tokens": 88983,
+    "output_tokens": 12191,
+    "output_tokens_details": {
+      "thinking_tokens": 5331
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 22030
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1405,
+      "outputTokens": 34,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001575,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 13,
+      "outputTokens": 12191,
+      "cacheReadInputTokens": 88983,
+      "cacheCreationInputTokens": 22030,
+      "webSearchRequests": 0,
+      "costUSD": 0.2922114,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 5331,
+      "cacheCreationEphemeral5mInputTokens": 22030,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 8,
+    "buscar_papers_ntrs": 2,
+    "leer_pagina": 9,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.21309799999999998,
+    "turnos": 2,
+    "duracion_s": 85.5,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4168,
+        "outputTokens": 38,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004358,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 7056,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5172,
+        "webSearchRequests": 0,
+        "costUSD": 0.20873999999999998,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 4827,
+        "cacheCreationEphemeral5mInputTokens": 5172,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 13,
+      "datos_despues": 13,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 2,
+      "observaciones": "Los cambios principales fueron: (1) eliminar del relato la fecha «12 de abril» para el anuncio de la solución y la cadena de retransmisión JPL-Perseverance-Ingenuity, que no estaban respaldadas por ninguna cita; (2) evitar la fecha «11 de abril» como fecha original del primer vuelo, ya que ninguna fuente la confirma. Se conservaron los 13 datos porque todas las citas respaldan claramente sus afirm"
+    }
+  },
+  "costo_usd_referencia_total": 0.5068844,
+  "costos": {
+    "total_usd": 0.506884,
+    "por_paso": {
+      "investigacion": 0.293786,
+      "revision": 0.213098
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.005933,
+        "entrada": 5573,
+        "salida": 72,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.292211,
+        "entrada": 13,
+        "salida": 12191,
+        "cache_leida": 88983,
+        "cache_escrita": 22030,
+        "razonamiento": 5331
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.20874,
+        "entrada": 3,
+        "salida": 7056,
+        "cache_leida": 0,
+        "cache_escrita": 5172,
+        "razonamiento": 4827
+      }
+    }
+  }
+}

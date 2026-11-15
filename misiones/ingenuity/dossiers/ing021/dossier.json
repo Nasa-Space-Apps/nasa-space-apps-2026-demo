@@ -1,0 +1,158 @@
+{
+  "evento_id": "ing021",
+  "titulo": "Aterrizaje de Perseverance con Ingenuity en el cráter Jezero – Sol 0, 18 feb 2021",
+  "contexto_ampliado": "El 18 de febrero de 2021, la nave Mars 2020 depositó el rover Perseverance en el cráter Jezero, en Marte; ese día marcó el Sol 0 de la misión. Sujeto a la parte inferior del rover viajaba Ingenuity, un pequeño helicóptero experimental. El punto de aterrizaje recibió el nombre de «Octavia E. Butler Landing» y se encuentra cerca del borde occidental del cráter, que mide 45 km de diámetro.\n\nEl aterrizaje aprovechó gran parte de las secuencias de entrada, descenso y aterrizaje (EDL) de la misión MSL (Mars Science Laboratory, el rover Curiosity). En concreto, se utilizó el Skycrane, una plataforma propulsada que se mantuvo suspendida sobre el suelo mientras bajaba lentamente al rover. Como novedad, Mars 2020 incorporó la Navegación Relativa al Terreno (TRN), un sistema de visión artificial con una cámara a bordo que comparaba puntos de referencia del suelo con un mapa almacenado, lo que permitió aterrizar con seguridad en zonas que habrían sido demasiado peligrosas para cualquier misión marciana anterior.\n\nIngenuity viajó protegido por un escudo con forma de caja de guitarra, fabricado en material compuesto de grafito. El 21 de marzo de 2021, Perseverance soltó ese escudo, dejando al helicóptero expuesto por primera vez en la superficie marciana. Y es que volar en Marte supone un reto enorme: la atmósfera tiene apenas el 1 % de la densidad de la terrestre, la gravedad es aproximadamente un tercio de la de la Tierra y las temperaturas nocturnas pueden caer hasta los −90 °C, suficiente para congelar y dañar componentes electrónicos que no estén protegidos.\n\nPara preparar los vuelos, los ingenieros marcaron la posición del aeródromo y la zona de vuelo sobre una imagen tomada por la cámara HiRISE del orbitador Mars Reconnaissance Orbiter. El aeródromo elegido era una parcela de 10 × 10 metros, seleccionada por su planitud y la ausencia de obstáculos; Ingenuity debía quedar justo en el centro de esa parcela antes de su primer despegue.\n\nTras aproximadamente 90 días de operaciones de puesta en marcha y actividades relacionadas con el helicóptero, Perseverance comenzó su primera campaña científica de exploración del suelo de Jezero. Ingenuity, concebido como una demostración tecnológica que no debía realizar más de cinco vuelos de prueba en 30 días, terminó completando 72 vuelos a lo largo de casi tres años, volando más alto y más rápido de lo que se había imaginado.\n\nPor último, un dato curioso: Ingenuity lleva a bordo un pequeño trozo de la tela que cubría una de las alas del Flyer de los hermanos Wright, la aeronave del primer vuelo de aquellos pioneros de la aviación. Ese fragmento conecta de forma simbólica los orígenes del vuelo en la Tierra con la exploración aérea de Marte.",
+  "datos_reales": [
+    {
+      "afirmacion": "Perseverance e Ingenuity aterrizaron en el cráter Jezero el 18 de febrero de 2021 (Sol 0 de la misión Mars 2020).",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20230005643",
+      "cita": "On February 18, 2021, the Perseverance rover and Ingenuity helicopter demonstration landed at Jezero Crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sistema de Navegación Relativa al Terreno (TRN) permitió que Mars 2020 aterrizara en lugares demasiado peligrosos para misiones anteriores, usando una cámara que reconocía accidentes del terreno en tiempo real.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20210021984",
+      "cita": "Mars 2020 also added Terrain Relative Navigation, a machine vision-based system that allowed the spacecraft to navigate using an on-board camera that mapped ground landmarks to an on-board map, allowing the spacecraft to safely land in locations that were too hazardous for any previous Martian mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El descenso final usó el sistema Skycrane, heredado de la misión Curiosity (2012), que mantuvo la nave suspendida mientras bajaba el rover con cables.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20210021984",
+      "cita": "Mars 2020 retained most of the EDL sequences of MSL, including active maneuvering during hypersonic flight to accurately target the landing site and use of the Skycrane descent stage that slowly lowered the rover while hovering above the ground.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo buscó el aeródromo de Ingenuity usando imágenes de la cámara HiRISE del orbitador Mars Reconnaissance Orbiter, sobre las que luego se marcaron el aeródromo y la zona de vuelo.",
+      "fuente_url": "https://science.nasa.gov/resource/map-of-ingenuity-helicopter-flight-zone/",
+      "cita": "Helicopter engineers added the locations for the rover landing site (also known as \"Octavia E. Butler Landing\"), the airfield (the area where the helicopter will take off and return), and the flight zone (the area within which it will fly) on an image taken by the High Resolution Imaging Experiment (HiRISE) camera aboard NASA's Mars Reconnaissance Orbiter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El aeródromo designado para Ingenuity (Wright Brothers Field) era una parcela de 10 × 10 metros elegida por su planitud y falta de obstáculos.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ingenuity-mars-helicopter-prepares-for-first-flight",
+      "cita": "Before Ingenuity takes its first flight on Mars, it must be squarely in the middle of its airfield – a 33-by-33-foot (10-by-10-meter) patch of Martian real estate chosen for its flatness and lack of obstructions.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Volar en Marte es difícil porque su atmósfera tiene solo el 1 % de la densidad de la terrestre y la gravedad es apenas un tercio de la de la Tierra.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ingenuity-mars-helicopter-prepares-for-first-flight",
+      "cita": "Flying in a controlled manner on Mars is far more difficult than flying on Earth. The Red Planet has significant gravity (about one-third that of Earth's) but its atmosphere is just 1% as dense as Earth's at the surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las temperaturas nocturnas en la zona de aterrizaje de Marte pueden descender hasta −90 °C, lo suficiente para congelar y romper componentes electrónicos desprotegidos.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ingenuity-mars-helicopter-prepares-for-first-flight",
+      "cita": "nighttime temperatures can drop as low as minus 130 degrees Fahrenheit (minus 90 degrees Celsius), which can freeze and crack unprotected electrical components.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El escudo de protección (con forma de caja de guitarra, en material compuesto de grafito) fue lanzado por Perseverance el 21 de marzo de 2021, exponiendo por primera vez a Ingenuity en Marte.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ingenuity-mars-helicopter-prepares-for-first-flight",
+      "cita": "On March 21, the rover deployed the guitar case-shaped graphite composite debris shield that protected Ingenuity during landing.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras ~90 días de operaciones de puesta en marcha y actividades del helicóptero, Perseverance inició su primera campaña científica de exploración del suelo del cráter Jezero.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20220000501",
+      "cita": "The Perseverance rover embarked on its first science campaign after landing in Jezero crater on February 18, 2021 and completing ~90 days of commissioning and Ingenuity helicopter activities.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El 19 de abril de 2021, Ingenuity realizó el primer vuelo motorizado y controlado en otro planeta; diseñado para solo 5 vuelos en 30 días, completó 72 vuelos en casi tres años.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "cita": "Designed to be a technology demonstration that would make no more than five test flights in 30 days, the helicopter eventually completed 72 flights across nearly three years, soaring higher and faster than previously imagined.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity lleva a bordo un pequeño trozo de la tela del ala del Flyer de los hermanos Wright, el primer avión motorizado de la historia.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ingenuity-mars-helicopter-prepares-for-first-flight",
+      "cita": "A small amount of the material that covered one of the wings of the Wright brothers' aircraft, known as the Flyer, during the first flight is now aboard Ingenuity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Mars 2020 Perseverance Entry Descent and Landing Simulation Statistical Analysis and Operations",
+      "url": "https://ntrs.nasa.gov/citations/20230005643",
+      "editor": "NASA NTRS / Langley Research Center",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Mars 2020 – Landing a 1-ton rover and helicopter in an ancient Martian Lake",
+      "url": "https://ntrs.nasa.gov/citations/20210021984",
+      "editor": "NASA NTRS / Langley Research Center",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Exploring the Jezero Crater Floor: Overview of Results from the Mars 2020 Perseverance Rover's First Science Campaign",
+      "url": "https://ntrs.nasa.gov/citations/20220000501",
+      "editor": "NASA NTRS",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Ingenuity Mars Helicopter – NASA Science",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA Ingenuity Mars Helicopter Prepares for First Flight",
+      "url": "https://www.nasa.gov/news-release/nasa-ingenuity-mars-helicopter-prepares-for-first-flight",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Map of Ingenuity Helicopter Flight Zone (HiRISE image with airfield marked)",
+      "url": "https://science.nasa.gov/resource/map-of-ingenuity-helicopter-flight-zone/",
+      "editor": "NASA/JPL-Caltech/University of Arizona",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Ingenuity (helicopter) – Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ingenuity_(helicopter)",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "La afirmación del dato [10] incluye la fecha «19 de abril de 2021» y la expresión «primer vuelo motorizado y controlado en otro planeta», pero la cita extraída de science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/ no contiene ni esa fecha ni esa caracterización; solo menciona los 5 vuelos de diseño y los 72 completados.",
+    "La afirmación del dato [3] dice que el rover fue bajado «con cables», pero la cita de ntrs.nasa.gov/citations/20210021984 solo indica «slowly lowered the rover while hovering above the ground», sin mencionar cables.",
+    "La afirmación del dato [5] nombra el aeródromo «Wright Brothers Field», pero la cita de nasa.gov/news-release/nasa-ingenuity-mars-helicopter-prepares-for-first-flight no incluye ese nombre en el fragmento citado."
+  ],
+  "huecos": [
+    "No se encontró documentación oficial sobre el momento exacto (en horas desde el aterrizaje) en que el equipo de Ingenuity comenzó la búsqueda activa del aeródromo el Sol 0.",
+    "No se halló una fuente oficial que describa paso a paso cómo se usaron las imágenes del propio rover (en contraposición a las imágenes HiRISE del orbitador) para confirmar o ajustar la selección del aeródromo.",
+    "No se verificaron las coordenadas exactas del sitio de aterrizaje (latitud ~18° N, longitud ~77° E) mediante una página leída directamente; ese dato proviene solo de un fragmento de búsqueda sin verificar con leer_pagina.",
+    "No se encontró información detallada sobre los criterios técnicos completos que el equipo aplicó para descartar zonas y seleccionar el aeródromo definitivo (p. ej., pendiente máxima admisible o tamaño mínimo de obstáculos).",
+    "El dato [4] confirma que se marcaron ubicaciones sobre imágenes HiRISE, pero ningún dato respalda que el equipo «empezó a buscar» activamente el aeródromo con esas imágenes a las pocas horas del aterrizaje, tal como afirma el evento original; marcar posiciones conocidas y realizar una búsqueda activa son procesos distintos.",
+    "Ninguna cita del dossier confirma la fecha concreta del primer vuelo de Ingenuity (19 de abril de 2021), que el borrador incluye en su relato apoyándose en la afirmación del dato [10] pero no en su cita."
+  ],
+  "ideas_visuales": [
+    "El sistema Skycrane suspendido sobre la superficie del cráter Jezero mientras baja lentamente al rover Perseverance, con Ingenuity visible en la parte inferior (datos [0], [3]).",
+    "Imagen satelital HiRISE del entorno del aterrizaje con las marcas superpuestas del aeródromo y la zona de vuelo de Ingenuity (dato [4]).",
+    "Perseverance soltando el escudo protector con forma de caja de guitarra, dejando a Ingenuity expuesto bajo el rover por primera vez en Marte (dato [8]).",
+    "La parcela del aeródromo de 10 × 10 metros: terreno plano, sin rocas grandes, con Ingenuity en el centro listo para despegar (dato [5]).",
+    "Primer plano del fragmento de tela del Flyer de los hermanos Wright montado en el interior de Ingenuity (dato [11]).",
+    "Vista panorámica orbital del cráter Jezero (45 km de diámetro) con el punto «Octavia E. Butler Landing» señalado cerca del borde occidental (dato [1])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El sitio exacto de aterrizaje recibió el nombre de «Octavia E. Butler Landing», cerca del borde occidental del cráter Jezero, de 45 km de diámetro.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Ingenuity_(helicopter)",
+      "cita": "Ingenuity was delivered to Mars on 18 February 2021, attached to the underside of the Perseverance rover, which landed at the Octavia E. Butler Landing site near the western rim of the 45 km-wide (28 mi) Jezero crater.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

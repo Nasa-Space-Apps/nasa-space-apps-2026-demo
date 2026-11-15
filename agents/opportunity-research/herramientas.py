@@ -4,6 +4,7 @@ import hashlib
 import ipaddress
 import json
 import os
+import time
 import socket
 from pathlib import Path
 from urllib.parse import urlparse
@@ -26,9 +27,25 @@ except Exception:  # noqa: BLE001
 
 def guardar_corpus(url: str, texto: str):
     """Guarda el texto visto por el agente; luego se usa para comprobar las citas."""
-    if url and texto:
-        CORPUS[url] = texto[:60000]
-        CORPUS_F.write_text(json.dumps(CORPUS, ensure_ascii=False), encoding="utf-8")
+    if not (url and texto):
+        return
+    CORPUS[url] = texto[:60000]
+    # Varios procesos pueden correr a la vez (lotes en paralelo): se mezcla con lo que ya hay en disco y se reemplaza de forma
+    # atómica para no pisar el trabajo de los demás. La verificación de citas usa la copia en memoria de cada proceso.
+    try:
+        actual = json.loads(CORPUS_F.read_text(encoding="utf-8")) if CORPUS_F.exists() else {}
+    except Exception:  # noqa: BLE001
+        actual = {}
+    actual.update(CORPUS)
+    tmp = CORPUS_F.with_name(f"corpus.{os.getpid()}.tmp")
+    tmp.write_text(json.dumps(actual, ensure_ascii=False), encoding="utf-8")
+    for _ in range(5):
+        try:
+            os.replace(tmp, CORPUS_F)
+            return
+        except PermissionError:  # otro proceso lo tiene abierto un instante
+            time.sleep(0.2)
+    tmp.unlink(missing_ok=True)
 
 
 def _ok(obj) -> dict:

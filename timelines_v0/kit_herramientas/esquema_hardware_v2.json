@@ -1,0 +1,326 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "$id": "hardware_mision_v2",
+ "title": "Hardware de una misión (esquema 2.0)",
+ "type": "object",
+ "required": [
+  "esquema_version",
+  "mision",
+  "titulo",
+  "componentes",
+  "descubrimientos_por_componente",
+  "discrepancias",
+  "huecos_y_pendientes",
+  "indice_fuentes",
+  "resumen"
+ ],
+ "properties": {
+  "esquema_version": {
+   "const": "2.0"
+  },
+  "mision": {
+   "type": "object",
+   "required": [
+    "id",
+    "nombre"
+   ]
+  },
+  "componentes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "nombre",
+     "categoria",
+     "sistema_padre",
+     "descripcion",
+     "especificaciones",
+     "que_permitio_descubrir",
+     "historial_operativo",
+     "datos_clave",
+     "discutido",
+     "fuentes",
+     "subcomponentes",
+     "eventos_relacionados"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]{1,9}_hw_[a-z0-9_]+$"
+     },
+     "nombre": {
+      "type": "string"
+     },
+     "categoria": {
+      "enum": [
+       "estructura",
+       "movilidad",
+       "energia",
+       "computo_y_datos",
+       "comunicaciones",
+       "termico",
+       "brazo_robotico",
+       "instrumento_ciencia",
+       "camara_ingenieria",
+       "calibracion",
+       "navegacion_y_sensores",
+       "lanzador",
+       "crucero",
+       "entrada_descenso_aterrizaje",
+       "prueba_en_tierra",
+       "propulsion",
+       "actitud_y_control",
+       "vehiculo_tripulado",
+       "etapa_de_descenso",
+       "etapa_de_ascenso",
+       "vehiculo_lunar",
+       "objeto_dejado_atras"
+      ]
+     },
+     "sistema_padre": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "descripcion": {
+      "type": "string"
+     },
+     "ubicacion": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "proveedor": {
+      "type": [
+       "object",
+       "null"
+      ]
+     },
+     "cantidad": {
+      "type": [
+       "integer",
+       "string",
+       "null"
+      ]
+     },
+     "especificaciones": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "parametro",
+        "valor",
+        "fuentes"
+       ],
+       "properties": {
+        "parametro": {
+         "type": "string"
+        },
+        "valor": {
+         "type": "string"
+        },
+        "fuentes": {
+         "type": "array",
+         "minItems": 1,
+         "items": {
+          "$ref": "#/$defs/fuente"
+         }
+        }
+       }
+      }
+     },
+     "que_permitio_descubrir": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "titulo",
+        "detalle",
+        "fuentes"
+       ],
+       "properties": {
+        "titulo": {
+         "type": "string"
+        },
+        "detalle": {
+         "type": "string"
+        },
+        "fecha_aprox": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "fuentes": {
+         "type": "array",
+         "minItems": 1,
+         "items": {
+          "$ref": "#/$defs/fuente"
+         }
+        }
+       }
+      }
+     },
+     "historial_operativo": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "fecha",
+        "tipo",
+        "evento",
+        "fuentes"
+       ],
+       "properties": {
+        "fecha": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "tipo": {
+         "enum": [
+          "falla",
+          "degradacion",
+          "solucion",
+          "calibracion",
+          "hito"
+         ]
+        },
+        "evento": {
+         "type": "string"
+        },
+        "sol": {
+         "type": [
+          "integer",
+          "null"
+         ]
+        },
+        "fuentes": {
+         "type": "array",
+         "minItems": 1,
+         "items": {
+          "$ref": "#/$defs/fuente"
+         }
+        }
+       }
+      }
+     },
+     "datos_clave": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "discutido": {
+      "type": "boolean"
+     },
+     "nota": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "fuentes": {
+      "type": "array",
+      "items": {
+       "$ref": "#/$defs/fuente"
+      }
+     },
+     "subcomponentes": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "eventos_relacionados": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "descubrimientos_por_componente": {
+   "type": "array"
+  },
+  "discrepancias": {
+   "type": "array"
+  },
+  "huecos_y_pendientes": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "indice_fuentes": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "url",
+     "titulo",
+     "tipo",
+     "verificacion",
+     "componentes"
+    ]
+   }
+  },
+  "resumen": {
+   "type": "object"
+  }
+ },
+ "$defs": {
+  "fuente": {
+   "type": "object",
+   "required": [
+    "titulo",
+    "url",
+    "tipo",
+    "verificacion"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "titulo": {
+     "type": "string",
+     "minLength": 1
+    },
+    "editor": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "url": {
+     "type": "string",
+     "pattern": "^https?://\\S+$"
+    },
+    "tipo": {
+     "enum": [
+      "oficial NASA/JPL",
+      "científica",
+      "prensa",
+      "comunitaria",
+      "libro/medio",
+      "video/audio"
+     ]
+    },
+    "verificacion": {
+     "enum": [
+      "página abierta completa",
+      "página abierta (resumen automático de la herramienta)",
+      "solo extracto de búsqueda"
+     ]
+    },
+    "nota": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

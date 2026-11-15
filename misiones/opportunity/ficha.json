@@ -1,0 +1,14 @@
+{
+  "id": "opportunity",
+  "nombre": "Opportunity",
+  "tipo": "rover",
+  "cuerpo": "Marte",
+  "agencia": "NASA/JPL",
+  "prefijo_eventos": "opp",
+  "publico": "estudiantes de 5.º de secundaria (17 años)",
+  "sol": {"cero": "2004-01-25", "offset": 1},
+  "legado": "Trabajada antes del orden por misión. Su historia sigue en story/data porque la consume el juego (story/build_juego2.py).",
+  "rutas": {
+    "historia": "story/data"
+  }
+}

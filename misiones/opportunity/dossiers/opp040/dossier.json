@@ -1,0 +1,168 @@
+{
+  "evento_id": "opp040",
+  "titulo": "Sale del cráter Victoria — Sol 1634 (28 de agosto de 2008)",
+  "contexto_ampliado": "Entre el 24 y el 28 de agosto de 2008 (soles 1630 a 1634 de la misión), el rover Opportunity completó su salida del cráter Victoria a través de la sección del borde conocida como «Duck Bay». La última conducción fue de apenas 6,8 metros (22 pies), suficientes para que el rover pisara de nuevo terreno plano. Con su cámara de navegación, Opportunity capturó una imagen mirando hacia atrás, donde se veían sus propias huellas perdiéndose dentro del cráter de 800 metros de diámetro.\n\nOpportunity había puesto sus ruedas por primera vez en el interior de Victoria el sol 1291 (11 de septiembre de 2007). Ese día solo avanzó un trecho corto y retrocedió para comprobar que el suelo era lo bastante firme como para confiar en ese punto como ruta de salida futura. Dos soles después entró de nuevo para iniciar la investigación extendida de las capas de roca expuestas en el interior del cráter. Durante su estancia, el rover se acercó a la base de la promontoria «Cape Verde», un acantilado de 6 metros de altura que forma parte del borde, y usó su cámara panorámica para examinar en detalle la estratificación de esas paredes rocosas. Justo antes de abandonar Victoria, los ingenieros detectaron un pico de corriente en las ruedas, similar al que había precedido la avería de la rueda delantera derecha de Spirit, el rover gemelo de Opportunity: una señal de alarma que reforzó la decisión de salir a tiempo.\n\nCon Victoria atrás, el siguiente gran objetivo era el cráter Endeavour, de 22 kilómetros de diámetro, situado a unos 12 kilómetros al sureste. Los científicos tenían especial interés en ese cráter porque observaciones orbitales habían revelado filosilicatos (minerales de arcilla) en su borde, un tipo de roca considerado más prometedor para la búsqueda de condiciones favorables a la vida que los materiales analizados en Victoria. Los conductores del rover estimaban que la travesía podría completarse en unos dos años.\n\nSin embargo, en mayo de 2010 (sol 2231) se descubrió que la ruta directa atravesaba campos de dunas potencialmente peligrosas, por lo que se trazó un nuevo camino que extendía la distancia entre ambos cráteres a 19 kilómetros. En la práctica, el viaje completo duró casi tres años y cubrió unos 21 kilómetros, hasta que Opportunity alcanzó Endeavour el 9 de agosto de 2011.\n\nDurante esa larga travesía, el rover hizo descubrimientos notables. En el sol 2059 (10 de noviembre de 2009) llegó a una roca oscura que destacaba tanto en la llanura que el equipo la había bautizado informalmente «Sore Thumb» (pulgar adolorido). Siguiendo la convención de dar nombres de islas a las rocas aisladas encontradas en la árida planicie entre Victoria y Endeavour, recibió el nombre oficial de «Marquette Island». Opportunity la estudió de forma prolongada hasta el sol 2121 (12 de enero de 2010), empleando entre otras herramientas el cepillo del instrumento RAT para retirar el polvo de una zona circular bautizada «Peck Bay».\n\nAl principio, la investigación sugería que Marquette Island podría ser un meteorito pétreo. Sin embargo, la conclusión final fue que se trataba de eyecta lanzada desde el interior profundo de la corteza marciana, no de un meteorito. Steve Squyres, investigador principal de los rovers, la describió como «diferente en composición y carácter a cualquier roca marciana conocida o meteorito de Marte», y señaló que parecía haberse originado en un lugar muy alejado del sitio de aterrizaje de Opportunity.",
+  "datos_reales": [
+    {
+      "afirmacion": "Opportunity completó la salida del cráter Victoria durante el sol 1634 (28 de agosto de 2008), tras una conducción final de 6,8 metros.",
+      "fuente_url": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+      "cita": "The rover's navigation camera captured this view back into the crater just after finishing a 6.8-meter (22-foot) drive that brought Opportunity out onto level ground during the mission's 1,634th Martian day, or sol (Aug. 28, 2008).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Victoria Crater tiene 800 metros de diámetro (media milla).",
+      "fuente_url": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+      "cita": "NASA's Mars Exploration Rover Opportunity climbed out of 'Victoria Crater' following the tracks it had made when it descended into the 800-meter-diameter (half-mile-diameter) bowl nearly a year earlier.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity puso sus ruedas por primera vez en el interior de Victoria el sol 1291 (11 de septiembre de 2007), primero como prueba de acceso y dos soles después para la investigación extendida.",
+      "fuente_url": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+      "cita": "The rover laid down the first tracks at this entry and exit point during its 1,291st sol (Sept. 11, 2007), after about a year of exploring around the outside of Victoria Crater for the best access route to the interior. On that sol, Opportunity drove a short distance into the crater and then backed out to check that the footing was good enough to trust this point as an exit route when the work in the crater was finished. Two sols later, Opportunity drove in again for its extended investigation of the rock layers exposed inside the crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Dentro del cráter, Opportunity se acercó a la base de la promontoria «Cape Verde», un acantilado de 6 metros de altura, y usó su cámara panorámica para examinar en detalle la estratificación de las paredes.",
+      "fuente_url": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+      "cita": "Opportunity drove close to the base of the 'Cape Verde' promontory that forms part of the crater rim and appears in the upper center of this image. From that perspective, the rover used its panoramic camera to examine details of layering in the 6-meter-tall (20-foot-tall) cliff.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity llegó al cráter Endeavour el 9 de agosto de 2011, tras un viaje de casi tres años y unos 21 km (13 millas).",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "cita": "after a journey of nearly three years and about 13 miles (21 kilometers), Opportunity arrived at Endeavour crater on Aug. 9, 2011.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Steve Squyres, investigador principal de los rovers, describió Marquette Island como diferente en composición y carácter a cualquier roca marciana conocida o meteorito de Marte, y señaló que parecía haberse originado en el interior profundo de la corteza.",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "cita": "On the way there, the rover found the so-called Marquette Island rock, 'different in composition and character from any known rock on Mars or meteorite from Mars,' according to Steve Squyres, the principal investigator for the rovers. The rock appeared to have originated deep in the Martian crust and someplace far away from the landing site, unlike almost all the rocks previously studied by Opportunity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La investigación inicial de Marquette Island sugería que podría ser un meteorito pétreo; el equipo de rovers usó el cepillo del instrumento RAT para retirar polvo de una zona circular de la roca denominada «Peck Bay».",
+      "fuente_url": "https://science.nasa.gov/photojournal/examining-marquette-island/",
+      "cita": "NASA's Mars Exploration Rover Opportunity used the wire brush of its rock abrasion tool during the rover's 2,070th Martian day, or sol (Nov. 19, 2009), to scour dust from a circular target area on a rock called 'Marquette Island.' The brushed target area, called 'Peck Bay,' is visible as a dark circle about 5 centimeters (2 inches) in diameter just below the tool turret... Opportunity is performing an extensive analysis of this rock, which initial investigation suggests may be a stony meteorite.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La roca Marquette Island fue llamada primero informalmente «Sore Thumb» (pulgar adolorido) por destacar en la distancia, y luego recibió nombre de isla siguiendo la convención del equipo para las rocas aisladas en la llanura entre Victoria y Endeavour.",
+      "fuente_url": "https://www.nasa.gov/image-article/approaching-marquette-island/",
+      "cita": "The dark-toned rock stood out so prominently in more distant views on earlier sols that the rover team referred to it as 'Sore Thumb' before assigning the Marquette name in accord with an informal naming convention of choosing island names for the isolated rocks that the rover is finding as it crosses a relatively barren plain on its long trek from Victoria Crater toward Endeavour Crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Looking Back at Arena of Exploration (NASA Science Photojournal PIA11397)",
+      "url": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+      "editor": "NASA/JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Exploration Rover Opportunity — In Depth (NASA Science)",
+      "url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Examining 'Marquette Island' (NASA Science Photojournal PIA12475)",
+      "url": "https://science.nasa.gov/photojournal/examining-marquette-island/",
+      "editor": "NASA/JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Approaching Marquette Island (NASA Image Article)",
+      "url": "https://www.nasa.gov/image-article/approaching-marquette-island/",
+      "editor": "NASA/JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Timeline of Opportunity (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Opportunity_mission_timeline",
+      "editor": "Wikipedia contributors",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "La distancia desde Victoria hasta Endeavour se menciona de formas distintas: Wikipedia indica 12 km en línea recta (https://en.wikipedia.org/wiki/Opportunity_mission_timeline), el mismo Wikipedia señala que en mayo de 2010 la ruta se extendió a 19 km por dunas (https://en.wikipedia.org/wiki/Opportunity_mission_timeline), y NASA Science indica que el viaje real fue de ~21 km (13 millas) (https://science.nasa.gov/mission/mer-opportunity/). Las tres cifras son compatibles —línea recta, ruta planificada con rodeo y distancia total realmente conducida—, pero el texto del evento usa '~21 km' sin aclarar que es la distancia conducida, no la rectilínea.",
+    "Respecto a la naturaleza de Marquette Island: el Photojournal de NASA (sol 2070) describe que la investigación inicial 'sugiere que podría ser un meteorito pétreo' (https://science.nasa.gov/photojournal/examining-marquette-island/), mientras que Wikipedia indica que la conclusión final fue que era eyecta del interior profundo de Marte, no un meteorito (https://en.wikipedia.org/wiki/Opportunity_mission_timeline). No son afirmaciones contradictorias si se leen en secuencia temporal, pero expresan resultados distintos y proceden de momentos diferentes de la investigación.",
+    "El borrador narrativo menciona el meteorito «Block Island» (julio de 2009) como parada durante la travesía, pero ninguno de los 15 datos recopilados respalda esa afirmación; no hay cita verificada al respecto.",
+    "El borrador indica que la distancia total acumulada desde el aterrizaje hasta Endeavour 'superaba los 32 kilómetros' y era 'decenas de veces la distancia de la misión nominal de 90 soles', pero ningún dato del dossier respalda esas cifras concretas.",
+    "El borrador afirma que Opportunity analizó las capas de roca dentro de Victoria 'con los instrumentos del brazo robótico', pero el dato [3] solo menciona el uso de la cámara panorámica (instrumento del mástil, no del brazo); no hay fuente verificada que confirme el uso del brazo robótico dentro de Victoria en este dossier."
+  ],
+  "huecos": [
+    "No se encontró información verificada sobre los hallazgos científicos específicos (composición química detallada) obtenidos dentro del cráter Victoria durante los casi 341 soles de exploración.",
+    "No se pudo confirmar con fuentes leídas el número exacto de soles que Opportunity pasó dentro de Victoria antes de salir (el rango 1293–1634 se infiere de los datos disponibles, pero no aparece una cifra redonda verificada en ninguna página leída).",
+    "No se encontraron datos verificados sobre los soles 1630–1633 (las jornadas de conducción previas a la salida final del sol 1634): qué distancia se recorrió cada día ni qué incidencias hubo.",
+    "No se obtuvo el análisis científico detallado y publicado sobre la composición mineralógica de Marquette Island más allá de la descripción cualitativa de Squyres y la clasificación como eyecta profunda.",
+    "El evento original no lo menciona, pero el borrador narrativo incluye la parada en el meteorito «Block Island» (julio 2009) sin dato de respaldo; si se desea incluirla en el relato final, hace falta una fuente verificada.",
+    "No se dispone de información sobre qué ocurrió inmediatamente después de la salida de Victoria (soles 1635 en adelante): cuándo se fijó formalmente Endeavour como destino y cuándo comenzó la marcha sostenida hacia el sureste."
+  ],
+  "ideas_visuales": [
+    "Vista desde la cámara de navegación de Opportunity mirando hacia atrás dentro del cráter Victoria tras la salida: las huellas del rover se pierden cuesta abajo en el cuenco de 800 metros de diámetro (datos [0] y [1]).",
+    "El acantilado de 6 metros de Cape Verde visto desde la base, con las capas de roca claramente estratificadas fotografiadas por la cámara panorámica (dato [3]).",
+    "Mapa esquemático de la travesía Victoria → Endeavour: línea recta de 12 km, ruta replanificada de 19 km rodeando dunas, y distancia real recorrida de ~21 km (datos [6], [9] y [10]).",
+    "La roca oscura Marquette Island destacando como un 'pulgar adolorido' sobre la llanura pálida y árida entre ambos cráteres (dato [14]).",
+    "Primer plano de la marca circular «Peck Bay» dejada por el cepillo del RAT sobre Marquette Island, mostrando la superficie limpia de polvo (dato [13])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Opportunity salió por el punto llamado «Duck Bay» durante los soles 1630–1634 (24–28 de agosto de 2008).",
+      "fuente_url": "https://en.wikipedia.org/wiki/Opportunity_mission_timeline",
+      "cita": "exited Victoria crater's Duck Bay on August 24–28, 2008 (sol 1630–1634).",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Antes de salir, el rover experimentó un pico de corriente similar al que precedió la avería de la rueda delantera derecha de su gemelo Spirit.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Opportunity_mission_timeline",
+      "cita": "Before exiting the crater the rover experienced a current spike similar to the one that preceded the malfunction of the right front wheel of its twin Spirit.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El cráter Endeavour tiene 22 km de diámetro y estaba a 12 km al sureste de Victoria.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Opportunity_mission_timeline",
+      "cita": "Endeavour is 22 km (14 mi) in diameter and is 12 kilometers (7.5 mi) south-east of Victoria.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Los conductores del rover estimaban que la distancia hasta Endeavour podría recorrerse en unos dos años.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Opportunity_mission_timeline",
+      "cita": "Rover drivers estimated that this distance could be traversed in about two years.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Se detectaron filosilicatos (arcillas) en el borde del cráter Endeavour desde órbita, una roca todavía más prometedora para la búsqueda de condiciones favorables a la vida que las examinadas en Victoria.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Opportunity_mission_timeline",
+      "cita": "The discovery of phyllosilicate clay-bearing rock on the Endeavour crater rim promised exposure to a rock-type that is even more hospitable to life than types previously analyzed.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "En mayo de 2010 (sol 2231) se trazó una nueva ruta que extendía la distancia total entre Victoria y Endeavour a 19 km, para evitar campos de dunas peligrosas.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Opportunity_mission_timeline",
+      "cita": "On sol 2231 (May 5, 2010), due to potentially hazardous dune fields along the direct path between Victoria and Endeavour, a new route was charted that extended the distance to travel between the two craters to 19 kilometers (12 mi).",
+      "confianza": "media",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El rover alcanzó la roca «Marquette Island» en el sol 2059 (10 de noviembre de 2009) y la estudió hasta el sol 2121 (12 de enero de 2010).",
+      "fuente_url": "https://en.wikipedia.org/wiki/Opportunity_mission_timeline",
+      "cita": "On sol 2059 (November 10, 2009) the rover reached a rock target of interest, named 'Marquette Island'. Prolonged study until sol 2121 January 12, 2010 ensued, as it was uncertain what type of rock this represented, but the eventual conclusion was that it was rock ejecta from deep within the surface of Mars rather than a meteorite.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    }
+  ]
+}

@@ -1,24 +1,30 @@
-"""Procesa varios eventos uno tras otro con agente.py, con límites de seguridad.
+"""Procesa varios eventos con agente.py, en serie o en paralelo, con límites de seguridad.
 
 Uso:
-  python procesar_lote.py                      # todos los pendientes de la historia
-  python procesar_lote.py --ids opp028,opp030  # solo esos
-Opciones: --archivo <json>, --tope-usd 12 (se detiene al superar ese costo de referencia acumulado en el lote),
-          --max-fallos-seguidos 3, --minutos-por-evento 20.
+  python procesar_lote.py                                  # todos los pendientes de la historia, uno tras otro
+  python procesar_lote.py --ids opp028,opp030 --paralelo 3 # esos, de 3 en 3
+  python procesar_lote.py --archivo ../../story/data/linea_de_tiempo_opportunity.json --ids opp004,opp009
+Opciones: --paralelo N (por defecto 1; se recomienda 3), --tope-usd 12 (no inicia más eventos al superar ese costo de
+          referencia acumulado), --max-fallos-seguidos 3, --minutos-por-evento 20.
 Cada evento corre en su propio proceso; los ya procesados se saltan solos (no gastan nada). Si se interrumpe, se puede
 volver a lanzar: continúa con los que falten. El registro completo queda en lotes/lote_<fecha>.log.
+Con varios a la vez conviene no pasar de 3: Bedrock y DuckDuckGo pueden limitar la velocidad.
 """
 import argparse
 import json
 import os
 import subprocess
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 
+import mision as misiones
+
 BASE = Path(__file__).parent
-SALIDA = BASE / "salida"
+SALIDA = BASE / "salida"  # solo para el uso heredado sin --mision
 ARCHIVO = BASE / ".." / ".." / "story" / "data" / "historia_opportunity.json"
 
 
@@ -40,63 +46,99 @@ def costo_evento(id_: str, salida: Path = SALIDA) -> float:
         return 0.0
 
 
+def procesar(cola, correr, costo_de, paralelo=1, tope=12.0, max_fallos=3, log=print):
+    """Corre `cola` con hasta `paralelo` eventos a la vez. `correr(ev) -> (codigo, salida)`; código 0 ok, 2 ya procesado, otro fallo.
+    No inicia eventos nuevos si el gasto acumulado llegó al tope o hubo `max_fallos` fallos seguidos."""
+    lock = threading.Lock()
+    est = {"gasto": 0.0, "seguidos": 0, "parar": None}
+    res = {"ok": [], "fallidos": [], "saltados": [], "omitidos": []}
+
+    def tarea(ev):
+        with lock:
+            if est["parar"] or est["gasto"] >= tope:
+                if not est["parar"]:
+                    est["parar"] = f"tope alcanzado ({est['gasto']:.2f} >= {tope} USD)"
+                res["omitidos"].append(ev)
+                return
+        t1 = time.time()
+        log(f"-> {ev} empieza")
+        codigo, salida = correr(ev)
+        c = costo_de(ev) if codigo == 0 else 0.0
+        with lock:
+            est["gasto"] += c
+            if codigo == 0:
+                res["ok"].append((ev, c))
+                est["seguidos"] = 0
+                log(f"   {ev} OK en {time.time()-t1:.0f}s · {c:.4f} USD · acumulado {est['gasto']:.4f} USD")
+            elif codigo == 2:
+                res["saltados"].append(ev)
+                log(f"   {ev} ya procesado, se salta")
+            else:
+                res["fallidos"].append(ev)
+                est["seguidos"] += 1
+                ultimas = [l for l in salida.strip().splitlines() if l.strip()][-2:]
+                log(f"   {ev} FALLÓ (código {codigo}): {' | '.join(ultimas)[:300]}")
+                if est["seguidos"] >= max_fallos:
+                    est["parar"] = f"{est['seguidos']} fallos seguidos"
+
+    with ThreadPoolExecutor(max_workers=max(1, paralelo)) as ex:
+        list(ex.map(tarea, cola))
+    res["gasto"], res["motivo_parada"] = est["gasto"], est["parar"]
+    return res
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--archivo", default=str(ARCHIVO))
+    ap.add_argument("--mision", help="id de la misión: lee timelines_v0/linea_de_tiempo_<id>.json y guarda en misiones/<id>/dossiers y lotes")
+    ap.add_argument("--archivo", help="JSON con los eventos (por defecto, el de la misión; sin misión, el de la historia de Opportunity)")
     ap.add_argument("--ids", help="lista separada por comas; por defecto, todos los pendientes del archivo")
+    ap.add_argument("--paralelo", type=int, default=1)
     ap.add_argument("--tope-usd", type=float, default=12.0)
     ap.add_argument("--max-fallos-seguidos", type=int, default=3)
     ap.add_argument("--minutos-por-evento", type=int, default=20)
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
-    todos = a.ids.split(",") if a.ids else ids_del_archivo(Path(a.archivo))
-    cola = pendientes([i.strip() for i in todos if i.strip()])
-    (BASE / "lotes").mkdir(exist_ok=True)
-    log = BASE / "lotes" / f"lote_{datetime.now():%Y%m%d-%H%M%S}.log"
-    print(f"Lote: {len(cola)} evento(s) pendiente(s): {', '.join(cola) or 'ninguno'}\nRegistro: {log}\nTope: {a.tope_usd} USD de referencia", flush=True)
+    if a.mision:
+        r_ = misiones.crear_carpetas(a.mision)
+        archivo, salida, lotes = a.archivo or str(r_["base"]), r_["dossiers"], r_["lotes"]
+    else:
+        archivo, salida, lotes = a.archivo or str(ARCHIVO), SALIDA, BASE / "lotes"
+    if not Path(archivo).exists():
+        sys.exit(f"No existe {archivo}. Si la misión no tiene línea de tiempo base, hay que construirla primero (Fase 1).")
+    a.archivo = archivo
+    todos = [i.strip() for i in (a.ids.split(",") if a.ids else ids_del_archivo(Path(archivo))) if i.strip()]
+    cola = pendientes(todos, salida)
+    lotes.mkdir(parents=True, exist_ok=True)
+    log_f = lotes / f"lote_{datetime.now():%Y%m%d-%H%M%S}.log"
+    escribir = threading.Lock()
+    print(f"Lote: {len(cola)} evento(s) pendiente(s): {', '.join(cola) or 'ninguno'}\nParalelo: {a.paralelo} · tope: {a.tope_usd} USD de referencia\nRegistro: {log_f}", flush=True)
 
     env = {**os.environ, "PYTHONIOENCODING": "utf-8", "CRAWL4AI_NO_CLOUD_NOTICE": "1"}
-    ok, fallidos, gasto, seguidos, t0 = [], [], 0.0, 0, time.time()
-    for n, ev in enumerate(cola, 1):
-        if gasto >= a.tope_usd:
-            print(f"\nTOPE alcanzado ({gasto:.2f} >= {a.tope_usd} USD). Se detiene antes de {ev}.", flush=True)
-            break
-        t1 = time.time()
-        print(f"\n[{n}/{len(cola)}] {ev} ...", flush=True)
+
+    def correr(ev):
         try:
-            p = subprocess.run([sys.executable, "-u", "agente.py", str(a.archivo), "--evento", ev], cwd=BASE, env=env, capture_output=True,
+            cmd = [sys.executable, "-u", "agente.py", str(a.archivo), "--evento", ev] + (["--mision", a.mision] if a.mision else [])
+            p = subprocess.run(cmd, cwd=BASE, env=env, capture_output=True,
                                text=True, encoding="utf-8", errors="replace", timeout=a.minutos_por_evento * 60)
             salida, codigo = p.stdout + p.stderr, p.returncode
-        except subprocess.TimeoutExpired as e:
-            salida, codigo = f"TIEMPO AGOTADO ({a.minutos_por_evento} min)\n{(e.stdout or b'')!r}"[:3000], 124
-        with log.open("a", encoding="utf-8") as f:
+        except subprocess.TimeoutExpired:
+            salida, codigo = f"TIEMPO AGOTADO ({a.minutos_por_evento} min)", 124
+        with escribir, log_f.open("a", encoding="utf-8") as f:
             f.write(f"\n===== {ev} (código {codigo}) =====\n{salida}\n")
-        c = costo_evento(ev) if codigo == 0 else 0.0
-        gasto += c
-        if codigo == 0:
-            ok.append((ev, c))
-            seguidos = 0
-            print(f"    OK en {time.time()-t1:.0f}s · {c:.4f} USD · acumulado del lote {gasto:.4f} USD", flush=True)
-        elif codigo == 2:
-            print("    ya procesado, se salta", flush=True)
-        else:
-            fallidos.append(ev)
-            seguidos += 1
-            ultimas = [l for l in salida.strip().splitlines() if l.strip()][-2:]
-            print(f"    FALLÓ (código {codigo}): {' | '.join(ultimas)[:300]}", flush=True)
-            if seguidos >= a.max_fallos_seguidos:
-                print(f"\n{seguidos} fallos seguidos: se detiene el lote para no gastar de más.", flush=True)
-                break
+        return codigo, salida
 
+    t0 = time.time()
+    r = procesar(cola, correr, lambda e: costo_evento(e, salida), a.paralelo, a.tope_usd, a.max_fallos_seguidos, log=lambda m: print(m, flush=True))
     print(f"\n===== RESUMEN DEL LOTE ({(time.time()-t0)/60:.1f} min) =====", flush=True)
-    print(f"Procesados: {len(ok)} · fallidos: {len(fallidos)} · costo de referencia del lote: {gasto:.4f} USD", flush=True)
-    for ev, c in ok:
+    print(f"Procesados: {len(r['ok'])} · fallidos: {len(r['fallidos'])} · omitidos: {len(r['omitidos'])} · costo de referencia del lote: {r['gasto']:.4f} USD", flush=True)
+    for ev, c in sorted(r["ok"]):
         print(f"  {ev}: {c:.4f} USD", flush=True)
-    if fallidos:
-        print(f"  FALLIDOS: {', '.join(fallidos)} (se pueden relanzar con --ids)", flush=True)
-    restantes = pendientes(todos)
-    print(f"Pendientes tras el lote: {', '.join(restantes) or 'ninguno'}", flush=True)
+    if r["motivo_parada"]:
+        print(f"  SE DETUVO: {r['motivo_parada']}", flush=True)
+    if r["fallidos"]:
+        print(f"  FALLIDOS: {', '.join(r['fallidos'])} (se pueden relanzar con --ids)", flush=True)
+    print(f"Pendientes tras el lote: {', '.join(pendientes(todos, salida)) or 'ninguno'}", flush=True)
 
 
 if __name__ == "__main__":

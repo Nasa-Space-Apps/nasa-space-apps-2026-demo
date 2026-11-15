@@ -1,0 +1,158 @@
+{
+  "evento_id": "opp010",
+  "titulo": "THEMIS (Mars Odyssey) confirma que Meridiani Planum es llano y seguro para el aterrizaje de Opportunity",
+  "contexto_ampliado": "En 1997 la sonda Mars Global Surveyor llegó a Marte llevando a bordo el instrumento TES (Thermal Emission Spectrometer). En el año 2000, TES descubrió que un mineral llamado hematita gris cristalina se extendía por una porción de la región conocida como Meridiani Planum, cubriendo aproximadamente 300 por 500 kilómetros. La hematita es un mineral de óxido de hierro que puede precipitar cuando el agua subterránea circula a través de rocas ricas en hierro, ya sea a temperaturas normales o en manantiales termales. Encontrarla en semejante extensión era una señal difícil de ignorar.\n\nEn 2001, Mars Odyssey llegó a la órbita marciana con un instrumento mucho más potente: THEMIS (Thermal Emission Imaging System), capaz de detectar detalles de 18 metros en longitudes de onda visibles y de 100 metros en el infrarrojo. En 2002, THEMIS examinó Meridiani Planum con esa resolución superior y confirmó la presencia de hematita, cartografiando su extensión con mucho más detalle que TES. El mapa resultante indicó que la hematita probablemente se formó en un cuerpo de agua estancada, y no, por ejemplo, a partir de ceniza volcánica caída del cielo.\n\nPero THEMIS no solo aportó información mineralógica. Sus imágenes nocturnas en infrarrojo mostraron que el terreno propuesto para el aterrizaje no estaba cubierto de grandes rocas ni de extensas zonas de polvo, dos trampas habituales que acechan a los aterrizadores marcianos. Según Phil Christensen, investigador principal de THEMIS en la Universidad Estatal de Arizona, este hallazgo «cementó el acuerdo». La escasez relativa de rocas y cantos rodados reducía la probabilidad de que Opportunity resultase dañado o destruido al aterrizar, y además facilitaría la conducción del rover sobre el terreno.\n\nMeridiani Planum se encuentra en una ubicación singular: justo en el ecuador marciano y sobre el meridiano cero del planeta, es decir, en las coordenadas 0° de latitud y 0° de longitud. La elipse de aterrizaje diseñada para Opportunity medía aproximadamente 87 km de largo por 11 km de ancho, una zona amplia dentro de esa llanura.\n\nLa NASA eligió Meridiani Planum como sitio de aterrizaje para Opportunity porque los datos combinados de TES y THEMIS mostraban indicios de agua abundante en las rocas y los materiales superficiales de la región. Phil Christensen lo describió como «una baliza increíble que gritaba que algo inusual había ocurrido ahí», y afirmó que ningún otro lugar del planeta se acercaba siquiera en intensidad de señal mineral.\n\nLo más significativo de esta decisión fue el precedente que estableció. Según Christensen, Meridiani fue el primer sitio de aterrizaje en cualquier planeta elegido por criterios minerales: los sitios del programa Apollo y los anteriores aterrizajes en Marte (Viking y Pathfinder) se habían seleccionado por morfología, es decir, por el aspecto visual del terreno en las imágenes. THEMIS y TES demostraron que mirar la composición del suelo desde la órbita podía revelar destinos científicamente mucho más valiosos que los que saltaban a la vista en una fotografía.",
+  "datos_reales": [
+    {
+      "afirmacion": "THEMIS confirmó la presencia de hematita en Meridiani y mapeó sus límites con mayor detalle, indicando que el mineral probablemente se formó en un cuerpo de agua estancada.",
+      "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+      "cita": "THEMIS showed what the hematite-bearing unit looked like and that let us map its boundaries. These indicated the hematite most probably formed in a body of standing water and not, for example, from volcanic ash falling from the sky.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las imágenes nocturnas de THEMIS mostraron que el sitio de aterrizaje propuesto no estaba cubierto de grandes rocas ni de extensas zonas de polvo, los dos peligros habituales para los aterrizadores marcianos.",
+      "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+      "cita": "THEMIS then 'cemented the deal,' as Christensen puts it, when the instrument's nighttime images showed the site was safe to land on. It was littered neither with large rocks nor extensive patches of dust, two common traps that await Mars landers.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Meridiani Planum fue el primer sitio de aterrizaje en cualquier planeta elegido por criterios minerales y no por morfología visual del terreno.",
+      "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+      "cita": "This was the first landing site on any planet that was picked on mineral grounds. The Apollo sites and the previous Mars sites were all based on morphology - what the sites looked like.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Phil Christensen describió Meridiani como una señal extraordinaria visible desde la órbita: ningún otro lugar de Marte se le acercaba en intensidad de la señal mineral.",
+      "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+      "cita": "From the TES and THEMIS perspective, Meridiani really was the mother-lode. It was this incredible beacon screaming out that something unusual happened here. No other place on the planet came even close.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "NASA eligió Meridiani Planum como sitio de aterrizaje para Opportunity basándose en datos de THEMIS y TES que mostraban indicios de agua abundante en las rocas y materiales superficiales de la región.",
+      "fuente_url": "https://themis.asu.edu/node/5390",
+      "cita": "Mission scientists picked Meridiani Planum as a landing site for the Mars Exploration Rover Opportunity because data from THEMIS and TES showed signs of abundant water in the region's rocks and surface materials.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "THEMIS puede detectar detalles de 18 metros en longitudes de onda visibles y 100 metros en el infrarrojo.",
+      "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+      "cita": "THEMIS, on the other hand, is a multi-band camera, sensitive to 15 individual colors in the visible and infrared. It can spot details on the ground 18 meters (60 feet) across at visible wavelengths and 100 meters (330 feet) across in the infrared.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sitio de aterrizaje de Opportunity en Meridiani Planum fue seleccionado para acceder a materiales que contienen el mineral hematita, detectado por TES a bordo de Mars Global Surveyor.",
+      "fuente_url": "https://www.jpl.nasa.gov/images/pia05251-mars-exploration-rover-mer-b-opportunity-landing-site/",
+      "cita": "The Opportunity landing site in Meridiani Planum was selected to provide access, it is hoped, to materials bearing the iron oxide mineral, hematite. Hematite was detected in this region by the Thermal Emission Spectrometer (TES) on MGS.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La elipse de aterrizaje de Opportunity en Meridiani Planum medía aproximadamente 87 km de largo por 11 km de ancho.",
+      "fuente_url": "https://www.jpl.nasa.gov/images/pia05251-mars-exploration-rover-mer-b-opportunity-landing-site/",
+      "cita": "Above are shown three perspectives on the Opportunity landing site, which is an ellipse in Meridiani Planum approximately 87 km (54 mi) long by 11 km (6.8 mi) wide.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "TES detectó inicialmente hematita en una capa superficial, lo que fue confirmado por THEMIS, y estos hallazgos respaldaron un origen rico en agua de la hematita, llevando a la selección del sitio para el MER Opportunity.",
+      "fuente_url": "https://www.jpl.nasa.gov/images/pia25221-meridiani-planum-layers/",
+      "cita": "TES (Thermal Emission Spectrometer) initially detected hematite in a surface layer, which was confimed by THEMIS (THermal EMision Imaging System). These findings supported a water rich origin of the hematite and led to the selection of the site for the Opportunity MER (Mars Exploration Rover).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Global Surveyor llegó a Marte en 1997 y Mars Odyssey llegó en 2001.",
+      "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+      "cita": "Mars Global Surveyor reached Mars in 1997, while Mars Odyssey arrived in 2001.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "1. Rover Landing Site Chosen | Mars Odyssey Mission THEMIS (ASU)",
+      "url": "https://themis.asu.edu/node/5390",
+      "editor": "Arizona State University / THEMIS Mission",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Orbital Eyes Picked Mars Rover Opportunity's Landing Site | THEMIS News (ASU)",
+      "url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+      "editor": "Arizona State University / THEMIS Mission",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Mars Exploration Rover (MER-B) Opportunity Landing Site | JPL Image PIA05251",
+      "url": "https://www.jpl.nasa.gov/images/pia05251-mars-exploration-rover-mer-b-opportunity-landing-site/",
+      "editor": "NASA Jet Propulsion Laboratory",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Meridiani Planum Layers | JPL Image PIA25221",
+      "url": "https://www.jpl.nasa.gov/images/pia25221-meridiani-planum-layers/",
+      "editor": "NASA Jet Propulsion Laboratory",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "El dato [14] afirma que Phil Christensen 'también desarrolló el instrumento TES', pero la cita textual de la fuente (https://www.jpl.nasa.gov/images/pia25221-meridiani-planum-layers/) solo dice 'The THEMIS investigation is led by Dr. Philip Christensen at Arizona State University', sin mencionar TES. La parte sobre TES no está respaldada por esa cita, por lo que el dato fue descartado."
+  ],
+  "huecos": [
+    "No se pudo confirmar la fecha exacta (mes) de 2002 en que THEMIS realizó las observaciones definitivas de Meridiani Planum.",
+    "No se encontró en las fuentes leídas una lista detallada de los otros sitios candidatos de aterrizaje que fueron descartados frente a Meridiani.",
+    "No se encontró el número exacto de rocas por metro cuadrado ni la densidad cuantitativa de rocas en Meridiani Planum comparada con otros sitios candidatos.",
+    "La fuente de MarsDaily no pudo ser leída (página vacía); no se pudo verificar su contenido.",
+    "El evento original menciona explícitamente que el terreno llano 'reduce el riesgo del aterrizaje con airbags', pero ninguna de las fuentes del dossier menciona el sistema de airbags como método de aterrizaje; solo hablan genéricamente de reducir el riesgo de daño al aterrizar.",
+    "El evento original atribuye directamente a Phil Christensen la frase de que fue 'el primer sitio de aterrizaje en un planeta elegido por criterios minerales y no solo por cómo se ve', pero las fuentes no aclaran si Christensen lo dijo en una entrevista, en un artículo o en una conferencia, ni en qué fecha exacta lo declaró."
+  ],
+  "ideas_visuales": [
+    "Comparación lado a lado de un mapa TES de baja resolución y un mapa THEMIS de alta resolución de la zona de hematita en Meridiani Planum, mostrando cómo THEMIS reveló los límites con mucho más detalle (datos [5], [6], [10]).",
+    "Vista orbital nocturna en infrarrojo de Meridiani Planum captada por THEMIS, destacando la ausencia de grandes rocas y zonas extensas de polvo (datos [1], [7]).",
+    "Mapa de Marte señalando la ubicación de Meridiani Planum en las coordenadas 0° de latitud y 0° de longitud, con la elipse de aterrizaje de 87 × 11 km superpuesta (datos [8], [12]).",
+    "Diagrama explicativo que muestra cómo el agua subterránea circula a través de roca rica en hierro y precipita hematita, ya sea a temperatura normal o en manantiales termales (dato [9]).",
+    "Línea de tiempo visual: Mars Global Surveyor llega en 1997, TES detecta hematita en 2000, Mars Odyssey llega en 2001, THEMIS confirma y cartografía en 2002 (datos [5], [6], [15])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "En 2000, TES descubrió que un mineral llamado hematita gris cristalina se extendía por una porción de Meridiani de aproximadamente 300 por 500 kilómetros.",
+      "fuente_url": "https://themis.asu.edu/node/5390",
+      "cita": "In 2000, the Thermal Emission Spectrometer (TES) instrument aboard the Mars Global Surveyor orbiter discovered that a mineral called gray crystalline hematite sprawls across a portion of Meridiani roughly 300 by 500 kilometers (200 by 300 miles).",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "En 2002, THEMIS (a bordo de Mars Odyssey) examinó Meridiani con mayor resolución que TES, confirmó la presencia de hematita y cartografió su extensión con mucho más detalle.",
+      "fuente_url": "https://themis.asu.edu/node/5390",
+      "cita": "In 2002, the Thermal Emission Imaging Spectrometer (THEMIS) on the Mars Odyssey orbiter examined Meridiani at higher resolution than TES. Working with five visual and nine infrared colors, THEMIS confirmed the hematite's presence and mapped its extent in much finer detail.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "THEMIS también redujo la preocupación de los planificadores de la misión al encontrar que el sitio propuesto contenía relativamente pocas rocas y cantos rodados, disminuyendo el riesgo de daño durante el aterrizaje.",
+      "fuente_url": "https://themis.asu.edu/node/5390",
+      "cita": "THEMIS also eased concerns of mission planners when it found the proposed site contained relatively few rocks and boulders. This reduced the chance of Opportunity being damaged or destroyed in landing - and it meant that mission controllers would find the driving easier.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Meridiani Planum se encuentra en el ecuador marciano y en el meridiano cero del planeta: latitud 0° y longitud 0°.",
+      "fuente_url": "https://themis.asu.edu/node/5390",
+      "cita": "This area - once known as Sinus Meridiani and Terra Meridiani - straddles the martian equator and the planet's prime meridian: 0 degrees latitude and longitude.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La hematita es un mineral de óxido de hierro que puede precipitar cuando el agua subterránea circula a través de rocas ricas en hierro, ya sea a temperaturas normales o en manantiales termales.",
+      "fuente_url": "https://themis.asu.edu/node/5390",
+      "cita": "Hematite is an iron-oxide mineral that can precipitate when groundwater circulates through iron-rich rocks, whether at normal temperatures or in hot springs.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

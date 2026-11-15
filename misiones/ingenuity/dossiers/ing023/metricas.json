@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.29852789999999996,
+  "turnos": 14,
+  "duracion_s": 167.1,
+  "duracion_api_s": 138.6,
+  "tokens": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 16934,
+    "cache_read_input_tokens": 44228,
+    "output_tokens": 14674,
+    "output_tokens_details": {
+      "thinking_tokens": 6725
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 16934
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1468,
+      "outputTokens": 31,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0016229999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 8,
+      "outputTokens": 14674,
+      "cacheReadInputTokens": 44228,
+      "cacheCreationInputTokens": 16934,
+      "webSearchRequests": 0,
+      "costUSD": 0.2969049,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 6725,
+      "cacheCreationEphemeral5mInputTokens": 16934,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 3,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 8,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.35907975,
+    "turnos": 2,
+    "duracion_s": 148.0,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5971,
+        "outputTokens": 35,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0061459999999999996,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 12373,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6975,
+        "webSearchRequests": 0,
+        "costUSD": 0.35293375,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 10162,
+        "cacheCreationEphemeral5mInputTokens": 6975,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 18,
+      "datos_despues": 17,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 4,
+      "observaciones": "Se eliminó el dato [7] porque la cifra de 300 esporas/m² no aparece en su cita (la afirmación dice más que la fuente). Se corrigió la relación familiar de Amanda Wright Lane y Stephen Wright de «bisnietos» a «sobrina bisnieta y sobrino bisnieto», y se retiró del relato la mención a la misión STS-92 por carecer de respaldo en los datos conservados."
+    }
+  },
+  "costo_usd_referencia_total": 0.6576076499999999,
+  "costos": {
+    "total_usd": 0.657608,
+    "por_paso": {
+      "investigacion": 0.298528,
+      "revision": 0.35908
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.007769,
+        "entrada": 7439,
+        "salida": 66,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.296905,
+        "entrada": 8,
+        "salida": 14674,
+        "cache_leida": 44228,
+        "cache_escrita": 16934,
+        "razonamiento": 6725
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.352934,
+        "entrada": 3,
+        "salida": 12373,
+        "cache_leida": 0,
+        "cache_escrita": 6975,
+        "razonamiento": 10162
+      }
+    }
+  }
+}

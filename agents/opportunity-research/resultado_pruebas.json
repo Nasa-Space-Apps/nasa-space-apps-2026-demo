@@ -12,10 +12,10 @@
     "requiere": "variable WIKIMEDIA_CONTACT (correo o URL tuyos) para el User-Agent"
   },
   {
-    "herramienta": "ddgs (búsqueda web gratis)",
-    "ok": true,
-    "detalle": "5 resultados; ej: https://www.jpl.nasa.gov/images/pia07999-looking-back-at-purgatory-dune/",
-    "requiere": "nada (sin clave); puede limitar la velocidad"
+    "herramienta": "ddgs",
+    "ok": false,
+    "detalle": "DDGSException: No results found.",
+    "requiere": ""
   },
   {
     "herramienta": "httpx + trafilatura (extraer texto)",
@@ -26,7 +26,7 @@
   {
     "herramienta": "Crawl4AI (JS, markdown)",
     "ok": true,
-    "detalle": "51153 caracteres de markdown",
+    "detalle": "51154 caracteres de markdown",
     "requiere": "navegador de Playwright instalado (playwright install chromium)"
   }
 ]

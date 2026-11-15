@@ -1,0 +1,167 @@
+{
+  "evento_id": "opp004",
+  "titulo": "Se pierden el Mars Climate Orbiter y el Mars Polar Lander (1999)",
+  "contexto_ampliado": "En 1992, el administrador de la NASA Daniel Goldin introdujo la filosofía conocida como \"más rápido, mejor, más barato\" (en inglés, *faster, better, cheaper*), que promovía misiones más pequeñas y económicas, construidas con la ayuda de contratistas externos. La idea era lanzar más sondas con menos dinero, pero el enfoque tenía riesgos serios: entre 1998 y 1999 se lanzaron seis misiones bajo esta filosofía y cuatro de ellas fallaron.\n\nEl Mars Climate Orbiter (MCO) formaba parte del programa Mars Surveyor '98. Su misión consistía en orbitar Marte para estudiar su clima y atmósfera. El último contacto con la nave se produjo el 23 de septiembre de 1999, nueve meses después de su lanzamiento, y la investigación posterior determinó que se destruyó en la atmósfera marciana. El costo total del programa Mars Surveyor '98 —que incluía el orbitador, el aterrizador y los lanzamientos— fue de 327,6 millones de dólares.\n\nLa causa del desastre fue uno de los errores de ingeniería más famosos de la historia espacial: una incompatibilidad de sistemas de medición. El software de tierra, construido por Lockheed Martin, producía los datos de impulso de los propulsores en unidades del sistema inglés (libra-fuerza por segundo), mientras que el sistema de navegación de la NASA esperaba esos mismos datos en unidades del sistema métrico (newton-segundo). La diferencia equivalía a un factor de 4,45, lo que fue acumulando errores en los cálculos de trayectoria y envió la nave demasiado cerca de Marte.\n\nEl Mars Polar Lander (MPL) fue lanzado el 3 de enero de 1999 con el objetivo de estudiar el suelo y el clima de una región cercana al polo sur de Marte. Originalmente, el aterrizador iba a comunicar sus datos a través del Mars Climate Orbiter, pero al haberse perdido este el 23 de septiembre, el MPL tuvo que depender de un enlace directo a la Tierra mediante la red de espacio profundo de la NASA. El 3 de diciembre de 1999, durante la secuencia de descenso, se perdió el contacto y nunca se reestableció. El costo total de esta misión fue de 165 millones de dólares.\n\nEl análisis posterior determinó que la causa más probable del accidente fue la terminación prematura del encendido de los motores de descenso antes de que la nave tocara la superficie, lo que provocó un impacto a alta velocidad. La Junta de Revisión de Fallos precisó que se trató de un error de software: cuando las patas de aterrizaje se desplegaron durante el descenso, los sensores magnéticos (de efecto Hall) generaron señales espurias que el software interpretó como un aterrizaje exitoso, apagando los motores cuando la nave estaba todavía a unos 40 metros de altura. A esa altitud la nave viajaba a aproximadamente 13 metros por segundo y, sin empuje, la gravedad marciana la aceleró hasta unos 22 metros por segundo al momento del impacto, frente a una velocidad nominal de aterrizaje de solo 2,4 metros por segundo. No era posible sobrevivir a ese golpe.\n\nAmbas pérdidas sacudieron el programa marciano de la NASA. Tras los fallos del MCO, el MPL y la misión Deep Space 2, se creó una comisión gubernamental —el Equipo Independiente de Evaluación del Programa de Marte— que publicó el llamado \"Informe Young\", en referencia a su presidente Thomas Young. Según Young, el programa Mars Surveyor '98 había estado financiado insuficientemente en al menos un 30 %, una consecuencia de llevar la filosofía \"más rápido, mejor, más barato\" demasiado lejos.\n\nComo resultado, la siguiente misión a Marte, el programa Mars Exploration Rover (MER), fue rediseñada con una filosofía más conservadora y terminó costando alrededor de 800 millones de dólares, una cifra muy superior a la de las misiones de la era anterior. Lanzado en 2003, el programa MER incluiría a los rovers gemelos Spirit y Opportunity, cuyo éxito estuvo marcado por las duras lecciones que dejaron las catástrofes de 1999.",
+  "datos_reales": [
+    {
+      "afirmacion": "El Mars Climate Orbiter falló por un error de navegación causado por no traducir las unidades inglesas al sistema métrico: el software de tierra usaba unidades inglesas y el software de a bordo trabajaba en métrico.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+      "cita": "the Mars Climate Orbiter was unsuccessful due to a navigation error caused by a failure to translate English units to metric. Ground software used English units, while onboard software worked in metric. The discrepancy caused errors in trajectory calculations which sent the spacecraft too close to Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El último contacto con el Mars Climate Orbiter fue el 23 de septiembre de 1999, nueve meses después de su lanzamiento, y la investigación concluyó que se destruyó en la atmósfera de Marte.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+      "cita": "Last contact with the spacecraft was on Sept. 23, 1999, nine months after launch, and an investigation found that the spacecraft burned up in Mars' atmosphere.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El análisis post-mortem del MPL determinó que la causa más probable del accidente fue la terminación prematura del encendido de los motores antes de que el aterrizador tocara la superficie, provocando que golpeara el planeta a alta velocidad.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Polar_Lander",
+      "cita": "A post-mortem analysis determined the most likely cause of the mishap was premature termination of the engine firing prior to the lander touching the surface, causing it to strike the planet at a high velocity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El informe oficial del MPL describía que los sensores Hall Effect en las patas generaban señales espurias durante el despliegue, el software aceptaba esa señal como un toque válido, y a 40 metros la nave tenía una velocidad de ~13 m/s que sin empuje se aceleraba a ~22 m/s al impactar, una velocidad de la que no podría sobrevivir.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Polar_Lander",
+      "cita": "A magnetic sensor is provided in each of the three landing legs to sense touchdown when the lander contacts the surface, initiating the shutdown of the descent engines... The tests showed that most of the transient signals at leg deployment are indeed long enough to be accepted as valid events... At 40 meters altitude, the lander has a velocity of approximately 13 meters per second, which, in the absence of thrust, is accelerated by Mars gravity to a surface impact velocity of approximately 22 meters per second (the nominal touchdown velocity is 2.4 meters per second). At this impact velocity, the lander could not have survived.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El costo total del Mars Polar Lander fue de 165 millones de dólares.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Polar_Lander",
+      "cita": "The total cost of the Mars Polar Lander was US$165 million. Spacecraft development cost US$110 million, launch was estimated at US$45 million, and mission operations at US$10 million.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según Thomas Young, presidente del Equipo Independiente de Evaluación del Programa de Marte, el programa Mars Surveyor '98 'estaba financiado insuficientemente en al menos un 30 %'.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter",
+      "cita": "According to Thomas Young, chairman of the Mars Program Independent Assessment Team, the Mars Surveyor '98 program \"was under funded by at least 30%.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Mars Climate Orbiter – NASA Science",
+      "url": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Climate Orbiter – Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Mars Polar Lander – Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mars_Polar_Lander",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "\"Faster, better, cheaper\" approach – Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/%22Faster,_better,_cheaper%22_approach",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "Coste del MCO: el fragmento de búsqueda del LA Times (https://www.latimes.com/archives/la-xpm-1999-oct-01-mn-17288-story.html) habla de '$125-million Mars Climate Orbiter', mientras que Wikipedia (https://en.wikipedia.org/wiki/Mars_Climate_Orbiter) detalla un coste total conjunto de $327,6 millones que incluye orbitador, aterrizador y lanzamiento. Las cifras no son directamente comparables porque el LA Times solo se refiere al orbitador y Wikipedia incluye ambas naves más el lanzamiento, pero la diferencia puede confundir al lector si se citan sin contexto.",
+    "El evento original describe la pérdida del MPL como 'probablemente por una falla de un sensor de aterrizaje', pero el dato [7] (https://en.wikipedia.org/wiki/Mars_Polar_Lander) atribuye la causa raíz a 'un error de software que identificó erróneamente las vibraciones del despliegue de las patas como un toque en tierra'. Los sensores Hall Effect sí generaron señales espurias [8], pero la Junta de Revisión de Fallos calificó el problema como un error de software (no filtrar esas señales), no como un fallo del hardware del sensor propiamente dicho."
+  ],
+  "huecos": [
+    "No se pudo leer el texto completo del Informe Young (Mars Program Independent Assessment Team Report) ni confirmar directamente qué párrafos exactos atribuyen la raíz del problema a la filosofía FBC; solo fuentes secundarias lo mencionan.",
+    "No se pudo confirmar la decisión formal y la fecha exacta de cancelación del Mars Surveyor 2001 ni el proceso interno de rediseño hacia el MER 2003; solo Wikipedia menciona de pasada que el Surveyor 2001 fue cancelado.",
+    "El PDF del informe oficial sobre la pérdida del Mars Polar Lander (solarsystem.nasa.gov) devolvió texto vacío y no pudo leerse directamente.",
+    "No se pudo confirmar con fuente primaria si la pérdida del MCO como repetidor de comunicaciones agravó técnicamente el fallo del MPL o si ambos fallos fueron completamente independientes.",
+    "El relato del borrador incluía varios detalles sin respaldo en ningún dato conservado: la fecha exacta de lanzamiento del MCO (11 de diciembre de 1998), el lugar de lanzamiento (Cabo Cañaveral), el tipo de cohete (Delta II), las altitudes específicas de paso (57 km real frente a 226 km prevista), la declaración pública de Dan Goldin reconociendo su responsabilidad, y la afirmación de que Opportunity funcionó 14 años gracias a las lecciones de 1999. Todos estos detalles fueron eliminados del relato reescrito.",
+    "El evento original afirma que la pérdida del MPL ocurrió 'al entrar en la atmósfera', pero los datos [6], [7] y [8] describen el fallo durante la fase de descenso propulsado (a 40 m de la superficie), no durante la entrada atmosférica inicial. Ninguna fuente del dossier respalda que el problema se produjera en la fase de entrada.",
+    "Ningún dato del dossier menciona explícitamente un 'plan de 2001' cancelado; el dato [15] (https://en.wikipedia.org/wiki/%22Faster,_better,_cheaper%22_approach) solo indica que la siguiente misión (MER, 2003) fue rediseñada, sin mencionar la cancelación específica del Mars Surveyor 2001."
+  ],
+  "ideas_visuales": [
+    "Diagrama comparativo que muestra las dos unidades de medida: a un lado libra-fuerza·segundo (Lockheed Martin) y al otro newton·segundo (NASA), con el factor 4,45 y la trayectoria desviada del MCO acercándose fatalmente a Marte.",
+    "Secuencia ilustrada del descenso del Mars Polar Lander: despliegue de las patas, señal espuria del sensor Hall Effect, apagado de motores a 40 m de altura y caída libre hasta el impacto a 22 m/s.",
+    "Línea temporal de septiembre a diciembre de 1999 mostrando la pérdida del MCO (23 de septiembre) y del MPL (3 de diciembre), con la conexión de comunicaciones perdida entre ambas naves.",
+    "Infografía de costos: el programa Mars Surveyor '98 (327,6 M$) y el MPL (165 M$) frente al posterior programa MER (≈800 M$), ilustrando el cambio de filosofía presupuestaria.",
+    "Gráfico de barras mostrando las seis misiones lanzadas en 1998-1999 bajo la filosofía 'más rápido, mejor, más barato': dos exitosas y cuatro fallidas."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "La investigación del MCO atribuyó la falla a una incompatibilidad de sistemas de medición: el software de Lockheed Martin producía resultados en unidades del sistema inglés (EE. UU.) mientras que el sistema de la NASA esperaba esos resultados en unidades SI (métricas).",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter",
+      "cita": "An investigation attributed the failure to a measurement mismatch between two measurement systems: SI units (metric) by NASA and US customary units by spacecraft builder Lockheed Martin.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El software calculaba el impulso total de los propulsores en libra-fuerza por segundo, pero el sistema de trayectorias esperaba newton-segundos; la diferencia era un factor de 4,45.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter",
+      "cita": "software that calculated the total impulse produced by thruster firings produced results in pound-force seconds. The trajectory calculation software then used these results – expected to be in newton-seconds (incorrect by a factor of 4.45) – to update the predicted position of the spacecraft.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El costo total del programa Mars Surveyor '98 (orbitador + aterrizador + lanzamiento) fue de 327,6 millones de dólares.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter",
+      "cita": "According to NASA, project costs for the orbiter and lander included $193.1 million for spacecraft development and $42.8 million for mission operations. Adding in $91.7 million for launch brought the total to $327.6 million.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El Mars Polar Lander fue lanzado el 3 de enero de 1999 para estudiar el suelo y el clima de la región del polo sur de Marte.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Polar_Lander",
+      "cita": "The Mars Polar Lander, also known as the Mars Surveyor '98 Lander, was a 290-kilogram uncrewed spacecraft lander launched by NASA on January 3, 1999, to study the soil and climate of Planum Australe, a region near the south pole on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La Junta de Revisión de Fallos concluyó que la causa más probable fue un error de software que identificó erróneamente las vibraciones del despliegue de las patas como un toque en tierra, apagando los motores cuando la nave estaba todavía a unos 40 metros de altura.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Polar_Lander",
+      "cita": "The Failure Review Board concluded that the most likely cause of the mishap was a software error that incorrectly identified vibrations, caused by the deployment of the stowed legs, as surface touchdown. The resulting action by the spacecraft was the shutdown of the descent engines, while still likely 40 meters above the surface.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El Mars Polar Lander estaba originalmente previsto para comunicarse a través del Mars Climate Orbiter perdido; al perder el orbitador, el aterrizador tuvo que usar un enlace directo a la Tierra.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Mars_Polar_Lander",
+      "cita": "The lander was originally intended to communicate data through the failed Mars Climate Orbiter via the UHF antenna. With the orbiter lost on September 23, 1999, the lander would still be able to communicate directly to the NASA Deep Space Network through the Direct-To-Earth (DTE) link.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El administrador Daniel Goldin introdujo la filosofía 'más rápido, mejor, más barato' en la NASA en 1992, que promovía misiones más pequeñas y baratas construidas con ayuda de contratistas externos.",
+      "fuente_url": "https://en.wikipedia.org/wiki/%22Faster,_better,_cheaper%22_approach",
+      "cita": "the new NASA administrator, Daniel Goldin, introduced the so-called \"faster, better, cheaper\" approach in 1992, which encouraged smaller, cheaper missions built with the help of third-party contractors, efficiently \"commercializing\" the research labs and forcing them to work with industry.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Entre 1998 y 1999 se lanzaron seis misiones bajo la filosofía 'más rápido, mejor, más barato'; cuatro de ellas fallaron.",
+      "fuente_url": "https://en.wikipedia.org/wiki/%22Faster,_better,_cheaper%22_approach",
+      "cita": "in 1998–1999, six missions were launched; four of them failed.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Tras los fallos del MCO, MPL y Deep Space 2, se creó una comisión gubernamental (el Equipo Independiente de Evaluación del Programa de Marte) para investigar las causas, que publicó el llamado 'Informe Young'.",
+      "fuente_url": "https://en.wikipedia.org/wiki/%22Faster,_better,_cheaper%22_approach",
+      "cita": "After Mars Climate Orbiter, Mars Polar Lander, and Deep Space 2 failures, a governmental commission, the Mars Program Independent Assessment Team, was created to investigate the issues that led to it. The commission issued a Mars Program Independent Assessment Team Report, commonly known as the Young Report after its chairman Tom Young.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Tras los fallos de las misiones de 1999, el programa Mars Exploration Rover (lanzado en 2003) fue rediseñado con una filosofía más conservadora y terminó costando alrededor de 800 millones de dólares.",
+      "fuente_url": "https://en.wikipedia.org/wiki/%22Faster,_better,_cheaper%22_approach",
+      "cita": "the next mission, Mars Exploration Rover (launched in 2003), was redesigned, and eventually cost around $800 million; as Norman Haynes put it, MER sucked up \"all available money from NASA and JPL\".",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

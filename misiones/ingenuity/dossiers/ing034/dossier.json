@@ -1,0 +1,147 @@
+{
+  "evento_id": "ing034",
+  "titulo": "Primera imagen aérea en color de la superficie de Marte (Vuelo 2 de Ingenuity, 22 de abril de 2021)",
+  "contexto_ampliado": "El 22 de abril de 2021, el helicóptero Ingenuity realizó su segundo vuelo sobre Marte y capturó la primera imagen en color de la superficie marciana tomada desde el aire por un vehículo aéreo [0]. Ingenuity, con una masa de apenas 1,8 kilogramos y unas palas de rotor de aproximadamente 1,2 metros de punta a punta [12], logró esta hazaña en una atmósfera con menos del 1 % de la densidad de la terrestre [11], lo que convierte cualquier vuelo en un desafío técnico extraordinario.\n\nEl segundo vuelo representó un avance importante respecto al primero, realizado el 19 de abril de 2021, que alcanzó 3 metros (10 pies) de altitud y duró 39,1 segundos en total [6]. En esta segunda ocasión, Ingenuity permaneció en el aire durante 51,9 segundos, voló más alto y por primera vez se desplazó lateralmente [4]. Su sistema de control inclinó el helicóptero 5 grados, permitiendo que parte del empuje de los rotores contrarrotatorios lo acelerara 2 metros (7 pies) hacia un costado [5].\n\nLa cámara de color que capturó la imagen histórica está montada en el fuselaje del helicóptero, orientada aproximadamente 22 grados por debajo del horizonte, y cuenta con un sensor de 4208 por 3120 píxeles [3]. En el momento de la toma, Ingenuity se encontraba a 5,2 metros (17 pies) de altitud y comenzaba a inclinarse para trasladarse 2 metros hacia el oeste, alejándose del rover Perseverance [1].\n\nLa fotografía resultante muestra detalles notables del terreno marciano. Se distinguen las marcas onduladas dejadas por las seis ruedas del rover Perseverance, mientras que en los bordes izquierdo y derecho de la imagen aparecen partes de los patines de dos de las cuatro patas de aterrizaje del helicóptero [2]. La sombra de Ingenuity es visible en la parte central inferior, cerca de la zona conocida como Wright Brothers Field, y en las esquinas superiores se aprecia una pequeña porción del horizonte marciano [2].\n\nEl rover Perseverance observó el segundo vuelo desde un punto denominado Van Zyl Overlook, situado a 64,3 metros de distancia, utilizando sus cámaras Navcam y Mastcam-Z [9]. Dado que las señales deben viajar cientos de millones de millas entre Marte y la Tierra a través de satélites orbitales y la Red de Espacio Profundo de la NASA, Ingenuity no puede pilotarse con un joystick ni observarse en tiempo real desde nuestro planeta: cada vuelo es completamente autónomo [10].\n\nEl lugar de vuelo recibió el código ceremonial JZRO, en referencia al cráter Jezero, por parte de la Organización de Aviación Civil Internacional (OACI), que también otorgó al helicóptero el indicativo oficial IGY con señal de llamada INGENUITY [8]. Estos reconocimientos subrayan la importancia histórica del primer vehículo aéreo que logró volar —y fotografiar en color— la superficie de otro planeta.",
+  "datos_reales": [
+    {
+      "afirmacion": "La primera imagen aérea en color de Marte fue tomada durante el segundo vuelo de Ingenuity el 22 de abril de 2021.",
+      "fuente_url": "https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/",
+      "cita": "This is the first color image of the Martian surface taken by an aerial vehicle while it was aloft. The Ingenuity Mars Helicopter captured it with its color camera during its second successful flight test on April 22, 2021.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En el momento de la toma, el helicóptero se encontraba a 17 pies (5,2 metros) de altitud y comenzaba a inclinarse para trasladarse 7 pies (2 metros) hacia el oeste.",
+      "fuente_url": "https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/",
+      "cita": "At the time this image, Ingenuity was 17 feet (5.2 meters) above the surface and pitching (moving the camera's field of view upward) so the helicopter could begin its 7-foot (2-meter) translation to the west – away from the rover.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen muestra las marcas de las ruedas del rover Perseverance, partes de los patines de dos de las cuatro patas de aterrizaje del helicóptero y una porción del horizonte.",
+      "fuente_url": "https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/",
+      "cita": "The winding parallel discolorations in the surface reveal the tread of the six-wheeled rover. Perseverance itself is located top center, just out frame. \"Wright Brothers Field\" is in the vicinity of the helicopter's shadow, bottom center, with the actual point of takeoff of the helicopter just below the image. A portion of the landing pads on two of the helicopter's four landing legs can be seen in on the left and right sides of the image, and a small portion of the horizon can be seen at the upper right and left corners.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara de color de Ingenuity está montada en el fuselaje, orientada aproximadamente 22 grados por debajo del horizonte, y posee un sensor de 4208 por 3120 píxeles.",
+      "fuente_url": "https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/",
+      "cita": "Mounted in the helicopter's fuselage and pointed approximately 22 degree below the horizon, Ingenuity's high-resolution color camera contains a 4208-by-3120-pixel sensor.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El segundo vuelo duró 51,9 segundos e incluyó mayor altitud, mayor duración y movimiento lateral respecto al primer vuelo.",
+      "fuente_url": "https://www.nasa.gov/solar-system/nasas-ingenuity-mars-helicopter-logs-second-successful-flight/",
+      "cita": "Lasting 51.9 seconds, the flight added several new challenges to the first, which took place on April 19, including a higher maximum altitude, longer duration, and sideways movement.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante el segundo vuelo, el sistema de control inclinó el helicóptero 5 grados para desplazarlo 7 pies (2 metros) lateralmente.",
+      "fuente_url": "https://www.nasa.gov/solar-system/nasas-ingenuity-mars-helicopter-logs-second-successful-flight/",
+      "cita": "its flight control system performed a slight (5-degree) tilt, allowing some of the thrust from the counter-rotating rotors to accelerate the craft sideways for 7 feet (2 meters).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El primer vuelo de Ingenuity, el 19 de abril de 2021, alcanzó 10 pies (3 metros) de altitud y duró en total 39,1 segundos.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "Altimeter data indicate Ingenuity climbed to its prescribed maximum altitude of 10 feet (3 meters) and maintained a stable hover for 30 seconds. It then descended, touching back down on the surface of Mars after logging a total of 39.1 seconds of flight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La OACI otorgó a Ingenuity el indicativo oficial IGY con señal INGENUITY, y al lugar de vuelo el código JZRO por Jezero Crater.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "the International Civil Aviation Organization (ICAO) – the United Nations' civil aviation agency – presented NASA and the Federal Aviation Administration with official ICAO designator IGY, call-sign INGENUITY. [...] The location of the flight has also been given the ceremonial location designation JZRO for Jezero Crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El rover Perseverance observó el segundo vuelo desde Van Zyl Overlook, a 64,3 metros de distancia, con sus cámaras Navcam y Mastcam-Z.",
+      "fuente_url": "https://www.nasa.gov/solar-system/nasas-ingenuity-mars-helicopter-logs-second-successful-flight/",
+      "cita": "the Perseverance rover obtained imagery of the flight attempt from 211 feet (64.3 meters) away at \"Van Zyl Overlook\" using its Navcam and Mastcam-Z imagers.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vuelo fue completamente autónomo porque los datos deben viajar cientos de millones de millas entre Marte y la Tierra, lo que impide el control en tiempo real.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "Because data must be sent to and returned from the Red Planet over hundreds of millions of miles using orbiting satellites and NASA's Deep Space Network, Ingenuity cannot be flown with a joystick, and its flight was not observable from Earth in real time.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La atmósfera de Marte tiene menos del 1% de la densidad de la atmósfera terrestre, lo que hace el vuelo extremadamente difícil.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "cita": "Thin atmosphere, less than 1 percent as dense as Earth's",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity tiene una masa de 1,8 kilogramos y unas palas de rotor de aproximadamente 1,2 metros de punta a punta.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "cita": "Mass | 3.97 pounds (1.8 kilograms) [...] Total length of rotors: Approximately 4 feet (approximately 1.2 meters) tip to tip",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "First Aerial Color Image of Mars (NASA Image Article)",
+      "url": "https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "First Aerial Color Image of Mars (NASA Science Photojournal)",
+      "url": "https://science.nasa.gov/photojournal/first-aerial-color-image-of-mars/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA's Ingenuity Mars Helicopter Logs Second Successful Flight",
+      "url": "https://www.nasa.gov/solar-system/nasas-ingenuity-mars-helicopter-logs-second-successful-flight/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA's Ingenuity Mars Helicopter Succeeds in Historic First Flight",
+      "url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Ingenuity Mars Helicopter – Mission Overview",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "La altitud en el momento de la fotografía difiere según la fuente: la descripción de la imagen (https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/) indica 17 pies / 5,2 metros, mientras que el informe del segundo vuelo (https://www.nasa.gov/solar-system/nasas-ingenuity-mars-helicopter-logs-second-successful-flight/) señala que la altitud máxima del vuelo 2 fue de 16 pies / 5 metros. La diferencia (16 ft = 4,88 m vs. 17 ft = 5,18 m) podría deberse a que la fotografía fue tomada en un momento puntual distinto al máximo de vuelo, o a redondeo de cifras entre dos equipos de redacción distintos dentro de la NASA.",
+    "El evento original indica que la imagen fue 'Publicada por JPL el 23 de abril de 2021', pero ninguno de los datos conservados del dossier confirma esa fecha de publicación específica. La URL de la NASA (https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/) describe la imagen pero no incluye en la cita proporcionada la fecha de publicación.",
+    "El evento original describe que se ven 'partes de dos plataformas de aterrizaje' (expresión que podría interpretarse como estructuras independientes), mientras que la cita de la fuente (https://www.nasa.gov/image-article/first-aerial-color-image-of-mars-2/) especifica con más precisión 'landing pads on two of the helicopter's four landing legs', es decir, los patines integrados en las patas del propio helicóptero. No es una contradicción directa, pero la terminología del evento es ambigua."
+  ],
+  "huecos": [
+    "No se pudo confirmar por qué no se tomó ninguna imagen en color durante el primer vuelo (19 de abril de 2021): las fuentes no explican si la cámara de color no fue activada o si la imagen no tuvo calidad suficiente.",
+    "No se encontró el timestamp exacto (hora local marciana) del momento preciso en que se disparó la fotografía PIA24593 durante el vuelo.",
+    "No se hallaron especificaciones técnicas completas de la cámara de color (tipo de lente, distancia focal, fabricante del sensor).",
+    "No se pudo verificar mediante fuente directa cuánto tiempo transcurrió entre la toma de la fotografía y la recepción de los datos en el JPL.",
+    "Las fuentes no especifican si hubo imágenes de color adicionales tomadas durante el segundo vuelo además de PIA24593 (primera) y PIA24500 (segunda) ni en qué momento del vuelo fue tomada cada una.",
+    "El evento original afirma que la foto fue tomada en 'sol 61', pero ningún dato conservado del dossier confirma explícitamente este número de sol marciano.",
+    "El evento original indica que la imagen fue 'Publicada por JPL el 23 de abril de 2021', pero ninguna cita del dossier respalda esta fecha concreta de publicación ni el identificador PIA24593 mencionado en el relato original del borrador.",
+    "El dato [13] fue eliminado porque la cita no respaldaba el número de 72 vuelos totales ni la fecha de fin de misión (25 de enero de 2024); queda sin confirmar en el dossier un resumen fiable del total de la misión de Ingenuity.",
+    "El dato [7] fue eliminado porque la cita no mencionaba a Thomas Zurbuchen; queda sin confirmar por fuente directa quién anunció formalmente el nombre Wright Brothers Field."
+  ],
+  "ideas_visuales": [
+    "Ingenuity en vuelo a 5,2 metros de altitud, inclinado 5 grados, con la superficie marciana visible debajo y la sombra del helicóptero proyectada sobre el suelo (datos [1], [5]).",
+    "Reproducción de la célebre fotografía en color: las marcas onduladas de las ruedas de Perseverance en el terreno, los patines de aterrizaje visibles en los bordes, la sombra del helicóptero en el centro inferior y una franja de horizonte marciano en las esquinas superiores (dato [2]).",
+    "El rover Perseverance observando el vuelo desde Van Zyl Overlook a 64,3 metros de distancia, con sus cámaras Navcam y Mastcam-Z apuntando hacia el helicóptero en el aire (dato [9]).",
+    "Infografía comparativa de los dos primeros vuelos: vuelo 1 (3 m de altitud, 39,1 s, sin desplazamiento lateral) frente a vuelo 2 (5,2 m, 51,9 s, 2 m de desplazamiento lateral) (datos [4], [5], [6]).",
+    "Diagrama técnico de Ingenuity mostrando sus 1,8 kg de masa, los rotores de 1,2 m de punta a punta y la cámara de color montada en el fuselaje a 22° bajo el horizonte (datos [3], [12])."
+  ],
+  "datos_no_verificados": []
+}

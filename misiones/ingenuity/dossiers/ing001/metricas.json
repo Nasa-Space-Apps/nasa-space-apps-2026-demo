@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.2112582,
+  "turnos": 12,
+  "duracion_s": 92.3,
+  "duracion_api_s": 69.7,
+  "tokens": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 21828,
+    "cache_read_input_tokens": 61154,
+    "output_tokens": 7291,
+    "output_tokens_details": {
+      "thinking_tokens": 1958
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 21828
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1508,
+      "outputTokens": 32,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001668,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 8,
+      "outputTokens": 7291,
+      "cacheReadInputTokens": 61154,
+      "cacheCreationInputTokens": 21828,
+      "webSearchRequests": 0,
+      "costUSD": 0.2095902,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1958,
+      "cacheCreationEphemeral5mInputTokens": 21828,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 3,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 6,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.16051100000000001,
+    "turnos": 2,
+    "duracion_s": 59.2,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 3956,
+        "outputTokens": 33,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0041210000000000005,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 5015,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 4960,
+        "webSearchRequests": 0,
+        "costUSD": 0.15639,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 2766,
+        "cacheCreationEphemeral5mInputTokens": 4960,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 11,
+      "datos_despues": 11,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 4,
+      "observaciones": "Se conservan todos los datos porque sus citas respaldan correctamente las afirmaciones. El cambio principal en el relato fue eliminar cuatro afirmaciones que el borrador incluía sin respaldo en ningún dato citado: la etnicidad de Balaram, la cifra del 1 % de densidad atmosférica, los detalles de su carrera intermedia en JPL y la mención anticipada del episodio con drones del director de JPL."
+    }
+  },
+  "costo_usd_referencia_total": 0.3717692,
+  "costos": {
+    "total_usd": 0.371769,
+    "por_paso": {
+      "investigacion": 0.211258,
+      "revision": 0.160511
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.005789,
+        "entrada": 5464,
+        "salida": 65,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.20959,
+        "entrada": 8,
+        "salida": 7291,
+        "cache_leida": 61154,
+        "cache_escrita": 21828,
+        "razonamiento": 1958
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.15639,
+        "entrada": 3,
+        "salida": 5015,
+        "cache_leida": 0,
+        "cache_escrita": 4960,
+        "razonamiento": 2766
+      }
+    }
+  }
+}

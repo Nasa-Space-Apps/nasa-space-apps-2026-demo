@@ -1,0 +1,147 @@
+{
+  "evento_id": "ing072",
+  "titulo": "Primera pérdida de comunicación: Ingenuity falta a su cita con el rover (Sol 427–429, mayo 2022)",
+  "contexto_ampliado": "Ingenuity, el pequeño helicóptero solar de la NASA en Marte, enfrentó en mayo de 2022 su primera crisis seria de comunicación. El helicóptero, diseñado originalmente para volar durante la primavera marciana, se encontraba operando mucho más allá de los límites de su diseño cuando el invierno marciano comenzó a hacer estragos en su sistema de energía.\n\nTodo empezó la noche del sol 426. Según el blog oficial de la NASA, esa noche las baterías de Ingenuity no tenían carga suficiente para mantener toda la electrónica encendida, y el helicóptero empezó a sufrir microcortes de voltaje —llamados «brownouts»— que reiniciaron sus circuitos electrónicos. Varios factores se combinaron: el polvo marciano, que es electroestáticamente cargado y se adhiere al vidrio del panel solar, reducía la cantidad de energía que el helicóptero podía captar; a eso se sumaban la menor radiación solar propia del invierno y las temperaturas nocturnas extremadamente bajas.\n\nEl componente más afectado fue la FPGA (Field-Programmable Gate Array), un circuito programable que funciona como el «cerebro operativo» de Ingenuity. La FPGA gestiona el estado de la nave, enciende y apaga los distintos módulos de electrónica para maximizar el ahorro de energía, controla los calentadores que protegen los circuitos del frío marciano, mantiene la hora precisa del helicóptero y programa los momentos en que debe despertar para comunicarse con Perseverance. Cuando la carga de la batería cayó por debajo de un umbral crítico, la FPGA fue apagada. Al reiniciarse a la mañana siguiente —cuando el sol cargó de nuevo las baterías—, el reloj de Ingenuity ya no estaba sincronizado con el de Perseverance. Como describió el JPL: «Essentially, when Ingenuity thought it was time to contact Perseverance, the rover's base station wasn't listening.»\n\nLos soles 427 y 428 (3 y 4 de mayo de 2022) pasaron sin que Ingenuity pudiera comunicarse con Perseverance. La telemetría posterior confirmó que la pérdida de comunicación se debió a una carga insuficiente de la batería al caer la noche, lo que provocó un reinicio del reloj de misión. El equipo en la Tierra reaccionó ordenando a Perseverance que dedicara casi todo el sol 429 (5 de mayo) a escuchar cualquier señal del helicóptero. La estrategia funcionó: alrededor de las 11:45 de la mañana, hora local de Marte, Perseverance finalmente captó la señal de Ingenuity.\n\nLas noticias eran moderadamente alentadoras: el enlace de radio entre ambos vehículos era estable, las temperaturas de la nave estaban dentro de lo esperado, el panel solar estaba recargando la batería al ritmo normal para esa estación y la batería contenía un 41% de carga. Sin embargo, el problema de fondo era grave. Al atardecer, Ingenuity llegaba con aproximadamente un 68% de carga, pero necesitaba al menos un 70% para mantener todos los sistemas encendidos durante la noche. Ese déficit del 2% se esperaba que creciera hasta un 7% al alcanzar el solsticio de invierno marciano, alrededor del sol 500 en julio.\n\nLa situación era especialmente preocupante porque los componentes electrónicos del helicóptero estaban alcanzando temperaturas nocturnas de aproximadamente −80 °C (−112 °F), muy por debajo de sus límites de diseño. El equipo advirtió que el enfriamiento extremo y sostenido de la electrónica se cree que fue la causa del fin de las misiones de los rovers Spirit y Opportunity, lo que daba una idea del riesgo real que corría Ingenuity.\n\nLa NASA reconoció posteriormente que Ingenuity fue diseñado para operar en primavera y que no podía mantener sus calentadores encendidos durante las noches más frías del invierno. Los apagones de energía congelaban y reiniciaban periódicamente la computadora de vuelo, lo que obligó al equipo a rediseñar por completo las operaciones de invierno para poder seguir volando. Este episodio demostró tanto la vulnerabilidad de un vehículo operando fuera de sus condiciones de diseño como la capacidad del equipo de ingeniería para adaptar la misión sobre la marcha.",
+  "datos_reales": [
+    {
+      "afirmacion": "El sol 426 fue la primera noche en que Ingenuity experimentó microcortes de batería que reiniciaron su electrónica.",
+      "fuente_url": "https://science.nasa.gov/blog/ingenuity-adapts-for-mars-winter-operations/",
+      "cita": "Starting on the evening of Sol 426, we believe Ingenuity started experiencing overnight battery brownouts (drops in the battery's voltage), which reset the electronics.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La pérdida de comunicación los soles 427 y 428 fue causada por una carga de batería insuficiente que reinició el reloj de misión.",
+      "fuente_url": "https://science.nasa.gov/blog/ingenuity-adapts-for-mars-winter-operations/",
+      "cita": "Telemetry from Ingenuity confirmed that the loss of communications was due to insufficient battery state-of-charge (SOC) going into the night, which resulted in a reset of our mission clock.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Cuando la carga de la batería cayó por debajo de un umbral crítico, la FPGA (circuito programable de control) de Ingenuity fue apagada.",
+      "fuente_url": "https://www.space.com/mars-ingenuity-helicopter-blackout-dust",
+      "cita": "When the battery pack's state of charge dropped below a lower limit, the helicopter's field-programmable gate array (FPGA) was powered down.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La FPGA controla los calentadores, el tiempo de la nave y las sesiones de comunicación con Perseverance.",
+      "fuente_url": "https://www.universetoday.com/articles/martian-dust-is-starting-to-darken-ingenuitys-solar-panel",
+      "cita": "The FPGA manages Ingenuity's operational state, switching the other avionics elements on and off as needed to maximize power conservation. It also operates the heaters that enable the helicopter to survive frigid Martian nights, maintains precise spacecraft time, and controls when the helicopter is scheduled to wake up for communications sessions with Perseverance.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Perseverance escuchó activamente durante casi todo el sol 429 y recibió señal de Ingenuity alrededor de las 11:45 h hora local de Marte.",
+      "fuente_url": "https://www.space.com/mars-ingenuity-helicopter-blackout-dust",
+      "cita": "engineers commanded Perseverance to listen for the signal for nearly an entire Martian sol (day) on May 5, and finally heard from the helicopter around 11:45 a.m. local Mars time.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Cuando se restableció el contacto, la batería de Ingenuity tenía un 41% de carga y el enlace de radio era estable.",
+      "fuente_url": "https://www.space.com/mars-ingenuity-helicopter-blackout-dust",
+      "cita": "The radio link between Ingenuity and Perseverance was stable, spacecraft temperatures were within expectation, the solar array was recharging the battery at a rate expected for this season, and the battery was healthy, containing 41% of a full charge.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity llegaba al atardecer con ~68% de carga y necesitaba al menos 70% para sobrevivir la noche con todos los sistemas activos.",
+      "fuente_url": "https://science.nasa.gov/blog/ingenuity-adapts-for-mars-winter-operations/",
+      "cita": "Currently, we reach sunset with ~68% SOC, with an estimated need of at least 70% to keep everything powered overnight. Our 2% SOC deficit is expected to grow to a 7% deficit once we reach winter solstice (Sol 500 in July).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante las noches de invierno, los componentes electrónicos de Ingenuity alcanzaban temperaturas de aproximadamente -80 °C (-112 °F).",
+      "fuente_url": "https://science.nasa.gov/blog/ingenuity-adapts-for-mars-winter-operations/",
+      "cita": "ECM components are now thermal-cycling down to the ambient overnight temperatures of minus 112 °F (minus 80 °C).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo advirtió que el enfriamiento extremo de la electrónica es la causa probable del fin de las misiones Spirit y Opportunity.",
+      "fuente_url": "https://science.nasa.gov/blog/ingenuity-adapts-for-mars-winter-operations/",
+      "cita": "Cold-soaking electronics is believed to have caused the end of the Opportunity and Spirit Mars rover missions.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El polvo marciano es electroestáticamente cargado, lo que hace que se adhiera al panel solar de Ingenuity.",
+      "fuente_url": "https://www.universetoday.com/articles/martian-dust-is-starting-to-darken-ingenuitys-solar-panel",
+      "cita": "Martian dust is electrostatically charged, so it clings to the solar panel's glass.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity fue diseñado para operar en primavera; los apagones de energía en invierno congelaban y reiniciaban su computadora de vuelo.",
+      "fuente_url": "https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/",
+      "cita": "Designed to operate in spring, Ingenuity was unable to power its heaters throughout the night during the coldest parts of winter, resulting in the flight computer periodically freezing and resetting. These power 'brownouts' required the team to redesign Ingenuity's winter operations in order to keep flying.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Ingenuity Adapts for Mars Winter Operations (blog oficial, 27 mayo 2022)",
+      "url": "https://science.nasa.gov/blog/ingenuity-adapts-for-mars-winter-operations/",
+      "editor": "NASA Science / Teddy Tzanetos, JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars helicopter Ingenuity recovering from communications blackout spawned by dust",
+      "url": "https://www.space.com/mars-ingenuity-helicopter-blackout-dust",
+      "editor": "Space.com",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "After Three Years on Mars, NASA's Ingenuity Helicopter Mission Ends",
+      "url": "https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Martian Dust is Starting to Darken Ingenuity's Solar Panels",
+      "url": "https://www.universetoday.com/articles/martian-dust-is-starting-to-darken-ingenuitys-solar-panel",
+      "editor": "Universe Today",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "How the Ingenuity helicopter is battling the arrival of dusty Martian winter",
+      "url": "https://www.cnn.com/2022/06/06/world/ingenuity-helicopter-mars-winter-scn/",
+      "editor": "CNN",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "El dato [10] afirma que el umbral de activación de los calentadores se bajó 'de -15 °C a -40 °C', pero la cita de Space.com dice literalmente 'changed the point at which the battery turns on, to minus 40 degrees F (minus 40 degrees C)': no menciona -15 °C como valor original ni habla explícitamente de calentadores sino de la batería. La cifra -15 °C no tiene respaldo en ninguna fuente del dossier.",
+    "El dato [12] afirma que las condiciones difíciles durarían 'hasta alrededor del sol 600', pero la cita del blog de NASA solo dice 'until September/October' sin mencionar el sol 600. Esa equivalencia sol-fecha es una inferencia del investigador, no un dato de la fuente.",
+    "El dato [14] atribuye el blog oficial a 'Teddy Tzanetos, líder del equipo Ingenuity en JPL', pero la cita proporcionada no contiene esa atribución de autoría; solo incluye el texto sobre operar 'far outside our original design limits'.",
+    "El dato [15] afirma contacto diario 'hasta el sol 446', pero la cita del blog de NASA dice 'every sol since' de forma abierta, sin especificar sol 446 como punto final. El dato agrega una fecha de corte no presente en la fuente."
+  ],
+  "huecos": [
+    "No se pudo confirmar el valor exacto de tau (densidad de polvo atmosférico) registrado en Jezero Crater durante los soles 426–428, más allá de que era el pico estacional.",
+    "No hay datos de telemetría pública sobre la temperatura exacta de la batería en el momento del primer apagón del sol 426.",
+    "No se pudo confirmar si la reducción del umbral del calentador a -40 °C fue suficiente para evitar nuevas pérdidas de comunicación o si hubo más episodios similares antes del sol 500.",
+    "No se halló información sobre el impacto exacto de los ciclos de frío en cada componente individual del ECM (módulo de electrónica central) a lo largo del invierno.",
+    "El evento original menciona que el equipo bajó 'la temperatura a la que se encienden los calentadores' como ejemplo de comando para ahorrar energía. Tras descartar el dato [10] por discrepancia con su cita, no queda confirmado en las fuentes conservadas ni el valor original ni el nuevo de ese umbral.",
+    "El evento original no especifica cuántos vuelos había completado Ingenuity antes del sol 427, y ninguna fuente del dossier confirma la cifra de 28 vuelos ni los 6,9 km que el borrador narrativo incluía.",
+    "Tras descartar el dato [15], no queda confirmado en fuentes conservadas el protocolo de búsqueda matutina diaria que Perseverance habría seguido de forma rutinaria tras el sol 429 para reprogramar el reloj de Ingenuity cada día."
+  ],
+  "ideas_visuales": [
+    "Panel solar de Ingenuity visto de cerca, con polvo marciano adherido al vidrio por carga electrostática, bajo un cielo con bruma (dato [11]).",
+    "Diagrama tipo infografía del ciclo de brownout: batería descargándose al caer la noche → FPGA apagándose → reloj reiniciándose → reloj desincronizado con Perseverance al amanecer (datos [0], [2], [4]).",
+    "Perseverance estacionado en el cráter Jezero con su antena activa, escuchando durante un sol completo mientras Ingenuity permanece en silencio a lo lejos; un reloj marciano marca las 11:45 cuando aparece la señal (dato [5]).",
+    "Gráfico de barras comparando el 68% de carga al atardecer frente al 70% mínimo necesario, con una flecha indicando el déficit creciente hacia el solsticio de invierno (dato [7]).",
+    "Termómetro estilizado mostrando los -80 °C que alcanzaba la electrónica de Ingenuity durante las noches invernales, junto a siluetas de Spirit y Opportunity como referencia del riesgo (datos [8] y [9])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Cuando el sol del día siguiente cargó las baterías, el reloj de Ingenuity ya no estaba sincronizado con el rover, por lo que las llamadas no coincidían.",
+      "fuente_url": "https://www.space.com/mars-ingenuity-helicopter-blackout-dust",
+      "cita": "When the sun rose the next morning and the solar array began to charge the batteries, the helicopter's clock was no longer in sync with the clock aboard the rover. Essentially, when Ingenuity thought it was time to contact Perseverance, the rover's base station wasn't listening.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

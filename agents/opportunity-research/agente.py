@@ -1,10 +1,12 @@
-"""Agente investigador de eventos de Opportunity.
+"""Agente investigador de eventos de una misión espacial.
 
-Uso:
+Uso (cualquier misión; las salidas van a misiones/<id>/dossiers/ y nunca se mezclan con las de otra misión):
+  python agente.py --mision spirit --evento spi018          (usa timelines_v0/linea_de_tiempo_spirit.json)
+  python agente.py ../../timelines_v0/linea_de_tiempo_spirit.json --mision spirit --evento spi018
+Uso heredado (Opportunity, antes del orden por misión; salida en salida/<id>/):
   python agente.py ../../story/data/historia_opportunity.json --evento opp018
-  python agente.py ../../story/data/juego_opportunity.json --evento n08
   python agente.py mi_evento.json                     (un JSON con un solo evento)
-Opciones: --proveedor plan|api|bedrock (o PROVEEDOR_LLM en .env), --fallback-plan (si Bedrock falla
+Opciones: --mision ID, --publico TEXTO, --proveedor plan|api|bedrock (o PROVEEDOR_LLM en .env), --fallback-plan (si Bedrock falla
           antes de empezar, reintenta con el plan de Claude), --plan (atajo de --proveedor plan), --max-turnos 30,
           --forzar (repetir un evento ya procesado; guarda la versión anterior en salida/<id>/anteriores/)
 Si el evento ya tiene dossier y no se pasa --forzar, no se ejecuta nada (código de salida 2).
@@ -24,19 +26,22 @@ from claude_agent_sdk import AssistantMessage, ClaudeAgentOptions, ResultMessage
 
 import herramientas as H
 import costos
+import mision as misiones
 import prompts
 import proveedores
 import revision
 from esquema import Dossier
 
 BASE = Path(__file__).parent
-SALIDA = BASE / "salida"
+SALIDA = BASE / "salida"  # solo para el uso heredado sin --mision
 
-SISTEMA, VERSION_SISTEMA = prompts.sistema()
+
+def leer_json(ruta) -> dict:
+    return json.loads(Path(ruta).read_text(encoding="utf-8"))
 
 
 def cargar_evento(ruta: str, evento_id: str | None) -> dict:
-    d = json.loads(Path(ruta).read_text(encoding="utf-8"))
+    d = leer_json(ruta)
     lista = d.get("eventos") or d.get("nodos")
     if lista is None:
         return d
@@ -86,10 +91,11 @@ class ErrorProveedor(Exception):
     """El proveedor falló antes de que el agente hiciera trabajo útil (credenciales, acceso al modelo, red)."""
 
 
-async def investigar(evento: dict, max_turnos: int, prov: proveedores.Proveedor) -> tuple[Dossier, str, dict]:
+async def investigar(evento: dict, max_turnos: int, prov: proveedores.Proveedor, contexto: dict | None = None) -> tuple[Dossier, str, dict]:
     proveedores.aplicar(prov)
+    sistema, version_sistema = prompts.sistema(contexto)
     opts = ClaudeAgentOptions(
-        model=prov.modelo, system_prompt=SISTEMA, mcp_servers={"inv": H.SERVER}, allowed_tools=H.NOMBRES, tools=[],
+        model=prov.modelo, system_prompt=sistema, mcp_servers={"inv": H.SERVER}, allowed_tools=H.NOMBRES, tools=[],
         max_turns=max_turnos, setting_sources=[], cwd=str(BASE), env=prov.env,
         max_budget_usd=float(os.environ.get("PRESUPUESTO_USD", "2.0")) if prov.con_tope else None,
         output_format={"type": "json_schema", "schema": Dossier.model_json_schema()},
@@ -128,16 +134,16 @@ async def investigar(evento: dict, max_turnos: int, prov: proveedores.Proveedor)
             raise ErrorProveedor("el agente no devolvió nada")
         sys.exit("El agente no devolvió un dossier válido.")
     met["llamadas_herramientas"] = llamadas
-    met["prompts"] = {"investigador": VERSION_SISTEMA, "usuario": version_usuario}
+    met["prompts"] = {"investigador": version_sistema, "usuario": version_usuario}
     met["proveedor"] = prov.nombre
     return Dossier.model_validate(salida), prov.etiqueta, met
 
 
-def ejecutar(ev: dict, max_turnos: int, cadena: list) -> tuple[Dossier, str, dict]:
+def ejecutar(ev: dict, max_turnos: int, cadena: list, contexto: dict | None = None) -> tuple[Dossier, str, dict]:
     """Prueba cada proveedor de la cadena; pasa al siguiente solo si el anterior falla antes de empezar."""
     for n, p in enumerate(cadena):
         try:
-            d, modo, met = asyncio.run(investigar(ev, max_turnos, p))
+            d, modo, met = asyncio.run(investigar(ev, max_turnos, p, contexto))
             if n:
                 met["fallback_desde"] = cadena[0].nombre
             return d, modo, met
@@ -171,7 +177,9 @@ def guardar(d: Dossier, modo: str, met: dict, carpeta: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("archivo")
+    ap.add_argument("archivo", nargs="?", help="JSON con los eventos; con --mision, por defecto su línea de tiempo base")
+    ap.add_argument("--mision", help="id de la misión: las salidas van a misiones/<id>/dossiers/")
+    ap.add_argument("--publico", help="público de la historia (por defecto el de la ficha o 5.º de secundaria)")
     ap.add_argument("--evento")
     ap.add_argument("--max-turnos", type=int, default=30)
     ap.add_argument("--proveedor", choices=proveedores.VALIDOS, help="plan de Claude, API key de Anthropic o Amazon Bedrock")
@@ -180,9 +188,22 @@ def main():
     ap.add_argument("--forzar", action="store_true", help="volver a investigar un evento ya procesado (guarda la versión anterior)")
     a = ap.parse_args()
     proveedores.cargar_env(BASE / ".env")
-    ev = cargar_evento(a.archivo, a.evento)
+    if a.mision:
+        try:
+            rutas = misiones.rutas(a.mision)
+        except ValueError as e:
+            sys.exit(str(e))
+        archivo, salida_dir = a.archivo or str(rutas["base"]), rutas["dossiers"]
+    else:
+        archivo, salida_dir = a.archivo, SALIDA
+    if not archivo:
+        sys.exit("Indica el archivo de eventos o --mision ID.")
+    if not Path(archivo).exists():
+        sys.exit(f"No existe {archivo}. Si la misión no tiene línea de tiempo base, hay que construirla primero (Fase 1).")
+    ev = cargar_evento(archivo, a.evento)
+    contexto = misiones.contexto_prompt(a.mision, leer_json(archivo), a.publico)
     eid = ev.get("id", "evento")
-    carpeta = SALIDA / eid
+    carpeta = salida_dir / eid
     if (carpeta / "dossier.json").exists() and not a.forzar:
         print(f"El evento {eid} ya fue procesado: {carpeta / 'dossier.json'}\n"
               f"No se ejecutó nada y no se gastó cupo. Para investigarlo de nuevo usa --forzar "
@@ -195,14 +216,14 @@ def main():
     cadena = [prov]
     if prov.nombre != "plan" and (a.fallback_plan or os.environ.get("FALLBACK_PLAN", "").lower() in ("1", "true", "si", "sí")):
         cadena.append(proveedores.resolver("plan"))
-    d, modo, met = ejecutar(ev, a.max_turnos, cadena)
+    d, modo, met = ejecutar(ev, a.max_turnos, cadena, contexto)
     # Red de seguridad: el borrador ya costó dinero; se guarda antes de revisar y de escribir la salida.
-    (BASE / "cache").mkdir(exist_ok=True)
+    (BASE / "cache").mkdir(parents=True, exist_ok=True)
     (BASE / "cache" / f"borrador_{eid}.json").write_text(d.model_dump_json(indent=2), encoding="utf-8")
     usado = next((p for p in cadena if p.nombre == met.get("proveedor")), None)
     if usado and usado.modelo_revisor:
         print(f"Revisión editorial con {usado.modelo_revisor}...")
-        d, met_rev = asyncio.run(revision.revisar(ev, d, usado))
+        d, met_rev = asyncio.run(revision.revisar(ev, d, usado, contexto))
         met["revision"] = met_rev
         met["costo_usd_referencia_total"] = (met.get("costo_usd_referencia") or 0) + (met_rev.get("costo_usd_referencia") or 0)
         if met_rev.get("error"):
