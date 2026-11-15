@@ -39,7 +39,8 @@ export default function Rover({ config }: { config: RoverConfig }) {
     // Space held = go to the next checkpoint and stop there (release and press again to continue);
     // a timeline click (game.travel) = autopilot to that checkpoint, forward or backward, passing the ones in between.
     const stops = route.stops;
-    if (!input.go) {
+    const go = input.go && !game.hold; // the scene can wait behind the comic pages of the story
+    if (!go) {
       st.locked = false;
       st.goal = null;
     }
@@ -51,7 +52,7 @@ export default function Rover({ config }: { config: RoverConfig }) {
       dir = Math.sign(goal - game.s);
       cruise = config.boostSpeed;
       if (dir === 0) game.travel = null;
-    } else if (input.go && !st.locked) {
+    } else if (go && !st.locked) {
       st.goal ??= stops.find((x) => x > game.s + 0.5) ?? null; // fixed until we get there (it must not jump to the next stop while braking)
       if (st.goal !== null) {
         goal = st.goal;
@@ -75,7 +76,7 @@ export default function Rover({ config }: { config: RoverConfig }) {
       game.s = goal; // arrived: snap onto the checkpoint
       game.speed = 0;
       game.travel = null;
-      st.locked = input.go;
+      st.locked = go;
       st.goal = null;
     }
 

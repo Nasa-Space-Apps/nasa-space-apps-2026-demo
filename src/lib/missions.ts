@@ -1,7 +1,8 @@
 import { THEME } from "./themes";
 import type { TerrainStyle } from "./terrain";
-import { OPPORTUNITY_CHECKPOINTS, PERSEVERANCE_CHECKPOINTS, SEV_CHECKPOINTS, type Checkpoint } from "./checkpoints";
+import { PERSEVERANCE_CHECKPOINTS, SEV_CHECKPOINTS, type Checkpoint } from "./checkpoints";
 import { BEAGLE2_CHECKPOINTS, INGENUITY_CHECKPOINTS, INSIGHT_CHECKPOINTS, SPIRIT_CHECKPOINTS } from "./checkpoints-demo";
+import { OPPORTUNITY_STORY_CHECKPOINTS } from "./opportunity";
 import type { VehicleModel, VehiclePalette } from "./vehicles";
 
 export type RoverConfig = {
@@ -73,8 +74,8 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: OPPORTUNITY_CHECKPOINTS,
-    checkpointRadius: 18,
+    checkpoints: OPPORTUNITY_STORY_CHECKPOINTS, // the real story: 13 Mars events (public/models/opportunity/story.json); the 5 before the landing are comic pages
+    checkpointRadius: 15, // 13 stops 36–130 u apart
   },
   {
     id: "sev",

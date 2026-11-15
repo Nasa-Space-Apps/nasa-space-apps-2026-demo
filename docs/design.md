@@ -96,6 +96,10 @@ Siguen la estética de **3 tonos de un solo color** sin contornos ni degradados 
 - **`prefers-reduced-motion`**: `globals.css` reduce todas las transiciones a ~0.
 - Los `@keyframes` nuevos no los recoge el servidor de desarrollo: usa transiciones (`ease()` de `lib/ui.ts`, `Reveal`).
 
+## Cómic de la historia (`components/Comic.tsx`, hito 36)
+
+Las páginas de la historia de Opportunity siguen el lenguaje de ponpon-mania.com/chapter/3: **papel crema sobre el campo azul**, con **manchas rosa** detrás (aquí flotan y se mueven con cada página) y una **píldora de tinta** abajo (título + progreso rosa + botones redondos `.ui-fab-sm`). Cada página: marco de tinta (`stroke`) con la **ilustración de IA** a página completa (4:5), un **sello de fecha** girado −3° (entra con rebote), el contador `n/N` y un **recuadro de título + resumen** girado +0,5° que sube con rebote. Las páginas vecinas se ven más pequeñas y pálidas (0,8 / opacidad 0,6) y giradas; la activa se endereza. La ilustración hace un zoom lento al llegar. Todo con `THEME.pop`; `prefers-reduced-motion` lo reduce. Las ilustraciones se rotulan **«AI-generated illustration»** (no son fotos).
+
 ## Créditos — «Created by» (oculto)
 
 Sin cambios: `Credits.tsx`/`Portrait.tsx` siguen sin montarse (ver [history.md](history.md), hito 25). Sus retratos usan `THEME.portrait` (azules); no se han adaptado al nuevo tema.

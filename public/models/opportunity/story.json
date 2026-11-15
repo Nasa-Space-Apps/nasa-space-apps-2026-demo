@@ -1,0 +1,759 @@
+{
+  "version": 1,
+  "mission": "opportunity",
+  "language": "en",
+  "title": "Opportunity: from an idea to the last signal",
+  "note": "Illustrations are AI-generated artwork based on the verified events; every fact and its source come from the research dossiers (agents/opportunity-research). Narration is written for short, clear audio (~50 words).",
+  "parts": [
+    {
+      "id": "intro",
+      "title": "Earth",
+      "blurb": "Before Mars: the idea, the decision, the launch and the landing, told as a comic.",
+      "beats": [
+        "opp001",
+        "opp005",
+        "opp008",
+        "opp015",
+        "opp018"
+      ]
+    },
+    {
+      "id": "mars",
+      "title": "Mars",
+      "blurb": "Fourteen years on Meridiani Planum: drive the rover from one story to the next.",
+      "beats": [
+        "opp021",
+        "opp025",
+        "opp028",
+        "opp030",
+        "opp033",
+        "opp045",
+        "opp047",
+        "opp052",
+        "opp054",
+        "opp059",
+        "opp062",
+        "opp070",
+        "opp072"
+      ]
+    },
+    {
+      "id": "outro",
+      "title": "Legacy",
+      "blurb": "After the last signal.",
+      "beats": [
+        "opp077",
+        "opp081"
+      ]
+    }
+  ],
+  "beats": [
+    {
+      "id": "opp001",
+      "n": 1,
+      "part": "intro",
+      "date": "1987",
+      "title": "A robot geologist",
+      "summary": "Cornell scientist Steve Squyres wants to answer one question: was Mars once wet? His idea is a robot geologist on wheels.",
+      "narration": "Nineteen eighty-seven. At Cornell University, scientist Steve Squyres dreams up a robot geologist for Mars. Over the next ten years he writes four proposals to NASA. Three are rejected. He keeps improving the idea, because he wants to answer one question: was Mars once wet?",
+      "facts": [
+        [
+          "Scientist",
+          "Steve Squyres"
+        ],
+        [
+          "Proposals",
+          "4 · 1987–1997"
+        ],
+        [
+          "Question",
+          "Was Mars wet?"
+        ]
+      ],
+      "source": {
+        "label": "NASA Image and Video Library",
+        "title": "KSC-03pd1834 - Steve Squyres con modelo de rover",
+        "url": "https://images.nasa.gov/details/KSC-03pd1834"
+      },
+      "image": "/models/opportunity/images/opp001.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp001.mp3"
+    },
+    {
+      "id": "opp005",
+      "n": 2,
+      "part": "intro",
+      "date": "2000",
+      "title": "A gray clue from orbit",
+      "summary": "From orbit, an instrument finds a huge patch of gray hematite on Meridiani Planum, a mineral that often forms in water.",
+      "narration": "Year two thousand. An instrument called TES, orbiting Mars aboard Mars Global Surveyor, spots a huge patch of gray hematite on Meridiani Planum. Hematite is an iron mineral that often forms in water. And the plain looks flat and safe. Scientists have found their landing site.",
+      "facts": [
+        [
+          "Instrument",
+          "TES"
+        ],
+        [
+          "Mineral",
+          "Gray hematite"
+        ],
+        [
+          "Place",
+          "Meridiani Planum"
+        ]
+      ],
+      "source": {
+        "label": "NASA Technical Reports Server (Johnson Space Center)",
+        "title": "A First Look at the Mineralogy and Geochemistry of the MER-B Landing Site in Meridiani Planum",
+        "url": "https://ntrs.nasa.gov/citations/20040058029"
+      },
+      "image": "/models/opportunity/images/opp005.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp005.mp3"
+    },
+    {
+      "id": "opp008",
+      "n": 3,
+      "part": "intro",
+      "date": "Aug 2000",
+      "title": "What if there are two?",
+      "summary": "NASA plans a single rover for 2003. Then comes a bolder idea: two identical rovers, sent to two very different places.",
+      "narration": "Summer, two thousand. NASA plans to send one rover to Mars in 2003. Then a bold question changes everything: what if we send two? On August tenth, NASA announces it. Two identical rovers will go to two very different places.",
+      "facts": [
+        [
+          "Announced",
+          "10 Aug 2000"
+        ],
+        [
+          "Rovers",
+          "2 identical"
+        ],
+        [
+          "Launch",
+          "2003"
+        ]
+      ],
+      "source": {
+        "label": "JPL, 10 ago 2000",
+        "title": "NASA Plans to Send Rover Twins to Mars in 2003",
+        "url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/"
+      },
+      "image": "/models/opportunity/images/opp008.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp008.mp3"
+    },
+    {
+      "id": "opp015",
+      "n": 4,
+      "part": "intro",
+      "date": "Jul 7, 2003",
+      "title": "Liftoff at night",
+      "summary": "Delayed by cracked insulation, a battery cell and a valve, Opportunity races the clock and lifts off on a Delta II Heavy.",
+      "narration": "July seventh, 2003. Opportunity must launch before July fifteenth, or it misses its window to Mars. Cracked insulation, a faulty battery cell and a bad valve cause delay after delay. Finally, at eleven eighteen at night, a Delta Two Heavy lifts off from Cape Canaveral.",
+      "facts": [
+        [
+          "Rocket",
+          "Delta II Heavy"
+        ],
+        [
+          "Liftoff",
+          "11:18 pm EDT"
+        ],
+        [
+          "Deadline",
+          "15 Jul 2003"
+        ]
+      ],
+      "source": {
+        "label": "NASA Science",
+        "title": "Opportunity (MER-B): ficha oficial de misión",
+        "url": "https://science.nasa.gov/mission/mer-opportunity"
+      },
+      "image": "/models/opportunity/images/opp015.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp015.mp3"
+    },
+    {
+      "id": "opp018",
+      "n": 5,
+      "part": "intro",
+      "date": "Jan 24, 2004",
+      "title": "Six minutes of fall",
+      "summary": "Parachute, rockets and airbags. At 9:05 pm in Pasadena, the first signal from the surface arrives: Opportunity has landed.",
+      "narration": "January twenty-fourth, 2004. Opportunity hits the atmosphere of Mars at about five thousand four hundred meters per second. Parachute, rockets, airbags: six minutes of fall. At nine oh five pm, mission control receives a signal from the surface. Opportunity is alive, and bouncing across Mars.",
+      "facts": [
+        [
+          "Entry speed",
+          "~5,400 m/s"
+        ],
+        [
+          "Signal",
+          "9:05 pm PST"
+        ],
+        [
+          "Landing",
+          "Eagle Crater"
+        ]
+      ],
+      "source": {
+        "label": "JPL/NASA",
+        "title": "NASA Hears from Opportunity Rover on Mars",
+        "url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/"
+      },
+      "image": "/models/opportunity/images/opp018.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp018.mp3"
+    },
+    {
+      "id": "opp021",
+      "n": 6,
+      "part": "mars",
+      "date": "Mar 2, 2004",
+      "place": "Eagle Crater",
+      "title": "Rocks soaked in water",
+      "summary": "Opportunity lands beside an outcrop called El Capitan. Its minerals prove that liquid water once soaked these rocks.",
+      "narration": "March second, 2004. Opportunity has landed next to a rock outcrop called El Capitan. Inside it, the rover finds jarosite, a mineral that forms in water. At NASA headquarters, Steve Squyres announces the news: the rocks of Meridiani Planum were once soaked in liquid water.",
+      "facts": [
+        [
+          "Outcrop",
+          "El Capitan"
+        ],
+        [
+          "Mineral",
+          "Jarosite"
+        ],
+        [
+          "Announced",
+          "2 Mar 2004"
+        ]
+      ],
+      "source": {
+        "label": "NASA/NSSDC",
+        "title": "Opportunity Rover Finds Strong Evidence Meridiani Planum Was Wet (comunicado 2004-074)",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html"
+      },
+      "image": "/models/opportunity/images/opp021.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp021.mp3",
+      "route": {
+        "x": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "opp025",
+      "n": 7,
+      "part": "mars",
+      "date": "Apr 2004",
+      "place": "Near Fram Crater",
+      "title": "Blueberries",
+      "summary": "The ground is sprinkled with tiny dark spheres of hematite. Scientists nickname them blueberries: another fingerprint of water.",
+      "narration": "April two thousand four. Near Fram Crater, the ground is sprinkled with tiny dark spheres of hematite. Scientists call them blueberries. They are thought to have grown inside rock soaked in water, then spilled out as the rock wore away. Another fingerprint of a wet Mars.",
+      "facts": [
+        [
+          "Nickname",
+          "Blueberries"
+        ],
+        [
+          "Mineral",
+          "Hematite"
+        ],
+        [
+          "Place",
+          "Fram Crater"
+        ]
+      ],
+      "source": {
+        "label": "NASA Science",
+        "title": "MER Science Highlights — Finding Signs of Water and Conditions for Life",
+        "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/"
+      },
+      "image": "/models/opportunity/images/opp025.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp025.mp3",
+      "route": {
+        "x": -93,
+        "z": -12
+      }
+    },
+    {
+      "id": "opp028",
+      "n": 8,
+      "part": "mars",
+      "date": "Nov 2004",
+      "place": "Endurance Crater",
+      "title": "Burns Cliff",
+      "summary": "Inside Endurance Crater, Opportunity photographs a wall of layered rock in a giant panorama of forty-six images.",
+      "narration": "November 2004, inside Endurance Crater. Opportunity rolls to the foot of Burns Cliff, a wall of finely layered rock. Over eight days it takes forty-six images to build one giant panorama. Every layer is a page in the story of the wet past of Mars.",
+      "facts": [
+        [
+          "Crater",
+          "~130 m wide"
+        ],
+        [
+          "Panorama",
+          "46 images"
+        ],
+        [
+          "Sols",
+          "287–294"
+        ]
+      ],
+      "source": {
+        "label": "NASA/JPL",
+        "title": "PIA07065: Opportunity at the Wall (3-D)",
+        "url": "https://www.jpl.nasa.gov/images/pia07065-opportunity-at-the-wall-3-d"
+      },
+      "image": "/models/opportunity/images/opp028.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp028.mp3",
+      "route": {
+        "x": -37,
+        "z": -74,
+        "via": [
+          [
+            -58,
+            -8
+          ],
+          [
+            -26,
+            -32
+          ]
+        ]
+      }
+    },
+    {
+      "id": "opp030",
+      "n": 9,
+      "part": "mars",
+      "date": "Jan 6, 2005",
+      "place": "Heat Shield Rock",
+      "title": "A rock from the sky",
+      "summary": "Beside its own discarded heat shield, Opportunity finds a pitted rock of iron and nickel: the first meteorite found on another planet.",
+      "narration": "January 2005. Opportunity drives to inspect its own discarded heat shield, and finds a surprise. A dark, pitted rock, the size of a basketball. It is made of iron and nickel. It is a meteorite, the first one ever identified on another planet.",
+      "facts": [
+        [
+          "Sol",
+          "339"
+        ],
+        [
+          "Size",
+          "~31 cm"
+        ],
+        [
+          "Metal",
+          "Iron + nickel"
+        ]
+      ],
+      "source": {
+        "label": "NASA/JPL-Caltech/Cornell",
+        "title": "Iron Meteorite on Mars – NASA Science",
+        "url": "https://science.nasa.gov/resource/iron-meteorite-on-mars/"
+      },
+      "image": "/models/opportunity/images/opp030.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp030.mp3",
+      "route": {
+        "x": 32,
+        "z": -84
+      }
+    },
+    {
+      "id": "opp033",
+      "n": 10,
+      "part": "mars",
+      "date": "Apr 26, 2005",
+      "place": "Purgatory Dune",
+      "title": "Stuck in the sand",
+      "summary": "Driving backwards, the rover sinks into a small dune. Engineers test a twin rover on Earth and free it after almost five weeks.",
+      "narration": "April twenty-sixth, 2005. Driving backwards, Opportunity sinks its wheels into a small dune called Purgatory. On Earth, engineers test a twin rover in a sandbox for over a week. Then they free Opportunity, slowly, in almost five weeks. The mission goes on.",
+      "facts": [
+        [
+          "Dune",
+          "~30 cm high"
+        ],
+        [
+          "Wheels sunk",
+          "10+ cm"
+        ],
+        [
+          "Stuck",
+          "Sols 446–484"
+        ]
+      ],
+      "source": {
+        "label": "NASA",
+        "title": "Opportunity Sol 446 Position, with Relative Heights (NASA Science)",
+        "url": "https://science.nasa.gov/?p=940660"
+      },
+      "image": "/models/opportunity/images/opp033.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp033.mp3",
+      "route": {
+        "x": 114,
+        "z": -93
+      }
+    },
+    {
+      "id": "opp045",
+      "n": 11,
+      "part": "mars",
+      "date": "May 25, 2011",
+      "place": "Meridiani Planum",
+      "title": "Goodbye, Spirit",
+      "summary": "NASA ends the mission of Spirit, Opportunity's twin. Planned for 90 sols, it worked for more than six years.",
+      "narration": "May twenty-fifth, 2011. NASA ends the mission of Spirit, Opportunity's twin. Planned for ninety sols, Spirit worked for more than six years. Its last message came in March 2010. Now Opportunity is on its own, and it keeps rolling.",
+      "facts": [
+        [
+          "Spirit's life",
+          "6 yr 2 mo"
+        ],
+        [
+          "Distance",
+          "7.73 km"
+        ],
+        [
+          "Planned",
+          "90 sols"
+        ]
+      ],
+      "source": {
+        "label": "NASA Science",
+        "title": "NASA Science: Mars Exploration Rover – Spirit",
+        "url": "https://science.nasa.gov/mission/mer-spirit/"
+      },
+      "image": "/models/opportunity/images/opp045.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp045.mp3",
+      "route": {
+        "x": 203,
+        "z": -177
+      }
+    },
+    {
+      "id": "opp047",
+      "n": 12,
+      "part": "mars",
+      "date": "Nov 2011",
+      "place": "Cape York",
+      "title": "The Homestake vein",
+      "summary": "On the rim of Endeavour Crater, a bright mineral vein as wide as a thumb: gypsum left by water flowing through rock.",
+      "narration": "November 2011, Cape York. On the rim of Endeavour Crater, Opportunity finds a bright mineral vein called Homestake, as wide as a thumb. It is calcium sulfate, probably gypsum, left behind by water that once flowed through cracks in the rock. The team announces it in December.",
+      "facts": [
+        [
+          "Vein",
+          "40–50 cm long"
+        ],
+        [
+          "Mineral",
+          "Gypsum (likely)"
+        ],
+        [
+          "Announced",
+          "7 Dec 2011"
+        ]
+      ],
+      "source": {
+        "label": "NASA Jet Propulsion Laboratory",
+        "title": "NASA Mars Rover Finds Mineral Vein Deposited by Water",
+        "url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water"
+      },
+      "image": "/models/opportunity/images/opp047.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp047.mp3",
+      "route": {
+        "x": 189,
+        "z": -84
+      }
+    },
+    {
+      "id": "opp052",
+      "n": 13,
+      "part": "mars",
+      "date": "May 15, 2013",
+      "place": "Endeavour west rim",
+      "title": "Beating the moon buggy",
+      "summary": "An 80-meter drive pushes the odometer past the Apollo 17 moon buggy: the most traveled NASA vehicle on another world.",
+      "narration": "May fifteenth, 2013. An eighty-meter drive, in reverse, pushes Opportunity's odometer past the record of the Apollo Seventeen moon buggy. Astronaut Eugene Cernan says the record was made to be broken, and he is proud to pass the torch to Opportunity.",
+      "facts": [
+        [
+          "Sol",
+          "3309"
+        ],
+        [
+          "Odometer",
+          "35.76 km"
+        ],
+        [
+          "Beat Apollo 17 by",
+          "16 m"
+        ]
+      ],
+      "source": {
+        "label": "NASA/JPL-Caltech",
+        "title": "View Back at Record-Setting Drive by Opportunity (Science NASA)",
+        "url": "https://science.nasa.gov/resource/view-back-at-record-setting-drive-by-opportunity/"
+      },
+      "image": "/models/opportunity/images/opp052.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp052.mp3",
+      "route": {
+        "x": 165,
+        "z": -13,
+        "via": [
+          [
+            168,
+            -58
+          ]
+        ]
+      }
+    },
+    {
+      "id": "opp054",
+      "n": 14,
+      "part": "mars",
+      "date": "Jan 8, 2014",
+      "place": "Solander Point",
+      "title": "The jelly doughnut",
+      "summary": "A small rock, white outside and deep red inside, appears where nothing was four days before. A rover wheel had flipped it.",
+      "narration": "January 2014. A small rock, white outside and deep red inside, shows up where there was nothing four days earlier. Scientists call it the jelly doughnut. The mystery is solved: Opportunity's own wheel had flipped a piece of a nearby rock. Its chemistry is rich in manganese and sulfur.",
+      "facts": [
+        [
+          "Size",
+          "~4 cm"
+        ],
+        [
+          "Rich in",
+          "Manganese + sulfur"
+        ],
+        [
+          "Nickname",
+          "Jelly doughnut"
+        ]
+      ],
+      "source": {
+        "label": "NASA",
+        "title": "Mars Rover Heads Uphill After Solving 'Doughnut' Riddle – NASA News Release",
+        "url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/"
+      },
+      "image": "/models/opportunity/images/opp054.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp054.mp3",
+      "route": {
+        "x": 183,
+        "z": 99,
+        "via": [
+          [
+            160,
+            80
+          ]
+        ]
+      }
+    },
+    {
+      "id": "opp059",
+      "n": 15,
+      "part": "mars",
+      "date": "Dec 2014",
+      "place": "Endeavour rim",
+      "title": "A rover that forgets",
+      "summary": "Opportunity's flash memory starts to fail. Engineers work around it and rewrite the software to ignore the damaged bank.",
+      "narration": "December 2014. After a decade on Mars, Opportunity starts to forget. Its flash memory glitches and keeps resetting the computer. Engineers switch the memory off, work without it, then rewrite the software to ignore the damaged bank. In March 2015, the fix works.",
+      "facts": [
+        [
+          "Problem",
+          "Flash memory"
+        ],
+        [
+          "Damaged",
+          "Bank 7"
+        ],
+        [
+          "Fixed",
+          "20 Mar 2015"
+        ]
+      ],
+      "source": {
+        "label": "NASA/JPL",
+        "title": "Opportunity Working in No-Flash Mode for Now",
+        "url": "https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/"
+      },
+      "image": "/models/opportunity/images/opp059.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp059.mp3",
+      "route": {
+        "x": 225,
+        "z": 175
+      }
+    },
+    {
+      "id": "opp062",
+      "n": 16,
+      "part": "mars",
+      "date": "Mar 24, 2015",
+      "place": "Marathon Valley",
+      "title": "A marathon on Mars",
+      "summary": "A 46-meter drive takes the odometer past 42.195 kilometers: the first marathon on another world. Then, Marathon Valley.",
+      "narration": "March twenty-fourth, 2015. After a short forty-six-meter drive, the odometer reads forty-two point one nine eight kilometers. A full marathon, the first ever completed on another world. Opportunity then explores Marathon Valley, until 2016.",
+      "facts": [
+        [
+          "Sol",
+          "3968"
+        ],
+        [
+          "Odometer",
+          "42.198 km"
+        ],
+        [
+          "Valley",
+          "~330 m long"
+        ]
+      ],
+      "source": {
+        "label": "NASA Science / JPL-Caltech",
+        "title": "Opportunity Rover's Full Marathon-Length Traverse",
+        "url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/"
+      },
+      "image": "/models/opportunity/images/opp062.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp062.mp3",
+      "route": {
+        "x": 255,
+        "z": 189
+      }
+    },
+    {
+      "id": "opp070",
+      "n": 17,
+      "part": "mars",
+      "date": "May 30, 2018",
+      "place": "Perseverance Valley",
+      "title": "The storm approaches",
+      "summary": "An orbiter spots a dust storm racing toward Opportunity. In two weeks it covers a quarter of Mars, and the sunlight fades.",
+      "narration": "May thirtieth, 2018. Orbiting high above, the Mars Reconnaissance Orbiter spots a dust storm racing toward Opportunity. In two weeks it covers a quarter of the planet. The sky darkens, and the solar-powered rover's energy falls from six hundred forty-five watt-hours to just twenty-two.",
+      "facts": [
+        [
+          "Spotted",
+          "30 May 2018"
+        ],
+        [
+          "Storm size",
+          "~35 million km²"
+        ],
+        [
+          "Power",
+          "645 → 22 Wh"
+        ]
+      ],
+      "source": {
+        "label": "NASA/JPL",
+        "title": "Opportunity Hunkers Down During Dust Storm (actualizado 26 jul 2018)",
+        "url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/"
+      },
+      "image": "/models/opportunity/images/opp070.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp070.mp3",
+      "route": {
+        "x": 165,
+        "z": 198
+      }
+    },
+    {
+      "id": "opp072",
+      "n": 18,
+      "part": "mars",
+      "date": "Jun 10, 2018",
+      "place": "Perseverance Valley",
+      "title": "The last signal",
+      "summary": "Opportunity finishes a 354-image panorama, sends its final data, and falls silent. It was sol 5111.",
+      "narration": "June tenth, 2018. Sol five thousand one hundred eleven. In Perseverance Valley, Opportunity finishes its last panorama: three hundred fifty-four images. The final ones are in black and white, because the storm left no time for color filters. Then it sends its last data to Earth. After that, silence.",
+      "facts": [
+        [
+          "Sol",
+          "5111"
+        ],
+        [
+          "Panorama",
+          "354 images"
+        ],
+        [
+          "Place",
+          "Perseverance Valley"
+        ]
+      ],
+      "source": {
+        "label": "NASA Science",
+        "title": "Opportunity Rover's Final Mars Images (panorama 354 imágenes)",
+        "url": "https://science.nasa.gov/?p=140583"
+      },
+      "image": "/models/opportunity/images/opp072.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp072.mp3",
+      "route": {
+        "x": 60,
+        "z": 205
+      }
+    },
+    {
+      "id": "opp077",
+      "n": 19,
+      "part": "outro",
+      "date": "Feb 12–13, 2019",
+      "title": "Farewell, Opportunity",
+      "summary": "After eight months of trying, engineers send the last commands. The next day, NASA declares the mission complete.",
+      "narration": "February twelfth, 2019. After eight months of trying, engineers send Opportunity its last commands while the song I'll Be Seeing You plays in the room. No answer comes. The next day NASA declares the mission complete. John Callas says: Farewell, Opportunity, and well done.",
+      "facts": [
+        [
+          "Planned life",
+          "90 sols"
+        ],
+        [
+          "Lasted",
+          "~15 years"
+        ],
+        [
+          "Images",
+          "217,000+"
+        ]
+      ],
+      "source": {
+        "label": "NASA Science / JPL",
+        "title": "NASA's Opportunity Rover Mission on Mars Comes to End",
+        "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+      },
+      "image": "/models/opportunity/images/opp077.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp077.mp3"
+    },
+    {
+      "id": "opp081",
+      "n": 20,
+      "part": "outro",
+      "date": "Oct 11, 2026",
+      "title": "The torch passes on",
+      "summary": "Perseverance passes Opportunity's distance record. It needs five and a half years instead of almost fifteen, driving itself.",
+      "narration": "October eleventh, 2026. Perseverance passes the distance record of Opportunity: forty-five point two two kilometers. It needs only five and a half years, instead of almost fifteen, because it drives itself with AutoNav. The torch has passed on, and the story of exploration goes on.",
+      "facts": [
+        [
+          "Perseverance",
+          "45.22 km"
+        ],
+        [
+          "Opportunity",
+          "45.16 km"
+        ],
+        [
+          "Time",
+          "5.5 vs ~15 yr"
+        ]
+      ],
+      "source": {
+        "label": "NASA Science / JPL",
+        "title": "NASA's Perseverance Sets Off-World Record for Total Distance Driven",
+        "url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/"
+      },
+      "image": "/models/opportunity/images/opp081.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/opportunity/audio/opp081.mp3"
+    }
+  ]
+}

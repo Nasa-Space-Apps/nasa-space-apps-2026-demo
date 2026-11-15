@@ -78,6 +78,7 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
   if (n < 2) return null;
   const pct = (i: number) => `${(i / (n - 1)) * 100}%`;
   const M = 9; // horizontal inset so the end markers stay inside the card
+  const labels = n <= 8; // a long route (the story's 13 stops) has no room for names under the markers: the line above says where you are and what is next
 
   return (
     <div aria-label="Route timeline" style={{ ...panel, padding: "14px 16px 12px", fontFamily: theme.font }} className="select-none">
@@ -148,7 +149,7 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
       </div>
 
       {/* room for the tallest name: with 6+ stops the labels are narrower and wrap to 3 lines, which must not touch the card edge */}
-      <div className="relative" style={{ height: n > 5 ? 44 : 26, margin: `4px ${M}px 0` }}>
+      {labels && <div className="relative" style={{ height: n > 5 ? 44 : 26, margin: `4px ${M}px 0` }}>
         {cps.map((c, i) => {
           const first = i === 0;
           const last = i === n - 1;
@@ -172,7 +173,7 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
             </span>
           );
         })}
-      </div>
+      </div>}
     </div>
   );
 }

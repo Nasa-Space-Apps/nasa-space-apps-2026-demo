@@ -1,0 +1,225 @@
+{
+  "clips": {
+    "opp001": {
+      "file": "/models/opportunity/audio/opp001.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "83422110ee5a868a",
+      "chars": 274,
+      "bytes": 346531,
+      "generatedAt": "2026-11-15T02:48:03.169Z"
+    },
+    "opp005": {
+      "file": "/models/opportunity/audio/opp005.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "9909e87365147a65",
+      "chars": 276,
+      "bytes": 331484,
+      "generatedAt": "2026-11-15T02:48:08.111Z"
+    },
+    "opp008": {
+      "file": "/models/opportunity/audio/opp008.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "cd6fccc28fac9017",
+      "chars": 224,
+      "bytes": 314766,
+      "generatedAt": "2026-11-15T02:48:12.802Z"
+    },
+    "opp015": {
+      "file": "/models/opportunity/audio/opp015.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "d03184d27c79362d",
+      "chars": 269,
+      "bytes": 344023,
+      "generatedAt": "2026-11-15T02:48:17.517Z"
+    },
+    "opp018": {
+      "file": "/models/opportunity/audio/opp018.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "68b9277c6268c83b",
+      "chars": 293,
+      "bytes": 376206,
+      "generatedAt": "2026-11-15T02:48:22.655Z"
+    },
+    "opp021": {
+      "file": "/models/opportunity/audio/opp021.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "e461eed258cfb46b",
+      "chars": 272,
+      "bytes": 337754,
+      "generatedAt": "2026-11-15T02:48:27.562Z"
+    },
+    "opp025": {
+      "file": "/models/opportunity/audio/opp025.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "1262428a74122ebd",
+      "chars": 271,
+      "bytes": 322289,
+      "generatedAt": "2026-11-15T02:48:32.285Z"
+    },
+    "opp028": {
+      "file": "/models/opportunity/audio/opp028.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "234c44dfb0dfd0b0",
+      "chars": 247,
+      "bytes": 332738,
+      "generatedAt": "2026-11-15T02:48:37.073Z"
+    },
+    "opp030": {
+      "file": "/models/opportunity/audio/opp030.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "8299aa7f08779811",
+      "chars": 242,
+      "bytes": 319781,
+      "generatedAt": "2026-11-15T02:48:41.334Z"
+    },
+    "opp033": {
+      "file": "/models/opportunity/audio/opp033.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "b00b7c16bd193a13",
+      "chars": 256,
+      "bytes": 346531,
+      "generatedAt": "2026-11-15T02:48:45.801Z"
+    },
+    "opp045": {
+      "file": "/models/opportunity/audio/opp045.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "967e78730696b10d",
+      "chars": 230,
+      "bytes": 301809,
+      "generatedAt": "2026-11-15T02:48:50.667Z"
+    },
+    "opp047": {
+      "file": "/models/opportunity/audio/opp047.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "b88b23cd59db5fc0",
+      "chars": 276,
+      "bytes": 339007,
+      "generatedAt": "2026-11-15T02:48:55.405Z"
+    },
+    "opp052": {
+      "file": "/models/opportunity/audio/opp052.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "83f622c86cda3f9d",
+      "chars": 250,
+      "bytes": 291778,
+      "generatedAt": "2026-11-15T02:48:59.549Z"
+    },
+    "opp054": {
+      "file": "/models/opportunity/audio/opp054.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "7af690f45646ddf4",
+      "chars": 285,
+      "bytes": 363249,
+      "generatedAt": "2026-11-15T02:49:04.599Z"
+    },
+    "opp059": {
+      "file": "/models/opportunity/audio/opp059.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "59e4b0c9d8dae50c",
+      "chars": 262,
+      "bytes": 353218,
+      "generatedAt": "2026-11-15T02:49:09.411Z"
+    },
+    "opp062": {
+      "file": "/models/opportunity/audio/opp062.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "874ad540cc266cdf",
+      "chars": 240,
+      "bytes": 316020,
+      "generatedAt": "2026-11-15T02:49:13.701Z"
+    },
+    "opp070": {
+      "file": "/models/opportunity/audio/opp070.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "64fbd525a27fcd28",
+      "chars": 286,
+      "bytes": 344023,
+      "generatedAt": "2026-11-15T02:49:17.963Z"
+    },
+    "opp072": {
+      "file": "/models/opportunity/audio/opp072.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "5c2235d3eb954b6c",
+      "chars": 300,
+      "bytes": 388745,
+      "generatedAt": "2026-11-15T02:49:23.308Z"
+    },
+    "opp077": {
+      "file": "/models/opportunity/audio/opp077.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "0dfa7c9465b3b107",
+      "chars": 273,
+      "bytes": 368265,
+      "generatedAt": "2026-11-15T02:49:28.332Z"
+    },
+    "opp081": {
+      "file": "/models/opportunity/audio/opp081.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "dd86f400e46ee18a",
+      "chars": 282,
+      "bytes": 346531,
+      "generatedAt": "2026-11-15T02:49:33.180Z"
+    }
+  },
+  "updatedAt": "2026-11-15T02:49:33.180Z"
+}

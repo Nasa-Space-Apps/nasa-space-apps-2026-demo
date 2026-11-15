@@ -39,6 +39,21 @@ Es el **menú previo al juego** (hito 31): un globo (por defecto la Luna) a pant
 - **El tema** es un único objeto, `THEME` (`lib/themes.ts`): variables CSS en `<html>` + lectura directa desde canvas/WebGL (ver [design.md](design.md)). `lib/ui.ts` + `components/Reveal.tsx` dan estilos y entrada suave. **Los `@keyframes` nuevos en
   `globals.css` no los recogió el servidor de desarrollo** al probarlo; el fundido «Travel to the past» (`Scene.tsx`, `veil`) usa una transición inline.
 
+## La experiencia de Opportunity (`Journey`, `Comic`) — hito 36
+
+`/mars/opportunity` no monta `Scene` directamente (`SceneLoader` elige `Journey` para `opportunity`). `Journey` tiene tres fases sobre un mismo campo azul:
+
+- **intro**: `Comic` con `INTRO_BEATS` (5 páginas). **Desde la 3.ª página** monta `Scene` por detrás (`next/dynamic`, el terreno se descarga entonces) y `game.hold = true` la mantiene en espera.
+- **mars**: al terminar el cómic (`onDone`/`onSkip`) quita el `hold` y desmonta el cómic: el rover ya está en la primera parada, que se abre con su tarjeta y su narración. Al llegar a la última parada (`game.active` = último id) aparece `ContinuePrompt`.
+- **outro**: `Comic` con `OUTRO_BEATS` + una página final (`end`) con «play again» (remonta `JourneyView` con otra `key`) y «back to the globe». Pone `game.hold = true` otra vez.
+- Como `Scene`, `Journey` devuelve `null` si su ruta no es la actual (Next conserva las rutas visitadas): al volver empieza de cero.
+
+**`game.hold`** (`lib/game.ts`): mientras es `true`, `Rover` ignora `Espacio`, `Checkpoints` no detecta proximidad (no abre tarjetas ni lanza narración) y `Guide` no habla. Lo ponen `Journey` y su limpieza (`false` al desmontar).
+
+**`Comic`** (`components/Comic.tsx`): páginas absolutas centradas con `--pw` (`min(44vw, 54vh)`); la activa en el centro y las vecinas asoman (`translate` + `rotate` + `scale`, transición con `THEME.pop`). Cada página es papel con el recuadro de tinta de `ui().frame`, la ilustración, el sello de la fecha y el recuadro de título + resumen. `playNarration(beatToCheckpoint(beat))` al llegar a una página (el mismo almacén que el 3D: mismos subtítulos con `Captions`). Manchas rosa/azul de fondo que se mueven con cada página (`Blobs`). Entrada: las páginas suben con rebote; salida: la activa cae y el azul se disuelve (se ve el 3D de detrás).
+
+Los **checkpoints de Opportunity** se generan de `MARS_BEATS` (`lib/opportunity.ts`, `beatToCheckpoint`): `Checkpoint` ganó `imageRatio` (la tarjeta pasa a vertical), `source` (se muestra «facts: <editor>») y `noGuide` (la guía no habla de ellos). `Timeline` no pone nombres bajo los marcadores si hay más de 8 paradas. Detalle del flujo y los datos: [story.md](story.md).
+
 ## Vista general (escena del rover)
 
 ```

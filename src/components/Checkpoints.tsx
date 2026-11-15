@@ -72,14 +72,15 @@ export default function Checkpoints({
     const dist = (c: Checkpoint) => Math.hypot(game.x - c.x, game.z - c.z);
 
     // proximity: enter at `radius`, leave at 1.15x so the card does not flicker at the edge
-    if (game.active) {
+    if (game.active && !game.hold) {
       const cur = checkpoints.find((c) => c.id === game.active);
       if (!cur || dist(cur) > radius * 1.15) {
         game.active = null;
         stopNarration();
       }
     }
-    if (!game.active) {
+    if (!game.active && !game.hold) {
+      // (game.hold: the story's comic pages are on top: the first checkpoint opens, with its narration, when they leave)
       for (const c of checkpoints) {
         if (dist(c) < radius) {
           if (game.travel !== null && game.checkpoints[game.travel]?.id !== c.id) {

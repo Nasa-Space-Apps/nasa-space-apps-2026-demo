@@ -156,7 +156,7 @@ function pick(kind: GuideKind): GuideLine | null {
 
 // demo checkpoints have no recorded guide lines: say nothing about them
 const cpLine = (kind: "next" | "remind", cp: Checkpoint): GuideLine | null =>
-  cp.demo ? null : { id: `${kind}-${cp.id}`, kind, text: checkpointLineText(kind, cp.name), cp: cp.id };
+  cp.demo || cp.noGuide ? null : { id: `${kind}-${cp.id}`, kind, text: checkpointLineText(kind, cp.name), cp: cp.id };
 
 const say = (line: GuideLine | null) => {
   if (line) speak(line);

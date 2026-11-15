@@ -23,6 +23,10 @@ Sin assets: los globos son una rejilla de líneas generada por código (`Globe.t
 **Sin uso.** Fueron la imagen de la tarjeta del globo (NASA, dominio público: `opportunity.jpg` = PIA17759, autorretrato de ene 2014; `sev.jpg` = jsc2008e138809, Lunar Electric Rover, antecesor del SEV)
 hasta que la tarjeta pasó a dibujar el vehículo procedural. Se conservan como referencia visual de proporciones; se pueden borrar.
 
+## La historia de Opportunity (`public/models/opportunity`, hito 36)
+
+`story.json` (los 20 beats: copy, hechos, fuente, ruta 3D), `images/oppNNN.jpg` (20 ilustraciones de IA a 1040 px, 4:5, ≈ 4 MB; originales de 1856×2304 en la carpeta de arte del equipo) y `audio/oppNNN.mp3` + `manifest.json` (narraciones con Bill, ≈ 6,6 MB, ya grabadas). Se generan con `npm run story` y `npm run story-audio`; el detalle está en [story.md](story.md). Además de esto, la carpeta sigue teniendo `opportunity.glb` (referencia de proporciones del vehículo).
+
 ## Narraciones (`public/narration`)
 
 Un mp3 por checkpoint (16 clips: 5 + 5 + 6; ~300 KB, 20 s, `mp3_44100_128`, voz Bill, modelo `eleven_v4`) + `manifest.json` con los metadatos de cada

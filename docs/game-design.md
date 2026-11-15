@@ -1,5 +1,7 @@
 # Diseño del juego: «Left behind» (Opportunity, de la mesa de diseño a la última señal)
 
+> **Estado (hito 36):** el **modo Historia de Opportunity ya está implementado** (cómic → 3D → cómic, 20 eventos reales): ver [story.md](story.md). Lo que sigue sin construir es el **modo Decisiones** (la columna vertebral ya existe en `public/models/opportunity/story.json`; las decisiones están definidas en `story/data/juego_opportunity.json`).
+>
 > **Este es el enfoque vigente del proyecto** (hito 29 de [history.md](history.md)). Sustituye al de «plataforma informativa con globo y varios vehículos».
 > Es **definición, no implementación**: nada de lo descrito aquí está construido salvo lo que se marca como «ya existe».
 > Lo marcado **(propuesto)** lo añadió Claude al pulir la idea y está pendiente de validar con el usuario y su colega.

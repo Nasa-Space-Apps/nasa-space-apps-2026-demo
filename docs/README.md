@@ -2,6 +2,7 @@
 
 Índice de la carpeta `docs/`. Si retomas el proyecto, léelos en este orden:
 
+0. **[story.md](story.md)** — **la historia de Opportunity ya implementada (hito 36)**: 20 eventos reales (cómic → 3D → cómic), ilustraciones de IA, narraciones cortas, datos en `public/models/opportunity/`, cómo regenerarlo y qué falta.
 0. **[game-design.md](game-design.md)** — **enfoque vigente (hito 29): el juego sobre Opportunity**, con modo Historia y modo Decisiones, Parte 1 (2D) y Parte 2 (3D), reglas, impacto en el código y preguntas abiertas. *Léelo antes que nada: define hacia dónde va el proyecto.* El resto de la documentación describe lo que **ya está construido**.
 1. **[history.md](history.md)** — qué se hizo, en qué orden y por qué (incluye las decisiones de diseño y las preferencias del
    usuario). *Léelo primero para recuperar el contexto.*

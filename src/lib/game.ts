@@ -23,6 +23,7 @@ export const game = {
   visited: new Set<string>(), // checkpoint ids already reached
   active: null as string | null, // checkpoint the rover is currently inside
   mission: "", // id of the active mission (vehicle), e.g. "opportunity" | "sev"
+  hold: false, // the scene waits behind something else (the story's comic pages): no driving, no checkpoint detection, no narration or guide
 };
 
 /** `go` = Space held: advance along the route until the next checkpoint. */
