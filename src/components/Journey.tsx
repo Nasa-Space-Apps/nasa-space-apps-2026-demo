@@ -12,6 +12,7 @@ import { useTheme } from "@/lib/use-theme";
 import Ambient from "./Ambient";
 import Comic from "./Comic";
 import Icon from "./Icon";
+import { CreatedBy } from "./Credits";
 import Loading from "./Loading";
 import Pop from "./Pop";
 
@@ -179,6 +180,7 @@ function JourneyView({ missionId, story, onReplay }: { missionId: string; story:
                   <Icon name="arrow-left" size={16} /> back to the globe
                 </button>
               </div>
+              <CreatedBy />
             </>
           }
         />

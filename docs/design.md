@@ -116,9 +116,9 @@ Siguen la estética de **3 tonos de un solo color** sin contornos ni degradados 
 
 Las páginas de la historia de Opportunity siguen el lenguaje de ponpon-mania.com/chapter/3: **papel crema sobre el campo azul**, con **manchas rosa** detrás (aquí flotan y se mueven con cada página) y una **píldora de tinta** abajo (título + progreso rosa + botones redondos `.ui-fab-sm`). Cada página: marco de tinta (`stroke`) con la **ilustración de IA** a página completa (4:5), un **sello de fecha** girado −3° (entra con rebote), el contador `n/N` y un **recuadro de título + resumen** girado +0,5° que sube con rebote. Las páginas vecinas se ven más pequeñas y pálidas (0,8 / opacidad 0,6) y giradas; la activa se endereza. La ilustración hace un zoom lento al llegar. Todo con `THEME.pop`; `prefers-reduced-motion` lo reduce. Las ilustraciones se rotulan **«AI-generated illustration»** (no son fotos).
 
-## Créditos — «Created by» (oculto)
+## Créditos — «Created by» (hito 53)
 
-Sin cambios: `Credits.tsx`/`Portrait.tsx` siguen sin montarse (ver [history.md](history.md), hito 25). Sus retratos usan `THEME.portrait` (azules); no se han adaptado al nuevo tema.
+Botón «Credits» (`.ui-btn.is-ghost`, icono `user`) arriba a la derecha del globo, junto al de música. Su tarjeta es una **página de cómic** (papel + trazo de tinta, +0,6°) que entra con rebote (`THEME.pop`) bajo el botón: título «created by» con la X (`.ui-fab-sm`) y una viñeta por persona con el **retrato en un marco de tinta** (4:5, ligeramente girado ±0,9°), nombre (26 px, 800), rol y un botón primario «LinkedIn →». Se cierra con la X, `Esc` o un clic fuera. **`CreatedBy`** repite a las personas en pequeño (retrato redondo con anillo de tinta, nombre y rol, enlazados) al pie de la tarjeta final de cada historia. Los retratos son los ilustrados que aportó el usuario (planos, de un solo tono de color por persona: morado y azul), copiados a 720 px en `public/team/`. Datos en `lib/team.ts`.
 
 ## Parte 1 del juego (historieta 2D)
 

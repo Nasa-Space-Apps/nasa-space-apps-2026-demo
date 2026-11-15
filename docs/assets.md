@@ -11,6 +11,10 @@ cortos; abajo se indica el original.
 
 Los GLB y las fotos de referencia de los vehículos (una carpeta por vehículo en `public/models/<id>/`) **ya no están**: Se eliminaron en el hito 43 (limpieza de `public`); siguen en el historial de git (`git log --diff-filter=D -- public/...`). Qué se descargó, de dónde y con qué licencia sigue descrito en [`model-sources.md`](model-sources.md).
 
+## Retratos del equipo (`public/team/`, hito 53)
+
+`jackson.jpg` y `paul.jpg`: retratos ilustrados planos (4:5, 720 × 894 px, ≈ 22 y 27 KB) que aportó el usuario (originales de 1856 × 2304 en su carpeta de descargas). Los usan la tarjeta «created by» del globo y la línea de autores de la tarjeta final de cada historia (`lib/team.ts` → `portraitOf`).
+
 ## Globos de la vista de entrada
 
 Sin assets: los globos son una rejilla de líneas generada por código (`Globe.tsx`, en proyección ortográfica). Se probaron texturas realistas (Solar System Scope, CC BY 4.0) y se descartaron por estilo.
