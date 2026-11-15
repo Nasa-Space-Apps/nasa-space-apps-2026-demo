@@ -1,17 +1,5 @@
 [
   {
-    "herramienta": "NASA Image and Video Library",
-    "ok": true,
-    "detalle": "85 resultados; ej: PIA05251 / Mars Exploration Rover MER-B Opportunity Landing S (1.5s)",
-    "requiere": "nada (sin clave)"
-  },
-  {
-    "herramienta": "NASA Images /asset",
-    "ok": true,
-    "detalle": "4 archivos para PIA05251",
-    "requiere": "nada"
-  },
-  {
     "herramienta": "NASA NTRS (papers técnicos)",
     "ok": true,
     "detalle": "10 resultados; ej: Mars Exploration Rover airbag landing loads testing and anal",

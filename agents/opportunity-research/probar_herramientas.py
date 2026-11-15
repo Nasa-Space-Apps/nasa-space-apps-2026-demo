@@ -9,6 +9,9 @@ import sys
 import time
 
 import httpx
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
 
 UA = {"User-Agent": "opportunity-research-agent/0.1 (proyecto educativo)"}
 R = []  # resultados
@@ -17,18 +20,6 @@ R = []  # resultados
 def reg(nombre, ok, detalle, requiere=""):
     R.append({"herramienta": nombre, "ok": ok, "detalle": detalle, "requiere": requiere})
     print(("OK   " if ok else "FALLA"), nombre, "-", detalle, flush=True)
-
-
-def probar_nasa_images():
-    t = time.time()
-    r = httpx.get("https://images-api.nasa.gov/search", params={"q": "opportunity rover landing", "media_type": "image"},
-                  headers=UA, timeout=30)
-    items = r.json()["collection"]["items"]
-    d = items[0]["data"][0]
-    reg("NASA Image and Video Library", r.status_code == 200 and len(items) > 0,
-        f"{len(items)} resultados; ej: {d['nasa_id']} / {d.get('title','')[:50]} ({time.time()-t:.1f}s)", "nada (sin clave)")
-    a = httpx.get(f"https://images-api.nasa.gov/asset/{d['nasa_id']}", headers=UA, timeout=30).json()
-    reg("NASA Images /asset", len(a["collection"]["items"]) > 0, f"{len(a['collection']['items'])} archivos para {d['nasa_id']}", "nada")
 
 
 def probar_ntrs():
@@ -79,29 +70,39 @@ def probar_crawl4ai():
     reg("Crawl4AI (JS, markdown)", ok and n > 500, f"{n} caracteres de markdown", "navegador de Playwright instalado (playwright install chromium)")
 
 
-async def _claude(env_key):
+async def _claude(prov):
     from claude_agent_sdk import query, ClaudeAgentOptions, AssistantMessage, TextBlock, ResultMessage
-    txt, costo = "", None
+    import proveedores
+    proveedores.aplicar(prov)
+    txt, costo, error = "", None, None
     async for m in query(prompt="Responde solo con la palabra: LISTO", options=ClaudeAgentOptions(
-            max_turns=1, allowed_tools=[], system_prompt="Responde con una sola palabra.")):
+            model=prov.modelo, env=prov.env, max_turns=1, allowed_tools=[], tools=[], setting_sources=[],
+            system_prompt="Responde con una sola palabra.")):
         if isinstance(m, AssistantMessage):
             for b in m.content:
                 if isinstance(b, TextBlock):
                     txt += b.text
         elif isinstance(m, ResultMessage):
             costo = getattr(m, "total_cost_usd", None)
-    return txt.strip(), costo
+            if m.is_error:
+                error = f"{m.subtype} {m.errors} {(m.result or '')[:200]}"
+    return txt.strip(), costo, error
 
 
 def probar_claude():
-    modo = "API key" if os.environ.get("ANTHROPIC_API_KEY") else "sesión de Claude Code (plan)"
-    txt, costo = asyncio.run(_claude(None))
-    reg("Claude Agent SDK", "LISTO" in txt.upper(), f"autenticación: {modo}; respuesta: {txt!r}; costo reportado: {costo}",
-        "claude login (plan) o ANTHROPIC_API_KEY")
+    import proveedores
+    nombre = sys.argv[sys.argv.index("--proveedor") + 1] if "--proveedor" in sys.argv else None
+    prov = proveedores.resolver(nombre)
+    txt, costo, error = asyncio.run(_claude(prov))
+    reg(f"Claude Agent SDK ({prov.nombre})", "LISTO" in txt.upper() and not error,
+        f"{prov.etiqueta}; respuesta: {txt[:60]!r}; costo de referencia: {costo}" + (f"; error: {error}" if error else ""),
+        "claude login (plan), ANTHROPIC_API_KEY (api) o credenciales AWS con acceso a Bedrock (bedrock)")
 
 
 def main():
-    pruebas = [probar_nasa_images, probar_ntrs, probar_wikipedia, probar_ddgs, probar_trafilatura, probar_crawl4ai]
+    import proveedores
+    proveedores.cargar_env(BASE_DIR / '.env')
+    pruebas = [probar_ntrs, probar_wikipedia, probar_ddgs, probar_trafilatura, probar_crawl4ai]
     if "--sin-claude" not in sys.argv:
         pruebas.append(probar_claude)
     for p in pruebas:

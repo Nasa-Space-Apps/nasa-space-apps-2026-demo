@@ -1,0 +1,198 @@
+{
+  "evento_id": "opp015",
+  "titulo": "Lanzamiento de Opportunity: despegue nocturno en el Delta II Heavy desde Cabo Cañaveral (7 julio 2003)",
+  "contexto_ampliado": "En el verano de 2003, la Tierra y Marte estaban alineados de manera favorable para enviar misiones al planeta rojo. El rover Spirit ya había partido el 10 de junio a bordo de un cohete Delta 2-7925 estándar. Su gemelo, Opportunity (MER-B), debía despegar antes del 15 de julio de 2003: si no lo lograba, habría que esperar cuatro años hasta la siguiente ventana orbital apta.\n\nSin embargo, la preparación del lanzamiento estuvo plagada de contratiempos. Técnicos descubrieron que secciones del aislamiento térmico de corcho del tanque de oxígeno líquido del primer escenario del cohete se habían desprendido de la superficie. La mayor sección despegada medía aproximadamente 22 por 19 pulgadas (~56 × 48 cm) y se ubicaba a unos 40 pies (~12 metros) sobre la superficie de la plataforma de lanzamiento. Los esfuerzos por reparar el corcho y comprender el problema consumieron casi una semana. Para colmo, se detectó el fallo de una batería del sistema de destrucción de seguridad del cohete, lo que obligó a retrasar el lanzamiento del domingo 6 de julio al lunes 7 de julio.\n\nOpportunity necesitaba un cohete especial: el Delta II Heavy. Esta variante más potente del Delta II empleaba cohetes sólidos auxiliares más grandes, desarrollados originalmente para el Delta III. Equipado con nueve cohetes sólidos de 46 pulgadas de diámetro, el Delta II Heavy aumentaba el rendimiento del modelo estándar en más de un 20 %. Esa potencia extra era indispensable porque Opportunity se lanzaba fuera del tramo de baja energía de la trayectoria de transferencia. En palabras del director de proyecto Pete Theisinger: «Es puramente un tema de energía. Estamos fuera del punto dulce, la parte de baja energía de la trayectoria de transferencia». En la secuencia de despegue, seis de los nueve cohetes sólidos se encendían en la plataforma junto con el motor principal de combustible líquido del primer escenario; tras unos 76 segundos de combustión, los seis se separaban y los tres restantes se encendían en el aire.\n\nEl lanzamiento se produjo el lunes 7 de julio de 2003 a las 11:18:15 p. m. EDT (03:18:15 UTC del 8 de julio) desde la plataforma SLC-17B de la Estación de la Fuerza Aérea de Cabo Cañaveral, Florida. El cohete era un Delta 7925H, designado como vehículo D299: el vuelo número 299 de la familia de cohetes Delta. Según la NASA, este lanzamiento representó el segundo uso de un Delta II Heavy en su configuración central, pero fue el primero en incorporar un escenario superior completo. La nave espacial tenía una masa de 1.062 kilogramos (2.341 libras).\n\nOchenta y tres minutos después del despegue, Opportunity se separó con éxito del tercer escenario del cohete Delta y quedó en trayectoria hacia Marte. Los controladores de vuelo del Jet Propulsion Laboratory (JPL) en Pasadena, California, captaron la primera señal de la nave a las 12:43 a. m. EDT del martes, a través del complejo de antenas de Goldstone, en la Red del Espacio Profundo de la NASA. El destino de Opportunity era Meridiani Planum, una región marciana donde el orbitador Mars Global Surveyor había detectado depósitos de un tipo de mineral que suele formarse en ambientes acuosos. La llegada estaba programada para el 25 de enero de 2004.",
+  "datos_reales": [
+    {
+      "afirmacion": "Opportunity despegó a las 11:18:15 p.m. EDT desde la Estación de la Fuerza Aérea de Cabo Cañaveral, Florida.",
+      "fuente_url": "https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/",
+      "cita": "Opportunity's dash to Mars began with liftoff at 11:18:15 p.m. EDT from Cape Canaveral Air Force Station, Florida.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La nave se separó del tercer escenario del Delta 83 minutos después del lanzamiento, habiendo sido impulsada fuera de la órbita terrestre.",
+      "fuente_url": "https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/",
+      "cita": "The spacecraft separated successfully from the Delta's third stage 83 minutes later, after it had been boosted out of Earth orbit and onto a course toward Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La masa de la nave espacial Opportunity era de 2.341 libras (1.062 kg).",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity",
+      "cita": "Spacecraft Mass | 2,341 pounds (1,062 kilograms)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El lanzamiento de Opportunity fue la primera vez que el Delta II Heavy fue usado con un escenario superior (upper stage) en una misión real.",
+      "fuente_url": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+      "cita": "The launch of the MER-B spacecraft was the second use of a core Delta II 'Heavy' launch vehicle and the first use of a Delta II 'Heavy' launch vehicle with an upper stage.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Delta II Heavy utilizaba cohetes sólidos más grandes desarrollados para el Delta III, con motores de mayor rendimiento.",
+      "fuente_url": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+      "cita": "The second Mars Exploration Rover, Opportunity, was the first NASA mission lifted on what is referred to as a Delta II 'heavy' rocket. It is a more powerful vehicle that uses larger strap-on solid rocket motors developed for the Delta III launch vehicle.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Delta II Heavy aumentaba el rendimiento del Delta II en más del 20 %, equipado con nueve cohetes sólidos de 46 pulgadas de diámetro.",
+      "fuente_url": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1",
+      "cita": "\"Opportunity\" was launched aboard the new Delta II Heavy that features nine 46-inch diameter, stretched solid rocket boosters that provide increased lift performance to augment the Boeing Rocketdyne RS-27A main engine. The Delta II Heavy increases the performance of the Delta II by more than 20 percent to low-earth orbit.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El corcho de aislamiento térmico del primer escenario del cohete se despegó repetidamente, retrasando el lanzamiento varios días a partir del intento del 28 de junio.",
+      "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "cita": "workers found sections of thermal insulating material on the Delta 2 rocket's exterior had come loose from the first stage liquid oxygen tank. Efforts to repair the debonded cork and understand the problem took almost a week",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El fallo de una celda de batería del sistema de terminación de vuelo obligó a retrasar el lanzamiento del domingo 6 de julio al lunes 7 de julio de 2003.",
+      "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "cita": "The most recent glitch, which delayed liftoff from Sunday to Monday night, was the failure of a battery in the rocket's safety destruct system.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El rover gemelo Spirit fue lanzado el 10 de junio de 2003 con el Delta 2-7925 estándar, dos semanas y media antes que Opportunity.",
+      "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "cita": "The Spirit rover was carried aloft June 10 by the standard Delta 2-7925 configuration launcher.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vuelo de Opportunity fue el número 299 de la familia de cohetes Delta y el primer vuelo operativo del Delta II Heavy.",
+      "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "cita": "This 299th flight of the Delta rocket marks the inaugural voyage for Boeing's Delta 2-Heavy.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El JPL recibió señal de Opportunity a las 12:43 a.m. EDT del martes a través de las antenas de Goldstone (Red del Espacio Profundo), confirmando que todos los sistemas funcionaban correctamente.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/",
+      "cita": "Flight controllers at NASA's Jet Propulsion Laboratory, Pasadena, Calif., received a signal from Opportunity at 12:43 a.m. Tuesday EDT (9:43 p.m. Monday PDT) via the Goldstone, Calif., antenna complex of NASA's Deep Space Network.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity estaba programado para aterrizar en Meridiani Planum el 25 de enero de 2004, zona identificada con depósitos de hematites gris que suelen formarse en ambientes acuosos.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/",
+      "cita": "Opportunity is scheduled to arrive at a site on Mars called Meridiani Planum on Jan. 25, 2004 [...] NASA's Mars Global Surveyor orbiter has identified deposits at Meridiani Planum of a type of mineral that usually forms in wet environments.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Seis de los nueve cohetes sólidos del Delta II Heavy se encendían en el despegue; los tres restantes se encendían en vuelo al separarse los primeros.",
+      "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "cita": "Six of the motors are ignited at liftoff, combining with the rocket's liquid-fueled first stage main engine, to propel the Delta 2 off the launch pad. The motors fire for about 76 seconds before burning out. The three remaining boosters are ignited in the air as the spent ground-lit boosters are jettisoned.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "imagenes": [
+    {
+      "url": "http://images-assets.nasa.gov/image/PIA05840/PIA05840~orig.jpg",
+      "titulo": "Procesamiento final de Opportunity en el Kennedy Space Center (abril 2003)",
+      "descripcion": "Escena del Centro Espacial Kennedy en abril de 2003 que muestra trabajos en las etapas finales de procesamiento de la nave conocida entonces como Mars Exploration Rover B, bautizada posteriormente como Opportunity.",
+      "credito": "NASA/JPL",
+      "nasa_id": "PIA05840",
+      "pagina_url": "https://images.nasa.gov/details/PIA05840",
+      "licencia_nota": "Verificar el pie de foto: salvo indicación contraria, las imágenes de NASA/JPL son de uso libre con crédito.",
+      "archivo_local": "salida\\opp015\\imagenes\\01_PIA05840.jpg"
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Opportunity (MER-B): ficha oficial de misión",
+      "url": "https://science.nasa.gov/mission/mer-opportunity",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "July 7, 2003, NASA's Opportunity Rover Launches to Mars",
+      "url": "https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Newly Launched 'Opportunity' Follows Mars-Bound 'Spirit'",
+      "url": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Opportunity Rover Delta II Launch (recurso educativo con contexto del vehículo)",
+      "url": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+      "editor": "NASA Science / JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "MER-B launch status – cobertura en tiempo real del lanzamiento",
+      "url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "editor": "Spaceflight Now (Justin Ray)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Boeing Delta II Launches 'Opportunity', Sending Second NASA Rover to Mars",
+      "url": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1",
+      "editor": "Boeing",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "Tiempo hasta la separación del tercer escenario: NASA/JPL y NASA.gov indican '83 minutes' (https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/), mientras que Boeing indica 'approximately 80 minutes' (https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1).",
+    "El evento original describe el problema del aislante como «corcho agrietado» («un aislante de corcho agrietado en el tanque»), pero las fuentes del dossier ([8] y [9], https://spaceflightnow.com/mars/merb/status2.html) hablan de corcho que se «despegó» o «desadhirió» ('came loose', 'unbonded'), lo cual describe un desprendimiento adhesivo, no una grieta o fractura del material.",
+    "El evento original dice que falló «una celda de batería del sistema de terminación de vuelo», pero [10] (https://spaceflightnow.com/mars/merb/status2.html) refiere «the failure of a battery in the rocket's safety destruct system» —una batería completa—, sin precisar que el fallo fuera de una sola celda.",
+    "El evento original afirma que el Delta II Heavy era una «versión del cohete que debutaba con esta misión», pero [4] (https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/) precisa que fue «the second use of a core Delta II Heavy launch vehicle»; solo debutaba la configuración con escenario superior, no el cuerpo central del cohete."
+  ],
+  "huecos": [
+    "La causa exacta del retraso de ~1 hora durante la cuenta regresiva del 7 de julio que obligó a usar la segunda ventana (11:18 PM EDT) en lugar de la primera (10:35 PM EDT). El evento menciona una 'válvula defectuosa', pero ninguna de las fuentes consultadas confirma explícitamente este detalle.",
+    "La fecha original exacta (25 de junio) como primer objetivo de lanzamiento no aparece citada de forma explícita en ninguna de las fuentes leídas; solo se infiere del comunicado de Spaceflight Now del 16 de junio que decía que el lanzamiento se movió 'un día' al 26 de junio.",
+    "No se encontraron imágenes del despegue nocturno de Opportunity en la NASA Image and Video Library (múltiples búsquedas no devolvieron resultados del lanzamiento). La imagen del despegue que aparece en el artículo del JPL está alojada en una CDN de Cloudfront y no tiene nasa_id asignable.",
+    "El dato [15] identifica el mineral de Meridiani Planum como «hematites gris», pero su propia cita de JPL (https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/) solo dice «a type of mineral that usually forms in wet environments», sin nombrar el mineral específico. El término «hematites gris» del evento original no queda confirmado por ninguna fuente del dossier.",
+    "El dato [8] sitúa el inicio de los retrasos por corcho «a partir del intento del 28 de junio», pero su cita (https://spaceflightnow.com/mars/merb/status2.html) no menciona esa fecha concreta; solo dice que las reparaciones «took almost a week». La progresión exacta de fechas de retraso (25→26→28 de junio→7 de julio) que aparece en el relato del borrador no está respaldada paso a paso por las citas."
+  ],
+  "ideas_visuales": [
+    "El cohete Delta 7925H (vuelo D299) en la plataforma SLC-17B de Cabo Cañaveral, con los nueve cohetes sólidos de 46 pulgadas de diámetro visibles alrededor del cuerpo central (datos [2], [7]).",
+    "Detalle del corcho aislante desprendido en el primer escenario: la mayor sección de ~56 × 48 cm a unos 12 metros sobre la base, mostrando la superficie de aluminio expuesta del tanque de oxígeno líquido (datos [8], [9]).",
+    "Momento del despegue nocturno del 7 de julio de 2003, con seis de los nueve cohetes sólidos encendidos junto al motor principal de combustible líquido, iluminando la plataforma SLC-17B (datos [0], [16]).",
+    "Diagrama de la secuencia de vuelo del Delta II Heavy: seis cohetes sólidos encendidos en tierra durante ~76 segundos, luego separación y encendido de los tres restantes en el aire (dato [16]).",
+    "Procesamiento final de Opportunity en el Kennedy Space Center (abril 2003), según la imagen hallada por el investigador (NASA/JPL)."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El cohete utilizado fue el Delta 7925H (vehículo número D299), despegando desde la plataforma SLC-17B de Cabo Cañaveral.",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity",
+      "cita": "Launch Vehicle | Delta 7925H (no. D299) | Launch Site | Cape Canaveral, Fla. / SLC-17B",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El Delta II Heavy necesitaba mayor empuje porque Opportunity se lanzaba fuera del tramo de baja energía de la ventana orbital: el director de proyecto Peter Theisinger explicó que era «un tema puramente de energía».",
+      "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "cita": "It is purely an energy thing. We are out of the sweet spot, low-energy part of the transfer trajectory. So we need the Delta 2-Heavy to launch the exact same payload mass to Mars in late-June through mid-July.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El mayor tramo de corcho despegado medía aproximadamente 22 por 19 pulgadas (~56 × 48 cm), situado unos 40 pies (~12 m) sobre la superficie de la plataforma.",
+      "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "cita": "The biggest section is about 22 inches by about 19 inches...that we saw unbonded. A section of cork insulation on the rocket -- about 40 feet above the launch pad surface -- came loose",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La ventana de lanzamiento de Opportunity cerraba el 15 de julio de 2003; si se perdía, habría que esperar cuatro años para la siguiente oportunidad apta.",
+      "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+      "cita": "The Opportunity rover's window to make its departure for Mars extends to July 15. If the rover misses its planetary alignment window, it will be four years before launch conditions are right to dispatch the spacecraft the Red Planet.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

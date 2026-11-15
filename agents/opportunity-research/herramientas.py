@@ -126,57 +126,6 @@ async def leer_pagina(args):
     return _ok({"url": url, "total_caracteres": len(texto), "desde": ini, "texto": texto[ini:ini + MAX_CHARS]})
 
 
-# ---------------- NASA Image and Video Library ----------------
-@tool("buscar_imagenes_nasa", "Busca imágenes en la NASA Image and Video Library (gratis). Devuelve nasa_id, título, descripción, fecha, centro y miniatura.",
-      {"consulta": str, "max_resultados": int, "anio_desde": int, "anio_hasta": int})
-async def buscar_imagenes_nasa(args):
-    params = {"q": args["consulta"], "media_type": "image"}
-    if args.get("anio_desde"):
-        params["year_start"] = int(args["anio_desde"])
-    if args.get("anio_hasta"):
-        params["year_end"] = int(args["anio_hasta"])
-    n = min(int(args.get("max_resultados") or 8), 15)
-    clave = f"nasaimg|{json.dumps(params, sort_keys=True)}|{n}"
-    c = _cache_get(clave)
-    if c is not None:
-        return _ok(c)
-    try:
-        async with httpx.AsyncClient(headers=UA, timeout=30) as cl:
-            r = await cl.get("https://images-api.nasa.gov/search", params=params)
-            r.raise_for_status()
-    except Exception as e:  # noqa: BLE001
-        return _err(f"NASA Images falló: {type(e).__name__}")
-    out = []
-    for it in r.json()["collection"]["items"][:n]:
-        d = it["data"][0]
-        thumb = next((l["href"] for l in it.get("links", []) if l.get("rel") == "preview"), None)
-        out.append({"nasa_id": d["nasa_id"], "titulo": d.get("title"), "descripcion": (d.get("description") or "")[:400],
-                    "fecha": (d.get("date_created") or "")[:10], "centro": d.get("center"), "credito_en_fuente": d.get("secondary_creator") or d.get("photographer"),
-                    "miniatura": thumb, "pagina": f"https://images.nasa.gov/details/{d['nasa_id']}"})
-        guardar_corpus(out[-1]["pagina"], f"{d.get('title')}. {d.get('description') or ''}")
-    _cache_set(clave, out)
-    return _ok(out)
-
-
-@tool("archivos_nasa", "Lista los archivos (tamaños) de un nasa_id de la NASA Image Library para elegir la URL de imagen. Devuelve URLs directas.",
-      {"nasa_id": str})
-async def archivos_nasa(args):
-    nid = args["nasa_id"]
-    c = _cache_get(f"asset|{nid}")
-    if c is not None:
-        return _ok(c)
-    try:
-        async with httpx.AsyncClient(headers=UA, timeout=30) as cl:
-            r = await cl.get(f"https://images-api.nasa.gov/asset/{nid}")
-            r.raise_for_status()
-    except Exception as e:  # noqa: BLE001
-        return _err(f"NASA asset falló: {type(e).__name__}")
-    urls = [i["href"] for i in r.json()["collection"]["items"]]
-    imgs = [u for u in urls if u.lower().endswith((".jpg", ".jpeg", ".png", ".tif"))]
-    _cache_set(f"asset|{nid}", {"nasa_id": nid, "imagenes": imgs})
-    return _ok({"nasa_id": nid, "imagenes": imgs})
-
-
 # ---------------- NTRS ----------------
 @tool("buscar_papers_ntrs", "Busca informes técnicos y artículos de la NASA (NTRS). Devuelve título, resumen, fecha y URL.",
       {"consulta": str, "max_resultados": int})
@@ -201,6 +150,6 @@ async def buscar_papers_ntrs(args):
     return _ok(out)
 
 
-TOOLS = [buscar_web, leer_pagina, buscar_imagenes_nasa, archivos_nasa, buscar_papers_ntrs]
+TOOLS = [buscar_web, leer_pagina, buscar_papers_ntrs]
 SERVER = create_sdk_mcp_server(name="inv", version="0.1.0", tools=TOOLS)
 NOMBRES = [f"mcp__inv__{t.name}" for t in TOOLS]

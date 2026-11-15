@@ -1,0 +1,125 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.6680173499999998,
+  "turnos": 27,
+  "duracion_s": 252.7,
+  "duracion_api_s": 229.1,
+  "tokens": {
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 51553,
+    "cache_read_input_tokens": 359382,
+    "output_tokens": 24293,
+    "output_tokens_details": {
+      "thinking_tokens": 15959
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 51553
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 2296,
+      "outputTokens": 28,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.002436,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 16,
+      "outputTokens": 24293,
+      "cacheReadInputTokens": 359382,
+      "cacheCreationInputTokens": 51553,
+      "webSearchRequests": 0,
+      "costUSD": 0.66558135,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 15959,
+      "cacheCreationEphemeral5mInputTokens": 51553,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 11,
+    "buscar_web": 1,
+    "buscar_imagenes_nasa": 11,
+    "archivos_nasa": 2,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "1",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "2",
+    "costo_usd_referencia": 0.4595515,
+    "turnos": 2,
+    "duracion_s": 189.3,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5099,
+        "outputTokens": 35,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.005274,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 16645,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6102,
+        "webSearchRequests": 0,
+        "costUSD": 0.4542775,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 14419,
+        "cacheCreationEphemeral5mInputTokens": 6102,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 17,
+      "datos_despues": 17,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 3,
+      "huecos_nuevos": 2,
+      "observaciones": "Eliminé del relato varios detalles sin respaldo en las citas: el nombre «GEM-46», el grosor del corcho («6 mm»), la probabilidad meteorológica («90 %»), el combustible «RP-1», la cita inventada de Theisinger («Tenemos un gran paso atrás»), la «brillante llamarada» del despegue y la duración de la misión («casi quince años»). Detecté tres discrepancias nuevas entre el evento original y las fuentes:"
+    }
+  },
+  "costo_usd_referencia_total": 1.1275688499999998
+}

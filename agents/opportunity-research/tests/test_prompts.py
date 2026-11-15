@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import prompts  # noqa: E402
 
 REGLAS_CLAVE = ("`cita`", "`fuente_url`", "`contradicciones`", "`huecos`", "`ideas_visuales`", "datos_reales")
-HERRAMIENTAS = ("leer_pagina", "buscar_imagenes_nasa", "archivos_nasa", "buscar_papers_ntrs")
+HERRAMIENTAS = ("leer_pagina", "buscar_papers_ntrs")
 
 
 class PromptsTest(unittest.TestCase):

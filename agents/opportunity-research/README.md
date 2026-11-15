@@ -4,7 +4,6 @@ Recibe **un evento** (JSON) de la misión del rover Opportunity y hace una inves
 
 - un relato en español para estudiantes de 5.º de secundaria,
 - datos reales, cada uno con URL y una cita literal comprobada por código,
-- imágenes de NASA (descargadas, con crédito),
 - fuentes nuevas clasificadas, contradicciones, huecos e ideas visuales.
 
 Está pensado para ampliar los eventos de `story/data/historia_opportunity.json` y `story/data/juego_opportunity.json`.
@@ -49,22 +48,23 @@ Después, comprueba que todo funciona:
 
 Resultado esperado: todo `OK` salvo **Wikipedia / Wikimedia Commons**, que aparece como `FALLA`/`OMITIDA` a propósito (ver «Problemas conocidos»). Escribe `resultado_pruebas.json`.
 
-## Autenticación
+## Proveedores de modelo y autenticación
 
-- **Plan de Claude (por defecto):** si no hay `ANTHROPIC_API_KEY`, usa la sesión de Claude Code. Antes ejecuta `claude login` una vez. No requiere clave y no se factura por dólares: consume el cupo de tu plan.
-- **API key (opcional):** copia `.env.example` a `.env` y rellena `ANTHROPIC_API_KEY`. Se aplica el tope `PRESUPUESTO_USD` por evento (2.0 por defecto).
-- `--plan` fuerza el plan aunque exista una clave.
+El agente puede correr con tres proveedores. Se elige con `--proveedor`, con `PROVEEDOR_LLM` en `.env`, o automáticamente (API key si existe `ANTHROPIC_API_KEY`; si no, plan).
 
-Variables de `.env` (todas opcionales):
+| Proveedor | Qué usa | Requiere | Costo |
+|---|---|---|---|
+| `plan` | Tu suscripción de Claude (sesión de Claude Code) | `claude login` | Consume el cupo del plan |
+| `api` | API de Anthropic | `ANTHROPIC_API_KEY` | USD por token; tope `PRESUPUESTO_USD` |
+| `bedrock` | Claude en Amazon Bedrock | Credenciales AWS en un perfil de la CLI, con acceso a los modelos | Se factura en la cuenta de AWS; tope `PRESUPUESTO_USD` |
 
-| Variable | Para qué |
-|---|---|
-| `ANTHROPIC_API_KEY` | Usar API en vez del plan. |
-| `PRESUPUESTO_USD` | Tope por evento con API key. |
-| `MODELO_INVESTIGADOR` | Modelo del agente (por defecto `claude-sonnet-5-5`). |
-| `WIKIMEDIA_CONTACT` | Correo o URL **del usuario** para habilitar Wikipedia. Sin esto, esa fuente queda desactivada. |
+**Bedrock:** usa `CLAUDE_CODE_USE_BEDROCK=1` por debajo (lo pone el programa). Variables: `AWS_REGION` (por defecto `us-east-1`), `BEDROCK_PROFILE` (por defecto `default`, explícito para no usar otro perfil por accidente), `BEDROCK_MODELO` y `BEDROCK_MODELO_PEQUENO` (por defecto `us.anthropic.claude-sonnet-4-6` y `us.anthropic.claude-haiku-4-5-20251001-v1:0`, los que respondieron en la cuenta probada; los de la familia 5.5 devolvieron `INVALID_PAYMENT_INSTRUMENT` hasta que AWS acepte un método de pago). Los IDs son perfiles de inferencia, no los IDs simples; se listan con `aws bedrock list-inference-profiles`. Permisos IAM mínimos: `bedrock:InvokeModel`, `bedrock:InvokeModelWithResponseStream` y `bedrock:ListInferenceProfiles`. La primera vez la cuenta debe tener método de pago válido y el acceso al modelo habilitado.
 
-`.env` está ignorado por git. **No lo leas ni lo imprimas.**
+**Revisión con Opus (solo Bedrock):** tras la investigación de Sonnet, una segunda pasada con Opus (`BEDROCK_MODELO_REVISOR`, por defecto `us.anthropic.claude-opus-4-6-v1`; `ninguno` la desactiva) relee el borrador sin herramientas ni internet. No reescribe el dossier: devuelve solo decisiones (qué datos conservar por número, el relato nuevo y las contradicciones o huecos que añade frente al evento original). **No puede** inventar datos, URLs, citas ni imágenes: `revision.fusionar` solo selecciona entre lo que ya existe. Si la revisión falla se conserva el borrador. En `metricas.json` queda la clave `revision` y `costo_usd_referencia_total`. Con `plan` y `api` no hay revisión. Para probarla sola sobre un dossier existente: `python revision.py salida/<id> <archivo.json> --evento <id> --guardar` (escribe `dossier.revisado.json`, no pisa el original).
+
+**Respaldo al plan:** con `--fallback-plan` (o `FALLBACK_PLAN=1`), si Bedrock o la API fallan **antes de que el agente empiece a trabajar** (credenciales, pago, acceso al modelo, red), se reintenta con el plan de Claude y se imprime un aviso; `metricas.json` guarda `fallback_desde`. Si falla a mitad del trabajo no se reintenta, para no pagar dos veces. `--plan` fuerza el plan directamente.
+
+Probar un proveedor (gasta una fracción de centavo): `python probar_herramientas.py --sin-claude` prueba solo las herramientas; sin `--sin-claude` prueba también el modelo, y `--proveedor bedrock` elige el proveedor.
 
 ## Uso
 
@@ -93,7 +93,6 @@ salida/<id-del-evento>/
   dossier.json     datos completos (esquema en esquema.py)
   dossier.md       versión legible
   metricas.json    tokens, costo de referencia, turnos, duración y llamadas a herramientas
-  imagenes/        archivos descargados de dominios NASA/JPL
   anteriores/      versiones previas, solo si se repitió con --forzar
 ```
 
@@ -112,7 +111,6 @@ Dentro de `dossier.json`:
    |---|---|---|
    | `buscar_web` | búsqueda DuckDuckGo (`ddgs`) | nada |
    | `leer_pagina` | texto de una URL (`httpx` + `trafilatura`; `Crawl4AI` si la página usa JavaScript) | Chromium de Playwright |
-   | `buscar_imagenes_nasa`, `archivos_nasa` | NASA Image and Video Library | nada |
    | `buscar_papers_ntrs` | informes técnicos NASA (NTRS) | nada |
 
 3. Todo lo que el agente lee se guarda en `cache/` (respuestas y `corpus.json`). Si repites una corrida, las herramientas responden desde caché.
@@ -130,7 +128,7 @@ Viven en `prompts/` como archivos de texto, separados del código:
 
 - Cada archivo empieza con una cabecera `---` con `version: N`. `prompts.py` la lee y `metricas.json` guarda la versión usada (clave `prompts`).
 - **Para cambiar un prompt:** edita el `.md`, sube `version`, anota el cambio en `CHANGELOG.md`, corre `python -m unittest discover -s tests` (gratis) y compara 2 o 3 eventos con `--forzar`.
-- **Contrato que no debes romper:** el prompt nombra campos del esquema (`cita`, `fuente_url`, `datos_reales`…) y herramientas (`leer_pagina`, `buscar_imagenes_nasa`…). Si renombras algo en `esquema.py` o `herramientas.py`, actualiza el prompt; `tests/test_prompts.py` falla si ya no coinciden.
+- **Contrato que no debes romper:** el prompt nombra campos del esquema (`cita`, `fuente_url`, `datos_reales`…) y herramientas (`leer_pagina`, `buscar_papers_ntrs`…). Si renombras algo en `esquema.py` o `herramientas.py`, actualiza el prompt; `tests/test_prompts.py` falla si ya no coinciden.
 
 ## Tests (gratis, sin red ni cupo)
 
@@ -143,6 +141,8 @@ Viven en `prompts/` como archivos de texto, separados del código:
 | Archivo | Contenido |
 |---|---|
 | `agente.py` | Entrada de línea de comandos, prompt, verificación de citas, descarga de imágenes y salida. |
+| `revision.py` | Segunda pasada con Opus (Bedrock) y reglas que limitan lo que puede cambiar. |
+| `proveedores.py` | Selección y configuración de plan / api / bedrock. |
 | `herramientas.py` | Herramientas MCP en proceso, caché y filtro de URLs. |
 | `prompts.py`, `prompts/` | Carga y versiones de los prompts. |
 | `tests/` | Pruebas sin costo (prompts, esquema y herramientas coherentes). |
@@ -152,10 +152,13 @@ Viven en `prompts/` como archivos de texto, separados del código:
 | `salida/` | Dossiers generados (se versionan). |
 | `cache/`, `.venv/`, `.env` | Locales; no se versionan. |
 
+## Imágenes
+
+El agente **no busca ni descarga imágenes** (se quitó en el prompt v2). Los dossiers anteriores a ese cambio (`opp001`, `opp005`, `opp008`, `opp015`, `opp018`, `opp021`) conservan su campo `imagenes` y su carpeta `imagenes/` como datos históricos; el esquema nuevo los ignora al leerlos.
+
 ## Garantías y seguridad
 
 - Cada dato lleva URL y cita literal; las citas se comprueban por código.
-- Las imágenes solo se descargan de `nasa.gov`, `jpl.nasa.gov`, `caltech.edu` y `wustl.edu`, y se omiten si pesan más de 25 MB. **Revisa siempre el crédito y la licencia antes de publicar.** Por lo general las imágenes de JPL llevan el crédito «NASA/JPL-Caltech»; algunas son de terceros.
 - `leer_pagina` rechaza URLs que no sean http/https hacia hosts públicos.
 - El agente corre aislado: no carga `CLAUDE.md` ni hooks del usuario (`setting_sources=[]`) y no tiene herramientas del sistema (`tools=[]`).
 - No inventa: lo que no puede confirmar va a `huecos`. No genera nada hipotético.
