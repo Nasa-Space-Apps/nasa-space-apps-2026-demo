@@ -1,0 +1,280 @@
+[
+ {
+  "fecha_inicio": "1967-04-17",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Ventana de lanzamiento y elección del 17 de abril",
+  "detalle": "Tras perder Surveyor 2, se descartó un sitio en Sinus Medii y se eligió Oceanus Procellarum. Lanzar el 16 de abril habría hecho llegar la nave una hora antes del amanecer local, así que la primera ventana útil fue la madrugada del 17. Las ventanas diarias duraban hasta unas 2,5 horas y se retrasaban unos 1,75 h por día hasta el 21 de abril.",
+  "datos_clave": [
+   "Primera ventana: 1:24 a 4:09 AM EST del 17 abr 1967",
+   "Ventanas de hasta ~2,5 h hasta el 21 abr"
+  ],
+  "etapa": "Preparación del lanzamiento",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "planificacion",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3: Touching the Face of the Moon",
+    "editor": "Drew Ex Machina (A. LePage)",
+    "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04-17",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Despegue del Atlas-Centaur AC-12 desde LC-36B",
+  "detalle": "El Atlas-Centaur AC-12 (Atlas D n.º 292, Centaur D) despegó del complejo 36B de Cabo Cañaveral con la sonda Surveyor 3. La fuente no menciona retrasos en la cuenta atrás.",
+  "datos_clave": [
+   "07:05:01 UT (2:05:01 EST según NSSDC)",
+   "Masa al lanzamiento: 1026 kg (NSSDC)"
+  ],
+  "etapa": "Lanzamiento",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "lanzamiento",
+  "discutido": true,
+  "nota": "Hora local: NSSDC dice 2:05:01 EST y LePage 3:05:01 EST (probable EDT); masa: NSSDC 1026 kg vs NASA Science ~997,9 kg. No se encontró fuente de un retraso real en la cuenta atrás (hueco).",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+    "editor": "NASA NSSDC",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3",
+    "editor": "NASA Science",
+    "url": "https://science.nasa.gov/mission/surveyor-3/",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3: Touching the Face of the Moon",
+    "editor": "Drew Ex Machina (A. LePage)",
+    "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04-17",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Primera ignición del Centaur y órbita de estacionamiento",
+  "detalle": "Tras separarse el Atlas, el Centaur encendió sus motores RL-10 unos 10 s después y quemó unos 340 s para dejar la nave en una órbita terrestre de espera casi circular.",
+  "datos_clave": [
+   "Quemado ~5 min / 340 s",
+   "Órbita 163 x 174 km (LePage); 167 km circular (NSSDC)",
+   "Inclinación 30,0°"
+  ],
+  "etapa": "Ascenso a órbita terrestre",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "lanzamiento",
+  "discutido": true,
+  "nota": "NSSDC da 167 km circular; LePage 163 x 174 km: compatibles pero con distinto detalle.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+    "editor": "NASA NSSDC",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3: Touching the Face of the Moon",
+    "editor": "Drew Ex Machina (A. LePage)",
+    "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04-17",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Segunda ignición del Centaur: inyección hacia la Luna",
+  "detalle": "Tras una costa de 22 min 9 s, el Centaur se reencendió unos 111 s y puso a Surveyor 3 en trayectoria lunar. Fue un vuelo operativo de Surveyor con reencendido del Centaur.",
+  "datos_clave": [
+   "Costa: 22 min 9 s",
+   "Segunda quema: 1 min 51,3 s, a las 07:36:58 UT",
+   "Órbita geocéntrica de la sonda: 169 x 497 393 km"
+  ],
+  "etapa": "Inyección translunar",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "viaje",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+    "editor": "NASA NSSDC",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3: Touching the Face of the Moon",
+    "editor": "Drew Ex Machina (A. LePage)",
+    "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3 essay",
+    "editor": "Honeysuckle Creek (H. Lindsay)",
+    "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04-17",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": "GET ~0 h 35 min",
+  "titulo": "Separación del Centaur y despliegue solar",
+  "detalle": "La sonda se separó del Centaur a las 07:39:54 UT; el Centaur venteó propelente residual para alejarse. Hacia las 07:48 UT se desplegó el panel solar y la adquisición del Sol tardó unos 7 minutos.",
+  "datos_clave": [
+   "Separación 07:39:54 UT",
+   "Panel solar desplegado ~07:48 UT",
+   "Centaur: órbita 167 x 353 419 km"
+  ],
+  "etapa": "Crucero inicial",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "viaje",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3: Touching the Face of the Moon",
+    "editor": "Drew Ex Machina (A. LePage)",
+    "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3 essay",
+    "editor": "Honeysuckle Creek (H. Lindsay)",
+    "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04-17",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Primeros contactos de seguimiento: Carnarvon y Tidbinbilla",
+  "detalle": "Carnarvon (Australia Occidental) adquirió la nave a las 07:48:01 UT con telemetría débil por distancia e interferencia de señales DME del aeropuerto local; el radar en banda C dio 68 min 20 s de seguimiento. Tidbinbilla (DSS-42) hizo la primera adquisición bidireccional a las 08:01:50 UT.",
+  "datos_clave": [
+   "Carnarvon 07:48:01 UT",
+   "Tidbinbilla adquisición 07:55:42 UT; bidireccional 08:01:50 UT",
+   "Enlace Bell Modem a 550 bps extendió 10 min 49 s"
+  ],
+  "etapa": "Crucero inicial",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "problema",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 essay",
+    "editor": "Honeysuckle Creek (H. Lindsay)",
+    "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04-17",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": "GET ~9 h 23 min",
+  "titulo": "Canopus localizado automáticamente por primera vez",
+  "detalle": "A las 16:27:51 UT el sensor de estrella halló Canopus, la referencia de orientación. Fue la primera vez que se adquirió de forma automática en una Surveyor; antes, la señal de Canopus superaba el umbral de bloqueo automático.",
+  "datos_clave": [
+   "16:27:51 UT del 17 abr 1967",
+   "Primera adquisición automática de Canopus"
+  ],
+  "etapa": "Crucero",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "solucion",
+  "discutido": false,
+  "nota": "Fuente única comunitaria (ensayo de Honeysuckle Creek); NTRS mencionaba el problema de nivel de señal pero no se abrió el documento completo.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 essay",
+    "editor": "Honeysuckle Creek (H. Lindsay)",
+    "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-04-18",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": "GET ~21 h 52 min",
+  "titulo": "Corrección de rumbo hacia el punto de aterrizaje",
+  "detalle": "Una maniobra a mitad de camino acercó la nave al punto elegido y redujo la elipse de objetivo a 15,1 x 10,6 km (antes un círculo de unos 30 km). La nueva diana fue 2,92° S, 23,25° O, y el tránsito duró casi 65 horas.",
+  "datos_clave": [
+   "Quema de 4,278 s a las 04:57:24 UT del 18 abr",
+   "Delta-v 4,2 m/s",
+   "Elipse 15,1 x 10,6 km",
+   "Tránsito ~65 h"
+  ],
+  "etapa": "Crucero",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "viaje",
+  "discutido": true,
+  "nota": "Momento de la corrección: NSSDC 21,9 h tras el despegue, LePage 21 h 41 min tras la inyección; cifras cercanas pero no idénticas. NASA Science no menciona la corrección.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+    "editor": "NASA NSSDC",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3: Touching the Face of the Moon",
+    "editor": "Drew Ex Machina (A. LePage)",
+    "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3 essay",
+    "editor": "Honeysuckle Creek (H. Lindsay)",
+    "url": "https://honeysucklecreek.net/other_stations/tidbinbilla/Surveyor_3_hl.html",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ }
+]

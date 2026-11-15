@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.2780536,
+  "turnos": 11,
+  "duracion_s": 110.9,
+  "duracion_api_s": 100.6,
+  "tokens": {
+    "input_tokens": 7,
+    "cache_creation_input_tokens": 25732,
+    "cache_read_input_tokens": 48182,
+    "output_tokens": 11036,
+    "output_tokens_details": {
+      "thinking_tokens": 4369
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 25732
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1388,
+      "outputTokens": 31,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0015429999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 7,
+      "outputTokens": 11036,
+      "cacheReadInputTokens": 48182,
+      "cacheCreationInputTokens": 25732,
+      "webSearchRequests": 0,
+      "costUSD": 0.2765106,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 4369,
+      "cacheCreationEphemeral5mInputTokens": 25732,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 2,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 6,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.16148075,
+    "turnos": 2,
+    "duracion_s": 62.1,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5282,
+        "outputTokens": 33,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0054470000000000005,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 4670,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6283,
+        "webSearchRequests": 0,
+        "costUSD": 0.15603375,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 2635,
+        "cacheCreationEphemeral5mInputTokens": 6283,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 18,
+      "datos_despues": 18,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 3,
+      "observaciones": "Se conservan los 18 datos porque todas las citas respaldan sus afirmaciones. Del relato original del borrador se eliminaron tres afirmaciones sin respaldo en datos citados: que el 60 % de la masa era el retrocohete, la trayectoria directa sin órbita de estacionamiento, y la fecha exacta del 6 de julio para la reanudación de operaciones; también se retiró la mención a rocas de más de un metro, que "
+    }
+  },
+  "costo_usd_referencia_total": 0.43953435,
+  "costos": {
+    "total_usd": 0.439535,
+    "por_paso": {
+      "investigacion": 0.278054,
+      "revision": 0.161481
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.00699,
+        "entrada": 6670,
+        "salida": 64,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.276511,
+        "entrada": 7,
+        "salida": 11036,
+        "cache_leida": 48182,
+        "cache_escrita": 25732,
+        "razonamiento": 4369
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.156034,
+        "entrada": 3,
+        "salida": 4670,
+        "cache_leida": 0,
+        "cache_escrita": 6283,
+        "razonamiento": 2635
+      }
+    }
+  }
+}

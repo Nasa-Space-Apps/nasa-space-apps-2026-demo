@@ -1,0 +1,13 @@
+{
+  "id": "surveyor3",
+  "nombre": "Surveyor 3",
+  "tipo": "lander",
+  "cuerpo": "Luna",
+  "agencia": "NASA/JPL",
+  "prefijo_eventos": "sur",
+  "publico": "estudiantes de 5.º de secundaria (17 años)",
+  "sol": {
+    "sin_sol": true
+  },
+  "creada": "2026-11-15"
+}

@@ -1,0 +1,388 @@
+[
+ {
+  "fecha_inicio": "1960-05",
+  "fecha_fin": null,
+  "precision_fecha": "aproximada",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "NASA aprueba Surveyor y lo asigna al JPL",
+  "detalle": "En la primavera de 1960 NASA aprobó formalmente Surveyor y encargó su desarrollo al Laboratorio de Propulsión a Chorro (JPL). Nació para estudiar científicamente la superficie lunar y después se reorientó a apoyar el programa Apollo. Su diseño preveía un alunizaje suave con retrocohetes regulables guiados por radar.",
+  "datos_clave": [
+   "Aprobación formal: primavera de 1960",
+   "Programa: 7 vuelos de alunizaje suave",
+   "Coste total del programa: 469 millones de dólares"
+  ],
+  "etapa": "Origen del programa Surveyor",
+  "fase": "origen",
+  "categoria": "origen",
+  "discutido": false,
+  "nota": "Una fuente da primavera de 1960 y otra mayo de 1960; son compatibles. El mes es aproximado.",
+  "fuentes": [
+   {
+    "titulo": "Apollo Expeditions to the Moon, cap. 5",
+    "editor": "NASA History (SP-350)",
+    "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 3 (1967-035A)",
+    "editor": "NASA NSSDCA",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1960-05",
+  "fecha_fin": null,
+  "precision_fecha": "aproximada",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Plan inicial: unos 157 kg de instrumentos con cuatro cámaras y un taladro",
+  "detalle": "El concepto original de mayo de 1960 era un módulo cargado de ciencia: unos 157 kg de instrumentos, incluidas cuatro cámaras de televisión y un taladro. Las limitaciones del cohete lanzador harían descartar buena parte de ese plan en los años siguientes.",
+  "datos_clave": [
+   "~157 kg de instrumentos previstos",
+   "4 cámaras de TV y un taladro"
+  ],
+  "etapa": "Origen del programa Surveyor",
+  "fase": "origen",
+  "categoria": "planificacion",
+  "discutido": false,
+  "nota": "Una sola fuente (comunitaria).",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1961-01-19",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Hughes Aircraft, contratista para construir Surveyor",
+  "detalle": "Tras una convocatoria de estudios preliminares y una junta de evaluación de fuentes, el JPL recomendó a Hughes Aircraft (Los Ángeles) y NASA lo aprobó. Según una crónica, Hughes recibió el contrato el 19 de enero de 1961 para construir los Surveyor. El JPL gestionaba el proyecto y Hughes fabricaba la nave.",
+  "datos_clave": [
+   "Contratista: Hughes Aircraft Co.",
+   "Contrato: 19 ene 1961 (según Drew Ex Machina)",
+   "Gestión: JPL"
+  ],
+  "etapa": "Selección de contratista",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "planificacion",
+  "discutido": false,
+  "nota": "La fecha exacta solo aparece en una fuente comunitaria; las oficiales confirman la selección sin fecha.",
+  "fuentes": [
+   {
+    "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+    "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+    "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Apollo Expeditions to the Moon, cap. 5",
+    "editor": "NASA History (SP-350)",
+    "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1961-05-08",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "El primer Atlas-Centaur falla y compromete el calendario de Surveyor",
+  "detalle": "Surveyor dependía del Centaur, la primera etapa superior de hidrógeno líquido de EE. UU. El primer vuelo de prueba, el Atlas-Centaur 1, falló unos 55 segundos tras el despegue al desprenderse paneles aislantes. Los fallos de Centaur retrasaron el programa durante años.",
+  "datos_clave": [
+   "Atlas-Centaur 1: 8 may 1961, fallo a ~55 s",
+   "Otros fallos: AC-3, 30 jun 1964; AC-4, 11 dic 1964; AC-5, 2 mar 1965"
+  ],
+  "etapa": "Dependencia del cohete Centaur",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "problema",
+  "discutido": true,
+  "nota": "SP-350 dice que el primer vuelo de prueba de Centaur fue en 1962; Drew Ex Machina da el 8 may 1961. Sin resolver con fuente primaria.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Apollo Expeditions to the Moon, cap. 5",
+    "editor": "NASA History (SP-350)",
+    "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1962-10",
+  "fecha_fin": null,
+  "precision_fecha": "mes",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "El programa Centaur pasa del Marshall al Centro Lewis",
+  "detalle": "En octubre de 1962 la dirección del Atlas-Centaur se trasladó del Marshall Space Flight Center al Lewis Research Center de NASA, bajo Abe Silverstein, para rescatar un cohete en crisis. Wernher von Braun había llegado a recomendar cancelar Centaur a favor de una combinación Saturn-Agena.",
+  "datos_clave": [
+   "Cambio de gestión: oct 1962",
+   "Objetivo inicial de carga lunar: 2.150 libras",
+   "Estimación previa de carga: de 2.500 a 1.800 libras o menos"
+  ],
+  "etapa": "Dependencia del cohete Centaur",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "solucion",
+  "discutido": false,
+  "nota": "Mes tomado de la crónica comunitaria; SP-350 no da fecha.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Apollo Expeditions to the Moon, cap. 5",
+    "editor": "NASA History (SP-350)",
+    "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1962-12",
+  "fecha_fin": null,
+  "precision_fecha": "aproximada",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Rediseño: Surveyor adelgaza a unos 950 kg con 52 kg de instrumentos",
+  "detalle": "Como el Centaur levantaba menos de lo previsto, Surveyor tuvo que reducir masa varias veces. A finales de 1962 se planteó un módulo de 950 kg con 52 kg de instrumentos; en 1963 la estimación operativa fue de unos 975 kg con 30 kg de instrumentos, y hacia 1965 se eligió un modelo de ingeniería recortado de unos 1.000 kg para los siete vuelos.",
+  "datos_clave": [
+   "Finales de 1962: 950 kg, 52 kg de instrumentos",
+   "1963: ~975 kg, 30 kg de instrumentos",
+   "~1965: ~1.000 kg para los 7 vuelos"
+  ],
+  "etapa": "Rediseño por límite de masa",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "solucion",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+    "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+    "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1962",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Fracasan los tres Ranger de bloque II y crecen los temores para Surveyor",
+  "detalle": "En 1962 los tres intentos de alunizaje de los Ranger de bloque II fallaron, lo que hizo temer problemas parecidos en Surveyor. Después, los Ranger de bloque III (1964-65) fotografiaron mares ecuatoriales y mostraron que eran los sitios más seguros. Los fallos del Ranger también absorbieron recursos del JPL que Surveyor necesitaba.",
+  "datos_clave": [
+   "3 intentos fallidos Ranger bloque II en 1962",
+   "Ranger bloque III: 1964 y 1965"
+  ],
+  "etapa": "Contexto del JPL y Ranger",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "problema",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+    "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+    "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1962",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Pruebas de caída del retrocohete desde globo sobre Holloman",
+  "detalle": "En la primera mitad de 1962 empezaron en la base de Holloman pruebas de caída de retrocohetes llevados por globo. La primera falló y las siguientes dieron resultados mixtos; las últimas, antes del primer vuelo, tuvieron éxito. Formaron parte del banco de pruebas en tierra del sistema de frenado.",
+  "datos_clave": [
+   "Inicio: primera mitad de 1962",
+   "Primera prueba fallida; las últimas, exitosas"
+  ],
+  "etapa": "Pruebas en tierra",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "pruebas",
+  "discutido": false,
+  "nota": "Una sola fuente (comunitaria).",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1964-09",
+  "fecha_fin": null,
+  "precision_fecha": "aproximada",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Surveyor se reduce a proyecto de apoyo a Apollo",
+  "detalle": "Tras los retrasos y la presión de Apollo, en el otoño de 1964 el programa se recortó a un proyecto discreto de apoyo a Apollo. NASA ordenó prioridad alta, aunque el JPL, con personal limitado, tardó en responder. Hughes también aceptó modificar su contrato antes del primer lanzamiento, cediendo parte del beneficio ganado a cambio de incentivos ligados al éxito.",
+  "datos_clave": [
+   "Recorte: otoño de 1964",
+   "Hughes y JPL reorganizaron desarrollo y pruebas"
+  ],
+  "etapa": "Reorientación hacia Apollo",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "planificacion",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+    "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+    "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Apollo Expeditions to the Moon, cap. 5",
+    "editor": "NASA History (SP-350)",
+    "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-350/ch-5-4.html",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1965-08-11",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Atlas-Centaur 6 triunfa: el cohete queda listo para lanzar Surveyor",
+  "detalle": "Tras cinco vuelos de prueba con resultados desiguales, el Atlas-Centaur 6 voló con éxito el 11 de agosto de 1965 y Centaur se consideró listo para el servicio. Abrió el camino al primer Surveyor, lanzado el 30 o 31 de mayo de 1966.",
+  "datos_clave": [
+   "AC-6: 11 ago 1965, éxito",
+   "Surveyor 1: 30/31 may 1966"
+  ],
+  "etapa": "Dependencia del cohete Centaur",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "hito",
+  "discutido": true,
+  "nota": "Fuentes discrepan en el lanzamiento de Surveyor 1: 30 mayo (SP-4901) y 31 mayo (SP-350).",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 1: America's first lunar landing",
+    "editor": "Drew Ex Machina",
+    "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, cap. 2",
+    "editor": "NASA History (SP-4901), copia en apolloexplorer.co.uk",
+    "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Surveyor 3 sustituye la cámara de aproximación por un brazo excavador",
+  "detalle": "A diferencia de Surveyor 1 y 2, Surveyor 3 sustituyó la cámara de aproximación por un muestreador de superficie: una pala de 12 x 5 cm en un brazo pantógrafo de 1,5 m que Hughes construyó. Con ella el equipo midió la resistencia del suelo, clave para saber si el Apollo podía posarse. El concepto lo propuso el ingeniero de Caltech Ronald Scott.",
+  "datos_clave": [
+   "Pala de 12 x 5 cm, brazo de 1,5 m",
+   "Excavación hasta 18 cm de profundidad",
+   "Nave: 1.026 kg al lanzamiento, 296 kg al alunizar"
+  ],
+  "etapa": "Instrumentos de Surveyor 3",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "desarrollo",
+  "discutido": true,
+  "nota": "Smithsonian nombra a Gene Shoemaker como investigador principal del muestreador en Surveyor 3; la memoria de Scott y Wikipedia lo nombran a él. El año del cambio de instrumento no tiene fecha exacta verificada.",
+  "fuentes": [
+   {
+    "titulo": "Surveyor 3 (1967-035A)",
+    "editor": "NASA NSSDCA",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Soil mechanics surface sampler",
+    "editor": "Caltech (CaltechAUTHORS)",
+    "url": "https://resolver.caltech.edu/CaltechAUTHORS:20141107-110442777",
+    "tipo": "científica",
+    "verificacion": "solo extracto de búsqueda"
+   },
+   {
+    "titulo": "Soil Surface Sampler",
+    "editor": "Smithsonian NASM",
+    "url": "https://www.airandspace.si.edu/es/collection-objects/soil-sampler-lunar-lander-surveyor/nasm_A19700123000",
+    "tipo": "libro/medio",
+    "verificacion": "solo extracto de búsqueda"
+   }
+  ]
+ }
+]

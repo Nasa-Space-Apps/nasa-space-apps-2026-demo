@@ -1,0 +1,39 @@
+{
+  "esquema_version": "2.0",
+  "mision": {
+    "id": "surveyor3",
+    "nombre": "Surveyor 3",
+    "nombre_completo": "Surveyor C (Surveyor 3)",
+    "agencia": "NASA/JPL",
+    "tipo": "lander",
+    "cuerpo": "Luna",
+    "lugar": "Oceanus Procellarum (cráter Surveyor)",
+    "estado_actual": "Misión terminada: último contacto el 4 de mayo de 1967. La nave permanece en la Luna; Apollo 12 recuperó piezas en noviembre de 1969.",
+    "sol_cero": "No aplica (Luna)",
+    "fechas_clave": {
+      "lanzamiento": {"fecha": "1967-04-17", "eventos": []},
+      "aterrizaje": {"fecha": "1967-04-20", "eventos": []},
+      "ultimo_contacto": {"fecha": "1967-05-04", "eventos": []},
+      "fin_oficial": {"fecha": null, "eventos": []}
+    },
+    "misiones_relacionadas": ["apollo12"],
+    "resumen": {"eventos": 0, "fuentes_unicas": 0, "eventos_por_fase": {}}
+  },
+  "titulo": "Línea de tiempo de Surveyor 3: del programa Surveyor al alunizaje suave y la visita de Apollo 12",
+  "idioma": "es",
+  "generado": "2026-11-15",
+  "version": "0.1",
+  "alcance": "Desde el origen del programa Surveyor hasta la visita de Apollo 12 (1969) y el análisis de las piezas recuperadas: desarrollo, lanzamiento, alunizaje, operaciones, fin de comunicación y legado.",
+  "como_leer": {"fechas": "fecha_inicio / fecha_fin en ISO parcial (AAAA, AAAA-MM, AAAA-MM-DD). precision_fecha indica año, mes, día, rango, aproximada o década. En la Luna sol es siempre null; el tiempo transcurrido de misión va en sol_texto cuando la fuente lo da."},
+  "aviso_verificacion": "Borrador de trabajo (v0). Cada fuente declara su nivel de verificación; nada se completó de memoria.",
+  "ficha_tecnica": {},
+  "equipo": [],
+  "totales_de_la_mision": {},
+  "records": [],
+  "discrepancias": [],
+  "pendientes_de_verificar": [],
+  "recursos_para_la_plataforma": {"modelos_3d": [], "imagenes_y_panoramicas": [], "vistas_desde_orbita": [], "videos": [], "documentales": [], "datos": [], "educacion": [], "historias": [], "portales": [], "nota": "No hay modelo 3D de Surveyor en NASA-3D-Resources (verificado). Sí hay Apollo Lunar Module.glb y STL del sitio de Apollo 12."},
+  "eventos": [],
+  "fuentes_no_citadas_en_eventos": [],
+  "indice_fuentes": []
+}

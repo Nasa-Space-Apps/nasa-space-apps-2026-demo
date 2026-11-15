@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.23428635,
+  "turnos": 12,
+  "duracion_s": 108.7,
+  "duracion_api_s": 92.7,
+  "tokens": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 20979,
+    "cache_read_input_tokens": 46987,
+    "output_tokens": 9325,
+    "output_tokens_details": {
+      "thinking_tokens": 3327
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 20979
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1475,
+      "outputTokens": 29,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.00162,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 8,
+      "outputTokens": 9325,
+      "cacheReadInputTokens": 46987,
+      "cacheCreationInputTokens": 20979,
+      "webSearchRequests": 0,
+      "costUSD": 0.23266635000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 3327,
+      "cacheCreationEphemeral5mInputTokens": 20979,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 6,
+    "buscar_web": 3,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.3233432499999999,
+    "turnos": 2,
+    "duracion_s": 137.2,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4332,
+        "outputTokens": 33,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004497,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 11420,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5333,
+        "webSearchRequests": 0,
+        "costUSD": 0.31884624999999994,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 9225,
+        "cacheCreationEphemeral5mInputTokens": 5333,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 15,
+      "datos_despues": 15,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 3,
+      "observaciones": "El cambio principal fue eliminar del relato numerosas afirmaciones sin respaldo en los datos (carga final de 30 kg, cinco éxitos de siete, instrumentos específicos como sismómetro y magnetómetro, cancelación del Surveyor B a favor de Lunar Orbiter/Langley, retrasos del Atlas-Centaur, fechas 1966-1968, y detalles sobre el programa Ranger). Los 15 datos se conservan porque sus citas respaldan correc"
+    }
+  },
+  "costo_usd_referencia_total": 0.5576296,
+  "costos": {
+    "total_usd": 0.557629,
+    "por_paso": {
+      "investigacion": 0.234286,
+      "revision": 0.323343
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006117,
+        "entrada": 5807,
+        "salida": 62,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.232666,
+        "entrada": 8,
+        "salida": 9325,
+        "cache_leida": 46987,
+        "cache_escrita": 20979,
+        "razonamiento": 3327
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.318846,
+        "entrada": 3,
+        "salida": 11420,
+        "cache_leida": 0,
+        "cache_escrita": 5333,
+        "razonamiento": 9225
+      }
+    }
+  }
+}

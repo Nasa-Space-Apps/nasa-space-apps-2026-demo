@@ -1,0 +1,359 @@
+[
+ {
+  "fecha_inicio": "1969-11-20",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": "Llegada a Surveyor a las 06:27 GMT, unos 134 h 05 min GET (GET calculado a partir del despegue a las 16:22 GMT del 14 nov)",
+  "titulo": "Conrad y Bean llegan a Surveyor 3: 25 minutos y 56 fotos",
+  "detalle": "En la segunda caminata de Apollo 12, Conrad y Bean alcanzaron Surveyor 3 el 20 de noviembre de 1969 a las 06:27 GMT. Pasaron unos 25 minutos junto a la nave y otros 10 en un cráter cercano llamado Blocky Crater. Tomaron 56 fotos en blanco y negro, muchas en pares estereoscópicos, siguiendo un plan de tareas elaborado por Hughes, JPL y el centro de Houston.",
+  "datos_clave": [
+   "Llegada: 20 nov 1969, 06:27 GMT",
+   "GET aproximado: 134 h 05 min (cálculo propio: despegue 14 nov 16:22 GMT)",
+   "Tiempo en Surveyor: ~25 min; en Blocky Crater: ~10 min",
+   "56 fotografías en blanco y negro de la nave y su entorno",
+   "Plan previo de 14 tareas; el retorno de piezas se consideraba poco probable al planificar"
+  ],
+  "etapa": "Visita de Apollo 12",
+  "fase": "legado",
+  "categoria": "hito",
+  "discutido": false,
+  "nota": "El GET exacto de la transcripción del Apollo Lunar Surface Journal no se pudo abrir (las páginas ALSJ dieron 404 o redirección). El GET aquí es una conversión del tiempo GMT que da NASA SP-284; el Preliminary Science Report fija el despegue a las 16:22 GMT.",
+  "fuentes": [
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), cap. I",
+    "editor": "NASA Scientific and Technical Information Office",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   },
+   {
+    "titulo": "Apollo 12 Preliminary Science Report (NASA SP-235)",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19700025955/downloads/19700025955.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1969-11-20",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": "Observaciones durante la visita (~134 h GET)",
+  "titulo": "Lo que vio la tripulación: blanca de lejos, cubierta de polvo tostado de cerca",
+  "detalle": "Conrad y Bean contaron que, desde lejos y sin sombra, Surveyor parecía blanca, pero de cerca estaba cubierta de polvo de color tostado, difícil de frotar y no uniforme. El lado de un tubo que miraba al interior de la nave estaba más limpio que el que miraba hacia fuera. Sin el cambio de color, la nave parecía en muy buen estado y aún se veía la huella en forma de rejilla de las patas. Concluyeron que el polvo no venía del escape del módulo lunar porque no había un patrón direccional.",
+  "datos_clave": [
+   "Color: de blanca a cubierta por una capa de polvo tostado (informe preliminar: recubrimiento marrón claro)",
+   "Polvo más grueso en las zonas más expuestas a la vista; lado interior de tubos y puntales más limpio",
+   "Sin patrón direccional del polvo según la tripulación",
+   "Huella de las patas aún visible en el suelo"
+  ],
+  "etapa": "Visita de Apollo 12",
+  "fase": "legado",
+  "categoria": "ciencia",
+  "discutido": true,
+  "nota": "La tripulación pensó que el escape del LM no había depositado el polvo, pero SP-284 concluye que el escape erosionó material que golpeó a Surveyor ('arenado') y que había más polvo en 1969 que en 1967. Sobre el estado del brazo, el informe de la tripulación solo menciona el cucharón; no hay descripción del brazo en las fuentes abiertas.",
+  "fuentes": [
+   {
+    "titulo": "Apollo 12 Preliminary Science Report (NASA SP-235), cap. Crew Observations",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19700025955/downloads/19700025955.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   },
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), resumen",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1969-11-20",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": "Corte de piezas durante la visita (~134 h GET)",
+  "titulo": "Cortar una nave de 1967: tubos quebradizos y una cinta de acero que no se pudo cortar",
+  "detalle": "Los astronautas cortaron las piezas de Surveyor 3 con un par de cortadores de cizalla. Informaron de que el aluminio era más quebradizo y fácil de cortar que los tubos del entrenamiento, y de que el aislamiento de los cables estaba duro y seco, como amianto viejo. La cinta de acero del cucharón era demasiado gruesa para cortarla, pero el extremo se despegó del cucharón al torcerla. El vidrio de la placa térmica del compartimento electrónico se hizo añicos al intentar cogerlo, y se dejó. Tampoco lograron soltar el vidrio de la parte superior del compartimento electrónico.",
+  "datos_clave": [
+   "Herramienta: cortadores de cizalla (shearing cutters)",
+   "Piezas devueltas: cámara de TV completa, cucharón del muestreador con más de 6,5 g de suelo, tubo de aluminio sin pintar de 19,7 cm, tubo pintado de blanco de 10 cm, ~13 cm de cable de TV con envoltura aluminizada",
+   "Peso añadido en la vuelta: no afectó a la estabilidad ni a la movilidad según la tripulación",
+   "El cucharón se recuperó como extra del plan ('a opción del astronauta')"
+  ],
+  "etapa": "Visita de Apollo 12",
+  "fase": "legado",
+  "categoria": "operacion",
+  "discutido": false,
+  "nota": "El Preliminary Science Report habla de 'cutting tool' y SP-284 de 'shearing cutters'; no se nombró el modelo exacto. No se pudo abrir la transcripción del ALSJ para el GET de cada corte.",
+  "fuentes": [
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), cap. I",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   },
+   {
+    "titulo": "Apollo 12 Preliminary Science Report (NASA SP-235), cap. Crew Observations",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19700025955/downloads/19700025955.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1970-01-07",
+  "fecha_fin": "1970-01-16",
+  "precision_fecha": "rango",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "De la bolsa a la sala limpia: cuarentena y reparto de las piezas",
+  "detalle": "Las piezas viajaron en una bolsa de tela beta; el tubo pintado y el cable se dejaron caer en un contenedor sellado de muestras (SESC). Pasaron cuarentena en el Lunar Receiving Laboratory dentro de dos bolsas de polietileno hasta el 7 de enero de 1970. Las piezas de ingeniería se enviaron a Hughes (Culver City) el 16 de enero. Al abrir el SESC en JPL se vio que había tenido una fuga: no se logró un buen cierre en la Luna.",
+  "datos_clave": [
+   "Cuarentena levantada: 7 ene 1970",
+   "Cámara y tubos enviados a Hughes Aircraft, Culver City: 16 ene 1970",
+   "Tubo sin pintar cortado en seis piezas",
+   "SESC con fuga: entró aire (o aire y oxígeno)",
+   "Manipulación conocida por abrasionar superficies y contaminar con fibras de tela beta, orgánicos y especies biológicas"
+  ],
+  "etapa": "Análisis en la Tierra",
+  "fase": "legado",
+  "categoria": "problema",
+  "discutido": false,
+  "nota": "Problema: el sellado en la Luna no fue perfecto y el manejo contaminó piezas; no hay un 'evento solución' único, SP-284 documenta el control de la documentación de cada pieza.",
+  "fuentes": [
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), cap. I (Handling of Material)",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1972",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "El polvo de Surveyor 3: había más en 1969 que en 1967 y el escape del LM lo arenó",
+  "detalle": "SP-284 concluye que la decoloración por radiación fue proporcional a la iluminación solar y que existe más polvo en la nave que en 1967: lo aportaron el aterrizaje anormal, el cucharón y probablemente el paso del LM. Patrones de sombra en la pintura mostraron que las partículas lanzadas por el escape del LM golpearon casi horizontalmente a la nave. La pintura azul claro del cucharón pasó a azul blanquecino. Sobre el espejo se midió una densidad de unos 1 hoyo por 2 mm².",
+  "datos_clave": [
+   "Dos efectos separados: oscurecimiento por radiación y adherencia de polvo",
+   "Polvo sobre los filtros redujo la transmisión un 25 %",
+   "Hoyos en el espejo: ~1 por 2 mm² en zonas limpias",
+   "Fracción de masa de polvo: 90 % entre 0,3 y 3 µm",
+   "Velocidad del polvo del escape: 40 m/s (resumen) frente a 'al menos 70 m/s' (cap. de microbiología)"
+  ],
+  "etapa": "Análisis en la Tierra",
+  "fase": "legado",
+  "categoria": "ciencia",
+  "discutido": true,
+  "nota": "El mismo informe da dos velocidades para el polvo lanzado por el escape del LM: 40 m/s en el resumen y 'al menos 70 m/s' en el capítulo sobre microorganismos.",
+  "fuentes": [
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), cap. II y IV",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1972",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": "32 ciclos día-noche lunares de exposición",
+  "titulo": "La cámara aguantó 31 meses en la Luna: resultados de ingeniería casi sin fallos",
+  "detalle": "40 equipos de ingenieros y científicos hicieron unas 275 tareas de análisis durante 16 meses sobre las piezas devueltas. La conclusión de ingeniería fue 'no espectacular': la electrónica, la óptica, los mecanismos y los lubricantes estaban en general en buen estado y ningún fallo se debió principalmente al entorno lunar, salvo los causados por ciclos térmicos. Los autores lo vieron como prueba de que la tecnología de entonces permitía instalaciones lunares de larga duración.",
+  "datos_clave": [
+   "40 equipos de investigadores; ~275 tareas en 16 meses",
+   "Exposición: 32 ciclos día/noche lunares",
+   "Sin fallos atribuibles al entorno lunar salvo efectos de ciclos térmicos",
+   "La parte de ingeniería estuvo a cargo de Hughes Aircraft"
+  ],
+  "etapa": "Análisis en la Tierra",
+  "fase": "legado",
+  "categoria": "ciencia",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), prefacio y cap. III",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1972",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Micrometeoritos: la búsqueda del impacto que no apareció",
+  "detalle": "Una parte importante del estudio fue buscar huellas de impactos de hipervelocidad, comparable a buscar una aguja en un pajar. Todos los investigadores concluyeron que no había ningún rasgo que pudiera atribuirse con certeza a un micrometeorito, así que el flujo calculado son solo cotas máximas. Esas cotas concordaron en general con las de Pioneer 8 y 9, Cosmos 163 y Pegasus. Los filtros sí mostraron impactos secundarios: unos 800 por cm² y año para partículas de 1 µm o más, unas 10³ veces la tasa primaria esperada.",
+  "datos_clave": [
+   "Ningún rasgo atribuible con seguridad a un micrometeorito",
+   "Flujo reportado = límites superiores",
+   "Impactos secundarios en filtros: ~800 cm⁻² año⁻¹ para ≥1 µm",
+   "Características de superficie de 1 a 4,5 µm impidieron usar óptica convencional"
+  ],
+  "etapa": "Análisis en la Tierra",
+  "fase": "legado",
+  "categoria": "ciencia",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), cap. II (Micrometeorite Impact Analyses)",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1967-05",
+  "fecha_fin": "1969-11",
+  "precision_fecha": "rango",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Surveyor 3 se había movido: 5 grados de inclinación y 7-8 cm de traslado",
+  "detalle": "Al comparar fotos de Surveyor de 1967 con las de Apollo 12, el equipo de SP-284 concluyó que la nave se movió de su configuración original en algún momento entre mayo de 1967 y noviembre de 1969. El desplazamiento fue de unos 5 grados de inclinación y 7 a 8 cm de traslado lateral, en forma de rotación alrededor de la pata 1 hundida en el suelo. Se conjetura una falla súbita del amortiguador de la pata 3.",
+  "datos_clave": [
+   "Ventana del movimiento: mayo 1967 a noviembre 1969",
+   "Inclinación: 5°; traslado lateral en la pata 2: 7-8 cm",
+   "Causa propuesta: fallo del amortiguador de la pata 3 (conjetura)"
+  ],
+  "etapa": "Análisis en la Tierra",
+  "fase": "legado",
+  "categoria": "ciencia",
+  "discutido": false,
+  "nota": "El informe lo presenta como conjetura, no como hecho probado.",
+  "fuentes": [
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), cap. II",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1971",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Streptococcus mitis: de la teoría de la contaminación previa al lanzamiento a la reevaluación con películas de 16 mm",
+  "detalle": "El informe de 1972 (SP-284) defendía que S. mitis se aisló de espuma del interior de la cámara y que probablemente estaba allí antes del lanzamiento, y que un colado posterior era improbable. Rummel, Allton y Morrison revisaron películas de 16 mm de la toma de muestras en el laboratorio: no se aislaron microbios viables en 10 de 11 puntos (32 de 33 muestras) de la cámara, no hubo control negativo y la espuma fue la última muestra tomada, tras introducir un operario el torso en la campana. Su lectura, la más aceptada hoy según la prensa consultada, es que lo aislado fue contaminación terrestre durante el análisis en la Tierra, no un superviviente lunar.",
+  "datos_clave": [
+   "SP-284: S. mitis aislado de espuma; identificación confirmada por el CDC de Atlanta",
+   "Sin microbios viables en 10 de 11 puntos de muestreo (32 de 33 muestras)",
+   "Sin control negativo de muestreo, solo positivo",
+   "S. mitis se aisló también de los astronautas en pruebas rutinarias",
+   "Presentación de Rummel, Allton y Morrison titulada 'A Microbe on the Moon?'"
+  ],
+  "etapa": "Análisis en la Tierra",
+  "fase": "legado",
+  "categoria": "ciencia",
+  "discutido": true,
+  "nota": "Dos lecturas: SP-284 (Mitchell y Ellis, 1971) consideraba improbable la contaminación posterior; Rummel et al. concluyen lo contrario tras ver las películas. El archivo de Rummel es una presentación (diapositivas) alojada en el sitio de NASA, no el artículo revisado por pares; su fecha no consta en el PDF abierto. Una búsqueda mostró que Live Science (2011) lo cubrió, solo extracto de búsqueda. Puede solaparse con el evento 'Streptococcus mitis: hallazgo y refutación' de la lista previa.",
+  "fuentes": [
+   {
+    "titulo": "A Microbe on the Moon? Surveyor III and Lessons Learned for Future Sample Return Missions",
+    "editor": "NASA SMD (Rummel, Allton y Morrison)",
+    "url": "https://smd-cms.nasa.gov/wp-content/uploads/2023/04/A_Microbe_on_the_Moon_TAGGED.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta completa",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leído completo (presentación corta)"
+   },
+   {
+    "titulo": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12 (NASA SP-284), cap. XI",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19720019081/downloads/19720019081.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   },
+   {
+    "titulo": "Moon Microbe Mystery Finally Solved",
+    "editor": "Live Science",
+    "url": "https://www.livescience.com/13999-moon-microbe-mystery-solved-apollo-12.html",
+    "tipo": "prensa",
+    "verificacion": "solo extracto de búsqueda"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1969-11-19",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": "Alunizaje a 110 h 30 min GET (informe preliminar)",
+  "titulo": "Primer aterrizaje de precisión: Ewen Whitaker ubica a Surveyor 3 y guía a Intrepid",
+  "detalle": "NASA eligió Surveyor 3 como blanco para demostrar el aterrizaje puntual de Apollo, y usó como punto de mira la ubicación que Ewen Whitaker, de la Universidad de Arizona, había determinado comparando fotos de Lunar Orbiter con mapas. El alunizaje usó guía automática con solo pequeñas correcciones manuales en la fase final, y se tocó suelo a las 110,5 h GET. La NASA lo presentó como el primer aterrizaje de precisión sobre otro mundo.",
+  "datos_clave": [
+   "Toque de suelo: 110,5 h GET (19 nov 1969)",
+   "Guía automática con pequeñas correcciones manuales",
+   "Distancia reportada: 600 ft del punto objetivo (SP-235), 155 m de Surveyor (SP-284), 538 ft (artículo NASA), ~163 m (Rummel)",
+   "Whitaker localizó Surveyor 1 y otros cuatro sitios, incluido Surveyor 3"
+  ],
+  "etapa": "Visita de Apollo 12",
+  "fase": "legado",
+  "categoria": "hito",
+  "discutido": true,
+  "nota": "Las fuentes discrepan en la distancia: 600 ft respecto al punto objetivo, 538 ft (~164 m) según NASA, 155 m según SP-284 y ~163 m según Rummel. Posible solape con 'Intrepid aluniza a unos 155-180 m de Surveyor 3' de la lista previa; aquí se aporta el método de navegación. No se pudo abrir una fuente que describa la técnica de seguimiento previa al descenso.",
+  "fuentes": [
+   {
+    "titulo": "UArizona Moon Researchers Helped NASA Nail Apollo 12 Pinpoint Landing",
+    "editor": "University of Arizona",
+    "url": "https://news.arizona.edu/story/uarizona-moon-researchers-helped-nasa-nail-apollo-12-pinpoint-landing",
+    "tipo": "prensa",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Lunar Encore Leads to First Precision Extraterrestrial Landing",
+    "editor": "NASA (Bob Granath)",
+    "url": "https://www.nasa.gov/humans-in-space/lunar-encore-leads-to-first-precision-extraterrestrial-landing",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: página abierta; leída la mayor parte del texto"
+   },
+   {
+    "titulo": "Apollo 12 Preliminary Science Report (NASA SP-235), resumen de la misión",
+    "editor": "NASA",
+    "url": "https://ntrs.nasa.gov/api/citations/19700025955/downloads/19700025955.pdf",
+    "tipo": "oficial NASA/JPL",
+    "verificacion": "página abierta (resumen automático de la herramienta)",
+    "nota": "Verificación declarada por el agente: documento descargado y convertido a texto; leídas las secciones relevantes, no íntegro"
+   }
+  ]
+ }
+]

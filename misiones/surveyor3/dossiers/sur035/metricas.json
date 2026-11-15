@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.1627893,
+  "turnos": 9,
+  "duracion_s": 78.7,
+  "duracion_api_s": 74.4,
+  "tokens": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 9112,
+    "cache_read_input_tokens": 21011,
+    "output_tokens": 8057,
+    "output_tokens_details": {
+      "thinking_tokens": 2794
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9112
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1288,
+      "outputTokens": 31,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001443,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 6,
+      "outputTokens": 8057,
+      "cacheReadInputTokens": 21011,
+      "cacheCreationInputTokens": 9112,
+      "webSearchRequests": 0,
+      "costUSD": 0.1613463,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 2794,
+      "cacheCreationEphemeral5mInputTokens": 9112,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 4,
+    "buscar_papers_ntrs": 2,
+    "buscar_web": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.3079819999999999,
+    "turnos": 2,
+    "duracion_s": 114.9,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4027,
+        "outputTokens": 33,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004192,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 10894,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5028,
+        "webSearchRequests": 0,
+        "costUSD": 0.30378999999999995,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 8807,
+        "cacheCreationEphemeral5mInputTokens": 5028,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 14,
+      "datos_despues": 11,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 4,
+      "observaciones": "Se descartaron tres datos: [1] porque confunde el contacto inicial (00:04:17) con el aterrizaje final (00:04:53); [8] porque su afirmación incluye monitores de fósforo no mencionados en la cita; y [10] porque atribuye una causa (fallo del motor a ~4,3 m) que su cita no respalda. También se corrigió la fecha del último contacto, que el borrador situaba erróneamente el 3 de mayo cuando la fuente dic"
+    }
+  },
+  "costo_usd_referencia_total": 0.4707712999999999,
+  "costos": {
+    "total_usd": 0.470771,
+    "por_paso": {
+      "investigacion": 0.162789,
+      "revision": 0.307982
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.005635,
+        "entrada": 5315,
+        "salida": 64,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.161346,
+        "entrada": 6,
+        "salida": 8057,
+        "cache_leida": 21011,
+        "cache_escrita": 9112,
+        "razonamiento": 2794
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.30379,
+        "entrada": 3,
+        "salida": 10894,
+        "cache_leida": 0,
+        "cache_escrita": 5028,
+        "razonamiento": 8807
+      }
+    }
+  }
+}

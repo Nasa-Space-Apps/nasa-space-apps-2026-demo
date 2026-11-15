@@ -1,0 +1,183 @@
+{
+  "evento_id": "sur015",
+  "titulo": "Surveyor 3: el brazo excavador que preparó el camino al Apollo",
+  "contexto_ampliado": "Surveyor 3 fue la primera misión del programa Surveyor en llevar una pala muestreadora de suelo superficial. A diferencia de la misión anterior que llegó a operar en la Luna —Surveyor 1—, en esta nave se eliminó la cámara de televisión de aproximación y en su lugar se instaló un instrumento llamado Soil Mechanics Surface Sampler (SMSS), un brazo mecánico capaz de excavar y medir la resistencia del terreno. Según el informe preliminar de ciencia de la misión, «el único cambio importante en la instrumentación científica fue la adición del muestreador de mecánica de suelos».\n\nEl SMSS fue construido por Hughes Aircraft, la misma empresa que fabricó la nave. Consistía en una pala de 12 cm de largo por 5 cm de ancho montada en un brazo tipo pantógrafo —un mecanismo de tijeras extensibles— cuya longitud se registra como 1,5 m según la NASA y 1,63 m (64 pulgadas) según otra fuente técnica; la discrepancia no está resuelta. El conjunto pesaba unas 20,05 libras (aproximadamente 9,1 kg). Para que el instrumento cupiese sin modificar la estructura de la nave, los ingenieros eliminaron los sensores de fuerza y los potenciómetros de posición: cada movimiento se ejecutaba con impulsos temporales de motor y se verificaba imagen a imagen con la cámara de televisión. Los dos ejemplares de vuelo del instrumento fueron autorizados en agosto de 1966.\n\nSurveyor 3 fue lanzada el 17 de abril de 1967 y tocó la superficie lunar el 20 de abril del mismo año. Al momento del lanzamiento la nave pesaba 1 026 kg, pero al alunizar solo conservaba 296 kg, ya que gran parte de su masa correspondía al combustible quemado durante el descenso.\n\nPese a que los sensores directos habían sido eliminados, el SMSS funcionó según lo planeado. A lo largo de 18 horas y 22 minutos de operación, distribuidas en diez sesiones separadas, el brazo realizó siete pruebas de resistencia a la compresión, cuatro zanjas y trece pruebas de impacto. La zanja más profunda alcanzó los 18 cm. Las fotografías tomadas por la cámara de televisión de la propia nave permitían a los ingenieros en Tierra reconstruir las fuerzas aplicadas, ya que era el único método de medición disponible tras la eliminación de los sensores.\n\nLos autores del informe técnico sobre el muestreador fueron F. I. Roberson y R. F. Scott, ambos del Jet Propulsion Laboratory / Caltech. Cabe señalar que las fuentes consultadas los identifican como autores del informe, pero no confirman quién propuso originalmente el concepto del instrumento.\n\nLa historia de Surveyor 3 tuvo un capítulo adicional. El 19 de noviembre de 1969, el módulo lunar del Apollo 12 aterrizó a unos 180 metros de la sonda. Los astronautas Pete Conrad y Alan Bean visitaron la nave durante su segunda caminata lunar el 20 de noviembre, tomaron fotografías y extrajeron aproximadamente 10 kg de piezas. Entre los componentes recuperados estaba la propia pala del SMSS, que actualmente se conserva en exhibición en el JPL.",
+  "datos_reales": [
+    {
+      "afirmacion": "La pala del muestreador medía 12 cm de largo por 5 cm de ancho y estaba montada en un brazo pantógrafo de 1,5 m; sustituyó a la cámara de televisión de aproximación.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "A surface sampler, consisting of a 12 cm long by 5 cm wide scoop mounted on a 1.5 meter pantograph arm, replaced the approach television camera.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Surveyor 3 tenía una masa de 1 026 kg al lanzamiento y 296 kg al alunizar.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "Surveyor 3 had a mass of 1026 kg at launch and 296 kg at landing.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El muestreador de suelo operó durante 18 horas y 22 minutos en total, excavando zanjas de hasta 18 cm de profundidad.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The lunar sampler was operated for a total of 18 hours, 22 minutes, digging trenches as deep as 18 cm.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Surveyor 3 fue la primera misión de la serie en llevar una pala muestreadora de suelo superficial.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "It was the first mission to carry a surface-soil sampling-scoop.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La nave fue fabricada por Hughes Aircraft.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Manufacturer: Hughes Aircraft",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El muestreador realizó siete pruebas de resistencia a la compresión, cuatro zanjas y trece pruebas de impacto, con un tiempo total de operación de 18 horas y 22 minutos.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "The surface sampler performed seven bearing tests, four trench tests, and thirteen impact tests. The total operating time was 18 hours, 22 minutes on ten separate occasions.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La pala recuperada por el Apollo 12 se conserva actualmente en el JPL.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "The scoop was also returned to Earth by the Apollo 12 astronauts and is currently on display at JPL.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La única diferencia principal de instrumentación científica entre Surveyor 3 y Surveyor 1 fue la adición del muestreador de mecánica de suelos.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19690074497",
+      "cita": "The Surveyor III spacecraft was similar to Surveyor I; the only major change in scientific instrumentation was the addition of a soil mechanics surface sampler.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los dos ejemplares de vuelo del instrumento fueron autorizados en agosto de 1966; la unidad fue construida por Hughes y no tenía cómputo a bordo.",
+      "fuente_url": "https://space-robotics.org/robots/lunar/surveyor-scoop/",
+      "cita": "two flight units were authorized in August 1966 and a spare was added to Surveyor VII in May 1967 [3]. The Hughes-built unit had no onboard computation: motion used timed motor pulses, a single motion needed several commands, and television could not be taken while the arm moved.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los sensores de fuerza y posición fueron eliminados del instrumento para que pudiera sustituir a la cámara de aproximación sin modificar la estructura de la nave.",
+      "fuente_url": "https://space-robotics.org/robots/lunar/surveyor-scoop/",
+      "cita": "The force-measuring instruments and potentiometers were deleted so that the sampler could replace the approach television camera on an unmodified spacecraft.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El brazo pantógrafo del Surveyor 3 tenía una extensión de 64 pulgadas (1,63 m) según la fuente del Space Robotics.",
+      "fuente_url": "https://space-robotics.org/robots/lunar/surveyor-scoop/",
+      "cita": "Tong extension: 64 in (1.63 m) with 54 degrees of vertical and 112 degrees of azimuth motion, as reported for Surveyor 3.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El muestreador del Surveyor 3 pesaba 20,05 lb (aprox. 9,1 kg).",
+      "fuente_url": "https://space-robotics.org/robots/lunar/surveyor-scoop/",
+      "cita": "Mass: 20.05 lb on Surveyor 3, 21.20 lb on Surveyor 7.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Surveyor 3 aterrizó en el Oceanus Procellarum el 20 de abril de 1967 y fue lanzada el 17 de abril de 1967.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "Surveyor 3 was launched at 07:05:01 UT (2:05:01 a.m. EST) on 17 April 1967... Initial touchdown occurred at 00:04:17 UT and final touchdown at 00:04:53 UT on 20 April 1967.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Apollo 12 aterrizó a unos 180 m de Surveyor 3 el 19 de noviembre de 1969; los astronautas Conrad y Bean extrajeron unos 10 kg de piezas.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "On 19 November 1969 the Apollo 12 Lunar Module (LM) landed within about 180 m of the Surveyor 3 spacecraft. Astronauts Pete Conrad and Alan Bean visited the spacecraft on their second moonwalk on 20 November, examining Surveyor 3 and its surroundings, taking photographs, and removing about 10 kg of parts from the spacecraft.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Surveyor 3 (1967-035A) — NASA NSSDCA",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "editor": "NASA NSSDCA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 3 Preliminary Science Results — NTRS 19690074497",
+      "url": "https://ntrs.nasa.gov/citations/19690074497",
+      "editor": "NASA NTRS / JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Soil mechanics surface sampler – Lunar surface tests, results, and analyses — NTRS 19670028835",
+      "url": "https://ntrs.nasa.gov/citations/19670028835",
+      "editor": "NASA NTRS / JPL-Caltech (Roberson & Scott)",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Soil mechanics surface sampler – Lunar surface tests, results, and analyses — NTRS 19680055643",
+      "url": "https://ntrs.nasa.gov/citations/19680055643",
+      "editor": "NASA NTRS / JPL-Caltech (Roberson & Scott)",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor III Mission Report. Part II – Scientific Results — NTRS 19670028832",
+      "url": "https://ntrs.nasa.gov/citations/19670028832",
+      "editor": "NASA NTRS / JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 3 — Wikipedia (en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "editor": "Wikipedia contributors",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Surveyor Soil Mechanics Surface Sampler — Space Robotics",
+      "url": "https://space-robotics.org/robots/lunar/surveyor-scoop/",
+      "editor": "space-robotics.org",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "LONGITUD DEL BRAZO: La NASA NSSDCA y Wikipedia indican '1.5 meter pantograph arm' (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A), mientras que space-robotics.org registra '64 in (1.63 m) with 54 degrees of vertical and 112 degrees of azimuth motion, as reported for Surveyor 3' y advierte que 'the sources do not reconcile them' (https://space-robotics.org/robots/lunar/surveyor-scoop/).",
+    "NÚMERO DE FOTOS TV: La NASA NSSDCA dice 'the television camera returned 6326 pictures' (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A), mientras que Wikipedia indica '6315 TV images' (https://en.wikipedia.org/wiki/Surveyor_3).",
+    "RECUENTO DE PRUEBAS DEL MUESTREADOR: Wikipedia indica 'seven bearing tests, four trench tests, and thirteen impact tests' (https://en.wikipedia.org/wiki/Surveyor_3), mientras que space-robotics.org registra '8 bearing tests, 14 impact tests, 4 trenches' (https://space-robotics.org/robots/lunar/surveyor-scoop/).",
+    "INVESTIGADOR PRINCIPAL DEL SMSS: La nota del evento señala que el Smithsonian (NASM) nombra a Gene Shoemaker como investigador principal del muestreador, mientras que el archivo de publicaciones del NTRS (19670028835 y 19680055643) identifica a R. F. Scott y F. I. Roberson (JPL/Caltech) como autores del instrumento. No fue posible verificar directamente la fuente del Smithsonian.",
+    "El evento original dice «A diferencia de Surveyor 1 y 2», pero el dato [7] (https://ntrs.nasa.gov/citations/19690074497) solo compara Surveyor 3 con Surveyor 1. Surveyor 2 se estrelló durante el descenso (22 de septiembre de 1966) y nunca operó en la superficie, por lo que la comparación de instrumentación con esa misión resulta imprecisa.",
+    "El número de pruebas del borrador narrativo (siete de compresión, trece de impacto) procede de Wikipedia [5], pero la propia sección de contradicciones del borrador señala que space-robotics.org registra 8 pruebas de compresión y 14 de impacto. El evento original no especifica cantidades de pruebas, así que no es posible verificar cuál recuento es correcto con los datos disponibles."
+  ],
+  "huecos": [
+    "No se pudo confirmar desde fuentes leídas que Ronald Scott (Caltech/JPL) haya sido quien 'propuso el concepto' del muestreador: las fuentes solo lo identifican como coautor del informe técnico, no como el proponente original del instrumento.",
+    "No se encontró en las páginas leídas ninguna mención a Gene Shoemaker como investigador principal del SMSS de Surveyor 3; la contradicción con la fuente del Smithsonian (NASM) queda sin resolver.",
+    "No se verificó la fecha exacta (dentro de qué mes o trimestre de 1966-1967) en que se tomó la decisión formal de sustituir la cámara de aproximación por el muestreador. Space-robotics.org menciona 'agosto de 1966' para la autorización de las unidades de vuelo, pero no fue posible acceder al documento primario que respalda esa fecha.",
+    "Las dimensiones exactas del brazo (1,5 m vs. 1,63 m) no quedan reconciliadas en ninguna fuente leída.",
+    "No se pudo determinar quién redactó la especificación de los objetivos del instrumento dentro de JPL ni el rol exacto de Caltech como institución contratante versus ejecutora.",
+    "Ningún dato del dossier conecta explícitamente los resultados del SMSS con la evaluación de si el Apollo podría posarse con seguridad. El evento original afirma que las mediciones fueron «clave para saber si el Apollo podía posarse», pero ninguna cita recuperada respalda esa relación causal directa.",
+    "La cita textual del dato [13] (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) no incluye el nombre del lugar de alunizaje «Oceanus Procellarum»; solo menciona fechas y horas. Es muy probable que la información aparezca en otra sección de la misma página de la NSSDCA, pero el extracto citado no lo confirma.",
+    "El evento original no tiene fecha exacta para la decisión de sustituir la cámara por el muestreador. El dato [8] menciona agosto de 1966 como fecha de autorización de las unidades de vuelo, pero no se sabe si la decisión conceptual fue anterior."
+  ],
+  "ideas_visuales": [
+    "Diagrama comparativo lado a lado: Surveyor 1 con la cámara de aproximación en su posición original, y Surveyor 3 con el brazo pantógrafo y la pala del SMSS en el mismo lugar.",
+    "Detalle técnico de la pala del SMSS (12 × 5 cm) con el brazo pantógrafo extendido, mostrando las dimensiones y el mecanismo de tijeras.",
+    "Vista de la pala excavando una zanja de 18 cm de profundidad en el regolito lunar, con la cámara de televisión de Surveyor 3 apuntando hacia la operación.",
+    "Los astronautas Pete Conrad y Alan Bean junto a Surveyor 3 durante la caminata lunar del Apollo 12, con el módulo lunar visible a unos 180 m de distancia.",
+    "La pala del SMSS recuperada, tal como se exhibe actualmente en el JPL, con una placa o referencia que indique su procedencia lunar."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "R. F. Scott y F. I. Roberson, del JPL / Caltech, son los autores del informe técnico sobre el muestreador de mecánica de suelos de Surveyor 3.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19670028835",
+      "cita": "Authors: Roberson, F. I. (Jet Propulsion Lab., California Inst. of Tech.); Scott, R. F. (Jet Propulsion Lab., California Inst. of Tech.)",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

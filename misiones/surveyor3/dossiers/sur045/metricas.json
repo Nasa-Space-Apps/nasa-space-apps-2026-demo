@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.3040293,
+  "turnos": 10,
+  "duracion_s": 130.4,
+  "duracion_api_s": 122.8,
+  "tokens": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 20966,
+    "cache_read_input_tokens": 33826,
+    "output_tokens": 14244,
+    "output_tokens_details": {
+      "thinking_tokens": 8265
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 20966
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1426,
+      "outputTokens": 31,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001581,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 6,
+      "outputTokens": 14244,
+      "cacheReadInputTokens": 33826,
+      "cacheCreationInputTokens": 20966,
+      "webSearchRequests": 0,
+      "costUSD": 0.3024483,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 8265,
+      "cacheCreationEphemeral5mInputTokens": 20966,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 5,
+    "buscar_web": 2,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.35429425000000003,
+    "turnos": 2,
+    "duracion_s": 146.8,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4668,
+        "outputTokens": 31,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004823,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 12561,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5669,
+        "webSearchRequests": 0,
+        "costUSD": 0.34947125,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 10721,
+        "cacheCreationEphemeral5mInputTokens": 5669,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 17,
+      "datos_despues": 16,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 1,
+      "observaciones": "Se eliminó el dato [11] porque su afirmación añade «todos dependientes de suministro eléctrico», lo cual la cita no dice y es incorrecto para componentes pasivos como las mantas superaislantes y las vías conductivas de calor. El relato se reescribió eliminando información no respaldada por los datos conservados (fecha de aterrizaje, nombres de astronautas, afirmación de «primer muestreador de suel"
+    }
+  },
+  "costo_usd_referencia_total": 0.65832355,
+  "costos": {
+    "total_usd": 0.658323,
+    "por_paso": {
+      "investigacion": 0.304029,
+      "revision": 0.354294
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006404,
+        "entrada": 6094,
+        "salida": 62,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.302448,
+        "entrada": 6,
+        "salida": 14244,
+        "cache_leida": 33826,
+        "cache_escrita": 20966,
+        "razonamiento": 8265
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.349471,
+        "entrada": 3,
+        "salida": 12561,
+        "cache_leida": 0,
+        "cache_escrita": 5669,
+        "razonamiento": 10721
+      }
+    }
+  }
+}

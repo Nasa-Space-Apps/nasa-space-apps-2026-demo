@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.35787755,
+  "turnos": 15,
+  "duracion_s": 143.9,
+  "duracion_api_s": 124.9,
+  "tokens": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 33973,
+    "cache_read_input_tokens": 85636,
+    "output_tokens": 13539,
+    "output_tokens_details": {
+      "thinking_tokens": 5747
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 33973
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1486,
+      "outputTokens": 38,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001676,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 9,
+      "outputTokens": 13539,
+      "cacheReadInputTokens": 85636,
+      "cacheCreationInputTokens": 33973,
+      "webSearchRequests": 0,
+      "costUSD": 0.35620155000000003,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 5747,
+      "cacheCreationEphemeral5mInputTokens": 33973,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 8,
+    "buscar_web": 3,
+    "buscar_papers_ntrs": 2,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.38553475,
+    "turnos": 2,
+    "duracion_s": 156.8,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5826,
+        "outputTokens": 30,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0059759999999999995,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 13475,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6827,
+        "webSearchRequests": 0,
+        "costUSD": 0.37955875,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 11357,
+        "cacheCreationEphemeral5mInputTokens": 6827,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 22,
+      "datos_despues": 21,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 0,
+      "observaciones": "Se eliminó el dato [20] porque su afirmación incluía el nombre «Surveyor C» que no aparece en su cita (ese nombre sí está respaldado por [12] de LePage). El relato se depuró de varias afirmaciones del borrador narrativo sin respaldo en ningún dato: «undécima vez» del Atlas-Centaur desde el LC-36B, «65 horas de viaje», «Pratt & Whitney» como fabricante de los RL-10, y el nombre completo «Soil Mecha"
+    }
+  },
+  "costo_usd_referencia_total": 0.7434122999999999,
+  "costos": {
+    "total_usd": 0.743413,
+    "por_paso": {
+      "investigacion": 0.357878,
+      "revision": 0.385535
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.007652,
+        "entrada": 7312,
+        "salida": 68,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.356202,
+        "entrada": 9,
+        "salida": 13539,
+        "cache_leida": 85636,
+        "cache_escrita": 33973,
+        "razonamiento": 5747
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.379559,
+        "entrada": 3,
+        "salida": 13475,
+        "cache_leida": 0,
+        "cache_escrita": 6827,
+        "razonamiento": 11357
+      }
+    }
+  }
+}
