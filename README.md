@@ -1,5 +1,7 @@
 # Rover PoC — Opportunity (Mars) y SEV (Moon)
 
+> **Nuevo enfoque (en definición, aún sin implementar):** la demo pasa de plataforma informativa a un **juego sobre Opportunity** con modo **Historia** y modo **Decisiones**, en dos partes (historieta 2D hasta el aterrizaje y 3D en Marte). Ver [`docs/game-design.md`](docs/game-design.md). Lo que describe el resto de este README es la **versión construida hasta ahora** (que será la base de la Parte 2).
+
 Prueba de concepto 3D en el navegador: un rover recorre una **ruta definida** sobre un terreno real (modelos STL/GLB) en dos
 «expediciones» (Marte y Luna), con polvo, huellas, cámara de seguimiento, minimapa y **storytelling**: checkpoints sobre el
 terreno (desde la salida hasta donde el vehículo se apagó) que muestran una tarjeta con foto y texto y **narran su historia con voz**.
@@ -16,7 +18,7 @@ No hay conducción libre: el jugador avanza con `Espacio` o salta de checkpoint 
   que **gira solo** y solo en horizontal (arrastrar le da inercia), con un selector Luna/Marte a la izquierda y el marcador del vehículo abandonado → su tarjeta con el vehículo ilustrado en 3 tonos →
   **«Travel to the past»** abre `/<mundo>/<vehículo>` (p. ej. `/moon/sev`), la escena del recorrido. `Esc` cierra la tarjeta; `← Globe` vuelve. Cada ruta carga solo sus recursos.
 - **3 expediciones** con vehículo y terreno propios: Opportunity y Perseverance (prueba) en Marte, y SEV en la Luna (Apollo 14). Selector **Vehicle**.
-- **Un solo tema, «Primer»** (referencia: primer.io/payment-pioneers): lienzo `#F9FAF7`, tinta `#0D0D0D`, un acento naranja `#FF540A`, grotesca apretada + mono para etiquetas, vehículos de 3 tonos y movimiento suave en todo. Ver [`docs/design.md`](docs/design.md).
+- **Un solo tema, «Ink & Paper»** (cómic; referencia: ponpon-mania.com/chapter/2): campo azul `#7E7EFF` con grano, papel crema `#FEECE3` con trazo de tinta `#171717` de 3 px, un acento rosa `#F892C0`, botones en píldora, Libre Franklin (800 títulos, 700 minúscula en etiquetas), vehículos de 3 tonos y movimiento suave en todo. Ver [`docs/design.md`](docs/design.md).
 - **Minimapa** con relieve (curvas de nivel), la ruta (recorrida y pendiente), rumbo, posición y velocidad.
 - **Línea de tiempo** (barra horizontal abajo): un marcador por checkpoint y el progreso del vehículo; solo se puede viajar a los
   checkpoints (clic en el marcador), no a un punto cualquiera de la ruta.

@@ -80,8 +80,8 @@ export const BODIES: Body[] = [
         missionId: "ingenuity",
         name: "Ingenuity",
         place: "Jezero Crater · demo airfield",
-        lat: 21.5,
-        lon: 71.5,
+        lat: 24,
+        lon: 65,
         tag: "Last flight · demo",
         status: "Demo vehicle with an invented story: it flies from airfield to airfield and lands for good after a last hover. The ground is Gale Crater, as a stand-in.",
         facts: [

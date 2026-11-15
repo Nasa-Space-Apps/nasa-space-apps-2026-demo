@@ -40,7 +40,7 @@ type Opt = { tone?: Tone; rot?: V3 };
 /** Fixed light that decides the tone of each face (world space, so the shading changes as the vehicle turns). */
 const SUN = new THREE.Vector3(0.55, 0.75, 0.4).normalize();
 
-function toon(p: VehiclePalette) {
+export function toon(p: VehiclePalette) {
   return new THREE.ShaderMaterial({
     side: THREE.DoubleSide,
     uniforms: {

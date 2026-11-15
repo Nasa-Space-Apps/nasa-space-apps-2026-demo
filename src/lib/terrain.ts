@@ -5,7 +5,7 @@ const RES = 0.5; // height-field resolution (world units)
 
 /** Three flat tone steps (dark / mid / light) for the terrain: the same cel-shading language as the vehicles (docs/design.md). */
 const RAMP = (() => {
-  const t = new THREE.DataTexture(new Uint8Array([88, 172, 255]), 3, 1, THREE.RedFormat);
+  const t = new THREE.DataTexture(new Uint8Array([120, 190, 255]), 3, 1, THREE.RedFormat);
   t.minFilter = t.magFilter = THREE.NearestFilter;
   t.generateMipmaps = false;
   t.needsUpdate = true;

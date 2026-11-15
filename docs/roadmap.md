@@ -1,5 +1,7 @@
 # Roadmap / pendientes
 
+> **Prioridad actual: el juego sobre Opportunity** (modos Historia y Decisiones, Parte 1 en 2D y Parte 2 en 3D). Plan por fases y preguntas abiertas en [game-design.md](game-design.md#10-fases-sugeridas-propuesto). Lo de abajo es anterior al giro: lo que se refiere a más vehículos, el globo o la comparación entre expediciones está **en pausa**.
+
 Ideas y deudas técnicas detectadas, sin orden estricto. Lo marcado ⭐ es lo que más encaja con lo que el usuario ha pedido.
 
 ## ⚠️ Por resolver: escala real de los vehículos
@@ -25,7 +27,7 @@ Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría
 
 ## Hecho (última versión de la demo)
 
-- ✅ 3 expediciones (Opportunity y Perseverance en Marte, SEV en la Luna), tema único «Primer» (flat), minimapa, polvo, huellas, cámara de seguimiento.
+- ✅ 3 expediciones (Opportunity y Perseverance en Marte, SEV en la Luna), tema único (flat; «Ink & Paper» desde el hito 30, antes «Primer»), minimapa, polvo, huellas, cámara de seguimiento.
 - ✅ **Storytelling**: 5 o 6 checkpoints por expedición, salida y final incluidos (balizas, rombos en el minimapa, tarjeta con foto y datos).
 - ✅ **Ruta definida** (sin conducción libre): `Espacio` mantenido avanza hasta el siguiente checkpoint; **línea de tiempo** con clic en
   los checkpoints para viajar (hacia delante o atrás).
