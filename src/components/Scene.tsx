@@ -10,7 +10,8 @@ import { buildTerrain } from "@/lib/terrain";
 import { buildRoute } from "@/lib/route";
 import { game } from "@/lib/game";
 import { MISSIONS, type Mission } from "@/lib/missions";
-import { THEME as theme } from "@/lib/themes";
+import { useTheme } from "@/lib/use-theme";
+import { themeFor, type WorldId } from "@/lib/themes";
 import { PERF } from "@/lib/perf";
 import { ease } from "@/lib/ui";
 import { bodyOfMission } from "@/lib/bodies";
@@ -99,6 +100,7 @@ function CameraRig() {
 }
 
 function Experience({ mission }: { mission: Mission }) {
+  const theme = themeFor((bodyOfMission(mission.id)?.id ?? "moon") as WorldId); // inside the Canvas React context does not reach: take the world from the mission
   const stl = useLoader(STLLoader, mission.terrainUrl);
   const { mesh, data } = useMemo(() => buildTerrain(stl, mission.terrain), [stl, mission]);
   const route = useMemo(() => buildRoute(mission.checkpoints), [mission]);
@@ -177,6 +179,7 @@ export default function Scene({ missionId, ...options }: { missionId: string } &
 }
 
 function SceneView({ missionId, onBack, backLabel, lockVehicle }: { missionId: string } & SceneOptions) {
+  const theme = useTheme();
   const router = useRouter();
   const mission = MISSIONS.find((m) => m.id === missionId) ?? MISSIONS[0];
   const vehicle = bodyOfMission(mission.id);

@@ -8,7 +8,7 @@ import { game } from "@/lib/game";
 import { loadNarration, stopNarration } from "@/lib/narration";
 import { MISSIONS } from "@/lib/missions";
 import { beatToCheckpoint, storyOf, type Story } from "@/lib/story";
-import { THEME as theme } from "@/lib/themes";
+import { useTheme } from "@/lib/use-theme";
 import Ambient from "./Ambient";
 import Comic from "./Comic";
 import Icon from "./Icon";
@@ -74,6 +74,7 @@ function useStoryAssets(beats: Story["beats"]) {
 }
 
 function JourneyView({ missionId, story, onReplay }: { missionId: string; story: Story; onReplay: () => void }) {
+  const theme = useTheme();
   const { ready, progress } = useStoryAssets(story.beats);
   const router = useRouter();
   const body = bodyOfMission(missionId)?.id ?? "mars";
@@ -188,6 +189,7 @@ function JourneyView({ missionId, story, onReplay }: { missionId: string; story:
 
 /** Top right while driving: «skip the 3D» goes straight to the epilogue; at the last stop it becomes «continue the story». */
 function MarsActions({ lastId, onClick }: { lastId: string; onClick: () => void }) {
+  const theme = useTheme();
   const [on, setOn] = useState(false); // the rover is at the last stop
   useEffect(() => {
     const id = window.setInterval(() => setOn(game.active === lastId), 400);

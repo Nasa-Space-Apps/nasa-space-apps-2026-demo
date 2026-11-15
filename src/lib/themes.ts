@@ -62,10 +62,11 @@ export type PortraitLayer = [tone: keyof Theme["portrait"], d: string];
 
 const INK = "#171717"; // measured on the reference (body and pill)
 const PAPER = "#FEECE3"; // measured: the comic pages
-const BLUE = "#7E7EFF"; // the field (the reference's WebGL background)
-const PINK = "#F892C0"; // the second field of the reference, used as the single accent
+const BLUE = "#7E7EFF"; // the field of the reference (ponpon-mania.com); each world now has its own (see WORLDS)
+const PINK = "#F892C0"; // the accent of the reference; each world now has its own (see WORLDS)
 
-export const THEME: Theme = {
+/** The shared base: everything but the colours that belong to a world (canvas, accent, beacon, globe, marker). `themeFor(world)` completes it. */
+const BASE: Theme = {
   id: "ink-paper",
   name: "Ink & Paper",
   font: "var(--font-sans), 'Helvetica Neue', Arial, sans-serif",
@@ -94,14 +95,58 @@ export const THEME: Theme = {
   checkpoint: { pin: PAPER, done: INK, ring: INK },
   beacon: { pending: INK, active: PINK, done: "#B9A59D" },
   ground: {
-    mars: { lo: "#EDC4AE", hi: "#FFF3EA", edge: "#F5D9C9" },
-    moon: { lo: "#D7CDF0", hi: "#F6F2FF", edge: "#E6DEF8" },
+    mars: { lo: "#EEBE95", hi: "#FFF1DF", edge: "#F7D8BC" }, // warm sand
+    moon: { lo: "#CDD3DA", hi: "#F5F6F8", edge: "#E2E6EA" }, // cool silver
     lines: INK,
   },
   paperLight: "#FFF6F0", // measured: the reference's loading screen
   portrait: { bg: "#E8CFC2", skin: "#6A9FD6", skinShade: "#4A86D8", skinDeep: "#3674CF", skinLight: "#86B2E6", eye: "#93BBEA", deep: "#0D47A8", hairLight: "#1F5FC4", jacket: "#1F5FC4", jacketLight: "#2F6FCB", shirt: "#C6C9D3" },
   globe: { bg: BLUE, line: "#A9A9FF", star: INK, ink: INK, tag: INK, tagText: PAPER, pin: PAPER, vehicle: { dark: INK, mid: PINK, light: PAPER } },
 };
+
+/**
+ * The colours of each world. Ink and paper (the comic itself) stay the same everywhere; what changes is the field behind it, the single accent and what
+ * hangs from them (globe grid, beacon, marker, the little vehicles on the globe, the ground). Mars is rust and butterscotch; the Moon is steel blue and mint.
+ */
+export type WorldId = "mars" | "moon";
+type World = {
+  canvas: string; // the field: page, globe, scene sky and fog, loading screen
+  canvasAlt: string; // a lighter tint of the field: the globe grid and the comic's background blobs
+  accent: string; // the single accent: position, route, pins, pills (ink text on it)
+  accentSoft: string; // links on hover, on paper
+  beacon: string; // the active beacon in the 3D scene (a deeper tone of the accent, to read on the pale ground)
+};
+export const WORLDS: Record<WorldId, World> = {
+  mars: { canvas: "#E2603A", canvasAlt: "#F49A6D", accent: "#FFC247", accentSoft: "#B33A16", beacon: "#F08A00" },
+  moon: { canvas: "#4B7DB8", canvasAlt: "#86AFDA", accent: "#6BE3C3", accentSoft: "#1F5C8E", beacon: "#16B38F" },
+};
+
+const themes = new Map<WorldId, Theme>();
+/** The full theme of a world (cached: components compare themes by identity). */
+export function themeFor(id: WorldId): Theme {
+  let t = themes.get(id);
+  if (!t) {
+    const w = WORLDS[id];
+    t = {
+      ...BASE,
+      canvas: w.canvas,
+      accent: w.accent,
+      accentSoft: w.accentSoft,
+      hover: w.accent,
+      marker: { ...BASE.marker, dot: w.accent },
+      beacon: { ...BASE.beacon, active: w.beacon },
+      globe: { ...BASE.globe, bg: w.canvas, line: w.canvasAlt, vehicle: { ...BASE.globe.vehicle, mid: w.accent } },
+    };
+    themes.set(id, t);
+  }
+  return t;
+}
+
+/** The world of a route: /mars and /mars/<vehicle> are Mars, everything else (/moon…) is the Moon. */
+export const worldOfPath = (path: string): WorldId => (path.split("/")[1] === "mars" ? "mars" : "moon");
+
+/** The default theme (the Moon, where `/` leads). Components pick the one of their world with `useTheme()` (lib/use-theme.ts). */
+export const THEME: Theme = themeFor("moon");
 
 /** The theme as CSS custom properties (set on <html> so `globals.css` classes can use them). */
 export function cssVars(t: Theme): Record<string, string> {

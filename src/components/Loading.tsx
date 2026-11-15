@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { THEME as theme } from "@/lib/themes";
+import { useTheme } from "@/lib/use-theme";
 import { ease } from "@/lib/ui";
 
 /**
@@ -12,6 +12,7 @@ import { ease } from "@/lib/ui";
  * `progress` 0–100 is a determinate bar; without it the bar breathes (indeterminate). `title` / `stage` appear (fade in) only when given.
  */
 export function LoadingContent({ title, stage, progress, visible = true }: { title?: string; stage?: string; progress?: number; visible?: boolean }) {
+  const theme = useTheme();
   // indeterminate: a slow breathing of the bar (plain transitions: new @keyframes are not picked up by the dev server)
   const [breath, setBreath] = useState(false);
   useEffect(() => {
@@ -77,6 +78,7 @@ export function LoadingContent({ title, stage, progress, visible = true }: { tit
 
 /** Full-screen loading page (route fallbacks and chunk downloads). */
 export default function Loading({ title, stage, progress }: { title?: string; stage?: string; progress?: number }) {
+  const theme = useTheme();
   return (
     <div className="fixed inset-0 z-40" style={{ background: theme.canvas }}>
       <LoadingContent title={title} stage={stage} progress={progress} />

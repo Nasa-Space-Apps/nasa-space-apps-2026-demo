@@ -1,4 +1,4 @@
-import { THEME } from "./themes";
+import { THEME, themeFor } from "./themes";
 import type { TerrainStyle } from "./terrain";
 import type { Checkpoint } from "./checkpoints";
 import { storyOf } from "./story";
@@ -48,7 +48,7 @@ const MARS_TERRAIN: TerrainStyle = { fade: 45, ...THEME.ground.mars, lines: THEM
 const GALE_TERRAIN: TerrainStyle = { fade: 45, ...THEME.ground.mars, lines: THEME.ground.lines, step: 1.6 };
 const MOON_TERRAIN: TerrainStyle = { fade: 30, ...THEME.ground.moon, lines: THEME.ground.lines, step: 1.9 };
 const MARS_ENV: Mission["env"] = {
-  sky: THEME.canvas,
+  sky: themeFor("mars").canvas, // the field of Mars: sky and fog melt into it
   fogNear: 90,
   fogFar: 330,
   hemi: ["#ffffff", "#B9B4E8", 0.8],
@@ -90,7 +90,7 @@ export const MISSIONS: Mission[] = [
       heading: -Math.PI * 0.75,
     },
     env: {
-      sky: THEME.canvas,
+      sky: themeFor("moon").canvas, // the field of the Moon
       fogNear: 70,
       fogFar: 270,
       hemi: ["#ffffff", "#B9B4E8", 0.8],
@@ -114,7 +114,7 @@ export const MISSIONS: Mission[] = [
       heading: -Math.PI * 0.75,
     },
     env: {
-      sky: THEME.canvas,
+      sky: themeFor("moon").canvas, // the field of the Moon
       fogNear: 70,
       fogFar: 270,
       hemi: ["#ffffff", "#B9B4E8", 0.8],

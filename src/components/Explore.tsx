@@ -6,7 +6,7 @@ import { BODIES } from "@/lib/bodies";
 import { MISSIONS } from "@/lib/missions";
 import { PERF } from "@/lib/perf";
 import { storyOf } from "@/lib/story";
-import { THEME as theme } from "@/lib/themes";
+import { useTheme } from "@/lib/use-theme";
 import { ease } from "@/lib/ui";
 import Ambient, { AmbientButton } from "./Ambient";
 import Globe from "./Globe";
@@ -35,6 +35,7 @@ const regFloat = (el: HTMLElement | null) => {
 };
 
 function ExploreView({ initialBodyId }: { initialBodyId: string }) {
+  const theme = useTheme();
   const router = useRouter();
   const pathname = usePathname();
 

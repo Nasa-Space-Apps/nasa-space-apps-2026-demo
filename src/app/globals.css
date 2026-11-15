@@ -15,6 +15,7 @@ body {
   font-weight: 500;
   letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
+  transition: background-color var(--dur-base) var(--ease); /* the field changes colour softly when the globe switches world */
 }
 
 /*

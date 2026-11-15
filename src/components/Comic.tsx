@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { beatToCheckpoint, type StoryBeat } from "@/lib/story";
 import { playNarration, preloadNarration, stopNarration, toggleNarration } from "@/lib/narration";
-import { THEME as theme } from "@/lib/themes";
+import { useTheme } from "@/lib/use-theme";
 import { ease, ui } from "@/lib/ui";
 import Captions from "./Captions";
 import Icon from "./Icon";
@@ -13,6 +13,7 @@ const TILT = [-1.4, 1.1, -0.7, 1.5, -1.1, 0.8];
 
 /** Flat organic blobs behind the pages (the reference's pink-on-blue spots); they glide to a new place with every page. */
 function Blobs({ at }: { at: number }) {
+  const theme = useTheme();
   const spots = [
     { fill: theme.accent, d: "M120 20C190 -10 280 20 300 90s-30 150-110 170S40 240 20 160 50 50 120 20Z", x: -6, y: 8, s: 1.5, r: 12 },
     { fill: theme.globe.line, d: "M100 30c60-30 150-10 170 60s-20 130-100 150S10 220 20 140 40 60 100 30Z", x: 66, y: -18, s: 1.3, r: -20 },
@@ -74,6 +75,7 @@ export default function Comic({
   onBackPast?: () => void; // ← on the first page: go back to what came before (the 3D route, from the epilogue)
   startAt?: number; // page to open on
 }) {
+  const theme = useTheme();
   const { frame } = ui(theme);
   const total = beats.length + (end ? 1 : 0);
   const [i, setI] = useState(startAt);

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { TEAM } from "@/lib/team";
-import { THEME as theme } from "@/lib/themes";
+import { useTheme } from "@/lib/use-theme";
 import { ease, ui } from "@/lib/ui";
 import Icon from "./Icon";
 import Portrait from "./Portrait";
@@ -12,6 +12,7 @@ import Portrait from "./Portrait";
  * interview cards (portrait, name, role, a link button). Opens and closes with a soft fade; Escape or a click outside closes it.
  */
 export default function Credits() {
+  const theme = useTheme();
   const { label, title, text } = ui(theme);
   const root = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
@@ -38,7 +39,7 @@ export default function Credits() {
       cancelAnimationFrame(b);
       window.clearTimeout(t);
     };
-  }, [open]);
+  }, [open, theme.dur.base]);
 
   useEffect(() => {
     if (!open) return;

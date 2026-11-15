@@ -43,6 +43,18 @@ En el original, las páginas del cómic (crema, ligeramente giradas) cuelgan sob
 
 Paletas de los vehículos (3 tonos, en `missions.ts`; el `bg` es `paperLight`): Opportunity coral `#E65A4F / #F9A66C / #FFE4E0`, SEV azul, Perseverance verde. Los vehículos **no se han tocado** en este hito.
 
+## Paleta por mundo (hito 46)
+
+Tinta y papel (el cómic) son iguales en todas partes; lo que cambia con el mundo es **el campo, el acento y lo que cuelga de ellos**. Se define en `WORLDS` de `src/lib/themes.ts` y `themeFor(mundo)` devuelve el tema completo:
+
+| | campo (`canvas`) | tinte claro (`canvasAlt`: rejilla del globo, manchas del cómic) | acento | acento suave (enlaces) | baliza activa | suelo 3D (`ground`) |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Marte** | `#E2603A` terracota | `#F49A6D` | `#FFC247` mantequilla | `#B33A16` | `#F08A00` | arena cálida `#EEBE95 / #FFF1DF` |
+| **Luna** | `#4B7DB8` azul acero | `#86AFDA` | `#6BE3C3` menta | `#1F5C8E` | `#16B38F` | plata fría `#CDD3DA / #F5F6F8` |
+
+- **Cómo se aplica:** `useTheme()` (`lib/use-theme.ts`) da el tema del mundo de la ruta (`/mars…` = Marte, el resto = Luna) y sigue el `pushState` del selector del globo; los componentes lo usan en vez de importar `THEME`. Dentro del `<Canvas>` de R3F no llega el contexto de React: `Experience` saca el mundo de la misión (`bodyOfMission`). Las variables CSS las publica `components/WorldVars.tsx` y un script en el `<head>` de `app/layout.tsx` las pone antes del primer pintado (sin parpadeo). El cielo y la niebla de cada misión (`missions.ts`) son el campo de su mundo.
+- Para retocar un color: cámbialo en `WORLDS` (o en `BASE.ground`); no escribas colores sueltos. Los vehículos conservan su color propio (`missions.ts`), que ya no es el acento.
+
 ## Tipografía
 
 - **Una sola familia: Libre Franklin** (la de la referencia; `next/font/google` en `layout.tsx`). No hay mono: `THEME.mono` apunta a la misma familia y se usa para etiquetas, botones y números.
