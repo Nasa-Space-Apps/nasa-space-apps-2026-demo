@@ -22,7 +22,7 @@ export type StoryBeat = {
   summary: string; // the card / page caption (~25 words)
   narration: string; // spoken script (~45 words)
   facts: [label: string, value: string][];
-  source: { label: string; title: string; url: string } | null;
+  sources: { type: "official" | "scientific" | "press"; host: string; url: string }[]; // where the facts come from (the card links to them)
   image: string; // AI illustration, 4:5
   imageRatio: string;
   audio: string;
@@ -57,7 +57,7 @@ export function beatToCheckpoint(b: StoryBeat): Checkpoint {
     narration: b.narration,
     audio: b.audio,
     facts: b.facts.slice(0, 3),
-    ...(b.source ? { source: { label: b.source.label, url: b.source.url } } : {}),
+    ...(b.sources.length ? { sources: b.sources } : {}),
     noGuide: true,
   };
 }

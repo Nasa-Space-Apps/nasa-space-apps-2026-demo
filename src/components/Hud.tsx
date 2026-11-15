@@ -59,23 +59,25 @@ export function Hints({ theme }: { theme: Theme }) {
 
 export type SelectItem = { id: string; name: string };
 
-/** Navigation bar (top left): ink bar with the way back to the globe and the vehicle picker. */
+/** Navigation bar (top left): ink bar with the way back (to the globe, or to the story's comic) and, unless `items` is left out, the vehicle picker. */
 export function TopBar({
   theme,
   onGlobe,
+  backLabel = "Globe",
   items,
   value,
   onChange,
 }: {
   theme: Theme;
   onGlobe: () => void;
-  items: SelectItem[];
-  value: string;
-  onChange: (id: string) => void;
+  backLabel?: string;
+  items?: SelectItem[];
+  value?: string;
+  onChange?: (id: string) => void;
 }) {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
-  const current = items.find((i) => i.id === value) ?? items[0];
+  const current = items?.find((i) => i.id === value) ?? items?.[0];
 
   useEffect(() => {
     if (!open) return;
@@ -113,14 +115,16 @@ export function TopBar({
       <button
         type="button"
         className="ui-nav"
-        style={{ ...cell, borderRadius: `${theme.radiusSm}px 0 0 ${theme.radiusSm}px`, paddingLeft: 18 }}
+        style={{ ...cell, borderRadius: items ? `${theme.radiusSm}px 0 0 ${theme.radiusSm}px` : theme.radiusSm, paddingLeft: 18, paddingRight: items ? 14 : 20 }}
         onClick={(e) => {
           e.currentTarget.blur();
           onGlobe();
         }}
       >
-        <Icon name="arrow-left" size={16} /> Globe
+        <Icon name="arrow-left" size={16} /> {backLabel}
       </button>
+      {items && current && onChange && (
+        <>
       <span style={{ width: 1, background: theme.onInk, opacity: 0.25, margin: "10px 0" }} />
       <button
         type="button"
@@ -174,6 +178,8 @@ export function TopBar({
           </li>
         ))}
       </ul>
+        </>
+      )}
     </div>
   );
 }

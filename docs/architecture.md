@@ -43,9 +43,10 @@ Es el **menú previo al juego** (hito 31): un globo (por defecto la Luna) a pant
 
 `/mars/opportunity` no monta `Scene` directamente (`SceneLoader` elige `Journey` para `opportunity`). `Journey` tiene tres fases sobre un mismo campo azul:
 
-- **intro**: `Comic` con `INTRO_BEATS` (5 páginas). **Desde la 3.ª página** monta `Scene` por detrás (`next/dynamic`, el terreno se descarga entonces) y `game.hold = true` la mantiene en espera.
+- **intro**: `Comic` con `INTRO_BEATS` (5 páginas). **Desde la 3.ª página** solo descarga el terreno (`fetch`); `Scene` (`next/dynamic`) se monta en `onLeave`, al pulsar «land on mars», y `game.hold = true` la mantiene en espera hasta `onDone`.
 - **mars**: al terminar el cómic (`onDone`/`onSkip`) quita el `hold` y desmonta el cómic: el rover ya está en la primera parada, que se abre con su tarjeta y su narración. Al llegar a la última parada (`game.active` = último id) aparece `ContinuePrompt`.
-- **outro**: `Comic` con `OUTRO_BEATS` + una página final (`end`) con «play again» (remonta `JourneyView` con otra `key`) y «back to the globe». Pone `game.hold = true` otra vez.
+- En **mars**, `Scene` recibe `onBack`/`backLabel`/`lockVehicle`: «← story» vuelve a la intro (en su última página, `startAt`; la escena queda montada y en espera) y no hay selector de vehículo.
+- **outro**: `Comic` con `OUTRO_BEATS` (con `onBackPast`: `←` en su primera página vuelve al 3D) + una página final (`end`) con «play again» (remonta `JourneyView` con otra `key`) y «back to the globe». Pone `game.hold = true` otra vez.
 - Como `Scene`, `Journey` devuelve `null` si su ruta no es la actual (Next conserva las rutas visitadas): al volver empieza de cero.
 
 **`game.hold`** (`lib/game.ts`): mientras es `true`, `Rover` ignora `Espacio`, `Checkpoints` no detecta proximidad (no abre tarjetas ni lanza narración) y `Guide` no habla. Lo ponen `Journey` y su limpieza (`false` al desmontar).

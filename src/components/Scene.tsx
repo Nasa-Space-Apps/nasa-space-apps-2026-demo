@@ -163,14 +163,20 @@ function Experience({ mission }: { mission: Mission }) {
  * The scene of a vehicle. Next keeps visited routes alive (hidden); with the light perf profile the whole scene — and its WebGL canvas, terrain and
  * textures — is released while its route is not the current one, and rebuilt (with its fade-in) when the user comes back. See lib/perf.ts.
  */
-export default function Scene({ missionId }: { missionId: string }) {
+type SceneOptions = {
+  onBack?: () => void; // replaces «← Globe» (the story sends the player back to its comic instead)
+  backLabel?: string;
+  lockVehicle?: boolean; // no vehicle picker and no M key (the story has one vehicle)
+};
+
+export default function Scene({ missionId, ...options }: { missionId: string } & SceneOptions) {
   const pathname = usePathname();
   const active = pathname === `/${bodyOfMission(missionId)?.id ?? "moon"}/${missionId}`;
   if (PERF.releaseHiddenViews && !active) return null;
-  return <SceneView missionId={missionId} />;
+  return <SceneView missionId={missionId} {...options} />;
 }
 
-function SceneView({ missionId }: { missionId: string }) {
+function SceneView({ missionId, onBack, backLabel, lockVehicle }: { missionId: string } & SceneOptions) {
   const router = useRouter();
   const mission = MISSIONS.find((m) => m.id === missionId) ?? MISSIONS[0];
   const vehicle = bodyOfMission(mission.id);
@@ -211,7 +217,7 @@ function SceneView({ missionId }: { missionId: string }) {
       if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
       if (e.code === "KeyN") toggleNarration();
       if (e.code === "KeyG") toggleGuide();
-      if (e.code === "KeyM") {
+      if (e.code === "KeyM" && !lockVehicle) {
         goMission(MISSIONS[(MISSIONS.findIndex((x) => x.id === mission.id) + 1) % MISSIONS.length].id);
       }
     };
@@ -238,8 +244,9 @@ function SceneView({ missionId }: { missionId: string }) {
       <div className="fixed left-5 top-5 z-20">
         <TopBar
           theme={theme}
-          onGlobe={goGlobe}
-          items={MISSIONS.map((m) => ({ id: m.id, name: m.name }))}
+          onGlobe={onBack ?? goGlobe}
+          backLabel={backLabel}
+          items={lockVehicle ? undefined : MISSIONS.map((m) => ({ id: m.id, name: m.name }))}
           value={mission.id}
           onChange={goMission}
         />

@@ -10,7 +10,7 @@ import { ease } from "@/lib/ui";
  * On-screen transcript of everything the voice says (bottom centre, floating above the dock): the story narrator while a checkpoint
  * clip plays, otherwise the mission-control guide. They never overlap (the guide stays quiet during a narration).
  */
-export default function Captions({ theme }: { theme: Theme }) {
+export default function Captions({ theme, wide = false }: { theme: Theme; wide?: boolean }) {
   const guide = useSyncExternalStore(subscribeGuide, getGuide, getGuide);
   const nar = useSyncExternalStore(subscribeNarration, getNarration, getNarration);
   const who = nar.caption ? "Narrator" : "Guide";
@@ -32,7 +32,7 @@ export default function Captions({ theme }: { theme: Theme }) {
         borderRadius: 24,
         color: theme.onInk,
       }}
-      className="pointer-events-none absolute bottom-full left-1/2 mb-2.5 flex max-w-[min(600px,88vw)] select-none items-center gap-3 py-2.5 pl-2.5 pr-5 text-[15px] font-semibold leading-snug"
+      className={`pointer-events-none absolute bottom-full left-1/2 mb-2.5 flex select-none ${wide ? "w-max max-w-[min(780px,92vw)]" : "max-w-[min(600px,88vw)]"} items-center gap-3 py-2.5 pl-2.5 pr-5 text-[15px] font-semibold leading-snug`}
     >
       <span
         style={{

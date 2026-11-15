@@ -178,13 +178,19 @@ const PARTS = [
   { id: "outro", title: "Legacy", blurb: "After the last signal." },
 ];
 
-/** Best source of a dossier: official NASA/JPL first, then scientific, then anything. */
-function sourceOf(id) {
+/** Up to 3 sources of a dossier, official NASA/JPL first, then scientific, then press (community sources are left out). The card shows them as links. */
+const KINDS = { "oficial NASA/JPL": "official", "científica": "scientific", "prensa": "press" };
+function sourcesOf(id) {
   const file = path.join(DOSSIERS, id, "dossier.json");
-  if (!existsSync(file)) return null;
-  const list = JSON.parse(readFileSync(file, "utf8")).fuentes_nuevas ?? [];
-  const pick = list.find((f) => f.tipo === "oficial NASA/JPL") ?? list.find((f) => f.tipo === "científica") ?? list[0];
-  return pick ? { label: pick.editor, title: pick.titulo, url: pick.url } : null;
+  if (!existsSync(file)) return [];
+  const list = (JSON.parse(readFileSync(file, "utf8")).fuentes_nuevas ?? []).filter((f) => KINDS[f.tipo] && f.url.startsWith("http"));
+  const order = Object.keys(KINDS);
+  list.sort((a, b) => order.indexOf(a.tipo) - order.indexOf(b.tipo));
+  const seen = new Set(); // one link per site: three « science.nasa.gov » in a row would say nothing
+  return list
+    .map((f) => ({ type: KINDS[f.tipo], host: new URL(f.url).hostname.replace("www.", ""), url: f.url }))
+    .filter((f) => !seen.has(f.host) && seen.add(f.host))
+    .slice(0, 3);
 }
 
 const route = JSON.parse(readFileSync(path.join(ROOT, "scripts/data/opportunity-route.json"), "utf8"));
@@ -205,7 +211,7 @@ for (const b of BEATS) {
   await sharp(srcImg).resize({ width: 1040 }).jpeg({ quality: 80, mozjpeg: true }).toFile(path.join(OUT, "images", `${b.id}.jpg`));
   const beat = {
     id: b.id, n, part: b.part, date: b.date, ...(b.place ? { place: b.place } : {}), title: b.title, summary: b.summary, narration: b.narration, facts: b.facts,
-    source: sourceOf(b.id), image: `/models/opportunity/images/${b.id}.jpg`, imageRatio: "4 / 5", audio: `/models/opportunity/audio/${b.id}.mp3`,
+    sources: sourcesOf(b.id), image: `/models/opportunity/images/${b.id}.jpg`, imageRatio: "4 / 5", audio: `/models/opportunity/audio/${b.id}.mp3`,
   };
   if (b.part === "mars") {
     const r = route[stop++];

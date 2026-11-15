@@ -54,6 +54,9 @@ export default function Comic({
   onBack,
   onSkip,
   onPage,
+  onLeave,
+  onBackPast,
+  startAt = 0,
 }: {
   beats: StoryBeat[];
   label: string; // part name in the progress pill ("earth")
@@ -62,11 +65,14 @@ export default function Comic({
   onDone: () => void;
   onBack: () => void;
   onSkip?: () => void;
-  onPage?: (i: number) => void; // the page that is now in front (the parent starts loading the 3D scene a few pages before the end)
+  onPage?: (i: number) => void; // the page that is now in front (the parent warms the terrain download a few pages before the end)
+  onLeave?: () => void; // the way forward has started (the pages are dropping away): the parent mounts what comes next behind the dissolving blue
+  onBackPast?: () => void; // ← on the first page: go back to what came before (the 3D route, from the epilogue)
+  startAt?: number; // page to open on
 }) {
   const { frame } = ui(theme);
   const total = beats.length + (end ? 1 : 0);
-  const [i, setI] = useState(0);
+  const [i, setI] = useState(startAt);
   const [entered, setEntered] = useState(false);
   const [leaving, setLeaving] = useState(false);
   const drag = useRef({ x: 0, moved: false, down: false });
@@ -107,16 +113,20 @@ export default function Comic({
   }, [i, entered, leaving, beats]);
   useEffect(() => () => stopNarration(), []);
 
-  const finish = () => {
+  /** The pages drop away and the blue dissolves, then `next` swaps the view. */
+  const leave = (next: () => void, forward: boolean) => {
     if (leaving) return;
     setLeaving(true);
     stopNarration();
-    timer.current = window.setTimeout(onDone, theme.dur.slow + 500); // the pages drop away and the blue dissolves, then the parent swaps the view
+    if (forward) onLeave?.();
+    timer.current = window.setTimeout(next, theme.dur.slow + 500);
   };
   const go = (n: number) => {
     if (leaving) return;
-    if (n >= total) finish();
-    else setI(Math.max(0, n));
+    if (n >= total) leave(onDone, true);
+    else if (n < 0) {
+      if (onBackPast) leave(onBackPast, false);
+    } else setI(n);
   };
 
   useEffect(() => {
@@ -310,13 +320,13 @@ export default function Comic({
       })}
 
       {/* subtitles of the narration */}
-      <div className="pointer-events-none fixed bottom-20 left-1/2 z-50 h-0 w-[min(640px,90vw)] -translate-x-1/2">
-        <Captions theme={theme} />
+      <div className="pointer-events-none fixed bottom-20 left-1/2 z-50 h-0 w-[min(780px,92vw)] -translate-x-1/2">
+        <Captions theme={theme} wide />
       </div>
 
       {/* the dock: back, progress, next */}
       <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2.5" style={{ opacity: leaving ? 0 : 1, transition: ease(theme, ["opacity"]) }}>
-        <button type="button" className="ui-fab ui-fab-sm" aria-label="Previous page" disabled={i === 0} style={{ opacity: i === 0 ? 0.4 : 1 }} onClick={(e) => (e.currentTarget.blur(), go(i - 1))}>
+        <button type="button" className="ui-fab ui-fab-sm" aria-label={i === 0 && onBackPast ? "Back to the 3D route" : "Previous page"} title={i === 0 && onBackPast ? "Back to the 3D route" : undefined} disabled={i === 0 && !onBackPast} style={{ opacity: i === 0 && !onBackPast ? 0.4 : 1 }} onClick={(e) => (e.currentTarget.blur(), go(i - 1))}>
           <Icon name="arrow-left" size={14} />
         </button>
         <div

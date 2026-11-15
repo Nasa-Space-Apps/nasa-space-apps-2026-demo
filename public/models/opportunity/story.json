@@ -70,11 +70,23 @@
           "Was Mars wet?"
         ]
       ],
-      "source": {
-        "label": "NASA Image and Video Library",
-        "title": "KSC-03pd1834 - Steve Squyres con modelo de rover",
-        "url": "https://images.nasa.gov/details/KSC-03pd1834"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "images.nasa.gov",
+          "url": "https://images.nasa.gov/details/KSC-03pd1834"
+        },
+        {
+          "type": "press",
+          "host": "cornellsun.com",
+          "url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project"
+        },
+        {
+          "type": "press",
+          "host": "pbs.org",
+          "url": "https://www.pbs.org/wgbh/nova/mars/mission.html"
+        }
+      ],
       "image": "/models/opportunity/images/opp001.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp001.mp3"
@@ -101,11 +113,23 @@
           "Meridiani Planum"
         ]
       ],
-      "source": {
-        "label": "NASA Technical Reports Server (Johnson Space Center)",
-        "title": "A First Look at the Mineralogy and Geochemistry of the MER-B Landing Site in Meridiani Planum",
-        "url": "https://ntrs.nasa.gov/citations/20040058029"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/20040058029"
+        },
+        {
+          "type": "official",
+          "host": "images.nasa.gov",
+          "url": "https://images.nasa.gov/details/PIA04469"
+        },
+        {
+          "type": "scientific",
+          "host": "christensen.asu.edu",
+          "url": "https://christensen.asu.edu/?p=416"
+        }
+      ],
       "image": "/models/opportunity/images/opp005.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp005.mp3"
@@ -132,11 +156,23 @@
           "2003"
         ]
       ],
-      "source": {
-        "label": "JPL, 10 ago 2000",
-        "title": "NASA Plans to Send Rover Twins to Mars in 2003",
-        "url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/"
+        },
+        {
+          "type": "scientific",
+          "host": "science.org",
+          "url": "https://www.science.org/doi/10.1126/science.289.5482.1119"
+        },
+        {
+          "type": "press",
+          "host": "spacenews.com",
+          "url": "https://spacenews.com/nasa-goes-back-to-the-future-with-plans-for-a-mars-rover-in-2003-possible-second-rover-being-studied/"
+        }
+      ],
       "image": "/models/opportunity/images/opp008.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp008.mp3"
@@ -163,11 +199,23 @@
           "15 Jul 2003"
         ]
       ],
-      "source": {
-        "label": "NASA Science",
-        "title": "Opportunity (MER-B): ficha oficial de misión",
-        "url": "https://science.nasa.gov/mission/mer-opportunity"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mer-opportunity"
+        },
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/"
+        },
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/"
+        }
+      ],
       "image": "/models/opportunity/images/opp015.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp015.mp3"
@@ -194,11 +242,23 @@
           "Eagle Crater"
         ]
       ],
-      "source": {
-        "label": "JPL/NASA",
-        "title": "NASA Hears from Opportunity Rover on Mars",
-        "url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+        },
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/?p=425313"
+        }
+      ],
       "image": "/models/opportunity/images/opp018.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp018.mp3"
@@ -226,11 +286,23 @@
           "2 Mar 2004"
         ]
       ],
-      "source": {
-        "label": "NASA/NSSDC",
-        "title": "Opportunity Rover Finds Strong Evidence Meridiani Planum Was Wet (comunicado 2004-074)",
-        "url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html"
+        },
+        {
+          "type": "official",
+          "host": "astrobiology.nasa.gov",
+          "url": "https://astrobiology.nasa.gov/news/check-type-evidence-of-water-found-on-mars/"
+        },
+        {
+          "type": "official",
+          "host": "photojournal.jpl.nasa.gov",
+          "url": "https://photojournal.jpl.nasa.gov/catalog/PIA05482"
+        }
+      ],
       "image": "/models/opportunity/images/opp021.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp021.mp3",
@@ -262,11 +334,23 @@
           "Fram Crater"
         ]
       ],
-      "source": {
-        "label": "NASA Science",
-        "title": "MER Science Highlights — Finding Signs of Water and Conditions for Life",
-        "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/"
+        },
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/images/pia19113-martian-concretions-near-fram-crater/"
+        },
+        {
+          "type": "scientific",
+          "host": "news.cornell.edu",
+          "url": "https://news.cornell.edu/node/294161"
+        }
+      ],
       "image": "/models/opportunity/images/opp025.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp025.mp3",
@@ -298,11 +382,23 @@
           "287–294"
         ]
       ],
-      "source": {
-        "label": "NASA/JPL",
-        "title": "PIA07065: Opportunity at the Wall (3-D)",
-        "url": "https://www.jpl.nasa.gov/images/pia07065-opportunity-at-the-wall-3-d"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/images/pia07065-opportunity-at-the-wall-3-d"
+        },
+        {
+          "type": "official",
+          "host": "photojournal.jpl.nasa.gov",
+          "url": "https://photojournal.jpl.nasa.gov/catalog/PIA07110"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/image-article/apod-2004-november-15-burns-cliff-on-mars/"
+        }
+      ],
       "image": "/models/opportunity/images/opp028.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp028.mp3",
@@ -344,11 +440,23 @@
           "Iron + nickel"
         ]
       ],
-      "source": {
-        "label": "NASA/JPL-Caltech/Cornell",
-        "title": "Iron Meteorite on Mars – NASA Science",
-        "url": "https://science.nasa.gov/resource/iron-meteorite-on-mars/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/iron-meteorite-on-mars/"
+        },
+        {
+          "type": "scientific",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/20100003417"
+        },
+        {
+          "type": "press",
+          "host": "astronomy.com",
+          "url": "https://www.astronomy.com/science/what-happened-when-this-meteorite-hit-mars/"
+        }
+      ],
       "image": "/models/opportunity/images/opp030.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp030.mp3",
@@ -380,11 +488,23 @@
           "Sols 446–484"
         ]
       ],
-      "source": {
-        "label": "NASA",
-        "title": "Opportunity Sol 446 Position, with Relative Heights (NASA Science)",
-        "url": "https://science.nasa.gov/?p=940660"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/?p=940660"
+        },
+        {
+          "type": "scientific",
+          "host": "pancam.sese.asu.edu",
+          "url": "https://pancam.sese.asu.edu/448B_track.html"
+        },
+        {
+          "type": "press",
+          "host": "news.cornell.edu",
+          "url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery"
+        }
+      ],
       "image": "/models/opportunity/images/opp033.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp033.mp3",
@@ -416,11 +536,23 @@
           "90 sols"
         ]
       ],
-      "source": {
-        "label": "NASA Science",
-        "title": "NASA Science: Mars Exploration Rover – Spirit",
-        "url": "https://science.nasa.gov/mission/mer-spirit/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mer-spirit/"
+        },
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/missions/mars-exploration-rover-spirit-mer-spirit/"
+        },
+        {
+          "type": "scientific",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/20160001767"
+        }
+      ],
       "image": "/models/opportunity/images/opp045.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp045.mp3",
@@ -452,11 +584,23 @@
           "7 Dec 2011"
         ]
       ],
-      "source": {
-        "label": "NASA Jet Propulsion Laboratory",
-        "title": "NASA Mars Rover Finds Mineral Vein Deposited by Water",
-        "url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water"
+        },
+        {
+          "type": "official",
+          "host": "astrobiology.nasa.gov",
+          "url": "https://astrobiology.nasa.gov/news/slam-dunk-sign-of-ancient-water-on-mars/"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/homestake-vein-on-cape-york-color-enhanced/"
+        }
+      ],
       "image": "/models/opportunity/images/opp047.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp047.mp3",
@@ -488,11 +632,23 @@
           "16 m"
         ]
       ],
-      "source": {
-        "label": "NASA/JPL-Caltech",
-        "title": "View Back at Record-Setting Drive by Opportunity (Science NASA)",
-        "url": "https://science.nasa.gov/resource/view-back-at-record-setting-drive-by-opportunity/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/view-back-at-record-setting-drive-by-opportunity/"
+        },
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/nine-year-old-mars-rover-passes-40-year-old-record/"
+        },
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html"
+        }
+      ],
       "image": "/models/opportunity/images/opp052.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp052.mp3",
@@ -530,11 +686,23 @@
           "Jelly doughnut"
         ]
       ],
-      "source": {
-        "label": "NASA",
-        "title": "Mars Rover Heads Uphill After Solving 'Doughnut' Riddle – NASA News Release",
-        "url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/where-martian-jelly-doughnut-rock-came-from-true-color/"
+        },
+        {
+          "type": "scientific",
+          "host": "planetary.org",
+          "url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock"
+        }
+      ],
       "image": "/models/opportunity/images/opp054.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp054.mp3",
@@ -572,11 +740,23 @@
           "20 Mar 2015"
         ]
       ],
-      "source": {
-        "label": "NASA/JPL",
-        "title": "Opportunity Working in No-Flash Mode for Now",
-        "url": "https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mer-opportunity/"
+        },
+        {
+          "type": "press",
+          "host": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/2015/03/25/with-memory-restored-opportunity-rover-completes-marathon-on-mars/"
+        }
+      ],
       "image": "/models/opportunity/images/opp059.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp059.mp3",
@@ -608,11 +788,18 @@
           "~330 m long"
         ]
       ],
-      "source": {
-        "label": "NASA Science / JPL-Caltech",
-        "title": "Opportunity Rover's Full Marathon-Length Traverse",
-        "url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/"
+        },
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/image-article/from-marathon-valley-gully-endeavour-rim/"
+        }
+      ],
       "image": "/models/opportunity/images/opp062.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp062.mp3",
@@ -644,11 +831,23 @@
           "645 → 22 Wh"
         ]
       ],
-      "source": {
-        "label": "NASA/JPL",
-        "title": "Opportunity Hunkers Down During Dust Storm (actualizado 26 jul 2018)",
-        "url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/"
+        },
+        {
+          "type": "official",
+          "host": "lasp.colorado.edu",
+          "url": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/"
+        },
+        {
+          "type": "press",
+          "host": "planetary.org",
+          "url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep"
+        }
+      ],
       "image": "/models/opportunity/images/opp070.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp070.mp3",
@@ -680,11 +879,23 @@
           "Perseverance Valley"
         ]
       ],
-      "source": {
-        "label": "NASA Science",
-        "title": "Opportunity Rover's Final Mars Images (panorama 354 imágenes)",
-        "url": "https://science.nasa.gov/?p=140583"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/?p=140583"
+        },
+        {
+          "type": "official",
+          "host": "pds-rings.seti.org",
+          "url": "https://pds-rings.seti.org/press_releases/pages/PIA22xxx/PIA22929.html"
+        },
+        {
+          "type": "press",
+          "host": "laist.com",
+          "url": "https://laist.com/news/jpl-mars-rover-opportunity-battery-is-low-and-its-getting-dark"
+        }
+      ],
       "image": "/models/opportunity/images/opp072.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp072.mp3",
@@ -715,11 +926,23 @@
           "217,000+"
         ]
       ],
-      "source": {
-        "label": "NASA Science / JPL",
-        "title": "NASA's Opportunity Rover Mission on Mars Comes to End",
-        "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+        },
+        {
+          "type": "press",
+          "host": "planetary.org",
+          "url": "https://www.planetary.org/articles/02-mer-update-opportunity-complete"
+        },
+        {
+          "type": "press",
+          "host": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/"
+        }
+      ],
       "image": "/models/opportunity/images/opp077.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp077.mp3"
@@ -746,11 +969,23 @@
           "5.5 vs ~15 yr"
         ]
       ],
-      "source": {
-        "label": "NASA Science / JPL",
-        "title": "NASA's Perseverance Sets Off-World Record for Total Distance Driven",
-        "url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/"
-      },
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/"
+        },
+        {
+          "type": "scientific",
+          "host": "spectrum.ieee.org",
+          "url": "https://spectrum.ieee.org/mars-rover-distance-record"
+        },
+        {
+          "type": "press",
+          "host": "earthsky.org",
+          "url": "https://earthsky.org/?p=560859"
+        }
+      ],
       "image": "/models/opportunity/images/opp081.jpg",
       "imageRatio": "4 / 5",
       "audio": "/models/opportunity/audio/opp081.mp3"

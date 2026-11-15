@@ -95,6 +95,15 @@ Con la extensión Claude in Chrome (o cualquier navegador):
   del navegador seguía así: página en blanco en `/moon#sev`. Corregido reseteando `leaving` en el efecto de montaje. **Regla:** todo estado transitorio de una vista (fundidos, «en curso»…) debe reiniciarse en el efecto de montaje, no en el inicializador del `useState`.
 - Para reproducirlo: `/moon` → clic en el vehículo → Travel to the past → `navigate back`.
 
+## Audio: no confíes en `preload` (hito 38)
+
+- Un `new Audio(url)` que no está en el DOM puede perder su búfer con el tiempo y re-pedir el archivo al reproducir (segundos de «Loading…» sin subtítulos). Los clips de narración se guardan como **Blob en memoria** (`loadNarration` en `lib/narration.ts`): si añades otro audio que deba sonar sin demora, haz lo mismo y precárgalo antes de que el usuario llegue (como `useStoryAssets` en `Journey`).
+
+## Montar la escena 3D bloquea el hilo (hito 37)
+
+- Construir el terreno (`buildTerrain`, mapa de alturas, minimapa) y compilar los shaders (`<Preload all/>`) bloquea el hilo principal **~6 s en desarrollo** (medido con `PerformanceObserver` de `longtask`): mientras tanto no responden botones, teclas ni subtítulos. **No montes `Scene` detrás de algo interactivo**: hazlo cuando el usuario ya espera una carga (p. ej. al aterrizar del cómic) y tápalo con transiciones de transform/opacidad, que siguen en el compositor. Para adelantar trabajo solo de red, un `fetch` del STL basta.
+- Mide así: en la consola, `new PerformanceObserver(l => l.getEntries().forEach(e => console.log(e.startTime|0, e.duration|0))).observe({entryTypes:['longtask']})` y pasa de página.
+
 ## Animaciones de juego (hito 32)
 
 - **Un `Canvas` de R3F dentro de un elemento con `transform: scale`** (p. ej. dentro de `Pop`) se mide con `getBoundingClientRect`, que incluye la escala: a mitad del pop el canvas «mide» poco y el vehículo queda diminuto cuando termina. Usa `resize={{ offsetSize: true }}` (medida de layout, sin transformaciones), como `VehicleView`.

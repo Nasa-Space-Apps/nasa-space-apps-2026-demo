@@ -56,10 +56,33 @@ let raf = 0;
 let current: HTMLAudioElement | null = null;
 let token = 0; // invalidates in-flight plays when something newer starts or stops
 
+// Each mp3 is downloaded ONCE into memory (a Blob) and played from there. An <audio> that streams a file from the server and then sits idle gets its buffer
+// dropped by the browser: coming back to a clip after a while (or the first play of a clip that was only "preloaded") re-requested it, and the narrator stayed
+// silent in the "loading" state for seconds. From a Blob there is no network at play time.
+const urls = new Map<string, string>(); // clip id → object URL (once downloaded)
+const loads = new Map<string, Promise<string | null>>();
+
+/** Download a clip into memory. Resolves with its object URL, or null if it could not be fetched (the play then falls back to the file URL and reports the error). */
+export function loadNarration(cp: Checkpoint): Promise<string | null> {
+  let p = loads.get(cp.id);
+  if (!p) {
+    p = fetch(cp.audio)
+      .then((r) => (r.ok ? r.blob() : Promise.reject(new Error(String(r.status)))))
+      .then((b) => {
+        const url = URL.createObjectURL(b);
+        urls.set(cp.id, url);
+        return url;
+      })
+      .catch(() => null);
+    loads.set(cp.id, p);
+  }
+  return p;
+}
+
 function clip(cp: Checkpoint) {
   let a = clips.get(cp.id);
   if (!a) {
-    a = new Audio(cp.audio);
+    a = new Audio(urls.get(cp.id) ?? cp.audio);
     a.preload = "auto";
     a.addEventListener("ended", () => {
       if (state.id === cp.id && state.status === "playing") set({ status: "idle", caption: "" });
@@ -94,9 +117,9 @@ function followCaption(cp: Checkpoint, a: HTMLAudioElement, mine: number) {
   raf = requestAnimationFrame(tick);
 }
 
-/** Start downloading the mission's clips so the narration begins instantly on arrival. */
-export function preloadNarration(cps: Checkpoint[]) {
-  cps.forEach(clip);
+/** Download the clips into memory so the narration begins instantly on arrival. Resolves when all of them are in (or failed); `onEach` fires after every clip. */
+export function preloadNarration(cps: Checkpoint[], onEach?: () => void): Promise<void> {
+  return Promise.all(cps.map((cp) => loadNarration(cp).then(() => onEach?.()))).then(() => undefined);
 }
 
 /** Narrate a checkpoint. `force` ignores the automatic on/off switch (used by the card's button). */
@@ -104,10 +127,12 @@ export async function playNarration(cp: Checkpoint, force = false) {
   if (!force && !state.enabled) return;
   const mine = ++token;
   current?.pause();
+  set({ id: cp.id, status: urls.has(cp.id) ? "idle" : "loading", error: null, caption: "" });
+  await loadNarration(cp); // instant when it is already in memory
+  if (mine !== token) return; // something newer started (or it was stopped) while it downloaded
   const a = clip(cp);
   current = a;
   a.currentTime = 0;
-  set({ id: cp.id, status: a.readyState >= 3 ? "idle" : "loading", error: null, caption: "" });
   try {
     await a.play();
     if (mine === token) {
