@@ -77,6 +77,7 @@ function JourneyView({ missionId, story, onReplay }: { missionId: string; story:
   const { ready, progress } = useStoryAssets(story.beats);
   const router = useRouter();
   const body = bodyOfMission(missionId)?.id ?? "mars";
+  const place = story.parts[1].title.toLowerCase(); // «mars», «moon»: where the 3D route is
   const [phase, setPhase] = useState<Phase>("intro");
   const [sceneOn, setSceneOn] = useState(false); // the 3D scene is mounted (hidden behind the comic until it is its turn)
   const [comicOn, setComicOn] = useState(true);
@@ -140,8 +141,9 @@ function JourneyView({ missionId, story, onReplay }: { missionId: string; story:
           key="intro"
           name={story.name}
           beats={story.intro}
-          label="earth"
-          doneLabel="land on mars"
+          label={story.parts[0].title.toLowerCase()}
+          doneLabel={`land on ${place}`}
+          skipLabel={`skip to ${place}`}
           onDone={startMars}
           onSkip={startMars}
           onBack={toGlobe}
@@ -157,7 +159,7 @@ function JourneyView({ missionId, story, onReplay }: { missionId: string; story:
           key="outro"
           name={story.name}
           beats={story.outro}
-          label="legacy"
+          label={story.parts[2].title.toLowerCase()}
           doneLabel=""
           onDone={() => {}}
           onBack={toGlobe}

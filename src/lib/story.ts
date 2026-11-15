@@ -1,5 +1,6 @@
 import ingenuity from "../../public/models/ingenuity/story.json";
 import opportunity from "../../public/models/opportunity/story.json";
+import surveyor3 from "../../public/models/surveyor3/story.json";
 import type { Checkpoint } from "./checkpoints";
 
 /**
@@ -71,7 +72,7 @@ export type Story = {
   parts: StoryFile["parts"];
   beats: StoryBeat[];
   intro: StoryBeat[];
-  mars: StoryBeat[];
+  mars: StoryBeat[]; // the beats with a 3D stop (on Mars, or on the Moon for Surveyor 3)
   outro: StoryBeat[];
   /** The 3D route of the story: one stop per Mars beat, in order (the first one is where the vehicle starts, the last one where it falls silent). */
   checkpoints: Checkpoint[];
@@ -96,6 +97,7 @@ function build(data: StoryFile): Story {
 const STORIES: Record<string, Story> = {
   opportunity: build(opportunity as unknown as StoryFile),
   ingenuity: build(ingenuity as unknown as StoryFile),
+  "surveyor-3": build(surveyor3 as unknown as StoryFile), // the mission id has a hyphen, the folder public/models/surveyor3 does not
 };
 
 /** The story of a mission, or undefined if it has none (those missions open straight in the 3D scene). */

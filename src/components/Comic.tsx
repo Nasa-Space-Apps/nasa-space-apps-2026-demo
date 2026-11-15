@@ -50,6 +50,7 @@ export default function Comic({
   beats,
   label,
   doneLabel,
+  skipLabel = "skip the comic",
   end,
   onDone,
   onBack,
@@ -63,6 +64,7 @@ export default function Comic({
   beats: StoryBeat[];
   label: string; // part name in the progress pill ("earth")
   doneLabel: string; // the button of the last page ("land on mars")
+  skipLabel?: string; // the top-right button that jumps over the comic ("skip to mars"), shown with `onSkip`
   end?: ReactNode; // an extra last page (the closing card)
   onDone: () => void;
   onBack: () => void;
@@ -196,7 +198,7 @@ export default function Comic({
         </div>
         {onSkip ? (
           <button type="button" className="ui-btn is-ghost" onClick={(e) => (e.currentTarget.blur(), onSkip())}>
-            skip to mars <Icon className="ui-arrow" name="arrow-right" size={16} />
+            {skipLabel} <Icon className="ui-arrow" name="arrow-right" size={16} />
           </button>
         ) : (
           <span style={{ width: 96 }} />

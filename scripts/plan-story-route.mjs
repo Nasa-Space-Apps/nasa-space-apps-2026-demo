@@ -2,7 +2,7 @@
 /**
  * Plans the 3D route of a mission's story: where the vehicle stops (one stop per Mars event) and the waypoints (`via`) between stops, on the mission's
  * terrain. The terrain is a scale model, not a map: the stops follow the line `ANCHORS` of scripts/data/<mission>-story.mjs, spread evenly along it, each
- * snapped to a nearby flat spot; the legs between them come from an A* search over the slope map (cost grows with the square of the slope), so the vehicle
+ * snapped to a nearby flat spot (the optional BOUNDS, FADE, MIN_APART and SNAP_REACH of the data module adapt it to a smaller terrain); the legs between them come from an A* search over the slope map (cost grows with the square of the slope), so the vehicle
  * never climbs a steep wall.
  *
  *   npm run story-route -- <mission> [stops]    prints the plan and writes scripts/data/<mission>-route.json
@@ -22,7 +22,7 @@ if (!mission || mission.startsWith("--")) {
 }
 const D = await import(pathToFileURL(path.join(ROOT, `scripts/data/${mission}-story.mjs`)).href);
 const N = Number(process.argv[3] ?? D.BEATS.filter((b) => b.part === "mars").length);
-const T = loadTerrain(path.join(ROOT, D.TERRAIN), { fade: 45, res: 1 });
+const T = loadTerrain(path.join(ROOT, D.TERRAIN), { fade: D.FADE ?? 45, res: 1 });
 
 // the line the stops follow: first anchor = where the vehicle starts, last = where the story ends
 const OLD = D.ANCHORS;
@@ -40,7 +40,8 @@ const along = (s) => {
 };
 
 /** Flattest spot (lowest mean slope in a 12-unit disc) within `reach` units of a target. */
-function snap([tx, tz], prev, reach = 18) {
+const MIN_APART = D.MIN_APART ?? 70; // stops never closer than this to the previous one
+function snap([tx, tz], prev, reach = D.SNAP_REACH ?? 18) {
   let best = [tx, tz], bestScore = Infinity;
   for (let dz = -reach; dz <= reach; dz += 3)
     for (let dx = -reach; dx <= reach; dx += 3) {
@@ -53,7 +54,7 @@ function snap([tx, tz], prev, reach = 18) {
           c++;
         }
       const apart = prev ? Math.hypot(x - prev[0], z - prev[1]) : Infinity;
-      const score = s / c + Math.hypot(dx, dz) * 0.04 + (apart < 70 ? 100 - apart : 0); // flat first, close to the target second, and never on top of the previous stop
+      const score = s / c + Math.hypot(dx, dz) * 0.04 + (apart < MIN_APART ? 100 - apart : 0); // flat first, close to the target second, and never on top of the previous stop
       if (score < bestScore) { bestScore = score; best = [x, z]; }
     }
   return best.map((v) => Math.round(v));
@@ -67,7 +68,7 @@ for (let k = 0; k < N; k++) {
 }
 
 // A* over a 2-unit grid inside the safe area (the border is flattened and the ground plane starts there)
-const STEP = 2, B = { x0: -320, x1: 320, z0: -222, z1: 222 };
+const STEP = 2, B = D.BOUNDS ?? { x0: -320, x1: 320, z0: -222, z1: 222 }; // the safe area inside the flattened border
 const GX = Math.floor((B.x1 - B.x0) / STEP) + 1, GZ = Math.floor((B.z1 - B.z0) / STEP) + 1;
 const cell = ([x, z]) => [Math.round((x - B.x0) / STEP), Math.round((z - B.z0) / STEP)];
 const world = ([i, j]) => [B.x0 + i * STEP, B.z0 + j * STEP];

@@ -27,6 +27,10 @@ hasta que la tarjeta pasó a dibujar el vehículo procedural. Se conservan como 
 
 `story.json` (los 20 beats: copy, hechos, fuente, ruta 3D), `images/oppNNN.jpg` (20 ilustraciones de IA a 1040 px, 4:5, ≈ 4 MB; originales de 1856×2304 en la carpeta de arte del equipo) y `audio/oppNNN.mp3` + `manifest.json` (narraciones con Bill, ≈ 6,6 MB, ya grabadas). Se generan con `npm run story -- opportunity` y `npm run story-audio -- opportunity`; el detalle está en [story.md](story.md). Además de esto, la carpeta sigue teniendo `opportunity.glb` (referencia de proporciones del vehículo).
 
+## Historia de Surveyor 3 (`public/models/surveyor3/`, hito 42)
+
+`story.json` (20 beats), `images/surNNN.jpg` (20 ilustraciones de IA, 1040 px, 4:5, ≈ 3,9 MB, con `manifest.json` y los prompts de cada una) y `audio/surNNN.mp3` + `manifest.json` (narraciones con Bill, ≈ 6,5 MB). Se generan con `npm run story-images`, `story-route`, `story` y `story-audio` (`-- surveyor3`); ver [story.md](story.md#historia-de-surveyor-3-hito-42).
+
 ## Historia de Ingenuity (`public/models/ingenuity/`, hitos 39–40)
 
 20 ilustraciones de IA (Nano Banana 2.1 en Replicate, 4:5, 1040 px, ≈ 3,7 MB) `ingNNN.jpg` + `manifest.json` con el prompt de cada una; generadas con `npm run story-images -- ingenuity` (ver [story.md](story.md#ilustraciones-de-otras-misiones-ingenuity-hito-39)). Viven en `images/` (la misma ruta que Opportunity; las fotos PIA de referencia que había allí se eliminaron). Junto a `story.json` y `audio/ingNNN.mp3` (20 clips de Bill, ≈ 6,9 MB) forman la historia de Ingenuity: [story.md](story.md#historia-de-ingenuity-hito-40).

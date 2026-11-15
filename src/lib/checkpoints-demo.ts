@@ -1,7 +1,7 @@
 import type { Checkpoint } from "./checkpoints";
 
 /**
- * FICTIONAL stories for the vehicles added to try their 3D models (Spirit, InSight, Beagle 2, Surveyor 3; Ingenuity now has its real story, lib/story.ts): invented places, dates and figures,
+ * FICTIONAL stories for the vehicles added to try their 3D models (Spirit, InSight, Beagle 2; Ingenuity and Surveyor 3 now have their real stories, lib/story.ts): invented places, dates and figures,
  * laid out on the Mars terrains we already have. Every checkpoint is `demo: true`:
  *  - no audio is recorded for them: `audio` points to a clip of ANOTHER checkpoint (placeholder, the subtitle text does not match what is said);
  *  - the voice guide stays silent about them (no `next-` / `remind-` lines exist);
@@ -310,48 +310,6 @@ export const BEAGLE2_CHECKPOINTS: Checkpoint[] = [
       ["Status", "Resting"],
       ["Ending", "Fictional"],
       ["Panels", "All open"],
-    ],
-  },
-];
-
-/**
- * Surveyor 3 (3D model first, its real story is still to come): two PLACEHOLDER stops on the Moon terrain, just enough for the scene to have a route.
- * Text, photos and figures are invented or borrowed (the pictures and clips are those of the SEV story); nothing here is real information.
- */
-export const SURVEYOR3_CHECKPOINTS: Checkpoint[] = [
-  {
-    id: "surveyor3-landing",
-    name: "Placeholder: landing",
-    place: "Placeholder · Fiction",
-    x: 55,
-    z: -60,
-    demo: true,
-    image: "/images/checkpoints/moon-landing.jpg",
-    credit: "Placeholder picture (SEV story)",
-    text: "Placeholder stop: the real story of Surveyor 3 is not written yet. This card only exists so that the 3D scene has a route to drive on.",
-    narration: "Placeholder. The real story of this lander is still to come.",
-    audio: "/narration/landing-zone.mp3",
-    facts: [
-      ["Story", "Placeholder"],
-      ["Ending", "Fictional"],
-    ],
-  },
-  {
-    id: "surveyor3-crater",
-    name: "Placeholder: crater",
-    place: "Placeholder · Fiction",
-    x: -30,
-    z: -30,
-    via: [[0, -20]],
-    demo: true,
-    image: "/images/checkpoints/moon-antares.jpg",
-    credit: "Placeholder picture (SEV story)",
-    text: "Placeholder stop: invented text, borrowed picture. It marks the end of the demo route.",
-    narration: "Placeholder. The real story of this lander is still to come.",
-    audio: "/narration/antares.mp3",
-    facts: [
-      ["Story", "Placeholder"],
-      ["Ending", "Fictional"],
     ],
   },
 ];

@@ -1,0 +1,923 @@
+{
+  "version": 1,
+  "mission": "surveyor3",
+  "name": "Surveyor 3",
+  "language": "en",
+  "title": "Surveyor 3: the robot Apollo came to visit",
+  "note": "Illustrations are AI-generated artwork based on the verified events; every fact and its source come from the research dossiers. Narration is written for short, clear audio (~50 words).",
+  "closing": {
+    "title": "thank you, Surveyor 3",
+    "text": "A robot that tested the ground for Apollo and then received Apollo's visit: still the only probe humans have ever walked up to on another world."
+  },
+  "parts": [
+    {
+      "id": "intro",
+      "title": "Earth",
+      "blurb": "Before the Moon: a plan, three failures, a first landing and a night launch, told as a comic.",
+      "beats": [
+        "sur001",
+        "sur005",
+        "sur008",
+        "sur011",
+        "sur022",
+        "sur027"
+      ]
+    },
+    {
+      "id": "mars",
+      "title": "Moon",
+      "blurb": "Two weeks on the Moon, and the visit that followed: drive the lander from one story to the next.",
+      "beats": [
+        "sur031",
+        "sur032",
+        "sur035",
+        "sur015",
+        "sur038",
+        "sur016",
+        "sur040",
+        "sur045",
+        "sur048",
+        "sur054",
+        "sur055"
+      ]
+    },
+    {
+      "id": "outro",
+      "title": "Legacy",
+      "blurb": "After the visit: what the robot taught us.",
+      "beats": [
+        "sur059",
+        "sur064",
+        "sur066"
+      ]
+    }
+  ],
+  "beats": [
+    {
+      "id": "sur001",
+      "n": 1,
+      "part": "intro",
+      "date": "May 1960",
+      "title": "A plan for the Moon",
+      "summary": "NASA approves Surveyor, a robot to land softly on the Moon, and gives it to JPL. The first plan is far bigger than what will fly.",
+      "narration": "May, 1960. NASA approves Surveyor, a robot that will land softly on the Moon, and gives the job to the Jet Propulsion Laboratory. At first the plan is huge: more than two dozen instruments, and even an orbiter. Then President Kennedy promises people on the Moon, and everything changes.",
+      "facts": [
+        [
+          "Approved",
+          "May 1960"
+        ],
+        [
+          "Managed by",
+          "JPL"
+        ],
+        [
+          "Builder",
+          "Hughes Aircraft"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/lunar-rangers-and-surveyors/"
+        },
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/history/55-years-ago-surveyor-1-makes-a-soft-landing-on-the-moon/"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur001.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur001.mp3"
+    },
+    {
+      "id": "sur005",
+      "n": 2,
+      "part": "intro",
+      "date": "1962",
+      "title": "Three Rangers miss the Moon",
+      "summary": "The three Ranger probes of 1962, built by the same laboratory, all fail. Everyone wonders if a machine can land on the Moon.",
+      "narration": "Nineteen sixty-two. Three Ranger probes, built by the same laboratory, fly toward the Moon. Ranger three misses it. Ranger four fails completely. Ranger five misses too. Now the same team must build Surveyor, and everyone wonders whether a machine can really land on the Moon.",
+      "facts": [
+        [
+          "Probes",
+          "Ranger 3, 4 and 5"
+        ],
+        [
+          "Year",
+          "1962"
+        ],
+        [
+          "Science returned",
+          "None"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/ranger-block-ii-design-rangers-3-4-and-5/"
+        },
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-012A"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur005.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur005.mp3"
+    },
+    {
+      "id": "sur008",
+      "n": 3,
+      "part": "intro",
+      "date": "Late 1962",
+      "title": "A thinner Surveyor",
+      "summary": "The Atlas-Centaur rocket keeps getting heavier and weaker, so Surveyor goes on a diet: about 950 kilograms, with 52 for instruments.",
+      "narration": "Late nineteen sixty-two. Surveyor depends on the Atlas-Centaur, the first rocket to burn liquid hydrogen in its upper stage, and the Centaur keeps getting heavier and weaker. So the lander must go on a diet: about nine hundred fifty kilograms, with only fifty-two for instruments.",
+      "facts": [
+        [
+          "Mass",
+          "~950 kg"
+        ],
+        [
+          "Instruments",
+          "52 kg"
+        ],
+        [
+          "Rocket",
+          "Atlas-Centaur"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "apolloexplorer.co.uk",
+          "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm"
+        },
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/altitude-wind-tunnel-centaur-testing/"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur008.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur008.mp3"
+    },
+    {
+      "id": "sur011",
+      "n": 4,
+      "part": "intro",
+      "date": "Jun 2, 1966",
+      "title": "The first soft landing",
+      "summary": "Surveyor 1 brakes from almost 10,000 km/h to about 5 km/h and sets down in the Ocean of Storms: the first American soft landing on the Moon.",
+      "narration": "June second, 1966. Surveyor One drops from the sky, slowing from almost ten thousand kilometers per hour to about five. Its engines stop three point four meters above the ground, and it settles. It is the first American soft landing on the Moon, in the Ocean of Storms.",
+      "facts": [
+        [
+          "Landing",
+          "2 Jun 1966"
+        ],
+        [
+          "Final speed",
+          "~5 km/h"
+        ],
+        [
+          "Site",
+          "Oceanus Procellarum"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-1/"
+        },
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/missions/surveyor-1/"
+        },
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/history/55-years-ago-surveyor-1-makes-a-soft-landing-on-the-moon/"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur011.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur011.mp3"
+    },
+    {
+      "id": "sur022",
+      "n": 5,
+      "part": "intro",
+      "date": "Apr 17, 1967",
+      "title": "Liftoff at night",
+      "summary": "An Atlas-Centaur rises from Cape Canaveral in the early hours carrying Surveyor 3, which weighs 1,026 kilograms at launch.",
+      "narration": "April seventeenth, 1967. In the dark early hours, an Atlas-Centaur lifts off from launch complex thirty-six B at Cape Canaveral, carrying Surveyor Three. Its upper stage burns liquid hydrogen and liquid oxygen. The lander weighs one thousand twenty-six kilograms now, and will weigh two hundred ninety-six on the Moon.",
+      "facts": [
+        [
+          "Rocket",
+          "Atlas-Centaur AC-12"
+        ],
+        [
+          "Liftoff",
+          "07:05 UT"
+        ],
+        [
+          "Launch mass",
+          "1,026 kg"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-3/"
+        },
+        {
+          "type": "press",
+          "host": "drewexmachina.com",
+          "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur022.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur022.mp3"
+    },
+    {
+      "id": "sur027",
+      "n": 6,
+      "part": "intro",
+      "date": "Apr 17, 1967",
+      "title": "Finding Canopus",
+      "summary": "On the way to the Moon, Surveyor locks onto the Sun and then the star Canopus. For the first time in the program, the star lock works automatically.",
+      "narration": "Later that day, in deep space, Surveyor Three has to know where it is pointing. Its sensors lock onto the Sun, and then, nine hours after launch, onto the star Canopus. For the first time in the whole program, the star lock works by itself.",
+      "facts": [
+        [
+          "Star",
+          "Canopus"
+        ],
+        [
+          "Locked",
+          "9 h 23 min after liftoff"
+        ],
+        [
+          "Guides",
+          "Sun, star, gyros"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "airandspace.si.edu",
+          "url": "https://airandspace.si.edu/collection-objects/sensor-group-flight-control/nasm_A19731145000"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur027.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur027.mp3"
+    },
+    {
+      "id": "sur031",
+      "n": 7,
+      "part": "mars",
+      "date": "Apr 20, 1967",
+      "place": "Oceanus Procellarum",
+      "title": "The radar loses its way",
+      "summary": "Seconds before touchdown the radar loses its link, probably fooled by glittering rocks. The engines do not cut off.",
+      "narration": "April twentieth, 1967. Seconds before touchdown, the radar loses its link, probably confused by glittering, reflective rocks. The guidance falls back to an inertial mode, and that prevents the engines from shutting off. Surveyor Three is still firing, a few meters above the Moon.",
+      "facts": [
+        [
+          "Cause",
+          "Reflective rocks (likely)"
+        ],
+        [
+          "Cutoff planned at",
+          "~4.3 m"
+        ],
+        [
+          "Guidance",
+          "Inertial mode"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-3/"
+        },
+        {
+          "type": "scientific",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/19670023254"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur031.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur031.mp3",
+      "route": {
+        "x": 55,
+        "z": -60
+      }
+    },
+    {
+      "id": "sur032",
+      "n": 8,
+      "part": "mars",
+      "date": "Apr 20, 1967",
+      "place": "Surveyor crater",
+      "title": "Two bounces",
+      "summary": "Surveyor 3 touches down still firing, rises about 10 meters, bounces again to about 3, and comes to rest in a crater when Earth switches the engines off.",
+      "narration": "Surveyor Three touches the Moon with its engines still burning, and rises again, about ten meters. It falls, bounces to about three meters, and finally settles inside a crater, tilted on a slope. About half a minute after the first touch, controllers on Earth command the engines off.",
+      "facts": [
+        [
+          "Touchdowns",
+          "3"
+        ],
+        [
+          "First bounce",
+          "~10 m"
+        ],
+        [
+          "Second bounce",
+          "~3 m"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-3/"
+        },
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/missions/surveyor-3/"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur032.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur032.mp3",
+      "route": {
+        "x": 19,
+        "z": -41
+      }
+    },
+    {
+      "id": "sur035",
+      "n": 9,
+      "part": "mars",
+      "date": "Apr 20, 1967",
+      "place": "Surveyor crater",
+      "title": "The first pictures",
+      "summary": "Less than an hour after landing, the camera starts sending pictures: more than six thousand in all, each one line by line, like a giant fax.",
+      "narration": "Less than an hour after landing, the camera starts to send pictures: more than six thousand in all. Each one travels line by line across almost four hundred thousand kilometers, like a giant fax. The simplest pictures take twenty seconds to arrive. Earth watches the Moon, slowly.",
+      "facts": [
+        [
+          "Pictures",
+          "More than 6,300"
+        ],
+        [
+          "Lenses",
+          "25 and 100 mm"
+        ],
+        [
+          "Lines",
+          "200 or 600"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-3/"
+        },
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "scientific",
+          "host": "airandspace.si.edu",
+          "url": "https://airandspace.si.edu/collection-objects/camera-television-surveyor/nasm_A19800163000"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur035.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur035.mp3",
+      "route": {
+        "x": -28,
+        "z": -23,
+        "via": [
+          [
+            2,
+            -19
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sur015",
+      "n": 10,
+      "part": "mars",
+      "date": "Apr 1967",
+      "place": "Surveyor crater",
+      "title": "A scoop on an arm",
+      "summary": "Surveyor 3 is the first of its series with a digging arm: a scissor-like pantograph with a 12-centimeter scoop, in place of an approach camera.",
+      "narration": "Surveyor Three is the first in its series with a digging arm. A scissor-like pantograph reaches about one and a half meters, with a scoop twelve centimeters long. It replaces the approach camera of earlier flights. Its job is to touch the Moon, so Apollo will know what its feet will land on.",
+      "facts": [
+        [
+          "Reach",
+          "~1.5 m"
+        ],
+        [
+          "Scoop",
+          "12 × 5 cm"
+        ],
+        [
+          "Builder",
+          "Hughes Aircraft"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/19690074497"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur015.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur015.mp3",
+      "route": {
+        "x": 3,
+        "z": 4
+      }
+    },
+    {
+      "id": "sur038",
+      "n": 11,
+      "part": "mars",
+      "date": "Apr 22, 1967",
+      "place": "Surveyor crater",
+      "title": "The first dig",
+      "summary": "Two days after landing, commands from Earth bring the scoop to life: trenches up to 18 centimeters deep, 18 hours and 22 minutes of work.",
+      "narration": "About April twenty-second, 1967. Two days after landing, commands from Earth bring the scoop to life. It digs trenches up to eighteen centimeters deep, lifts soil up to the camera, and tests the ground with the arm. In total, it works for eighteen hours and twenty-two minutes.",
+      "facts": [
+        [
+          "Date",
+          "~22 Apr 1967"
+        ],
+        [
+          "Trench depth",
+          "Up to 18 cm"
+        ],
+        [
+          "Working time",
+          "18 h 22 min"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-3/"
+        },
+        {
+          "type": "official",
+          "host": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/missions/surveyor-3/"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur038.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur038.mp3",
+      "route": {
+        "x": 41,
+        "z": 40
+      }
+    },
+    {
+      "id": "sur016",
+      "n": 12,
+      "part": "mars",
+      "date": "Apr 1967",
+      "place": "Surveyor crater",
+      "title": "Firm as wet sand",
+      "summary": "The tests give scientists their answer: the lunar soil is firm, like wet sand, and strong enough to carry an Apollo lunar module.",
+      "narration": "April, 1967. The tests give scientists the answer they wanted. The lunar soil is firm, like wet sand, and can bear about ten pounds per square inch. That is enough to hold up an Apollo lunar module. The Moon will not swallow the astronauts' lander.",
+      "facts": [
+        [
+          "Soil",
+          "Like wet sand"
+        ],
+        [
+          "Strength",
+          "~10 psi (98 kPa)"
+        ],
+        [
+          "Verdict",
+          "Safe for Apollo"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-3/"
+        },
+        {
+          "type": "official",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/19690074497"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur016.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur016.mp3",
+      "route": {
+        "x": 60,
+        "z": 44
+      }
+    },
+    {
+      "id": "sur040",
+      "n": 13,
+      "part": "mars",
+      "date": "Apr 24, 1967",
+      "place": "Surveyor crater",
+      "title": "The Sun hidden by the Earth",
+      "summary": "The Earth slides in front of the Sun: an eclipse seen from the Moon, photographed for the first time from its surface by the tilted camera.",
+      "narration": "April twenty-fourth, 1967. The Earth slides in front of the Sun. From the Moon, it is an eclipse of the Sun, and Surveyor's tilted camera can look up at it. These are the first photographs of a solar eclipse taken from the surface of the Moon. The total phase lasts seventy-seven minutes.",
+      "facts": [
+        [
+          "Total phase",
+          "77 min 56 s"
+        ],
+        [
+          "Partial phase",
+          "202 min 46 s"
+        ],
+        [
+          "First",
+          "Eclipse photos from the Moon"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/19670023257"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur040.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur040.mp3",
+      "route": {
+        "x": 11,
+        "z": 26
+      }
+    },
+    {
+      "id": "sur045",
+      "n": 14,
+      "part": "mars",
+      "date": "May 4, 1967",
+      "place": "Surveyor crater",
+      "title": "The night that never ended",
+      "summary": "The Sun sets and the solar panel stops making power. The last data arrive on May 4. The two-week night is too cold, and Surveyor 3 never wakes up.",
+      "narration": "May, 1967. The Sun sets, and the solar panel stops making power. A last command puts the lander in its best position to survive, and its final data arrive on May fourth. But the lunar night lasts about two weeks, and the cold is too much. Surveyor Three never wakes up.",
+      "facts": [
+        [
+          "Last data",
+          "4 May 1967"
+        ],
+        [
+          "Lunar night",
+          "~336 hours"
+        ],
+        [
+          "Status",
+          "Never reactivated"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-3/"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur045.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur045.mp3",
+      "route": {
+        "x": -48,
+        "z": 17
+      }
+    },
+    {
+      "id": "sur048",
+      "n": 15,
+      "part": "mars",
+      "date": "Jul 25, 1969",
+      "place": "Site 7",
+      "title": "Aim at Surveyor",
+      "summary": "NASA planners want Apollo 12 to land beside Surveyor 3. Two site committees object, but the program director decides: the old robot is the target.",
+      "narration": "July twenty-fifth, 1969. NASA planners want Apollo Twelve to land next to Surveyor Three, so astronauts can bring parts home. Two site committees oppose it. The Apollo program director decides anyway: the crater with the old robot will be the target.",
+      "facts": [
+        [
+          "Decision",
+          "25 Jul 1969"
+        ],
+        [
+          "Site",
+          "Site 7"
+        ],
+        [
+          "Goal",
+          "Bring parts back"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/19760072997"
+        },
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/mission/apollo-12/"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur048.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur048.mp3",
+      "route": {
+        "x": -88,
+        "z": 19
+      }
+    },
+    {
+      "id": "sur054",
+      "n": 16,
+      "part": "mars",
+      "date": "Nov 19, 1969",
+      "place": "Surveyor crater",
+      "title": "Landing by the old robot",
+      "summary": "An astronomer had located Surveyor 3 from old pictures. Apollo 12's lunar module comes in through blowing dust, and the commander spots the lander.",
+      "narration": "November nineteenth, 1969. An astronomer, Ewen Whitaker, had pinpointed Surveyor Three from old pictures, and now the Apollo Twelve lunar module, Intrepid, comes in through blowing dust. The commander spots the lander on the crater's rim. It is the first precision landing on another world.",
+      "facts": [
+        [
+          "Landing",
+          "19 Nov 1969"
+        ],
+        [
+          "Distance",
+          "~155 m"
+        ],
+        [
+          "First",
+          "Precision landing"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/humans-in-space/lunar-encore-leads-to-first-precision-extraterrestrial-landing"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/surveyor-3/"
+        },
+        {
+          "type": "official",
+          "host": "svs.gsfc.nasa.gov",
+          "url": "https://svs.gsfc.nasa.gov/4767"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur054.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur054.mp3",
+      "route": {
+        "x": -49,
+        "z": 55
+      }
+    },
+    {
+      "id": "sur055",
+      "n": 17,
+      "part": "mars",
+      "date": "Nov 20, 1969",
+      "place": "Surveyor crater",
+      "title": "Parts for Earth",
+      "summary": "Pete Conrad and Alan Bean spend 33 minutes at Surveyor 3 and cut off its camera, cable, tubing and scoop: about 10 kilograms in all.",
+      "narration": "November twentieth, 1969. Pete Conrad and Alan Bean spend thirty-three minutes at Surveyor Three. With bolt cutters, they remove the television camera, some cable, a piece of tubing and, as a bonus, the scoop. About ten kilograms of the old robot ride home.",
+      "facts": [
+        [
+          "Visit",
+          "33 min"
+        ],
+        [
+          "Parts",
+          "~10 kg"
+        ],
+        [
+          "Date",
+          "20 Nov 1969"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/apollo-12-and-surveyor-3/"
+        },
+        {
+          "type": "scientific",
+          "host": "drewexmachina.com",
+          "url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur055.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur055.mp3",
+      "route": {
+        "x": -35,
+        "z": 100
+      }
+    },
+    {
+      "id": "sur059",
+      "n": 18,
+      "part": "outro",
+      "date": "1970–2011",
+      "title": "A microbe on the Moon?",
+      "summary": "In 1970 a bacterium is found in the camera's foam, and some wonder if it survived on the Moon. In 2011 the claim is refuted: it was probably contamination on Earth.",
+      "narration": "In nineteen seventy, scientists find a bacterium, Streptococcus mitis, in the foam of the returned camera, and some wonder if it survived on the Moon. But the camera was never sterilized before launch. In twenty eleven, new analysis refutes the claim: the contamination likely happened on Earth.",
+      "facts": [
+        [
+          "Bacterium",
+          "S. mitis"
+        ],
+        [
+          "Found",
+          "1970"
+        ],
+        [
+          "Refuted",
+          "2011"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "scientific",
+          "host": "lpi.usra.edu",
+          "url": "https://www.lpi.usra.edu/meetings/sssr2011/pdf/5023.pdf"
+        },
+        {
+          "type": "press",
+          "host": "space.com",
+          "url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur059.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur059.mp3"
+    },
+    {
+      "id": "sur064",
+      "n": 19,
+      "part": "outro",
+      "date": "1972",
+      "title": "A tough little camera",
+      "summary": "The camera spent 947 days on the Moon through 32 lunar nights. In 1972 engineers find it nearly all working, with only its white surfaces turned tan.",
+      "narration": "The returned camera had spent nine hundred forty-seven days on the Moon, through thirty-two lunar nights colder than minus one hundred thirty degrees Celsius. Engineers find most of it still working, with only its white surfaces turned tan from dust and radiation. In nineteen seventy-two, they call the analysis a success.",
+      "facts": [
+        [
+          "Time on the Moon",
+          "947 days"
+        ],
+        [
+          "Lunar nights",
+          "32"
+        ],
+        [
+          "Verdict",
+          "Nearly all working"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/19710024418"
+        },
+        {
+          "type": "scientific",
+          "host": "nature.com",
+          "url": "https://www.nature.com/articles/234210b0"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur064.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur064.mp3"
+    },
+    {
+      "id": "sur066",
+      "n": 20,
+      "part": "outro",
+      "date": "Sep 2009",
+      "title": "Seen from orbit",
+      "summary": "The Lunar Reconnaissance Orbiter photographs the site: Surveyor 3, the Apollo 12 descent stage and the trails of footprints, still there 40 years later.",
+      "narration": "September, 2009. The Lunar Reconnaissance Orbiter photographs the old landing site from above. In one crater: Surveyor Three, the Apollo lunar module's descent stage, the science station, and the faint trails of footprints, still there forty years later. Surveyor Three remains the only probe ever visited by humans.",
+      "facts": [
+        [
+          "Orbiter",
+          "LRO"
+        ],
+        [
+          "Image width",
+          "824 m"
+        ],
+        [
+          "Seen",
+          "Footprints still visible"
+        ]
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "host": "nasa.gov",
+          "url": "https://www.nasa.gov/missions/lunar-reconnaissance-orbiter-looks-at-apollo-12-surveyor-3-landing-sites/"
+        },
+        {
+          "type": "official",
+          "host": "science.nasa.gov",
+          "url": "https://science.nasa.gov/photojournal/first-look-apollo-12-and-surveyor-3/"
+        },
+        {
+          "type": "scientific",
+          "host": "lroc.im-ldi.com",
+          "url": "https://lroc.im-ldi.com/images/141"
+        }
+      ],
+      "image": "/models/surveyor3/images/sur066.jpg",
+      "imageRatio": "4 / 5",
+      "audio": "/models/surveyor3/audio/sur066.mp3"
+    }
+  ]
+}

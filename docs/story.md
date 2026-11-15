@@ -128,6 +128,16 @@ Mismo flujo que Opportunity —cómic de 5 páginas → 3D con 13 paradas → c�
 - **Audio:** 20 clips grabados con Bill / `eleven_v4` (5 774 caracteres, 2 311 créditos), a petición del usuario.
 - **Retirado:** los checkpoints ficticios `INGENUITY_CHECKPOINTS` de `checkpoints-demo.ts` y sus 4 fotos `public/images/checkpoints/mars-ingenuity-*.jpg`; las 4 fotos PIA de `public/models/ingenuity/images` se sustituyeron por las ilustraciones (ahora todas las misiones guardan las imágenes de su historia en `public/models/<misión>/images`).
 
+## Historia de Surveyor 3 (hito 42)
+
+El mismo flujo, en la **Luna** (`/moon/surveyor-3`; el id de la misión lleva guion, la carpeta es `public/models/surveyor3/`): cómic de **6** páginas → 3D con **11** paradas → cómic de **3** páginas + tarjeta «thank you, Surveyor 3».
+
+- **Datos:** `scripts/data/surveyor3-story.mjs`. Tierra (6): el plan de 1960, los Ranger de 1962, el rediseño de peso, Surveyor 1, el despegue y Canopus. Luna (11): del fallo del radar y los dos rebotes a la primera excavación, el eclipse, la noche final, la decisión del Apollo 12 y la visita de Conrad y Bean. Legado (3): la bacteria de la cámara, el análisis de 1972 y la foto del LRO. Cifras en disputa evitadas o redondeadas (imágenes de TV 6 315/6 326 → «más de 6 300», pruebas de carga 4/7, alcance del brazo 1,5/1,63 m, distancia al módulo del Apollo 12 155/163/180 m). Narraciones de 41–53 palabras.
+- **3D:** terreno de la Luna (`moon-terrain.stl`, 256 × 256 u, el mismo de SEV). Es más pequeño que los de Marte, así que el planificador acepta ajustes por misión en el módulo de datos (`BOUNDS`, `FADE`, `MIN_APART`, `SNAP_REACH`); paradas de 21–66 u, pendiente máxima del recorrido 25°. Radio de activación 14.
+- **Interfaz:** `Journey`/`Comic` ya no dicen «mars» a mano: el botón sale del título de la parte 2 del `story.json` («skip to moon», «land on moon»).
+- **Audio:** 20 clips con Bill / `eleven_v4` (5 618 caracteres, 2 247 créditos), a petición del usuario.
+- Se retiraron las 2 paradas de relleno (`SURVEYOR3_CHECKPOINTS`) del hito 41.
+
 ## Pendiente
 
 - **Revisar las 20 narraciones de oído** (voz Bill; si alguna no convence, edita su texto y vuelve a `npm run story-audio`).

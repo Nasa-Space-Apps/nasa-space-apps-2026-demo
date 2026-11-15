@@ -1,7 +1,7 @@
 import { THEME } from "./themes";
 import type { TerrainStyle } from "./terrain";
 import { PERSEVERANCE_CHECKPOINTS, SEV_CHECKPOINTS, type Checkpoint } from "./checkpoints";
-import { BEAGLE2_CHECKPOINTS, INSIGHT_CHECKPOINTS, SPIRIT_CHECKPOINTS, SURVEYOR3_CHECKPOINTS } from "./checkpoints-demo";
+import { BEAGLE2_CHECKPOINTS, INSIGHT_CHECKPOINTS, SPIRIT_CHECKPOINTS } from "./checkpoints-demo";
 import { storyOf } from "./story";
 import type { VehicleModel, VehiclePalette } from "./vehicles";
 
@@ -78,10 +78,10 @@ export const MISSIONS: Mission[] = [
     checkpointRadius: 15, // 13 stops 36–130 u apart
   },
   {
-    // 3D model first: placeholder route and text (lib/checkpoints-demo.ts), the real story comes later. Drives on the same Moon terrain as the SEV.
+    // The real story (public/models/surveyor3/story.json, lib/story.ts); drives on the same Moon terrain as the SEV.
     id: "surveyor-3",
-    name: "Surveyor 3 · Moon (demo)",
-    title: "Surveyor 3 · Oceanus Procellarum (demo)",
+    name: "Surveyor 3 · Moon",
+    title: "Surveyor 3 · Oceanus Procellarum",
     terrainUrl: "/models/moon-terrain.stl",
     terrain: MOON_TERRAIN,
     rover: {
@@ -99,8 +99,8 @@ export const MISSIONS: Mission[] = [
     },
     dust: { color: "#E9E2F8", drag: 0.5, lift: -4, up: 0.8, life: 0.8, size: 0.75, alpha: 0.55 },
     tracks: { color: "#4B4660", opacity: 0.35 },
-    checkpoints: SURVEYOR3_CHECKPOINTS,
-    checkpointRadius: 14,
+    checkpoints: storyOf("surveyor-3")!.checkpoints, // 11 stops on the Moon; the 6 events before the landing are comic pages
+    checkpointRadius: 14, // 11 stops ~40–60 u apart
   },
   {
     id: "sev",

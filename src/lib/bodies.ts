@@ -150,14 +150,14 @@ export const BODIES: Body[] = [
         place: "Surveyor crater · Oceanus Procellarum",
         lat: -3.016,
         lon: -23.418,
-        tag: "Visited by Apollo 12 · demo",
+        tag: "Visited by Apollo 12",
         status:
-          "Shut down at the first lunar night, on May 3, 1967, and never woke up again. Apollo 12 landed next to it in November 1969 and took its camera home. Demo vehicle: the real lander never moved; this one rolls on three wheels.",
+          "Went silent at its first lunar sunset, in early May 1967, and never woke up. Apollo 12 landed next to it in November 1969 and took its camera home. In the 3D view it rolls on three wheels: the real lander never moved.",
         facts: [
           ["Landed", "Apr 20, 1967"],
           ["Visited", "Nov 19, 1969"],
-          ["TV images", "6,315"],
-          ["Ending", "Placeholder"],
+          ["TV images", "6,300+"],
+          ["Silent since", "May 1967"],
         ],
       },
     ],

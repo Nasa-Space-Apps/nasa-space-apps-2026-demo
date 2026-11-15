@@ -324,6 +324,10 @@ El usuario pidió **adelantar el modelo 3D** de Surveyor 3 (la información de l
 - **Placeholders:** `SURVEYOR3_CHECKPOINTS` (`checkpoints-demo.ts`, `demo: true`): 2 paradas con texto inventado y fotos/clips tomados de la historia de SEV, solo para que la escena tenga ruta. **No se grabó audio.** Cuando llegue la información real: sustituirlas (receta en [themes-and-missions.md](themes-and-missions.md)), quitar «(demo)» del nombre y de `bodies.ts`.
 - Verificado en el navegador: la escena 3D (modelo, selector de vehículo, tarjeta, minimapa) y que el marcador aparece en el globo. **Sin probar:** la tarjeta del globo (gira solo y no se pudo pinchar con fiabilidad), conducir las dos paradas y ver el modelo de frente/de atrás. `tsc` y `lint` limpios.
 
+### 42. La historia de Surveyor 3 (cómic, 3D en la Luna, epílogo, audio)
+Con las 20 ilustraciones ya hechas, el usuario pidió **implementar todo el storytelling** como en Opportunity e Ingenuity: tarjetas, checkpoints en el 3D, audios. Hecho: `scripts/data/surveyor3-story.mjs` (20 eventos: 6 antes de la Luna, 11 en el 3D, 3 de legado), `public/models/surveyor3/story.json` (con fuentes de los dossiers), 11 paradas planificadas sobre el terreno lunar (`npm run story-route -- surveyor3`, con los nuevos ajustes opcionales del planificador) y 20 clips de narración. `lib/story.ts` registra la historia como `surveyor-3`; `missions.ts` usa sus checkpoints (se quitaron los de relleno) y `bodies.ts` pasó a hechos reales (sin «demo»). `Journey`/`Comic` ganaron etiquetas genéricas (`skipLabel`, el lugar sale del `story.json`).
+- Verificado en el navegador: cómic de 6 páginas («skip to moon»), 3D con la primera parada, tarjeta con 3 fuentes, subtítulos de la narración y minimapa de 11 paradas, «skip the 3D» y la tarjeta final. `tsc` y `lint` limpios. **Sin probar:** conducir las 11 paradas (hay un tramo de solo 21 u entre dos radios de 14) ni escuchar los 20 clips.
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |
