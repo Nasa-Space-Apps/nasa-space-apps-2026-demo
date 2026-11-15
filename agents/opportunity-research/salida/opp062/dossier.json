@@ -1,0 +1,144 @@
+{
+  "evento_id": "opp062",
+  "titulo": "Opportunity completa una distancia de maratón y explora Marathon Valley (2015-2016)",
+  "contexto_ampliado": "El 24 de marzo de 2015, en el sol 3968 de su misión, el rover Opportunity completó un hito sin precedentes: superar la distancia de un maratón olímpico sobre la superficie de otro mundo. Un avance de apenas 153 pies (46,5 metros) ese día fue suficiente para que su odómetro alcanzara las 26,221 millas (42,198 kilómetros), rebasando así las 26,219 millas (42,195 kilómetros) que mide un maratón olímpico. La NASA lo anunció al día siguiente, el 25 de marzo de 2015, calificándolo como «la primera empresa humana en superar la distancia de un maratón viajando sobre otro mundo».\n\nEl mapa oficial del recorrido, publicado por la NASA, muestra una línea dorada que parte del sitio de aterrizaje dentro del cráter Eagle y traza el zigzagueante camino de Opportunity hasta su posición tras la conducción del sol 3968. Ese trayecto terminaba en las cercanías del cráter Endeavour, un cráter enorme de unos 22 kilómetros de diámetro cuyo borde occidental la misión venía explorando desde agosto de 2011.\n\nEn julio de 2015, apenas cuatro meses después de cruzar la marca del maratón, Opportunity entró en Marathon Valley. Este valle, que corta el borde occidental del cráter Endeavour de oeste a este a lo largo de unos 330 metros (aproximadamente tres campos de fútbol americano), era un objetivo científico de gran interés. El espectrómetro CRISM, a bordo del orbitador MRO, había detectado allí las firmas más intensas de minerales de arcilla de todo el borde occidental de Endeavour. Estos minerales se forman en presencia de agua, lo que los convierte en pistas valiosas sobre un posible pasado húmedo de Marte.\n\nDurante la exploración de Marathon Valley, Opportunity tuvo que enfrentar un problema técnico significativo: su memoria flash se volvió inestable. El equipo de ingenieros decidió operar el rover exclusivamente en modo RAM, lo que implicaba que toda la información debía ser transmitida antes de que el rover se apagara, ya que la memoria RAM se borra al perder energía. A pesar de esta limitación, la exploración científica del valle continuó.\n\nEl 10 de marzo de 2016, mientras se acercaba a un objetivo cerca de la cresta del cráter Knudsen dentro de Marathon Valley, Opportunity condujo con una inclinación de 32 grados en su chasis, estableciendo un nuevo récord como la pendiente más pronunciada recorrida por cualquier rover en Marte.\n\nFinalmente, en septiembre de 2016, Opportunity abandonó Marathon Valley dirigiéndose al sur a través del paso llamado «Lewis and Clark Gap», rumbo a su siguiente destino: Bitterroot Valley. El valle que le había dado fama deportiva al rover quedaba atrás tras más de un año de intensa exploración científica.",
+  "datos_reales": [
+    {
+      "afirmacion": "El 24 de marzo de 2015 (Sol 3968), un avance de 153 pies (46,5 m) llevó el odómetro de Opportunity a 26,221 millas (42,198 km).",
+      "fuente_url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/",
+      "cita": "A drive of 153 feet (46.5 meters) on Sol 3968 brought Opportunity's total odometry to 26.221 miles (42.198 kilometers).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La distancia oficial de un maratón olímpico es 26,219 millas (42,195 km).",
+      "fuente_url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/",
+      "cita": "Olympic marathon distance is 26.219 miles (42.195 kilometers).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity fue la primera empresa humana en superar la distancia de un maratón sobre otro mundo.",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "cita": "First human enterprise to exceed marathon distance of travel on another world",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity entró en Marathon Valley en julio de 2015.",
+      "fuente_url": "https://www.nasa.gov/image-article/from-marathon-valley-gully-endeavour-rim/",
+      "cita": "Opportunity entered the northern end of the mapped area in January 2015 and entered Marathon Valley in July 2015.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity abandonó Marathon Valley en septiembre de 2016, dirigiéndose al sur a través del paso 'Lewis and Clark Gap' hacia Bitterroot Valley.",
+      "fuente_url": "https://www.nasa.gov/image-article/from-marathon-valley-gully-endeavour-rim/",
+      "cita": "Opportunity departed Marathon Valley in September 2016 by driving southward through 'Lewis and Clark Gap' into 'Bitterroot Valley.'",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Marathon Valley se extiende de oeste a este aproximadamente 330 metros (1100 pies), como tres campos de fútbol americano, en el borde occidental del cráter Endeavour.",
+      "fuente_url": "https://www.planetary.org/articles/07-mer-update-opportunity-enters-marathon-valley",
+      "cita": "From high overhead, Marathon Valley looks like a notch in the Cape Tribulation segment of Endeavour Crater's eroded western rim. It stretches generally west to east for some 330 meters (1100 feet), the length of three American football fields, into the big crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El espectrómetro CRISM en el orbitador MRO detectó en Marathon Valley las firmas más intensas de filosilicatos de todo el borde occidental del cráter Endeavour.",
+      "fuente_url": "https://www.planetary.org/articles/07-mer-update-opportunity-enters-marathon-valley",
+      "cita": "CRISM has picked up the strongest signatures in the whole of Endeavour's western rim, indicating the presence of different kinds of clay minerals there, just waiting for Opportunity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante la exploración de Marathon Valley, Opportunity operó en modo RAM exclusivo debido a problemas con su memoria flash.",
+      "fuente_url": "https://www.planetary.org/articles/07-mer-update-opportunity-enters-marathon-valley",
+      "cita": "Opportunity continues to operate in RAM-only mode while a team of current and former MER engineers investigates the rover's errant flash storage system or long-term memory.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El 10 de marzo de 2016, Opportunity inclinó su chasis 32 grados, batiendo el récord de la pendiente más pronunciada recorrida por cualquier rover en Marte.",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "cita": "On March 10, 2016, while making its closest approach to a target near the crest of Knudsen crater, it drove at a tilt of 32 degrees, breaking the record for the steepest slope driven by any rover on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El mapa del recorrido completo de Opportunity muestra la ruta desde el sitio de aterrizaje dentro del cráter Eagle hasta su posición tras la conducción del Sol 3968.",
+      "fuente_url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/",
+      "cita": "The gold line on this image shows Opportunity's route from the landing site inside Eagle Crater, in upper left, to its location after the Sol 3968 drive.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA anunció el maratón el 25 de marzo de 2015 indicando que Opportunity había recorrido 26,219 millas.",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "cita": "On March 25, 2015, NASA announced that having traveled 26.219 miles (42.195 kilometers), Opportunity had become 'the first human enterprise to exceed marathon distance of travel on another world.'",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cráter Endeavour tiene unos 22 kilómetros de diámetro y la misión lo exploraba desde agosto de 2011.",
+      "fuente_url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/",
+      "cita": "The mission has been investigating on the western rim of Endeavour Crater since August 2011. This crater spans about 14 miles (22 kilometers) in diameter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Opportunity Rover's Full Marathon-Length Traverse",
+      "url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/",
+      "editor": "NASA Science / JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Opportunity Rover Surpasses Marathon Distance (Photojournal)",
+      "url": "https://science.nasa.gov/photojournal/opportunity-rover-surpasses-marathon-distance/",
+      "editor": "NASA Science / JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Exploration Rover Opportunity - Mission Overview",
+      "url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "From 'Marathon Valley' to Gully on Endeavour Rim",
+      "url": "https://www.nasa.gov/image-article/from-marathon-valley-gully-endeavour-rim/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Exploration Rovers Update: Opportunity Enters Marathon Valley, Begins Walkabout",
+      "url": "https://www.planetary.org/articles/07-mer-update-opportunity-enters-marathon-valley",
+      "editor": "The Planetary Society",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "El valor del odómetro al cruzar el maratón varía según el enfoque de la fuente: science.nasa.gov/resource indica que Opportunity alcanzó exactamente 26,221 millas (42,198 km) tras la conducción del Sol 3968 (https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/), mientras que science.nasa.gov/photojournal y science.nasa.gov/mission describen el hito como superar '26,219 millas (42,195 km)' —que es la distancia estándar de un maratón olímpico— (https://science.nasa.gov/photojournal/opportunity-rover-surpasses-marathon-distance/ y https://science.nasa.gov/mission/mer-opportunity/). Ambas cifras son internamente consistentes (26,219 mi es el umbral del maratón; 26,221 mi es el total exacto que marcó el odómetro), pero un lector podría confundirlas.",
+    "La fecha del anuncio: el Sol 3968 corresponde al 24 de marzo de 2015 según el mapa de ruta de NASA Science (https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse/), pero la ficha de misión indica que NASA lo anunció oficialmente el 25 de marzo de 2015 (https://science.nasa.gov/mission/mer-opportunity/). Es probable que la diferencia se deba a que el avance ocurrió el 24 (hora marciana) y el anuncio se hizo el 25 (hora terrestre).",
+    "El evento original describe a Opportunity como 'el primer rover en lograrlo en otro mundo', mientras que las fuentes NASA (dato [2], https://science.nasa.gov/mission/mer-opportunity/ y dato [10]) usan la expresión 'first human enterprise to exceed marathon distance of travel on another world' (primera empresa humana). La diferencia es sutil pero significativa: 'empresa humana' es un término más amplio que 'rover' y podría incluir cualquier artefacto enviado por humanos."
+  ],
+  "huecos": [
+    "No se pudo confirmar con fuentes oficiales leídas qué minerales específicos encontró Opportunity al analizar las rocas de Marathon Valley con sus instrumentos in situ (APXS, Mössbauer, etc.).",
+    "No se pudo verificar en qué sol o fecha exacta finalizó la exploración científica del lado sur de Marathon Valley durante el invierno 2015-2016.",
+    "No se encontró en las fuentes leídas una descripción detallada de los resultados científicos publicados sobre los filosilicatos encontrados en Marathon Valley (artículos peer-reviewed).",
+    "La afirmación del evento de que las rocas de Marathon Valley tienen 'composición distinta a las vistas por ambos rovers' no fue confirmada verbatim en ninguna fuente oficial; solo se encontró la indicación de Steve Squyres de que visualmente no se parecen a las rocas de la Formación Matijevic (fuente comunitaria: Planetary Society).",
+    "El evento original menciona que Opportunity aterrizó con 'una misión diseñada para solo 90 días marcianos' en enero de 2004; ninguna de las fuentes citadas en el dossier respalda estos datos específicos (cráter Eagle sí aparece en dato [9], pero no la fecha de aterrizaje ni la duración prevista de la misión).",
+    "El relato del borrador afirmaba que Opportunity transmitía datos al orbitador Mars Odyssey cada noche antes de apagarse durante el modo RAM; ninguna cita del dossier menciona a Mars Odyssey ni describe ese procedimiento operativo."
+  ],
+  "ideas_visuales": [
+    "Mapa con la línea dorada del recorrido completo de Opportunity desde el cráter Eagle hasta su posición en el sol 3968, mostrando los más de 42 km de trayecto (basado en dato [9]).",
+    "Vista aérea de Marathon Valley como una muesca de 330 metros en el borde occidental del cráter Endeavour, con indicación de la orientación oeste-este (basado en dato [5]).",
+    "Infografía comparativa: la distancia del maratón olímpico (26,219 mi / 42,195 km) frente al odómetro final de Opportunity ese día (26,221 mi / 42,198 km), con silueta del rover cruzando una línea de meta (basado en datos [0] y [1]).",
+    "Diagrama del rover Opportunity inclinado a 32 grados sobre la pendiente cerca del cráter Knudsen, con indicador del ángulo récord (basado en dato [8]).",
+    "Esquema de la ruta de salida de Marathon Valley: el rover avanzando hacia el sur por el paso 'Lewis and Clark Gap' en dirección a Bitterroot Valley (basado en dato [4])."
+  ],
+  "datos_no_verificados": []
+}
