@@ -1,0 +1,195 @@
+{
+  "evento_id": "opp021",
+  "titulo": "La NASA anuncia que las rocas de Meridiani Planum estuvieron empapadas en agua líquida (2 de marzo de 2004)",
+  "contexto_ampliado": "El 24 de enero de 2004, el rover Opportunity aterrizó en Meridiani Planum, una vasta llanura marciana del tamaño del estado de Oklahoma donde un instrumento orbital había detectado hematita desde el espacio. Por pura casualidad, el rover acabó dentro de un pequeño cráter —más tarde llamado Eagle— que tenía justo al lado un afloramiento de roca estratificada al descubierto. Steve Squyres, investigador principal de la misión y profesor de la Universidad de Cornell, lo vio en las primeras imágenes a las 2 de la mañana en el auditorio Von Karman del JPL y dijo: \"Este es el primer afloramiento jamás encontrado en Marte.\"\n\nDurante las semanas siguientes, el equipo científico atacó la roca, bautizada \"El Capitan\", con todos los instrumentos disponibles. La Herramienta de Abrasión de Rocas (RAT) raspó la superficie el 24 de febrero en un punto llamado \"McKittrick Middle Rat\", penetrando unos 4 milímetros para exponer roca fresca. Después, el espectrómetro de partículas alfa y rayos X (APXS) y el espectrómetro Mössbauer —ambos fabricados en Alemania— se colocaron dentro del agujero para analizar la composición química y mineralógica.\n\nEl APXS detectó una concentración altísima de azufre; en algunas zonas de El Capitan la concentración total de sales podía alcanzar el 40 %. Según Benton Clark, de Lockheed Martin Space Systems, se trataba de sales de sulfato de magnesio, hierro y otros elementos, junto con trazas de cloro y bromo. Pero la pieza clave la aportó el espectrómetro Mössbauer: identificó jarosita, un sulfato de hierro hidratado que solo puede formarse en presencia de agua —concretamente, en un entorno de agua ácida, como un lago ácido o un manantial hidrotermal.\n\nLas pruebas no eran únicamente químicas. La roca mostraba tres tipos de evidencias físicas: primero, unas cavidades alargadas de aproximadamente un centímetro —llamadas \"vugs\"— que en la Tierra se forman cuando los cristales de sal crecen dentro de una roca empapada en agua salina y luego se disuelven; segundo, esferas del tamaño de canicas, apodadas \"arándanos\" (blueberries), distribuidas uniformemente por toda la roca como pasas en un bizcocho, que el equipo concluyó que eran concreciones formadas cuando minerales precipitan de agua dentro de una roca porosa; y tercero, en una roca cercana llamada \"Last Chance\", capas de sedimento inclinadas en ángulos distintos que sugerían estratificación cruzada producida por agua en movimiento.\n\nEl último paquete de datos del espectrómetro Mössbauer llegó el viernes 27 de febrero. Esa misma jornada, los responsables de la NASA comenzaron a organizar una conferencia de prensa urgente. El 2 de marzo de 2004, en la sede central de la NASA en Washington D.C., Squyres anunció el hallazgo: \"Las rocas aquí estuvieron empapadas en agua líquida. Cambió su textura y cambió su química.\" James Garvin, científico jefe de la NASA para la exploración de Marte, añadió que la misión había sido lanzada precisamente para comprobar si algún lugar de Marte había tenido alguna vez un ambiente persistentemente húmedo que pudiera haber albergado vida, y que ese día tenían la respuesta afirmativa.\n\nSin embargo, el equipo fue claro sobre lo que aún no podían responder: no sabían cuándo existió el agua, durante cuánto tiempo ni si era agua superficial o subterránea. Dos escenarios distintos podían explicar los hallazgos —cenizas volcánicas alteradas por agua subterránea, o bien un antiguo mar salado cuya evaporación precipitó los minerales—, y resolverlo requeriría más exploraciones o, idealmente, traer muestras de roca marciana a laboratorios terrestres. La jarosita, un mineral descubierto en 1852 en el barranco de Jaroso (España) y casi ignorado durante 150 años, acababa de convertirse en el testimonio más elocuente del pasado acuoso de Marte.",
+  "datos_reales": [
+    {
+      "afirmacion": "El 2 de marzo de 2004, Steve Squyres anunció en una conferencia de prensa en la sede de la NASA en Washington D.C. que las rocas de Meridiani Planum estuvieron empapadas en agua líquida.",
+      "fuente_url": "https://news.cornell.edu/node/294161",
+      "cita": "Squyres delivered the news of the probable existence of water in the rover Opportunity's landing site on Meridiani Planum at a hastily called news conference March 2 at NASA headquarters in the nation's capital.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Steve Squyres declaró: 'El agua líquida fluyó una vez por estas rocas. Cambió su textura y cambió su química.'",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+      "cita": "\"Liquid water once flowed through these rocks. It changed their texture, and it changed their chemistry,\" said Dr. Steve Squyres of Cornell University, Ithaca, N.Y., principal investigator for the science instruments on Opportunity and its twin, Spirit.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "James Garvin, científico jefe de la NASA para Marte, afirmó que la misión había sido lanzada para comprobar si algún lugar de Marte tuvo un ambiente húmedo persistente capaz de albergar vida, y que ese día tenían la respuesta positiva.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+      "cita": "\"NASA launched the Mars Exploration Rover mission specifically to check whether at least one part of Mars ever had a persistently wet environment that could possibly have been hospitable to life. Today we have strong evidence for an exciting answer: Yes.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El espectrómetro Mössbauer detectó jarosita, un mineral hidratado de sulfato de hierro, en la roca El Capitan.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+      "cita": "the rover's Moessbauer spectrometer, which identifies iron-bearing minerals, detected a hydrated iron sulfate mineral called jarosite.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El espectrómetro APXS encontró una concentración muy alta de azufre en el afloramiento de El Capitan.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+      "cita": "The rover found a very high concentration of sulfur in the outcrop with its alpha particle X-ray spectrometer, which identifies chemical elements in a sample.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ambos instrumentos clave —el APXS y el espectrómetro Mössbauer— fueron fabricados en Alemania.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+      "cita": "Germany provided both the alpha particle X-ray spectrometer and the Moessbauer spectrometer.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La jarosita puede indicar que el pasado húmedo de la roca tuvo lugar en un lago ácido o en un manantial hidrotermal ácido.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+      "cita": "Jarosite may point to the rock's wet history having been in an acidic lake or an acidic hot springs environment.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La roca El Capitan estaba llena de cavidades alargadas ('vugs') de aproximadamente un centímetro de longitud, formadas cuando cristales de sal crecen dentro de rocas en agua salina y luego desaparecen.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+      "cita": "El Capitan, is thoroughly pocked with indentations about a centimeter (0.4 inch) long and one-fourth or less that wide, with apparently random orientations. This distinctive texture is familiar to geologists as the sites where crystals of salt minerals form within rocks that sit in briny water.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las esferas ('arándanos' o blueberries) incrustadas en la roca son concreciones: se forman cuando hay agua líquida en una roca y los minerales disueltos precipitan alrededor de un punto de nucleación.",
+      "fuente_url": "https://astrobiology.nasa.gov/news/check-type-evidence-of-water-found-on-mars/",
+      "cita": "\"Concretions form when there's liquid water in a rock. [The water has stuff dissolved in it [that] begins to precipitate out. And as it does so, it grows around a nucleation point to make a small spherical object.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La concentración total de sales en algunas zonas de El Capitan podía alcanzar el 40%; en la Tierra, esas concentraciones solo se forman cuando el agua se evapora.",
+      "fuente_url": "https://astrobiology.nasa.gov/news/check-type-evidence-of-water-found-on-mars/",
+      "cita": "the total salt concentration in some portions of El Capitan, \"may be as high as 40 percent. The only way you can form such large concentrations of salt on Earth normally is to dissolve it in water and have the water evaporate.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La jarosita fue descubierta en 1852 por un mineralogista alemán en el barranco de Jaroso, en la costa sureste de España, y fue bautizada con ese nombre.",
+      "fuente_url": "https://news.cornell.edu/node/294156",
+      "cita": "In 1852 a German mineralogist discovered an unusual amber-yellow-brown mineral made of potassium iron sulfate hydroxide in Jaroso. He named the mineral jarosite.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El último dato del espectrómetro Mössbauer llegó el viernes 27 de febrero de 2004, e inmediatamente la NASA comenzó a organizar la conferencia de prensa del 2 de marzo.",
+      "fuente_url": "https://news.cornell.edu/node/294156",
+      "cita": "The last piece in this early stage Martian water puzzle fit, Squyres realized, when the last Mössbauer data returned Friday, Feb. 27. Immediately NASA officials began working with him to organize the March 2 press conference.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity realizó su primera operación con la herramienta de abrasión de rocas (RAT) el 24 de febrero sobre el objetivo llamado 'McKittrick Middle Rat' en El Capitan, raspando hasta unos 4 milímetros de profundidad.",
+      "fuente_url": "https://news.cornell.edu/node/294156",
+      "cita": "Opportunity performed its first rock abrasion tool (RAT) operation on Feb. 24 on a rock target known as McKittrick Middle Rat at El Capitan. The tool shaved the rock over a period of two hours, grinding into a total depth of about 4 millimeters (.16 inches).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En la roca 'Last Chance' se observó estratificación cruzada cuya explicación más probable es que fue formada por agua en movimiento.",
+      "fuente_url": "https://photojournal.jpl.nasa.gov/catalog/PIA05482",
+      "cita": "The most probable explanation for these ripples is that they were formed in the presence of moving water.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Squyres declaró que el lugar era un entorno habitable en algún momento del pasado de Marte, apto para la vida, aunque eso no significa que hubiera vida allí.",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040302marswater.html",
+      "cita": "\"We believe, at this place on Mars, for some period of time, it was a habitable environment. This was a ground water environment, this was the kind of place that would have been suitable for life. Now that doesn't mean life was there. We don't know that. But this was a habitable place on Mars at one point in time.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo reconoció que no sabía cuánto tiempo atrás existió el agua ni cuánto tiempo duró su presencia.",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040302marswater.html",
+      "cita": "Squyres said the rover team does not yet know how long ago the water might have existed or how long it was present.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Cuando Squyres vio el primer afloramiento de roca marciana en las imágenes iniciales, declaró: 'Este es el primer afloramiento jamás encontrado en Marte.'",
+      "fuente_url": "https://news.cornell.edu/node/294156",
+      "cita": "When the image appeared on television monitors in JPL's von Karman auditorium at 2 a.m., Squyres reacted by saying, \"This is the first outcrop ever found on Mars.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "imagenes": [
+    {
+      "url": "http://images-assets.nasa.gov/image/PIA05482/PIA05482~orig.jpg",
+      "titulo": "Roca 'Last Chance': estratificación cruzada como evidencia de agua",
+      "descripcion": "Imagen panorámica de la roca 'Last Chance', en el afloramiento cerca del sitio de aterrizaje de Opportunity en Meridiani Planum. Las capas visibles —inclinadas a distintos ángulos— muestran estratificación cruzada, cuya explicación más probable es que fueron formadas por agua en movimiento. Esta es una de las cuatro líneas de evidencia presentadas en la conferencia de prensa del 2 de marzo de 2004.",
+      "credito": "NASA/JPL/Cornell",
+      "nasa_id": "PIA05482",
+      "pagina_url": "https://photojournal.jpl.nasa.gov/catalog/PIA05482",
+      "licencia_nota": "Imagen NASA/JPL de uso libre con crédito.",
+      "archivo_local": "salida\\opp021\\imagenes\\01_PIA05482.jpg"
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Opportunity Rover Finds Strong Evidence Meridiani Planum Was Wet (comunicado 2004-074)",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+      "editor": "NASA/NSSDC",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Evidence of Water Found on Mars (Astrobiology NASA)",
+      "url": "https://astrobiology.nasa.gov/news/check-type-evidence-of-water-found-on-mars/",
+      "editor": "NASA Astrobiology",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "How an obscure mineral provided a vital clue to Martian water",
+      "url": "https://news.cornell.edu/node/294156",
+      "editor": "Cornell Chronicle",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Steven Squyres delivers NASA's really big news: Mars once had water",
+      "url": "https://news.cornell.edu/node/294161",
+      "editor": "Cornell Chronicle",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Rover finds evidence landing site once wet, habitable",
+      "url": "https://spaceflightnow.com/mars/mera/040302marswater.html",
+      "editor": "Spaceflight Now / CBS News",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "PIA05482: Last Chance Rock – Crossbedding Evidence for Underwater Origin",
+      "url": "https://photojournal.jpl.nasa.gov/catalog/PIA05482",
+      "editor": "NASA/JPL Photojournal",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [],
+  "huecos": [
+    "No se pudo determinar cuándo exactamente existió el agua en Meridiani (hace cuántos millones o miles de millones de años): las fuentes confirman que esta pregunta quedó sin respuesta en el momento del anuncio.",
+    "No se pudo confirmar si el agua era superficial (lago o mar) o subterránea: Squyres presentó ambos escenarios como posibles y dejó la cuestión abierta.",
+    "No se pudo establecer cuánto tiempo estuvo presente el agua líquida en la zona: las fuentes indican que responder a esto requeriría traer muestras a laboratorios terrestres.",
+    "No se encontraron imágenes verificadas de la NASA Image Library de El Capitan o de las 'blueberries' con nasa_id confirmado (las búsquedas devolvieron resultados vacíos para ese rango de fechas); la única imagen verificada con nasa_id es PIA05482 (Last Chance), que muestra la estratificación cruzada.",
+    "No se pudo leer el artículo científico de Science de diciembre de 2004 que formalizó los hallazgos en literatura revisada por pares; las fuentes utilizadas son comunicados de prensa y crónicas universitarias del 2-4 de marzo de 2004."
+  ],
+  "ideas_visuales": [
+    "Primer plano de la roca El Capitan mostrando simultáneamente las tres evidencias: las esferas ('arándanos'), las cavidades alargadas ('vugs') y las capas estratificadas — con etiquetas explicativas sobreimpuestas.",
+    "Animación del brazo robótico de Opportunity acercando el espectrómetro Mössbauer a la superficie de la roca recién abrasada por la RAT.",
+    "Comparación lado a lado: una concreción de hematita marciana ('blueberry') junto a una concreción terrestre, mostrando la semejanza morfológica.",
+    "Diagrama de la secuencia evaporítica: un antiguo mar marciano salado que se evapora, dejando capas de minerales (sulfatos, bromuros, cloruros) en distintos niveles.",
+    "Mapa de Marte señalando Meridiani Planum y la ubicación del Eagle Crater, con una ampliación del pequeño afloramiento junto al módulo de aterrizaje.",
+    "Infografía comparativa del mineral jarosita: su descubrimiento en el barranco de Jaroso (España, 1852) y su detección en Marte (2004), con su fórmula química KFe₃(SO₄)₂(OH)₆.",
+    "Recreación de la conferencia de prensa del 2 de marzo de 2004 en la sede de la NASA en Washington, con el afloramiento proyectado en pantalla detrás del panel de científicos.",
+    "Sección transversal de la roca mostrando cómo el agua ácida pudo haber percolado por los poros, disolviendo ciertos minerales y dejando atrás vugs y concreciones de hematita."
+  ],
+  "datos_no_verificados": []
+}

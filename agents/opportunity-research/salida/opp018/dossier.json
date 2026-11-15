@@ -1,0 +1,271 @@
+{
+  "evento_id": "opp018",
+  "titulo": "Opportunity aterriza en el cráter Eagle (24 ene 2004 PST / 25 ene UTC)",
+  "contexto_ampliado": "La noche del sábado 24 de enero de 2004 (hora del Pacífico), el Laboratorio de Propulsión a Chorro (JPL), en Pasadena, vivió el momento más tenso de la misión de Opportunity. Tres semanas antes, su gemelo Spirit había aterrizado en el cráter Gusev. Ahora le tocaba al segundo rover, en el lado opuesto del planeta, en una región llamada Meridiani Planum. Esa misma jornada el equipo seguía resolviendo problemas de comunicaciones y de computadora de Spirit.\n\nLa caída duró unos seis minutos. Según la crónica de Spaceflight Now, Opportunity chocó contra la atmósfera superior de Marte a unos 12.000 mph (unos 5.400 m/s) y, 42 segundos después, la fricción produjo el calentamiento máximo, seguido de la máxima deceleración. Luego se abrió el paracaídas, se soltó el escudo térmico, el radar detectó el suelo y dispararon los retrocohetes. A los 5 minutos y 55 segundos de la entrada, el equipo debía empezar a recibir señales de «rebotando» sobre el suelo.\n\nMarte estaba a más de 100 millones de millas, así que lo que se veía en la sala de control llevaba unos 11 minutos de retraso respecto de lo que ocurría en Marte. Los ingenieros Wayne Lee y Rob Manning iban anunciando cada hito y la sala respondía con aplausos. Mientras el módulo rebotaba y rodaba, la señal se perdió un momento porque las antenas apuntaban en muchas direcciones. Cuando volvió con fuerza, Manning anunció: «We're on Mars, everybody!». El JPL registra la primera señal desde la superficie a las 9:05 p. m. PST, recibida por la Red del Espacio Profundo con antenas en California y Australia.\n\nEl lugar de llegada fue una suerte enorme. Según las estimaciones iniciales del JPL, Opportunity aterrizó a unos 24 km del centro de la zona objetivo, dentro de un afloramiento de hematita gris, un mineral que suele formarse en presencia de agua. Años después, imágenes de la sonda Mars Reconnaissance Orbiter mostraron que el módulo, protegido por airbags, tocó el suelo cerca de un cráter, rebotó, rodó y cayó dentro de él: el cráter Eagle, de unos 22 m de diámetro. Spaceflight Now lo describió como un rebote en el cráter que fue «un puro accidente».\n\nEl módulo quedó apoyado sobre uno de sus tres pétalos laterales. La estructura era un tetraedro de cuatro triángulos que se abrió después de desinflarse los airbags para dejar al rover al descubierto. Una semana más tarde el rover bajó de la plataforma. Según la NASA, Opportunity pasó más de la mitad de su misión planeada de tres meses explorando Eagle.\n\nTambién hay una nota de fechas para el aula. En Pasadena era todavía el 24 de enero, pero en Tiempo Universal ya era el 25. Por eso unas fuentes dicen 24 y otras 25 de enero. Ambas son correctas según la zona horaria que se use.\n\nNadie imaginaba entonces lo que seguiría. La misión estaba planeada para 90 días y el rover tenía una garantía de 1 km de recorrido. Opportunity terminó acumulando más de 45 km y comunicándose por última vez el 10 de junio de 2018. Aquella noche de enero, el responsable del proyecto, Pete Theisinger, resumió el momento con una frase: «We are two for two».",
+  "datos_reales": [
+    {
+      "afirmacion": "El JPL recibió la primera señal de Opportunity desde la superficie a las 9:05 p. m. PST del sábado, a través de la Red del Espacio Profundo (antenas en California y Australia).",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "cita": "received the first signal from Opportunity on the ground at 9:05 p.m. Pacific Standard Time Saturday via the NASA Deep Space Network, which was listening with antennas in California and Australia.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Rob Manning, responsable del desarrollo del sistema de aterrizaje, anunció al equipo que habían llegado a Marte.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "cita": "JPL's Rob Manning, manager for development of the landing system, announced to the cheering flight team.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El módulo envió señales durante el aterrizaje con rebotes y después de detenerse sobre uno de los tres pétalos laterales.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "cita": "NASA's second Mars Exploration Rover successfully sent signals to Earth during its bouncy landing and after it came to rest on one of the three side petals of its four-sided lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity aterrizó en Meridiani Planum, al otro lado del planeta respecto de Gusev, donde Spirit había aterrizado tres semanas antes.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "cita": "halfway around the planet from the Gusev Crater site where its twin rover, Spirit, landed three weeks ago.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según las estimaciones iniciales, aterrizó a unos 24 km del centro de la zona objetivo.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "cita": "By initial estimates, Opportunity landed about 24 kilometers (15 miles) down range from the center of the target landing area.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El punto de aterrizaje quedó dentro de un afloramiento de hematita gris, mineral que suele formarse con agua.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "cita": "That is well within an outcropping of a mineral called gray hematite, which usually forms in the presence of water.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ed Weiler resumió las 48 horas previas (la recuperación de Spirit y el aterrizaje de Opportunity).",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "cita": "We resurrected one rover and saw the birth of another.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La descent de Opportunity duró unos seis minutos, según la prensa.",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+      "cita": "Opportunity's nail-biting, six-minute descent came off like clockwork",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity entró en la atmósfera marciana a unas 12.000 mph (equivalen a unos 5.400 m/s).",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+      "cita": "Opportunity slammed into the upper atmosphere of Mars at midnight, plunging toward the ground at 12,000 mph.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El calentamiento máximo ocurrió 42 segundos después de la entrada, seguido de la máxima deceleración (6,3 g).",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+      "cita": "Forty-two seconds later, at an altitude of 26.5 miles, atmospheric friction generated peak heating followed seconds later by maximum deceleration, a force equal to 6.3 times Earth's gravity at sea level.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las señales de «rebotando» debían llegar a los 5 min 55 s de la entrada.",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+      "cita": "At this time, we are five minutes 55 seconds after entry, we should be bouncing on the ground.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Lo que se veía en la sala de control llevaba unos 11 minutos de retraso por la distancia a Marte.",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+      "cita": "Because Mars currently is more than 100 million miles away, the drama playing out in mission control was 11 minutes behind the actual events on Mars.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Aterrizó a 15 millas del centro de una elipse de aterrizaje de 46 millas de largo (unos 74 km).",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+      "cita": "Opportunity, which landed 15 miles downrange from the center of its 46-mile-long landing ellipse, had its hands full.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante los rebotes hubo una pérdida momentánea de señal porque las antenas apuntaban a muchas orientaciones.",
+      "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+      "cita": "We have a momentary loss of signal as the spacecraft is bouncing on the surface, it is difficult to maintain lock.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Pete Theisinger, jefe del proyecto de los rovers, dijo «We are two for two» tras el aterrizaje.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "cita": "We are two for two. Here we are tonight with Spirit on a path to recovery and with Opportunity on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cráter Eagle mide unos 22 m de diámetro y está en Meridiani Planum (1,95° S, 354,47° E).",
+      "fuente_url": "https://www.nasa.gov/?p=425313",
+      "cita": "Eagle Crater is about 72 feet (22 meters) in diameter, at 1.95 degrees south latitude, 354.47 degrees east longitude, in the Meridiani Planum region of Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El módulo tocó el suelo cerca del cráter, rebotó y rodó hasta caer dentro de él.",
+      "fuente_url": "https://www.nasa.gov/?p=425313",
+      "cita": "The airbag-cushioned lander, with Opportunity folded-up inside, first hit Martian ground near the crater, then bounced and rolled right into the crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA fija el aterrizaje el 25 de enero de 2004 en Tiempo Universal (24 de enero en hora del Pacífico).",
+      "fuente_url": "https://www.nasa.gov/?p=425313",
+      "cita": "Mars Reconnaissance Orbiter arrived at Mars in March 2006, more than two years after Opportunity's landing on Jan. 25, 2004, Universal Time (Jan. 24, PDT).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El módulo era un tetraedro de cuatro triángulos que se abrió tras desinflarse los airbags, y una semana después el rover salió de él.",
+      "fuente_url": "https://www.nasa.gov/?p=425313",
+      "cita": "The lander structure was four triangles, folded into a tetrahedron until after the airbags deflated.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El paracaídas y la carcasa trasera (backshell) quedaron visibles cerca del lugar en imágenes orbitales.",
+      "fuente_url": "https://www.nasa.gov/?p=425313",
+      "cita": "The spacecraft's backshell and parachute, jettisoned during final descent, are visible near the lower left corner of this scene.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity examinó Eagle durante más de la mitad de su misión planeada de tres meses y halló evidencias de agua.",
+      "fuente_url": "https://www.nasa.gov/?p=425313",
+      "cita": "Opportunity examined Eagle Crater for more than half of the rover's originally planned three-month mission, before driving east and south to larger craters.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity aterrizó en Meridiani Planum, donde depósitos minerales sugerían un pasado húmedo; la página oficial indica el aterrizaje el 24 de enero de 2004.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "Opportunity landed at Meridiani Planum, a place where mineral deposits suggested that Mars had a wet history.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity dejó de comunicarse con la Tierra el 10 de junio de 2018, durante una tormenta de polvo global, tras recorrer 45,16 km.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "Opportunity last communicated with Earth on June 10, 2018, as a planet-wide dust storm blanketed the solar-powered rover's location on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La misión debía durar 90 días y la garantía del rover era de 1 km de recorrido.",
+      "fuente_url": "https://spaceflightnow.com/2017/05/03/first-aerial-color-photo-of-mars-rovers-hole-in-one-landing-site/",
+      "cita": "The mission was originally supposed to last 90 days, and Opportunity's warranty was for 1 kilometer (3,300 feet) of driving.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La prensa calificó de accidente puro el rebote dentro del cráter Eagle.",
+      "fuente_url": "https://spaceflightnow.com/2017/05/03/first-aerial-color-photo-of-mars-rovers-hole-in-one-landing-site/",
+      "cita": "But its bounce into Eagle Crater on Jan. 25, 2004, was a pure accident.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    }
+  ],
+  "imagenes": [
+    {
+      "url": "http://images-assets.nasa.gov/image/PIA21494/PIA21494~orig.jpg",
+      "titulo": "Rover Landing Hardware at Eagle Crater, Mars",
+      "descripcion": "Imagen de HiRISE (MRO) del 8 de abril de 2017: la plataforma de aterrizaje brillante de Opportunity dentro del cráter Eagle, con la carcasa trasera y el paracaídas al suroeste. Primera imagen en color de Eagle desde la órbita.",
+      "credito": "NASA/JPL-Caltech/Univ. of Arizona",
+      "nasa_id": "PIA21494",
+      "pagina_url": "https://images.nasa.gov/details/PIA21494",
+      "licencia_nota": "Verificar el pie de foto: salvo indicación contraria, las imágenes de NASA/JPL son de uso libre con crédito.",
+      "archivo_local": "salida\\opp018\\imagenes\\01_PIA21494.jpg"
+    },
+    {
+      "url": "http://images-assets.nasa.gov/image/PIA05156/PIA05156~orig.jpg",
+      "titulo": "Tracks Seam Like Airbags",
+      "descripcion": "Airbags inflados con un patrón de costuras igual al de las marcas que dejó Opportunity en el suelo de Meridiani Planum durante el aterrizaje (28 ene 2004). Sirve para ilustrar los rebotes.",
+      "credito": "NASA/JPL/Cornell",
+      "nasa_id": "PIA05156",
+      "pagina_url": "https://images.nasa.gov/details/PIA05156",
+      "licencia_nota": "Verificar el pie de foto: salvo indicación contraria, las imágenes de NASA/JPL son de uso libre con crédito.",
+      "archivo_local": "salida\\opp018\\imagenes\\02_PIA05156.jpg"
+    },
+    {
+      "url": "http://images-assets.nasa.gov/image/PIA05633/PIA05633~orig.jpg",
+      "titulo": "A Well-Traveled Eagle Crater",
+      "descripcion": "Vista 3D de Opportunity en su sol 56, antes de salir del cráter Eagle. Útil como contexto del lugar (no es del día del aterrizaje; es una imagen posterior).",
+      "credito": "NASA/JPL",
+      "nasa_id": "PIA05633",
+      "pagina_url": "https://images.nasa.gov/details/PIA05633",
+      "licencia_nota": "Verificar el pie de foto: salvo indicación contraria, las imágenes de NASA/JPL son de uso libre con crédito.",
+      "archivo_local": "salida\\opp018\\imagenes\\03_PIA05633.jpg"
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA Hears from Opportunity Rover on Mars",
+      "url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+      "editor": "JPL/NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Exploration Rovers: Spirit and Opportunity",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Rover Landing Hardware at Eagle Crater, Mars (PIA21494)",
+      "url": "https://www.nasa.gov/?p=425313",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Opportunity rover successfully lands",
+      "url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+      "editor": "Spaceflight Now (William Harwood, CBS News)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "First aerial color photo of Mars rover's hole-in-one landing site",
+      "url": "https://spaceflightnow.com/2017/05/03/first-aerial-color-photo-of-mars-rovers-hole-in-one-landing-site/",
+      "editor": "Spaceflight Now (Stephen Clark)",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "Fecha del aterrizaje: la página oficial de la misión da el 24 de enero de 2004 (https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/), mientras que la NASA/JPL y la prensa dan el 25 de enero en Tiempo Universal (https://www.nasa.gov/?p=425313 y https://spaceflightnow.com/mars/mera/040125landing.html). No es un error: es la diferencia horaria (24 ene en hora del Pacífico, 25 ene UTC).",
+    "Zona horaria: el comunicado del JPL (https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/) habla de «Pacific Standard Time», pero la nota de la NASA sobre PIA21494 (https://www.nasa.gov/?p=425313) escribe «Jan. 24, PDT». En enero corresponde PST."
+  ],
+  "huecos": [
+    "No se confirmó en las fuentes leídas la hora de entrada atmosférica de las 8:59 p. m. PST. Spaceflight Now solo dice «at midnight» (hora del Este, 12:00 a. m. EST) y el JPL solo da las 9:05 p. m. PST como primera señal.",
+    "No se confirmó el «impacto de 2 a 3 G». La fuente leída da 6,3 g como deceleración máxima en la entrada atmosférica, que es otro momento distinto del impacto con el suelo.",
+    "No se confirmó la velocidad de 5.400 m/s tal como está en el evento. Spaceflight Now da 12.000 mph (unos 5.400 m/s por conversión).",
+    "No se confirmó el dato de los 26 rebotes. Spaceflight Now solo dice que el rebote duraría unos 10 minutos.",
+    "No se confirmó que abrirse tomara unos 35 minutos, 15 más que a Spirit. Solo se leyó que los tiempos cambiaron por apoyarse en un pétalo lateral.",
+    "No se confirmó la afirmación de Wayne Lee sobre la mayor altitud de aterrizaje intentada hasta entonces.",
+    "No se confirmó que el rover quedara apuntando directamente a un afloramiento ni que Opportunity cayera a 25 km «al este» del objetivo. El JPL solo dice ~24 km «down range» del centro del objetivo y que se esperaba que quedara mirando al este.",
+    "No se pudo abrir el MER Press Kit, la nota de Astronomy.com ni la copia de Wikipedia. No se usaron.",
+    "La búsqueda de imágenes del día del aterrizaje (primeras fotos de Opportunity en la superficie, sol 1) no devolvió resultados útiles. La foto JPL de Manning y Theisinger aparece en la nota oficial, pero no pasó por las herramientas de imágenes NASA y no se incluye."
+  ],
+  "ideas_visuales": [
+    "Secuencia de la caída en seis pasos: entrada a 12.000 mph, calentamiento máximo, paracaídas, soltar el escudo térmico, radar y retrocohetes, y airbags. Con un reloj en cuenta atrás hasta 5:55.",
+    "Sala de control del JPL con un contador de 11 minutos de retraso: lo que ven los ingenieros ya pasó en Marte. Aplausos con cada hito.",
+    "Gráfico de la señal: «rebotando», pérdida momentánea de señal mientras el módulo rueda y señal fuerte al detenerse. Anuncio de Manning: «We're on Mars, everybody!».",
+    "Mapa de la elipse de aterrizaje de 46 millas (74 km) con el punto a 24 km del centro, y un zoom final al cráter Eagle de 22 m como un «hoyo en uno».",
+    "Corte transversal del módulo apoyado sobre un pétalo lateral, con los airbags desinflándose y los pétalos abriéndose (tetraedro de cuatro triángulos).",
+    "Comparación de imágenes: la plataforma brillante dentro de Eagle en la imagen orbital de PIA21494 y las marcas de airbags en PIA05156.",
+    "Línea de tiempo con la diferencia horaria: 9:05 p. m. PST del 24 de enero igual al 25 de enero UTC, para aclarar por qué hay dos fechas."
+  ],
+  "datos_no_verificados": []
+}

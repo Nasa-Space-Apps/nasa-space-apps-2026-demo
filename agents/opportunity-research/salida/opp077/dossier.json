@@ -1,0 +1,155 @@
+{
+  "evento_id": "opp077",
+  "titulo": "Últimos comandos y declaración de misión completa (12-13 feb 2019)",
+  "contexto_ampliado": "La noche del 12 de febrero de 2019, alrededor de las 8 de la tarde hora estándar del Pacífico (PST), se enviaron los últimos comandos a Opportunity desde el Centro de Operaciones de Vuelo Espacial del JPL, mientras sonaban los acordes de «I'll Be Seeing You» de Billie Holiday en la sala [0]. La transmisión fue enviada a través de la antena de 70 metros de la Estación Mars, en el Complejo de Espacio Profundo de Goldstone, California, poniendo fin a una estrategia de recuperación multifacética de ocho meses [1]. La señal tardó 13 minutos y medio en llegar a Marte, viajando a la velocidad de la luz. La respuesta esperada nunca llegó: el silencio reinó en la sala de control [6].\n\nLa última comunicación de Opportunity con la Tierra había sido recibida el 10 de junio de 2018, cuando una tormenta de polvo global interrumpió el contacto con el rover solar [12]. Desde entonces, el equipo había intentado de todo para restablecer la comunicación. Según John Callas, gerente del proyecto MER, se enviaron más de 1.000 comandos de recuperación explorando cada posibilidad técnica para obtener una señal del rover [5]. La Planetary Society, por su parte, registró más de 835 comandos enviados desde junio [13], una diferencia que probablemente se debe al momento en que se realizó cada conteo.\n\nEl 13 de febrero de 2019, Thomas Zurbuchen, Administrador Asociado de la Dirección de Misiones Científicas de la NASA, hizo el anuncio oficial: «Estoy aquí con un profundo sentido de aprecio y gratitud para declarar la misión Opportunity como completa, y con ella, la misión Mars Exploration Rover como completa» [3]. John Callas cerró la ceremonia con una frase que quedó grabada en la historia de la exploración espacial: «Farewell, Opportunity, and well done» («Adiós, Opportunity, y bien hecho») [4].\n\nEl balance de la misión fue extraordinario. Diseñada para durar apenas 90 días marcianos y recorrer 1.000 metros, Opportunity superó su vida útil prevista por 60 veces y recorrió más de 45 kilómetros sobre la superficie de Marte [7]. Durante su travesía, el rover capturó más de 217.000 imágenes —217.594 imágenes brutas según Spaceflight Now [9]—, incluyendo 15 panorámicas en color de 360 grados [8]. Su lugar de descanso final fue el Valle de la Perseverancia (Perseverance Valley), un nombre que resultó simbólicamente apropiado para una misión que desafió toda expectativa [10].\n\nOpportunity y su gemela Spirit habían costado en conjunto alrededor de 800 millones de dólares en condiciones económicas de 2003 [11]. Thomas Zurbuchen señaló que el legado de Opportunity continuaba vivo tanto en la superficie de Marte —con el rover Curiosity y el módulo de aterrizaje InSight— como en las salas limpias del JPL, donde se construía el futuro rover Mars 2020 [15].",
+  "datos_reales": [
+    {
+      "afirmacion": "Los últimos comandos se enviaron a Opportunity alrededor de las 8 pm PST del 12 de febrero de 2019, mientras sonaba 'I'll Be Seeing You' de Billie Holiday en el Centro de Operaciones de Vuelo Espacial del JPL.",
+      "fuente_url": "https://www.planetary.org/articles/02-mer-update-opportunity-complete",
+      "cita": "At around 8 pm February 12, 2019, Pacific Standard Time (PST), as the strains of Billie Holiday singing \"I'll Be Seeing You\" filled the Space Flight Operations Center at the Jet Propulsion Laboratory (JPL), final commands were transmitted to Opportunity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La transmisión final fue enviada a través de la antena de 70 metros de la Estación Mars en el Complejo Deep Space de Goldstone, en California.",
+      "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+      "cita": "The final transmission, sent via the 70-meter Mars Station antenna at NASA's Goldstone Deep Space Complex in California, ended a multifaceted, eight-month recovery strategy in an attempt to compel the rover to communicate.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Thomas Zurbuchen declaró: 'Estoy aquí con un profundo sentido de aprecio y gratitud para declarar la misión Opportunity como completa, y con ella, la misión Mars Exploration Rover como completa.'",
+      "fuente_url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+      "cita": "\"I am standing here with a sense of deep appreciation and gratitude to declare the Opportunity mission as complete, and with it the Mars Exploration Rover mission as complete.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "John Callas, gerente del proyecto MER, cerró con la frase: 'Farewell, Opportunity, and well done.'",
+      "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+      "cita": "\"Farewell, Opportunity, and well done.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "John Callas afirmó que el equipo envió más de 1.000 comandos de recuperación e intentó cada posibilidad de obtener una señal del rover.",
+      "fuente_url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+      "cita": "\"We've listened every single day with the Deep Space Network, with our sensitive receivers, and we sent over 1,000 recovery commands trying to exercise every possibility of getting a signal from the rover.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El último comando tardó 13 minutos y medio en llegar a Marte viajando a la velocidad de la luz.",
+      "fuente_url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+      "cita": "After the signal took 13-and-a-half minutes to reach Mars — traveling at the speed of light — Opportunity should have sent a response back to engineers keeping vigil in a control room at JPL. Silence reigned.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity fue diseñada para durar 90 días marcianos y recorrer 1.000 metros; superó su vida útil prevista por 60 veces y recorrió más de 45 kilómetros.",
+      "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+      "cita": "Designed to last just 90 Martian days and travel 1,100 yards (1,000 meters), Opportunity vastly surpassed all expectations in its endurance, scientific value and longevity. In addition to exceeding its life expectancy by 60 times, the rover traveled more than 28 miles (45 kilometers)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity capturó más de 217.000 imágenes, incluyendo 15 panorámicas en color de 360 grados.",
+      "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+      "cita": "Returned more than 217,000 images, including 15 360-degree color panoramas.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spaceflight Now reportó 217.594 imágenes brutas tomadas por Opportunity en Marte.",
+      "fuente_url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+      "cita": "Opportunity took 217,594 raw images on Mars",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El lugar de descanso final de Opportunity fue el Valle de la Perseverancia, en el borde occidental del Cráter Endeavour.",
+      "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+      "cita": "the rover traveled more than 28 miles (45 kilometers) by the time it reached its most appropriate final resting spot on Mars — Perseverance Valley.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA gastó alrededor de 800 millones de dólares en condiciones económicas de 2003 para construir y lanzar los rovers Spirit y Opportunity.",
+      "fuente_url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+      "cita": "NASA spent around $800 million — in 2003 economic conditions — to build and launch the Spirit and Opportunity rovers.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La última comunicación de Opportunity con la Tierra fue recibida el 10 de junio de 2018.",
+      "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+      "cita": "The solar-powered rover's final communication was received June 10.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Zurbuchen dijo que el legado de Opportunity continúa en el rover Curiosity, el lander InSight y en el rover Mars 2020 en construcción.",
+      "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+      "cita": "\"Whatever loss we feel now must be tempered with the knowledge that the legacy of Opportunity continues — both on the surface of Mars with the Curiosity rover and InSight lander — and in the clean rooms of JPL, where the upcoming Mars 2020 rover is taking shape.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's Opportunity Rover Mission on Mars Comes to End",
+      "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+      "editor": "NASA Science / JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "The Mars Exploration Rovers Update: NASA Declares Opportunity and MER Mission Complete",
+      "url": "https://www.planetary.org/articles/02-mer-update-opportunity-complete",
+      "editor": "The Planetary Society (A.J.S. Rayl)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "NASA declares Opportunity rover dead after 15 years on Mars",
+      "url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+      "editor": "Spaceflight Now (Stephen Clark)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Mars Opportunity rover ends its mission",
+      "url": "https://earthsky.org/space/mars-opportunity-rover-ends-mission-feb2019",
+      "editor": "EarthSky",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "Número de comandos de recuperación enviados: The Planetary Society (A.J.S. Rayl, 14 feb 2019) indica 'more than 835 commands sent since last June' (https://www.planetary.org/articles/02-mer-update-opportunity-complete), mientras que NASA Science (https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/), EarthSky y Spaceflight Now citan a Callas directamente diciendo 'over 1,000 recovery commands'. La discrepancia puede deberse a que el conteo de 835 se tomó antes del cierre final, mientras el de 1.000+ es el balance definitivo.",
+    "Número exacto de imágenes: NASA Science y EarthSky indican 'more than 217,000 images' (https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/), mientras Spaceflight Now ofrece el dato preciso de '217,594 raw images' (https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/).",
+    "El evento original atribuye la cifra de 'más de 1.000 comandos' a 'el comunicado de NASA del 13 de marzo de 2019', pero los datos del dossier muestran que John Callas ya citó 'over 1,000 recovery commands' durante la conferencia de prensa del 13 de febrero de 2019 [5] (https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/). La fecha del 13 de marzo para esta cifra no está confirmada por ninguna fuente del dossier."
+  ],
+  "huecos": [
+    "No se pudo confirmar en las fuentes leídas el nombre completo del operador de misión (Mission Command and Control Ace) Ashton Vaughs con cita directa de fuente oficial NASA/JPL; solo aparece nombrado en The Planetary Society.",
+    "No se encontró en fuentes leídas una confirmación oficial de la letra exacta de 'I'll Be Seeing You' de Billie Holiday como razón específica de su elección (el final de la canción con 'I'll be seeing you' como metáfora de despedida).",
+    "No se pudo confirmar en las fuentes leídas si la decisión de poner música fue una tradición establecida o una iniciativa espontánea del equipo esa noche.",
+    "No se encontró cita verificable sobre el calentador del brazo que quedó encendido (mencionado en el evento original) en las fuentes leídas para este dossier.",
+    "El evento original afirma que 'John Callas, gerente del proyecto, dijo que se hicieron todos los esfuerzos razonables de ingeniería', pero ninguna cita del dossier confirma esa frase específica. Lo más cercano es la cita de Callas sobre enviar 'over 1,000 recovery commands trying every possibility' [5].",
+    "El evento original menciona que Opportunity operó '15 años en Marte', pero ninguna cita textual del dossier indica explícitamente esa duración; solo se confirma que superó su vida prevista por 60 veces [7], lo que equivale aproximadamente a 14,8 años.",
+    "El dato [10] afirma que el Valle de la Perseverancia está 'en el borde occidental del Cráter Endeavour', pero la cita correspondiente solo menciona 'Perseverance Valley' sin especificar ubicación geográfica respecto al cráter."
+  ],
+  "ideas_visuales": [
+    "La antena de 70 metros de la Estación Mars en Goldstone apuntando al cielo nocturno, transmitiendo los últimos comandos hacia Marte el 12 de febrero de 2019 [1].",
+    "Interior del Centro de Operaciones de Vuelo Espacial del JPL: ingenieros reunidos mientras suena 'I'll Be Seeing You' de Billie Holiday y se envían los comandos finales [0, 6].",
+    "Thomas Zurbuchen en el podio del JPL declarando completa la misión MER el 13 de febrero de 2019, con la frase de Callas 'Farewell, Opportunity, and well done' como cierre [3, 4].",
+    "Infografía del recorrido de Opportunity: línea de más de 45 km sobre la superficie marciana desde el punto de aterrizaje hasta el Valle de la Perseverancia [7, 10].",
+    "Mosaico representativo de las más de 217.000 imágenes capturadas por Opportunity, destacando las 15 panorámicas en color de 360° [8, 9].",
+    "Línea de tiempo comparativa: barra de 90 días (vida prevista) frente a barra 60 veces mayor (~15 años de operación real), con los hitos de costo de 800 millones USD para ambos rovers [7, 11]."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Según la Planetary Society, después de más de 835 comandos enviados desde junio, Zurbuchen declaró completa la misión MER.",
+      "fuente_url": "https://www.planetary.org/articles/02-mer-update-opportunity-complete",
+      "cita": "after more than 835 commands sent since last June, the Associate Administrator for the Science Mission Directorate at NASA Headquarters, Thomas Zubuchen, declared the MER mission \"complete\"",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

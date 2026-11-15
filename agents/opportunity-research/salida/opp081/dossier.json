@@ -1,0 +1,175 @@
+{
+  "evento_id": "opp081",
+  "titulo": "Perseverance supera el récord de distancia de Opportunity (11 de octubre de 2026)",
+  "contexto_ampliado": "El 11 de octubre de 2026, el rover Perseverance de la NASA alcanzó las 28,10 millas (45,22 km) sobre la superficie de Marte en el sol 2006 de su misión, superando así el récord de 28,06 millas (45,16 km) que mantenía Opportunity, un rover que exploró el planeta rojo entre 2004 y 2018. La última comunicación de Opportunity con la Tierra se produjo el 10 de junio de 2018, cuando una tormenta de polvo a escala planetaria cubrió la ubicación del rover, alimentado por energía solar. Su marca permaneció imbatida durante más de ocho años.\n\nLo más llamativo no fue solo la distancia, sino la rapidez: Perseverance cubrió en unos cinco años y medio lo que a Opportunity le costó casi quince. La diferencia se debe, en gran medida, al sistema de navegación autónoma conocido como AutoNav. Perseverance fotografía el terreno mientras rueda, construye un mapa 3D de obstáculos y traza su propio camino entre los puntos de paso seleccionados por los ingenieros en la Tierra, una capacidad que el equipo llama «pensar mientras conduce». Más del 90 % de la distancia total de Perseverance fue recorrida con AutoNav, que puede alcanzar velocidades de hasta 120 metros por hora y cubrir hasta 412 metros en un solo sol. El sistema incorpora además un segundo procesador con FPGA para acelerar el procesamiento de imágenes. En comparación, Opportunity y Curiosity solo usaron la conducción autónoma alrededor del 5 % del tiempo, mientras que Spirit la utilizó el 23 %. Y donde el primer rover marciano, Sojourner, evaluaba el terreno con apenas 20 puntos de medición, Perseverance procesa 600 000 con cada mirada.\n\nEste récord corona casi tres décadas de rovers de la NASA en Marte. En 1997, Sojourner, del tamaño de un horno de microondas, recorrió unos 100 metros (330 pies) durante su misión de 83 soles. Spirit acumuló 7,7 km (4,8 millas) antes de sucumbir al invierno marciano en 2010. Opportunity rodó durante 5 111 soles, completó el primer maratón extraterrestre en 2015 y estableció la marca que Perseverance acaba de superar. El rover Curiosity, que aterrizó en el cráter Gale en 2012 y sigue operativo, ha registrado más de 38,07 km (23,65 millas).\n\nEl logro tampoco se limita a Marte. En su camino, Perseverance ya había superado las 35,7 km (22,2 millas) recorridas por los astronautas Gene Cernan y Harrison Schmitt del Apolo 17 en 1972, y las 39 km (24,2 millas) del rover soviético Lunojod 2 en 1973. Perseverance ostenta ahora el récord absoluto de distancia recorrida sobre la superficie de otro cuerpo celeste.\n\nEl hito se produjo mientras el rover avanzaba hacia una zona llamada «Idubi», en la región «Lac de Charmes», al oeste del borde del cráter Jezero, donde investiga lo que podría ser el terreno más antiguo jamás explorado en el sistema solar. Hasta la fecha, Perseverance ha recogido 29 muestras de roca y regolito que abarcan el suelo del cráter, un delta fluvial fosilizado y el borde del cráter. La NASA aprobó recientemente la primera extensión de la misión, que comenzó en octubre de 2026 y llevará la exploración del borde del cráter hasta aproximadamente finales de 2028.",
+  "datos_reales": [
+    {
+      "afirmacion": "El 11 de octubre de 2026, Perseverance alcanzó 28,10 millas (45,22 km) en el sol 2006 de su misión, superando el récord de 28,06 millas (45,16 km) de Opportunity.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "On Oct. 11, the rover's odometer reached 28.10 miles (45.22 kilometers), eclipsing the record of 28.06 miles (45.16 kilometers) set by NASA's Opportunity rover, which explored Mars from 2004 to 2018. Perseverance reached the mark on the 2,006th Martian day, or sol, of its mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Perseverance cubrió la distancia récord en cinco años y medio, una distancia que a Opportunity le costó casi 15 años.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "covering in five and a half years a distance that took Opportunity almost 15.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Perseverance usa AutoNav para 'pensar mientras conduce': fotografía el terreno en movimiento, construye un mapa 3D de peligros y traza su propio camino entre puntos de paso.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "Using an autonomous navigation system known as AutoNav, the rover images the terrain while rolling, builds a 3D map of hazards, and plots its course between waypoints selected by rover planners on Earth — a capability the team calls \"thinking while driving.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Perseverance recorrió más del 90% de su distancia total con AutoNav, frente a aproximadamente el 5% del sistema AutoNav original en Opportunity y Spirit.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "The six-wheeled scientist has driven more than 90% of its total distance using AutoNav to evaluate the terrain, compared with about 5% for the first Martian AutoNav system on Opportunity and its twin, Spirit.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Perseverance puede cubrir hasta 412 metros (1 351 pies) en un solo sol usando AutoNav a velocidad máxima.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "Perseverance can do all that at or near its top speed, covering as much as 1,351 feet (412 meters) in a single sol.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Perseverance procesa 600 000 puntos de medición del terreno con cada exploración, frente a los 20 puntos de Sojourner.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "Where NASA's first Mars rover, Sojourner, assessed the path ahead using 20 measurement points, Perseverance processes 600,000 with every look.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El hito se produjo mientras Perseverance viajaba hacia la zona 'Idubi' en la región 'Lac de Charmes', al oeste del borde del cráter Jezero, investigando posiblemente el terreno más antiguo jamás explorado en el sistema solar.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "The milestone came as Perseverance traveled toward an area called \"Idubi\" through the region off the western rim of Jezero Crater nicknamed \"Lac de Charmes,\" where the rover is investigating what may be some of the oldest terrain ever explored in the solar system.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit recorrió 7,7 km (4,8 millas) antes de quedar inactivo por el invierno marciano en 2010; Opportunity estuvo activo durante 5 111 soles.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "Spirit logged 4.8 miles (7.7 kilometers) before succumbing to the Martian winter in 2010. Opportunity kept rolling for 5,111 sols, completing the first extraterrestrial marathon in 2015 and setting the record Perseverance has now surpassed.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Sojourner recorrió aproximadamente 100 metros (330 pies) durante su misión de 83 soles en 1997.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "The microwave-oven-size Sojourner rover covered about 330 feet (100 meters) during its 83-sol mission in 1997.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Curiosity ha recorrido más de 38,07 km (23,65 millas) desde su llegada al cráter Gale en 2012.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "The agency's Curiosity rover, which landed in Gale Crater in 2012 and remains hard at work, has logged more than 23.65 miles (38.07 kilometers).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El récord de distancia fuera de la Tierra no se limita a Marte: Perseverance también superó los registros lunares del Apolo 17 (35,7 km) y el Lunokhod 2 soviético (39 km).",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "Perseverance rolled past both the 22.2 miles (35.7 kilometers) covered by Apollo 17 astronauts Gene Cernan and Harrison Schmitt in 1972 and the 24.2 miles (39 kilometers) driven by the Soviet Union's Lunokhod 2 rover in 1973.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Perseverance ha recolectado 29 muestras de roca y regolito que abarcan el suelo del cráter, un delta fluvial fosilizado y el borde del cráter.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "Perseverance has collected 29 rock and regolith samples spanning the crater floor, a delta fan formed by a long-gone river, and now the crater rim.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA aprobó recientemente la primera extensión de la misión Perseverance, que lleva la exploración del borde del cráter hasta aproximadamente finales de 2028.",
+      "fuente_url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "cita": "NASA recently approved the mission's first extension, which began in October and will carry Perseverance's exploration of the crater rim through roughly the end of 2028.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit utilizó conducción autónoma el 23% del tiempo, mientras que Opportunity y Curiosity solo la usaron alrededor del 5% del tiempo.",
+      "fuente_url": "https://spectrum.ieee.org/mars-rover-distance-record",
+      "cita": "Spirit actually ended up driving itself 23 percent of the time, which I was frankly shocked by, since it drove much more slowly in that mode. But using autonomy helped Spirit travel 50 percent faster than it otherwise could have. Opportunity and Curiosity both only used autonomous driving about 5 percent of the time.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El AutoNav de Perseverance usa un segundo procesador con FPGA para acelerar operaciones adicionales de procesamiento de imágenes.",
+      "fuente_url": "https://spectrum.ieee.org/mars-rover-distance-record",
+      "cita": "Perseverance is the first Mars rover that drives itself 90 percent of the time, with its enhanced autonomy system that includes a second processor with an FPGA to speed up extra image processing operations.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El AutoNav de Perseverance puede alcanzar hasta 120 metros por hora.",
+      "fuente_url": "https://spectrum.ieee.org/mars-rover-distance-record",
+      "cita": "seeing Perseverance use its AutoNav system to drive itself basically at full speed, up to 120 meters an hour, was incredible.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's Perseverance Sets Off-World Record for Total Distance Driven",
+      "url": "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+      "editor": "NASA Science / JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Exploration Rovers: Spirit and Opportunity (misión oficial)",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Congratulations, Perseverance rover! — EarthSky",
+      "url": "https://earthsky.org/?p=560859",
+      "editor": "EarthSky",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Perseverance Sets Mars Rover Distance Record — IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/mars-rover-distance-record",
+      "editor": "IEEE Spectrum",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "El artículo oficial de NASA (https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/...) agrupa a Spirit y Opportunity juntos indicando que ambos usaron AutoNav 'alrededor del 5%' del tiempo. Sin embargo, el ingeniero de JPL Mark Maimone declara en IEEE Spectrum (https://spectrum.ieee.org/mars-rover-distance-record) que Spirit llegó a conducir de forma autónoma el 23% del tiempo, mientras que Opportunity y Curiosity solo lo usaron el 5%. Spirit y Opportunity no son iguales en este parámetro.",
+    "EarthSky (https://earthsky.org/?p=560859) transcribe la misión original de Perseverance como 'no more than 12.4 miles [20 meters]', lo que constituye un error tipográfico evidente (12.4 millas = ~20 km, no 20 metros). El artículo original de NASA no incluye esa equivalencia en metros.",
+    "El dato [3] (NASA, https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/) describe el 90 % como proporción de la distancia total recorrida ('more than 90% of its total distance'), mientras que el dato [16] (IEEE Spectrum, https://spectrum.ieee.org/mars-rover-distance-record) lo expresa como proporción del tiempo de conducción ('drives itself 90 percent of the time'). Ambas fuentes coinciden en la cifra ~90 %, pero distancia y tiempo no son métricas equivalentes y podrían diferir en la práctica.",
+    "El dato [13] (IEEE Spectrum, https://spectrum.ieee.org/mars-rover-distance-record) afirma que Opportunity fue detenido por una tormenta de polvo en el Valle Perseverance, pero su cita solo dice 'stopped it in its tracks' sin mencionar el mecanismo específico (corte de energía solar); en cambio, el dato [15] (NASA, https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/) sí describe al rover como 'solar-powered' y a la tormenta cubriendo su ubicación, lo que hace que la afirmación de [13] sobre energía solar sea una inferencia no respaldada por su propia cita."
+  ],
+  "huecos": [
+    "El evento menciona que los MER (Spirit y Opportunity) enviaron más de 300 000 imágenes crudas: este dato específico no pudo verificarse en ninguna de las fuentes leídas para este dossier.",
+    "No se encontró información verificada sobre la velocidad máxima operativa exacta de Opportunity en comparación directa con la de Perseverance.",
+    "No se pudo confirmar el número exacto total de imágenes enviadas por Perseverance a la fecha del récord.",
+    "El evento original indica que los datos provienen de 'La infografía de NASA' como documento específico, pero ninguna fuente del dossier cita ni identifica una infografía como tal; todas las referencias son a artículos de blog o páginas web de NASA.",
+    "El evento menciona explícitamente que 'los MER vivieron 14 años' como dato de la infografía de NASA, pero ninguna cita del dossier expresa esa duración como cifra redonda, aunque es calculable a partir de las fechas de operación de Opportunity (2004–2018) presentes en los datos [0] y [15]."
+  ],
+  "ideas_visuales": [
+    "Infografía de barras comparando las distancias de los cinco rovers marcianos de la NASA: Sojourner (100 m), Spirit (7,7 km), Curiosity (38+ km), Opportunity (45,16 km) y Perseverance (45,22 km), con siluetas a escala de cada rover.",
+    "Diagrama del sistema AutoNav de Perseverance: el rover fotografiando el terreno, la nube de 600 000 puntos de medición superpuesta y la ruta trazada automáticamente, en contraste con los 20 puntos de Sojourner.",
+    "Línea temporal visual: Perseverance alcanzando 45,22 km en ~5,5 años frente a Opportunity necesitando ~15 años para 45,16 km, con marcas intermedias de distancia y fechas clave.",
+    "Mapa del cráter Jezero mostrando la ruta de Perseverance desde su zona de aterrizaje, pasando por el delta fluvial fosilizado, hasta la región 'Lac de Charmes' y el área 'Idubi' al oeste del borde.",
+    "Comparación de récords fuera de la Tierra: odómetros de Apolo 17 (35,7 km), Lunojod 2 (39 km), Opportunity (45,16 km) y Perseverance (45,22 km), representados como huellas sobre superficies lunar y marciana.",
+    "Collage de las 29 muestras recolectadas por Perseverance, organizadas por zona de origen: suelo del cráter, delta fluvial y borde del cráter."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El récord de Opportunity estuvo vigente desde junio de 2018, cuando el rover tuvo su última comunicación con la Tierra, hasta el 11 de octubre de 2026.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "Opportunity last communicated with Earth on June 10, 2018, as a planet-wide dust storm blanketed the solar-powered rover's location on Mars. That record held until Oct. 11, 2026, when its successor, NASA's Mars rover Perseverance, rolled past Opportunity's mark to reach 28.10 miles (45.22 kilometers)... and counting.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

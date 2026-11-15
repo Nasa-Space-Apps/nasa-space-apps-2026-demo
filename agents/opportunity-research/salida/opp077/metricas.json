@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.2631422,
+  "turnos": 9,
+  "duracion_s": 113.6,
+  "duracion_api_s": 106.2,
+  "tokens": {
+    "input_tokens": 7,
+    "cache_creation_input_tokens": 17780,
+    "cache_read_input_tokens": 48914,
+    "output_tokens": 11902,
+    "output_tokens_details": {
+      "thinking_tokens": 1987
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 17780
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 3097,
+      "outputTokens": 29,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.003242,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 7,
+      "outputTokens": 11902,
+      "cacheReadInputTokens": 48914,
+      "cacheCreationInputTokens": 17780,
+      "webSearchRequests": 0,
+      "costUSD": 0.25990019999999997,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1987,
+      "cacheCreationEphemeral5mInputTokens": 17780,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 5,
+    "buscar_web": 1,
+    "StructuredOutput": 2
+  },
+  "prompts": {
+    "investigador": "2",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "3",
+    "costo_usd_referencia": 0.26850525,
+    "turnos": 2,
+    "duracion_s": 103.5,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5079,
+        "outputTokens": 31,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.005234,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 9012,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6073,
+        "webSearchRequests": 0,
+        "costUSD": 0.26327124999999996,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 7084,
+        "cacheCreationEphemeral5mInputTokens": 6073,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 16,
+      "datos_despues": 14,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 3,
+      "observaciones": "Se eliminaron los datos [2] y [14]: en [2] la afirmación añade a Zurbuchen y la fecha del 13 de febrero, que no aparecen en su cita (ya cubiertos por [3]); en [14] la afirmación atribuye la etiqueta «Hail Mary» a toda la estrategia de ocho meses, pero la cita la aplica solo al esfuerzo final de finales de enero. El relato se depuró eliminando afirmaciones sin respaldo en los datos conservados (fin"
+    }
+  },
+  "costo_usd_referencia_total": 0.5316474499999999,
+  "costos": {
+    "total_usd": 0.531647,
+    "por_paso": {
+      "investigacion": 0.263142,
+      "revision": 0.268505
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.008476,
+        "entrada": 8176,
+        "salida": 60,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.2599,
+        "entrada": 7,
+        "salida": 11902,
+        "cache_leida": 48914,
+        "cache_escrita": 17780,
+        "razonamiento": 1987
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.263271,
+        "entrada": 3,
+        "salida": 9012,
+        "cache_leida": 0,
+        "cache_escrita": 6073,
+        "razonamiento": 7084
+      }
+    }
+  }
+}

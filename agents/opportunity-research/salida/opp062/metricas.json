@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.291091,
+  "turnos": 14,
+  "duracion_s": 148.8,
+  "duracion_api_s": 125.2,
+  "tokens": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 17308,
+    "cache_read_input_tokens": 58580,
+    "output_tokens": 13777,
+    "output_tokens_details": {
+      "thinking_tokens": 3118
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 17308
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1795,
+      "outputTokens": 27,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0019299999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 9,
+      "outputTokens": 13777,
+      "cacheReadInputTokens": 58580,
+      "cacheCreationInputTokens": 17308,
+      "webSearchRequests": 0,
+      "costUSD": 0.289161,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 3118,
+      "cacheCreationEphemeral5mInputTokens": 17308,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 3,
+    "leer_pagina": 7,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 2
+  },
+  "prompts": {
+    "investigador": "2",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "3",
+    "costo_usd_referencia": 0.1718275,
+    "turnos": 2,
+    "duracion_s": 64.0,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4080,
+        "outputTokens": 34,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.00425,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 5434,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5074,
+        "webSearchRequests": 0,
+        "costUSD": 0.1675775,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 3774,
+        "cacheCreationEphemeral5mInputTokens": 5074,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 12,
+      "datos_despues": 12,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se conservaron los 12 datos porque todas las citas respaldan adecuadamente sus afirmaciones. El cambio principal en el relato fue eliminar detalles no respaldados por las citas (la mención a Mars Odyssey, el «séptimo invierno marciano», los 90 días de misión original, la afirmación de que el récord anterior de pendiente también era de Opportunity, y la comparación con atletas humanos) para ceñirse"
+    }
+  },
+  "costo_usd_referencia_total": 0.4629185,
+  "costos": {
+    "total_usd": 0.462918,
+    "por_paso": {
+      "investigacion": 0.291091,
+      "revision": 0.171827
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.00618,
+        "entrada": 5875,
+        "salida": 61,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.289161,
+        "entrada": 9,
+        "salida": 13777,
+        "cache_leida": 58580,
+        "cache_escrita": 17308,
+        "razonamiento": 3118
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.167577,
+        "entrada": 3,
+        "salida": 5434,
+        "cache_leida": 0,
+        "cache_escrita": 5074,
+        "razonamiento": 3774
+      }
+    }
+  }
+}

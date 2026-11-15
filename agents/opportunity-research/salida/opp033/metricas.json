@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.23802040000000002,
+  "turnos": 13,
+  "duracion_s": 131.5,
+  "duracion_api_s": 97.0,
+  "tokens": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 15898,
+    "cache_read_input_tokens": 58393,
+    "output_tokens": 10573,
+    "output_tokens_details": {
+      "thinking_tokens": 4668
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 15898
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 2111,
+      "outputTokens": 31,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0022660000000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 8,
+      "outputTokens": 10573,
+      "cacheReadInputTokens": 58393,
+      "cacheCreationInputTokens": 15898,
+      "webSearchRequests": 0,
+      "costUSD": 0.23575440000000003,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 4668,
+      "cacheCreationEphemeral5mInputTokens": 15898,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 9,
+    "buscar_web": 2,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "2",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "3",
+    "costo_usd_referencia": 0.23915749999999997,
+    "turnos": 2,
+    "duracion_s": 98.0,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4500,
+        "outputTokens": 31,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004654999999999999,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 8006,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5494,
+        "webSearchRequests": 0,
+        "costUSD": 0.23450249999999997,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 6283,
+        "cacheCreationEphemeral5mInputTokens": 5494,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 15,
+      "datos_despues": 15,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se eliminaron del relato varias afirmaciones presentes en el borrador narrativo pero sin respaldo en ningún dato numerado: la anécdota de Sullivan vaciando ferreterías y un Home Depot, la cita de Jim Bell sobre «minibarrancos», y la frase «primer gran peligro de la misión». Todos los 15 datos están bien respaldados por sus citas y se conservan íntegramente."
+    }
+  },
+  "costo_usd_referencia_total": 0.4771779,
+  "costos": {
+    "total_usd": 0.477177,
+    "por_paso": {
+      "investigacion": 0.23802,
+      "revision": 0.239157
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006921,
+        "entrada": 6611,
+        "salida": 62,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.235754,
+        "entrada": 8,
+        "salida": 10573,
+        "cache_leida": 58393,
+        "cache_escrita": 15898,
+        "razonamiento": 4668
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.234502,
+        "entrada": 3,
+        "salida": 8006,
+        "cache_leida": 0,
+        "cache_escrita": 5494,
+        "razonamiento": 6283
+      }
+    }
+  }
+}

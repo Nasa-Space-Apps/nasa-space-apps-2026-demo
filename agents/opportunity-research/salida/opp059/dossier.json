@@ -1,0 +1,179 @@
+{
+  "evento_id": "opp059",
+  "titulo": "Problemas de memoria flash ('amnesia') — Opportunity, diciembre 2014 – marzo 2015",
+  "contexto_ampliado": "A mediados de 2014, tras más de diez años explorando la superficie de Marte, el rover Opportunity comenzó a presentar fallos preocupantes en su memoria flash, el sistema encargado de almacenar datos de forma permanente. Antes de que se tomaran medidas drásticas en diciembre de ese año, el rover sufría múltiples reinicios cada día y había acumulado docenas de «eventos de amnesia» y reinicios graves relacionados con la memoria flash.\n\nLa memoria flash del rover funciona de manera parecida a una memoria USB: retiene la información incluso cuando el vehículo se apaga durante la noche marciana para ahorrar energía. Cuando esta memoria falla, los datos científicos recopilados durante el día simplemente desaparecen al apagarse el rover. En el modo sin flash, Opportunity podía seguir realizando observaciones científicas y desplazándose, pero no podía almacenar datos durante el período de reposo nocturno. Es por eso que perder esta capacidad representaba un problema serio para la misión.\n\nPara intentar resolver la situación, el equipo de JPL realizó un reformateo completo de la memoria flash el 4 de septiembre de 2014. Meses después, en diciembre, ejecutaron un segundo reformateo. Ninguno de los dos intentos detuvo los problemas. Ante el fracaso de ambos reformateos, en diciembre de 2014 la NASA anunció que los fallos habían sido rastreados al Banco 7, uno de los siete bancos de circuitos de memoria flash del rover, y se tomó la decisión de operar sin usar la memoria flash. John Callas, director del proyecto MER en JPL, confirmó que la misión podía continuar almacenando datos en la RAM —memoria volátil que pierde toda información cuando el rover se apaga—.\n\nLos ingenieros determinaron que los incidentes de la memoria flash al rechazar datos para almacenamiento ocurrían en uno solo de los siete bancos de circuitos, y planearon enviar comandos para que el rover evitara ese banco por completo. Sin embargo, JPL reconoció que no se había determinado una causa raíz definitiva para la combinación completa de problemas de la flash, ya que muchos de los fallos anteriores no podían atribuirse a un banco específico. Según los expertos, existe un límite en la cantidad de veces que se puede escribir y borrar datos en la memoria flash, y los fallos recientes eran simplemente una señal de la antigüedad del rover.\n\nEl equipo de software de JPL desarrolló una solución más precisa: reescribir el código del rover para que ignorara el Banco 7. El 20 de marzo de 2015, el equipo en tierra recibió la confirmación de que el reformateo se había completado con éxito, reestructurando el ordenador del rover para evitar escribir datos en el Banco 7 del archivo de memoria flash. Opportunity retomó el uso de los seis bancos restantes.\n\nLa solución, sin embargo, no fue definitiva. El nuevo software logró enmascarar el banco dañado, pero los episodios de amnesia y los reinicios inesperados regresaron cada vez que el rover activaba la memoria flash. Opportunity terminó el año 2015 tal como lo había comenzado: operando en modo RAM. Para mayo de 2015, los controladores de la NASA configuraron definitivamente la memoria del rover para que operara únicamente en modo RAM.\n\nEn medio de esta batalla técnica contra la amnesia digital, Opportunity logró un hito memorable: su odómetro superó los 42,195 kilómetros —la distancia equivalente a un maratón terrestre— tras once años y dos meses en la superficie de Marte.",
+  "datos_reales": [
+    {
+      "afirmacion": "El equipo de JPL realizó un reformateo completo de la memoria flash de Opportunity el 4 de septiembre de 2014 debido a múltiples reinicios del ordenador.",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "cita": "mission planners implemented a complete reformat of its flash memory on Sept. 4, 2014. The same day, NASA announced a ninth extension of Opportunity's mission—adding another two years with a mission to nearby Marathon Valley.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En diciembre de 2014, JPL anunció que los problemas de memoria flash —rastreados al Banco 7— llevaron a operar el rover sin usar la memoria flash.",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "cita": "In December 2014, NASA announced that the rover had been plagued with problems with saving telemetry information into its \"non-volatile\" (or flash) memory, a problem traced to one of its seven memory banks (Bank 7).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los fallos de memoria flash provocaban reinicios del ordenador y eventos de amnesia persistentes incluso después de los reformateos.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/",
+      "cita": "Persistent computer resets and \"amnesia\" events on NASA's Mars Exploration rover Opportunity that have occurred after reformatting the robot's flash memory have prompted a shift to a working mode that avoids use of the flash data-storage system.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Antes del cambio a modo sin-flash en diciembre de 2014, el rover experimentaba múltiples reinicios cada día.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/rover-amnesia-event-follows-latest-memory-reformatting/",
+      "cita": "Before switching to the no-flash mode in December, Opportunity was experiencing multiple resets daily.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El rover experimentó docenas de eventos de amnesia y reinicios graves antes de 2015.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/rover-amnesia-event-follows-latest-memory-reformatting/",
+      "cita": "The rover experienced dozens of similar amnesia events and more serious flash-related resets of the onboard computer prior to 2015, then operated without using flash memory until last week.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El 20 de marzo de 2015 se confirmó que el reformateo del software para ignorar el Banco 7 había completado con éxito.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/rover-amnesia-event-follows-latest-memory-reformatting/",
+      "cita": "Opportunity has seven banks of flash memory. This month, the team revised the rover's onboard software to avoid use of Bank 7, where some of the earlier problems with flash memory had been traced. After the March 20 reformatting, the rover resumed use of the other six banks.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "No se determinó una causa raíz definitiva para la combinación completa de problemas de flash.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/rover-amnesia-event-follows-latest-memory-reformatting/",
+      "cita": "No root cause for the full combination of flash problems has been determined, since many of the past problems with flash could not be traced to a specific bank.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El límite de ciclos de escritura/borrado de la memoria flash contribuyó a su fallo, como señal de la antigüedad del rover.",
+      "fuente_url": "https://spaceflightnow.com/2015/03/25/with-memory-restored-opportunity-rover-completes-marathon-on-mars/",
+      "cita": "There is a limit to how many times the computer can write and erase data in flash memory, and the latest fault is simply a sign of the rover's age, officials said.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El reformateo de marzo 2015 fue confirmado por el equipo en tierra el 20 de marzo, estructurando al rover para evitar escribir en el Banco 7.",
+      "fuente_url": "https://spaceflightnow.com/2015/03/25/with-memory-restored-opportunity-rover-completes-marathon-on-mars/",
+      "cita": "Opportunity's ground team received confirmation March 20 that the memory reformatting completed successfully, structuring the rover's computer to avoid writing data on Bank 7 of the flash memory archive, NASA said in a press release.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se realizaron dos reformateos de la memoria flash en 2014: en septiembre y en diciembre. Ninguno resolvió los problemas definitivamente.",
+      "fuente_url": "https://www.planetary.org/articles/12-mer-update-12th-anniversary",
+      "cita": "In September and December 2014, they successfully reformatted flash. Neither effort stopped the issues.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El nuevo software de marzo 2015 logró enmascarar el banco dañado, pero los eventos de amnesia regresaron al activar la flash; el rover terminó 2015 operando en modo RAM.",
+      "fuente_url": "https://www.planetary.org/articles/12-mer-update-12th-anniversary",
+      "cita": "New flight software enabled Opportunity to successfully mask off the corrupted bank in March 2015. But the bouts of amnesia and unexpected reboots returned every time the robot turned on flash. So she ended the year as she began it, operating in RAM mode.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Para mayo de 2015, los controladores de NASA configuraron la memoria de modo que el rover operara únicamente en modo RAM.",
+      "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "cita": "By May 2015, NASA controllers configured the memory so the rover was operating only in RAM-only mode.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El 24-25 de marzo de 2015, mientras se resolvía el problema de memoria, Opportunity recorrió 42,195 km (la distancia de un maratón), siendo el primer vehículo en lograrlo en otro mundo.",
+      "fuente_url": "https://spaceflightnow.com/2015/03/25/with-memory-restored-opportunity-rover-completes-marathon-on-mars/",
+      "cita": "The six-wheeled robot's odometer passed 26.219 miles (42.195 kilometers) Tuesday — the equivalent length of a marathon on Earth — after 11 years and two months on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Opportunity Working in No-Flash Mode for Now",
+      "url": "https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Rover Amnesia Event Follows Latest Memory Reformatting",
+      "url": "https://www.jpl.nasa.gov/news/rover-amnesia-event-follows-latest-memory-reformatting/",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Opportunity – NASA Science Mission Page",
+      "url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "With memory restored, Opportunity rover completes marathon on Mars",
+      "url": "https://spaceflightnow.com/2015/03/25/with-memory-restored-opportunity-rover-completes-marathon-on-mars/",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Opportunity Rover Has Amnesia (IFLScience, enero 2015)",
+      "url": "https://www.iflscience.com/nasa-plans-reformat-flash-memory-opportunity-rover-26737",
+      "editor": "IFLScience",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "MER Update: Opportunity Finishes Another Record Year, Approaches 12th Anniversary",
+      "url": "https://www.planetary.org/articles/12-mer-update-12th-anniversary",
+      "editor": "The Planetary Society / A.J.S. Rayl",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "Número de bancos de memoria flash: JPL (fuente oficial) afirma que Opportunity tiene SIETE bancos de memoria flash ('Opportunity has seven banks of flash memory' y 'one of the seven banks of flash microchip circuitry on board') — https://www.jpl.nasa.gov/news/rover-amnesia-event-follows-latest-memory-reformatting/ y https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/. En cambio, The Planetary Society indica OCHO bancos ('The MER software engineers traced the issues to one of the eight banks in the non-volatile memory drive') — https://www.planetary.org/articles/12-mer-update-12th-anniversary. Se prioriza la fuente oficial JPL (siete bancos).",
+    "El evento original establece el rango de fechas como diciembre 2014 a marzo 2015 (fecha_inicio: 2014-12, fecha_fin: 2015-03), pero los datos del dossier muestran que el primer reformateo ocurrió ya el 4 de septiembre de 2014 [dato 0, fuente: https://science.nasa.gov/mission/mer-opportunity/] y que la configuración definitiva en modo RAM se realizó en mayo de 2015 [dato 14, fuente: https://science.nasa.gov/mission/mer-opportunity/], lo que sugiere que el episodio abarca un período más amplio (septiembre 2014 – mayo 2015) que el indicado en el evento original."
+  ],
+  "huecos": [
+    "La capacidad exacta de la memoria flash (mencionada como 256 MB en la narrativa del evento) no ha podido ser confirmada en ninguna de las páginas leídas de fuentes oficiales JPL o NASA Science.",
+    "La causa raíz definitiva del deterioro del Banco 7 no fue determinada según el propio JPL, y no se encontró documentación técnica posterior que la resuelva.",
+    "No se encontró en las fuentes leídas el número de sol exacto en que se inició el primer evento de amnesia documentado de esta serie.",
+    "No se pudo confirmar el nombre del ingeniero de software específico responsable del parche para enmascarar el Banco 7.",
+    "El relato del borrador incluía fechas específicas no respaldadas por ninguna cita: '11 de diciembre de 2014' como fecha del anuncio de JPL y '27 de marzo de 2015' como fecha del primer evento de amnesia post-parche. Las fuentes solo indican 'diciembre de 2014' y mencionan el evento de amnesia sin fecha exacta.",
+    "No se encontró en las fuentes del dossier información sobre qué cantidad de datos científicos se perdió efectivamente durante los meses de operación en modo RAM (diciembre 2014 – marzo 2015), ni cuántos soles operó el rover en ese modo antes de la actualización de software.",
+    "El evento original atribuye a JPL el resumen de que 'en 2015 perdió el uso de su memoria flash de 256 MB', pero ninguna fuente del dossier recoge esa frase textual de JPL ni confirma la cifra de 256 MB; la fuente más cercana es la de NASA Science que indica la configuración en modo RAM para mayo de 2015 (https://science.nasa.gov/mission/mer-opportunity/)."
+  ],
+  "ideas_visuales": [
+    "Diagrama comparativo de memoria flash frente a RAM: dos paneles mostrando el ciclo día-noche del rover — en el panel de flash los datos se conservan al amanecer, en el panel de RAM la pantalla aparece vacía tras el reposo nocturno (basado en datos 3 y 2).",
+    "Esquema de los siete bancos de memoria flash del rover con el Banco 7 resaltado en rojo y marcado como defectuoso, mientras los otros seis aparecen en verde (basado en datos 4, 8 y 11).",
+    "Línea de tiempo ilustrada con los hitos del episodio: reformateo de septiembre 2014, reformateo de diciembre 2014, cambio a modo sin-flash, parche del 20 de marzo de 2015 y configuración RAM definitiva en mayo 2015 (basado en datos 0, 12, 6, 8, 14).",
+    "Ilustración del rover Opportunity sobre la superficie marciana con un indicador de odómetro digital marcando 42,195 km junto a una pista de maratón superpuesta como referencia visual (basado en dato 15).",
+    "Representación visual de un 'evento de amnesia': secuencia en tres viñetas donde el rover recopila datos de rocas durante el día, se apaga por la noche, y al despertar muestra un registro de datos vacío (basado en datos 2, 3 y 7)."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "La memoria flash retiene información al apagarse el rover durante la noche; en modo sin-flash, los datos se almacenan en RAM volátil y se pierden al apagarse.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/",
+      "cita": "Flash memory retains information even when power is shut off during the rover's overnight power-conserving \"sleep\" time. In the no-flash mode, the rover can continue normal operations of science observations and driving, though it cannot store data during the overnight sleep.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Solo uno de los siete bancos de circuitos de la memoria flash presentaba fallos al recibir datos.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/",
+      "cita": "The incidents of Opportunity's flash memory not accepting data for storage have occurred in only one of the seven banks of flash microchip circuitry on board. The team plans to send commands for the rover to avoid that entire bank.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "John Callas, director del proyecto MER en JPL, confirmó que la misión podía continuar almacenando datos en RAM en lugar de en la memoria flash.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-working-in-no-flash-mode-for-now/",
+      "cita": "\"The mission can continue without storing data to flash memory, and instead store data in volatile RAM,\" said Mars Exploration Rover Project Manager John Callas or NASA's Jet Propulsion Laboratory, Pasadena, California.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}
