@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.19639615000000002,
+  "turnos": 11,
+  "duracion_s": 108.4,
+  "duracion_api_s": 89.5,
+  "tokens": {
+    "input_tokens": 7,
+    "cache_creation_input_tokens": 12229,
+    "cache_read_input_tokens": 33048,
+    "output_tokens": 9268,
+    "output_tokens_details": {
+      "thinking_tokens": 2956
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 12229
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1432,
+      "outputTokens": 30,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0015819999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 7,
+      "outputTokens": 9268,
+      "cacheReadInputTokens": 33048,
+      "cacheCreationInputTokens": 12229,
+      "webSearchRequests": 0,
+      "costUSD": 0.19481415000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 2956,
+      "cacheCreationEphemeral5mInputTokens": 12229,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 5,
+    "buscar_web": 3,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "2",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "3",
+    "costo_usd_referencia": 0.33660049999999997,
+    "turnos": 2,
+    "duracion_s": 149.9,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4768,
+        "outputTokens": 31,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004922999999999999,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 11826,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5762,
+        "webSearchRequests": 0,
+        "costUSD": 0.33167749999999996,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 9471,
+        "cacheCreationEphemeral5mInputTokens": 5762,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 15,
+      "datos_despues": 15,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 4,
+      "huecos_nuevos": 4,
+      "observaciones": "Se conservan los 15 datos porque sus afirmaciones centrales están respaldadas por las citas, pero se señalan cuatro casos donde la afirmación añade detalles ausentes de la cita (tipo de propulsión del LRV, «tres días lunares», pendiente orientada al norte, motivo de la marcha atrás). En el contexto ampliado se eliminaron esos detalles no respaldados y la referencia a la «misión nominal de 90 soles"
+    }
+  },
+  "costo_usd_referencia_total": 0.53299665,
+  "costos": {
+    "total_usd": 0.532996,
+    "por_paso": {
+      "investigacion": 0.196396,
+      "revision": 0.3366
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006505,
+        "entrada": 6200,
+        "salida": 61,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.194814,
+        "entrada": 7,
+        "salida": 9268,
+        "cache_leida": 33048,
+        "cache_escrita": 12229,
+        "razonamiento": 2956
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.331677,
+        "entrada": 3,
+        "salida": 11826,
+        "cache_leida": 0,
+        "cache_escrita": 5762,
+        "razonamiento": 9471
+      }
+    }
+  }
+}

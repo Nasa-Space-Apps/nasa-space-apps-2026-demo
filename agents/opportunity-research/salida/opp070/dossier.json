@@ -1,0 +1,198 @@
+{
+  "evento_id": "opp070",
+  "titulo": "El MRO detecta la tormenta de polvo que se acerca (mayo–julio 2018)",
+  "contexto_ampliado": "El 30 de mayo de 2018, el Mars Reconnaissance Orbiter (MRO) detectó desde su órbita una tormenta de polvo que avanzaba sobre la superficie marciana en dirección a Opportunity. El instrumento que dio la alarma fue la cámara de ángulo ancho MARCI (Mars Color Imager), que elabora mapas globales diarios de Marte y funciona como sistema de alerta meteorológica temprana. En cuanto el equipo del MRO identificó la amenaza, avisó al equipo del rover. JPL publicó inicialmente la fecha de detección como 1 de junio, pero el 12 de junio corrigió su comunicado y la fijó en el 30 de mayo.\n\nLa tormenta creció a una velocidad impresionante. Para el 12 de junio ya cubría unos 14 millones de millas cuadradas —35 millones de kilómetros cuadrados—, lo que equivale a una cuarta parte de la superficie de Marte. Trasladada a la Tierra, esa superficie habría cubierto al mismo tiempo Norteamérica, la Antártida y la Unión Europea. Los científicos señalaron que era la tormenta registrada más temprano en el año dentro del hemisferio norte marciano. Estos eventos de escala planetaria son raros: se estima que ocurren cada tres o cuatro años marcianos, es decir, cada seis a ocho años terrestres; el anterior había sido en 2007.\n\nEl problema inmediato para Opportunity era la energía. El rover dependía de sus paneles solares para sobrevivir y, a medida que el polvo bloqueaba la luz, su producción eléctrica se desplomó. El 1 de junio generaba alrededor de 645 vatios-hora, más de dos tercios de su capacidad original. Apenas una semana después producía solo 22 vatios-hora, casi 100 vatios-hora por debajo de lo que se considera el mínimo necesario para la supervivencia de un rover de su clase. El 8 de junio los responsables de la misión suspendieron todas las operaciones científicas.\n\nEl 10 de junio, Opportunity envió su última señal. Los datos que llegaron a la Tierra mostraron que la opacidad atmosférica (medida en una escala llamada «tau») había alcanzado un valor estimado de 10,8, muy por encima del récord anterior: la tormenta de 2007, que el rover también había sobrevivido, llegó a una tau de algo más de 5,5. Ray Arvidson, subdirector científico de la misión MER, describió la situación así: «El polvo aquí es más grueso que nada de lo que he encontrado jamás, retrocediendo hasta las misiones Viking. Es oscuro, oscuro como el final del crepúsculo». Una noche perpetua y oscura se instaló sobre la ubicación del rover en el valle Perseverance. La temperatura interior registrada en esa última transmisión fue de aproximadamente −29 °C (−20 °F).\n\nUna paradoja de las tormentas de polvo marcianas es que, aunque bloquean la luz del Sol, también absorben calor y elevan la temperatura ambiente alrededor del rover. Esto limitaba las oscilaciones extremas de temperatura y significaba que Opportunity no necesitaba gastar su escasa energía restante en calefacción, lo cual le daba una oportunidad de sobrevivir a la oscuridad.\n\nEl 19 de junio la tormenta fue declarada oficialmente un evento de polvo de escala planetaria. NASA había organizado una teleconferencia de prensa el 13 de junio para informar sobre la situación. Finalmente, a partir del 23 de julio, los instrumentos detectaron que más polvo caía de la atmósfera del que se elevaba: la tormenta había entrado en su fase de decaimiento. El 26 de julio, JPL declaró que se trataba del «principio del fin» del temporal. Aun así, pasarían semanas antes de que el cielo se despejara lo suficiente para que Opportunity pudiera intentar recargarse y restablecer contacto con la Tierra.",
+  "datos_reales": [
+    {
+      "afirmacion": "La cámara MARCI a bordo del MRO actúa como sistema de alerta temprana meteorológica al crear mapas globales diarios de Marte",
+      "fuente_url": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/",
+      "cita": "The Mars Reconnaissance Orbiter has a special role, acting as an early warning system for weather events such as the recent storm. It was the orbiter's wide-angle camera, called the Mars Color Imager, that offered the Opportunity team a heads up about the storm.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las tormentas de polvo de escala planetaria en Marte ocurren aproximadamente cada tres o cuatro años marcianos (seis a ocho años terrestres); la anterior había sido en 2007",
+      "fuente_url": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/",
+      "cita": "These massive, planet-scaled storms are estimated to happen about once every three to four Mars years (six to eight Earth years); the last one was in 2007.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La tormenta de 2018 fue la registrada más temprano en el año en el hemisferio norte de Marte",
+      "fuente_url": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/",
+      "cita": "The most recent dust storm is the earliest ever observed in the northern hemisphere of Mars, said Bruce Cantor of Malin Space Science Systems, deputy principal investigator for the Mars Color Imager.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El 1 de junio el rover generaba ~645 vatios-hora; una semana después solo producía 22 vatios-hora, casi 100 vatios-hora menos del mínimo necesario para sobrevivir",
+      "fuente_url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+      "cita": "The robot went from generating fairly robust power levels on June 1st, around 645 watt-hours or more than two-thirds original capability on landing with pristine solar arrays, to an unheard of, life-threatening low just a week later... Opportunity was producing just 22 watt-hours of power. That is almost 100 watt-hours less than what has been considered necessary for survival for a MER class rover.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Comparada con la Tierra, la tormenta habría cubierto al mismo tiempo Norteamérica, la Antártida y la Unión Europea",
+      "fuente_url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+      "cita": "For perspective, on Earth, the storm would cover North America, Antarctica, and the European Union.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La tormenta fue detectada por primera vez el 30 de mayo de 2018, según la prensa especializada",
+      "fuente_url": "https://spaceflightnow.com/2018/06/13/huge-dust-storm-knocks-aging-mars-rover-out-of-contact-with-earth/",
+      "cita": "First detected May 30, the dust storm has been growing rapidly and is now expected to encircle the entire planet in the next two or three days.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Opportunity Hunkers Down During Dust Storm (actualizado 26 jul 2018)",
+      "url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA Encounters the Perfect Storm for Science (14 jun 2018)",
+      "url": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/",
+      "editor": "NASA vía LASP/MAVEN – University of Colorado Boulder",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Opportunity Pummeled by Massive Dust Storm, Hunkers Down to Sleep (14 jun 2018)",
+      "url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+      "editor": "The Planetary Society – A.J.S. Rayl",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Huge dust storm knocks aging Mars rover out of contact with Earth (13 jun 2018)",
+      "url": "https://spaceflightnow.com/2018/06/13/huge-dust-storm-knocks-aging-mars-rover-out-of-contact-with-earth/",
+      "editor": "Spaceflight Now / CBS News – William Harwood",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "FECHA DE DETECCIÓN: La versión original del comunicado JPL del 8 de junio (reproducida en marsdaily.com, fragmento del buscador: 'NASA's Mars Reconnaissance Orbiter first detected the storm on Friday, June 1') indicaba el viernes 1 de junio. El 12 de junio JPL publicó una corrección explícita ('Updated 6:30 p.m. June 12, 2018 to correct and clarify the dates') cambiando la fecha al miércoles 30 de mayo. Fuentes: https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/ (versión corregida, mayo 30) vs. https://www.marsdaily.com/reports/Regional_dust_storm_is_affecting_Opportunity_Mars_rover_999.html (versión original antes de corrección, junio 1; página no accesible para lectura completa).",
+    "FECHA DEL PICO DE TAU: JPL oficial atribuye la lectura de tau 10,8 a 'Sunday morning' (domingo 10 de junio de 2018). Spaceflightnow (publicado el 13 de junio) menciona 'an estimated tau of nearly 11 as of June 6' (miércoles 6 de junio). Ambas cifras son cercanas pero las fechas difieren; podría tratarse de un error de fecha en la cobertura de prensa. Fuentes: https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/ (tau 10,8, 10 jun) vs. https://spaceflightnow.com/2018/06/13/huge-dust-storm-knocks-aging-mars-rover-out-of-contact-with-earth/ (tau 'nearly 11', 6 jun).",
+    "El dato [2] afirma que tau 10,8 fue 'el valor más alto jamás registrado en Marte', pero la cita literal solo dice 'this new storm had an estimated tau of 10.8 as of Sunday morning' sin calificarlo explícitamente de récord. El carácter récord se infiere al comparar con el dato [3] (tau ~5,5 en 2007), pero no está en la cita de [2] de forma directa (fuente: https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/).",
+    "El dato [16] atribuye a Ray Arvidson el cargo de 'subdirector científico de la misión MER', pero la cita literal solo recoge sus palabras textuales sin indicar su cargo. La atribución del título no está respaldada por la cita presentada (fuente: https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep)."
+  ],
+  "huecos": [
+    "El valor exacto de tau del 30 de mayo de 2018 (el evento menciona 0,6, pero no se encontró confirmación literal en ninguna fuente leída).",
+    "El valor exacto de tau el 6 de junio de 2018 (Spaceflightnow menciona 'nearly 11' pero JPL no da un valor específico para ese día).",
+    "El número de sol exacto de Opportunity el día de la detección (30 de mayo de 2018).",
+    "Los detalles específicos de los planes de contingencia que el equipo preparó tras el aviso del MRO.",
+    "La evolución de las lecturas de tau entre el 1 de junio y el 10 de junio (solo se confirman los valores de los extremos).",
+    "El evento original menciona que 'el 6 de junio ya estaba cerca' la tormenta, pero ningún dato conservado confirma un hito específico para esa fecha.",
+    "La nota del evento menciona '31 mayo' como fecha alternativa que dan algunas fuentes, pero el borrador solo encontró las variantes 30 de mayo y 1 de junio; la fecha del 31 de mayo no aparece en ninguna fuente consultada."
+  ],
+  "ideas_visuales": [
+    "Ilustración del MRO en órbita marciana con su cámara MARCI creando un mapa global diario; en la superficie se distingue una mancha de polvo marrón-anaranjada creciendo (datos [0], [12]).",
+    "Infografía comparativa: silueta de Marte con la tormenta cubriendo un cuarto de su superficie, y al lado un mapamundi terrestre con Norteamérica, la Antártida y la UE coloreadas para mostrar el área equivalente (datos [1], [17]).",
+    "Gráfico de barras con la caída de energía de Opportunity: barra alta de 645 Wh el 1 de junio frente a barra diminuta de 22 Wh una semana después, con una línea roja punteada marcando el umbral mínimo de supervivencia (dato [15]).",
+    "Escena del rover Opportunity en el valle Perseverance sumido en oscuridad total, con el cielo denso de polvo y sin luz solar visible; texto superpuesto: tau = 10,8 (datos [2], [4], [5]).",
+    "Diagrama comparativo de opacidad (tau): barra de 5,5 para la tormenta de 2007 y barra casi el doble de 10,8 para la de 2018, con escala visual que va de cielo despejado a noche total (datos [2], [3]).",
+    "Línea de tiempo ilustrada del evento: 30 mayo (detección) → 8 junio (suspensión de ciencia) → 10 junio (última señal) → 19 junio (escala planetaria) → 23 julio (fase de decaimiento) → 26 julio ('principio del fin') (datos [0], [18], [5], [8], [9], [10])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El Mars Reconnaissance Orbiter detectó por primera vez la tormenta el miércoles 30 de mayo de 2018 (fecha corregida por JPL el 12 de junio)",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "NASA's Mars Reconnaissance Orbiter first detected the storm on Wednesday, May 30.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Para el 12 de junio, la tormenta cubría 14 millones de millas cuadradas (35 millones de km²), equivalente a una cuarta parte de la superficie de Marte",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "The storm, which was first detected on May 30, now blankets 14-million square miles (35-million square kilometers) of Martian surface -- a quarter of the planet.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El 10 de junio de 2018, la opacidad atmosférica (tau) sobre Opportunity alcanzó 10,8, el valor más alto jamás registrado en Marte",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "this new storm had an estimated tau of 10.8 as of Sunday morning.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La tormenta de polvo de 2007, que Opportunity también sobrevivió, alcanzó una tau de algo más de 5,5",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "The previous storm had an opacity level, or tau, somewhere above 5.5",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Una noche perpetua y oscura se instaló sobre la ubicación del rover en el valle Perseverance de Marte",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "A dark, perpetual night has settled over the rover's location in Mars' Perseverance Valley.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La última señal recibida de Opportunity fue el 10 de junio de 2018",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "The last signal received from the rover was on June 10.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La transmisión del 10 de junio mostró que la temperatura del rover era de aproximadamente -20 °F (-29 °C)",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "This latest data transmission showed the rover's temperature to be about minus 20 degrees Fahrenheit (minus 29 degrees Celsius).",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La tormenta de polvo elevaba la temperatura ambiente alrededor del rover al absorber el calor solar, limitando las oscilaciones extremas de temperatura",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "One saving grace of dust storms is that they can actually limit the extreme temperature swings experienced on the Martian surface. The same swirling dust that blocks out sunlight also absorbs heat, raising the ambient temperature surrounding Opportunity.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El 19 de junio de 2018, la tormenta fue declarada oficialmente un evento de polvo de escala planetaria ('planet-encircling')",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "As of Tuesday morning, June 19, the Martian dust storm had grown in size and was officially a \"planet-encircling\" (or \"global\") dust event, according to Bruce Cantor of Malin Space Science Systems",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "A partir del 23 de julio de 2018, más polvo caía del que se elevaba en la atmósfera, señal del inicio de la fase de decaimiento de la tormenta",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "as of Monday, July 23, more dust is falling out than is being raised into the planet's thin air. That means the event has reached its decay phase",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El 26 de julio de 2018, JPL declaró que la tormenta había llegado al 'principio del fin'",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "It's the beginning of the end for the planet-encircling dust storm on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "NASA organizó una teleconferencia de prensa el miércoles 13 de junio de 2018 para informar sobre la tormenta",
+      "fuente_url": "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "cita": "NASA is holding a news teleconference on Wednesday, June 13, to discuss the storm and the observations of it by various spacecraft.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El subdirector científico de la misión MER, Ray Arvidson, describió el polvo como el más denso que había encontrado en toda su carrera, incluyendo las misiones Viking",
+      "fuente_url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+      "cita": "The dust here is thicker than anything I have ever encountered, going back to Viking missions. It's dark, like the end of twilight dark.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Las operaciones científicas de Opportunity fueron suspendidas el 8 de junio de 2018 por la caída de los niveles de energía",
+      "fuente_url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+      "cita": "The steadily dropping power levels forced mission managers to suspend science operations on June 8.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

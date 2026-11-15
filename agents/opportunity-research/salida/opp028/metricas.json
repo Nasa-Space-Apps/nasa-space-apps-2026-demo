@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.3442525,
+  "turnos": 18,
+  "duracion_s": 136.7,
+  "duracion_api_s": 96.2,
+  "tokens": {
+    "input_tokens": 11,
+    "cache_creation_input_tokens": 38690,
+    "cache_read_input_tokens": 143280,
+    "output_tokens": 10291,
+    "output_tokens_details": {
+      "thinking_tokens": 3303
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 38690
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1658,
+      "outputTokens": 25,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0017829999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 11,
+      "outputTokens": 10291,
+      "cacheReadInputTokens": 143280,
+      "cacheCreationInputTokens": 38690,
+      "webSearchRequests": 0,
+      "costUSD": 0.3424695,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 3303,
+      "cacheCreationEphemeral5mInputTokens": 38690,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 11,
+    "buscar_web": 4,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "2",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "3",
+    "costo_usd_referencia": 0.2471235,
+    "turnos": 2,
+    "duracion_s": 87.1,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4836,
+        "outputTokens": 27,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004971,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 8228,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5830,
+        "webSearchRequests": 0,
+        "costUSD": 0.2421525,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 6235,
+        "cacheCreationEphemeral5mInputTokens": 5830,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 16,
+      "datos_despues": 16,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se conservan los 16 datos porque todas las citas respaldan sus afirmaciones. Se eliminaron del relato dos detalles sin respaldo en citas (panel solar visible en esquina de PIA07065 y efecto de curvatura aparente del mosaico). La contradicción más relevante es que el evento original omite PIA07110 y atribuye el rango soles 287–294 a PIA07065, que en realidad corresponde al sol 285."
+    }
+  },
+  "costo_usd_referencia_total": 0.591376,
+  "costos": {
+    "total_usd": 0.591375,
+    "por_paso": {
+      "investigacion": 0.344252,
+      "revision": 0.247123
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006754,
+        "entrada": 6494,
+        "salida": 52,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.342469,
+        "entrada": 11,
+        "salida": 10291,
+        "cache_leida": 143280,
+        "cache_escrita": 38690,
+        "razonamiento": 3303
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.242152,
+        "entrada": 3,
+        "salida": 8228,
+        "cache_leida": 0,
+        "cache_escrita": 5830,
+        "razonamiento": 6235
+      }
+    }
+  }
+}

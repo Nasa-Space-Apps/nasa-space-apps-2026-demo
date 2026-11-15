@@ -1,0 +1,83 @@
+{
+  "modo": "plan de Claude (claude-sonnet-5-5)",
+  "costo_usd_referencia": 0.6422844,
+  "turnos": 15,
+  "duracion_s": 121.8,
+  "duracion_api_s": 87.1,
+  "tokens": {
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 109503,
+    "cache_read_input_tokens": 639396,
+    "output_tokens": 14007,
+    "output_tokens_details": {
+      "thinking_tokens": 1036
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 109503,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4628,
+        "cache_read_input_tokens": 110870,
+        "cache_creation_input_tokens": 2267,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2267
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "claude-haiku-5-5": {
+      "inputTokens": 2173,
+      "outputTokens": 27,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.00023080000000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5-5": {
+      "inputTokens": 16,
+      "outputTokens": 14007,
+      "cacheReadInputTokens": 639396,
+      "cacheCreationInputTokens": 109503,
+      "webSearchRequests": 0,
+      "costUSD": 0.6420536,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1036,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 109503,
+      "canonicalModel": "claude-sonnet-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 5,
+    "buscar_web": 4,
+    "buscar_imagenes_nasa": 1,
+    "buscar_papers_ntrs": 1,
+    "archivos_nasa": 1,
+    "StructuredOutput": 2
+  }
+}

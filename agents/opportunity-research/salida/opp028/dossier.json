@@ -1,0 +1,174 @@
+{
+  "evento_id": "opp028",
+  "titulo": "«Burns Cliff»: panorama de la pared interior de Endurance (soles 287–294)",
+  "contexto_ampliado": "En noviembre de 2004, el rover Opportunity de la NASA se encontraba dentro del cráter Endurance, un cráter de impacto de 130 metros de diámetro y aproximadamente 20 metros de profundidad, situado en la región de Meridiani Planum, en Marte. El cráter recibió su nombre en honor al barco Endurance de la expedición Imperial Trans-Antártica de Ernest Shackleton (1914–1917), considerada la última expedición de la Era Heroica de la Exploración Antártica. El rover había ingresado al cráter en el sol 134 (15 de junio de 2004) y lo abandonaría en el sol 315 (14 de diciembre), tras casi seis meses de exploración en su interior.\n\nUno de los objetivos finales dentro del cráter fue Burns Cliff, la parte sureste de la pared interior de Endurance, nombrada en honor al mineralogista Roger Burns del Instituto Tecnológico de Massachusetts (MIT). Las paredes del cráter contenían capas con pistas sobre el pasado antiguo de Marte: cuanto más profunda la capa, más antigua la información que guardaba. Por eso, este acantilado estratificado resultaba especialmente valioso para reconstruir la historia geológica del planeta.\n\nOpportunity realizó dos sesiones de imágenes en la zona. Primero, el sol 285 (11 de noviembre de 2004), la cámara de navegación capturó imágenes que se combinaron en un anaglifo estereoscópico (PIA07065), mostrando al rover en la base de Burns Cliff. Después, entre los soles 287 y 294 (del 13 al 20 de noviembre), la cámara panorámica Pancam tomó 46 imágenes individuales, cada una en siete filtros distintos, que se ensamblaron en un mosaico panorámico de más de 180 grados (PIA07110). Este mosaico se generó con los filtros de 750, 530 y 430 nanómetros, produciendo una representación en color aproximadamente verdadero.\n\nLa exploración de Burns Cliff reveló datos geológicos significativos. Las capas más profundas mostraban cantidades decrecientes de magnesio y azufre, lo que los científicos interpretaron como posible evidencia de disolución en agua. Los datos obtenidos en Endurance indicaron que el agua en Meridiani Planum no había sido permanente sino episódica: inundaciones periódicas cubrían el paisaje y luego se secaban. Los materiales como sulfatos y evaporitas hallados en los afloramientos llevaron a los científicos a considerar que ese antiguo mar poco profundo era probablemente bastante ácido.\n\nSin embargo, la exploración tuvo limitaciones físicas: el elevado deslizamiento de las ruedas impidió que Opportunity utilizara su brazo robótico en Burns Cliff, aunque las imágenes de alta resolución tomadas con la Pancam resultaron suficientes para los análisis geológicos. Las capas registradas en el acantilado serían identificadas posteriormente como parte de la «Formación Burns», una formación geológica trazable hacia el sur del cráter. Burns Cliff fue la última parada científica dentro de Endurance antes de que el rover emprendiera su salida, que logró a pesar de las dificultades causadas por el deslizamiento de las ruedas.\n\nEn 2006, el equipo de visualización del JPL creó una imagen sintética (PIA03241), publicada el 19 de octubre de ese año, mediante la tecnología denominada «Virtual Presence in Space». Esta técnica combina herramientas de visualización y procesamiento de imágenes con efectos especiales de tipo cinematográfico. La imagen resultante incorporó un modelo fotorrealista del rover dentro del mosaico panorámico real, con su tamaño calculado a partir de las huellas de las ruedas visibles en el mosaico, lo que permite apreciar la escala real del acantilado frente al pequeño vehículo explorador.",
+  "datos_reales": [
+    {
+      "afirmacion": "El panorama en color de Burns Cliff (PIA07110/PIA03241) fue tomado por la cámara panorámica Pancam entre los soles 287 y 294 de Opportunity (13 al 20 de noviembre de 2004).",
+      "fuente_url": "https://photojournal.jpl.nasa.gov/catalog/PIA07110",
+      "cita": "The view combines frames taken by Opportunity's panoramic camera between the rover's 287th and 294th martian days (Nov. 13 to 20, 2004).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El mosaico de Burns Cliff es un compuesto de 46 imágenes individuales, cada una adquirida en siete filtros distintos de la Pancam, y abarca más de 180 grados de lado a lado.",
+      "fuente_url": "https://photojournal.jpl.nasa.gov/catalog/PIA07110",
+      "cita": "This is a composite of 46 different images, each acquired in seven different Pancam filters. [...] The mosaic spans more than 180 degrees side to side.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El mosaico es una representación en color aproximadamente verdadero generada a partir de los filtros de 750, 530 y 430 nanómetros de la cámara panorámica.",
+      "fuente_url": "https://photojournal.jpl.nasa.gov/catalog/PIA07110",
+      "cita": "It is an approximately true-color rendering generated from the panoramic camera's 750-nanometer, 530-nanometer and 430-nanometer filters.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El anaglifo estereoscópico PIA07065 fue tomado por la cámara de navegación de Opportunity el sol 285 (11 de noviembre de 2004) y muestra a Opportunity en la base de Burns Cliff con capas de roca visibles en la pared.",
+      "fuente_url": "https://www.jpl.nasa.gov/images/pia07065-opportunity-at-the-wall-3-d",
+      "cita": "The navigation camera on NASA's Mars Exploration Rover Opportunity took images during the rover's 285th martian day (Nov. 11, 2004) that are combined into this stereo panorama. Opportunity had reached the base of \"Burns Cliff,\" a portion of the inner wall of \"Endurance Crater.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen sintética PIA03241 fue creada con tecnología 'Virtual Presence in Space', que combina herramientas de visualización y efectos especiales de tipo cinematográfico, e incorpora un modelo fotorrealista del rover cuyo tamaño fue calculado a partir de las huellas de sus ruedas en el mosaico.",
+      "fuente_url": "https://www.jpl.nasa.gov/images/pia03241-opportunity-on-burns-cliff-simulated/",
+      "cita": "This synthetic image of NASA's Opportunity Mars Exploration Rover inside Endurance Crater was produced using \"Virtual Presence in Space\" technology. Developed at NASA's Jet Propulsion Laboratory, Pasadena, Calif., this technology combines visualization and image processing tools with Hollywood-style special effects. The image was created using a photorealistic model of the rover and an approximately full-color mosaic. The size of the rover in the image is approximately correct and was based on the size of the rover tracks in the mosaic.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen sintética PIA03241 fue publicada por JPL el 19 de octubre de 2006.",
+      "fuente_url": "https://www.jpl.nasa.gov/images/pia03241-opportunity-on-burns-cliff-simulated/",
+      "cita": "Jet Propulsion Laboratory https://www.jpl.nasa.gov/ Oct. 19, 2006",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Burns Cliff es la parte sureste de la pared interior del cráter Endurance.",
+      "fuente_url": "https://www.jpl.nasa.gov/images/pia03241-opportunity-on-burns-cliff-simulated/",
+      "cita": "Opportunity captured the underlying view of \"Burns Cliff\" after driving right to the base of this southeastern portion of the inner wall of \"Endurance Crater.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las capas de la pared del cráter Endurance contienen pistas sobre el pasado antiguo de Marte; cuanto más profunda es la capa, más antigua es la información que contiene.",
+      "fuente_url": "https://science.nasa.gov/image-article/apod-2004-november-15-burns-cliff-on-mars/",
+      "cita": "The majestic walls of Endurance Crater contain layers of clues about the ancient past of Mars. In fact, the deeper the layer, the older the clue.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cráter Endurance tiene un diámetro de 130 metros y una profundidad aproximada de 20 metros (66 pies).",
+      "fuente_url": "https://en.wikipedia.org/wiki/Endurance_(crater)",
+      "cita": "Diameter: 130 m [...] Depth: Approx. 20 m (66 ft)",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Burns Cliff fue la última parada científica dentro del cráter Endurance. El rover salió con dificultades por el deslizamiento de las ruedas, pero lo logró.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Endurance_(crater)",
+      "cita": "Burns Cliff was the final science stop inside Endurance. The rover had some trouble making it out, noticing slippage, but prevailed.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "PIA07065: Opportunity at the Wall (3-D)",
+      "url": "https://www.jpl.nasa.gov/images/pia07065-opportunity-at-the-wall-3-d",
+      "editor": "NASA/JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "PIA03241: Opportunity on 'Burns Cliff' (Simulated)",
+      "url": "https://www.jpl.nasa.gov/images/pia03241-opportunity-on-burns-cliff-simulated/",
+      "editor": "NASA/JPL-Solar System Visualization Team",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "PIA07110: 'Burns Cliff' Color Panorama",
+      "url": "https://photojournal.jpl.nasa.gov/catalog/PIA07110",
+      "editor": "NASA/JPL Photojournal",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "APOD: 2004 November 15 - Burns Cliff on Mars",
+      "url": "https://science.nasa.gov/image-article/apod-2004-november-15-burns-cliff-on-mars/",
+      "editor": "NASA Science / APOD",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Endurance (crater) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Endurance_(crater)",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "PIA07065 (JPL) indica que el anaglifo estereoscópico de la cámara de navegación fue tomado en el sol 285 (11 de noviembre de 2004) — URL: https://www.jpl.nasa.gov/images/pia07065-opportunity-at-the-wall-3-d —, mientras que el evento opp028 lo asocia con 'soles 287–294'. La explicación más probable es que son dos imágenes distintas: PIA07065 es el anaglifo de la cámara de navegación (sol 285) y PIA07110/PIA03241 es el mosaico de color de la Pancam (soles 287–294). Sin embargo, el evento agrupa ambos bajo el mismo rango de soles, lo que genera ambigüedad.",
+    "El evento original lista 'Panorama 3D (anaglifo) PIA07065' en sus datos_clave pero no menciona PIA07110, que según la fuente https://photojournal.jpl.nasa.gov/catalog/PIA07110 es el verdadero mosaico panorámico de la Pancam tomado entre los soles 287–294. PIA07065 es un producto distinto: un anaglifo estereoscópico de la cámara de navegación tomado en el sol 285 (fuente: https://www.jpl.nasa.gov/images/pia07065-opportunity-at-the-wall-3-d). El evento parece confundir ambos productos o al menos omite el identificador principal del panorama que describe."
+  ],
+  "huecos": [
+    "No se pudo confirmar el ángulo exacto de inclinación de la pendiente de Burns Cliff que el rover tuvo que descender.",
+    "No se pudo confirmar la distancia total recorrida por el rover dentro del cráter Endurance hasta llegar a Burns Cliff.",
+    "No se pudo confirmar la composición química específica capa por capa de Burns Cliff más allá de la tendencia general de magnesio y azufre.",
+    "No se encontró en fuentes oficiales la fecha exacta (en sol marciano) en que el rover llegó físicamente a la base de Burns Cliff para iniciar la sesión de imágenes; PIA07065 dice sol 285 pero la descripción del evento dice sol 287.",
+    "No se pudo verificar si la tecnología 'Virtual Presence in Space' de JPL fue usada exclusivamente para esta imagen de Burns Cliff o para otras imágenes de la misión.",
+    "El evento describe Burns Cliff como 'una pila vertical de rocas finamente estratificadas': el adverbio 'finamente' no aparece en ninguna de las fuentes del dossier, que solo mencionan 'capas' (layers) sin calificar su grosor o finura.",
+    "El evento afirma que 'el rover bajó despacio por la pendiente': ninguna fuente del dossier confirma la velocidad del descenso; solo se documenta el elevado deslizamiento de ruedas (datos [12] y [15])."
+  ],
+  "ideas_visuales": [
+    "Vista esquemática cenital del cráter Endurance (130 m de diámetro, ~20 m de profundidad) con la ubicación de Burns Cliff señalada en la pared sureste.",
+    "Opportunity en la base de Burns Cliff tal como lo captó la cámara de navegación el sol 285: anaglifo estereoscópico PIA07065 mostrando la pared interior del cráter.",
+    "El mosaico panorámico de más de 180° de Burns Cliff en color aproximadamente verdadero (PIA07110), compuesto por 46 imágenes en filtros de 750, 530 y 430 nm.",
+    "Diagrama geológico de las capas de Burns Cliff indicando la tendencia decreciente de magnesio y azufre en las capas más profundas, con anotación sobre la posible disolución en agua.",
+    "La imagen sintética PIA03241 (2006): modelo fotorrealista del rover insertado a escala real dentro del panorama, con las huellas de ruedas como referencia de tamaño.",
+    "Línea de tiempo visual de Opportunity en Endurance: entrada (sol 134, 15 de junio), imágenes en Burns Cliff (soles 285–294, noviembre) y salida del cráter (sol 315, 14 de diciembre)."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Las capas más profundas de Burns Cliff contienen cantidades decrecientes de magnesio y azufre, lo que los científicos interpretaron como posible disolución en agua.",
+      "fuente_url": "https://science.nasa.gov/image-article/apod-2004-november-15-burns-cliff-on-mars/",
+      "cita": "deeper layers contain similarly decreasing amounts of both magnesium and sulfur, indicating a common reason for their decline -- possibly dissolution in water.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El cráter Endurance fue nombrado en honor al barco Endurance de la expedición Imperial Trans-Antártica de Shackleton (1914–1917), considerada la última expedición de la Era Heroica de la Exploración Antártica.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Endurance_(crater)",
+      "cita": "Mission scientists named the crater after the ship Endurance that sailed to the Antarctic through the Weddell Sea during the ill-fated 1914–1917 Imperial Trans-Antarctic Expedition, considered to be the last expedition of the Heroic Age of Antarctic Exploration organized by Ernest Shackleton.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Opportunity entró al cráter Endurance en el sol 134 y lo abandonó en el sol 315.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Endurance_(crater)",
+      "cita": "The rover entered the crater interior on its 134th mission sol (June 15), and exited on the 315th sol (December 14).",
+      "confianza": "media",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Burns Cliff recibe su nombre del mineralogista Roger Burns del MIT. El elevado deslizamiento de ruedas impidió usar el brazo robótico, pero se realizaron imágenes de alta resolución con la Pancam.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Endurance_(crater)",
+      "cita": "Burns Cliff, named for the late mineralogist Roger Burns of MIT, was studied closely by Opportunity. High amounts of slippage prevented the rover from using its robotic arm, however high resolution imaging was conducted with the Pancam.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Las capas de Burns Cliff serían identificadas más tarde como parte de la 'Formación Burns', una formación geológica trazable hacia el sur del cráter.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Endurance_(crater)",
+      "cita": "The layers in the cliff would later be followed south of the crater to identify it as a geologic formation, in this case the \"Burns Formation\".",
+      "confianza": "media",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Los datos de Endurance mostraron que el agua en Meridiani Planum no fue permanente sino episódica, con inundaciones periódicas que se secaban. Las evaporitas y sulfatos sugieren un antiguo mar poco profundo probablemente ácido.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Endurance_(crater)",
+      "cita": "Endurance provided mission scientists with a cross-section of the bedrock on this part of Mars, showing that liquid water hadn't flowed across the surface just once, but was of an episodic nature, and wasn't permanently present, with floods periodically washing over the landscape, and then drying up again. Interpretation of the materials (such as sulfates) in Endurance's evaporite outcrops led mission scientists to believe that this shallow sea was probably rather acidic in nature.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    }
+  ]
+}

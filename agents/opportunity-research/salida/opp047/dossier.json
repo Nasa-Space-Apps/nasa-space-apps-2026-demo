@@ -1,0 +1,151 @@
+{
+  "evento_id": "opp047",
+  "titulo": "Hallazgo de la vena de yeso 'Homestake' — Opportunity en Cape York (nov.–dic. 2011)",
+  "contexto_ampliado": "El 7 de diciembre de 2011, durante la conferencia anual de la Unión Geofísica Americana (AGU) celebrada en San Francisco, el equipo de la misión Mars Exploration Rover presentó uno de los hallazgos más notables de Opportunity: una vena mineral brillante llamada «Homestake», localizada en el borde del cráter Endeavour, en el segmento conocido como Cape York. La noticia concentró la atención de la comunidad científica porque ofrecía evidencia directa de agua líquida que depositó un mineral exactamente donde hoy se lo encuentra.\n\nLa vena Homestake mide entre 40 y 50 centímetros de largo y tiene el ancho de un pulgar humano —entre 1 y 2 centímetros—, y sobresale ligeramente por encima de la roca de fondo en ambos lados. En noviembre de 2011, el equipo utilizó tres instrumentos del rover para examinarla: el Microscopio Imager (MI), el espectrómetro de Partículas Alfa y Rayos X (APXS) y la cámara panorámica Pancam con múltiples filtros. El espectrómetro detectó abundante calcio y azufre en una proporción que apunta a sulfato de calcio casi puro, y los datos multifiltro de la Pancam sugieren específicamente yeso, es decir, sulfato de calcio hidratado, el mismo mineral que en la Tierra se emplea para fabricar yeso de pared (drywall) y escayola.\n\nSteve Squyres, investigador principal de la misión en la Universidad de Cornell, resumió el significado del hallazgo con contundencia: según sus palabras, la vena cuenta una «historia aplastante» (slam-dunk story) de que el agua fluyó a través de fracturas subterráneas en la roca. La clave, explicó Squyres, es que este depósito se formó in situ —exactamente donde fue encontrado—, algo que no podía afirmarse de ningún otro mineral de yeso visto en Marte ni de otros minerales relacionados con el agua que Opportunity hubiera detectado antes. Nada parecido a Homestake se había observado en los 33 kilómetros de llanuras repletas de cráteres que el rover exploró durante 90 meses antes de alcanzar el cráter Endeavour.\n\nBenton Clark, del Instituto de Ciencias del Espacio en Boulder, Colorado, señaló una implicación de gran alcance: el sulfato de calcio altamente concentrado de Homestake podría haberse formado en condiciones más neutras que las del ambiente ácido revelado por los otros depósitos de sulfatos observados por Opportunity. Según Clark, esto sugiere «un tipo diferente de ambiente acuático, más hospitalario para una mayor variedad de organismos vivos». La distinción importa porque el agua extremadamente ácida evidenciada en depósitos anteriores habría representado una barrera para muchas formas de vida, mientras que un ambiente más neutro ampliaría el rango de vida posible en el Marte antiguo.\n\nLa ubicación de Homestake aporta pistas geológicas adicionales. Las venas aparecen justo donde la roca sedimentaria rica en sulfatos de las llanuras se encuentra con la roca volcánica más antigua expuesta en el borde del cráter Endeavour. Ray Arvidson, investigador adjunto de la misión en la Universidad de Washington en St. Louis, propuso que el agua subterránea procedente de la corteza antigua pudo haber ascendido a través del material adyacente a Cape York y depositado el yeso, dado que este mineral es relativamente insoluble en comparación con los sulfatos de magnesio o de hierro.\n\nPara principios de diciembre de 2011, Opportunity había recorrido 21,35 millas (unos 34,4 kilómetros) sobre suelo marciano, acercándose al récord de conducción fuera de la Tierra que ostentaba el vehículo soviético Lunokhod 2 desde 1973. El rover se preparaba para afrontar su quinto invierno marciano dirigiéndose a una pendiente orientada hacia el sol en el extremo norte de Cape York, donde la inclinación del terreno mantendría sus paneles solares en un ángulo favorable. Así, el hallazgo de Homestake marcó un hito en la exploración de Marte: la primera vez que se identificó un depósito mineral formado en el lugar exacto donde se lo encontró, en un ambiente acuático potencialmente más habitable de lo que sugerían los descubrimientos previos.",
+  "datos_reales": [
+    {
+      "afirmacion": "La vena Homestake mide entre 40 y 50 cm de largo y entre 1 y 2 cm de ancho (del ancho de un pulgar humano), y sobresale ligeramente de la roca circundante.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "The vein examined most closely by Opportunity is about the width of a human thumb (0.4 to 0.8 inch, or 1 to 2 centimeters), 16 to 20 inches (40 to 50 centimeters) long, and protrudes slightly higher than the bedrock on either side of it.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El descubrimiento de Homestake fue presentado el miércoles 7 de diciembre de 2011 en la conferencia de la AGU en San Francisco.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "The latest findings by Opportunity were presented Wednesday at the American Geophysical Union's conference in San Francisco.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En noviembre de 2011, el equipo usó el Microscopio Imager, el espectrómetro APXS y la Pancam con múltiples filtros para examinar la vena, bautizada informalmente como 'Homestake'.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "Last month, researchers used the Microscopic Imager and Alpha Particle X-ray Spectrometer on the rover's arm and multiple filters of the Panoramic Camera on the rover's mast to examine the vein, which is informally named \"Homestake.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El espectrómetro identificó abundante calcio y azufre en una proporción que apunta a sulfato de calcio casi puro.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "The spectrometer identified plentiful calcium and sulfur, in a ratio pointing to relatively pure calcium sulfate.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los datos multifiltro de la cámara panorámica sugieren que el mineral es yeso, un sulfato de calcio hidratado; en la Tierra, el yeso se usa para fabricar yeso de pared y escayola.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "The multi-filter data from the camera suggest gypsum, a hydrated calcium sulfate. On Earth, gypsum is used for making drywall and plaster of Paris.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Steve Squyres (investigador principal de Opportunity, Universidad de Cornell) calificó el hallazgo de historia 'definitiva' de que el agua fluyó por fracturas subterráneas en la roca.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "\"This tells a slam-dunk story that water flowed through underground fractures in the rock,\" said Steve Squyres of Cornell University, Ithaca, N.Y., principal investigator for Opportunity. \"This stuff is a fairly pure chemical deposit that formed in place right where we see it. That can't be said for other gypsum seen on Mars or for other water-related minerals Opportunity has found.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Nada similar a la vena Homestake se observó en los 33 kilómetros de llanuras repletas de cráteres que Opportunity exploró durante 90 meses antes de llegar al cráter Endeavour.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "None like it were seen in the 20 miles (33 kilometers) of crater-pocked plains that Opportunity explored for 90 months before it reached Endeavour, nor in the higher ground of the rim.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sulfato de calcio de Homestake podría haberse formado en condiciones más neutras que las del ambiente ácido indicado por los otros depósitos de sulfatos observados por Opportunity.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "The highly concentrated calcium sulfate at Homestake could have been produced in conditions more neutral than the harshly acidic conditions indicated by the other sulfate deposits observed by Opportunity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Benton Clark (Space Science Institute) afirmó que el depósito podría haberse formado en un ambiente acuático más hospitalario para una mayor variedad de organismos vivos.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "\"It could have formed in a different type of water environment, one more hospitable for a larger variety of living organisms,\" Clark said.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las venas similares a Homestake aparecen en la zona donde la roca sedimentaria rica en sulfatos de las llanuras se une con la roca volcánica más antigua expuesta en el borde del cráter Endeavour.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "Homestake and similar-looking veins appear in a zone where the sulfate-rich sedimentary bedrock of the plains meets older, volcanic bedrock exposed at the rim of Endeavour.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ray Arvidson (Universidad de Washington, investigador adjunto de la misión) propuso que el agua subterránea procedente de la corteza antigua pudo ascender a través del material adyacente a Cape York y depositar el yeso.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "\"The answer may be that rising groundwater coming from the ancient crust moved through material adjacent to Cape York and deposited gypsum, because this material would be relatively insoluble compared with either magnesium or iron sulfates.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Para principios de diciembre de 2011, Opportunity había recorrido 21,35 millas en Marte, acercándose al récord de conducción fuera de la Tierra que tenía el Lunokhod 2 soviético (1973).",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "The total distance driven on Mars by NASA's Mars Exploration Rover, 21.35 miles by early December 2011, is approaching the record total for off-Earth driving, held by the robotic Lunokhod 2 rover operated on Earth's moon by the Soviet Union in 1973.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En diciembre de 2011, Opportunity se dirigía a una pendiente orientada al sol en el extremo norte de Cape York para mantener sus paneles solares en un ángulo favorable durante el quinto invierno marciano de la misión.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "cita": "Opportunity continues exploring, currently heading to a sun-facing slope on the northern end of the Endeavour rim fragment called \"Cape York\" to keep its solar panels at a favorable angle during the mission's fifth Martian winter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA Mars Rover Finds Mineral Vein Deposited by Water",
+      "url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+      "editor": "NASA Jet Propulsion Laboratory",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Slam-Dunk Sign of Ancient Water on Mars",
+      "url": "https://astrobiology.nasa.gov/news/slam-dunk-sign-of-ancient-water-on-mars/",
+      "editor": "NASA Astrobiology",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "'Homestake' Vein on 'Cape York,' Color Enhanced (PIA16444)",
+      "url": "https://science.nasa.gov/resource/homestake-vein-on-cape-york-color-enhanced/",
+      "editor": "NASA Science / Photojournal",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Rover Finds Mineral Vein Deposited by Water (Astronomy.com)",
+      "url": "https://www.astronomy.com/science/mars-rover-finds-mineral-vein-deposited-by-water/",
+      "editor": "Astronomy Magazine",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Ancient Impact and Aqueous Processes at Endeavour Crater, Mars (Science, 2012)",
+      "url": "https://www.science.org/doi/10.1126/science.1220476",
+      "editor": "Science / AAAS",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "El evento original incluye 'Matijevic Hill' como parte de la ubicación ('Lugar: Cape York / Matijevic Hill'), pero ninguna de las fuentes consultadas (todas de https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water) asocia la vena Homestake con Matijevic Hill; solo mencionan Cape York y el borde del cráter Endeavour. Matijevic Hill es un sitio dentro de Cape York que Opportunity exploró con más detalle en 2012-2013.",
+    "El evento original parafrasea a Squyres diciendo que Homestake fue 'la evidencia más poderosa de agua líquida que halló Opportunity', pero la cita real de Squyres en la fuente JPL (https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water) dice 'This tells a slam-dunk story that water flowed through underground fractures in the rock' y destaca que el depósito se formó in situ, sin usar la expresión 'evidencia más poderosa'."
+  ],
+  "huecos": [
+    "El paper científico de Squyres et al. (Science, 2012, DOI: 10.1126/science.1220476) está detrás de un muro de pago y no fue accesible para verificación directa; solo se pudo confirmar su existencia y temática general a través del fragmento del motor de búsqueda.",
+    "No se pudo verificar el nombre 'Turkey Haven' ni el detalle de que Opportunity pasara el Día de Acción de Gracias de 2011 en ese punto del extremo norte de Cape York; ninguna de las fuentes leídas lo menciona.",
+    "No se encontró el sol exacto en que Opportunity avistó por primera vez la vena Homestake (el sol 2766 corresponde a la adquisición de imágenes microscópicas, no necesariamente al primer contacto visual).",
+    "No fue posible confirmar si Squyres presentó el hallazgo el 7 o el 8 de diciembre de 2011; el comunicado de JPL está fechado el 7 de diciembre y solo menciona 'Wednesday', lo que coincide con esa fecha, pero el evento original menciona '7-8 de diciembre'.",
+    "El evento original menciona 'Matijevic Hill' como parte de la ubicación de Homestake, pero el dossier no encontró ninguna fuente que vincule Homestake específicamente con Matijevic Hill (solo con Cape York en general).",
+    "No se pudo determinar con precisión el sol en que la vena fue avistada por primera vez; el dato [13], descartado por insuficiencia de la cita, menciona sol 2766 (4 de noviembre de 2011) como fecha de las imágenes microscópicas, pero esto no implica necesariamente el primer contacto visual."
+  ],
+  "ideas_visuales": [
+    "Primer plano de la vena Homestake: una franja mineral brillante de 40-50 cm, del ancho de un pulgar, que sobresale ligeramente de la roca oscura circundante en Cape York.",
+    "El brazo robótico de Opportunity extendido sobre la vena, con el espectrómetro APXS y el Microscopio Imager en posición de análisis.",
+    "Vista panorámica de la zona de contacto geológico: la roca sedimentaria clara rica en sulfatos de las llanuras de Meridiani se encuentra con la roca volcánica oscura más antigua del borde del cráter Endeavour.",
+    "Diagrama ilustrativo del modelo de Arvidson: agua subterránea ascendiendo desde la corteza antigua a través de fracturas en la roca, depositando yeso en las grietas.",
+    "Opportunity en la pendiente orientada al sol en el extremo norte de Cape York, con sus paneles solares inclinados para captar la máxima luz durante el quinto invierno marciano.",
+    "Comparación a escala humana: una mano con el pulgar extendido junto a una representación de la vena Homestake, para visualizar sus dimensiones reales (1-2 cm de ancho, 40-50 cm de largo)."
+  ],
+  "datos_no_verificados": []
+}

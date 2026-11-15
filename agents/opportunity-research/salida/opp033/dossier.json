@@ -1,0 +1,166 @@
+{
+  "evento_id": "opp033",
+  "titulo": "Atrapado en Purgatory Dune (soles 446–484, abril–junio de 2005)",
+  "contexto_ampliado": "El 26 de abril de 2005, durante su sol 446 en Marte, el rover Opportunity avanzaba marcha atrás por la región de Meridiani Planum cuando sus ruedas comenzaron a patinar en un rizo de arena. La conducción en reversa era rutinaria: el equipo del JPL alternaba regularmente la dirección de desplazamiento para mantener bien distribuida la lubricación de los mecanismos de las ruedas. Ese día, el rover había completado casi 40 metros de un recorrido planificado de 90 metros cuando el suelo cedió y las ruedas se enterraron.\n\nLa formación que atrapó al rover era modesta en tamaño: apenas un tercio de metro de alto y 2,5 metros de ancho. Sin embargo, fue suficiente para que las ruedas de Opportunity se hundieran más de 10 centímetros en el material arenoso blando, llegando hasta la profundidad de los cubos de las ruedas. La trampa resultó especialmente complicada porque, días antes, en el sol 433, el motor de dirección de la rueda delantera derecha se había atascado durante un giro al final de una conducción. Desde el sol 436, el rover operaba con restricciones en el uso de ese motor, lo que limitaba su capacidad de maniobra.\n\nLa duna recibió el nombre de «Purgatory Dune» (Duna del Purgatorio). Para diseñar la estrategia de rescate, el equipo de ingenieros pasó más de una semana realizando pruebas bajo condiciones marcianas simuladas en la Tierra. Rob Sullivan, investigador asociado de la Universidad de Cornell, y Jeffrey Biesiadecki, ingeniero de movilidad del JPL, lideraron la construcción de una enorme caja de arena, rellenada con arena, arcilla y material utilizado para tratar piscinas, con el fin de recrear las propiedades del suelo marciano.\n\nLa operación de rescate fue lenta y meticulosa. Entre el 13 de mayo y el 4 de junio, Opportunity giró sus ruedas el equivalente a 192 metros de desplazamiento total, aunque gran parte de ese movimiento se perdía en el patinaje sobre la arena. Finalmente, en el sol 484 —correspondiente al 4 de junio de 2005—, tras 38 soles atrapado, el rover logró salir a terreno firme. El proceso completo requirió más de cinco semanas de planificación, pruebas y conducción cuidadosamente supervisada.\n\nUna semana después de la liberación, en el sol 491 (11 de junio de 2005), Opportunity usó su cámara de navegación para mirar hacia atrás y fotografiar la duna Purgatory. Las imágenes revelaron que las huellas dejadas por las seis ruedas eran más profundas que cualquier excavación intencional previa realizada con una sola rueda, lo que proporcionó información valiosa sobre la composición del suelo marciano.",
+  "datos_reales": [
+    {
+      "afirmacion": "El sol 446 de Opportunity corresponde al 26 de abril de 2005, día en que el rover quedó hundido hasta la altura de los cubos de las ruedas en una pequeña duna.",
+      "fuente_url": "https://science.nasa.gov/?p=940660",
+      "cita": "shows the rover's position after it dug itself to wheel-hub depth in a small dune during its 446th martian day, or sol (April 26, 2005)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La duna (o rizo de arena) que atrapó a Opportunity medía aproximadamente un tercio de metro de alto y 2,5 metros de ancho.",
+      "fuente_url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+      "cita": "The ripple that became a sand trap is about one-third meter (one foot) tall and 2.5 meters (8 feet) wide.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las ruedas de Opportunity se hundieron más de 10 centímetros (4 pulgadas) en el material arenoso blando de la duna durante el sol 446.",
+      "fuente_url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+      "cita": "Opportunity's wheels dug more than 10 centimeters (4 inches) deep into the soft, sandy material of a wind-shaped ripple in Mars' Meridiani Planum region during the rover's 446th martian day, or sol (April 26, 2005).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Cuando las ruedas comenzaron a patinar, Opportunity había completado casi 40 metros de un recorrido planificado de 90 metros.",
+      "fuente_url": "https://science.nasa.gov/?p=940660",
+      "cita": "Opportunity had completed nearly 40 meters (131 feet) of a planned 90-meter (295-foot) drive that sol when its wheels began slipping.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El rover conducía marcha atrás en ese momento; el equipo alterna regularmente la dirección de conducción para mantener bien distribuida la lubricación de las ruedas.",
+      "fuente_url": "https://science.nasa.gov/?p=940660",
+      "cita": "The rover was driving backwards at the time. The rover team frequently alternates between backwards and forwards driving to keep wheel lubrication well distributed.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo de ingenieros pasó más de una semana diseñando y realizando pruebas en simulaciones de las condiciones de Marte en la Tierra antes de elegir cómo sacar al rover.",
+      "fuente_url": "https://science.nasa.gov/?p=940660",
+      "cita": "The rover team spent more than a week designing and conducting tests under simulated Mars conditions on Earth before choosing the best way for Opportunity to drive out of the dune.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo construyó una caja de arena enorme llena de arena, arcilla y material para tratar piscinas para simular las condiciones en Marte.",
+      "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+      "cita": "built a giant sandbox -- filled with sand, clay, and material used to treat swimming pools -- to simulate the conditions on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo de rescate fue liderado por Rob Sullivan (investigador de Cornell) y Jeffrey Biesiadecki (ingeniero de movilidad del JPL).",
+      "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+      "cita": "Cornell senior research associate Rob Sullivan, who with Jet Propulsion Laboratory mobility engineer Jeffrey Biesiadecki and a small group of scientists and engineers built a giant sandbox",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El rover fue liberado el sol 484, después de estar atrapado durante 38 soles.",
+      "fuente_url": "https://pancam.sese.asu.edu/448B_track.html",
+      "cita": "The team finally extracted Opportunity from the dune on Sol 484, after 38 sols.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Opportunity escapó de la trampa de arena el 4 de junio de 2005.",
+      "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+      "cita": "On June 4, Opportunity escaped from the sand trap now called Purgatory Dune.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Entre el 13 de mayo y el 4 de junio, el rover giró sus ruedas el equivalente a 192 metros de desplazamiento total durante el proceso de rescate.",
+      "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+      "cita": "turning its wheels 192 meters between May 13 and June 4",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Sacar al rover de la duna requirió más de cinco semanas de planificación, pruebas y conducción cuidadosamente supervisada.",
+      "fuente_url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+      "cita": "Getting the rover out of the ripple, dubbed 'Purgatory Dune,' required more than five weeks of planning, testing, and carefully monitored driving.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En el sol 491 (11 de junio de 2005), una semana después de salir de la duna, Opportunity usó su cámara de navegación para fotografiar la duna Purgatory mirando hacia atrás.",
+      "fuente_url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+      "cita": "Opportunity used its navigation camera to capture this look back at the ripple during sol 491 (June 11, 2005), a week after the rover drove safely onto firmer ground.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El motor de dirección de la rueda delantera derecha de Opportunity se atascó en el sol 433 durante un giro al final de una conducción; desde el sol 436, el rover operó con restricciones en ese motor.",
+      "fuente_url": "https://www.universetoday.com/articles/problem-with-opportunitys-front-wheel",
+      "cita": "Opportunity's right-front steering motor stalled out on sol 433 during an end-of-drive turn... the rover resumed normal science and driving operations on sol 436, but with restrictions on use of the right-front steering motor.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las huellas de las seis ruedas en la arena eran más profundas que cualquier actividad previa de excavación intencional con una sola rueda.",
+      "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+      "cita": "Images of the dune sent back by the rover's panoramic camera, or Pancam, already indicate that all six wheels dug more deeply into the soil than any previous intentional wheel-trenching activity (in which only one wheel is used to dig a shallower hole).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Opportunity Sol 446 Position, with Relative Heights (NASA Science)",
+      "url": "https://science.nasa.gov/?p=940660",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Looking Back at 'Purgatory Dune' (NASA Science Resource)",
+      "url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+      "editor": "NASA/JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Lucky Spirit and even luckier Opportunity continue their odyssey (Cornell Chronicle)",
+      "url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+      "editor": "Cornell University",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Purgatory Track (right) – ASU Pancam Sol 448",
+      "url": "https://pancam.sese.asu.edu/448B_track.html",
+      "editor": "Arizona State University / Jim Bell, Pancam Instrument Lead",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Problem with Opportunity's Front Wheel (Universe Today / NASA/JPL News Release)",
+      "url": "https://www.universetoday.com/articles/problem-with-opportunitys-front-wheel",
+      "editor": "Universe Today / NASA/JPL",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "La duración del rescate se describe de forma levemente diferente según la fuente: la Cornell Chronicle usa 'nearly five weeks' (casi cinco semanas), mientras que science.nasa.gov/resource/looking-back-at-purgatory-dune/ usa 'more than five weeks' (más de cinco semanas). El dato de ASU Pancam (pancam.sese.asu.edu/448B_track.html) dice '38 sols', equivalente a aproximadamente 5,4 semanas. Las tres formulaciones son compatibles pero no idénticas.",
+    "La conversión sol–fecha no fue verificada directamente. Sol 484 = aprox. 4 de junio de 2005: la consistencia se infiere del dato de science.nasa.gov/resource (sol 491 = 11 de junio de 2005, 'una semana después de salir') y la fecha del Cornell Chronicle (June 4), pero ninguna fuente leída proporciona la tabla completa de conversión sol–fecha terráquea para verificar la equivalencia de forma directa.",
+    "El evento original describe la dirección de la rueda delantera derecha como 'ya deshabilitada', pero la fuente del dato [13] (https://www.universetoday.com/articles/problem-with-opportunitys-front-wheel) indica que el motor 'stalled out' en el sol 433 y que desde el sol 436 el rover operó 'with restrictions on use of the right-front steering motor'. Operar con restricciones no es lo mismo que tener el mecanismo completamente inhabilitado: la fuente sugiere uso limitado, no ausencia total de dirección en esa rueda."
+  ],
+  "huecos": [
+    "No se encontró en ninguna fuente leída el término 'purgatoides' para las dunas similares evitadas después del incidente.",
+    "No se encontró en ninguna fuente leída la expresión técnica 'giros en K' (K-turns) para describir la maniobra diseñada con la rueda delantera derecha deshabilitada.",
+    "No se leyó el artículo científico de Arvidson et al. 2011 (Harvard DASH) por problema de descarga; podría contener detalles adicionales sobre la mecánica del rescate.",
+    "No se verificó qué rover gemelo específico (y en qué instalación del JPL) fue usado para las pruebas terrestres; solo se sabe que se construyó una 'caja de arena gigante'.",
+    "No se encontró confirmación del número exacto de intentos de escape realizados ni del detalle de cada sol dentro del período 446–484.",
+    "El evento original afirma que los ingenieros probaron 'con un rover gemelo de prueba' antes de elegir cómo salir. El borrador ya señalaba que no se verificó cuál rover gemelo se usó, pero el hueco es más profundo: ninguna de las fuentes citadas en el dossier menciona siquiera el empleo de un rover gemelo; los datos [5], [6] y [7] solo describen pruebas en una caja de arena gigante bajo condiciones simuladas, sin confirmar que dentro de ella se operara un vehículo de prueba idéntico a Opportunity.",
+    "El evento original menciona que el rover 'cruzaba un rizo de arena' cuando quedó atrapado, pero ninguna fuente del dossier detalla si Opportunity intentaba cruzar el rizo transversalmente o lo abordó en otra dirección; el ángulo de aproximación no está confirmado."
+  ],
+  "ideas_visuales": [
+    "Opportunity hundido hasta los cubos de las ruedas en la pequeña duna de Meridiani Planum, con arena acumulada alrededor de las seis ruedas (datos [0] y [2]).",
+    "Diagrama a escala de la duna trampa: un tercio de metro de alto y 2,5 metros de ancho, con la silueta del rover encajado en su centro para mostrar la proporción (dato [1]).",
+    "Ingenieros en la Tierra construyendo la caja de arena gigante rellena de arena, arcilla y material de piscinas, con Sullivan y Biesiadecki supervisando (datos [6] y [7]).",
+    "Infografía del rescate: las ruedas giran el equivalente a 192 metros entre el 13 de mayo y el 4 de junio, pero el rover apenas avanza centímetros reales (dato [10]).",
+    "Fotografía de la cámara de navegación del sol 491: Opportunity mira hacia atrás y se ven los surcos profundos de las seis ruedas en la duna Purgatory (datos [12] y [14])."
+  ],
+  "datos_no_verificados": []
+}
