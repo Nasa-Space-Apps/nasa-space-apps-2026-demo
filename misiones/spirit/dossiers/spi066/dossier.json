@@ -1,0 +1,174 @@
+{
+  "evento_id": "spi066",
+  "titulo": "NASA declara a Spirit una plataforma de investigación estacionaria (26 ene 2010)",
+  "contexto_ampliado": "El 26 de enero de 2010, tras seis años de exploración sin precedentes en el planeta rojo, la NASA anunció oficialmente que su rover Spirit dejaría de ser un robot completamente móvil y pasaría a funcionar como una plataforma de ciencia estacionaria. La decisión llegó después de meses de intentos fallidos por liberar al vehículo de una trampa de arena en la que había quedado atascado. Según un artículo de The Planetary Society, la orden no provino del equipo de misión ni del Laboratorio de Propulsión a Chorro (JPL), sino directamente de la sede de la NASA en Washington.\n\nDiez meses antes del anuncio, Spirit estaba conduciendo hacia el sur junto al borde occidental de una meseta baja llamada Home Plate cuando sus ruedas rompieron una costra dura en la superficie y se hundieron en arena blanda oculta debajo. La situación ya era complicada porque una de las seis ruedas del rover había dejado de funcionar en 2006, y el equipo de ingenieros había tenido que diseñar maniobras de rescate usando solo cinco ruedas, incluyendo pruebas con un rover de simulación en una caja de arena en JPL. En noviembre de 2009, otra rueda también falló, empeorando aún más las posibilidades de escape.\n\nDoug McCuistion, director del Programa de Exploración de Marte de la NASA, fue quien comunicó el cambio de estrategia. «Spirit is not dead; it has just entered another phase of its long life», declaró, añadiendo que la ubicación actual del rover en Marte sería probablemente su lugar de descanso final. McCuistion calificó la situación de Spirit como «inextractable» y explicó que el nuevo objetivo era concentrarse en sobrevivir al invierno marciano.\n\nEl desafío de la supervivencia invernal era enorme. Spirit estaba inclinado ligeramente hacia el sur, pero el sol del invierno marciano permanece en el cielo del norte, lo que significaba que sus paneles solares recibían menos energía. Según el director del proyecto, John Callas, por cada grado de inclinación hacia el norte que lograran conseguir, el rover ganaría aproximadamente cinco watt-hora adicionales de energía eléctrica en pleno invierno. Para mantener comunicación con la Tierra, Spirit necesitaba generar alrededor de 160 watt-hora con sus paneles. Las maniobras más recientes —conducir marcha atrás hacia el sur— habían logrado aplanar a cero la inclinación frontal-trasera del rover, pero se esperaba que la energía solar fuera insuficiente para más maniobras de conducción a mediados de febrero, dejando muy poco margen. Callas advirtió que no había garantía de que el rover pudiera sobrevivir las bajas temperaturas y que toda la energía producida por los paneles iría a mantener caliente la electrónica crítica.\n\nPor el lado científico, el investigador principal Steve Squyres, de la Universidad Cornell, ofreció una perspectiva esperanzadora. «There's a class of science we can do only with a stationary vehicle that we had put off during the years of driving», explicó. Una de esas investigaciones, que Spirit ya había comenzado, consistía en medir pequeñas oscilaciones en la rotación de Marte para determinar si su núcleo es líquido o sólido. Esto requería rastrear por radio el movimiento de un punto fijo en la superficie durante meses, con una precisión de pocas pulgadas. Squyres señaló que si el último logro científico de Spirit fuera resolver esa incógnita sobre el interior de Marte, sería maravilloso por ser tan diferente a todo lo que el rover había aportado antes.\n\nLa misión de los rovers de exploración marciana había representado una inversión de 900 millones de dólares, y mantener a Spirit y a su gemelo Opportunity en sus recorridos extendidos costaba típicamente unos 20 millones de dólares anuales. Spirit había aterrizado en el cráter Gusev en enero de 2004 y, para el final de su misión, recorrió un total de 7,7 kilómetros sobre la superficie marciana, superando con creces su misión original de 90 días.\n\nEl anuncio generó tensiones visibles. Emily Lakdawalla, de The Planetary Society, observó el mismo día que la decisión vino de arriba —de la NASA— y no del equipo de misión, que seguía realizando maniobras de inclinación incluso después del anuncio oficial. La organización mantenía activa su campaña «Free Spirit!» entre sus seguidores, señal de que para muchos entusiastas del espacio, el capítulo de Spirit como rover no estaba del todo cerrado.",
+  "datos_reales": [
+    {
+      "afirmacion": "El 26 de enero de 2010, la NASA anunció que Spirit ya no sería un robot completamente móvil y lo designó plataforma de ciencia estacionaria.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "After six years of unprecedented exploration of the Red Planet, NASA's Mars Exploration Rover Spirit no longer will be a fully mobile robot. NASA has designated the once-roving scientific explorer a stationary science platform after efforts during the past several months to free it from a sand trap have been unsuccessful.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Doug McCuistion, director del Programa de Exploración de Marte de la NASA, declaró que Spirit no estaba muerto sino en otra fase de su larga vida, y que su ubicación en Troy sería su lugar de descanso final.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "\"Spirit is not dead; it has just entered another phase of its long life,\" said Doug McCuistion, director of the Mars Exploration Program at NASA Headquarters in Washington. \"We told the world last year that attempts to set the beloved robot free may not be successful. It looks like Spirit's current location on Mars will be its final resting place.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Steve Squyres, investigador principal de la misión, afirmó que había una clase de ciencia que solo se podía hacer con un vehículo estacionario y que el equipo había postergado durante los años de conducción.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "\"There's a class of science we can do only with a stationary vehicle that we had put off during the years of driving,\" said Steve Squyres, a researcher at Cornell University and principal investigator for Spirit and Opportunity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit quedó atrapado diez meses antes del anuncio cuando sus ruedas rompieron una costra dura que ocultaba arena blanda en el lugar llamado Troy.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "Ten months ago, as Spirit was driving south beside the western edge of a low plateau called Home Plate, its wheels broke through a crusty surface and churned into soft sand hidden underneath.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En ese momento Spirit estaba inclinado ligeramente hacia el sur; para sobrevivir al invierno necesitaba reducir esa inclinación sur porque el sol invernal permanece en el cielo del norte.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "Spirit currently tilts slightly toward the south. The winter sun stays in the northern sky, so decreasing the southward tilt would boost the amount of sunshine on the rover's solar panels.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se esperaba que la energía solar fuera insuficiente para más maniobras de conducción a mediados de febrero, dejando pocas semanas para ajustar la inclinación.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "Solar energy is declining and expected to become insufficient to power further driving by mid-February. The rover team plans to use those remaining potential drives for improving the rover's tilt.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "John Callas, director del proyecto, advirtió que no había garantía de que Spirit sobreviviera las bajas temperaturas y que toda la energía de sus paneles solares iría a mantener la electrónica caliente.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "\"Getting through the winter will all come down to temperature and how cold the rover electronics will get,\" said John Callas, project manager at JPL for Spirit and its twin rover, Opportunity. \"Every bit of energy produced by Spirit's solar arrays will go into keeping the rover's critical electronics warm, either by having the electronics on or by turning on essential heaters.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Una de las investigaciones estacionarias era medir las pequeñas oscilaciones en la rotación de Marte para determinar si su núcleo es líquido o sólido, rastreando por radio un punto fijo en la superficie durante meses con precisión de pocos centímetros.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "One stationary experiment Spirit has begun studies tiny wobbles in the rotation of Mars to gain insight about the planet's core. This requires months of radio-tracking the motion of a point on the surface of Mars to calculate long-term motion with an accuracy of a few inches.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Squyres dijo que si el último logro científico de Spirit fuera determinar si el núcleo de Marte es líquido o sólido, sería maravilloso por ser tan diferente a todo lo que el rover había aportado antes.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "\"If the final scientific feather in Spirit's cap is determining whether the core of Mars is liquid or solid, that would be wonderful -- it's so different from the other knowledge we've gained from Spirit,\" said Squyres.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "McCuistion calificó la situación de Spirit como 'inextractable' en la teleconferencia y dijo que el plan era concentrarse en sobrevivir al invierno.",
+      "fuente_url": "https://www.space.com/7823-nasa-abandons-escape-attempts-stuck-mars-rover.html",
+      "cita": "McCuistion called Spirit's situation \"inextractable.\" He didn't rule out that Spirit could free itself by accident, but that's not the goal anymore. \"Right now, our plan is to worry about getting through the winter,\" McCuistion said.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA había invertido 900 millones de dólares en la misión de los rovers y gastaba típicamente 20 millones de dólares anuales para mantener a Spirit y Opportunity en sus recorridos.",
+      "fuente_url": "https://www.space.com/7823-nasa-abandons-escape-attempts-stuck-mars-rover.html",
+      "cita": "NASA has spent $900 million on the Mars rover mission, and typically spends $20 million a year to support Spirit and Opportunity during their extended treks on the red planet.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La decisión de dejar de intentar mover a Spirit no vino del equipo de misión ni de JPL, sino de la sede de la NASA en Washington.",
+      "fuente_url": "https://www.planetary.org/articles/2320",
+      "cita": "What we're seeing is that NASA -- not the rover mission, not JPL, but NASA -- is calling the shots on this decision. They've watched the extrication efforts proceed and have now decided that enough is enough; so they have issued orders to the mission to change Spirit's goals from ones that involve roving to ones that involve being a stationary lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según John Callas, por cada grado de inclinación hacia el norte que lograran, Spirit ganaría aproximadamente cinco watt-hora de energía eléctrica valiosa en el pleno invierno.",
+      "fuente_url": "https://www.planetary.org/articles/2320",
+      "cita": "as a rule of thumb, for every degree of northward tilt they do manage to achieve, John Callas said today, they pick up about five watt-hours of precious midwinter electrical power from the panels.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Para mantener comunicación con la Tierra durante el invierno, Spirit necesitaba poder generar alrededor de 160 watt-hora con sus paneles solares.",
+      "fuente_url": "https://www.planetary.org/articles/2320",
+      "cita": "Callas said that Spirit needs to be able to generate about 160 watt-hours of power with her solar panels in order to maintain Earth control.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las maniobras más recientes previas al anuncio (conducir marcha atrás) habían logrado que la inclinación frontal-trasera de Spirit se aplanara a cero desde su posición inclinada al sur.",
+      "fuente_url": "https://www.planetary.org/articles/2320",
+      "cita": "the recent drives, in which Spirit had reversed direction and tried driving backwards (in a rover sense, that is, meaning southwards), have been popping especially the left-rear wheel out of its sand trap, dramatically improving the tilt situation, to the point that the rover's pitch (the front-to-back angle of her body) has flattened to zero.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit aterrizó en el cráter Gusev en enero de 2004 y en total recorrió 7,7 kilómetros sobre la superficie marciana durante su misión.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "Spirit landed at Gusev Crater, a possible former lake in a giant impact crater... By the end of its mission, Spirit journeyed 4.8 miles (7.7 kilometers) on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Now a Stationary Research Platform, NASA's Mars Rover Spirit Starts a New Chapter in Red Planet Scientific Studies (PR Newswire, NASA)",
+      "url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA Abandons Escape Attempts for Stuck Mars Rover (Space.com)",
+      "url": "https://www.space.com/7823-nasa-abandons-escape-attempts-stuck-mars-rover.html",
+      "editor": null,
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "NASA decides Spirit is henceforth to be a lander (Lakdawalla, Planetary Society)",
+      "url": "https://www.planetary.org/articles/2320",
+      "editor": null,
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Mars Exploration Rovers Spirit and Opportunity (NASA Science)",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Número de sol del anuncio: el texto del evento indica que The Planetary Society usa Sol 2157 y Wikipedia usa Sol 2155. Ninguno de los textos leídos en esta investigación menciona el número de sol explícitamente, por lo que no fue posible resolver la contradicción con evidencia directa. URLs relevantes: https://www.planetary.org/articles/2320 (Planetary Society, sol no mencionado en el cuerpo del artículo leído).",
+    "El dato [8] traduce 'a few inches' (de la cita original en inglés, URL prnewswire) como 'pocos centímetros' en la afirmación, pero pulgadas y centímetros no son equivalentes: 'a few inches' equivale a unos 7-10 cm, no a 'pocos centímetros' (que sugiere 3-5 cm). La cita dice textualmente: 'accuracy of a few inches'. Se corrigió a 'pocas pulgadas' en el relato."
+  ],
+  "huecos": [
+    "El número exacto de sol (2157 según Planetary Society vs 2155 según Wikipedia) no pudo verificarse en los textos leídos: ninguno de los artículos accedidos menciona el sol numérico explícitamente.",
+    "La cifra exacta del ángulo de inclinación sur de ~9° que figura en los datos clave del evento no fue confirmada literalmente en ninguna de las fuentes leídas (prnewswire dice 'tilts slightly toward the south' sin dar grado exacto).",
+    "No se verificó en qué fuentes específicas los 'aficionados' criticaron la decisión como prematura; The Planetary Society mencionó tensión interna y la campaña 'Free Spirit' pero sin citar a aficionados individuales con nombres.",
+    "La página oficial de JPL (jpl.nasa.gov/news/nasas-mars-rover-spirit-starts-a-new-chapter/) devolvió contenido vacío y no pudo ser leída directamente.",
+    "El dato [11] afirmaba que Spirit podría entrar en hibernación 'durante unos seis meses', pero la cita de space.com no menciona ningún periodo de seis meses; solo dice que Spirit está 'designed to hibernate through winters'. Se eliminó el dato.",
+    "La fecha exacta en que Spirit quedó atrapado (el borrador narrativo dice 6 de mayo de 2009) no aparece en ninguna de las citas conservadas; la fuente de prnewswire solo dice 'ten months ago' sin dar fecha concreta."
+  ],
+  "ideas_visuales": [
+    "Spirit hundido en arena blanda con la costra superficial rota alrededor de sus ruedas, junto a la meseta Home Plate.",
+    "Ingenieros de JPL probando maniobras de rescate con un rover de simulación dentro de una caja de arena en el laboratorio.",
+    "Diagrama que muestra la inclinación de Spirit hacia el sur y la posición del sol invernal en el cielo norte de Marte, explicando el problema energético.",
+    "Doug McCuistion en la teleconferencia de la NASA anunciando la reclasificación de Spirit como plataforma estacionaria.",
+    "Esquema del experimento de radio-tracking: señales de radio entre Spirit (punto fijo en Marte) y antenas en la Tierra para medir oscilaciones de la rotación marciana.",
+    "Paneles solares de Spirit cubiertos parcialmente de polvo, con el paisaje invernal del cráter Gusev al fondo."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "La sexta rueda de Spirit dejó de funcionar en 2006; en noviembre de 2009 otra rueda también falló, agravando los intentos de escape.",
+      "fuente_url": "https://www.prnewswire.com/news-releases/now-a-stationary-research-platform-nasas-mars-rover-spirit-starts-a-new-chapter-in-red-planet-scientific-studies-82698787.html",
+      "cita": "After Spirit became embedded, the rover team crafted plans for trying to get the six-wheeled vehicle free using its five functioning wheels – the sixth wheel quit working in 2006, limiting Spirit's mobility. The planning included experiments with a test rover in a sandbox at NASA's Jet Propulsion Laboratory in Pasadena, Calif. In November, another wheel quit working, making a difficult situation even worse.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.16055124999999998,
+  "turnos": 7,
+  "duracion_s": 81.0,
+  "duracion_api_s": 73.0,
+  "tokens": {
+    "input_tokens": 5,
+    "cache_creation_input_tokens": 8265,
+    "cache_read_input_tokens": 14775,
+    "output_tokens": 8204,
+    "output_tokens_details": {
+      "thinking_tokens": 3337
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8265
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1890,
+      "outputTokens": 32,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0020499999999999997,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 5,
+      "outputTokens": 8204,
+      "cacheReadInputTokens": 14775,
+      "cacheCreationInputTokens": 8265,
+      "webSearchRequests": 0,
+      "costUSD": 0.15850124999999998,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 3337,
+      "cacheCreationEphemeral5mInputTokens": 8265,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 5,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "4",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.10360824999999999,
+    "turnos": 2,
+    "duracion_s": 32.4,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4052,
+        "outputTokens": 32,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0042120000000000005,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 2713,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5049,
+        "webSearchRequests": 0,
+        "costUSD": 0.09939624999999999,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 1042,
+        "cacheCreationEphemeral5mInputTokens": 5049,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 12,
+      "datos_despues": 12,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 2,
+      "observaciones": "Todos los datos están bien respaldados por sus citas. El cambio principal en el relato fue eliminar afirmaciones sin respaldo en los datos (velocidad de 70 m/s durante el descenso, cable de suspensión, 30 segundos tras el paracaídas) y precisar la duración operativa de Spirit a 6 años, 2 meses y 19 días según la cita de [11]."
+    }
+  },
+  "costo_usd_referencia_total": 0.2641595,
+  "costos": {
+    "total_usd": 0.264159,
+    "por_paso": {
+      "investigacion": 0.160551,
+      "revision": 0.103608
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006262,
+        "entrada": 5942,
+        "salida": 64,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.158501,
+        "entrada": 5,
+        "salida": 8204,
+        "cache_leida": 14775,
+        "cache_escrita": 8265,
+        "razonamiento": 3337
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.099396,
+        "entrada": 3,
+        "salida": 2713,
+        "cache_leida": 0,
+        "cache_escrita": 5049,
+        "razonamiento": 1042
+      }
+    }
+  }
+}

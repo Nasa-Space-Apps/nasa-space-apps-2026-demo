@@ -1,0 +1,155 @@
+{
+  "evento_id": "spi021",
+  "titulo": "Reformatean la memoria flash y Spirit vuelve a estar sano",
+  "contexto_ampliado": "A comienzos de febrero de 2004, el rover Spirit arrastraba un serio problema: el sistema de archivos de su memoria flash —la memoria no volátil que utiliza para despertar y para almacenar datos a lo largo del tiempo— se había quedado sin espacio al acumular demasiados archivos. Según Glenn Reeves, arquitecto del software de vuelo de los rovers MER en JPL, «el problema es tan simple como esto: a medida que acumulamos archivos adicionales en el sistema de archivos a bordo, el sistema consumía memoria adicional y eventualmente nos quedamos sin ella».\n\nEl miércoles 4 de febrero de 2004, los ingenieros ejecutaron la solución: borrar por completo la memoria flash y recrear el sistema de archivos desde cero. Reeves comparó el procedimiento con lo que se haría con un disco duro de PC tan corrupto que ya no puede usarse. Tras la operación, la directora de misión Jennifer Trosper confirmó que Spirit había quedado en condiciones «como nuevo». Glenn Reeves, por su parte, declaró que el equipo estaba seguro de conocer el problema y de contar con un procedimiento capaz de evitarlo indefinidamente.\n\nAl día siguiente, jueves 5 de febrero, Spirit retomó sus operaciones científicas con un hito histórico: el primer cepillado de una roca en otro planeta. Las cerdas de acero inoxidable de la herramienta de abrasión de roca (RAT, por sus siglas en inglés) —situadas unos 3 milímetros por debajo de los dientes de desgaste— limpiaron un parche circular en la roca bautizada extraoficialmente como Adirondack. El cepillo giró durante cinco minutos. Era la primera vez que se empleaba el RAT en cualquiera de los dos rovers (Spirit y su gemelo Opportunity).\n\nEl resultado sorprendió al equipo: la zona cepillada apareció mucho más oscura que el resto de la superficie de la roca. Stephen Gorevan, de Honeybee Robotics y científico responsable de los RAT de ambos rovers, proclamó: «¡Damas y caballeros, les presento el mayor cepillado interplanetario de todos los tiempos!».\n\nUno de los motivos por los que los científicos habían elegido Adirondack para examinarla de cerca era que, en las imágenes remotas de la PanCam, parecía tener relativamente poco polvo comparada con otras rocas cercanas. Sin embargo, el cepillado reveló todo lo contrario. Ken Herkenhoff, del Equipo de Astrogeología del USGS y científico principal de los microscopios de los rovers, admitió: «Para nuestra sorpresa, había bastante polvo en la superficie.» Las imágenes microscópicas posteriores mostraron lo que parecían ser cristales minerales en la superficie de la roca, lo que llevó a Herkenhoff a concluir que Adirondack «parece ser una roca volcánica, probablemente basalto».\n\nEl viernes 6 de febrero, Spirit recibió instrucciones para moler la superficie de Adirondack con los dientes de diamante del RAT, exponiendo así el interior fresco de la roca. Las imágenes retransmitidas desde Marte confirmaron el éxito: se observó una depresión redonda y de superficie limpia. Era la primera vez en la historia que se desgastaba una roca en otro planeta.\n\nEn apenas tres días —del 4 al 6 de febrero—, Spirit completó el reformateo de su memoria, realizó el primer cepillado interplanetario de una roca y ejecutó el primer desgaste de roca en Marte, demostrando que se había recuperado por completo y estaba listo para la ciencia que tenía encomendada.",
+  "datos_reales": [
+    {
+      "afirmacion": "El reformateo de la memoria flash de Spirit se realizó el miércoles 4 de febrero de 2004.",
+      "fuente_url": "https://solarviews.com/eng/spiritrover10.htm",
+      "cita": "Engineers regained partial control of the spacecraft within days and reformatted Spirit's flash memory Wednesday to prevent recurrence of the problem.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El problema de Spirit fue que el sistema de archivos de la memoria flash se quedó sin espacio al acumular demasiados archivos.",
+      "fuente_url": "https://www.planetary.org/articles/02-08-mer-update",
+      "cita": "In a nutshell, the problem is as simple as this: as we accumulated additional files in the onboard file system, the system consumed additional memory and eventually we ran out. That was problem number 1.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La memoria flash se usa para despertar al rover y para almacenar datos a lo largo del tiempo.",
+      "fuente_url": "https://www.planetary.org/articles/02-08-mer-update",
+      "cita": "The flash memory is used to wake up the rover and to store data over time.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Jennifer Trosper, directora de misión de Spirit en JPL, declaró que el rover había quedado recuperado como nuevo tras el reformateo.",
+      "fuente_url": "https://www.planetary.org/articles/02-08-mer-update",
+      "cita": "a successful erase-and-reformat operation conducted Wednesday restored the rover to 'like new' condition, Trosper said.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El primer día de operaciones científicas tras el reformateo (jueves 5 de febrero) incluyó el primer cepillado de una roca en otro planeta.",
+      "fuente_url": "https://solarviews.com/eng/spiritrover10.htm",
+      "cita": "Spirit's first day of science operations after the memory reformatting featured the first brushing of a rock on a foreign planet to remove dust and allow inspection of the rock's cleaned surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cepillo del RAT giró durante cinco minutos sobre la roca Adirondack.",
+      "fuente_url": "https://solarviews.com/eng/spiritrover10.htm",
+      "cita": "The brush swirled for five minutes, said Stephen Gorevan of Honeybee Robotics, New York, lead scientist for the rock abrasion tools on both rovers.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las cerdas de acero inoxidable del RAT están situadas unos 3 milímetros por debajo de los dientes de desgaste.",
+      "fuente_url": "https://www.planetary.org/articles/02-08-mer-update",
+      "cita": "The tiny stainless steel bristles, set about 3 millimeters below the grinding teeth, cleaned a distinct circular patch on Adirondack.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Aunque Adirondack parecía tener poco polvo en imágenes remotas, el cepillado reveló que había bastante polvo en su superficie.",
+      "fuente_url": "https://www.planetary.org/articles/02-08-mer-update",
+      "cita": "one reason scientists first selected Adirondack for close inspection was because it appeared from PanCam images taken remotely to be relatively dust free compared to some other rocks nearby. 'To our surprise, there was quite a bit of dust on the surface,' said Ken Herkenhoff.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las imágenes microscópicas mostraron lo que parecen ser cristales minerales en la superficie de Adirondack, lo que llevó a clasificarla inicialmente como roca volcánica, probablemente basalto.",
+      "fuente_url": "https://www.planetary.org/articles/02-08-mer-update",
+      "cita": "Adirondack, Herkenhoff said, 'looks like is a volcanic rock, basalt probably.' From the MI pictures alone they can see, he added, 'what appear to be mineral crystals on the rock surface.'",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El viernes 6 de febrero, Spirit recibió instrucciones para moler la superficie de Adirondack con los dientes de diamante del RAT.",
+      "fuente_url": "https://solarviews.com/eng/spiritrover10.htm",
+      "cita": "Spirit was instructed Friday afternoon to grind the surface of Adirondack with the rock abrasion tool. After the grinding, the turret of tools at the end of the rover's robotic arm will be rotated to inspect the freshly exposed interior of the rock.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El desgaste con el RAT dejó una depresión redonda y de superficie limpia en Adirondack, confirmada por imágenes retransmitidas desde Marte.",
+      "fuente_url": "https://www.planetary.org/articles/02-08-mer-update",
+      "cita": "Scientists and engineers were ecstatic when the afternoon communications relay from Mars Odyssey revealed a round and clean-surfaced depression.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Glenn Reeves, arquitecto del software de vuelo de los MER en JPL, declaró estar muy seguro de que el problema no volvería a ocurrir.",
+      "fuente_url": "https://solarviews.com/eng/spiritrover10.htm",
+      "cita": "JPL's Glenn Reeves, flight software architect for the Mars Exploration Rovers, said Friday, 'We're confident we know what the problem is, and we have a procedure in place we believe can work around this problem indefinitely.'",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Healthy Spirit Cleans a Mars Rock; Opportunity Rolls (February 6, 2004)",
+      "url": "https://solarviews.com/eng/spiritrover10.htm",
+      "editor": "NASA/JPL vía SolarViews",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Exploration Rovers Update: A Restored Spirit Studies Adirondack (February 8, 2004)",
+      "url": "https://www.planetary.org/articles/02-08-mer-update",
+      "editor": "The Planetary Society (A.J.S. Rayl)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Mars Exploration Rovers – Spirit and Opportunity (misión general)",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Fecha exacta del primer desgaste con el RAT (molienda de Adirondack): el comunicado de JPL del 6 de febrero (https://solarviews.com/eng/spiritrover10.htm) indica que ese viernes por la tarde se envió la instrucción a Spirit para moler la roca, lo que implica ejecución ese mismo día o posterior. El artículo de The Planetary Society del 8 de febrero (https://www.planetary.org/articles/02-08-mer-update) utiliza 'yesterday' al describir que Spirit 'abraded Adirondack', lo que situaría la operación el 7 de febrero. Es posible que el comando se enviara el 6 y la confirmación llegara el 7, pero ambas fuentes no coinciden en la fecha de ejecución.",
+    "El evento original dice que durante el reformateo 'se borraron miles de archivos', pero el dato [2] (https://www.planetary.org/articles/02-08-mer-update) describe que se borró TODA la memoria flash y se recreó el sistema de archivos desde cero ('erase all the flash'), no una eliminación selectiva de miles de archivos.",
+    "El relato del borrador incluye una cita de Trosper sobre estar 'a 200 millones de kilómetros reformateando nuestra flash' y otra sobre 'nuestro paciente está curado', pero ninguna de las fuentes citadas en los datos recoge esas frases textuales; la única cita verificada de Trosper es la de 'like new' condition (dato [4], https://www.planetary.org/articles/02-08-mer-update).",
+    "El borrador afirma que Spirit fue despertado 'a las 9 de la mañana al ritmo de Back in the Saddle Again de Aerosmith', dato que no aparece en ninguna de las citas proporcionadas."
+  ],
+  "huecos": [
+    "Clasificación definitiva de Adirondack como 'basalto rico en olivino': las fuentes leídas solo registran la evaluación inicial ('roca volcánica, probablemente basalto' con 'cristales minerales'), pero no confirman la clasificación de olivino con datos de Mössbauer o APXS; esa clasificación posterior requeriría una fuente científica adicional no leída.",
+    "Número exacto de archivos borrados durante el reformateo: el evento menciona 'miles de archivos', pero ninguna de las fuentes leídas da esa cifra.",
+    "Sol exacto en que se ejecutó la molienda con el RAT: la contradicción entre fuentes impide confirmarlo con certeza (sol 35 o sol 36).",
+    "El evento original indica que esto ocurrió en el sol 32 de la misión, pero ninguna de las fuentes citadas en el dossier confirma el número de sol.",
+    "El evento original menciona que las imágenes microscópicas mostraron que Adirondack es 'una roca cristalina dura'; las fuentes solo dicen 'cristales minerales' y 'roca volcánica, probablemente basalto', sin usar el adjetivo 'dura' ni confirmar esa dureza.",
+    "El borrador incluía el detalle de que Spirit dejó de comunicarse el 21 de enero de 2004 y entró en un 'ciclo continuo de reinicios', pero ningún dato citado respalda esa fecha ni ese comportamiento específico."
+  ],
+  "ideas_visuales": [
+    "Vista del rover Spirit en Marte con su brazo robótico extendido hacia la roca Adirondack, mostrando el RAT en posición de cepillado (datos [5], [6]).",
+    "Primer plano del parche circular oscuro dejado por el cepillado del RAT en la superficie polvorienta de Adirondack, con contraste visible entre zona limpia y zona sin cepillar (datos [9], [10]).",
+    "Imagen microscópica de la superficie de Adirondack tras el cepillado, mostrando los cristales minerales visibles (dato [11]).",
+    "Depresión redonda y de superficie limpia en Adirondack tras el desgaste con los dientes de diamante del RAT (datos [12], [13]).",
+    "Diagrama de la cabeza del RAT mostrando las cerdas de acero inoxidable 3 mm por debajo de los dientes de desgaste de diamante (dato [8])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El reformateo fue una operación de borrado total y recreación del sistema de archivos, comparable a reparar un disco duro de PC corrupto.",
+      "fuente_url": "https://www.planetary.org/articles/02-08-mer-update",
+      "cita": "The manner in which we chose to do that was to erase all the flash to make sure all of that worked correctly, then go through the process of creating the new file system. It is not dissimilar from the way you would attempt to do this same mechanism on your home PC, when your [hard disc] becomes so corrupted it can't be used.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Las cerdas de acero inoxidable del RAT limpiaron un parche circular en la roca Adirondack; fue la primera vez que se usó el RAT en cualquiera de los dos rovers.",
+      "fuente_url": "https://solarviews.com/eng/spiritrover10.htm",
+      "cita": "Steel bristles on the rover's rock abrasion tool cleaned a circular patch on the rock unofficially named Adirondack. The brushing on Thursday was the first use of a rock abrasion tool by either Spirit or its twin rover, Opportunity.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La zona cepillada en Adirondack apareció mucho más oscura que el resto de la superficie de la roca, sorprendiendo al equipo.",
+      "fuente_url": "https://solarviews.com/eng/spiritrover10.htm",
+      "cita": "Stephen Gorevan said about a picture showing the brushed area is much darker than the rest of the rock's surface. 'Ladies and gentlemen, I present you the greatest interplanetary brushing of all time.'",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

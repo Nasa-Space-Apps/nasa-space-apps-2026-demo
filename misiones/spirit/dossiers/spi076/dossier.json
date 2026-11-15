@@ -1,0 +1,172 @@
+{
+  "evento_id": "spi076",
+  "titulo": "NASA anuncia el cese definitivo de los intentos de contactar al róver Spirit (24 mayo 2011)",
+  "contexto_ampliado": "El 24 de mayo de 2011, la NASA anunció oficialmente que cesaba todos los intentos de recuperar el contacto con el róver Spirit. Este había enviado su último mensaje a la Tierra el 22 de marzo de 2010, y más de catorce meses después ninguno de los intentos de comunicación había obtenido respuesta. Durante los diez meses previos al anuncio se realizaron extensas actividades de comunicación para explorar si el róver reactivaría al aumentar la energía solar tras el invierno marciano, pero las evaluaciones de los ingenieros mostraron una baja probabilidad de recuperar las comunicaciones.\n\nSpirit fue lanzado sobre un cohete Delta 2 en junio de 2003 y aterrizó en Marte el 3 de enero de 2004 con ayuda de paracaídas y airbags. Su misión estaba diseñada para durar apenas tres meses, pero el róver superó ampliamente esa expectativa: transmitió datos científicos a la Tierra durante más de seis años y recorrió en total 4,8 millas (7,7 kilómetros). A lo largo de ese tiempo, Spirit encontró evidencias de que Marte pudo haber albergado en algún momento un ambiente habitable para la vida microbiana.\n\nEl final operativo de Spirit llegó gradualmente. En mayo de 2009, dos de sus seis ruedas dejaron de girar y el róver quedó atascado en un banco de arena. Meses de análisis y de intentos de extracción fracasaron, y Spirit quedó inmovilizado en una pendiente con sus paneles solares orientados en dirección opuesta al sol durante el invierno marciano. Sin energía suficiente para alimentar sus calentadores de supervivencia, el róver experimentó temperaturas internas más frías que en cualquiera de sus seis años previos en Marte.\n\nLos ingenieros estimaron que la temperatura interior del róver probablemente cayó hasta −67 °F (−55 °C), o quizá incluso más baja. Con esas temperaturas extremas, muchos componentes electrónicos críticos y conexiones internas habrían sido susceptibles de sufrir daños.\n\nLa decisión también tuvo un componente pragmático: los recursos empleados para comunicarse con Spirit —la Red de Espacio Profundo de la NASA con sus antenas terrestres y dos orbitadores de Marte que retransmitían comunicaciones— eran necesarios para preparar la misión Mars Science Laboratory, cuyo lanzamiento estaba programado para el 25 de noviembre de 2011, con aterrizaje previsto en agosto de 2012. Dave Lavery, ejecutivo del programa de exploración del sistema solar de la NASA, declaró que se estaban transfiriendo recursos para apoyar el lanzamiento del róver Curiosity, aunque añadió que, pese a no creer en una probabilidad realista de escuchar a Spirit, la Red de Espacio Profundo podría escuchar ocasionalmente en busca de señales débiles cuando el horario lo permitiera. El róver Curiosity, de la misión Mars Science Laboratory, es casi cinco veces más pesado que Spirit y Opportunity.\n\nLa última transmisión hacia Spirit terminó el miércoles 25 de mayo de 2011. Mientras tanto, el róver gemelo Opportunity seguía activo al otro lado de Marte, habiendo acumulado más de 18 millas de recorrido desde su aterrizaje en enero de 2004. Spirit demostró que un róver diseñado para tres meses podía sobrevivir más de seis años en la superficie marciana y ampliar radicalmente el conocimiento sobre el planeta rojo.",
+  "datos_reales": [
+    {
+      "afirmacion": "Spirit se comunicó por última vez con la Tierra el 22 de marzo de 2010",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "Spirit last communicated with Earth on March 22, 2010.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La temperatura interior del róver probablemente cayó hasta −67 °F (−55 °C) o quizá incluso más fría",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "Temperatures inside the rover likely dipped to minus 67 degrees Fahrenheit, or perhaps even colder, according to NASA.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Sin energía para sus calentadores de supervivencia, el róver experimentó temperaturas internas más frías que en cualquiera de sus seis años previos en Marte, con muchos componentes y conexiones críticas susceptibles a daños",
+      "fuente_url": "https://astronomy.com/space-exploration/nasa-concludes-attempts-to-contact-mars-rover-spirit",
+      "cita": "With inadequate energy to run its survival heaters, the rover likely experienced colder internal temperatures last year than in any of its prior 6 years on Mars. Many critical components and connections would have been susceptible to damage from the cold.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante los diez meses anteriores al anuncio se realizaron extensas actividades de comunicación para explorar si Spirit reactivaría al aumentar la energía solar",
+      "fuente_url": "https://astronomy.com/space-exploration/nasa-concludes-attempts-to-contact-mars-rover-spirit",
+      "cita": "Extensive communications activities during the past 10 months also have explored the possibility that Spirit might reawaken as the solar energy available to it increased after a stressful martian winter without much sunlight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La última transmisión hacia Spirit terminó el miércoles 25 de mayo de 2011",
+      "fuente_url": "https://astronomy.com/space-exploration/nasa-concludes-attempts-to-contact-mars-rover-spirit",
+      "cita": "A transmission that ended Wednesday, May 25, will be the last in a series of attempts.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La Red de Espacio Profundo y dos orbitadores de Marte que habían comunicado con Spirit eran necesarios para preparar la misión Mars Science Laboratory",
+      "fuente_url": "https://astronomy.com/space-exploration/nasa-concludes-attempts-to-contact-mars-rover-spirit",
+      "cita": "Communications assets that have been used by the Spirit mission in the past, including NASA's Deep Space Network of antennas on Earth, plus two NASA Mars orbiters that can relay communications, now are needed to prepare for NASA's Mars Science Laboratory mission, which is scheduled to launch later this year.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Dave Lavery, ejecutivo del programa de exploración del sistema solar de la NASA, declaró que se transitaba hacia la misión Curiosity pero que la Red de Espacio Profundo podría escuchar señales débiles ocasionalmente",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "\"We're now transitioning assets to support the November launch of our next generation Mars rover, Curiosity,\" said Dave Lavery, NASA's program executive for solar system exploration. \"However, while we no longer believe there is a realistic probability of hearing from Spirit, the Deep Space Network may occasionally listen for any faint signals when the schedule permits.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Science Laboratory estaba programado para lanzarse el 25 de noviembre de 2011 y aterrizar en Marte en agosto de 2012",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "The Mars Science Laboratory is scheduled to blast off Nov. 25 and land on Mars in August 2012.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit recorrió un total de 4,8 millas (7,7 kilómetros) durante su misión en Marte",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "By the end of its mission, Spirit journeyed 4.8 miles (7.7 kilometers) on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit aterrizó en Marte el 3 de enero de 2004 en una misión diseñada para durar tres meses",
+      "fuente_url": "https://astronomy.com/space-exploration/nasa-concludes-attempts-to-contact-mars-rover-spirit",
+      "cita": "Spirit landed on Mars on Jan. 3, 2004, for a mission designed to last three months.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit transmitió datos a la Tierra por más de seis años, superando ampliamente los 90 días de su misión base",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "Spirit radioed data back to Earth for more than six years, vastly eclipsing the 90-day duration of its baseline mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit fue lanzado sobre un cohete Delta 2 en junio de 2003 y aterrizó con airbags en Marte en enero de 2004",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "Spirit departed Earth on top of a Delta 2 rocket in June 2003 and successfully parachuted to a bouncy, airbag-cushioned landing on Mars in January 2004.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit quedó atascado en un banco de arena en mayo de 2009 cuando dos de sus seis ruedas dejaron de girar, y los intentos de extracción fracasaron",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "But two of Spirit's six wheels stopped rotating, and the rover stalled out in a sand pit in May 2009. Months of analysis and extraction attempts failed to get Spirit moving again, stranding the rover on a slope with its solar panels facing away from the sun for the Martian winter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit encontró evidencias de que Marte pudo haber albergado en algún momento un ambiente habitable para la vida microbiana",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "Spirit ultimately found evidence Mars may have once harbored a habitable environment for microbial life.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En el momento del anuncio, el róver gemelo Opportunity había acumulado más de 18 millas de recorrido desde su aterrizaje en enero de 2004 y seguía activo",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "Spirit's twin rover, Opportunity, continues driving across a flat plain on the other side of Mars, having racked up more than 18 miles on its odometer since landing in January 2004.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El róver Curiosity del Mars Science Laboratory es casi cinco veces más pesado que Spirit y Opportunity",
+      "fuente_url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "cita": "The mission's Curiosity rover is nearly five times heavier than Spirit and Opportunity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA y el JPL concluyeron que los ingenieros habían mostrado una baja probabilidad de recuperar las comunicaciones con Spirit",
+      "fuente_url": "https://astronomy.com/space-exploration/nasa-concludes-attempts-to-contact-mars-rover-spirit",
+      "cita": "Engineers' assessments in recent months have shown a low probability for recovering communications with Spirit.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA closes book on Spirit rover's historic mission",
+      "url": "https://spaceflightnow.com/news/n1105/24spirit/index.html",
+      "editor": "Spaceflight Now (Stephen Clark)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "NASA concludes attempts to contact Mars rover Spirit",
+      "url": "https://astronomy.com/space-exploration/nasa-concludes-attempts-to-contact-mars-rover-spirit",
+      "editor": "Astronomy Magazine (reproduce el comunicado oficial de la NASA)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Mars Exploration Rovers – Spirit and Opportunity (misión en profundidad)",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Farewell Spirit",
+      "url": "https://www.americaspace.com/2011/05/25/farewell-spirit/",
+      "editor": "AmericaSpace (Jason Rhian)",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "Número del comunicado de prensa oficial: el evento señala que aparece como 11-156 en JPL (https://www.jpl.nasa.gov/news/nasa-concludes-attempts-to-contact-mars-rover-spirit/) y como 11-167 en NASA Headquarters. No pudo verificarse en las páginas leídas porque la página de JPL y SpaceRef devolvieron contenido vacío durante esta investigación.",
+    "El relato del borrador menciona que Spirit 'exploró la cuenca del Cráter Gusev' y 'escaló las Columbia Hills', pero ninguna de las fuentes citadas en el dossier (spaceflightnow.com, astronomy.com, science.nasa.gov) respalda esos detalles con cita literal; se eliminaron del contexto ampliado."
+  ],
+  "huecos": [
+    "El número exacto de comandos enviados (dato clave: 'más de 1.300 comandos') no aparece en ninguna de las páginas efectivamente leídas; solo consta en el detalle del evento y no pudo respaldarse con cita literal.",
+    "El número del comunicado de prensa (11-156 en JPL o 11-167 en NASA HQ) no pudo confirmarse: las páginas de JPL, SpaceRef y la lista de meteoritos devolvieron contenido vacío o nulo.",
+    "No se encontró información verificada sobre la temperatura exterior del ambiente marciano durante el invierno en que se perdió Spirit; solo se confirmó la temperatura interior estimada del róver (≤ −67 °F / −55 °C).",
+    "No se pudo confirmar el número exacto de horas/intentos individuales de escucha pasiva ('listening attempts') realizados antes del cierre oficial.",
+    "El evento original indica que se enviaron 'más de 1.300 comandos' a Spirit; ninguno de los 17 datos del dossier confirma esa cifra específica.",
+    "El evento original menciona que el número del comunicado de prensa es 11-156 en JPL y 11-167 en NASA Headquarters; este dato no aparece respaldado en ninguna de las fuentes efectivamente leídas."
+  ],
+  "ideas_visuales": [
+    "Ilustración del róver Spirit atascado en el banco de arena con dos ruedas inoperativas, inclinado en una pendiente con los paneles solares orientados en dirección opuesta al sol (basado en dato [12]).",
+    "Diagrama comparativo de la temperatura interior estimada de Spirit (−67 °F / −55 °C) frente a temperaturas conocidas de la Tierra para dar contexto al estudiante (basado en datos [1] y [2]).",
+    "Infografía de la línea temporal de Spirit: lanzamiento en junio de 2003, aterrizaje en enero de 2004, última comunicación el 22 de marzo de 2010 y cese definitivo el 25 de mayo de 2011 (basado en datos [0], [4], [9], [10], [11]).",
+    "Esquema de la Red de Espacio Profundo con antenas terrestres y dos orbitadores de Marte retransmitiendo señales hacia Spirit (basado en dato [5]).",
+    "Comparación visual de tamaño entre Spirit/Opportunity y el róver Curiosity, mostrando que este último es casi cinco veces más pesado (basado en dato [15])."
+  ],
+  "datos_no_verificados": []
+}

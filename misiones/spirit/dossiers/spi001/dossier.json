@@ -1,0 +1,109 @@
+{
+  "evento_id": "spi001",
+  "titulo": "Steve Squyres concibe un rover científico para Marte (1987)",
+  "contexto_ampliado": "Steve Squyres completó su licenciatura en 1978 y su doctorado en 1982, ambos en la Universidad de Cornell. Durante su formación, una de sus mayores influencias fue el célebre astrónomo Carl Sagan, miembro del profesorado de Cornell entre 1971 y 1996. Fue Sagan quien le escribió personalmente para invitarlo a ser su estudiante de posgrado durante la misión Voyager, una de las aventuras espaciales más ambiciosas de la NASA.\n\nCon su formación como geólogo, Squyres concibió la idea de crear un «geólogo de campo robótico»: un vehículo capaz de desplazarse por la superficie de Marte, equipado con los instrumentos que un geólogo querría llevar en su mochila o tener en su laboratorio. La idea era poder examinar las rocas marcianas directamente, como lo haría un científico sobre el terreno.\n\nDesde 1987 hasta 1997, Squyres escribió cuatro propuestas a la NASA para llevar su rover a Marte. Las tres primeras fueron rechazadas. Sin embargo, cada rechazo le sirvió para refinar y mejorar la siguiente propuesta: una década de perseverancia que finalmente dio frutos.\n\nEn el año 2000, la NASA no solo aceptó: decidió enviar no uno, sino dos rovers. Según las palabras del propio Squyres, tuvieron que estar con los rovers encima de los cohetes y listos para volar en Florida apenas cuatro meses después. Fue, en sus propias palabras, «una locura».\n\nEl resultado fue la Misión de Exploración de Marte (MER), cuyo objetivo oficial era buscar señales de agua pasada en el planeta rojo. Spirit y Opportunity fueron robots gemelos idénticos diseñados con ese propósito. Spirit aterrizó en el cráter Gusev, un posible lago antiguo dentro de un enorme cráter de impacto. Opportunity lo hizo en Meridiani Planum, un lugar donde los depósitos minerales sugerían que Marte había tenido un pasado húmedo.\n\nAmbos rovers superaron con creces las expectativas. Spirit recorrió 7,7 kilómetros sobre la superficie marciana. Opportunity rompió todos los récords: acumuló 45,16 kilómetros de conducción en Marte y mantuvo comunicación hasta junio de 2018. Juntos, estos robots geólogos transformaron nuestra comprensión de la historia temprana de Marte.\n\nEn reconocimiento a su trabajo y a su capacidad para conectar al público general con los avances de la misión, Squyres recibió en 2009 la medalla Carl Sagan de la Sociedad Astronómica Americana: un homenaje apropiado, dado que fue el propio Sagan quien lo había inspirado décadas atrás.",
+  "datos_reales": [
+    {
+      "afirmacion": "Steve Squyres obtuvo su licenciatura (B.S.) en 1978 y su doctorado (Ph.D.) en 1982, ambos en Cornell University.",
+      "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+      "cita": "Prof. Steven Squyres '78 Ph.D. '82, astronomy",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Carl Sagan, astrónomo y miembro del profesorado de Cornell de 1971 a 1996, fue una de las grandes influencias de Squyres. Sagan le escribió personalmente para invitarlo a ser su estudiante de posgrado durante la misión Voyager.",
+      "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+      "cita": "Carl Sagan, a renowned astronomer and Cornell faculty member from 1971 to 1996 [...] when he applied for graduate schools, Sagan wrote to him saying that \"he wanted [Squyres] to be his grad student for the Voyager mission.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "De 1987 a 1997, Squyres escribió cuatro propuestas a la NASA para un rover marciano. Las tres primeras fueron rechazadas.",
+      "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+      "cita": "From 1987 to 1997, Squyres said he wrote four proposals to NASA for a Mars Rover mission. Though his first three proposals were rejected, Squyres said he rebounded from the rejections by refining his next proposal.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Squyres diseñó los rovers como 'geólogos de campo robóticos': vehículos capaces de moverse por la superficie de Marte cargados con los instrumentos que un geólogo llevaría en su mochila o laboratorio.",
+      "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+      "cita": "Squyres said he used his training as a geologist to design the rovers as a \"robotic field geologist.\" [...] \"[I needed] a vehicle that you could load up with the kind of stuff a geologist would want to have in their backpack or back in their laboratory and be able to move it around on the surface of Mars.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Squyres recibió la medalla Carl Sagan de la American Astronomical Society en 2009 por su capacidad para comunicar la misión al público general.",
+      "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+      "cita": "Squyres — who was awarded the American Astronomical Society Carl Sagan Medal in 2009 for his ability to connect the general public with updates on the Mars Rover missions",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El objetivo oficial de la misión MER fue buscar señales de agua pasada en Marte. Spirit y Opportunity fueron robots gemelos idénticos.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "NASA's Spirit and Opportunity rovers were identical twin robots that helped rewrite our understanding of the early history of Mars. [...] Objective: Look for signs of past water on Mars",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit aterrizó el 3 de enero de 2004 en el Cráter Gusev, considerado un posible lago antiguo; Opportunity aterrizó el 24 de enero de 2004 en Meridiani Planum, donde los depósitos minerales sugerían una historia húmeda.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "Spirit landed at Gusev Crater, a possible former lake in a giant impact crater. Opportunity landed at Meridiani Planum, a place where mineral deposits suggested that Mars had a wet history.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit recorrió 7,7 kilómetros en Marte antes de concluir su misión en 2010. Opportunity recorrió 45,16 kilómetros y tuvo su última comunicación el 10 de junio de 2018.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "cita": "Spirit journeyed 4.8 miles (7.7 kilometers) on Mars. Opportunity held the off-Earth roving distance record after accruing 28.06 miles (45.16 kilometers) of driving on Mars, when it fell silent in June 2018.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Mars Exploration Rovers – Spirit and Opportunity (NASA Science)",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Cornell Close-Ups: Professor Steven Squyres – The Man Behind the Mars Rover Project",
+      "url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+      "editor": "Cornell Daily Sun",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "La afirmación del dato [8] incluye las fechas «3 de enero de 2004» y «24 de enero de 2004», pero la cita textual de la fuente NASA (https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/) solo menciona los lugares de aterrizaje, no las fechas exactas.",
+    "La afirmación del dato [9] dice que la última comunicación de Opportunity fue «el 10 de junio de 2018», pero la cita textual solo dice «June 2018» sin especificar el día. Además, la afirmación dice que Spirit concluyó su misión «en 2010», pero la cita no menciona ese año (https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/).",
+    "El dato [4] (cita de Squyres en https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project) sugiere que tuvieron cuatro meses desde la aprobación en 2000 hasta estar listos para el lanzamiento; sin embargo, los lanzamientos reales de MER fueron en junio-julio de 2003. Squyres puede referirse a un hito intermedio, pero la formulación del relato original podía inducir a pensar que se lanzaron en 2000."
+  ],
+  "huecos": [
+    "No se encontró en ninguna fuente leída la frase literal de Squyres sobre que Marte fue 'húmedo y cálido o frío y seco' (posiblemente proviene de su libro 'Roving Mars', 2005, que no está disponible para lectura directa).",
+    "La expresión 'botas geológicas sobre el terreno' (geological boots on the ground) no aparece textualmente en las fuentes leídas; es una paráfrasis frecuente del argumento de Squyres pero no se pudo verificar de forma literal.",
+    "No se pudo acceder al artículo científico de ScienceDirect ('Follow the Water': Steve Squyres and the Mars Exploration Rovers) por estar detrás de un muro de pago.",
+    "No se pudo confirmar si Squyres era ya profesor en Cornell en 1987 o todavía era investigador postdoctoral; las fuentes no especifican su cargo exacto ese año.",
+    "El artículo del Cornell Daily Sun es de 2014 y recoge declaraciones de Squyres en primera persona, pero como entrevista periodística puede contener imprecisiones respecto a fechas exactas.",
+    "Al descartar el dato [1] por falta de respaldo suficiente en la cita (la cita solo confirma que Squyres pasó cuatro horas en una sala y supo qué quería hacer, sin mencionar Viking ni un trabajo de clase), el dossier pierde la referencia a las fotografías de la misión Viking como detonante del interés de Squyres por Marte.",
+    "El evento original dice que Squyres «concibe» el rover en 1987, pero el dato [3] solo confirma que comenzó a escribir propuestas formales a la NASA ese año; la concepción de la idea pudo ser anterior y no hay fuente que precise el momento exacto.",
+    "El relato del borrador incluía detalles biográficos (infancia leyendo libros de exploradores, curso de astronomía en tercer año, la lección de Sagan sobre descomponer problemas) que no están respaldados por ninguna de las citas del dossier y fueron eliminados del contexto ampliado."
+  ],
+  "ideas_visuales": [
+    "Squyres joven en Cornell recibiendo una carta manuscrita de Carl Sagan que lo invita a ser su estudiante de posgrado para la misión Voyager (dato [2]).",
+    "Un escritorio con cuatro carpetas de propuestas: las tres primeras marcadas con sellos de «rechazada» y la cuarta con un sello de «aprobada», junto al rango de años 1987-1997 (dato [3]).",
+    "Dos rovers gemelos idénticos montados sobre cohetes en la plataforma de lanzamiento de Florida, con técnicos trabajando a contrarreloj (datos [4] y [7]).",
+    "Ilustración en corte de un rover MER mostrando sus instrumentos científicos comparados con los de la mochila y el laboratorio de un geólogo de campo (dato [5]).",
+    "Vista aérea dividida: a la izquierda, Spirit en el cráter Gusev con un antiguo lecho de lago; a la derecha, Opportunity en Meridiani Planum con capas de depósitos minerales (dato [8]).",
+    "Mapa de la superficie de Marte con los recorridos trazados de Spirit (7,7 km) y Opportunity (45,16 km), mostrando la enorme diferencia de escala (dato [9])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "En 2000, la NASA aprobó enviar no uno sino dos rovers a Marte, con apenas cuatro meses para preparar el lanzamiento.",
+      "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+      "cita": "\"Finally, in 2000 NASA said, 'We will send your rover to Mars — in fact, we will send two of them. Here's all the money you need. Ready, set, go.' We had to be on top of the rockets and ready to fly in Florida four months later, and it was crazy.\"",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

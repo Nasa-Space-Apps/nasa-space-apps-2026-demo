@@ -10,6 +10,7 @@ Prueba suelta sobre un dossier ya generado (no sobrescribe nada sin --guardar):
 import argparse
 import asyncio
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -19,6 +20,12 @@ from pydantic import BaseModel, Field
 import prompts
 import proveedores
 from esquema import Dossier
+
+# Esfuerzo del revisor (low | medium | high | max | default). Por defecto medium: en un borrador de prueba (spi001) low dejó pasar un dato con cita débil
+# que el revisor completo sí descartó; medium lo filtró con ~55% menos tiempo y costo; high fue equivalente al default. Medido en 40 eventos: ~7.400 de sus ~9.500 tokens de salida eran
+# pensamiento y la revisión en sí es corta. `max_thinking_tokens` está obsoleto y Opus (pensamiento adaptativo) lo ignora: en una
+# prueba con 2.000 el pensamiento siguió en 5.000-10.000 tokens. REVISOR_EFFORT=default quita el ajuste (comportamiento anterior).
+ESFUERZO_REVISOR = os.environ.get("REVISOR_EFFORT", "medium").strip().lower()
 
 BASE = Path(__file__).parent
 
@@ -71,7 +78,7 @@ async def revisar(evento: dict, borrador: Dossier, prov: proveedores.Proveedor, 
     env = {**prov.env, "ANTHROPIC_MODEL": prov.modelo_revisor}
     proveedores.aplicar(proveedores.Proveedor(prov.nombre, prov.modelo_revisor, prov.etiqueta, prov.con_tope, env))
     opts = ClaudeAgentOptions(model=prov.modelo_revisor, system_prompt=sistema, tools=[], allowed_tools=[], max_turns=3, setting_sources=[],
-                              cwd=str(BASE), env=env, output_format={"type": "json_schema", "schema": Revision.model_json_schema()})
+                              effort=None if ESFUERZO_REVISOR in ("", "default") else ESFUERZO_REVISOR, cwd=str(BASE), env=env, output_format={"type": "json_schema", "schema": Revision.model_json_schema()})
     met = {"modelo": prov.modelo_revisor, "prompt_version": version}
     salida = None
     try:

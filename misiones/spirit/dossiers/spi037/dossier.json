@@ -1,0 +1,160 @@
+{
+  "evento_id": "spi037",
+  "titulo": "Spirit corona Husband Hill, la primera colina escalada por un rover en Marte",
+  "contexto_ampliado": "El 3 de enero de 2004, el rover Spirit de la NASA aterrizó en el cráter Gusev, un enorme cuenco de unos 150 kilómetros de diámetro que fue elegido como destino porque la forma del terreno sugería que alguna vez albergó un lago. Poco después del aterrizaje, las cámaras del rover captaron un grupo de siete colinas situadas a unos 3 kilómetros al este. La NASA propuso llamar al conjunto «Columbia Hills» en tributo a la última tripulación del transbordador Columbia; la cima más alta fue bautizada Husband Hill en honor a su comandante, Rick Husband.\n\nSpirit no había sido diseñado para escalar colinas: era un geólogo robótico pensado para terrenos relativamente planos. Sin embargo, el equipo científico decidió dirigir al rover hacia esas elevaciones. Steve Squyres, investigador principal de la Universidad de Cornell, lo explicó así: «Esta escalada estuvo motivada por la ciencia. Cada vez que Spirit ha ganado altitud, hemos encontrado tipos de roca distintos. Además, estamos haciendo lo que haría cualquier geólogo de campo en una zona así: subir a un buen punto de observación para trazar una ruta».\n\nLa subida fue larga y metódica. Según una nota de la VOA publicada el 1 de septiembre de 2005, Spirit necesitó 590 días para alcanzar la cumbre. Por su parte, la ficha oficial de la misión en la NASA indica que el rover llegó finalmente a la cima el 29 de septiembre de 2005 y pudo capturar panoramas de 360 grados en color real del cráter Gusev. La discrepancia entre ambas fechas sigue sin resolverse del todo.\n\nLa cima de Husband Hill se encuentra 106 metros por encima del sitio de aterrizaje de Spirit. Sin embargo, las fuentes difieren sobre la altura respecto a las llanuras circundantes: un comunicado de JPL la sitúa en 82 metros, mientras que la descripción de una imagen oficial de la NASA habla de unos 100 metros. Lejos de ser un pico afilado, la cumbre es una amplia meseta de afloramientos rocosos y dunas de arena arrastradas por el viento. Chris Leger, planificador de maniobras del rover en el JPL, describió la experiencia al recibir las primeras imágenes: «Cuando llegaron y pudimos ver el horizonte a nuestro alrededor, fue tan emocionante como llegar a la cima de cualquier montaña que haya escalado en la Tierra».\n\nLos hallazgos científicos confirmaron que la escalada valió la pena. En las llanuras que Spirit cruzó de camino a las colinas, las rocas volcánicas mostraban solo una leve alteración por agua. Pero cuando el rover llegó a la base de las colinas —apenas cinco meses después de aterrizar— comenzó a encontrar de inmediato rocas con historias mucho más húmedas. Más adelante, tras coronar Husband Hill, Spirit descubrió minerales de carbonato en el afloramiento «Comanche», evidencia de un ambiente antiguo húmedo y no ácido, y cerca de «Home Plate» halló un depósito de sílice casi puro, probablemente huella de antiguos géiseres o fumarolas.\n\nSpirit terminó operando durante 6 años, 2 meses y 19 días, más de 25 veces su vida útil original, y recorrió un total de 7,73 kilómetros sobre la superficie marciana. La escalada a Husband Hill fue un hito que demostró que un rover diseñado para geología de llanura podía convertirse en explorador de alturas, y que las recompensas científicas de arriesgarse a subir superaban con creces las de quedarse en terreno plano.",
+  "datos_reales": [
+    {
+      "afirmacion": "Husband Hill está 106 metros por encima del sitio donde Spirit aterrizó",
+      "fuente_url": "https://www.sciencedaily.com/releases/2005/09/050902062700.htm",
+      "cita": "It is 106 meters (348 feet) higher than the site where Spirit landed nearly 20 months ago.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cima de Husband Hill está 82 metros por encima del borde de las llanuras circundantes",
+      "fuente_url": "https://www.sciencedaily.com/releases/2005/09/050902062700.htm",
+      "cita": "The summit sits 82 meters (269 feet) above the edge of the surrounding plains.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según la página oficial de NASA, Spirit alcanzó la cima de Husband Hill el 29 de septiembre de 2005",
+      "fuente_url": "https://science.nasa.gov/mission/mer-spirit",
+      "cita": "On Sept. 29, 2005, the rover finally reached the summit of Husband Hill, a small flat plain from which Spirit was able to take 360-degree panoramas in true color of the Gusev Crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según VOA (1 sep 2005), Spirit tardó 590 días en alcanzar la cumbre de Husband Hill",
+      "fuente_url": "https://www.globalsecurity.org/space/library/news/2005/space-050901-voa01.htm",
+      "cita": "It has taken Spirit 590 days to reach the summit known as Husband Hill, part of a mountainous range known as the Columbia Hills.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Columbia Hills fue nombrado en honor al transbordador Columbia; Husband Hill honra a su comandante Rick Husband",
+      "fuente_url": "https://www.globalsecurity.org/space/library/news/2005/space-050901-voa01.htm",
+      "cita": "Columbia Hills are named for the ill-fated space shuttle Columbia and Husband Hill honors the ship's commander, Rick Husband.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las colinas Columbia fueron avistadas desde el punto de aterrizaje; estaban a unos 3 kilómetros al este",
+      "fuente_url": "https://www.sciencedaily.com/releases/2005/09/050902062700.htm",
+      "cita": "Shortly after Spirit landed, it observed a cluster of seven hills about 3 kilometers (2 miles) east of its landing site. NASA proposed naming the range 'Columbia Hills' in tribute to the last crew of Space Shuttle Columbia.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cima de Husband Hill es una amplia meseta de afloramientos rocosos y dunas de viento, unos 100 metros sobre las llanuras (cifra de la imagen PIA17760)",
+      "fuente_url": "https://science.nasa.gov/resource/spirits-view-southward-from-husband-hill/",
+      "cita": "The summit of Husband Hill is a broad plateau of rock outcrops and windblown drifts about 100 meters (300 feet) higher than the surrounding plains of Gusev Crater, where Spirit landed in January 2004.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras escalar Husband Hill, Spirit encontró minerales de carbonato en el afloramiento Comanche y sílice casi puro cerca de Home Plate",
+      "fuente_url": "https://science.nasa.gov/resource/spirits-view-southward-from-husband-hill/",
+      "cita": "At Comanche, the rover found carbonate minerals, evidence of an ancient wet environment that was not acidic... Near Home Plate, Spirit found a deposit of nearly pure silica, evidence of an ancient environment of hot springs or steam vents.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Steve Squyres explicó que la motivación de la escalada era científica: cada ganancia de altitud revelaba nuevos tipos de roca",
+      "fuente_url": "https://www.sciencedaily.com/releases/2005/09/050902062700.htm",
+      "cita": "\"This climb was motivated by science,\" said Steve Squyres of Cornell University... \"Every time Spirit has gained altitude, we've found different rock types. Also, we're doing what any field geologist would do in an area like this: climbing to a good vantage point for plotting a route.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Chris Leger, planificador de maniobras del rover en JPL, describió la llegada a la cima como tan emocionante como escalar una montaña en la Tierra",
+      "fuente_url": "https://www.sciencedaily.com/releases/2005/09/050902062700.htm",
+      "cita": "\"When the images came down and we could see horizon all the way around, that was every bit as exhilarating as getting to the top of any mountain I've climbed on Earth,\" said Chris Leger, a rover planner at NASA's Jet Propulsion Laboratory.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En las llanuras, las rocas volcánicas mostraban solo leve alteración por agua; al llegar a las colinas, Spirit encontró rocas con historias mucho más húmedas",
+      "fuente_url": "https://www.sciencedaily.com/releases/2005/09/050902062700.htm",
+      "cita": "Volcanic rocks covering the plain Spirit crossed on its way to the hills bore evidence of only slight alteration by water. When Spirit reached the base of the hills five months after landing, it immediately began finding rocks with wetter histories.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit operó más de 25 veces su vida útil original de 90 días, durante 6 años, 2 meses y 19 días",
+      "fuente_url": "https://science.nasa.gov/mission/mer-spirit",
+      "cita": "Described as a 'wonderful workhorse'—Spirit operated for 6 years, 2 months, and 19 days, more than 25 times its original intended lifetime.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Spirit recorrió un total de 7,73 kilómetros (4,8 millas) sobre la superficie marciana",
+      "fuente_url": "https://science.nasa.gov/mission/mer-spirit",
+      "cita": "The rover traveled 4.8 miles (7.73 kilometers) across the Martian plains.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cráter Gusev, sitio de aterrizaje de Spirit, mide unos 150 kilómetros de diámetro y fue seleccionado porque la forma del terreno sugiere que alguna vez albergó un lago",
+      "fuente_url": "https://www.sciencedaily.com/releases/2005/09/050902062700.htm",
+      "cita": "The landing site and the Columbia Hills are within Gusev Crater, a bowl about 150 kilometers (95 miles) in diameter. The crater was selected as the landing site for the Spirit rover because the shape of the terrain suggests the crater once held a lake.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's Durable Spirit Sends Intriguing New Images From Mars (JPL press release, 2 sep 2005)",
+      "url": "https://www.sciencedaily.com/releases/2005/09/050902062700.htm",
+      "editor": "NASA/Jet Propulsion Laboratory vía ScienceDaily",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Spirit (MER-A): ficha de misión en profundidad",
+      "url": "https://science.nasa.gov/mission/mer-spirit",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Spirit's View Southward from Husband Hill (PIA17760)",
+      "url": "https://science.nasa.gov/resource/spirits-view-southward-from-husband-hill/",
+      "editor": "NASA Science / JPL-Caltech / Cornell",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Probe Returns New Pictures (VOA, 1 sep 2005)",
+      "url": "https://www.globalsecurity.org/space/library/news/2005/space-050901-voa01.htm",
+      "editor": "VOA vía GlobalSecurity",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Mars Exploration Rovers Spirit and Opportunity — Overview",
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "FECHA DE LA CIMA — VOA (https://www.globalsecurity.org/space/library/news/2005/space-050901-voa01.htm), del 1 de septiembre de 2005, afirma que Spirit ya alcanzó la cima tras '590 días'; la ficha oficial de NASA (https://science.nasa.gov/mission/mer-spirit) fija el 29 de septiembre de 2005 como la fecha en que 'finalmente alcanzó la cima'; según la nota del evento, The Planetary Society data la 'cima verdadera' en el sol 635 (15 oct 2005). Las tres fuentes dan fechas distintas para el mismo hito.",
+    "ALTURA SOBRE LAS LLANURAS — El comunicado de JPL (https://www.sciencedaily.com/releases/2005/09/050902062700.htm) indica '82 metros (269 pies) por encima del borde de las llanuras circundantes', mientras que la imagen oficial PIA17760 (https://science.nasa.gov/resource/spirits-view-southward-from-husband-hill/) dice 'unos 100 metros (300 pies) por encima de las llanuras'. Ambas fuentes son NASA/JPL pero ofrecen cifras distintas. (Los 106 m sobre el punto de aterrizaje sí coinciden en todas las fuentes.)",
+    "FECHA DEL EVENTO ORIGINAL — El evento fija como fecha estimada el 23 de agosto de 2005 (fecha_inicio: 2005-08-23), pero ninguna de las fuentes del dossier respalda esa fecha concreta. La VOA (https://www.globalsecurity.org/space/library/news/2005/space-050901-voa01.htm), publicada el 1 de septiembre, da a entender que Spirit ya había llegado para esa fecha; la NASA (https://science.nasa.gov/mission/mer-spirit) indica el 29 de septiembre de 2005. El 23 de agosto queda sin respaldo documental.",
+    "ALTURA SOBRE LAS LLANURAS EN EL EVENTO — El evento original dice 'unos 100 m por encima de las llanuras de Gusev', lo cual coincide con la imagen PIA17760 (https://science.nasa.gov/resource/spirits-view-southward-from-husband-hill/) pero no con el comunicado de JPL (https://www.sciencedaily.com/releases/2005/09/050902062700.htm) que indica 82 metros. El evento parece haber elegido solo una de las dos cifras disponibles."
+  ],
+  "huecos": [
+    "No se pudo confirmar con cita directa el sol 618 (28 sep 2005) como fecha específica del autorretrato desde la cima: el dato aparece en la ficha del evento pero ninguna de las fuentes leídas lo menciona explícitamente.",
+    "No se pudo leer directamente el artículo de The Planetary Society (https://planetary.org/articles/12-31-mer-update) que dataría la 'cima verdadera' en el sol 635 (15 oct 2005): solo consta en la nota del evento.",
+    "No se encontró cita directa verificable de Steve Squyres sobre que las colinas 'parecían imposiblemente lejanas' desde el punto de aterrizaje (dato mencionado en la ficha del evento, pero ausente en los textos leídos).",
+    "No se pudo confirmar el número exacto de sols (en lugar de días terrestres) que duró la escalada: las fuentes leídas usan 'días' o no dan el recuento sol a sol.",
+    "No se leyó el artículo de Astronomy.com ni el PDF de Phys.org/Universe Today citados en las fuentes semilla; podrían contener detalles adicionales no cubiertos aquí.",
+    "El evento menciona que el rover 'no había sido diseñado para escalar', afirmación presente en el relato pero que ninguna cita textual de las fuentes consultadas respalda literalmente (las fuentes hablan de motivación científica de la escalada, no de las limitaciones de diseño del rover).",
+    "No se confirma en las fuentes si los '590 días' de la VOA se refieren a días terrestres o a soles marcianos; el evento original habla de '~590 días de viaje' sin especificar."
+  ],
+  "ideas_visuales": [
+    "Vista panorámica de las siete colinas Columbia desde el punto de aterrizaje de Spirit, con indicación de la distancia de 3 km (dato [5]).",
+    "Perfil de elevación que muestre los 106 m de Husband Hill sobre el sitio de aterrizaje y los 82-100 m sobre las llanuras circundantes (datos [0], [1], [6]).",
+    "La amplia meseta de la cima de Husband Hill con sus afloramientos rocosos y dunas de arena, vista cenital o en perspectiva (dato [6]).",
+    "Comparación visual de rocas de las llanuras (poco alteradas por agua) frente a rocas de las colinas (con historias húmedas), como un panel dividido en dos mitades (dato [10]).",
+    "Mapa del recorrido de Spirit mostrando los 7,73 km totales, con la ruta de ascenso a Husband Hill destacada (datos [5], [12])."
+  ],
+  "datos_no_verificados": []
+}
