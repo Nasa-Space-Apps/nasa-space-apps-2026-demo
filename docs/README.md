@@ -2,11 +2,12 @@
 
 Índice de la carpeta `docs/`. Si retomas el proyecto, léelos en este orden:
 
+0. **[game-design.md](game-design.md)** — **enfoque vigente (hito 29): el juego sobre Opportunity**, con modo Historia y modo Decisiones, Parte 1 (2D) y Parte 2 (3D), reglas, impacto en el código y preguntas abiertas. *Léelo antes que nada: define hacia dónde va el proyecto.* El resto de la documentación describe lo que **ya está construido**.
 1. **[history.md](history.md)** — qué se hizo, en qué orden y por qué (incluye las decisiones de diseño y las preferencias del
    usuario). *Léelo primero para recuperar el contexto.*
 2. **[architecture.md](architecture.md)** — mapa del código: **rutas y vistas** (globo y escena), archivos, flujo de datos, bucle de render, física del rover,
    terreno, partículas, minimapa.
-3. **[design.md](design.md)** — **el diseño de la demo: tema «Primer» + flat design** (tokens, tipografía, componentes, movimiento, 3D), cómo aplicarlo en código y qué falta.
+3. **[design.md](design.md)** — **el diseño de la demo: tema «Ink & Paper» (cómic, referencia Ponpon Mania) + flat design** (tokens, tipografía, componentes, movimiento, 3D), cómo aplicarlo en código y qué falta.
 4. **[themes-and-missions.md](themes-and-missions.md)** — receta para añadir un estilo visual (incluye los tokens del globo), un vehículo+terreno (y su marcador en el globo) o
    checkpoints (storytelling) nuevos.
 5. **[assets.md](assets.md)** — los modelos de `public/models` y las fotos de `public/images`: tamaños, ejes, créditos (el globo no usa assets).

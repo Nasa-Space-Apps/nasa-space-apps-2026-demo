@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /*
- * Design tokens come from src/lib/themes.ts (published as CSS variables by app/layout.tsx): --canvas --surface --ink --ink-soft --muted --line
- * --accent --radius --radius-sm --ease --dur-*. Flat design: no shadows, no gradients. Every motion uses var(--ease) and soft durations.
+ * Design tokens come from src/lib/themes.ts (published as CSS variables by app/layout.tsx): --canvas --surface --on-ink --ink --ink-soft --muted --line
+ * --accent --hover --radius --radius-sm --stroke --grain --ease --dur-*. Flat design: no shadows, no gradients. Every motion uses var(--ease) and soft durations.
  * New @keyframes are not picked up by the dev server (docs/gotchas.md): animate with transitions.
  */
 
@@ -12,9 +12,24 @@ body {
   background: var(--canvas);
   color: var(--ink);
   font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
-  font-weight: 450;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * The grain of the reference's blue field: a fine, static noise tile laid over the whole screen (it is texture, not a gradient or a glow).
+ * One fixed layer, no animation. `--grain` is its opacity (0 turns it off).
+ */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: var(--grain);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.4 -0.2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 200px 200px;
 }
 
 /* ---- browser surfaces themed from the palette ---- */
@@ -23,12 +38,12 @@ body {
   color: var(--ink);
 }
 * {
-  caret-color: var(--accent);
+  caret-color: var(--ink);
   scrollbar-width: thin;
-  scrollbar-color: var(--line) transparent;
+  scrollbar-color: var(--ink) transparent;
 }
 :focus-visible {
-  outline: 2px solid var(--ink);
+  outline: var(--stroke) solid var(--ink);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
@@ -40,17 +55,17 @@ button {
 /* ---- components ---- */
 
 /*
- * Hover language (from primer.io): a button's fill is swept across by a lime layer (background-size 0 → 100%) while the text goes ink;
- * links turn soft orange; arrows glide. All on the theme curve, no snapping.
+ * Hover language (from ponpon-mania.com, adapted): pills. A button's ink is swept across by the pink accent (background-size 0 → 100%) while its
+ * text goes ink; links turn blue; arrows glide. All on the theme curve, no snapping.
  */
 
-/** Primary button: solid ink, mono caps; on hover the lime fill sweeps in from the left. */
+/** Primary button: solid ink pill, bold lowercase; on hover the pink fill sweeps in from the left. */
 .ui-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 13px 18px;
+  padding: 13px 22px;
   border: 0;
   border-radius: var(--radius-sm);
   background-color: var(--ink);
@@ -58,28 +73,33 @@ button {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 0% 100%;
-  color: var(--canvas);
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  color: var(--on-ink);
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: lowercase;
   white-space: nowrap;
   cursor: pointer;
   transition:
     background-size var(--dur-base) var(--ease),
     color var(--dur-base) var(--ease),
     box-shadow var(--dur-base) var(--ease),
-    transform var(--dur-base) var(--ease),
+    transform var(--dur-fast) var(--pop),
     opacity var(--dur-base) var(--ease);
 }
+/* game feel: a button hops up and tilts under the pointer, and squashes when pressed (the springy --pop curve overshoots, then settles) */
 .ui-btn:hover:not(:disabled) {
   background-size: 100% 100%;
   color: var(--ink);
+  transform: translateY(-2px) rotate(-1.2deg);
 }
 .ui-btn:active:not(:disabled) {
-  transform: scale(0.985);
+  transform: translateY(1px) scale(0.93);
+}
+.ui-btn.is-active:hover {
+  transform: none;
 }
 .ui-btn:disabled {
   cursor: default;
@@ -94,23 +114,93 @@ button {
   transform: translateX(4px);
 }
 
-/** Secondary button: hairline outline; same lime sweep on hover. */
+/** Secondary button: a 2px ink outline pill (like the reference's nav hover); same pink sweep on hover. */
 .ui-btn.is-ghost {
   background-color: transparent;
   color: var(--ink);
-  box-shadow: inset 0 0 0 1px var(--line); /* a 1px outline, not a shadow */
-}
-.ui-btn.is-ghost:hover:not(:disabled) {
-  box-shadow: inset 0 0 0 1px var(--ink);
+  box-shadow: inset 0 0 0 2px var(--ink); /* an outline, not a shadow */
 }
 /** Selected state (e.g. the current world): ink, and it stays ink on hover. */
 .ui-btn.is-active {
   background-size: 0% 100% !important;
-  color: var(--canvas) !important;
+  color: var(--on-ink) !important;
   cursor: default;
 }
 
-/** Text link: mono caps, no box; turns soft orange on hover. */
+/** Round button (the card's close X): a paper disc in an ink stroke; the pink sweeps in on hover and the disc spins and pops. */
+.ui-fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: var(--stroke) solid var(--ink);
+  border-radius: 999px;
+  background-color: var(--surface);
+  background-image: linear-gradient(var(--hover), var(--hover));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    background-size var(--dur-base) var(--ease),
+    transform var(--dur-base) var(--pop);
+}
+.ui-fab:hover {
+  background-size: 100% 100%;
+  transform: rotate(-10deg) scale(1.06);
+}
+.ui-fab:active {
+  transform: scale(0.9);
+}
+.ui-fab-sm {
+  width: 34px;
+  height: 34px;
+  border-width: 2.5px;
+}
+.ui-fab-sm:hover {
+  transform: rotate(90deg) scale(1.18);
+}
+
+/** The globe's world switch: plain heavy text; the current world wears a pink highlighter that springs in, the other one tilts and grows under the pointer. */
+.ui-world {
+  padding: 6px 16px 8px;
+  border: 0;
+  border-radius: 999px;
+  background-color: transparent;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  color: var(--ink);
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  opacity: 0.7;
+  cursor: pointer;
+  transition:
+    background-size var(--dur-base) var(--pop),
+    transform var(--dur-fast) var(--pop),
+    opacity var(--dur-base) var(--ease);
+}
+.ui-world.is-active {
+  background-size: 100% 100%;
+  opacity: 1;
+  cursor: default;
+}
+.ui-world:not(.is-active):hover {
+  opacity: 1;
+  transform: rotate(-6deg) scale(1.15);
+}
+.ui-world:not(.is-active):active {
+  transform: scale(0.9);
+}
+
+/** Text link: bold lowercase, no box; turns blue on hover. */
 .ui-link {
   display: inline-flex;
   align-items: center;
@@ -119,12 +209,12 @@ button {
   border: 0;
   background: none;
   color: var(--ink);
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: lowercase;
   cursor: pointer;
   transition: color var(--dur-base) var(--ease);
 }
@@ -135,7 +225,7 @@ button {
   transform: translateX(-4px);
 }
 
-/** Dropdown rows and the top bar cells: the same lime sweep. */
+/** Dropdown rows and the top bar cells: the same pink sweep. */
 .ui-row,
 .ui-nav {
   background-color: transparent;
@@ -152,7 +242,7 @@ button {
   width: 100%;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border: 0;
   border-radius: var(--radius-sm);
   color: inherit;
@@ -165,18 +255,18 @@ button {
 }
 .ui-row.is-active {
   background-color: var(--ink);
-  color: var(--canvas);
+  color: var(--on-ink);
 }
 .ui-row.is-active:hover {
   background-size: 0% 100%;
-  color: var(--canvas);
+  color: var(--on-ink);
 }
 .ui-nav:hover {
   background-size: 100% 100%;
   color: var(--ink) !important;
 }
 
-/** Timeline markers: fill with the lime on hover. */
+/** Timeline markers: fill with the pink on hover. */
 .ui-marker {
   transition:
     transform var(--dur-base) var(--ease),
@@ -203,4 +293,3 @@ button {
     transition-delay: 0s !important;
   }
 }
-

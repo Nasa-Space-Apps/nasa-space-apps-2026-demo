@@ -83,7 +83,7 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
     <div aria-label="Route timeline" style={{ ...panel, padding: "14px 16px 12px", fontFamily: theme.font }} className="select-none">
       <div className="flex items-baseline justify-between gap-3">
         <Reveal theme={theme} key={status} rise={5} className="min-w-0">
-          <span className="block truncate" style={{ fontSize: 17, fontWeight: 450, letterSpacing: "-0.03em", lineHeight: 1.1 }}>
+          <span className="block truncate" style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.1 }}>
             {status}
           </span>
         </Reveal>
@@ -93,7 +93,7 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
       </div>
 
       <div className="relative" style={{ height: 26, margin: `8px ${M}px 0` }}>
-        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2" style={{ height: 2, background: theme.line }}>
+        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 overflow-hidden" style={{ height: 5, borderRadius: 999, background: theme.line }}>
           <div ref={fill} style={{ height: "100%", width: 0, background: theme.ink }} />
         </div>
         <div
@@ -101,12 +101,13 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
           className="absolute top-1/2"
           style={{
             left: 0,
-            width: 10,
-            height: 10,
-            marginLeft: -5,
-            marginTop: -5,
+            width: 14,
+            height: 14,
+            marginLeft: -7,
+            marginTop: -7,
             borderRadius: 999,
             background: accent,
+            border: `2px solid ${theme.ink}`,
             pointerEvents: "none",
             zIndex: 1,
             opacity: at >= 0 ? 0 : 1,
@@ -130,14 +131,14 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
               className="ui-marker absolute top-1/2 block p-0"
               style={{
                 left: pct(i),
-                width: 12,
-                height: 12,
-                marginLeft: -6,
-                marginTop: -6,
-                borderRadius: 2,
+                width: 16,
+                height: 16,
+                marginLeft: -8,
+                marginTop: -8,
+                borderRadius: 999,
                 transform: here ? "scale(1.25)" : undefined,
                 background: here ? accent : done ? theme.ink : theme.surface,
-                border: `1.5px solid ${theme.ink}`,
+                border: `2.5px solid ${theme.ink}`,
                 cursor: here ? "default" : "pointer",
                 pointerEvents: "auto",
               }}
@@ -157,7 +158,7 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
               className="absolute top-0"
               style={{
                 ...label,
-                fontSize: 10,
+                fontSize: 11,
                 left: last ? "auto" : pct(i),
                 right: last ? 0 : "auto",
                 transform: first || last ? "none" : "translateX(-50%)",

@@ -216,7 +216,7 @@ export default function Minimap({ theme, title, accent }: { theme: Theme; title:
       const stops = rt?.stops ?? [];
       const onStop = stops.findIndex((x) => Math.abs(x - game.s) < 0.6);
       veh += ((onStop >= 0 ? 0 : 1) - veh) * k;
-      ctx.font = `500 ${8.5 * u}px ${getComputedStyle(cv).getPropertyValue("--font-mono") || "ui-monospace"}, monospace`;
+      ctx.font = `800 ${9 * u}px ${getComputedStyle(cv).getPropertyValue("--font-sans") || "Helvetica"}, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       game.checkpoints.forEach((c, i) => {
@@ -282,7 +282,7 @@ export default function Minimap({ theme, title, accent }: { theme: Theme; title:
     return () => cancelAnimationFrame(raf);
   }, [theme, accent]);
 
-  const { label, value, panel } = ui(theme);
+  const { label, value, panel, frame } = ui(theme);
 
   return (
     <div
@@ -290,10 +290,12 @@ export default function Minimap({ theme, title, accent }: { theme: Theme; title:
       style={{ fontFamily: theme.font, opacity: 0, transform: "translateY(18px)", transition: `${ease(theme, ["opacity"])}, ${ease(theme, ["transform"], theme.dur.slow)}` }}
       className="pointer-events-none fixed bottom-5 right-5 z-10 w-[clamp(220px,26vw,340px)] select-none"
     >
-      <div style={{ ...panel, padding: 10 }}>
-        <canvas ref={canvas} className="block w-full" style={{ background: theme.map.bg, borderRadius: theme.radius }} />
+      <div style={{ ...panel, padding: 10, rotate: "0.7deg" }}>
+        <div style={frame}>
+          <canvas ref={canvas} className="block w-full" style={{ background: theme.map.bg }} />
+        </div>
         <div className="px-1.5 pb-1">
-          <div style={{ marginTop: 14, fontSize: 17, fontWeight: 450, letterSpacing: "-0.03em", lineHeight: 1.1 }}>{title}</div>
+          <div style={{ marginTop: 14, fontSize: 18, fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.1 }}>{title}</div>
           <div className="mt-3 grid grid-cols-3 gap-2">
             <div>
               <span style={{ ...label, display: "block", fontSize: 10 }}>Pos X · Z</span>
@@ -314,7 +316,7 @@ export default function Minimap({ theme, title, accent }: { theme: Theme; title:
               </span>
             </div>
           </div>
-          <div className="mt-3.5 overflow-hidden" style={{ height: 2, background: theme.line }}>
+          <div className="mt-3.5 overflow-hidden" style={{ height: 5, borderRadius: 999, background: theme.line }}>
             <div ref={bar} style={{ height: "100%", width: 0, background: theme.ink }} />
           </div>
         </div>

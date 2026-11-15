@@ -1,19 +1,13 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
-import { Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Libre_Franklin } from "next/font/google";
 import { THEME, cssVars } from "@/lib/themes";
 import "./globals.css";
 
-// Stand-in for the reference's grotesque (Onsite Standard, proprietary): same tight, even-weight character; weight 450 is used for text.
-const sans = Hanken_Grotesk({
+// The reference's own typeface (ponpon-mania.com): one family for everything, heavy for titles, bold lowercase for labels.
+const sans = Libre_Franklin({
   variable: "--font-sans",
   subsets: ["latin"],
-});
-
-const mono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable} h-full antialiased`} style={cssVars(THEME) as CSSProperties}>
+    <html lang="en" className={`${sans.variable} h-full antialiased`} style={cssVars(THEME) as CSSProperties}>
       <body className="h-full overflow-hidden">{children}</body>
     </html>
   );
