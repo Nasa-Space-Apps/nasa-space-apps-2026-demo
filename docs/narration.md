@@ -1,4 +1,4 @@
-> **Ojo (hito 43):** los clips de `public/narration` se eliminaron (ya no los oye nadie: las historias llevan su propio audio en `public/models/<misión>/audio`). `npm run narration` los **volvería a grabar y gastar créditos**: úsalo con `--dry-run` primero.
+> **Histórico (hito 44):** el script `generate-narration.mjs` y `npm run narration` se **eliminaron** junto con los checkpoints antiguos y sus clips. Las narraciones de las historias se graban por misión con `npm run story-audio -- <misión>` (ver [story.md](story.md)). Lo de abajo describe el flujo anterior; la voz (Bill, `eleven_v4`), el método de subtítulos (`lib/transcript.ts`, solo se pide el audio) y la lógica común (`scripts/lib/tts.mjs`) siguen vigentes.
 
 # Narración de checkpoints (ElevenLabs, pregrabada)
 

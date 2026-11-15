@@ -1,4 +1,4 @@
-> **Ojo (hito 43):** de `public/guide` se eliminaron las frases por checkpoint (`next-*`, `remind-*`) y las de Perseverance y SEV (no se oyen en ninguna historia). `npm run guide` las **volvería a grabar y gastar créditos**: usa `--dry-run` primero. El catálogo de abajo describe el conjunto anterior.
+> **Hito 44:** se eliminaron las frases por checkpoint (`next-*`, `remind-*`) y las de Perseverance y SEV (en el código, en `public/guide` y aquí). Quedan **30 frases**: las genéricas y las de Opportunity. Las historias no tienen frases por checkpoint: la guía solo habla de distancia, progreso, parada y fin. El texto de abajo puede mencionar todavía lo anterior.
 
 # Guía de voz («mission control»)
 
@@ -82,23 +82,21 @@ Coste: las frases son muy cortas (una tanda de 7 frases nuevas costó ~50 crédi
 Generado por `npm run guide -- --docs` (no editar a mano entre los marcadores).
 
 <!-- phrases:start -->
-Total: **62 frases** (27 genéricas, 11 solo Opportunity, 13 solo Perseverance, 11 solo SEV).
+Total: **30 frases** (27 genéricas, 3 solo Opportunity).
 
-#### Resumen: frases disponibles por categoría y vehículo
+#### Resumen: frases disponibles por categoría
 
-| Categoría | Genéricas | Solo Opportunity | Solo Perseverance | Solo SEV | Pool Opportunity | Pool Perseverance | Pool SEV |
-| --- | --: | --: | --: | --: | --: | --: | --: |
-| `dist-far` | 3 | 0 | 0 | 0 | 3 | 3 | 3 |
-| `dist-half` | 3 | 0 | 0 | 0 | 3 | 3 | 3 |
-| `dist-close` | 3 | 0 | 0 | 0 | 3 | 3 | 3 |
-| `dist-near` | 1 | 0 | 0 | 0 | 1 | 1 | 1 |
-| `prog-1` | 2 | 0 | 0 | 0 | 2 | 2 | 2 |
-| `prog-many` | 1 | 0 | 0 | 0 | 1 | 1 | 1 |
-| `next` | 0 | 4 | 5 | 4 | 4 | 5 | 4 |
-| `done` | 4 | 2 | 2 | 2 | 6 | 6 | 6 |
-| `idle` | 6 | 1 | 1 | 1 | 7 | 7 | 7 |
-| `remind` | 0 | 4 | 5 | 4 | 4 | 5 | 4 |
-| `ready` | 4 | 0 | 0 | 0 | 4 | 4 | 4 |
+| Categoría | Genéricas | Solo Opportunity | Pool Opportunity |
+| --- | --: | --: | --: |
+| `dist-far` | 3 | 0 | 3 |
+| `dist-half` | 3 | 0 | 3 |
+| `dist-close` | 3 | 0 | 3 |
+| `dist-near` | 1 | 0 | 1 |
+| `prog-1` | 2 | 0 | 2 |
+| `prog-many` | 1 | 0 | 1 |
+| `done` | 4 | 2 | 6 |
+| `idle` | 6 | 1 | 7 |
+| `ready` | 4 | 0 | 4 |
 
 #### Distancia: 25 % del camino — `dist-far` (3)
 
@@ -143,25 +141,7 @@ Total: **62 frases** (27 genéricas, 11 solo Opportunity, 13 solo Perseverance, 
 | --- | --- | --- |
 | `progress-many-1` | Checkpoint complete. More to explore. | todos |
 
-#### Siguiente objetivo (al salir de un checkpoint) — `next` (13)
-
-| id | Frase | Vehículo |
-| --- | --- | --- |
-| `next-eagle` | Next target: Eagle Crater. | Opportunity (Marte) |
-| `next-endurance` | Next target: Endurance Crater. | Opportunity (Marte) |
-| `next-victoria` | Next target: Victoria Crater. | Opportunity (Marte) |
-| `next-perseverance` | Next target: Perseverance Valley. | Opportunity (Marte) |
-| `next-antares` | Next target: Antares Lunar Module. | SEV (Luna) |
-| `next-cone` | Next target: Cone Crater. | SEV (Luna) |
-| `next-sampling` | Next target: Sampling Station. | SEV (Luna) |
-| `next-last-light` | Next target: Last Light. | SEV (Luna) |
-| `next-wright-brothers` | Next target: Wright Brothers Field. | Perseverance (Marte) |
-| `next-montdenier` | Next target: Montdenier Core. | Perseverance (Marte) |
-| `next-delta` | Next target: Jezero Delta. | Perseverance (Marte) |
-| `next-three-forks` | Next target: Three Forks Sample Depot. | Perseverance (Marte) |
-| `next-last-sol` | Next target: Last Sol. | Perseverance (Marte) |
-
-#### Expedición completada — `done` (10)
+#### Expedición completada — `done` (6)
 
 | id | Frase | Vehículo |
 | --- | --- | --- |
@@ -171,12 +151,8 @@ Total: **62 frases** (27 genéricas, 11 solo Opportunity, 13 solo Perseverance, 
 | `done-4` | You've seen everything here. Press M to try another vehicle. | todos |
 | `done-opportunity-1` | Opportunity completes its traverse across Meridiani Planum. | Opportunity (Marte) |
 | `done-opportunity-2` | Every checkpoint reached. Opportunity's journey is complete. | Opportunity (Marte) |
-| `done-perseverance-1` | Perseverance completes its drive across Jezero. | Perseverance (Marte) |
-| `done-perseverance-2` | Every checkpoint reached. Perseverance's work is done. | Perseverance (Marte) |
-| `done-sev-1` | The lunar traverse is complete. Fra Mauro has no more secrets. | SEV (Luna) |
-| `done-sev-2` | All checkpoints reached. Back to base, explorer. | SEV (Luna) |
 
-#### Parado entre checkpoints — `idle` (9)
+#### Parado entre checkpoints — `idle` (7)
 
 | id | Frase | Vehículo |
 | --- | --- | --- |
@@ -187,26 +163,6 @@ Total: **62 frases** (27 genéricas, 11 solo Opportunity, 13 solo Perseverance, 
 | `idle-5` | Hold Space to keep following the route. | todos |
 | `idle-6` | Press and hold Space to drive on. | todos |
 | `idle-opportunity-1` | Opportunity is idling. Ready to roll when you are. | Opportunity (Marte) |
-| `idle-perseverance-1` | Perseverance is idling. Ready to roll when you are. | Perseverance (Marte) |
-| `idle-sev-1` | Engines idle. Ready when you are. | SEV (Luna) |
-
-#### Recordatorio del objetivo (parado) — `remind` (13)
-
-| id | Frase | Vehículo |
-| --- | --- | --- |
-| `remind-eagle` | Reminder: head for Eagle Crater. | Opportunity (Marte) |
-| `remind-endurance` | Reminder: head for Endurance Crater. | Opportunity (Marte) |
-| `remind-victoria` | Reminder: head for Victoria Crater. | Opportunity (Marte) |
-| `remind-perseverance` | Reminder: head for Perseverance Valley. | Opportunity (Marte) |
-| `remind-antares` | Reminder: head for Antares Lunar Module. | SEV (Luna) |
-| `remind-cone` | Reminder: head for Cone Crater. | SEV (Luna) |
-| `remind-sampling` | Reminder: head for Sampling Station. | SEV (Luna) |
-| `remind-last-light` | Reminder: head for Last Light. | SEV (Luna) |
-| `remind-wright-brothers` | Reminder: head for Wright Brothers Field. | Perseverance (Marte) |
-| `remind-montdenier` | Reminder: head for Montdenier Core. | Perseverance (Marte) |
-| `remind-delta` | Reminder: head for Jezero Delta. | Perseverance (Marte) |
-| `remind-three-forks` | Reminder: head for Three Forks Sample Depot. | Perseverance (Marte) |
-| `remind-last-sol` | Reminder: head for Last Sol. | Perseverance (Marte) |
 
 #### Parado dentro de un checkpoint, tras la narración — `ready` (4)
 

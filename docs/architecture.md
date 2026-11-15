@@ -196,8 +196,7 @@ Datos en `src/lib/checkpoints.ts` (tipo `Checkpoint` + una lista por misión); `
 
 Detalle y catálogo en [guide.md](guide.md). Resumen técnico:
 
-- **`lib/guide-lines.ts`** — datos (sin imports, los carga también Node): ~50 frases con `kind`, `vehicle?` y `cp?`; helpers
-  `checkpointLines()` / `checkpointLineText()` para las frases por checkpoint (`next/remind-<id>`, sin la salida).
+- **`lib/guide-lines.ts`** — datos (sin imports, los carga también Node): 30 frases con `kind` y `vehicle?` (genéricas y las de Opportunity; las frases por checkpoint se eliminaron en el hito 44).
 - **`lib/guide.ts`** — store externo (`enabled`, `caption`; `subscribeGuide/getGuide`) + **director** `updateGuide()`: cada ~0,2 s lee
   `game` (ruta `s`, velocidad, checkpoints, `visited/active`, `travel`) y decide si toca hablar: objetivo = primer checkpoint sin visitar;
   bandas de distancia 25/50/75 % medidas **a lo largo de la ruta**; secuencia «progreso + siguiente objetivo» al salir de un checkpoint

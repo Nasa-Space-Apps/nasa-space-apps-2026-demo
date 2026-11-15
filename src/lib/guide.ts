@@ -1,6 +1,5 @@
 import { game, input } from "./game";
-import type { Checkpoint } from "./checkpoints";
-import { checkpointLineText, guideAudio, STATIC_LINES, type GuideKind, type GuideLine } from "./guide-lines";
+import { guideAudio, STATIC_LINES, type GuideKind, type GuideLine } from "./guide-lines";
 import { getNarration } from "./narration";
 
 /**
@@ -155,8 +154,6 @@ function pick(kind: GuideKind): GuideLine | null {
 }
 
 // demo checkpoints have no recorded guide lines: say nothing about them
-const cpLine = (kind: "next" | "remind", cp: Checkpoint): GuideLine | null =>
-  cp.demo || cp.noGuide ? null : { id: `${kind}-${cp.id}`, kind, text: checkpointLineText(kind, cp.name), cp: cp.id };
 
 const say = (line: GuideLine | null) => {
   if (line) speak(line);
@@ -232,7 +229,7 @@ export function updateGuide() {
     if (t - S.leftAt > 2.5) {
       const remaining = cps.filter((c) => !game.visited.has(c.id));
       if (remaining.length === 0) enqueue(pick("done"));
-      else enqueue(S.after.from === 0 ? null : pick(remaining.length === 1 ? "prog-1" : "prog-many"), cpLine("next", remaining[0]));
+      else enqueue(S.after.from === 0 ? null : pick(remaining.length === 1 ? "prog-1" : "prog-many"));
       S.after = null;
     }
     return;
@@ -268,6 +265,7 @@ export function updateGuide() {
 
   // standing still between checkpoints
   if (!moving && t - S.idleSince > 12 && cool("idle", 30)) {
-    return say(Math.random() < 0.5 ? cpLine("remind", target) : pick("idle"));
+    if (Math.random() < 0.5) say(pick("idle")); // half of the times it stays quiet
+    return;
   }
 }

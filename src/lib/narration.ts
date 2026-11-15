@@ -3,7 +3,7 @@ import type { Checkpoint } from "./checkpoints";
 import { phraseAt, phraseStarts, phrases, type Phrase } from "./transcript";
 
 /**
- * Checkpoint narration: plays the pre-recorded clips in public/narration (generated once with `npm run narration`).
+ * Checkpoint narration: plays the pre-recorded clips of the story (public/models/<mission>/audio, generated once with `npm run story-audio -- <mission>`).
  * No network calls to ElevenLabs happen at runtime. Small external store so the DOM (card, hints) can subscribe with
  * useSyncExternalStore while the 3D scene calls play/stop without going through React.
  *

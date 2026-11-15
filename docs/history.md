@@ -333,6 +333,9 @@ El usuario pidió dejar en `public` **solo lo que se usa**. `public` pasó de **
 - **Se queda:** los 3 terrenos STL (los usan las 3 historias), `models/<misión>/{story.json,images,audio}` de Opportunity, Ingenuity y Surveyor 3, los 3 temas de `ambient/`, 30 clips de la guía genérica y de Opportunity, y `public/story/` (visores HTML del equipo).
 - **Trampa conocida:** el código de los checkpoints antiguos sigue ahí, así que `npm run narration` y `npm run guide` volverían a grabar lo borrado (avisado en `narration.md`, `guide.md`, `assets.md` y `CLAUDE.md`).
 
+### 44. Fuera el código muerto de los checkpoints antiguos
+Tras limpiar `public` (hito 43) el usuario pidió quitar también el código que apuntaba a lo borrado. Eliminado: `lib/checkpoints-demo.ts`; de `lib/checkpoints.ts`, los checkpoints de Opportunity, SEV y Perseverance y `ALL_CHECKPOINTS` (queda solo el tipo `Checkpoint`, sin `demo` ni `noGuide`); `scripts/generate-narration.mjs` y `npm run narration`; de `guide-lines.ts`/`guide.ts`/`generate-guide.mjs`, las frases `next-*`/`remind-*` y las de Perseverance y SEV. Las misiones sin historia siguen en `missions.ts` (el globo dibuja su vehículo) con `checkpoints: []`. La guía conserva 30 frases (`npm run guide -- --dry-run`: 30 al día, 0 por grabar) y el catálogo de `docs/guide.md` se regeneró. El comportamiento en las historias no cambia: el recordatorio nunca sonaba en ellas y la frase de «parado» sigue diciéndose la mitad de las veces. `tsc` y `lint` limpios.
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |

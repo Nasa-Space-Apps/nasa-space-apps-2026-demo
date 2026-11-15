@@ -38,6 +38,6 @@ public/models/    STL (terrenos) + una carpeta por historia (opportunity/, ingen
 public/guide/     mp3 pregrabados de la guía de voz genérica (30 frases) + manifest.json
 public/story/     visores HTML del equipo (historia y juego de Opportunity)
 public/ambient/   mp3 pregrabados de la música de fondo (moon, mars, timeline) + manifest.json
-scripts/          generate-narration.mjs · generate-guide.mjs · generate-ambient.mjs · lib/tts.mjs (npm run narration / guide / ambient)
+scripts/          build-story.mjs · plan-story-route.mjs · generate-story-images.mjs · generate-story-audio.mjs · generate-guide.mjs · generate-ambient.mjs · lib/tts.mjs (npm run story / story-route / story-images / story-audio / guide / ambient)
 docs/             esta documentación
 ```

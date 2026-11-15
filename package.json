@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "narration": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-narration.mjs",
     "ambient": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-ambient.mjs",
     "guide": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-guide.mjs",
     "story": "node scripts/build-story.mjs",

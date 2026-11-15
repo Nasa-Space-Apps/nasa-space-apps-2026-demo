@@ -36,12 +36,12 @@ npm install
 npm run dev        # http://localhost:3000
 npm run build      # build de producción
 npm run lint
-npm run narration  # (opcional) graba/regraba la narración de los checkpoints; necesita ELEVENLABS_API_KEY en .env.local
+npm run story-audio -- <misión>  # (opcional) graba/regraba la narración de una historia (opportunity, ingenuity, surveyor3); necesita ELEVENLABS_API_KEY en .env.local
 npm run guide      # (opcional) graba/regraba la guía de voz; `-- --docs` actualiza el catálogo de frases en docs/guide.md
 ```
 
 Para jugar **no hace falta ninguna clave ni variable de entorno**. La API key de ElevenLabs solo se usa en
-`npm run narration` y `npm run guide` (ver [`docs/narration.md`](docs/narration.md); plantilla en `.env.example`, `.env.local` está en `.gitignore`).
+`npm run story-audio` y `npm run guide` (ver [`docs/narration.md`](docs/narration.md); plantilla en `.env.example`, `.env.local` está en `.gitignore`).
 
 ## Controles
 

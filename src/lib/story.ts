@@ -60,7 +60,6 @@ export function beatToCheckpoint(b: StoryBeat): Checkpoint {
     audio: b.audio,
     facts: b.facts.slice(0, 3),
     ...(b.sources.length ? { sources: b.sources } : {}),
-    noGuide: true,
   };
 }
 

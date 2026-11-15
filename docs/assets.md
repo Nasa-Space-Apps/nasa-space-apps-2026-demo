@@ -33,7 +33,7 @@ Las historias de Opportunity, Ingenuity y Surveyor 3 llevan **todo en su carpeta
 
 Se queda en `public/guide` (30 clips + `manifest.json`, voz Daniel, `eleven_flash_v2_5`) la guía **genérica** (distancia, progreso, parado, listo, fin) y las frases de Opportunity: son las que oyen las historias. Ver [guide.md](guide.md).
 
-> **Ojo:** el código de los checkpoints antiguos (`checkpoints.ts`, `checkpoints-demo.ts`, `guide-lines.ts`) se conserva, así que `npm run narration` y `npm run guide` **volverían a grabar** (y a gastar créditos en) los clips borrados. No los ejecutes sin pasar `--dry-run` antes.
+> El código que apuntaba a esos clips (los checkpoints antiguos de `checkpoints.ts`, `checkpoints-demo.ts`, `generate-narration.mjs` y las frases por checkpoint de la guía) también se eliminó (hito 44): ya no hay nada que regrabe lo borrado.
 
 ## Terrenos (STL binario, exportado desde Blender)
 

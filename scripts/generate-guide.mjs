@@ -16,19 +16,8 @@ import { pathToFileURL } from "node:url";
 import { generateSet, ROOT } from "./lib/tts.mjs";
 
 const href = (rel) => pathToFileURL(path.join(ROOT, rel)).href;
-const { STATIC_LINES, checkpointLines, guideAudio } = await import(href("src/lib/guide-lines.ts"));
-const { ALL_CHECKPOINTS, OPPORTUNITY_CHECKPOINTS, PERSEVERANCE_CHECKPOINTS, SEV_CHECKPOINTS } = await import(href("src/lib/checkpoints.ts"));
-
-// the first checkpoint of each expedition is where the vehicle starts: it is never a target, so it gets no "next"/"remind" lines
-const startIds = new Set([OPPORTUNITY_CHECKPOINTS[0].id, SEV_CHECKPOINTS[0].id, PERSEVERANCE_CHECKPOINTS[0].id]);
-const vehicleOf = (cp) => (OPPORTUNITY_CHECKPOINTS.includes(cp) ? "opportunity" : PERSEVERANCE_CHECKPOINTS.includes(cp) ? "perseverance" : "sev");
-const lines = [
-  ...STATIC_LINES,
-  ...checkpointLines(ALL_CHECKPOINTS.filter((cp) => !startIds.has(cp.id)).map((cp) => ({ id: cp.id, name: cp.name }))).map((l) => ({
-    ...l,
-    vehicle: vehicleOf(ALL_CHECKPOINTS.find((c) => c.id === l.cp)),
-  })),
-];
+const { STATIC_LINES, guideAudio } = await import(href("src/lib/guide-lines.ts"));
+const lines = STATIC_LINES;
 
 const argv = process.argv.slice(2);
 
@@ -40,23 +29,19 @@ if (argv.includes("--docs")) {
     ["dist-near", "Distancia: muy cerca (< 3 radios)"],
     ["prog-1", "Progreso: queda uno"],
     ["prog-many", "Progreso: quedan varios"],
-    ["next", "Siguiente objetivo (al salir de un checkpoint)"],
     ["done", "Expedición completada"],
     ["idle", "Parado entre checkpoints"],
-    ["remind", "Recordatorio del objetivo (parado)"],
     ["ready", "Parado dentro de un checkpoint, tras la narración"],
   ];
-  const NAMES = { opportunity: "Opportunity (Marte)", perseverance: "Perseverance (Marte)", sev: "SEV (Luna)" };
+  const NAMES = { opportunity: "Opportunity (Marte)" };
   const tag = (l) => NAMES[l.vehicle] ?? "todos";
   const count = (kind, v) => lines.filter((l) => l.kind === kind && (v === "generic" ? !l.vehicle : l.vehicle === v)).length;
-  let md = `Total: **${lines.length} frases** (${lines.filter((l) => !l.vehicle).length} genéricas, ${lines.filter((l) => l.vehicle === "opportunity").length} solo Opportunity, ${lines.filter((l) => l.vehicle === "perseverance").length} solo Perseverance, ${lines.filter((l) => l.vehicle === "sev").length} solo SEV).\n`;
-  md += "\n#### Resumen: frases disponibles por categoría y vehículo\n\n| Categoría | Genéricas | Solo Opportunity | Solo Perseverance | Solo SEV | Pool Opportunity | Pool Perseverance | Pool SEV |\n| --- | --: | --: | --: | --: | --: | --: | --: |\n";
+  let md = `Total: **${lines.length} frases** (${lines.filter((l) => !l.vehicle).length} genéricas, ${lines.filter((l) => l.vehicle === "opportunity").length} solo Opportunity).\n`;
+  md += "\n#### Resumen: frases disponibles por categoría\n\n| Categoría | Genéricas | Solo Opportunity | Pool Opportunity |\n| --- | --: | --: | --: |\n";
   for (const [kind] of KIND_TITLES) {
     const g = count(kind, "generic");
     const o = count(kind, "opportunity");
-    const pv = count(kind, "perseverance");
-    const s = count(kind, "sev");
-    if (g + o + pv + s) md += `| \`${kind}\` | ${g} | ${o} | ${pv} | ${s} | ${g + o} | ${g + pv} | ${g + s} |\n`;
+    if (g + o) md += `| \`${kind}\` | ${g} | ${o} | ${g + o} |\n`;
   }
   for (const [kind, title] of KIND_TITLES) {
     const group = lines.filter((l) => l.kind === kind);

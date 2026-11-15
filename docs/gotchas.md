@@ -52,7 +52,7 @@
 - **Guía de voz**: tiempos en reloj real, movimiento en tiempo de simulación (`dt` ≤ 0,05 s): con pocos fps la guía parece «adelantada»
   respecto al rover. Para probarla, engancha `HTMLMediaElement.prototype.play` y registra `src` + `performance.now()`; el subtítulo
   está en el `[aria-live]` de `GuideCaption`. Ver [guide.md](guide.md).
-- Si editas `narration` (guion) de un checkpoint, hay que regrabar el audio (`npm run narration`); si no, el mp3 dice otra cosa.
+- Si editas `narration` (guion) de una historia, hay que regrabar el audio (`npm run story-audio -- <misión>`); si no, el mp3 dice otra cosa.
 - Si el navegador va a ~1 fps (otra pestaña con la escena abierta compite por la GPU), el rover casi no avanza: el `dt` se
   limita a 0,05 s por frame. Al probar con automatización, conduce por posición (leyendo el minimapa), no por tiempo.
 - `rm -rf .next` con el servidor de desarrollo en marcha es seguro (se regenera solo); `.next/types` puede quedar obsoleto

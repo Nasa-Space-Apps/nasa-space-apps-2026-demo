@@ -53,7 +53,7 @@ Una misión es un objeto `Mission` del array `MISSIONS`. Su ruta es `/<mundo>/<i
   },
   dust:   { color: "#bdbab3", drag: 0.5, lift: -4, up: 0.8, life: 0.8, size: 0.75, alpha: 0.4 },
   tracks: { color: "#1c1c1f", opacity: 0.35 },
-  checkpoints: SEV_CHECKPOINTS,    // ver más abajo (src/lib/checkpoints.ts)
+  checkpoints: storyOf("…")!.checkpoints, // salen del story.json de la misión (src/lib/story.ts); `[]` = «coming soon»
   checkpointRadius: 14,            // radio de activación (y tamaño de la baliza); ~1,5× el ancho del vehículo
 }
 ```
@@ -66,15 +66,17 @@ Una misión es un objeto `Mission` del array `MISSIONS`. Su ruta es `/<mundo>/<i
    **Mide antes de dibujar**: saca del GLB de referencia la posición y el radio de las ruedas, la caja del cuerpo y dónde va cada pieza (los GLB vienen comprimidos con Draco: se decodifican con `@gltf-transform/core` + `draco3dgltf` en Node), elige un factor de escala para que la huella
    sea parecida a la de los demás (≈ 9–12 de ancho) y deja las ruedas un poco más grandes que las reales. Los detalles pequeños llevan tono fijo (`DARK`/`MID`/`LIGHT`) para que se lean.
 3. Añade el objeto a `MISSIONS` con su `model` y su `palette` (3 tonos de un color + fondo). Las ruedas, la huella (`halfLen/halfWid`) y el tamaño salen del modelo.
-4. Define sus checkpoints (y con ellos la **ruta**): ver más abajo.
+4. Define su historia (y con ella los checkpoints y la **ruta**): receta en [story.md](story.md) (hito 44: ya no se escriben checkpoints a mano; sin historia, `checkpoints: []` y la tarjeta del globo dice «coming soon»).
 5. **Añádelo al globo** (`src/lib/bodies.ts`): en el `Body` donde quedó abandonado (`mars`/`moon`; crea uno nuevo si hace falta) agrega un `AbandonedVehicle` con
    `missionId` (= el `id` de la misión; será el segmento de la ruta `/<mundo>/<id>`), `name`, `place`, `lat`/`lon`, `tag` (frase corta del marcador), `status`, y hasta 4 `facts`. La tarjeta dibuja el vehículo con el `model`/`palette` de la misión (`VehicleView`).
    El marcador, la etiqueta, la tarjeta y las rutas aparecen solos (`generateStaticParams` sale de `BODIES`).
-6. **Audios y guía**: `npm run narration` y `npm run guide` (graban solo lo nuevo). Para la guía, añade el id del vehículo al tipo `vehicle` de `lib/guide-lines.ts` y sus frases `done-…`/`idle-…`,
+6. **Audios**: `npm run story-audio -- <misión>` (ver story.md). La guía de voz es genérica (no hace falta tocarla). La música (`ambient-tracks.ts`) es opcional: sin pista propia suena la de `timeline`.
    y a `vehicleOf`/`startIds` de `scripts/generate-guide.mjs`; después `npm run guide -- --docs` para el catálogo. La música (`ambient-tracks.ts`) es opcional: sin pista propia suena la de `timeline`.
 7. Prueba: carga el mapa, avanza con `Espacio`, comprueba la orientación (¿el frente es el frente?), la niebla y el polvo; y en `/<mundo>` que el marcador y la tarjeta (vehículo girando sobre fondo liso) funcionan.
 
 ### Checkpoints (storytelling) — `src/lib/checkpoints.ts`
+
+> **Hito 44:** los checkpoints ya no se escriben a mano: `lib/story.ts` los genera de los beats del `story.json` de cada misión. Lo de abajo describe el **formato del tipo `Checkpoint`** y el comportamiento en la escena; para añadir una historia, mira [story.md](story.md). Las imágenes y audios de ejemplo (`/images/checkpoints/…`, `/narration/…`) ya no existen.
 
 Cada misión tiene una lista de **checkpoints** que es también **su ruta**, en orden: el **primero es la salida** (donde el vehículo
 empieza su recorrido o misión) y el **último, el final** (donde se paró o apagó); entre medias, las paradas de la historia. Cada

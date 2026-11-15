@@ -61,7 +61,7 @@ export const BODIES: Body[] = [
           ["Ending", "Fictional"],
         ],
       },
-      // ---- FICTIONAL demo vehicles (stories in lib/checkpoints-demo.ts): the markers sit on the real site of each mission, the ending is invented ----
+      // ---- Vehicles without a story yet («coming soon»): the markers sit on the real site of each mission, the ending is invented ----
       {
         missionId: "spirit",
         name: "Spirit",

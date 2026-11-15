@@ -1,7 +1,6 @@
 import { THEME } from "./themes";
 import type { TerrainStyle } from "./terrain";
-import { PERSEVERANCE_CHECKPOINTS, SEV_CHECKPOINTS, type Checkpoint } from "./checkpoints";
-import { BEAGLE2_CHECKPOINTS, INSIGHT_CHECKPOINTS, SPIRIT_CHECKPOINTS } from "./checkpoints-demo";
+import type { Checkpoint } from "./checkpoints";
 import { storyOf } from "./story";
 import type { VehicleModel, VehiclePalette } from "./vehicles";
 
@@ -123,7 +122,7 @@ export const MISSIONS: Mission[] = [
     },
     dust: { color: "#E9E2F8", drag: 0.5, lift: -4, up: 0.8, life: 0.8, size: 0.75, alpha: 0.55 },
     tracks: { color: "#4B4660", opacity: 0.35 },
-    checkpoints: SEV_CHECKPOINTS,
+    checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
     checkpointRadius: 14,
   },
   {
@@ -142,10 +141,10 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: PERSEVERANCE_CHECKPOINTS,
+    checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
     checkpointRadius: 22,
   },
-  // ---- FICTIONAL demo vehicles (lib/checkpoints-demo.ts): made to try their 3D models on the two Mars terrains we already have ----
+  // ---- vehicles without a story yet («coming soon» on the globe): their 3D models are kept, the fictional demo routes were removed ----
   {
     id: "spirit",
     name: "Spirit · Mars (demo)",
@@ -161,7 +160,7 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: SPIRIT_CHECKPOINTS,
+    checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
     checkpointRadius: 18,
   },
   {
@@ -197,7 +196,7 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: INSIGHT_CHECKPOINTS,
+    checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
     checkpointRadius: 20,
   },
   {
@@ -215,7 +214,7 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: BEAGLE2_CHECKPOINTS,
+    checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
     checkpointRadius: 20,
   },
 ];
