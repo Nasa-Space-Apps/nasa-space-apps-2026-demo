@@ -1,0 +1,145 @@
+{
+  "evento_id": "bgl049",
+  "titulo": "Beagle 2 aparece parcialmente desplegado en Isidis Planitia (enero de 2015)",
+  "contexto_ampliado": "En enero de 2015, más de once años después de su desaparición, el módulo de aterrizaje británico Beagle 2 fue localizado en la superficie de Marte. El hallazgo se logró gracias a imágenes de la cámara HiRISE, instalada a bordo del Mars Reconnaissance Orbiter (MRO) de la NASA. La búsqueda inicial de esas imágenes la realizó Michael Croon, residente en Trier (Alemania) y exmiembro del equipo de operaciones de Mars Express en el centro ESOC de la ESA.\n\nLa cámara HiRISE operaba desde una altitud de unos 276,4 km con una resolución de 28,2 cm por píxel, capaz de resolver objetos de aproximadamente 85 cm o más. El Beagle 2 completamente desplegado medía menos de 2 metros de ancho, lo que lo situaba justo en el límite de detección de los sistemas de imagen orbitales. Esta pequeñez explica por qué tardó tantos años en ser identificado visualmente desde la órbita marciana.\n\nLas imágenes revelaron el módulo con sus paneles solares al menos parcialmente desplegados. La NASA obtuvo evidencia de más de un panel abierto al comparar dos fotografías tomadas con distintos ángulos solares: el brillo metálico aparecía en una parte diferente del módulo en cada imagen. Además, los cambios en los reflejos de luz indicaban que el objeto era metálico, algo consistente con la estructura del Beagle 2. Cerca del módulo se identificaron también la tapa trasera con el paracaídas auxiliar (drogue) todavía unido y el paracaídas principal.\n\nEl módulo se encontró dentro del área de aterrizaje prevista en Isidis Planitia, una cuenca de impacto cercana al ecuador marciano, en torno a 11,5° N y 90,4° E. Según la UK Space Agency, los objetivos se hallaron a unos 5 km del centro del área objetivo. La NASA, por su parte, describió la ubicación como \"cerca del centro del área de aterrizaje planificada\", sin ofrecer una cifra en kilómetros.\n\nEl hallazgo confirmó que la secuencia de entrada, descenso y aterrizaje (EDL) del Beagle 2 había funcionado y que el módulo tocó la superficie de Marte el 25 de diciembre de 2003. Sin embargo, los datos de imagen eran consistentes únicamente con un despliegue parcial de los paneles solares. Esto resultó fatal para la misión: se necesitaba el despliegue completo de todos los paneles para que quedara expuesta la antena de radiofrecuencia, el único medio para transmitir datos y recibir comandos desde la Tierra. Con la antena cubierta, el módulo nunca pudo comunicarse.\n\nLa ESA publicó la noticia con fecha del 15 de enero de 2015, mientras que otras fuentes, incluido el blog de Mars Express, la fechan el 16 de enero. Colin Pillinger, el científico de la Open University que había liderado el proyecto Beagle 2 con gran entusiasmo, falleció en mayo de 2014, meses antes de que el hallazgo fuera anunciado públicamente. Las razones exactas por las que los últimos paneles solares no completaron su despliegue siguen sin estar confirmadas por las fuentes consultadas.",
+  "datos_reales": [
+    {
+      "afirmacion": "Michael Croon, exmiembro del equipo de operaciones de Mars Express en ESOC y residente en Trier (Alemania), fue quien realizó la primera búsqueda sistemática de imágenes HiRISE que llevó al hallazgo.",
+      "fuente_url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "cita": "Images taken by the HiRISE camera on NASA's Mars Reconnaissance Orbiter (MRO) and initially searched by Michael Croon of Trier, Germany, a former member of ESA's Mars Express operations team at ESOC, have identified clear evidence for the lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Beagle 2 fue hallado en una configuración de despliegue parcial de paneles solares; sin el despliegue completo, la antena RF quedó cubierta y no pudo transmitir.",
+      "fuente_url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "cita": "The imaging data is however consistent with only a partial deployment following landing. This would explain why no signal or data was received from the lander – as full deployment of all solar panels was needed to expose the RF antenna which would transmit data and receive commands from Earth.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La secuencia de entrada, descenso y aterrizaje del Beagle 2 funcionó y el módulo tocó la superficie de Marte el 25 de diciembre de 2003.",
+      "fuente_url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "cita": "This find shows that the Entry, Descent and Landing (EDL) sequence for Beagle 2 worked and the lander did successfully touchdown on Mars on Christmas Day 2003.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El módulo completamente desplegado medía menos de 2 metros de ancho, lo que lo situaba justo en el límite de detección de los sistemas de imagen orbitales.",
+      "fuente_url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "cita": "Due to the small size of Beagle 2 (less than 2m across for the deployed lander) it is right at the limit of detection of imaging systems (cameras) orbiting Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los objetivos (módulo, tapa trasera y paracaídas) se hallaron dentro del área de aterrizaje prevista, a unos 5 km del centro de dicha área.",
+      "fuente_url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "cita": "The targets are within the expected landing area at a distance of ~5km from its centre.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Cerca del módulo se identificaron la tapa trasera con el paracaídas drogue todavía unido y el paracaídas principal.",
+      "fuente_url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "cita": "with what is thought to be the rear cover with its pilot/drogue chute (still attached) and main parachute close by.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Colin Pillinger, líder del proyecto Beagle 2 de la Open University, murió en mayo de 2014, antes de conocerse el hallazgo.",
+      "fuente_url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "cita": "Professor Colin Pillinger from the Open University who led the Beagle 2 project with inspirational enthusiasm died in May 2014.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA describió la configuración del Beagle 2 como 'paneles solares al menos parcialmente desplegados' y encontró evidencia de más de un panel desplegado por el cambio de posición del brillo entre dos imágenes con distintos ángulos solares.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "A glint comes from a different part of the lander in one than in the other, interpreted as evidence of more than one deployed panel on the lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA localizó el módulo cerca del centro del área de aterrizaje planificada, en torno a 11,5° N y 90,4° E.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "have located the lander close to the center of its planned landing area. [...] The location is approximately 11.5 degrees north latitude, 90.4 degrees east latitude.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen HiRISE ESP_039308_1915 fue adquirida el 15 de diciembre de 2014 desde una altitud de 276,4 km, con una resolución de 28,2 cm por píxel (capaz de resolver objetos de ~85 cm).",
+      "fuente_url": "https://www.uahirise.org/ESP_039308_1915",
+      "cita": "Acquisition date 15 December 2014 [...] Spacecraft altitude 276.4 km (171.8 miles) [...] Original image scale range 28.2 cm/pixel (with 1 x 1 binning) so objects ~85 cm across are resolved",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La ESA publicó en su sitio sci.esa.int que el Beagle 2 fue hallado en imágenes tomadas por el Mars Reconnaissance Orbiter de la NASA, con fecha indicada del 15 de enero de 2015.",
+      "fuente_url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "cita": "Date: 15 January 2015 [...] The UK-led Beagle-2 Mars lander, which hitched a ride on ESA's Mars Express mission and was lost on Mars since 2003, has been found in images taken by NASA's Mars Reconnaissance Orbiter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los cambios en los reflejos de luz en las imágenes sugieren que el objeto es metálico, lo que es consistente con el Beagle 2.",
+      "fuente_url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+      "cita": "changes in light reflections suggest that the object is metallic – again consistent with Beagle 2.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "UK-led Beagle 2 lander found on Mars",
+      "url": "https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+      "editor": "UK Space Agency / gov.uk",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle 2 Lander on Mars, With Panels Deployed",
+      "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "HiRISE ESP_039308_1915 – Beagle 2 found on Mars",
+      "url": "https://www.uahirise.org/ESP_039308_1915",
+      "editor": "HiRISE / Universidad de Arizona",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Beagle-2 on Mars (ESA sci page)",
+      "url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "editor": "ESA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle retrospective – Mars Express blog",
+      "url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+      "editor": "ESA Mars Express blog",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "Número de paneles desplegados: La NASA (science.nasa.gov) habla de 'more than one deployed panel'; la UK Space Agency (gov.uk) solo dice 'partial deployment' sin especificar número; el texto accesible de la página HiRISE ESP_039308_1915 no contenía descripción narrativa de los paneles. No hay cifra única confirmada en el texto leído. URLs: https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/ y https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars",
+    "Distancia al centro del área objetivo: La UK Space Agency dice '~5km from its centre'; la NASA dice 'close to the center of its planned landing area' sin dar distancia en kilómetros. Las dos afirmaciones no son incompatibles, pero tampoco idénticas. URLs: https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars y https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+    "Fecha exacta del anuncio público: El portal ESA sci.esa.int indica 'Date: 15 January 2015'; el blog de Mars Express tiene URL con fecha 2015/01/16 (16 de enero); el evento recoge el 16 de enero. No puede descartarse que la diferencia sea por huso horario o por distinción entre publicación interna y anuncio público. URLs: https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars y https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+    "El evento original afirma que 'La primera búsqueda y petición de imagen las hizo Michael Croon', pero la cita de gov.uk solo dice que las imágenes fueron 'initially searched by Michael Croon'; no menciona explícitamente una 'petición de imagen' como paso separado. URL: https://www.gov.uk/government/news/uk-led-beagle-2-lander-found-on-mars"
+  ],
+  "huecos": [
+    "El texto descriptivo de la página HiRISE ESP_039308_1915 (uahirise.org) accesible solo contenía metadatos técnicos de la imagen; no se pudo leer la descripción narrativa que según la nota del evento mencionaría 'dos o tres paneles motorizados visibles'. Esta afirmación no pudo ser verificada ni citada directamente.",
+    "La causa exacta por la que los últimos paneles solares no completaron el despliegue no fue confirmada por ninguna de las fuentes consultadas; todas lo describen como un hecho ocurrido sin explicar el mecanismo.",
+    "No se encontró información verificable sobre si hubo algún intento posterior de reanimar o contactar al módulo después del hallazgo de 2015.",
+    "No se pudo confirmar con exactitud la fecha del anuncio público (15 vs 16 de enero de 2015) ya que las fuentes consultadas no son plenamente concordantes.",
+    "El evento original incluye la frase del Dr. David Parker ('el Beagle 2 fue más un éxito de lo que previamente sabíamos'), pero ninguna de las citas del dossier respalda textualmente esa declaración.",
+    "El evento original señala que 'las imágenes sugieren que la entrada y el aterrizaje funcionaron y que la antena no quedó expuesta'; el dossier confirma ambas partes por separado (dato [2] para EDL, dato [1] para la antena), pero no hay una cita única que vincule ambas conclusiones como derivadas directamente de las imágenes."
+  ],
+  "ideas_visuales": [
+    "Imagen cenital simulada de HiRISE mostrando tres puntos señalados: el módulo Beagle 2, la tapa trasera con paracaídas auxiliar y el paracaídas principal, sobre la llanura de Isidis Planitia (datos [4], [5]).",
+    "Diagrama del Beagle 2 desplegado (menos de 2 m de ancho) comparado con la resolución de HiRISE (~85 cm), mostrando por qué estaba en el límite de detección (datos [3], [9]).",
+    "Esquema de los paneles solares del Beagle 2 indicando la posición de la antena RF cubierta por los paneles no desplegados (datos [1], [7]).",
+    "Comparación lado a lado de dos imágenes con distintos ángulos solares mostrando el cambio de posición del brillo metálico sobre el módulo (dato [7], [11]).",
+    "Mapa de Isidis Planitia con la elipse de aterrizaje, la posición del módulo a ~5 km del centro y las coordenadas aproximadas 11,5° N, 90,4° E (datos [4], [8])."
+  ],
+  "datos_no_verificados": []
+}

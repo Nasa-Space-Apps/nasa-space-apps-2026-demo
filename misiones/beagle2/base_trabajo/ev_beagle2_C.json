@@ -1,0 +1,123 @@
+[
+  {
+    "fecha_inicio": "2003-12-19", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Beagle 2 se separa de Mars Express y sigue sola hacia Marte",
+    "detalle": "El 19 de diciembre de 2003 la Mars Express soltó a Beagle 2 en una trayectoria de colisión con Marte. Seis días después, el módulo debía entrar en la atmósfera, tras un viaje de unos 400 millones de km desde la Tierra. La cámara VMC de la Mars Express tomó la última imagen del módulo tras la separación.",
+    "datos_clave": ["Separación: 19 de diciembre de 2003", "Seis días hasta la entrada atmosférica", "Viaje total de unos 400 millones de km"],
+    "etapa": "Aproximación y separación", "fase": "aterrizaje", "categoria": "hito", "discutido": false, "nota": null,
+    "fuentes": [
+      {"titulo": "Beagle retrospective", "editor": "ESA (blog Mars Express)", "url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/", "tipo": "científica", "verificacion": "página abierta (resumen automático de la herramienta)"},
+      {"titulo": "Mars Express: no signal from Beagle 2 so far", "editor": "ESA", "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_no_signal_from_Beagle_2_so_far", "tipo": "científica", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2003-12-25", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Secuencia prevista de entrada: escudo, paracaídas y airbags en menos de siete minutos",
+    "detalle": "Según el plan, Beagle 2 entraría en la atmósfera a las 02:47 GMT a más de 20.000 km/h, con temperaturas de hasta 1.700 °C en el escudo. A unos 7,1 km de altura se abriría un paracaídas piloto y un minuto después el principal, de 10 m. A pocos cientos de metros del suelo se inflarían tres bolsas de gas, y el impacto se esperaba a unos 60 km/h.",
+    "datos_clave": ["Entrada a las 02:47 GMT a más de 20.000 km/h", "Hasta 1.700 °C", "Paracaídas piloto a unos 7,1 km; principal de 10 m", "Tres bolsas de gas; impacto previsto a unos 60 km/h", "Descenso completo en menos de 7 minutos"],
+    "etapa": "Entrada, descenso y aterrizaje", "fase": "aterrizaje", "categoria": "aterrizaje", "discutido": false, "nota": null,
+    "fuentes": [
+      {"titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)", "editor": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/859414", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2003-12-25", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Hora prevista de aterrizaje: 02:54 GMT en Isidis Planitia",
+    "detalle": "El reposo en la superficie estaba previsto para las 02:54 GMT del 25 de diciembre de 2003, en Isidis Planitia (11° N, 90° E), dentro de una elipse de 30 km por 5 km. El sol se pondría a las 07:15 GMT y las noches podían bajar a -80 °C. La Mars Global Surveyor fotografió la zona unos 20 minutos después y mostró buen tiempo.",
+    "datos_clave": ["Reposo previsto 02:54 GMT, 25 dic 2003", "Elipse de 30 km x 5 km, 11° N 90° E", "Puesta de sol 07:15 GMT; amanecer 20:02 GMT", "Imagen de la MGS 20 min después: tiempo despejado"],
+    "etapa": "Entrada, descenso y aterrizaje", "fase": "aterrizaje", "categoria": "aterrizaje", "discutido": false, "nota": null,
+    "fuentes": [
+      {"titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)", "editor": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/859414", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"},
+      {"titulo": "Listening for Beagle 2's call home", "editor": "Sky & Telescope", "url": "https://skyandtelescope.org/astronomy-news/listening-for-beagle2scallhome/", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2003-12-25", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Lo que se esperaba oír: nueve notas de Blur y un pulso por minuto",
+    "detalle": "La señal de confirmación prevista era una melodía de nueve notas codificada digitalmente, compuesta por el grupo Blur. Si fallaban los contactos programados, el módulo pasaría a transmitir un pulso de 10 s encendido y 50 s apagado, con un transmisor de 5 W a 401,56 MHz. La señal tardaría unos 9 minutos en llegar a la Tierra.",
+    "datos_clave": ["Nueve notas compuestas por Blur", "Transmisor de 5 W a 401,56 MHz", "Pulso: 10 s encendido, 50 s apagado", "Unos 9 minutos de viaje de la señal"],
+    "etapa": "Escucha de la señal", "fase": "aterrizaje", "categoria": "hito", "discutido": false, "nota": null,
+    "fuentes": [
+      {"titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)", "editor": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/859414", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"},
+      {"titulo": "Beagle 2 update (comunicado del 26 dic 2003)", "editor": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/899034", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2003-12-25", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Mars Odyssey no recibe nada en el primer contacto previsto",
+    "detalle": "La primera oportunidad de oír a Beagle 2 fue un sobrevuelo de la Mars Odyssey de la NASA, que debía retransmitir la señal de su transmisor. No llegó ninguna. Había 14 contactos con Odyssey programados, y la Mars Express tomaría el relevo como enlace principal.",
+    "datos_clave": ["14 contactos con Odyssey programados", "Primer sobrevuelo hacia las 06:00-06:30 UT del 25 dic 2003", "Sin señal"],
+    "etapa": "Escucha de la señal", "fase": "aterrizaje", "categoria": "problema", "discutido": true,
+    "nota": "La hora del sobrevuelo difiere: Sky & Telescope da 6:30 UT, EurekAlert (26 dic) 'hacia las 06:00 GMT', y el comunicado del 25 dic dice 'tres horas después del aterrizaje'. Todas coinciden en que no hubo señal.",
+    "fuentes": [
+      {"titulo": "Listening for Beagle 2's call home", "editor": "Sky & Telescope", "url": "https://skyandtelescope.org/astronomy-news/listening-for-beagle2scallhome/", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"},
+      {"titulo": "Beagle 2 update (comunicado del 26 dic 2003)", "editor": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/899034", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"},
+      {"titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)", "editor": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/859414", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2003-12-25", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "El radiotelescopio Lovell de Jodrell Bank escucha en vano",
+    "detalle": "La noche del 25 de diciembre el telescopio Lovell, de 76 m, rastreó la señal portadora de Beagle 2 sin detectar nada. Otra antena, el conjunto de Westerbork (Países Bajos), vio su intento interrumpido por fuertes interferencias. El Lovell solo puede escuchar, no transmitir.",
+    "datos_clave": ["Telescopio Lovell de 76 m (250 pies)", "Sin detección", "Westerbork interrumpido por interferencias"],
+    "etapa": "Escucha de la señal", "fase": "aterrizaje", "categoria": "problema", "discutido": true,
+    "nota": "La ventana de escucha difiere: EurekAlert (26 dic) dice de 19:00 GMT a medianoche; el comunicado del 25 dic, de 22:00 a medianoche GMT; Sky & Telescope, 'unas 16 horas después' del aterrizaje (~19:00 GMT).",
+    "fuentes": [
+      {"titulo": "Beagle 2 update (comunicado del 26 dic 2003)", "editor": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/899034", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"},
+      {"titulo": "Beagle 2 lands on Mars (comunicado del 25 dic 2003)", "editor": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/859414", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"},
+      {"titulo": "Listening for Beagle 2's call home", "editor": "Sky & Telescope", "url": "https://skyandtelescope.org/astronomy-news/listening-for-beagle2scallhome/", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2003-12-27", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Se forma un 'tiger team' y se envían órdenes a ciegas para reiniciar el reloj",
+    "detalle": "Ante el silencio, los ingenieros crearon un 'tiger team' para analizar los datos de cada pasada y proponer opciones de recuperación. El viernes por la noche se enviaron órdenes a ciegas para reponer el reloj del módulo; no se pudo confirmar que las recibiera. También se revisó si las llamaradas solares de finales de octubre habían afectado al transmisor de Odyssey.",
+    "datos_clave": ["Órdenes a ciegas para reiniciar el reloj (24 dic noche, 26 dic)", "Posible efecto de llamaradas solares de octubre sobre Odyssey", "Mars Express, enlace principal: su comunicación se probó de extremo a extremo"],
+    "etapa": "Primeros días de silencio", "fase": "aterrizaje", "categoria": "solucion", "discutido": false,
+    "nota": "La fuente dice 'el viernes por la noche', que corresponde al 26 de diciembre de 2003; la fecha del evento es la de publicación (27 dic).",
+    "fuentes": [
+      {"titulo": "Beagle 2 tiger team", "editor": "Spaceflight Now", "url": "https://spaceflightnow.com/mars/marsexpress/031227tigerteam.html", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2003-12-30", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Plan B: modo de búsqueda de comunicación y calendario con Mars Express",
+    "detalle": "Tras el décimo intento fallido, Beagle 2 debía entrar en el modo CSM 1, que detecta amanecer y anochecer por la corriente de los paneles y programa contactos sin depender del reloj. La Odyssey tenía su último pase programado el 31 de diciembre y la Mars Express tenía contactos previstos el 6, 12, 13 y 17 de enero; los dos últimos eran 'muy buenas oportunidades'. El Reino Unido planteó un futuro Beagle 3.",
+    "datos_clave": ["CSM 1 tras el décimo intento", "Contactos Mars Express: 6, 12, 13 y 17 de enero de 2004", "Último pase programado de Odyssey: 31 de diciembre", "Imagen de Mars Global Surveyor posible el 5 de enero"],
+    "etapa": "Primeros días de silencio", "fase": "aterrizaje", "categoria": "solucion", "discutido": false, "nota": null,
+    "fuentes": [
+      {"titulo": "Beagle 2 communication status, 30 Dec 2003", "editor": "ScienceDaily (ESA)", "url": "https://www.sciencedaily.com/releases/2003/12/031230015737.htm", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2004-01-07", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Primer intento con Mars Express: nada a las 13:13 CET",
+    "detalle": "El 7 de enero de 2004, en su primer paso sobre la zona de aterrizaje, la Mars Express intentó oír a Beagle 2 y no detectó señal. Su sistema de comunicaciones se había probado a fondo para este fin, lo que daba confianza a la ESA. David Southwood dijo: 'We have not lost hope yet to contact Beagle 2'.",
+    "datos_clave": ["7 de enero de 2004, 13:13 CET", "Sin señal", "Más intentos previstos en los días siguientes"],
+    "etapa": "Primeros días de silencio", "fase": "aterrizaje", "categoria": "problema", "discutido": false, "nota": null,
+    "fuentes": [
+      {"titulo": "Mars Express: no signal from Beagle 2 so far", "editor": "ESA", "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_no_signal_from_Beagle_2_so_far", "tipo": "científica", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2004-01-26", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Tres días de búsqueda intensiva sin resultado y último recurso: la orden 'hail'",
+    "detalle": "Hacia el 26 de enero, tras varios días con Mars Express, Odyssey y Jodrell Bank, Colin Pillinger admitió: 'We haven't found Beagle 2, despite three days of intensive searching'. Mark Sims explicó que el módulo debía estar ya en el modo CSM2 y que la única explicación probable era poca carga de batería. Se planeó pedir a Odyssey una orden 'hail' para reiniciar el software, como último recurso.",
+    "datos_clave": ["CSM2 previsto desde el 22 de enero", "Orden 'hail' a través de Odyssey el 27 de enero", "Mars Express podría enviarla hacia el 2-3 de febrero"],
+    "etapa": "Primeros días de silencio", "fase": "fin_de_mision", "categoria": "problema", "discutido": false, "nota": null,
+    "fuentes": [
+      {"titulo": "Beagle 2 search status (26 Jan 2004)", "editor": "ScienceDaily", "url": "https://sciencedaily.com/releases/2004/01/040127083257.htm", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  },
+  {
+    "fecha_inicio": "2004-02-06", "fecha_fin": null, "precision_fecha": "día", "sol": null, "sol_texto": null,
+    "titulo": "Beagle 2 se declara perdida y se anuncia la investigación (11 de febrero)",
+    "detalle": "El 6 de febrero de 2004 la junta de gestión de Beagle 2, reunida en Londres, la declaró perdida. El 11 de febrero, el ministro británico de Ciencia Lord Sainsbury y la ESA anunciaron una comisión de investigación presidida por René Bonnefoy, con informe previsto para finales de marzo. Su mandato abarcaba temas técnicos y de gestión (decisiones, financiación, responsabilidades).",
+    "datos_clave": ["Declarada perdida: 6 de febrero de 2004", "Anuncio de la investigación: 11 de febrero de 2004", "Presidente: René Bonnefoy; adjunto británico: David Link", "Informe previsto a finales de marzo de 2004"],
+    "etapa": "Declaración de pérdida", "fase": "fin_de_mision", "categoria": "fin_de_mision", "discutido": false, "nota": null,
+    "fuentes": [
+      {"titulo": "UK and ESA announce Beagle 2 inquiry", "editor": "ESA", "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry", "tipo": "científica", "verificacion": "página abierta (resumen automático de la herramienta)"},
+      {"titulo": "Beagle 2 lander failure investigation formally begins", "editor": "Spaceflight Now", "url": "https://spaceflightnow.com/mars/marsexpress/040211board.html", "tipo": "prensa", "verificacion": "página abierta (resumen automático de la herramienta)"}
+    ]
+  }
+]

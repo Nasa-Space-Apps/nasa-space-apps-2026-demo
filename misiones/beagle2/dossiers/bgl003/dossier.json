@@ -1,0 +1,98 @@
+{
+  "evento_id": "bgl003",
+  "titulo": "El nombre: Beagle, como el barco de Darwin",
+  "contexto_ampliado": "En 1997, el científico británico Colin Pillinger, investigador de la Open University en el Reino Unido, convenció a la Agencia Espacial Europea (ESA) de incluir una sonda de aterrizaje en su misión Mars Express, destinada a Marte. Pillinger se convirtió en el investigador principal de ese proyecto, al que dedicaría años de esfuerzo.\n\nA la hora de bautizar la sonda, Pillinger tomó una decisión poco convencional en el mundo espacial: en lugar de inventar un acrónimo técnico —como suele hacerse con las misiones—, eligió un nombre cargado de historia y simbolismo. La llamó \"Beagle 2\", en honor al HMS Beagle, el buque de la Royal Navy que transportó a Charles Darwin en su célebre viaje de exploración del siglo XIX. Según el artículo de The Space Review dedicado a Pillinger, el nombre fue sugerido por su esposa.\n\nLa elección no era casual: así como Darwin buscó comprender los orígenes de la vida en la Tierra desde la cubierta del Beagle, la sonda Beagle 2 tenía como objetivo buscar señales de vida en Marte. El vínculo entre el barco explorador y la pequeña sonda del siglo XXI era toda una declaración de intenciones sobre la continuidad de la exploración científica.\n\nPillinger no solo fue hábil con la ciencia, sino también con la comunicación. Involucró al artista Damien Hirst, quien diseñó una carta de calibración de instrumentos basada en sus icónicos puntos de colores. Además, convenció a Dave Rowntree y Alex James, miembros de la banda Blur, para que promocionaran la misión e incluso compusieran la señal de llamada que Beagle 2 transmitiría desde Marte.\n\nLa sonda fue lanzada en junio de 2003 como carga adicional a bordo de la nave Mars Express. Debía aterrizar en la superficie marciana el día de Navidad de ese año, pero el contacto de radio esperado nunca llegó. Durante cuatro meses se realizaron 24 intentos de comunicación a través de los orbitadores Mars Odyssey de la NASA y Mars Express de la ESA, todos sin éxito. Finalmente, Beagle 2 fue declarada perdida.\n\nA pesar de su desenlace, el nombre Beagle quedó como símbolo de una misión que combinó ambición científica, creatividad cultural y el espíritu explorador que Darwin habría reconocido.",
+  "datos_reales": [
+    {
+      "afirmacion": "En 1997, Colin Pillinger convenció a la ESA de incluir una sonda de aterrizaje en la misión Mars Express.",
+      "fuente_url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+      "cita": "In 1997 he persuaded the European Space Agency (ESA) to include a lander in its Mars Express mission",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En lugar de usar un acrónimo técnico, Pillinger nombró a la sonda 'Beagle' por el HMS Beagle, el barco que transportó a Charles Darwin.",
+      "fuente_url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+      "cita": "Rather than use a dry acronym, he named the little probe after HMS Beagle, the vessel that carried Charles Darwin.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El nombre 'Beagle 2' fue idea de la esposa de Pillinger, según The Space Review.",
+      "fuente_url": "https://thespacereview.com/article/2511/1",
+      "cita": "Pillinger will mostly be remembered as the principal investigator for the Beagle 2 spacecraft, which was his idea, although the name was suggested by his wife.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Colin Pillinger era el investigador principal (principal investigator) de la misión Beagle 2.",
+      "fuente_url": "https://thespacereview.com/article/2511/1",
+      "cita": "Pillinger will mostly be remembered as the principal investigator for the Beagle 2 spacecraft",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Beagle 2 fue lanzada en junio de 2003 como carga adicional de la nave Mars Express.",
+      "fuente_url": "https://thespacereview.com/article/2511/1",
+      "cita": "Beagle 2 was a small Mars lander and was launched as a hitchhiker on the Mars Express spacecraft in June 2003.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Colin Pillinger era científico de la Open University (Reino Unido).",
+      "fuente_url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+      "cita": "the mission team led by Colin Pillinger, the visionary Open University scientist.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se realizaron 24 intentos de comunicación con Beagle 2 durante cuatro meses sin éxito.",
+      "fuente_url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+      "cita": "After four months and 24 attempts at communication, via NASA's Mars Odyssey and ESA's Mars Express orbiters, the lander was declared lost",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Pillinger involucró al artista Damien Hirst y a miembros de la banda Blur (Alex James y Dave Rowntree) en la misión.",
+      "fuente_url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+      "cita": "he enlisted the help of artist Damien Hirst to use his iconic spots as a special instrument calibration chart on the spacecraft. And he nagged Dave Rowntree and Alex James of Blur… until they agreed to promote the mission… and even to compose the call sign for Beagle 2.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Britain's Great Martian Adventure",
+      "url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+      "editor": "Science Museum Group (Roger Highfield)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Red Planet dreams (Colin Pillinger obituary)",
+      "url": "https://thespacereview.com/article/2511/1",
+      "editor": "The Space Review (Dwayne A. Day)",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "El coste total de la misión difiere entre fuentes: el Science Museum Blog cita '£45 million' (https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/), mientras que The Space Review afirma que el coste final fue '£66 million, or approximately $120 million in then-year dollars, way more than the original $50 million goal' (https://thespacereview.com/article/2511/1). La diferencia podría deberse a distintos momentos de la contabilidad o a qué partidas se incluyen.",
+    "El dato [6] del borrador afirma que Beagle 2 'se separó de Mars Express el 19 de diciembre de 2003', pero la cita que lo respalda (https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/) solo menciona el aterrizaje previsto en Navidad de 2003 y no incluye la fecha de separación del 19 de diciembre. La afirmación excede lo que la cita demuestra."
+  ],
+  "huecos": [
+    "No se ha podido confirmar la fecha exacta en que se eligió el nombre 'Beagle 2' para la sonda.",
+    "El nombre de la esposa de Pillinger (Judith Pillinger) está mencionado en el artículo del Science Museum en otro contexto, pero ninguna fuente leída confirma explícitamente que ella sea quien sugirió el nombre.",
+    "No hay fuente oficial de la NASA o ESA que describa el proceso de elección del nombre ni la participación de la esposa de Pillinger.",
+    "No se pudo confirmar si existe un documento oficial o conferencia de prensa donde Pillinger anunció formalmente el nombre de la misión.",
+    "El borrador narrativo menciona que Pillinger 'había trabajado durante años en el análisis de meteoritos marcianos', pero ninguno de los datos recopilados ni sus citas respaldan esa afirmación.",
+    "El borrador incluye un párrafo completo sobre el descubrimiento de Beagle 2 en enero de 2015 mediante la cámara HiRISE del Mars Reconnaissance Orbiter y el fallo en los paneles solares, pero no hay ningún dato con cita que lo respalde.",
+    "El borrador afirma que la misión 'abrió el camino a proyectos como ExoMars y el primer astronauta oficial británico, Tim Peake', sin que ninguna fuente recopilada lo confirme."
+  ],
+  "ideas_visuales": [
+    "Colin Pillinger en la Open University señalando un cartel con el nombre 'Beagle 2' junto a una ilustración del HMS Beagle de Darwin.",
+    "La sonda Beagle 2 con la carta de calibración de colores diseñada por Damien Hirst visible en su superficie.",
+    "Lanzamiento de Mars Express en junio de 2003, con Beagle 2 acoplada como carga adicional.",
+    "Sala de control con operadores intentando establecer contacto con Beagle 2 en Navidad de 2003, pantallas sin señal.",
+    "Comparación visual lado a lado: el HMS Beagle navegando en el siglo XIX y la sonda Beagle 2 viajando hacia Marte en el siglo XXI."
+  ],
+  "datos_no_verificados": []
+}

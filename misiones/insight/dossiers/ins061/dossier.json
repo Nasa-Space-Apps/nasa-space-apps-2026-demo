@@ -1,0 +1,153 @@
+{
+  "evento_id": "ins061",
+  "titulo": "Última selfie de InSight: el lander cubierto de polvo rojo (Sol 1211, 24 de abril de 2022)",
+  "contexto_ampliado": "El 24 de abril de 2022, durante el sol 1.211 de su misión, el lander InSight tomó su última selfie en la superficie de Marte. La imagen, capturada por la cámara de despliegue de instrumentos (IDC) situada en el codo del brazo robótico, era en realidad un mosaico: el brazo debía colocarse en múltiples posiciones para fotografiar distintas partes del lander, y luego todas esas tomas se ensamblaban en una sola panorámica. Para la primera selfie, tomada el 6 de diciembre de 2018 (sol 10), se habían necesitado 11 imágenes individuales.\n\nComparar la primera y la última selfie resulta revelador. En diciembre de 2018, los paneles solares aparecían completamente libres de polvo. Una segunda selfie, construida con imágenes de entre marzo y abril de 2019, ya mostraba algo de acumulación. Pero la del 24 de abril de 2022 dejaba claro el efecto de más de tres años de polvo marciano: los paneles estaban visiblemente cubiertos, mucho más que en cualquier retrato anterior.\n\nEsa capa de polvo tenía consecuencias directas sobre la energía disponible. Al aterrizar, los paneles solares de InSight generaban aproximadamente 5.000 vatios-hora por cada sol marciano. Para la primavera de 2022, la producción había caído a unos 500 vatios-hora por sol, apenas un 10 % de la capacidad original. El equipo de ingenieros intentó paliar el problema con una solución creativa: en días de viento, dejaban caer arena desde la pala del brazo robótico sobre los paneles, de modo que los granos, al descender, arrastraban consigo parte del polvo acumulado. La táctica ayudó, pero no pudo revertir el declive general.\n\nTras la última selfie, en mayo de 2022, el equipo colocó el brazo robótico en su posición de reposo definitiva. Mover el brazo consumía una energía que ya no podían permitirse desperdiciar. El último instrumento científico que permaneció encendido fue el sismómetro, al que se le dio prioridad sobre todo lo demás a medida que la energía seguía reduciéndose.\n\nY el sismómetro siguió dando resultados. A finales de abril de 2022, cuando se publicó la última selfie, InSight había detectado 1.313 maremotos. Para el final de la misión, el contador oficial de la NASA llegó a 1.319, incluyendo temblores provocados por impactos de meteoritos que desenterraron fragmentos de hielo del tamaño de rocas.\n\nEl 15 de diciembre de 2022, InSight envió su última comunicación a la Tierra. Los controladores de misión del JPL intentaron contactar al lander en dos ocasiones consecutivas sin éxito, lo que los llevó a concluir que las baterías alimentadas por los paneles solares se habían agotado por completo, un estado que los ingenieros denominan «dead bus»: el autobús sin energía, el silencio definitivo de la misión.",
+  "datos_reales": [
+    {
+      "afirmacion": "La última selfie de InSight fue tomada el 24 de abril de 2022, el día marciano (sol) número 1.211 de la misión.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "cita": "The last selfie was taken on 24 April 2022, the 1211th Mars day of the mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La primera selfie completa de InSight fue tomada el 6 de diciembre de 2018 (sol 10) y mostraba los paneles solares completamente libres de polvo.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "cita": "The first selfie, in which the solar panels are still completely dust-free, was taken on 6 December 2018 (Sol 10).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La selfie de InSight es un mosaico: la cámara está montada en el codo del brazo robótico, y se toman múltiples imágenes desde distintas posiciones que luego se unen.",
+      "fuente_url": "https://gizmodo.com/nasa-insight-mars-lander-final-selfie-dust-1848970270",
+      "cita": "The selfies are mosaics, meaning they're stitched together from multiple images, each of which requires the lander's camera-carrying robotic arm to be in a different position.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La primera selfie completa se tomó en diciembre de 2018 y la segunda, entre marzo y abril de 2019; la última (abril 2022) mostraba mucho más polvo que las anteriores.",
+      "fuente_url": "https://gizmodo.com/nasa-insight-mars-lander-final-selfie-dust-1848970270",
+      "cita": "It's much more dust than was present in the lander's first and second selfies, taken in December 2018 and between March and April 2019.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los paneles solares de InSight generaban aproximadamente 5.000 vatios-hora por sol al aterrizar, pero en primavera de 2022 solo producían unos 500 vatios-hora por sol.",
+      "fuente_url": "https://science.nasa.gov/resource/insights-power-generation-after-landing-and-spring-2022/",
+      "cita": "The solar panels on NASA's InSight Mars lander produced roughly 5,000 watt-hours each Martian day, or sol, after the spacecraft touched down. But by spring 2022, enough dust had settled on the panels that they were only producing about 500 watt-hours each sol.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras la última selfie, en mayo de 2022 el equipo colocó el brazo robótico en su posición de reposo definitiva.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "cita": "the team moved the lander's robotic arm to its resting position in May 2022 and had to declare the end of the mission shortly after.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo intentó limpiar los paneles salpicando arena de la pala del brazo durante días de viento, para que los granos barrieran el polvo al caer.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "they could sprinkle dirt from the scoop onto the panels during windy days, allowing the falling granules to gently sweep dust off the panels.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sismómetro fue el último instrumento científico que permaneció encendido a medida que el polvo reducía la energía de los paneles.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "The seismometer was the last science instrument that remained powered on as dust accumulating on the lander's solar panels gradually reduced its energy.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El número total oficial de maremotos detectados por InSight durante toda la misión fue de 1.319.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "detected 1,319 marsquakes, including quakes caused by meteoroid impacts, the largest of which unearthed boulder-size chunks of ice late last year.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "A finales de abril de 2022, en el momento de publicar la última selfie, InSight había detectado 1.313 maremotos.",
+      "fuente_url": "https://gizmodo.com/nasa-insight-mars-lander-final-selfie-dust-1848970270",
+      "cita": "InSight has so far detected 1,313 marsquakes, and could yet detect more before its scientific operations end.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight dejó de comunicarse con la Tierra el 15 de diciembre de 2022, fecha oficial del fin de la misión.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "Mission controllers at the agency's Jet Propulsion Laboratory (JPL) in Southern California were unable to contact the lander after two consecutive attempts... The last time InSight communicated with Earth was Dec. 15.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El estado en que las baterías se quedan sin energía es denominado por los ingenieros 'dead bus'.",
+      "fuente_url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "cita": "leading them to conclude the spacecraft's solar-powered batteries have run out of energy – a state engineers refer to as \"dead bus.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La selfie fue tomada con la cámara de despliegue de instrumentos (IDC), situada en el codo del brazo robótico, y la primera constaba de 11 imágenes.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "cita": "The selfie consists of 11 images taken by the Instrument Deployment Camera at the elbow of the robot arm. These images were then stitched together into a mosaic.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA Retires InSight Mars Lander Mission After Years of Science",
+      "url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "First and last InSight selfies on Mars",
+      "url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "editor": "DLR (Centro Aeroespacial Alemán)",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "InSight's Power Generation: After Landing and Spring 2022",
+      "url": "https://science.nasa.gov/resource/insights-power-generation-after-landing-and-spring-2022/",
+      "editor": "NASA/JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Here's the last selfie from the fading InSight Mars lander",
+      "url": "https://gizmodo.com/nasa-insight-mars-lander-final-selfie-dust-1848970270",
+      "editor": "Gizmodo",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "InSight Lander – Mission Overview",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Conteo de maremotos en abril de 2022: Gizmodo (https://gizmodo.com/nasa-insight-mars-lander-final-selfie-dust-1848970270) informa 1.313 maremotos al publicar la última selfie; el recuento final oficial de la NASA (https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/) da 1.319. La diferencia es consistente con que se detectaron más sismos entre abril y diciembre de 2022, pero las dos cifras no coinciden en el contexto de la publicación de abril.",
+    "Cifras de energía: La fuente oficial JPL/NASA (https://science.nasa.gov/resource/insights-power-generation-after-landing-and-spring-2022/) da ~5.000 Wh/sol al aterrizaje y ~500 Wh/sol en primavera de 2022. La nota del evento cita a Golombek con 4.750 → 400 Wh/sol; esta segunda cifra no pudo verificarse directamente porque el artículo de JPL sobre la disminución de energía (https://www.jpl.nasa.gov/news/nasas-insight-still-hunting-marsquakes-as-power-levels-diminish) devolvió una página vacía y no fue posible leerlo.",
+    "El evento original sitúa la cifra de 500 Wh/sol en 'mayo de 2022', pero la fuente NASA/JPL (https://science.nasa.gov/resource/insights-power-generation-after-landing-and-spring-2022/) dice 'by spring 2022' sin especificar mayo. La atribución a mayo concreto podría ser una aproximación del evento, no un dato textual de la fuente.",
+    "El dato [12] (DLR, https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars) indica que la primera selfie constaba de 11 imágenes; el evento original no menciona esa cifra ni precisa cuántas imágenes formaron la última selfie. No hay contradicción directa, pero el borrador podría dar a entender que todas las selfies se construyen igual, cuando solo se documenta el número de tomas de la primera."
+  ],
+  "huecos": [
+    "Las cifras de Golombek (4.750 → 400 Wh/sol) no pudieron verificarse: el artículo de JPL sobre disminución de energía (jpl.nasa.gov/news/nasas-insight-still-hunting-marsquakes-as-power-levels-diminish) no fue accesible.",
+    "El número exacto de imágenes que forman el mosaico de la última selfie (sol 1.211) no está especificado; solo se sabe que la primera selfie (sol 10) constaba de 11 imágenes.",
+    "No se pudo confirmar el sol exacto en que el brazo quedó en posición de reposo definitiva dentro de mayo de 2022; solo se sabe que fue en ese mes.",
+    "No se encontró el texto del artículo de JPL sobre la tormenta de polvo de octubre de 2022 (jpl.nasa.gov/news/nasas-insight-waits-out-dust-storm) que presuntamente citaba la última selfie; la página devolvió contenido vacío.",
+    "Ninguna fuente del dossier indica explícitamente que la producción de 500 Wh/sol representaba el 10 % de la original; esa proporción se deduce aritméticamente (500/5.000) pero no aparece como texto citado.",
+    "No se documenta en qué lugar exacto de Marte (Elysium Planitia) se encontraba InSight; el borrador lo mencionaba pero ningún dato del dossier lo respalda con cita.",
+    "El evento original menciona que 'los paneles producían una fracción de la energía inicial'; ninguna fuente usa esa expresión concreta, aunque el dato [4] la confirma numéricamente."
+  ],
+  "ideas_visuales": [
+    "Comparativa lado a lado de la primera selfie (sol 10, paneles limpios) y la última selfie (sol 1.211, paneles cubiertos de polvo rojizo), basada en datos [0], [1] y [3].",
+    "Diagrama del brazo robótico en distintas posiciones mostrando cómo se construye el mosaico de una selfie marciana, con la cámara IDC señalada en el codo (datos [2] y [12]).",
+    "Gráfica de barras simple: 5.000 Wh/sol al aterrizar frente a 500 Wh/sol en primavera de 2022, mostrando la caída al 10 % (dato [4]).",
+    "Ilustración del método de limpieza: la pala del brazo dejando caer arena sobre un panel solar en un día de viento, con granos arrastrando polvo (dato [6]).",
+    "Línea de tiempo visual de la misión: primera selfie (dic 2018) → segunda selfie (mar-abr 2019) → última selfie (abr 2022) → brazo en reposo (may 2022) → último contacto (dic 2022) y dead bus (datos [0], [1], [3], [5], [10], [11])."
+  ],
+  "datos_no_verificados": []
+}

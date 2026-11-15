@@ -1,0 +1,174 @@
+{
+  "evento_id": "ins084",
+  "titulo": "HiRISE fotografía al InSight 'retirado' — 23 de octubre de 2024",
+  "contexto_ampliado": "En octubre de 2024, casi dos años después del final oficial de la misión InSight, la cámara HiRISE a bordo del Mars Reconnaissance Orbiter (MRO) apuntó hacia Elysium Planitia y capturó una imagen reveladora: el lander descansando en silencio sobre la llanura marciana. La imagen, tomada el 23 de octubre de 2024, mostró que los paneles solares de InSight habían adquirido el mismo tono rojizo-marrón que el suelo circundante, casi mimetizándose con él. En las primeras fotografías de HiRISE, poco después del aterrizaje, la nave aparecía como un punto azul brillante por su reflejo de la luz solar; ahora apenas se distingue del polvo marciano que la cubre.\n\nInSight aterrizó el 26 de noviembre de 2018 en Elysium Planitia, una llanura relativamente plana situada a unos 4,5° de latitud norte y 135,6° de longitud este. Fue la primera misión en detectar los marsquakes —terremotos marcianos—, revelando detalles sobre la corteza, el manto y el núcleo de Marte. El fin oficial de la misión llegó el 15 de diciembre de 2022, cuando el lander se quedó sin energía y dejó de comunicarse con la Tierra durante su misión extendida.\n\nSin embargo, los ingenieros no se rindieron de inmediato. Tras el retiro, continuaron escuchando señales de radio de la nave, por si el viento llegara a limpiar suficiente polvo de los paneles solares como para que las baterías se recargaran. Después de dos años sin detectar ningún cambio, NASA anunció que dejaría de escuchar a InSight a finales de 2024.\n\nFue en ese contexto que los científicos solicitaron una nueva imagen de HiRISE: en parte como despedida, y en parte para monitorear cómo ha cambiado el sitio de aterrizaje con el tiempo. Ingrid Daubar, investigadora de la Universidad de Brown y miembro del equipo científico, explicó que aunque ya no se reciben señales de InSight, la nave sigue enseñando cosas sobre Marte: al monitorear cuánto polvo se acumula en la superficie y cuánto es barrido por el viento y los torbellinos de polvo, se aprende más sobre el ciclo del polvo y otros procesos que moldean el planeta.\n\nLa imagen, catalogada como PIA26515 con el identificador de observación ESP_085514_1845, fue captada desde una altitud de 272,3 km con una resolución de 27,3 cm por píxel, a las 14:24 hora local de Marte. En ella se observan varios detalles que narran el paso del tiempo: las marcas oscuras quemadas en el suelo por los propulsores de retrocohete durante el aterrizaje —muy visibles en 2018— están volviendo al color rojo-marrón del entorno. Las rayas oscuras que cruzan la superficie son huellas dejadas por torbellinos de polvo (dust devils) que soplan sobre la llanura.\n\nEste seguimiento del polvo marciano tiene aplicaciones científicas concretas. La monitorización permite estimar la antigüedad de los cráteres de impacto: al conocer la velocidad a la que las marcas desaparecen en un lugar dado, los científicos pueden calcular cuánto tiempo llevan ahí esos cráteres y, por tanto, la edad de esa superficie. La serie de imágenes HiRISE abarca desde el 11 de diciembre de 2018 hasta el 23 de octubre de 2024, documentando cómo el polvo transforma paulatinamente la apariencia de la nave. Además de InSight, HiRISE ha fotografiado desde órbita a los rovers Perseverance y Curiosity —aún activos— y a misiones inactivas como Spirit, Opportunity y el lander Phoenix.\n\nLa noticia fue difundida a mediados de diciembre de 2024, aunque existe una discrepancia entre fuentes respecto a la fecha exacta de publicación: los fragmentos de búsqueda apuntan al 16 de diciembre en el sitio de JPL/NASA y al 18 de diciembre en el sitio oficial de HiRISE de la Universidad de Arizona. La imagen en sí, sin embargo, tiene fecha inequívoca: 23 de octubre de 2024, archivada con coordenadas precisas en las bases de datos de HiRISE y de NASA.",
+  "datos_reales": [
+    {
+      "afirmacion": "La imagen HiRISE del lander InSight fue tomada el 23 de octubre de 2024 por la cámara HiRISE del MRO.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "In the new image taken Oct. 23 by MRO's High-Resolution Imaging Science Experiment (HiRISE) camera, InSight's solar panels have acquired the same reddish-brown hue as the rest of the planet.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los paneles solares de InSight adquirieron el mismo tono rojizo-marrón que el resto del planeta, según la imagen de octubre de 2024.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "InSight's solar panels have acquired the same reddish-brown hue as the rest of the planet.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight aterrizó en Marte en noviembre de 2018 y fue la primera misión en detectar marsquakes, revelando detalles de la corteza, el manto y el núcleo del planeta.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "After touching down in November 2018, the lander was the first to detect the Red Planet's marsquakes, revealing details of the crust, mantle, and core in the process.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "NASA retiró oficialmente a InSight en diciembre de 2022, tras quedarse sin energía y dejar de comunicarse con la Tierra durante su misión extendida.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "NASA retired InSight in December 2022, after the lander ran out of power and stopped communicating with Earth during its extended mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras el retiro de InSight, los ingenieros continuaron escuchando señales de radio por si el viento limpiaba suficiente polvo de los paneles solares para recargar las baterías.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "engineers continued listening for radio signals from the lander in case wind cleared enough dust from the spacecraft's solar panels for its batteries to recharge.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Sin detectar cambios durante dos años, NASA anunció que dejaría de escuchar a InSight a finales de 2024.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "Having detected no changes over the past two years, NASA will stop listening for InSight at the end of this year.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los científicos solicitaron la imagen HiRISE de octubre de 2024 como despedida de InSight y para monitorear cómo ha cambiado el sitio de aterrizaje con el tiempo.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "Scientists requested the recent HiRISE image as a farewell to InSight, as well as to monitor how its landing site has changed over time.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingrid Daubar, investigadora de la Universidad de Brown, señaló que InSight sigue enseñando cosas sobre Marte al permitir monitorear el ciclo del polvo en la superficie.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "\"Even though we're no longer hearing from InSight, it's still teaching us about Mars,\" said science team member Ingrid Daubar of Brown University in Providence, Rhode Island. \"By monitoring how much dust collects on the surface — and how much gets vacuumed away by wind and dust devils — we learn more about the wind, dust cycle, and other processes that shape the planet.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El halo oscuro quemado en el suelo por los propulsores de retrocohete durante el aterrizaje de InSight está volviendo al color rojo-marrón del terreno circundante.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "Much more prominent in 2018, those dark marks are now returning to the red-brown color of the surrounding terrain.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "HiRISE también ha fotografiado desde órbita a los rovers Perseverance y Curiosity (activos), y a misiones inactivas como Spirit, Opportunity y el lander Phoenix.",
+      "fuente_url": "https://www.nasa.gov/?p=792015",
+      "cita": "HiRISE has captured many other spacecraft images, including those of NASA's Perseverance and Curiosity rovers, which are still exploring Mars, as well as inactive missions, like the Spirit and Opportunity rovers and the Phoenix lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen tiene el número PIA26515 y fecha histórica del 23 de octubre de 2024 según el catálogo de NASA.",
+      "fuente_url": "https://science.nasa.gov/resource/hirise-studies-the-dust-on-insight/",
+      "cita": "Historical Date | October 23, 2024 | PIA Number | PIA26515",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El video de la serie HiRISE muestra imágenes tomadas entre el 11 de diciembre de 2018 y el 23 de octubre de 2024; en ellas, InSight aparece frecuentemente como un punto azul brillante por reflejar la luz solar.",
+      "fuente_url": "https://science.nasa.gov/resource/hirise-studies-the-dust-on-insight/",
+      "cita": "This video shows images taken by HiRISE between Dec. 11, 2018, just a couple weeks after InSight landed on Mars, and Oct. 23, 2024. In the images, InSight often appears as a bright, blue dot due to its reflection of sunlight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las rayas oscuras visibles en la superficie alrededor de InSight son huellas dejadas por torbellinos de polvo (dust devils).",
+      "fuente_url": "https://science.nasa.gov/resource/hirise-studies-the-dust-on-insight/",
+      "cita": "Dark stripes that can be seen on the surface are tracks left by passing dust devils.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen HiRISE ESP_085514_1845 fue adquirida el 23 de octubre de 2024 a las 14:24 (hora local en Marte), desde una altitud de 272,3 km con resolución de 27,3 cm/píxel.",
+      "fuente_url": "https://www.uahirise.org/ESP_085514_1845",
+      "cita": "Acquisition date 23 October 2024 Local Mars time 14:24 ... Spacecraft altitude 272.3 km (169.2 miles) Original image scale range from 27.3 cm/pixel (with 1 x 1 binning)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las coordenadas del sitio fotografiado son latitud 4,501° N y longitud este 135,626°, coincidentes con el lugar de aterrizaje de InSight en Elysium Planitia.",
+      "fuente_url": "https://www.uahirise.org/ESP_085514_1845",
+      "cita": "Latitude (centered) 4.501° Longitude (East) 135.626°",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight aterrizó el 26 de noviembre de 2018 en Elysium Planitia y el fin oficial de la misión fue el 15 de diciembre de 2022.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Landed: Nov. 26, 2018, at 11:52:59 a.m. PT (2:52:59 p.m. ET) ... End of Mission: Dec. 15, 2022",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La monitorización del polvo sobre InSight es útil para estimar la antigüedad de cráteres de impacto, ya que permite conocer la velocidad a la que las marcas desaparecen.",
+      "fuente_url": "https://science.nasa.gov/resource/hirise-studies-the-dust-on-insight/",
+      "cita": "Monitoring the change in dust at the Martian surface helps scientists understand how quickly the surface changes at a given location over time. That's particularly helpful for ascertaining the age of meteoroid craters, which serve as time-keepers on surface: Understanding how quickly they're fading lets scientists estimate how long they've been there, and thus how old that particular surface is.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's MRO Spots Retired InSight Lander — Comunicado oficial NASA",
+      "url": "https://www.nasa.gov/?p=792015",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "HiRISE Studies the Dust on InSight (PIA26515) — Science NASA Resource",
+      "url": "https://science.nasa.gov/resource/hirise-studies-the-dust-on-insight/",
+      "editor": "NASA/JPL-Caltech/UArizona",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "HiRISE Observation ESP_085514_1845 — University of Arizona",
+      "url": "https://www.uahirise.org/ESP_085514_1845",
+      "editor": "University of Arizona / HiRISE Team",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "InSight Mission Overview — Science NASA",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Fecha de publicación del comunicado de prensa: los fragmentos de búsqueda de DuckDuckGo indican que science.nasa.gov/resource publicó la noticia el 16 de diciembre de 2024, mientras que el sitio oficial de HiRISE (uahirise.org/ESP_085514_1845) la registra con fecha 18 de diciembre de 2024, según el mismo buscador. Ninguno de los textos recuperados con leer_pagina incluye una fecha de publicación explícita, por lo que no se puede resolver la discrepancia con certeza. URLs: https://science.nasa.gov/resource/hirise-studies-the-dust-on-insight/ vs. https://www.uahirise.org/ESP_085514_1845",
+    "El relato del borrador indica que InSight aterrizó a '135,9° de longitud este', pero el dato [14] (fuente: https://www.uahirise.org/ESP_085514_1845) registra 135,626° E. La diferencia es de casi 0,3°, lo cual en Marte equivale a varios kilómetros. Se corrigió a 135,6° en el contexto ampliado.",
+    "El borrador describe un 'archivo visual de más de seis años' entre diciembre de 2018 y octubre de 2024, pero según el dato [11] (fuente: https://science.nasa.gov/resource/hirise-studies-the-dust-on-insight/) el intervalo va del 11 de diciembre de 2018 al 23 de octubre de 2024, es decir, aproximadamente 5 años y 10 meses, no más de seis años."
+  ],
+  "huecos": [
+    "No fue posible leer el artículo de NASASpaceflight (https://www.nasaspaceflight.com/2025/01/mro-insight-2024/): la página devolvió únicamente elementos de navegación y listas de artículos recientes, sin el contenido del artículo en sí.",
+    "La página original de JPL (https://www.jpl.nasa.gov/news/nasa-mars-orbiter-spots-retired-insight-lander-to-study-dust-movement/) devolvió un texto vacío (1 carácter); no fue posible confirmar su fecha exacta de publicación ni su contenido mediante leer_pagina.",
+    "No se pudo confirmar de forma directa (desde el texto leído con leer_pagina) si la fecha de publicación del comunicado fue el 16 o el 18 de diciembre de 2024; los datos de los fragmentos de búsqueda apuntan a dos fechas distintas.",
+    "Se desconoce si NASA realizó algún anuncio formal específico de cuándo dejó de escuchar definitivamente a InSight antes de que finalizara 2024; solo se confirmó la intención de hacerlo 'a finales de este año' (2024).",
+    "No hay datos disponibles sobre si los instrumentos de InSight (sismómetro SEIS, HP3) mostraron alguna lectura o anomalía posterior a diciembre de 2022.",
+    "El evento original menciona que 'NASA dijo que dejaría de escuchar al final de 2024', pero ninguna fuente del dossier confirma si efectivamente se dejó de escuchar en esa fecha o si hubo un anuncio formal de cierre definitivo de la escucha.",
+    "No se encontró información sobre el equipo o proceso que decidió exactamente cuándo y cómo orientar HiRISE para tomar esta imagen específica de InSight (por ejemplo, si fue una solicitud del equipo de InSight o del equipo de MRO)."
+  ],
+  "ideas_visuales": [
+    "Comparación lado a lado de la imagen HiRISE de diciembre de 2018 (InSight como punto azul brillante) y la de octubre de 2024 (InSight mimetizado con el terreno rojizo).",
+    "Vista orbital mostrando la altitud de MRO a 272,3 km sobre Elysium Planitia, con escala que ilustre la resolución de 27,3 cm/píxel.",
+    "Detalle de las marcas oscuras de los retrocohetes desvaneciéndose: una secuencia temporal que muestre cómo vuelven al color rojo-marrón del suelo.",
+    "Mapa de Elysium Planitia con las coordenadas 4,5° N / 135,6° E señalando la ubicación de InSight.",
+    "Rayas oscuras dejadas por los torbellinos de polvo (dust devils) cruzando la superficie alrededor de InSight."
+  ],
+  "datos_no_verificados": []
+}

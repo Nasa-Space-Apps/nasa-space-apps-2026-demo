@@ -1,0 +1,39 @@
+{
+  "esquema_version": "2.0",
+  "mision": {
+    "id": "beagle2",
+    "nombre": "Beagle 2",
+    "nombre_completo": "Beagle 2",
+    "agencia": "ESA/Reino Unido",
+    "tipo": "lander",
+    "cuerpo": "Marte",
+    "lugar": "Isidis Planitia",
+    "estado_actual": "Lander que nunca se comunicó tras su llegada en diciembre de 2003; localizado en la superficie en 2015 con imágenes de HiRISE (Mars Reconnaissance Orbiter, NASA).",
+    "sol_cero": "No aplica (el lander nunca operó; no hay conteo de soles)",
+    "fechas_clave": {
+      "lanzamiento": {"fecha": null, "eventos": []},
+      "aterrizaje": {"fecha": null, "eventos": []},
+      "ultimo_contacto": {"fecha": null, "eventos": []},
+      "fin_oficial": {"fecha": null, "eventos": []}
+    },
+    "misiones_relacionadas": ["mars-express", "mro"],
+    "resumen": {"eventos": 0, "fuentes_unicas": 0, "eventos_por_fase": {}}
+  },
+  "titulo": "Línea de tiempo de Beagle 2: de la idea al silencio de 2003 y su hallazgo en 2015",
+  "idioma": "es",
+  "generado": "2026-11-15",
+  "version": "0.1",
+  "alcance": "Desde el origen del proyecto hasta su localización con HiRISE en 2015 y lo que se aprendió: concepto, financiamiento, desarrollo, lanzamiento a bordo de Mars Express, separación, aterrizaje y silencio, búsqueda, comisión de investigación, hallazgo y legado. Es una misión de ESA/Reino Unido; el vínculo con la NASA es el hallazgo con HiRISE.",
+  "como_leer": {"fechas": "fecha_inicio / fecha_fin en ISO parcial (AAAA, AAAA-MM, AAAA-MM-DD). precision_fecha indica año, mes, día, rango, aproximada o década. En Marte sin operaciones, sol es siempre null."},
+  "aviso_verificacion": "Borrador de trabajo (v0). Cada fuente declara su nivel de verificación; nada se completó de memoria.",
+  "ficha_tecnica": {},
+  "equipo": [],
+  "totales_de_la_mision": {},
+  "records": [],
+  "discrepancias": [],
+  "pendientes_de_verificar": [],
+  "recursos_para_la_plataforma": {"modelos_3d": [], "imagenes_y_panoramicas": [], "vistas_desde_orbita": [], "videos": [], "documentales": [], "datos": [], "educacion": [], "historias": [], "portales": [], "nota": ""},
+  "eventos": [],
+  "fuentes_no_citadas_en_eventos": [],
+  "indice_fuentes": []
+}

@@ -1,0 +1,87 @@
+{
+  "ids": [
+    "bgl001",
+    "bgl002",
+    "bgl003",
+    "bgl009",
+    "bgl017",
+    "bgl019",
+    "bgl020",
+    "bgl023",
+    "bgl027",
+    "bgl032",
+    "bgl033",
+    "bgl037",
+    "bgl041",
+    "bgl043",
+    "bgl044",
+    "bgl045",
+    "bgl048",
+    "bgl049",
+    "bgl051",
+    "bgl052"
+  ],
+  "actos": [
+    {
+      "n": 1,
+      "titulo": "Un sueño británico"
+    },
+    {
+      "n": 2,
+      "titulo": "Viaje y silencio"
+    },
+    {
+      "n": 3,
+      "titulo": "El misterio de la nave perdida"
+    },
+    {
+      "n": 4,
+      "titulo": "El hallazgo"
+    }
+  ],
+  "asignacion": {
+    "bgl001": 1,
+    "bgl002": 1,
+    "bgl009": 1,
+    "bgl017": 2,
+    "bgl019": 2,
+    "bgl023": 2,
+    "bgl020": 2,
+    "bgl027": 2,
+    "bgl033": 3,
+    "bgl037": 3,
+    "bgl043": 3,
+    "bgl045": 4,
+    "bgl044": 4,
+    "bgl048": 4,
+    "bgl049": 4,
+    "bgl051": 4,
+    "bgl052": 4,
+    "bgl003": 1,
+    "bgl032": 3,
+    "bgl041": 3
+  },
+  "razones": {
+    "bgl001": "Origen: Colin Pillinger propone en 1997 un módulo de aterrizaje para la Mars Express.",
+    "bgl002": "La ESA abre la nave a un módulo y elige Beagle 2 entre tres propuestas (fuente oficial). Ojo: el detalle cita una misión rusa fallida «en 1997»; verificar el año en el dossier.",
+    "bgl009": "Qué buscaba: un laboratorio de 60 kg con brazo, topo y análisis de gases para buscar señales de vida (discutido: masas). Ojo: el título dice 60 kg, que es el límite de diseño; el módulo pesaba 69 kg al lanzar y 33,2 kg al aterrizar.",
+    "bgl017": "El viaje empieza: lanzamiento de Mars Express con Beagle 2 el 2 de junio de 2003.",
+    "bgl019": "Beagle 2 se separa y sigue sola hacia Marte, sin motor propio (discutido: 19 o 20 dic).",
+    "bgl023": "Humano y memorable: la señal esperada era una melodía de nueve notas compuesta por Blur.",
+    "bgl020": "Momento clave: Mars Express entra en órbita y Beagle 2 no emite señal.",
+    "bgl027": "Pista visual: Mars Global Surveyor (NASA) halla un cráter de 1 km en el centro de la zona de aterrizaje.",
+    "bgl033": "Desenlace del intento de contacto: el comité declara perdido a Beagle 2 el 6 de febrero de 2004.",
+    "bgl037": "La lección: la comisión concluye que se trató como un instrumento y no como una nave (discutido).",
+    "bgl043": "Ocho años de búsqueda: 26 imágenes de HiRISE sin resultado antes de que alguien volviera a mirar.",
+    "bgl045": "Emoción: muere Colin Pillinger, el líder, ocho meses antes del hallazgo.",
+    "bgl044": "Giro: la primera imagen de HiRISE del lugar ya contenía a Beagle 2 y nadie lo sabía (discutido: cuándo se vio).",
+    "bgl048": "Un héroe inesperado: Michael Croon, exmiembro del equipo de Mars Express, lo detecta con HiWish.",
+    "bgl049": "El hallazgo: Beagle 2 aparece parcialmente desplegado en Isidis Planitia, a ~5 km del objetivo (discutido).",
+    "bgl051": "La respuesta al misterio: aterrizó, pero faltó abrir los paneles que liberan la antena (discutido: cuántos paneles).",
+    "bgl052": "Cierre emotivo: la viuda de Pillinger dice que el equipo casi lo logró, que 'dio en el larguero'.",
+    "bgl003": "El gancho del nombre: Pillinger lo bautizó como el barco de Darwin, el HMS Beagle, porque la misión iba a buscar vida.",
+    "bgl032": "Drama humano: tras tres días de búsqueda intensiva Pillinger admite que no lo encuentran y se prepara la orden 'hail' como último recurso.",
+    "bgl041": "Vínculo con la NASA y pista falsa: la cámara de Mars Global Surveyor cubre el 36 % de la elipse y no lo halla (fuente del propio equipo de la cámara)."
+  },
+  "desviaciones": "Reevaluada tras releer el contenido y las fuentes de cada evento. Cambios: sale bgl006 (conclusión retrospectiva con mes deducido, ya cubierta por bgl037) y entra bgl003 (el nombre); sale bgl024 (un «no pasó nada» de la misma escena que bgl020) y entra bgl032 (el drama de la búsqueda); sale bgl031 (una sola fuente de prensa con fechas y masas contradictorias) y entra bgl041 (búsqueda de Mars Global Surveyor, fuente del propio equipo de la cámara). Descartados además: bgl014 (carta de Damien Hirst; fuente comunitaria), bgl056 (Schiaparelli), bgl058 (artículo de 2017, ya cubierto por bgl049 y bgl051) y bgl025 (Jodrell Bank). 6 de los 20 están marcados como discutidos."
+}

@@ -1,0 +1,263 @@
+[
+ {
+  "fecha_inicio": "2002-12",
+  "fecha_fin": null,
+  "precision_fecha": "mes",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Se fija la entrega de Beagle 2 a Astrium en Toulouse",
+  "detalle": "La ESA anunció que el módulo británico se entregaría al contratista principal, Astrium SAS, en Toulouse, para integrarlo con la nave Mars Express. Después, la nave completa viajaría al cosmódromo de Baikonur. La fecha acordada con el equipo de Beagle fue el 30 de enero de 2003.",
+  "datos_clave": [
+   "Entrega prevista: 30 de enero de 2003",
+   "Lugar: Astrium SAS, Toulouse",
+   "Anuncio en diciembre de 2002"
+  ],
+  "etapa": "Integración y pruebas finales",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "desarrollo",
+  "discutido": true,
+  "nota": "Es la fecha planificada en un anuncio de diciembre de 2002; la fuente no confirma que la entrega ocurriera ese día.",
+  "fuentes": [
+   {
+    "titulo": "Beagle 2 delivery for integration on Mars Express",
+    "editor": "ESA",
+    "url": "https://sci.esa.int/web/mars-express/-/31177-beagle-2-delivery-for-integration-on-mars-express",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2003-03-19",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Mars Express y Beagle 2 salen de Toulouse hacia Baikonur",
+  "detalle": "Tras unos seis meses de pruebas térmicas, ambientales, mecánicas y eléctricas en Toulouse, la nave con Beagle 2 a bordo debía partir en un avión Antonov 124 hacia Kazajistán. Allí se prepararía el lanzamiento previsto para principios de junio.",
+  "datos_clave": [
+   "Salida prevista: 19 de marzo de 2003",
+   "Transporte: Antonov 124",
+   "Unos seis meses de pruebas en Toulouse"
+  ],
+  "etapa": "Pruebas de calificación y envío",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "pruebas",
+  "discutido": false,
+  "nota": "La fuente dice que la salida estaba programada; no se vio una confirmación posterior.",
+  "fuentes": [
+   {
+    "titulo": "Mars Express leaves for Baikonur",
+    "editor": "ESA",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_leaves_for_Baikonur",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2003-06-02",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Despegue de Mars Express con Beagle 2 desde Baikonur",
+  "detalle": "Un cohete ruso Soyuz-Fregat, operado por Starsem, lanzó la sonda a las 17:45 GMT (23:45 hora local). Tras el primer encendido de la etapa Fregat quedó en una órbita terrestre provisional, y 1 h 32 min después del despegue se inyectó hacia Marte. Fue la primera misión europea a otro planeta.",
+  "datos_clave": [
+   "Fecha: 2 de junio de 2003, 17:45 GMT",
+   "Cohete: Soyuz-Fregat (Starsem)",
+   "Inyección interplanetaria: 1 h 32 min tras el despegue",
+   "Masa de la sonda: 1 120 kg"
+  ],
+  "etapa": "Lanzamiento",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "lanzamiento",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Mars Express en route for the Red Planet",
+    "editor": "ESA",
+    "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "The mission (Mars Express)",
+    "editor": "ESA",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2003-06-04",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Maniobra de corrección dos días después del lanzamiento",
+  "detalle": "Dos días tras el despegue, la nave hizo una maniobra para fijar la trayectoria hacia Marte, y la etapa Fregat se alejó a la deriva. El viaje duraría unos seis meses y unos 400 millones de km. Se programó otra corrección a mitad de camino, en septiembre.",
+  "datos_clave": [
+   "Corrección: 2 días tras el lanzamiento",
+   "Viaje: ~6 meses, ~400 millones de km",
+   "Segunda corrección prevista: septiembre de 2003"
+  ],
+  "etapa": "Crucero",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "viaje",
+  "discutido": false,
+  "nota": "La fecha 4 de junio se deduce de dos días después del 2 de junio; la fuente no da el día exacto.",
+  "fuentes": [
+   {
+    "titulo": "Mars Express en route for the Red Planet",
+    "editor": "ESA",
+    "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2003-06",
+  "fecha_fin": null,
+  "precision_fecha": "mes",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Beagle 2 viaja sin motor ni control propio, acoplado a la nave",
+  "detalle": "Beagle 2 iba sujeto a Mars Express mediante un mecanismo de abrazadera y eyección (SUEM, de INSYS) que debía soportar el lanzamiento y luego soltarlo haciéndolo girar como una peonza para estabilizarlo. El módulo no tenía propulsión: su trayectoria dependía de cómo apuntara la nave antes de la separación. Durante el crucero la nave se mantuvo casi desactivada, con un contacto diario con la Tierra.",
+  "datos_clave": [
+   "Cápsula Beagle 2: unos 60 kg",
+   "Masa en superficie: máx. 30 kg",
+   "Crucero: un contacto diario con la Tierra"
+  ],
+  "etapa": "Crucero",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "viaje",
+  "discutido": true,
+  "nota": "Las masas difieren: 60 kg de cápsula según ESA, unas 72 libras (~33 kg) de masa aterrizada según Spaceflight Now, 71 kg según un extracto de búsqueda; no se conciliaron. Fecha aproximada del periodo de crucero.",
+  "fuentes": [
+   {
+    "titulo": "Mars Express en route for the Red Planet",
+    "editor": "ESA",
+    "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Beagle 2 project page (resultado de búsqueda sobre el SUEM)",
+    "editor": "airport-technology.com",
+    "url": "https://www.airport-technology.com/projects/beagle/",
+    "tipo": "prensa",
+    "verificacion": "solo extracto de búsqueda"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2003-12-19",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Mars Express suelta a Beagle 2 rumbo a Marte",
+  "detalle": "A las 08:31 GMT del 19 de diciembre, seis días antes de la llegada, se activó el mecanismo de eyección y Beagle 2 salió girando hacia Marte. Días antes, Mars Express hizo una maniobra de apuntado de precisión para dejarlo en la trayectoria correcta, ya que el módulo no tenía propulsión. Tras unas dos horas sin telemetría, se confirmó que la eyección fue correcta.",
+  "datos_clave": [
+   "Separación: 19 de diciembre de 2003, 08:31 GMT",
+   "Maniobra de apuntado de precisión días antes",
+   "Entrada atmosférica prevista: 25 de diciembre",
+   "Destino: Isidis Planitia"
+  ],
+  "etapa": "Separación",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "hito",
+  "discutido": true,
+  "nota": "El comunicado de ESA de junio de 2003 preveía la separación el 20 de diciembre; las fuentes posteriores dan el 19.",
+  "fuentes": [
+   {
+    "titulo": "Beagle 2 released to hunt for life on Martian surface",
+    "editor": "Spaceflight Now",
+    "url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+    "tipo": "prensa",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Beagle retrospective",
+    "editor": "ESA Mars Express blog",
+    "url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2003-12-25",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Mars Express entra en órbita; Beagle 2 no emite señal",
+  "detalle": "Mars Express se insertó en órbita de Marte el mismo día en que Beagle 2 debía aterrizar. No se recibió señal tras la hora prevista, y los intentos de las semanas siguientes fallaron. A principios de febrero de 2004 se consideró imposible el contacto y se creó una comisión de investigación.",
+  "datos_clave": [
+   "Inserción orbital: 25 de diciembre de 2003",
+   "Relevo previsto vía Mars Odyssey",
+   "Comisión creada en febrero de 2004"
+  ],
+  "etapa": "Llegada a Marte",
+  "fase": "lanzamiento_y_viaje",
+  "categoria": "problema",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Beagle 2 lessons learned and the way forward",
+    "editor": "ESA",
+    "url": "https://www.esa.int/Newsroom/Press_Releases/Beagle_2_lessons_learned_and_the_way_forward",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Beagle 2 lander failure investigation formally begins",
+    "editor": "Spaceflight Now",
+    "url": "https://spaceflightnow.com/mars/marsexpress/040211board.html",
+    "tipo": "prensa",
+    "verificacion": "solo extracto de búsqueda"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2004-04-21",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "La comisión entrega su informe: 19 recomendaciones, sin causa técnica única",
+  "detalle": "La comisión conjunta ESA/BNSC entregó el informe el 21 de abril de 2004. No identificó un único fallo técnico, pero citó causas posibles y factores de organización, y presión de presupuesto, masa y calendario. Entre sus recomendaciones: pruebas de choque a nivel de sistema, pruebas de despliegue realistas y más experiencia en paracaídas y airbags.",
+  "datos_clave": [
+   "Informe entregado: 21 de abril de 2004",
+   "19 recomendaciones aceptadas",
+   "Rueda de prensa: 24 de mayo de 2004"
+  ],
+  "etapa": "Investigación del fallo",
+  "fase": "legado",
+  "categoria": "hito",
+  "discutido": true,
+  "nota": "Tensión (b): ESA dijo que el informe completo seguiría confidencial y solo se publicarían recomendaciones y lecciones; un extracto de búsqueda sugiere publicación completa en 2005, sin verificar. Spaceflight Now no da la fecha de entrega.",
+  "fuentes": [
+   {
+    "titulo": "Beagle 2 lessons learned and the way forward",
+    "editor": "ESA",
+    "url": "https://www.esa.int/Newsroom/Press_Releases/Beagle_2_lessons_learned_and_the_way_forward",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Beagle 2 board of inquiry report",
+    "editor": "Spaceflight Now",
+    "url": "https://spaceflightnow.com/news/n0405/24beagle2report/",
+    "tipo": "prensa",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ }
+]

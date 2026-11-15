@@ -1,0 +1,171 @@
+[
+ {
+  "fecha_inicio": "2003-12-29",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Mars Global Surveyor halla un cráter de 1 km en el centro de la zona de aterrizaje",
+  "detalle": "Imágenes de la cámara de Mars Global Surveyor, tomadas unos 20 minutos después de la hora prevista de llegada, mostraron un cráter con manto de eyecciones cerca del centro de la elipse. Pillinger lo comparó con el Meteor Crater de Arizona, y la posibilidad de que Beagle 2 hubiera caído allí se barajó desde el principio.",
+  "datos_clave": [
+   "Cráter de unos 1 km de diámetro",
+   "Elipse de aterrizaje de unos 70 km por 10 km",
+   "Hora prevista de llegada: 02:54 GMT del 25-dic-2003"
+  ],
+  "etapa": "La búsqueda tras el silencio",
+  "fase": "aterrizaje",
+  "categoria": "problema",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Scientists find obstacle at heart of Beagle landing zone",
+    "editor": "Spaceflight Now",
+    "url": "https://www.spaceflightnow.com/mars/marsexpress/031229crater.html",
+    "tipo": "prensa",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2004-01-07",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Dos aterrizajes, dos destinos: el júbilo de Spirit frente al silencio de Beagle 2",
+  "detalle": "Una semana después de la pérdida de contacto, la prensa científica contrapuso la celebración del equipo de la NASA por el rover Spirit con la espera sin noticias de Beagle 2. Los intentos vía Mars Express, Mars Odyssey y Mars Global Surveyor no obtuvieron respuesta, y se sospechó que una roca pudo estorbar el despliegue.",
+  "datos_clave": [
+   "Spirit: 174 kg, en el cráter Gusev",
+   "Beagle 2: 33 kg según Science News, con cuatro paneles solares",
+   "23 de 34 sondas enviadas antes a Marte habían fallado",
+   "Opportunity debía llegar el 24-ene-2004"
+  ],
+  "etapa": "Contraste con los rovers de la NASA",
+  "fase": "aterrizaje",
+  "categoria": "hito",
+  "discutido": true,
+  "nota": "Las fuentes discrepan en fechas: Science News da el aterrizaje de Beagle 2 el 24-dic-2003 y el de Spirit el 3-ene-2004; otras fuentes dan el 25-dic y el 4-ene. Además la masa de 33 kg difiere de la de otras fuentes de la base; verificar.",
+  "fuentes": [
+   {
+    "titulo": "A Tale of Two Landers: NASA's Spirit phones home, but Europe's Beagle 2 remains mum on Mars",
+    "editor": "Science News",
+    "url": "https://sciencenews.org/?p=36222",
+    "tipo": "prensa",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2004-03-30",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Mars Express detecta metano en la atmósfera de Marte",
+  "detalle": "El espectrómetro PFS de la propia Mars Express, la nave que llevó a Beagle 2, midió metano en la atmósfera marciana. La ESA presentó una concentración media de unas 10 partes por mil millones y avisó de que eran medidas preliminares. Su origen podía ser geológico o biológico, justo el tipo de pregunta para la que se diseñó Beagle 2.",
+  "datos_clave": [
+   "Aprox. 10 ppbv de metano",
+   "Instrumento: Planetary Fourier Spectrometer (PFS)",
+   "Artículo en Science (Formisano et al., 2004)"
+  ],
+  "etapa": "Ciencia que quedó sin su módulo",
+  "fase": "operaciones",
+  "categoria": "ciencia",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Mars Express confirms methane in the Martian atmosphere",
+    "editor": "ESA",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_confirms_methane_in_the_Martian_atmosphere",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2004-06-18",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Pillinger pide financiar un segundo módulo, Beagle 3",
+  "detalle": "Colin Pillinger pidió al gobierno británico y a la ESA fondos para una nueva sonda que sustituyera a Beagle 2. Esperaba que el aumento de la inversión científica anunciado por el ministro de Hacienda lo cubriera. Un lanzamiento en 2007 era posible, pero él consideraba más realista 2009, por las ventanas de lanzamiento cada unos 26 meses.",
+  "datos_clave": [
+   "Un sondeo MORI para Demos: 66 % quería que Reino Unido lo intentara de nuevo",
+   "Lanzamiento realista: 2009 (2007 posible)",
+   "Ventanas a Marte cada unos 26 meses"
+  ],
+  "etapa": "Propuestas posteriores del equipo",
+  "fase": "legado",
+  "categoria": "legado",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Pillinger launches plea for Beagle 3",
+    "editor": "Times Higher Education",
+    "url": "https://www.timeshighereducation.com/node/52089",
+    "tipo": "prensa",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2004-08-26",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "El informe interno repasa los posibles modos de fallo: atmósfera fina, escudo térmico y electrónica",
+  "detalle": "Un resumen del informe señaló que no se podía identificar una causa única por falta de datos y asignó probabilidades a varios modos de fallo. Entre ellos, una densidad atmosférica inusualmente baja medida por Mars Express y los rovers, que habría impedido un aterrizaje correcto, y la rotura del escudo térmico, que no se podía descartar. También se citaron fallos de electrónica, de antena o de despliegue.",
+  "datos_clave": [
+   "Densidad anómala a 20-40 km de altitud a principios de enero",
+   "Separación de Mars Express el 19-dic-2003 con velocidad y giro correctos",
+   "Pruebas de airbags limitadas por falta de instalaciones en Europa"
+  ],
+  "etapa": "Investigación de modos de fallo",
+  "fase": "fin_de_mision",
+  "categoria": "problema",
+  "discutido": false,
+  "nota": "La fuente no da los niveles de probabilidad; no se citan.",
+  "fuentes": [
+   {
+    "titulo": "Report examines possible reasons for Beagle 2 disappearance",
+    "editor": "CORDIS (Comisión Europea)",
+    "url": "https://cordis.europa.eu/article/id/22527-report-examines-possible-reasons-for-beagle-2-disappearance",
+    "tipo": "prensa",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2004-08-31",
+  "fecha_fin": null,
+  "precision_fecha": "día",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "La cámara MOC de Mars Global Surveyor cubre el 36 % de la elipse y no halla el módulo",
+  "detalle": "De enero a abril de 2004 la cámara de Mars Global Surveyor buscó a Beagle 2 con imágenes de 1,5 m por píxel, sobre todo en la mitad este de la elipse. Un punto oscuro, único candidato razonable, resultó a mayor resolución un pequeño cráter erosionado con arena oscura. No hubo evidencia concluyente del módulo.",
+  "datos_clave": [
+   "Cubierto el 36 % de la elipse y el 72 % de su mitad este",
+   "Imagen del candidato a 0,5 m por píxel en un eje",
+   "Candidato en 11,7° N, 269,4° O"
+  ],
+  "etapa": "Búsqueda orbital antes de HiRISE",
+  "fase": "fin_de_mision",
+  "categoria": "ciencia",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Mars Global Surveyor MOC images, 31 August 2004",
+    "editor": "Malin Space Science Systems",
+    "url": "https://asimov.msss.com/mars_images/moc/2004/08/31/",
+    "tipo": "científica",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ }
+]

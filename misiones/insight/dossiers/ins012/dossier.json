@@ -1,0 +1,173 @@
+{
+  "evento_id": "ins012",
+  "titulo": "Lanzamiento desde Vandenberg: primer viaje interplanetario desde la costa oeste (5 mayo 2018)",
+  "contexto_ampliado": "El 5 de mayo de 2018, a las 4:05 de la madrugada hora del Pacífico (7:05 a.m. hora del Este, 11:05 UTC), el cohete Atlas V 401 de United Launch Alliance despegó del Complejo de Lanzamiento Espacial 3 (SLC-3) de la Base de la Fuerza Aérea de Vandenberg, en California. Con ese vuelo, la NASA hizo historia: por primera vez, una misión con destino a otro planeta partía desde la costa oeste de los Estados Unidos.\n\nHasta ese momento, todos los lanzamientos interplanetarios de la NASA habían salido desde la costa atlántica de Florida, ya fuera desde Cabo Cañaveral o desde el Centro Espacial Kennedy. Lanzar desde la costa oeste requiere más energía, porque no se aprovecha del mismo modo la rotación de la Tierra hacia el este. Sin embargo, esto fue posible gracias al rendimiento del Atlas V y a un diseño de trayectoria optimizado para conseguir la inyección hiperbólica exacta que llevaría la nave hasta Marte.\n\nEl Atlas V 401 medía 57,3 metros de altura y producía 860 200 libras de empuje (unos 3,8 millones de newtons) al despegar. La designación \"401\" describe su configuración: una cofia de carga útil de aproximadamente 4 metros de diámetro, cero cohetes auxiliares de combustible sólido y un solo motor en la etapa superior Centaur. Se trató del 78.º lanzamiento de un Atlas V en la historia, el décimo lanzamiento a Marte de un cohete de la familia Atlas y el cuarto en la variante Atlas V, después de las misiones Mars Reconnaissance Orbiter (2005), Curiosity (2011) y MAVEN (2013).\n\nA bordo viajaban dos proyectos distintos. InSight era el aterrizador principal de la misión. Junto a él iban los dos pequeños CubeSats MarCO (Mars Cube One), diseñados y construidos por el Laboratorio de Propulsión a Chorro (JPL), que se convirtieron en los primeros CubeSats en viajar al espacio interplanetario. Los MarCO viajaron en dispensadores montados en el bulkhead trasero de la etapa Centaur del Atlas V.\n\nTras el despegue, el cohete siguió una trayectoria hacia el sur, sobrevolando las islas del Canal (Channel Islands) frente a la costa californiana y el océano Pacífico, en lugar de dirigirse hacia el este como se hace desde Florida. La primera quema del Centaur colocó la nave en una órbita de parqueo casi circular a 185 kilómetros de altitud, antes de la segunda quema que enviaría al conjunto rumbo a Marte.\n\nLa ventana de lanzamiento se extendía del 5 de mayo al 8 de junio de 2018, con oportunidades diarias de aproximadamente dos horas. Al despegar el primer día disponible, el viaje a Marte tomaría 205 días; si se hubiera lanzado el último día (8 de junio), el viaje habría sido más corto —171 días—, ya que la fecha de llegada era fija: el 26 de noviembre de 2018. Esto se debe a que InSight siguió una trayectoria de Tipo 1, es decir, la nave recorrió menos de media vuelta alrededor del Sol antes de encontrarse con Marte en su órbita.\n\nFinalmente, InSight aterrizó en Marte el 26 de noviembre de 2018, en la región de Elysium Planitia, exactamente 205 días después de aquel histórico despegue desde la costa californiana.",
+  "datos_reales": [
+    {
+      "afirmacion": "InSight despegó a las 4:05 a.m. PDT (7:05 a.m. EDT, 11:05 UTC) desde el Complejo de Lanzamiento Espacial 3 (SLC-3) de Vandenberg a bordo de un cohete Atlas V de ULA.",
+      "fuente_url": "https://science.nasa.gov/resource/nasa-launches-insight-to-mars-part-1-may-5-2018/",
+      "cita": "InSight, the first planetary mission to take off from the West Coast, lifted off at 4:05 a.m. PDT (7:05 a.m. EDT, 1105 UTC) from Space Launch Complex-3 at Vandenberg Air Force Base in California aboard a United Launch Alliance (ULA) Atlas V rocket.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight fue la primera misión lanzada hacia otro planeta desde la costa oeste de los Estados Unidos.",
+      "fuente_url": "https://www.ulalaunch.com/about/news/2018/05/05/united-launch-alliance-successfully-launches-west-coast-s-first-interplanetary-mission-for-nasa",
+      "cita": "InSight is the first mission launched to another planet from the West Coast, which requires more energy than an East Coast launch that takes advantage of the Earth's rotation.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Todos los lanzamientos interplanetarios anteriores de la NASA habían partido desde la costa atlántica de Florida (Cabo Cañaveral o Kennedy Space Center).",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/launch/mission/",
+      "cita": "All previous NASA interplanetary missions have launched from Florida's Atlantic coast, at either Cape Canaveral Air Force Station or the adjacent NASA Kennedy Space Center.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El lanzamiento desde la costa oeste fue posible gracias al rendimiento del Atlas V y un diseño de trayectoria optimizado para la inyección hiperbólica requerida.",
+      "fuente_url": "https://www.ulalaunch.com/about/news/2018/05/05/united-launch-alliance-successfully-launches-west-coast-s-first-interplanetary-mission-for-nasa",
+      "cita": "The West Coast Mars launch was made possible by the performance of the Atlas V and an optimized trajectory design to achieve the very exact hyperbolic injection required to deliver the spacecraft to Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Este fue el 78.º lanzamiento del cohete Atlas V.",
+      "fuente_url": "https://www.ulalaunch.com/about/news/2018/05/05/united-launch-alliance-successfully-launches-west-coast-s-first-interplanetary-mission-for-nasa",
+      "cita": "This is the 78th launch of the Atlas V rocket, ULA's fifth launch in 2018 and the 128th successful launch since the company was formed in December 2006.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Fue el décimo lanzamiento a Marte en un cohete Atlas y el cuarto en la variante Atlas V.",
+      "fuente_url": "https://www.ulalaunch.com/about/news/2018/05/05/united-launch-alliance-successfully-launches-west-coast-s-first-interplanetary-mission-for-nasa",
+      "cita": "This was the 10th Mars launch on an Atlas rocket, and the fourth by the Atlas V following the Mars Reconnaissance Orbiter in 2005, the Curiosity rover in 2011 and the MAVEN orbiter in 2013.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La designación '401' del Atlas V indica: cofia de 4 metros de diámetro, cero cohetes sólidos de apoyo y un motor en la etapa superior.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/launch/mission/",
+      "cita": "The three numbers in the 401 designation signify a payload fairing -- or nose cone -- that is about 13 feet (4 meters) in diameter; zero solid-rocket boosters supplementing the main booster, and one engine on the upper stage.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Atlas V 401 medía 57,3 metros (189 pies) de alto y producía 860 200 libras de empuje (3,8 millones de newtons).",
+      "fuente_url": "https://www.jpl.nasa.gov/news/bound-for-mars-countdown-to-first-interplanetary-launch-from-california/",
+      "cita": "On board the 189-foot-tall (57.3-meter) United Launch Alliance Atlas V rocket will be NASA's InSight spacecraft [...] The United Launch Alliance two-stage Atlas V 401 launch vehicle will produce 860,200 pounds (3.8 million newtons) of thrust as it climbs away from its launch pad.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La ventana de lanzamiento se extendía del 5 de mayo al 8 de junio de 2018, con oportunidades diarias de aproximadamente dos horas.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/launch/mission/",
+      "cita": "InSight's launch period is May 5 through June 8, 2018, with multiple launch opportunities over windows of approximately two hours each date.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Si el lanzamiento se producía el 5 de mayo, el viaje a Marte duraría 205 días; si se producía el 8 de junio (último día), duraría 171 días, con llegada fija el 26 de noviembre de 2018.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/launch/mission/",
+      "cita": "If launch is at the start of the launch period, May 5, the trip to Mars will take 205 days. If launch is at the end of the launch period, June 8, the trip will take 171 days. The use of a constant arrival date -- Nov. 26, 2018 -- for any launch date helped simplify operations planning.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los CubeSats MarCO (Mars Cube One), diseñados y construidos por JPL, fueron los primeros CubeSats en viajar al espacio interplanetario.",
+      "fuente_url": "https://www.ulalaunch.com/about/news/2018/05/05/united-launch-alliance-successfully-launches-west-coast-s-first-interplanetary-mission-for-nasa",
+      "cita": "The Mars Cube One (MarCO) CubeSats, designed and built by the Jet Propulsion Laboratory, are the first to travel interplanetary.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los CubeSats MarCO viajaron en dispensadores montados en el bulkhead trasero del Centaur (segunda etapa del Atlas V).",
+      "fuente_url": "https://www.ulalaunch.com/about/news/2018/05/05/united-launch-alliance-successfully-launches-west-coast-s-first-interplanetary-mission-for-nasa",
+      "cita": "the mission included two CubeSats which launched from dispensers mounted on the aft bulkhead carrier on the Atlas V Centaur second stage.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cohete siguió una trayectoria hacia el sur (no al este) desde Vandenberg, sobrevolando el océano Pacífico.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/bound-for-mars-countdown-to-first-interplanetary-launch-from-california/",
+      "cita": "After lift-off from Vandenberg's Space Launch Complex 3, the Atlas V begins a southerly trajectory and climbs out over the Channel Islands off Oxnard.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La órbita de parqueo del Centaur fue casi circular a 185 km (115 millas) de altitud.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/launch/mission/",
+      "cita": "The shape of the parking orbit is nearly circular at an altitude of 115 miles (185 kilometers).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La trayectoria de InSight a Marte fue de Tipo 1, lo que significa que la nave viajó menos de media vuelta alrededor del Sol.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/insight/launch/mission/",
+      "cita": "InSight's mission design uses what is called a Type 1 trajectory to Mars, meaning the spacecraft will fly less than halfway around the Sun while in transit from one planet to the other.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight aterrizó en Marte el 26 de noviembre de 2018 en Elysium Planitia.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Launched: May 5, 2018 (4:05 a.m. PT/7:05 a.m. ET) [...] Landed: Nov. 26, 2018, at 11:52:59 a.m. PT (2:52:59 p.m. ET) [...] Landing Site: Elysium Planitia, Mars",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "InSight – página de la misión (semilla)",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Bound for Mars: Countdown to First Interplanetary Launch from California",
+      "url": "https://www.jpl.nasa.gov/news/bound-for-mars-countdown-to-first-interplanetary-launch-from-california/",
+      "editor": "JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA Launches InSight to Mars (Part 1) – May 5, 2018",
+      "url": "https://science.nasa.gov/resource/nasa-launches-insight-to-mars-part-1-may-5-2018/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "InSight Launch Press Kit – Mission Overview",
+      "url": "https://www.jpl.nasa.gov/news/press_kits/insight/launch/mission/",
+      "editor": "JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "United Launch Alliance Successfully Launches West Coast's First Interplanetary Mission for NASA",
+      "url": "https://www.ulalaunch.com/about/news/2018/05/05/united-launch-alliance-successfully-launches-west-coast-s-first-interplanetary-mission-for-nasa",
+      "editor": "United Launch Alliance (ULA)",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Tiempo hasta la separación de InSight del cohete: la nota de lanzamiento en jpl.nasa.gov/news/bound-for-mars indica 'Spacecraft separation from the Centaur will occur about 93 minutes after liftoff', mientras que el press kit oficial en jpl.nasa.gov/news/press_kits/insight/launch/mission/ indica 'Spacecraft separation will occur about 90 minutes after liftoff for the first May 5 launch opportunity'. Ambas fuentes son de JPL y se refieren al mismo escenario (primer intento del 5 de mayo). Diferencia: 90 vs. 93 minutos.",
+    "El dato [14] afirma que 'el lanzamiento fue visible' desde Bakersfield hasta Rosarito, pero la cita original del press kit de JPL (jpl.nasa.gov/news/press_kits/insight/launch/mission/) dice 'could be visible' (condicional, predicción previa al lanzamiento). Además, el evento original indica que el despegue ocurrió 'envuelto en niebla', lo que contradice la idea de que fue efectivamente visible a gran distancia. Se descarta el dato [14] por esta doble inconsistencia."
+  ],
+  "huecos": [
+    "Niebla al momento del despegue: el evento la menciona como característica del lanzamiento, pero ninguna de las fuentes oficiales leídas la confirma.",
+    "Distancia total de viaje de ~480 millones de km: citada en el evento pero no encontrada con ese valor en las fuentes leídas (JPL indica la duración en días pero no la distancia en kilómetros).",
+    "Masa total del conjunto (694 kg según Spaceflight101) y masa del lander (358 kg según JPL): ninguno de estos valores fue confirmado en las páginas del press kit de JPL leídas.",
+    "Segundo exacto del despegue dentro del minuto 4:05 a.m.: las fuentes oficiales solo confirman el minuto, no el segundo preciso.",
+    "Número de serie o misión interna del vuelo (p. ej., 'AV-078' como designación ULA): no encontrado en las páginas leídas.",
+    "El evento original menciona que InSight era un lander destinado a 'medir el interior profundo de Marte, el primero en intentarlo', pero ninguna de las fuentes citadas en el borrador respalda explícitamente esta descripción de los objetivos científicos.",
+    "El tamaño de los CubeSats MarCO ('del tamaño de un maletín') se menciona en el relato del borrador pero no aparece en ninguno de los datos respaldados por citas."
+  ],
+  "ideas_visuales": [
+    "El cohete Atlas V 401 (57,3 m de altura) en la plataforma de lanzamiento del SLC-3 de Vandenberg, en la costa californiana, momentos antes del despegue en la oscuridad previa al amanecer.",
+    "Trayectoria hacia el sur del Atlas V sobre el océano Pacífico, con las islas del Canal (Channel Islands) visibles abajo y la costa de California al fondo.",
+    "Diagrama de la configuración '401' del Atlas V: cofia de 4 metros, cuerpo principal sin cohetes sólidos auxiliares y etapa Centaur con un solo motor.",
+    "Esquema de la órbita de parqueo circular a 185 km de altitud, mostrando la primera y segunda quema del Centaur.",
+    "Comparación visual de las trayectorias: lanzamientos habituales hacia el este desde Florida vs. la trayectoria hacia el sur desde Vandenberg sobre el Pacífico.",
+    "Línea de tiempo del viaje: 205 días desde el 5 de mayo hasta el aterrizaje en Elysium Planitia el 26 de noviembre de 2018, con la trayectoria de Tipo 1 alrededor del Sol."
+  ],
+  "datos_no_verificados": []
+}

@@ -1,0 +1,131 @@
+{
+  "evento_id": "bgl033",
+  "titulo": "El comité de gestión declara perdido a Beagle 2 (6 de febrero de 2004)",
+  "contexto_ampliado": "El Beagle 2 fue un módulo de aterrizaje de fabricación británica que formaba parte de la misión Mars Express de la Agencia Espacial Europea (ESA). El proyecto estuvo liderado por la Open University como responsable científica y por EADS-Astrium como contratista principal del diseño, desarrollo y gestión del módulo. La sonda estaba diseñada para buscar signos de vida en Marte: debía posarse en la superficie, recoger muestras de suelo y analizarlas en busca de señales de actividad biológica pasada y presente. Fue lanzada con un presupuesto muy ajustado y un tamaño reducido para una misión tan ambiciosa.\n\nEl aterrizaje estaba previsto para el 25 de diciembre de 2003, día de Navidad. Ese mismo día, la nave nodriza Mars Express entró exitosamente en órbita marciana. Sin embargo, el Beagle 2 no estableció ninguna comunicación desde que se perdió el primer contacto de radio, poco después del momento en que debía aterrizar. Las semanas pasaron y el silencio fue absoluto.\n\nEl viernes 6 de febrero de 2004, el Beagle 2 Management Board (comité de gestión de la misión) se reunió en Londres. Tras evaluar la situación, el comité declaró formalmente perdida la sonda. Había transcurrido más de un mes desde la fecha de aterrizaje prevista sin que se recibiera señal alguna.\n\nDías después, el Ministro de Ciencia del Reino Unido, Lord Sainsbury, y la ESA anunciaron conjuntamente la apertura de una investigación sobre el fracaso del Beagle 2. La junta investigadora sería presidida por el Inspector General de la ESA, René Bonnefoy, con David Link MBE como vicepresidente por parte del Reino Unido. Se esperaba que el grupo comenzara a trabajar de inmediato y presentara su informe antes de finales de marzo de 2004.\n\nParalelamente, el equipo de ingenieros del Beagle 2 puso en marcha su propia investigación interna para identificar las áreas de mayor riesgo técnico y estudiar qué podría hacerse para mitigarlas en futuras misiones.\n\nMientras tanto, Mars Express seguía operando con excelentes resultados desde la órbita marciana. El 23 de enero de 2004 se habían publicado imágenes tridimensionales de alta resolución de la superficie de Marte, y se había detectado hielo de agua en el polo sur del planeta.\n\nEl misterio sobre el destino del Beagle 2 se prolongó durante más de una década. Finalmente, imágenes de la cámara HiRISE del Mars Reconnaissance Orbiter de la NASA localizaron los restos del módulo muy cerca del centro de su zona de aterrizaje prevista. En distintas imágenes se observaron destellos procedentes de diferentes partes del módulo, lo que fue interpretado como evidencia de que más de un panel solar se había desplegado. Esto sugería que la sonda sí había llegado a Marte, pero que algo le impidió completar la apertura y establecer comunicación.",
+  "datos_reales": [
+    {
+      "afirmacion": "El Beagle 2 Management Board se reunió en Londres el viernes 6 de febrero de 2004 y declaró formalmente perdida la sonda.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "cita": "The Beagle 2 Management Board met in London on Friday 6 February and, following an assessment of the situation, declared Beagle 2 lost.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Beagle 2 no estableció ninguna comunicación desde que se perdió el primer contacto de radio después de que debía aterrizar en Marte el día de Navidad.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "cita": "Beagle 2, the British-built element of ESA's Mars Express mission, has failed to communicate since its first radio contact was missed shortly after it was due to land on Mars on Christmas Day.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El aterrizaje del Beagle 2 estaba previsto para el 25 de diciembre de 2003.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "Beagle 2 was released by the European Space Agency's Mars Express orbiter but never heard from after its expected Dec. 25, 2003, landing.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Ministro de Ciencia del Reino Unido, Lord Sainsbury, y la ESA anunciaron conjuntamente la apertura de una investigación sobre el fracaso del Beagle 2.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "cita": "Today, the UK Science Minister Lord Sainsbury and the European Space Agency (ESA) announced that an ESA/UK inquiry would be held into the failure the Beagle 2 lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La junta de investigación sería presidida por el Inspector General de la ESA, René Bonnefoy, y el vicepresidente del Reino Unido sería David Link MBE.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "cita": "The Inquiry Board is to be chaired by the ESA Inspector General, René Bonnefoy. The UK deputy chairman will be David Link MBE.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se esperaba que la junta investigadora presentara su informe antes de finales de marzo de 2004.",
+      "fuente_url": "https://spaceflightnow.com/mars/marsexpress/040211board.html",
+      "cita": "The group is expected to begin work shortly and report by the end of March.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Beagle 2 fue lanzado con un presupuesto muy ajustado y era de tamaño reducido.",
+      "fuente_url": "https://spaceflightnow.com/mars/marsexpress/040211board.html",
+      "cita": "Launched on a shoestring budget, its size tightly confined, the British Beagle 2 lander headed to Mars for a highly-ambitious mission to look for evidence of life.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo de ingenieros del Beagle 2 puso en marcha su propia investigación interna para identificar las áreas de mayor riesgo técnico.",
+      "fuente_url": "https://spaceflightnow.com/mars/marsexpress/040211board.html",
+      "cita": "The project team has begun an in-house investigation into all the technical aspects of Beagle 2 to establish those areas of greatest risk and what might be done to alleviate them in a future mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El proyecto Beagle 2 estuvo liderado por la Open University como responsable científica y por EADS-Astrium como contratista principal.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "cita": "The Beagle 2 project to make a lander element of the ESA Mars Express mission was headed by the Open University, providing the science lead, and EADS-Astrium, the prime contractor responsible for the main design, development and management of the lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Beagle 2 estaba diseñado para buscar signos de vida en Marte, recogiendo muestras de suelo para analizar posible actividad biológica pasada y presente.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "cita": "Beagle 2 was designed to look for signs of life on Mars. It was to parachute down to the surface of the planet and collect soil samples, which would have been analysed for signs of past and present biological activity.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Express, la nave nodriza, entró exitosamente en órbita marciana el día de Navidad y el 23 de enero de 2004 publicó imágenes 3D de la superficie y detectó hielo de agua en el polo sur.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "cita": "The ESA Mars Express spacecraft, the mother ship, successfully entered orbit around Mars on Christmas Day and, following a series of orbital manoeuvres, has been performing excellently as it starts its two-year global survey of the planet. Among first results announced on 23 January were unprecedented 3-D high-resolution images of the surface and the detection of water ice on the South Pole.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las imágenes de HiRISE mostraron destellos en distintas partes del Beagle 2, interpretados como evidencia de más de un panel solar desplegado.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "A glint comes from a different part of the lander in one than in the other, interpreted as evidence of more than one deployed panel on the lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "UK and ESA announce Beagle 2 inquiry",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/UK_and_ESA_announce_Beagle_2_inquiry",
+      "editor": "ESA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle 2 lander failure investigation formally begins",
+      "url": "https://spaceflightnow.com/mars/marsexpress/040211board.html",
+      "editor": "Spaceflight Now",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Beagle 2 Lander on Mars, With Panels Deployed",
+      "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "El dato [11] afirma que las imágenes de HiRISE se obtuvieron 'en enero de 2015' y que los paneles estaban 'al menos parcialmente desplegados', pero su cita textual (https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/) solo dice que localizaron el módulo cerca del centro de su zona de aterrizaje, sin mencionar la fecha ni los paneles; esa información excede lo que la cita respalda."
+  ],
+  "huecos": [
+    "No se pudo confirmar la causa técnica exacta del fallo del Beagle 2: las fuentes consultadas indican que la investigación debía determinarla, pero no recogen su conclusión final.",
+    "No se documentó en las fuentes leídas el número exacto ni el detalle de los intentos de contacto realizados entre el 25 de diciembre de 2003 y el 6 de febrero de 2004.",
+    "No se pudo confirmar si el informe de la junta investigadora se publicó efectivamente antes de finales de marzo de 2004, como se esperaba.",
+    "No se dispone de información verificada sobre el presupuesto total de la misión Beagle 2 ni sobre las cifras concretas de financiación de cada socio.",
+    "El borrador original menciona la fecha exacta del anuncio público (11 de febrero de 2004, miércoles) y una cita textual de Lord Sainsbury sobre 'usar la experiencia obtenida del Beagle 2 en beneficio de futuras misiones europeas', pero ninguna cita del dossier respalda esa fecha concreta ni esa declaración entrecomillada.",
+    "El borrador describe dos ejes de la investigación (técnico y programático) con detalle sobre financiación de múltiples instituciones (DTI, PPARC, Centro Nacional de Ciencias del Espacio, Fundación Wellcome), pero ninguna cita del dossier respalda esos detalles.",
+    "No se confirma en las fuentes la fecha exacta (enero de 2015) del hallazgo del Beagle 2 por HiRISE, ya que la cita de [11] no la incluye."
+  ],
+  "ideas_visuales": [
+    "El comité de gestión reunido en Londres el 6 de febrero de 2004, con un comunicado oficial declarando perdido al Beagle 2.",
+    "Representación del Beagle 2 separándose de la nave Mars Express rumbo a la superficie de Marte, el día de Navidad de 2003.",
+    "Imagen tridimensional de la superficie marciana tomada por Mars Express, con detalle del hielo de agua en el polo sur (23 de enero de 2004).",
+    "Vista simulada de la cámara HiRISE mostrando los restos del Beagle 2 en la superficie de Marte, con destellos en distintos paneles solares.",
+    "Diagrama del Beagle 2 con sus paneles solares parcialmente desplegados, ilustrando por qué no pudo comunicarse."
+  ],
+  "datos_no_verificados": []
+}

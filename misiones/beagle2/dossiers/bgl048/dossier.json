@@ -1,0 +1,146 @@
+{
+  "evento_id": "bgl048",
+  "titulo": "Michael Croon detecta el candidato Beagle 2 vía HiWish (enero 2015)",
+  "contexto_ampliado": "El 25 de diciembre de 2003, el pequeño módulo de aterrizaje Beagle 2 tocó la superficie de Marte, pero nunca envió señal alguna. Durante más de once años, nadie supo qué le había ocurrido. Para intentar localizarlo, se contaba con la cámara HiRISE, montada en el orbitador Mars Reconnaissance Orbiter (MRO) de la NASA, capaz de fotografiar la superficie marciana con una escala de unos 0,3 metros por píxel. Sin embargo, el Beagle 2 desplegado medía menos de pocos metros de diámetro, lo que hacía de su búsqueda una tarea extremadamente difícil dentro de una zona de aterrizaje planificada de aproximadamente 170 × 100 kilómetros en Isidis Planitia.\n\nEl programa HiWish, gestionado por el equipo de HiRISE en la Universidad de Arizona, permite que cualquier persona sugiera objetivos de observación para la cámara. Fue precisamente a través de este canal público como Michael Croon, residente en Trier, Alemania, y antiguo miembro del equipo de operaciones de Mars Express de la ESA en el Centro Europeo de Operaciones Espaciales (ESOC), envió una solicitud para que HiRISE fotografiara la zona de aterrizaje del Beagle 2.\n\nLa detección inicial se basó en imágenes de HiRISE tomadas el 28 de febrero de 2013 y el 29 de junio de 2014 (ESP_030908_1915 y ESP_037145_1915, respectivamente). Croon fue el primero en examinar esas imágenes y encontró algo prometedor. En palabras de Alfred McEwen, investigador principal de la misión HiRISE y profesor en el Lunar and Planetary Lab de la Universidad de Arizona: encontró un buen candidato en el borde del encuadre, pero el contraste era bajo en la primera imagen y resultaba difícil convencerse de que hubiera algo especial. Posteriormente se adquirió una imagen adicional, la ESP_039308_1915, tomada el 15 de diciembre de 2014, con una escala de 25 cm/píxel, centrada en latitud 11,517° N y longitud 90,437° E. Además, un composite elaborado por NASA/JPL combinó las imágenes de febrero de 2013 y junio de 2014 para mostrar el Beagle 2 con paneles al menos parcialmente desplegados.\n\nEl hallazgo fue anunciado públicamente en enero de 2015. Existe una ligera discrepancia en la fecha exacta: la fuente de la Universidad de Arizona (vía ScienceDaily) indica el 16 de enero de 2015, mientras que la página oficial de la ESA registra el 15 de enero de 2015. En cualquier caso, la conclusión fue contundente: la secuencia de entrada, descenso y aterrizaje (EDL) del Beagle 2 había funcionado correctamente y el lander sí alcanzó la superficie de Marte el día de Navidad de 2003.\n\nEl misterio de la ausencia total de comunicación también encontró explicación. El despliegue completo de todos los paneles solares era necesario para exponer la antena de radiofrecuencia, que habría permitido transmitir datos y recibir órdenes desde la Tierra a través de sondas en órbita marciana. Al no desplegarse por completo, la antena quedó bloqueada y el Beagle 2 permaneció en silencio.\n\nEl caso de Michael Croon ilustra cómo la combinación de experiencia profesional y una herramienta de participación ciudadana como HiWish puede producir resultados científicos de primer orden. Un exmiembro de operaciones de misión, utilizando un programa público accesible por internet, señaló el lugar donde un módulo de aterrizaje llevaba más de once años perdido en la superficie de otro planeta.",
+  "datos_reales": [
+    {
+      "afirmacion": "Michael Croon es de Trier, Alemania, y era antiguo miembro del equipo de operaciones de Mars Express de la ESA en el Centro Europeo de Operaciones Espaciales (ESOC).",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "Images taken by the HiRISE camera on NASA's Mars Reconnaissance Orbiter, or MRO, and initially searched by Michael Croon of Trier, Germany, a former member of the European Space Agency's Mars Express operations team at the European Space Operations Centre",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Croon envió una solicitud a través del programa HiWish, que permite a cualquier persona sugerir objetivos de observación para HiRISE.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "Croon had submitted a request through the HiWISH program, which allows anyone to submit suggestions for HiRISE imaging targets.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Croon encontró un candidato en el borde del encuadre de la imagen; el contraste era bajo en la primera imagen y era difícil distinguir si había algo especial.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "\"He found something that would be a good candidate at the edge of the frame,\" McEwen said. \"But contrast was low in the first image, and it was difficult to convince yourself something special was there.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La detección inicial provino de imágenes de HiRISE tomadas el 28 de febrero de 2013 y el 29 de junio de 2014.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "The initial detection came from HiRISE images taken on Feb. 28, 2013, and June 29, 2014 (Images ESP_037145_1915 and ESP_030908_1915).",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El hallazgo fue anunciado el 16 de enero de 2015, según la fuente de la Universidad de Arizona.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "Date: January 16, 2015 / Source: University of Arizona",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La zona de aterrizaje planificada para el Beagle 2 era de aproximadamente 170 × 100 kilómetros dentro de Isidis Planitia.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "The planned landing area for Beagle 2 at the time of launch was approximately 170 x 100 kilometers (105 x 62 miles) within Isidis Planitia.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Beagle 2 desplegado completamente medía menos de pocos metros de diámetro, y la cámara HiRISE trabajaba a una escala de unos 0,3 metros por píxel.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "With a fully deployed Beagle 2 being less than a few meters across and a camera image scale of about 0.3 m (10 inches), detection is a very difficult and a painstaking task.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El hallazgo confirmó que la secuencia de entrada, descenso y aterrizaje (EDL) del Beagle 2 funcionó y que el lander tocó Marte el 25 de diciembre de 2003.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "This finding shows that the Entry, Descent and Landing, or EDL, sequence for Beagle 2 worked and the lander did successfully touchdown on Mars on Christmas Day 2003.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El despliegue parcial de los paneles solares explicaría la ausencia de señal, ya que el despliegue completo era necesario para exponer la antena de radiofrecuencia.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "full deployment of all solar panels was needed to expose the RF antenna, which would transmit data and receive commands from Earth via orbiting Mars spacecraft.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen HiRISE ESP_039308_1915 fue adquirida el 15 de diciembre de 2014, con una escala de 25 cm/píxel, en latitud 11,517° N y longitud 90,437° E.",
+      "fuente_url": "https://www.uahirise.org/ESP_039308_1915",
+      "cita": "Acquisition date 15 December 2014 [...] Map projected scale 25 cm/pixel and North is up [...] Latitude (centered) 11.517° Longitude (East) 90.437°",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El composite de NASA/JPL combina imágenes ESP_030908_1915 (28 feb. 2013) y ESP_037145_1915 (29 jun. 2014) para mostrar el Beagle 2 con paneles al menos parcialmente desplegados.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "The merged images are excerpts of HiRISE observations ESP_030908_1915, taken on Feb. 28, 2013, and ESP_037145_1915, taken June 29, 2014.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La ESA situó el anuncio oficial en el 15 de enero de 2015.",
+      "fuente_url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "cita": "Date: 15 January 2015 Satellite: Mars Express Depicts: Beagle-2 seen by HiRISE instrument on MRO",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Alfred McEwen es el investigador principal de la misión HiRISE y profesor en el Lunar and Planetary Lab de la Universidad de Arizona.",
+      "fuente_url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "cita": "said Alfred McEwen, principal investigator of the HiRISE mission and professor in the UA's Lunar and Planetary Lab.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "UA-led HiRISE camera spots long-lost space probe on Mars (ScienceDaily / University of Arizona)",
+      "url": "https://www.sciencedaily.com/releases/2015/01/150116104423.htm",
+      "editor": "ScienceDaily / University of Arizona",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Finding Beagle 2 – HiRISE image ESP_039308_1915",
+      "url": "https://www.uahirise.org/ESP_039308_1915",
+      "editor": "HiRISE / Universidad de Arizona",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Beagle 2 Lander on Mars, With Panels Deployed",
+      "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "editor": "NASA Science / JPL-Caltech / Univ. of Arizona / University of Leicester",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle-2 on Mars (ESA Mars Express)",
+      "url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "editor": "ESA Science",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "FECHA DEL ANUNCIO: La fuente de la Universidad de Arizona (vía ScienceDaily) indica el 16 de enero de 2015 como fecha del anuncio, mientras que la página oficial de ESA Science registra el 15 de enero de 2015. URLs: https://www.sciencedaily.com/releases/2015/01/150116104423.htm vs. https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+    "ORDEN DE IDs DE IMAGEN: La fuente ScienceDaily lista '(Images ESP_037145_1915 and ESP_030908_1915)' emparejando ESP_037145 con la fecha Feb. 2013 y ESP_030908 con Jun. 2014, mientras que la fuente oficial NASA (science.nasa.gov) indica la asignación opuesta: ESP_030908_1915 = 28 feb. 2013 y ESP_037145_1915 = 29 jun. 2014. La fuente NASA es más autoritativa. URLs: https://www.sciencedaily.com/releases/2015/01/150116104423.htm vs. https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+    "El evento original indica 'fecha_inicio: 2015-01' y aclara en su nota que 'las fuentes solo dicen que el hallazgo se anunció en enero de 2015', sin precisar día. Sin embargo, el dato [3] muestra que las imágenes utilizadas para la detección son de febrero de 2013 y junio de 2014, y el dato [9] añade una imagen de diciembre de 2014, lo que implica que el trabajo de búsqueda de Croon ocurrió antes de enero de 2015. La fecha del evento se refiere al anuncio, no al hallazgo en sí, pero el evento lo titula 'detecta el candidato' como si la detección fuera en enero de 2015, lo cual es impreciso."
+  ],
+  "huecos": [
+    "La fecha exacta en que Michael Croon presentó su solicitud a HiWish no está disponible en ninguna de las fuentes consultadas.",
+    "La fecha exacta en que Croon examinó las imágenes y encontró el candidato no está indicada en las fuentes; solo se sabe que el anuncio fue en enero de 2015.",
+    "No se confirma cuántas imágenes adicionales revisó Croon antes de comunicar su hallazgo al equipo de HiRISE.",
+    "El número preciso de paneles solares desplegados (dos o tres) no queda definitivamente establecido: las fuentes indican 'dos o tres' como posibilidad dependiente de los ángulos de reflexión.",
+    "No se ha podido confirmar con fuentes oficiales si Croon trabajó solo o con algún colaborador al revisar las imágenes de HiWish.",
+    "El evento original dice que Croon 'pidió imágenes del sitio mediante HiWish', pero ninguna fuente del dossier precisa qué coordenadas específicas solicitó ni cuándo envió exactamente la solicitud a HiWish.",
+    "El evento original menciona que Croon era 'antiguo integrante de operaciones de Mars Express en ESOC', pero ninguna fuente del dossier detalla qué rol específico desempeñaba dentro del equipo de operaciones."
+  ],
+  "ideas_visuales": [
+    "Mapa de Isidis Planitia con el rectángulo de 170 × 100 km de la zona de aterrizaje planificada, señalando la localización del Beagle 2 a 11,517° N / 90,437° E.",
+    "Comparación a escala: el Beagle 2 (menos de pocos metros) frente a la resolución de HiRISE (0,3 m/píxel), mostrando por qué la detección era tan difícil.",
+    "Recorte de la imagen HiRISE ESP_039308_1915 (15 dic. 2014) con el punto brillante del candidato señalado en el borde del encuadre.",
+    "Composite NASA/JPL de las imágenes ESP_030908_1915 y ESP_037145_1915 mostrando el Beagle 2 con paneles parcialmente desplegados.",
+    "Diagrama del Beagle 2 con paneles solares tipo pétalo: uno muestra el despliegue completo (antena expuesta) y otro el despliegue parcial (antena bloqueada)."
+  ],
+  "datos_no_verificados": []
+}

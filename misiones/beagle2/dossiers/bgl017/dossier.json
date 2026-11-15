@@ -1,0 +1,118 @@
+{
+  "evento_id": "bgl017",
+  "titulo": "Despegue de Mars Express con Beagle 2 desde Baikonur (2 de junio de 2003)",
+  "contexto_ampliado": "El 2 de junio de 2003, a las 23:45 hora local (17:45 GMT), un cohete Soyuz-Fregat se alzó desde el cosmódromo de Baikonur, en Kazajistán. A bordo viajaba la sonda Mars Express de la Agencia Espacial Europea (ESA), con una masa total de 1 120 kg, construida por un equipo europeo liderado por la empresa Astrium. La gestión operacional del lanzador corrió a cargo de Starsem, compañía comercializadora del cohete ruso. Junto a la sonda viajaba también la cápsula Beagle 2, el pequeño módulo de aterrizaje destinado a posarse en la superficie marciana.\n\nEl Soyuz-Fregat operó en dos fases. Tras el despegue, el motor de la etapa superior Fregat encendió una primera vez para insertar a Mars Express en una órbita provisional alrededor de la Tierra. Una hora y treinta y dos minutos después del despegue, el Fregat volvió a encender y la sonda fue inyectada en su trayectoria interplanetaria, comenzando su viaje definitivo hacia Marte.\n\nLa fecha de lanzamiento no fue casual. En ese momento del año, las posiciones relativas de la Tierra y Marte permitían la ruta más corta posible hacia el planeta rojo, una ventana favorable que solo se repite cada 26 meses. Gracias a esa geometría orbital, Mars Express partió a una velocidad superior a 30 km/s en términos absolutos, lo que equivalía a unos 3 km/s (10 800 km/h) en relación con la Tierra, en una travesía de seis meses y 400 millones de kilómetros a través del sistema solar.\n\nPoco después del despegue, el Centro Europeo de Operaciones Espaciales (ESOC), situado en Darmstadt, Alemania, estableció contacto con la sonda. La telemetría confirmó que Mars Express apuntaba correctamente hacia el Sol, que había desplegado sus paneles solares y que todos los sistemas a bordo funcionaban sin fallo alguno.\n\nA medio camino, en septiembre de 2003, estaba programada una maniobra de corrección de trayectoria para ajustar el rumbo. Seis días antes de la llegada a Marte —prevista para el 25 de diciembre de 2003—, Mars Express expulsó al módulo Beagle 2 para que este descendiera de forma autónoma hasta la superficie del planeta.\n\nMars Express fue concebida además como pionera de una nueva generación de misiones planetarias europeas. Según la propia ESA, abriría el camino a Venus Express (planificada para 2005) y a la misión BepiColombo a Mercurio, prevista para finales de esa década. Aquel despegue nocturno desde las estepas kazajas representó un hito importante en la exploración espacial europea.",
+  "datos_reales": [
+    {
+      "afirmacion": "Mars Express despegó el 2 de junio de 2003 a las 17:45 GMT (23:45 hora local) desde Baikonur, Kazajistán.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "cita": "The launcher lifted off from Baïkonur in Kazakhstan on 2 June at 23.45 local time (17:45 GMT).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cohete empleado fue un Soyuz-Fregat bajo gestión operacional de Starsem.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "cita": "It set out on its journey to Mars aboard a Soyuz-Fregat launcher, under Starsem operational management.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La sonda Mars Express pesaba 1 120 kg y fue construida por un equipo europeo liderado por Astrium, por encargo de la ESA.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "cita": "The probe, weighing in at 1 120 kg, was built on ESA's behalf by a European team led by Astrium.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras el primer encendido del Fregat se alcanzó una órbita provisional alrededor de la Tierra; 1 hora y 32 minutos después del despegue, la sonda fue inyectada en su órbita interplanetaria.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "cita": "An interim orbit around the Earth was reached following a first firing of the Fregat upper stage. One hour and thirty-two minutes after lift off the probe was injected into its interplanetary orbit.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El ESOC, centro de control de satélites de la ESA en Darmstadt (Alemania), estableció contacto con Mars Express tras el lanzamiento y confirmó que todos los sistemas funcionaban sin fallo.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "cita": "Contact with Mars Express has been established by ESOC, ESA's satellite control centre, located in Darmstadt, Germany. The probe is pointing correctly towards the Sun and has deployed its solar panels. All on-board systems are operating faultlessly.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Express viajó a más de 30 km/s (3 km/s en relación con la Tierra) en un trayecto de seis meses y 400 millones de kilómetros a través del sistema solar.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "cita": "Mars Express will then travel away from Earth at a speed exceeding 30 km/s (3 km/s in relation to the Earth), on a six-month and 400 million kilometre journey through the solar system.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Una maniobra de corrección de trayectoria a mitad del viaje estaba programada para septiembre de 2003.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "cita": "Mid-journey correction of its trajectory is scheduled for September.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Express abrió el camino a futuras misiones planetarias de la ESA, como Venus Express (planificada para 2005) y BepiColombo a Mercurio.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "cita": "paves the way for other ESA-led planetary missions, with Venus Express planned for 2005 and the BepiColombo mission to Mercury at the end of the decade.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La fecha de lanzamiento fue elegida porque las posiciones de la Tierra y Marte permitían la ruta más corta posible, condición que se repite cada 26 meses.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission",
+      "cita": "At this time of year the positions of Earth and Mars made for the shortest possible route, a condition that occurs once every 26 months.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mars Express viajó hacia Marte a una velocidad de 10 800 km/h en relación con la Tierra.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission",
+      "cita": "cruising at a velocity of 10 800 kilometres an hour, relative to Earth",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Seis días antes de la llegada a Marte, el 25 de diciembre de 2003, Mars Express expulsó al módulo Beagle 2 para que descendiera de forma autónoma.",
+      "fuente_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission",
+      "cita": "Six days before arrival on 25 December 2003, Mars Express ejected the Beagle 2 lander which was to have made its own way to the correct landing site on the surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Mars Express en route for the Red Planet",
+      "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_en_route_for_the_Red_Planet",
+      "editor": "ESA",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "The mission – Mars Express",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission",
+      "editor": "ESA",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "El borrador original decía que Mars Express viajó 'a más de 30 km/s (unos 10 800 km/h en relación con la Tierra)', lo que sugiere erróneamente que 30 km/s ≈ 10 800 km/h. En realidad, 30 km/s = 108 000 km/h; los 10 800 km/h (≈ 3 km/s) corresponden a la velocidad relativa a la Tierra, como aclaran los datos [5] y [9] (fuentes: ESA press release y ESA Mars Express mission page).",
+    "El borrador situaba la expulsión de Beagle 2 el 25 de diciembre de 2003 y 'seis días antes de llegar a Marte', sugiriendo que la llegada sería el 31 de diciembre. Sin embargo, la cita del dato [10] dice 'Six days before arrival on 25 December 2003', es decir, la llegada fue el 25 de diciembre y la expulsión tuvo lugar seis días antes (~19 de diciembre). Fuente: https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission"
+  ],
+  "huecos": [
+    "No se encontró una cita directa en las fuentes leídas que confirme explícitamente que Mars Express fue 'la primera misión europea a otro planeta'; las fuentes solo implican que fue precursora de misiones posteriores.",
+    "No se encontraron detalles sobre la composición societaria de Starsem (joint venture ruso-europea) ni su relación contractual con la ESA.",
+    "No se encontraron datos sobre el número exacto de personas del equipo de lanzamiento en Baikonur ni sobre la duración total del proceso de preparación en la plataforma.",
+    "El dato clave del evento original indica que Beagle 2 pesaba implícitamente cierta masa (el borrador mencionaba 60 kg), pero ninguna de las fuentes citadas respalda esa cifra.",
+    "El borrador afirmaba que la sonda 'sería en gran parte desactivada y solo contactaría con la Tierra una vez al día para ahorrar energía' y que 'la reactivación completa se programó para finales de noviembre'; ningún dato citado respalda estas afirmaciones.",
+    "El evento original afirma explícitamente que fue 'la primera misión europea a otro planeta', pero ninguna de las fuentes consultadas lo confirma con esas palabras (ya señalado en el borrador, se mantiene abierto)."
+  ],
+  "ideas_visuales": [
+    "Despegue nocturno del Soyuz-Fregat desde la plataforma de Baikonur, con el cielo oscuro de la estepa kazaja iluminado por la llama del cohete (datos [0] y [1]).",
+    "Diagrama en dos pasos: primer encendido del Fregat para alcanzar la órbita terrestre provisional y segundo encendido 1 h 32 min después para la inyección interplanetaria (dato [3]).",
+    "Sala de control del ESOC en Darmstadt con pantallas mostrando la telemetría de Mars Express: paneles solares desplegados y orientación hacia el Sol confirmada (dato [4]).",
+    "Infografía de la trayectoria Tierra-Marte: 400 millones de km, velocidad de 10 800 km/h relativa a la Tierra, duración de seis meses, con la ventana orbital cada 26 meses (datos [5], [8] y [9]).",
+    "Representación de Mars Express expulsando a Beagle 2 seis días antes de la llegada a Marte (dato [10])."
+  ],
+  "datos_no_verificados": []
+}

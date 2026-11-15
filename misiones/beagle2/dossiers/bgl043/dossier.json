@@ -1,0 +1,189 @@
+{
+  "evento_id": "bgl043",
+  "titulo": "Ocho años de búsqueda: 26 imágenes de HiRISE sin resultado (2006–2014)",
+  "contexto_ampliado": "En diciembre de 2003, el pequeño módulo de aterrizaje Beagle 2 —de apenas 33 kg de masa y 1,5 metros de diámetro— se separó de la sonda Mars Express de la ESA y descendió hacia Marte. Nunca se recibió señal alguna de él. Para encontrarlo había que saber primero dónde buscar.\n\nEl área de aterrizaje prevista formaba una elipse enorme, con un eje largo de 174 km. La ESA logró reducir esa zona utilizando los datos reales de trayectoria de la Mars Express, acortando el eje largo a 57 km. Aun así, el área que había que rastrear superaba los 1 400 km², y dentro de ella había que localizar un módulo de apenas 1,5 metros de diámetro: una tarea monumental.\n\nLa única herramienta con resolución suficiente para intentarlo era la cámara HiRISE, a bordo del Mars Reconnaissance Orbiter (MRO) de la NASA, capaz de distinguir detalles de 0,3 metros por píxel sobre la superficie marciana. Antes de que el MRO comenzara su misión en 2006, la búsqueda había sido simplemente imposible. Desde ese año y hasta 2014, se examinaron un total de 26 imágenes de HiRISE dentro de la elipse de aterrizaje, sin hallar ningún rastro del Beagle 2.\n\nFue entonces cuando intervino Michael Croon, un científico ciudadano alemán y antiguo miembro del equipo de operaciones de la Mars Express. Croon detectó que existía un hueco entre las imágenes de HiRISE dentro de la elipse de aterrizaje del Beagle 2: una franja que ninguna de las 26 imágenes anteriores había cubierto. El sistema de HiRISE permite que cualquier persona proponga objetivos de observación y, si la solicitud resulta convincente, la imagen se toma y se publica en su sitio web. Croon aprovechó ese mecanismo para solicitar una nueva imagen.\n\nEn noviembre de 2014, Croon observó una posible identificación del módulo en la imagen que había solicitado y pidió imágenes adicionales de seguimiento. Se sabe que una de las imágenes clave de HiRISE (ESP_039308_1915) fue tomada el 15 de diciembre de 2014, apuntando a las coordenadas 11,517° N y 90,437° E. El lugar del hallazgo se encontraba a unos 20 km del objetivo de aterrizaje original, en Isidis Planitia, una vasta cuenca con indicios de haber sido un entorno habitable en el pasado.\n\nLo que Croon había detectado era un objeto llamativamente brillante. La superficie marciana oxidada y rojiza de Isidis refleja la luz de forma difusa, pero aquel objeto producía reflexiones especulares, exactamente como lo haría el metal o los paneles solares de un artefacto fabricado por humanos. El examen cuidadoso de múltiples imágenes de HiRISE reveló una estructura plana y multilobulada, interpretada como el Beagle 2 con algunos de sus cuatro paneles solares al menos parcialmente desplegados. Además, se detectó un objeto que se movía entre siete imágenes repetidas del mismo lugar, posiblemente la cubierta trasera del aeroescudo con su pequeño paracaídas, arrastrada por el viento marciano.\n\nEl hallazgo fue anunciado oficialmente por la ESA el 15 de enero de 2015. Según la NASA, el módulo fue localizado cerca del centro de su zona de aterrizaje planificada. Ocho años de búsqueda metódica habían resultado infructuosos, y la diferencia la hizo un único hueco en la cobertura, detectado por un ex-miembro del equipo que dedicó su tiempo libre a revisar datos públicos. Este episodio ilustra un principio valioso de la ciencia actual: la apertura de los datos espaciales permite que cualquier persona con conocimientos y dedicación contribuya a un descubrimiento importante.",
+  "datos_reales": [
+    {
+      "afirmacion": "La ESA recalculó la elipse de aterrizaje del Beagle 2 usando datos de trayectoria de la Mars Express, reduciéndola de 174 km a 57 km en su eje largo.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "using Mars Express trajectory data, the European Space Agency (ESA) recalculated the Beagle 2 landing zone (the shape of an ellipse) from an original axis of 174km to 57km – greatly reducing the area on Mars that needed to be searched.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El área total que había que explorar dentro de la elipse reducida superaba los 1 400 km².",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "we had to find a 1.5 metre lander in over 1400km2 of Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Beagle 2 medía aproximadamente 1,5 metros de diámetro.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "we had to find a 1.5 metre lander in over 1400km2 of Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara HiRISE tiene una resolución de 0,3 metros por píxel sobre la superficie marciana.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "Even with its pixel sizes of 0.3 metres on the martian surface, finding a small lander was always going to be difficult.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La búsqueda con HiRISE fue imposible antes de que comenzara la misión MRO en 2006.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "Before the start of the MRO/HiRISE mission in 2006 it was even impossible.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Entre 2006 y 2014 se examinaron un total de 26 imágenes de HiRISE en busca del Beagle 2, sin éxito.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "Between 2006 and 2014, a total of 26 HiRISE images were examined for signs of Beagle 2 – without success.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Michael Croon era un científico ciudadano alemán y antiguo miembro del equipo de operaciones de la Mars Express.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "German citizen scientist Michael Croon (a former member of the Mars Express operations team) had noticed a gap between HiRISE images within Beagle's landing ellipse.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Michael Croon detectó un hueco entre las imágenes de HiRISE dentro de la elipse de aterrizaje del Beagle 2.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "Michael Croon (a former member of the Mars Express operations team) had noticed a gap between HiRISE images within Beagle's landing ellipse.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Cualquier persona puede proponer objetivos de observación a HiRISE; si la solicitud es convincente, la imagen se toma y se publica en su sitio web.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "With HiRISE, anyone can suggest a target to be imaged on Mars – if the case for it looks good, it will be taken and put on the public website.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En noviembre de 2014, Croon observó una posible identificación del módulo en la imagen que había solicitado y pidió imágenes adicionales.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "In November 2014, Croon noted possible identification of the lander in the image he had requested, and asked for repeat imaging.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El lugar del hallazgo se encontraba a unos 20 km del objetivo de aterrizaje original, en Isidis Planitia.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "The spot was some 20km from the original landing target in Isidis Planitia, a vast basin with signs of an ancient habitable environment.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El objeto brillante detectado producía reflexiones especulares, distintas del aspecto difuso de la superficie marciana oxidada de Isidis.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "The red, oxidised martian surface at Isidis reflects light in a diffuse way but here was a strikingly bright object showing specular reflections – just the way light would be expected to reflect off the metallic and solar panel surfaces of a man-made object like Beagle 2.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El examen de múltiples imágenes de HiRISE reveló una estructura plana y multilobulada, interpretada como el Beagle 2 con algunos paneles solares desplegados.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "Careful examination of combined multiple HiRISE images taken to check our observations showed a flat-lying, multi-lobed structure – Beagle 2. It suggested that some of the four solar panels had indeed deployed after landing.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se detectó un objeto que se movía entre siete imágenes repetidas de HiRISE, posiblemente la cubierta trasera del aeroescudo con su pequeño paracaídas.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "There was also an object moving between seven repeat HiRISE images. This may well be the lander's aeroshell rear cover with its small parachute moving around on its tether.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Beagle 2 pesaba 33 kg, en comparación con la rover Curiosity que pesa una tonelada.",
+      "fuente_url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "cita": "As a small, 33kg lander – compare that to the one tonne Curiosity rover behemoth – fitting all the communication and science equipment into the conical lander aeroshell was challenging.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen de HiRISE ESP_039308_1915 fue tomada el 15 de diciembre de 2014 en coordenadas 11,517° N, 90,437° E.",
+      "fuente_url": "https://www.uahirise.org/ESP_039308_1915",
+      "cita": "Acquisition date 15 December 2014 [...] Latitude (centered) 11.517° Longitude (East) 90.437°",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El hallazgo del Beagle 2 fue anunciado el 15 de enero de 2015 por la ESA.",
+      "fuente_url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "cita": "Date: 15 January 2015 Satellite: Mars Express Depicts: Beagle-2 seen by HiRISE instrument on MRO",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen compuesta de NASA muestra la configuración del Beagle 2 con paneles solares al menos parcialmente desplegados.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "A configuration interpreted as the United Kingdom's Beagle 2 Lander, with solar panels at least partially deployed, is indicated in this composite of two images from the High Resolution Imaging Science Experiment (HiRISE) camera on NASA's Mars Reconnaissance Orbiter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "NASA localizó el módulo cerca del centro de su zona de aterrizaje planificada.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "This and other images from the High Resolution Imaging Science Experiment (HiRISE) camera on NASA's Mars Reconnaissance Orbiter have located the lander close to the center of its planned landing area.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "How we found our lost Mars lander after a decade of searching, and what's next",
+      "url": "https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374",
+      "editor": "The Conversation (John Bridges, Univ. de Leicester)",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "HiRISE image ESP_039308_1915 – Beagle 2 landing site",
+      "url": "https://www.uahirise.org/ESP_039308_1915",
+      "editor": "HiRISE / University of Arizona / NASA JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle-2 on Mars – ESA Mars Express",
+      "url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "editor": "ESA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle 2 Lander on Mars, With Panels Deployed",
+      "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Distancia al objetivo original vs. centro de la elipse: The Conversation (John Bridges, Univ. Leicester) indica que el módulo estaba 'some 20km from the original landing target' (https://theconversation.com/how-we-found-our-lost-mars-lander-after-a-decade-of-searching-and-whats-next-85374), mientras que NASA Science afirma que fue localizado 'close to the center of its planned landing area' (https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/). Ambas afirmaciones pueden ser compatibles si el 'centro' se refiere a la elipse reducida de 57 km y los '20 km' se miden desde el punto de impacto objetivo original más preciso, pero las fuentes no lo aclaran explícitamente.",
+    "Cronología de la identificación vs. fecha de la imagen: El dato [9] (The Conversation) afirma que Croon observó la posible identificación 'In November 2014', pero el dato [15] (uahirise.org) indica que la imagen ESP_039308_1915 tiene fecha de adquisición del 15 de diciembre de 2014. Si esta fue la imagen que Croon solicitó, no pudo haberla revisado en noviembre. Esto sugiere que Croon identificó al Beagle 2 en una imagen anterior distinta de ESP_039308_1915, o bien que hay una imprecisión en una de las dos fuentes. El borrador original las fusionaba como si fueran la misma imagen, lo cual es problemático.",
+    "El evento original describe a Croon como 'antiguo miembro del equipo de operaciones de la Mars Express', mientras que el dato [6] (The Conversation) lo califica además como 'German citizen scientist'. Aunque no es una contradicción directa, el evento omite la etiqueta de 'científico ciudadano' que la fuente sí utiliza, lo cual cambia el matiz de su papel en el descubrimiento."
+  ],
+  "huecos": [
+    "No se pudo acceder al artículo científico completo publicado en Royal Society Open Science (PMC bloqueó el acceso directo), por lo que no se pudieron citar datos adicionales de la publicación revisada por pares.",
+    "No se confirmó la fecha exacta en que la ESA realizó el recálculo de la elipse de 174 km a 57 km (solo se sabe que fue antes del inicio de la campaña HiRISE en 2006).",
+    "No se identificaron los nombres de los otros 25 investigadores o equipos que examinaron las 26 imágenes anteriores a la solicitud de Croon.",
+    "No se confirmó si el 'hueco' detectado por Croon era un área sin cobertura total o solo una zona con cobertura insuficiente o con ángulos de sol desfavorables.",
+    "No se pudo verificar en qué fecha exacta Croon realizó la solicitud formal de la nueva imagen a HiRISE (solo se sabe que en noviembre de 2014 observó la posible identificación).",
+    "El evento original afirma que Croon 'pidió nuevas imágenes' (plural), pero el dato [9] solo menciona que pidió 'repeat imaging' tras su identificación de noviembre de 2014. No queda claro si la solicitud inicial de Croon fue de una sola imagen o de varias.",
+    "El evento original no menciona el hallazgo en sí ni el anuncio de enero de 2015, pero el dossier incluye datos sobre ambos (datos [12], [16], [17]). No hay confirmación documental de que el evento pretendiera cubrir exclusivamente el periodo 2006-2014 sin el desenlace."
+  ],
+  "ideas_visuales": [
+    "Diagrama comparativo de la elipse de aterrizaje original (174 km) superpuesta sobre la elipse reducida (57 km), con escala que muestre los 1 400 km² del área de búsqueda.",
+    "Mosaico de las 26 imágenes de HiRISE sobre un mapa de Isidis Planitia, con el hueco de cobertura resaltado en color distinto.",
+    "Detalle de la resolución de HiRISE (0,3 m/píxel): comparación visual del tamaño de un píxel frente al módulo Beagle 2 de 1,5 metros de diámetro.",
+    "Imagen real o recreación del punto brillante con reflexiones especulares sobre la superficie rojiza y difusa de Marte, tal como lo detectó Croon.",
+    "Composición de las siete imágenes repetidas de HiRISE mostrando el objeto móvil identificado como la cubierta trasera del aeroescudo.",
+    "Línea de tiempo visual: desde la pérdida de contacto (2003), el recálculo de la elipse, las 26 imágenes fallidas (2006-2014), la identificación de Croon (nov 2014) y el anuncio oficial (ene 2015)."
+  ],
+  "datos_no_verificados": []
+}

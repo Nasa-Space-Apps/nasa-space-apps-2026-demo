@@ -1,0 +1,160 @@
+{
+  "evento_id": "bgl044",
+  "titulo": "HiRISE fotografía por primera vez el lugar donde estaba Beagle 2 (28 de febrero de 2013)",
+  "contexto_ampliado": "El 25 de diciembre de 2003, el módulo de aterrizaje Beagle 2, liderado por el Reino Unido, fue liberado por el orbitador Mars Express de la Agencia Espacial Europea (ESA). Se esperaba que aterrizara en Marte y enviara señales, pero nunca se supo nada de él tras su descenso. Durante más de una década, su paradero y su estado fueron un completo misterio.\n\nEl 28 de febrero de 2013, la cámara HiRISE (High Resolution Imaging Science Experiment), instalada a bordo de la sonda Mars Reconnaissance Orbiter (MRO) de la NASA, capturó la imagen ESP_030908_1915. La toma se realizó a las 14:40 hora local marciana, desde una altitud de 277,5 km sobre la superficie. La resolución fue de 27,8 cm por píxel, lo que permite distinguir objetos de unos 83 cm de diámetro. Las coordenadas del punto fotografiado eran 11,505° Norte y 90,461° Este, dentro de Isidis Planitia, y correspondían aproximadamente al centro de la zona de aterrizaje planificada para Beagle 2. La imagen se tomó durante el invierno del hemisferio norte marciano, con una longitud solar de 273,5°.\n\nEn aquel momento, nadie sabía que esa imagen contenía algo fuera de lo común. Los archivos quedaron almacenados en las bases de datos de la Universidad de Arizona, que opera HiRISE. Meses después, el 29 de junio de 2014, MRO volvió a fotografiar la misma zona con la observación ESP_037145_1915. También existe una tercera imagen relevante, ESP_039308_1915, tomada el 15 de diciembre de 2014.\n\nLa clave del descubrimiento fue la comparación. Al combinar las observaciones ESP_030908_1915 (febrero de 2013) y ESP_037145_1915 (junio de 2014) en una imagen compuesta, el equipo de investigación detectó algo significativo: un destello de luz reflejada aparecía en una parte diferente del objeto en cada imagen. Según la descripción oficial de la NASA, se identificó \"una configuración interpretada como el módulo de aterrizaje Beagle 2 del Reino Unido, con paneles solares al menos parcialmente desplegados\". Los cambios en el brillo entre ambas tomas se interpretaron como evidencia de que más de un panel solar estaba desplegado: Beagle 2 había logrado aterrizar y había abierto parcialmente sus paneles de energía.\n\nEl hallazgo fue anunciado públicamente el 15 de enero de 2015. La ESA informó que el módulo Beagle 2, perdido en Marte desde 2003, había sido encontrado en imágenes del Mars Reconnaissance Orbiter de la NASA. El anuncio incluyó una animación en formato gif que mostraba tres imágenes del sitio de aterrizaje: el propio módulo Beagle 2, su paracaídas y su cubierta trasera. Las imágenes de HiRISE habían localizado el módulo cerca del centro de su zona de aterrizaje planificada, a aproximadamente 11,5° Norte y 90,4° Este.\n\nDe este modo, la imagen ESP_030908_1915 se convirtió, de forma retroactiva, en la primera fotografía que capturó a Beagle 2 sobre la superficie de Marte, aunque ese hecho solo pudo confirmarse después, al compararla con las imágenes posteriores. Pasaron casi dos años entre el momento en que la cámara disparó y el momento en que el mundo supo lo que se había fotografiado.",
+  "datos_reales": [
+    {
+      "afirmacion": "La imagen ESP_030908_1915 fue tomada el 28 de febrero de 2013 a las 14:40 hora local marciana.",
+      "fuente_url": "https://www.uahirise.org/ESP_030908_1915",
+      "cita": "Acquisition date 28 February 2013 Local Mars time 14:40",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante la toma de ESP_030908_1915, la sonda MRO se encontraba a una altitud de 277,5 km (172,5 millas) sobre la superficie.",
+      "fuente_url": "https://www.uahirise.org/ESP_030908_1915",
+      "cita": "Spacecraft altitude 277.5 km (172.5 miles)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen ESP_030908_1915 tiene una resolución de 27,8 cm por píxel, lo que permite resolver objetos de unos 83 cm de tamaño.",
+      "fuente_url": "https://www.uahirise.org/ESP_030908_1915",
+      "cita": "Original image scale range 27.8 cm/pixel (with 1 x 1 binning) so objects ~83 cm across are resolved",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen ESP_030908_1915 fue tomada en invierno del hemisferio norte de Marte (longitud solar 273,5°).",
+      "fuente_url": "https://www.uahirise.org/ESP_030908_1915",
+      "cita": "Solar longitude 273.5°, Northern Winter",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las coordenadas del punto fotografiado en ESP_030908_1915 son 11,505° Norte y 90,461° Este.",
+      "fuente_url": "https://www.uahirise.org/ESP_030908_1915",
+      "cita": "Latitude (centered) 11.505° Longitude (East) 90.461°",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen compuesta que identificó a Beagle 2 combina la observación ESP_030908_1915 (28 de febrero de 2013) con ESP_037145_1915 (29 de junio de 2014).",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "The merged images are excerpts of HiRISE observations ESP_030908_1915, taken on Feb. 28, 2013, and ESP_037145_1915, taken June 29, 2014.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA describió la detección como 'una configuración interpretada como el módulo de aterrizaje Beagle 2 del Reino Unido, con paneles solares al menos parcialmente desplegados'.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "A configuration interpreted as the United Kingdom's Beagle 2 Lander, with solar panels at least partially deployed",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Beagle 2 fue liberado por el orbitador Mars Express de la ESA y nunca se supo nada de él tras su esperado aterrizaje el 25 de diciembre de 2003.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "Beagle 2 was released by the European Space Agency's Mars Express orbiter but never heard from after its expected Dec. 25, 2003, landing.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las imágenes de HiRISE localizaron el módulo cerca del centro de su zona de aterrizaje planificada.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "This and other images from the High Resolution Imaging Science Experiment (HiRISE) camera on NASA's Mars Reconnaissance Orbiter have located the lander close to the center of its planned landing area.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El brillo reflejado aparece en una parte diferente del módulo en cada imagen, lo que se interpreta como evidencia de más de un panel solar desplegado.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "A glint comes from a different part of the lander in one than in the other, interpreted as evidence of more than one deployed panel on the lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La ubicación del módulo es aproximadamente 11,5° Norte y 90,4° Este.",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "The location is approximately 11.5 degrees north latitude, 90.4 degrees east latitude.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El anuncio del hallazgo de Beagle 2 por parte de la ESA se publicó el 15 de enero de 2015.",
+      "fuente_url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "cita": "Date: 15 January 2015 Satellite: Mars Express Depicts: Beagle-2 seen by HiRISE instrument on MRO",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La ESA confirmó que Beagle 2 fue encontrado en imágenes del Mars Reconnaissance Orbiter de la NASA.",
+      "fuente_url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "cita": "The UK-led Beagle-2 Mars lander, which hitched a ride on ESA's Mars Express mission and was lost on Mars since 2003, has been found in images taken by NASA's Mars Reconnaissance Orbiter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La animación de la ESA mostraba tres imágenes del sitio: el módulo Beagle 2, su paracaídas y su cubierta trasera.",
+      "fuente_url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "cita": "This animated gif cycles through three images of the landing site targets: the Beagle-2 lander and its parachute and rear cover.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen ESP_039308_1915, referenciada en las fuentes semilla, fue tomada el 15 de diciembre de 2014.",
+      "fuente_url": "https://www.uahirise.org/ESP_039308_1915",
+      "cita": "Acquisition date 15 December 2014",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "ESP_030908_1915 — HiRISE, University of Arizona",
+      "url": "https://www.uahirise.org/ESP_030908_1915",
+      "editor": "HiRISE / Universidad de Arizona",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Beagle 2 Lander on Mars, With Panels Deployed — NASA Science",
+      "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle-2 on Mars — ESA Science",
+      "url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "editor": "ESA / Mars Express",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Finding Beagle 2 — ESP_039308_1915, HiRISE / Universidad de Arizona",
+      "url": "https://www.uahirise.org/ESP_039308_1915",
+      "editor": "HiRISE / Universidad de Arizona",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "La nota del evento indica que el blog de la ESA (enero 2015) atribuye el hallazgo de restos a imágenes de 2014, mientras que la NASA y la Universidad de Arizona citan también la imagen de 2013 (ESP_030908_1915) como parte de la detección. Sin embargo, la página de la ESA que pude leer (https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars) no especifica el año de la detección, solo que fue anunciada el 15 de enero de 2015. La página de NASA Science (https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/) sí menciona explícitamente ambas imágenes: ESP_030908_1915 de febrero de 2013 y ESP_037145_1915 de junio de 2014, sin declarar cuál fue 'la primera detección'. Por tanto, no fue posible confirmar directamente, desde las fuentes leídas, que la imagen de 2013 sea explícitamente señalada como 'primera detección' por la Universidad de Arizona.",
+    "El evento cita 'ESP_030908_1915' como el identificador de imagen clave, pero la URL semilla apunta a 'ESP_039308_1915' (con los dígitos 030908 y 039308 invertidos). Son dos imágenes distintas: ESP_030908_1915 fue tomada el 28 de febrero de 2013 (https://www.uahirise.org/ESP_030908_1915) y ESP_039308_1915 fue tomada el 15 de diciembre de 2014 (https://www.uahirise.org/ESP_039308_1915).",
+    "El evento original afirma que la imagen ESP_030908_1915 contenía 'la primera detección del módulo, aunque nadie lo sabía entonces', y la nota del evento dice que 'La imagen de 2013 es la primera detección según Arizona'. Sin embargo, la fuente de la NASA (https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/) presenta ambas imágenes (2013 y 2014) como parte de un conjunto combinado sin designar explícitamente a la de 2013 como 'primera detección', y la fuente de la Universidad de Arizona (https://www.uahirise.org/ESP_030908_1915) solo proporciona metadatos técnicos sin calificarla como 'primera detección'. La expresión 'primera detección' del evento no aparece respaldada literalmente en ninguna de las fuentes consultadas."
+  ],
+  "huecos": [
+    "No se pudo confirmar desde fuentes leídas cuándo exactamente analizaron por primera vez la imagen ESP_030908_1915 con el objetivo de buscar Beagle 2, ni quién la examinó primero.",
+    "No se pudo acceder al comunicado de prensa de JPL (URL devuelve 404): https://www.jpl.nasa.gov/news/beagle-2-found-on-mars",
+    "No hay confirmación verificada de si ESP_039308_1915 (diciembre de 2014) forma parte del conjunto de imágenes que condujo al hallazgo, o si su mención en las fuentes semilla fue por otro motivo.",
+    "No se pudo verificar mediante las fuentes leídas la frase exacta en la que la Universidad de Arizona designe la imagen de 2013 como 'primera detección'.",
+    "El estado exacto de los paneles solares (cuántos de los cuatro se abrieron) no aparece en las fuentes leídas con una cifra concreta.",
+    "El relato del borrador afirma que Beagle 2 medía 'apenas 2 metros de diámetro con sus paneles desplegados', pero ninguna de las fuentes consultadas proporciona esa cifra; se ha eliminado del contexto ampliado.",
+    "No se ha podido verificar el papel exacto de la imagen ESP_039308_1915 (15 de diciembre de 2014) en el proceso de identificación: si fue una de las imágenes usadas para confirmar el hallazgo o si tuvo otro propósito."
+  ],
+  "ideas_visuales": [
+    "Diagrama de la órbita de MRO a 277,5 km de altitud sobre Isidis Planitia, mostrando el campo de visión de HiRISE apuntando al suelo marciano el 28 de febrero de 2013.",
+    "Comparación lado a lado de las imágenes ESP_030908_1915 (2013) y ESP_037145_1915 (2014), señalando con flechas el cambio de posición del destello de luz sobre el objeto.",
+    "Mapa de Marte con Isidis Planitia marcada y un punto en las coordenadas 11,5° N, 90,4° E indicando la ubicación de Beagle 2 cerca del centro de su zona de aterrizaje planificada.",
+    "Representación del gif animado de la ESA: secuencia de tres paneles mostrando el módulo Beagle 2, su paracaídas y su cubierta trasera sobre la superficie marciana.",
+    "Infografía de escala: un píxel de HiRISE (27,8 cm) frente al tamaño de objetos cotidianos, para ilustrar la resolución necesaria para detectar el módulo."
+  ],
+  "datos_no_verificados": []
+}

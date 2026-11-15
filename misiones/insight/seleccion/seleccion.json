@@ -1,0 +1,102 @@
+{
+  "mision": "insight",
+  "n": 20,
+  "generado": "2026-11-15T10:54:45",
+  "ids": [
+    "ins003",
+    "ins006",
+    "ins012",
+    "ins019",
+    "ins022",
+    "ins023",
+    "ins026",
+    "ins029",
+    "ins032",
+    "ins038",
+    "ins049",
+    "ins051",
+    "ins054",
+    "ins059",
+    "ins061",
+    "ins063",
+    "ins065",
+    "ins072",
+    "ins074",
+    "ins084"
+  ],
+  "actos": [
+    {
+      "n": 1,
+      "titulo": "Nacer y casi morir en tierra"
+    },
+    {
+      "n": 2,
+      "titulo": "Llegar e instalarse"
+    },
+    {
+      "n": 3,
+      "titulo": "Escuchar a Marte"
+    },
+    {
+      "n": 4,
+      "titulo": "El topo y el polvo"
+    },
+    {
+      "n": 5,
+      "titulo": "El adiós"
+    }
+  ],
+  "asignacion": {
+    "ins003": 1,
+    "ins006": 1,
+    "ins012": 1,
+    "ins019": 2,
+    "ins023": 2,
+    "ins026": 2,
+    "ins029": 2,
+    "ins022": 3,
+    "ins032": 3,
+    "ins063": 3,
+    "ins059": 3,
+    "ins054": 3,
+    "ins038": 4,
+    "ins049": 4,
+    "ins051": 4,
+    "ins065": 4,
+    "ins061": 5,
+    "ins072": 5,
+    "ins074": 5,
+    "ins084": 5
+  },
+  "razones": {
+    "ins003": "Origen y propósito: NASA selecciona InSight con sismómetro francés, sonda de calor alemana y RISE; explica qué iba a medir (discutido: fechas/cifras).",
+    "ins006": "Crisis: NASA suspende el lanzamiento de 2016 tras perder el vacío del sismómetro, con ~525 M USD ya gastados.",
+    "ins012": "El viaje empieza: lanzamiento desde Vandenberg junto a los primeros CubeSats interplanetarios (MarCO) (discutido).",
+    "ins019": "Los siete minutos de terror: entrada, descenso y aterrizaje autónomo en Elysium Planitia (discutido).",
+    "ins023": "Primera selfie de InSight: algo visible e ilustrable.",
+    "ins026": "Presenta el instrumento central: el brazo deposita SEIS en el suelo marciano (discutido).",
+    "ins029": "Presenta al topo HP3, un martillo autopropulsado hecho para llegar a ~5 m (discutido).",
+    "ins022": "Primera escucha: InSight oye el viento marciano; con audio.",
+    "ins032": "Hito: el primer sismo probable detectado en Marte (sol 128).",
+    "ins063": "Clímax científico: S1222a, el mayor martemoto registrado (discutido).",
+    "ins059": "Impacto visible: un meteoroide abre un cráter de ~150 m y deja hielo al descubierto; MRO lo fotografía (discutido).",
+    "ins054": "El resultado principal: tres artículos en Science miden corteza, manto y un núcleo líquido de ~1.830 km (discutido).",
+    "ins038": "Giro: el topo, en vez de enterrarse, sale parcialmente del suelo.",
+    "ins049": "Desenlace del topo: llegó a ~30-40 cm de 5 m y JPL y DLR cierran el esfuerzo (discutido).",
+    "ins051": "Ingenio: la pala vierte arena junto a los paneles para limpiarlos con el viento (discutido).",
+    "ins065": "Último esfuerzo: solo SEIS sigue vivo y se apaga la protección de fallos para que dure más.",
+    "ins061": "Imagen icónica: la última selfie, cubierta de polvo rojo (discutido).",
+    "ins072": "Emoción: el mensaje «Mi energía es muy baja».",
+    "ins074": "Desenlace: NASA da por terminada la misión tras 1.319 martemotos (discutido).",
+    "ins084": "Cierre visual: HiRISE fotografía el lander retirado (discutido)."
+  },
+  "cobertura_fases": {
+    "origen": "1/3",
+    "planificacion_y_desarrollo": "1/5",
+    "lanzamiento_y_viaje": "1/9",
+    "aterrizaje": "1/3",
+    "operaciones": "13/48",
+    "fin_de_mision": "2/7",
+    "legado": "1/17"
+  }
+}

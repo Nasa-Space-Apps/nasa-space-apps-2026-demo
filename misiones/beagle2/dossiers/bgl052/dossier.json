@@ -1,0 +1,159 @@
+{
+  "evento_id": "bgl052",
+  "titulo": "La viuda de Pillinger: casi lo logró, 'dio en el larguero'",
+  "contexto_ampliado": "El 16 de enero de 2015 se anunció que la sonda Beagle 2 —el módulo de aterrizaje británico dado por perdido desde su llegada prevista a Marte el 25 de diciembre de 2003— había sido localizada en la superficie del planeta rojo. Las imágenes de la cámara HiRISE, a bordo del Mars Reconnaissance Orbiter (MRO) de la NASA, mostraron el lander con sus paneles solares al menos parcialmente desplegados, dentro del área de aterrizaje prevista en Isidis Planitia, una cuenca de impacto cercana al ecuador marciano, a aproximadamente 11,5 grados de latitud norte y 90,4 grados de longitud este. El Beagle 2 había sido liberado por el orbitador Mars Express de la ESA, pero nunca se supo de él tras su aterrizaje esperado aquella Navidad de 2003.\n\nDetrás de esa misión había una figura central: el profesor Colin Pillinger, investigador principal del proyecto Beagle 2 y miembro de la Royal Society. Pillinger era también jefe de Ciencias Planetarias y Espaciales de la Open University, y su carrera científica había comenzado décadas atrás con el análisis de las muestras lunares traídas por el programa Apolo. Lamentablemente, Pillinger falleció en mayo de 2014, varios meses antes de que las imágenes del MRO revelaran el paradero de su sonda.\n\nCuando se hizo pública la noticia, la doctora Judith Pillinger —viuda de Colin y persona muy implicada en el proyecto Beagle 2, especialmente en su publicidad y difusión— tomó la palabra. Sus palabras reflejaron la mezcla de sentimientos que provoca un resultado a medio camino entre el fracaso y el éxito: expresó «un inmenso sentido de orgullo inevitablemente teñido de gran tristeza» porque Colin no podía compartir los hallazgos con ellos.\n\nJudith recurrió también a la pasión futbolística de su marido para explicar lo ocurrido. Señaló que Colin habría comparado el hecho de que la sonda aterrizara en Marte sin poder comunicarse con haber «dado en el larguero» en vez de fallar la portería completamente. No fue gol, pero tampoco fue un disparo perdido. Además, afirmó que, de haber sabido lo cerca que estuvo el equipo de «marcar», Colin habría sido el primero en proponer «rematar el rebote» con una hipotética misión Beagle 3 para continuar los experimentos que buscaban respuestas sobre la vida en Marte.\n\nLa comunidad científica ya había rendido homenaje a Pillinger antes de que se conociera la ubicación del lander. En diciembre de 2014 —unos siete meses después de su fallecimiento—, la Royal Society lanzó el Premio de Intercambios Internacionales Colin Pillinger, en conmemoración de la contribución científica del profesor. El galardón fue posible gracias a las contribuciones de la familia y amigos de Colin Pillinger, y tiene como objetivo estimular nuevas colaboraciones entre científicos líderes del Reino Unido e investigadores del extranjero.\n\nEl caso de Beagle 2 ilustra una realidad frecuente en la exploración espacial: el límite entre el éxito y el fracaso puede ser extraordinariamente estrecho. La sonda llegó a Marte, desplegó al menos parcialmente sus paneles solares y se posó en el lugar previsto, pero algo impidió que estableciera comunicación. El legado de Colin Pillinger, sin embargo, pervive tanto en el premio que lleva su nombre como en las palabras de su viuda, que supieron dar al hallazgo la medida justa: un larguero que, en otro intento, podría convertirse en gol.",
+  "datos_reales": [
+    {
+      "afirmacion": "Judith Pillinger expresó un 'inmenso sentido de orgullo inevitablemente teñido de gran tristeza' porque Colin no pudo compartir los hallazgos",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "An immense sense of pride is inevitably tinged with great sadness that Colin is not able to share the findings with us.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Judith Pillinger dijo que Colin habría comparado el aterrizaje de Beagle 2 sin poder comunicarse con 'haber dado en el larguero' en vez de fallar la portería completamente",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "Colin was always fond of a football analogy. No doubt he would have compared Beagle 2 landing on Mars, but being unable to communicate, to having 'hit the crossbar' rather than missing the goal completely.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Judith Pillinger afirmó que Colin habría propuesto 'rematar el rebote' con una misión Beagle 3 para continuar los experimentos sobre la vida en Marte",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "Had he known the team came so close to scoring he would certainly have been campaigning to 'tap in the rebound' with Beagle 3 and continue experiments to answer questions about life on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La Royal Society lanzó el Premio de Intercambios Internacionales Colin Pillinger en diciembre de 2014, en conmemoración de su contribución científica",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "The Royal Society launched the Colin Pillinger International Exchanges Award in December 2014 in commemoration of the scientific contribution of Professor Pillinger.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El premio tiene como objetivo estimular nuevas colaboraciones entre científicos líderes del Reino Unido e investigadores del extranjero",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "The award aims to stimulate new collaborations between leading scientists in the UK and overseas.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Premio Colin Pillinger fue posible gracias a las contribuciones de la familia y amigos de Colin Pillinger",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "The Colin Pillinger International Exchanges Award was made possible with thanks to family and friends of Colin Pillinger.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Colin Pillinger falleció en mayo de 2014",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "Sadly Professor Pillinger passed away in May 2014.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Colin Pillinger era Investigador Principal del Beagle 2 y miembro de la Royal Society",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "Professor Colin Pillinger, a fellow of the Royal Society, was Principal Investigator for the Beagle 2 Mars Lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Judith Pillinger estuvo muy implicada en el proyecto Beagle 2, especialmente en su publicidad y difusión",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "Dr Judith Pillinger who was heavily involved in the Beagle 2 project, in particular its publicity, and was married to Professor Colin Pillinger.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Colin Pillinger era jefe de Ciencias Planetarias y Espaciales de la Open University y su carrera comenzó con el análisis de muestras lunares del programa Apolo",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "Professor Pillinger was formerly the Head of Planetary and Space Sciences, Open University. His research career started with analysis of the Apollo lunar samples.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Beagle 2 fue hallado el 16 de enero de 2015 parcialmente desplegado en la superficie marciana, después de haber estado desaparecido desde 2003",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "The UK-led Beagle 2 Mars Lander, thought lost on Mars since 2003, has been found partially deployed on the surface of the planet, ending the mystery of what happened to the mission more than a decade ago.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Beagle 2 fue hallado en Isidis Planitia, una cuenca de impacto cercana al ecuador marciano",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "within the expected landing area of Isidis Planitia (an impact basin close to the equator)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El lander fue detectado por la cámara HiRISE del Mars Reconnaissance Orbiter (MRO) de la NASA",
+      "fuente_url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "cita": "Images taken by the HiRISE camera on NASA's Mars Reconnaissance Orbiter (MRO) have identified clear evidence for the lander and convincing evidence for key entry and descent components on the surface of Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Beagle 2 fue liberado por el orbitador Mars Express de la ESA y nunca se supo de él tras su aterrizaje previsto el 25 de diciembre de 2003",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "Beagle 2 was released by the European Space Agency's Mars Express orbiter but never heard from after its expected Dec. 25, 2003, landing.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La ubicación del Beagle 2 en Marte es aproximadamente 11,5 grados de latitud norte y 90,4 grados de longitud este",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "The location is approximately 11.5 degrees north latitude, 90.4 degrees east latitude.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las imágenes compuestas muestran el Beagle 2 con los paneles solares al menos parcialmente desplegados",
+      "fuente_url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "cita": "A configuration interpreted as the United Kingdom's Beagle 2 Lander, with solar panels at least partially deployed, is indicated in this composite of two images from the High Resolution Imaging Science Experiment (HiRISE) camera on NASA's Mars Reconnaissance Orbiter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "UK-led Beagle 2 Lander found on Mars – Royal Society",
+      "url": "https://royalsociety.org/news/2015/01/beagle2-mars-colin-pillinger",
+      "editor": "Royal Society",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Beagle 2 Lander on Mars, With Panels Deployed – NASA Science",
+      "url": "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+      "editor": "NASA/JPL-Caltech / University of Arizona / University of Leicester",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle-2 on Mars – ESA Mars Express",
+      "url": "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+      "editor": "ESA / HiRISE / NASA",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "El dato [14] cita textualmente la fuente NASA (https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/) como '90.4 degrees east latitude', pero debería decir 'east longitude'. El borrador lo interpreta correctamente como 'longitud este', aunque la cita literal contiene un error tipográfico de la propia fuente.",
+    "El relato del borrador dice que el premio se creó 'pocas semanas después de su muerte', pero Colin Pillinger falleció en mayo de 2014 (dato [6]) y el premio se lanzó en diciembre de 2014 (dato [3]), lo cual son aproximadamente siete meses, no pocas semanas. No es contradicción entre fuentes, sino error del redactor al narrar."
+  ],
+  "huecos": [
+    "No se ha podido confirmar la causa técnica exacta por la que Beagle 2 no pudo establecer comunicación tras el aterrizaje (el silencio post-aterrizaje sigue sin explicación completa publicada en las fuentes leídas).",
+    "No se pudo confirmar si el proyecto Beagle 3 llegó a tener algún desarrollo formal o propuesta oficial posterior a las declaraciones de Judith Pillinger.",
+    "La fecha exacta del fallecimiento de Colin Pillinger dentro de mayo de 2014 no aparece especificada en ninguna de las fuentes leídas.",
+    "No se pudo verificar si el Premio Colin Pillinger International Exchanges Award ha tenido ganadores nombrados públicamente ni cuántas ediciones ha tenido.",
+    "El evento original no especifica que Judith Pillinger sea 'doctora' (título académico), aunque el dato [8] de la fuente de la Royal Society sí la llama 'Dr Judith Pillinger'; no es un hueco sino una precisión que el evento omite.",
+    "No se encontró en las fuentes consultadas información sobre qué impidió exactamente el despliegue completo de los paneles solares o la comunicación del Beagle 2 tras aterrizar."
+  ],
+  "ideas_visuales": [
+    "Imagen compuesta de HiRISE mostrando el Beagle 2 con paneles parcialmente desplegados en la superficie de Marte (basada en datos [12] y [15]).",
+    "Mapa de Isidis Planitia señalando la ubicación del Beagle 2 a 11,5°N y 90,4°E cerca del ecuador marciano (datos [11] y [14]).",
+    "Retrato o silueta de Colin Pillinger con referencias a la Open University y la Royal Society, simbolizando su trayectoria desde las muestras lunares de Apolo hasta Beagle 2 (datos [7] y [9]).",
+    "Infografía con la analogía futbolística: un balón golpeando el larguero con el Beagle 2 como balón y Marte como portería (datos [1] y [2]).",
+    "Línea de tiempo: lanzamiento 2003, silencio en Navidad 2003, fallecimiento de Pillinger mayo 2014, premio diciembre 2014, hallazgo enero 2015 (datos [6], [3], [10], [13])."
+  ],
+  "datos_no_verificados": []
+}

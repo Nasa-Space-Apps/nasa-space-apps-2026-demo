@@ -1,0 +1,143 @@
+{
+  "evento_id": "ins023",
+  "titulo": "Primera selfie de InSight (Sol 10, 6 de diciembre de 2018)",
+  "contexto_ampliado": "El 26 de noviembre de 2018, a las 11:52:59 a.m. hora del Pacífico, el lander InSight de la NASA aterrizó en Marte, en una llanura plana y suave llamada Elysium Planitia, cerca del ecuador marciano. InSight fue construido sobre el diseño probado del Mars Phoenix de la NASA y formó parte del Programa Discovery, gestionado por el Marshall Space Flight Center en Huntsville, Alabama. El lander fue fabricado por Lockheed Martin Space en Denver.\n\nApenas diez días después del aterrizaje, en el sol 10 de la misión (6 de diciembre de 2018), InSight tomó su primera selfie en Marte. La imagen fue capturada por la cámara IDC (Instrument Deployment Camera), ubicada en el codo del brazo robótico, que medía más de 5 pies 9 pulgadas (1,8 metros) de longitud. Se tomaron 11 fotografías individuales que luego se unieron digitalmente en un mosaico, dando lugar a la primera imagen completa del lander en la superficie marciana.\n\nLa selfie muestra la cubierta de InSight con sus instrumentos científicos todavía a bordo, los brazos de los sensores meteorológicos y la antena UHF. Un detalle revelador de esa primera imagen es que los paneles solares aparecen completamente limpios de polvo marciano, una condición que contrasta enormemente con el estado del lander hacia el final de su vida útil.\n\nJunto con la selfie, el equipo elaboró un segundo mosaico a partir de 52 imágenes individuales que cubren el llamado \"espacio de trabajo\" justo delante del lander, una zona de aproximadamente 4 metros por 2 metros (14 × 7 pies). En ese mosaico se señalan los lugares donde podrían colocarse el sismómetro SEIS (Seismic Experiment for Interior Structure) y la sonda de flujo de calor HP3 (Heat Flow and Physical Properties Package), los dos instrumentos principales de la misión. En esencia, este mosaico funcionó como el mapa que guiaría el despliegue científico de los meses siguientes.\n\nLa historia de las selfies de InSight permite también apreciar visualmente el paso del tiempo en Marte. La última selfie se tomó el 24 de abril de 2022, en el sol 1211 de la misión, y muestra al lander cubierto de mucho más polvo que en aquella primera imagen. La acumulación de polvo en las celdas solares redujo progresivamente la energía disponible. En mayo de 2022, el brazo robótico fue colocado en su posición de descanso definitiva, y el 15 de diciembre de 2022 la misión se dio oficialmente por terminada.",
+  "datos_reales": [
+    {
+      "afirmacion": "La primera selfie de InSight fue tomada el 6 de diciembre de 2018 (sol 10) con la Instrument Deployment Camera (IDC), ubicada en el codo del brazo robótico, y está compuesta por 11 imágenes unidas en un mosaico.",
+      "fuente_url": "https://science.nasa.gov/resource/insights-first-selfie/",
+      "cita": "The selfie was taken on Dec. 6, 2018 (sol 10). The selfie is made up of 11 images which were taken by its Instrument Deployment Camera, located on the elbow of its robotic arm. Those images are then stitched together into a mosaic.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En la primera selfie los paneles solares del lander están completamente libres de polvo marciano, en contraste con el estado al final de la misión.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "cita": "The first selfie, in which the solar panels are still completely dust-free, was taken on 6 December 2018 (Sol 10). The selfie consists of 11 images taken by the Instrument Deployment Camera at the elbow of the robot arm.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El mosaico del espacio de trabajo de InSight está compuesto por 52 imágenes individuales y cubre una zona de aproximadamente 4 metros por 2 metros (14 × 7 pies) frente al lander.",
+      "fuente_url": "https://photojournal.jpl.nasa.gov/catalog/PIA22874",
+      "cita": "This mosaic, made of 52 individual images from NASA's InSight lander, shows the workspace where the spacecraft will eventually set its science instruments. The workspace is roughly 14 by 7 feet (4 by 2 meters).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El mosaico del espacio de trabajo muestra la ubicación prevista para el sismómetro SEIS y la sonda de flujo de calor HP3.",
+      "fuente_url": "https://photojournal.jpl.nasa.gov/catalog/PIA22874",
+      "cita": "The lavender annotation shows where InSight's seismometer (called the Seismic Experiment for Interior Structure, or SEIS) and heat flow probe (called the Heat Flow and Physical Properties Package, or HP3) can be placed.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El brazo robótico de InSight medía más de 5 pies 9 pulgadas (1,8 metros) de longitud.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "InSight's robotic arm was over 5 feet 9 inches (1.8 meters) long.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El lander InSight fue construido sobre el diseño probado del Mars Phoenix de la NASA.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "The lander was built on the proven design of NASA's Mars Phoenix lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight aterrizó en Marte el 26 de noviembre de 2018 a las 11:52:59 a.m. hora del Pacífico, en Elysium Planitia.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Landed: Nov. 26, 2018, at 11:52:59 a.m. PT (2:52:59 p.m. ET)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sitio de aterrizaje Elysium Planitia se encuentra en el lado occidental de una llanura plana y suave, cerca del ecuador marciano.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "InSight landed near Mars' equator on the western side of a flat, smooth plain called Elysium Planitia.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La última selfie de InSight se tomó el 24 de abril de 2022 (sol 1211), y mostraba el lander cubierto de mucho más polvo que en la primera selfie.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "cita": "The last selfie was taken on 24 April 2022, the 1211th Mars day of the mission. The lander is now covered with much more dust than in its first selfie.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El polvo acumulado en las celdas solares redujo progresivamente la energía disponible; en mayo de 2022 el brazo fue colocado en su posición de descanso y la misión concluyó poco después.",
+      "fuente_url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "cita": "As InSight's dust-covered solar cells produced less and less energy, the team moved the lander's robotic arm to its resting position in May 2022 and had to declare the end of the mission shortly after.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La selfie muestra la cubierta del lander con sus instrumentos científicos, los brazos de sensores meteorológicos y la antena UHF.",
+      "fuente_url": "https://science.nasa.gov/resource/insights-first-selfie/",
+      "cita": "This is NASA InSight's first full selfie on Mars. It displays the lander's solar panels and deck. On top of the deck are its science instruments, weather sensor booms and UHF antenna.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "InSight forma parte del Programa Discovery de la NASA, gestionado por el Marshall Space Flight Center en Huntsville, Alabama; el lander fue construido por Lockheed Martin Space en Denver.",
+      "fuente_url": "https://science.nasa.gov/resource/insights-first-selfie/",
+      "cita": "InSight is part of NASA's Discovery Program, managed by the agency's Marshall Space Flight Center in Huntsville, Alabama. Lockheed Martin Space in Denver built the InSight spacecraft, including its cruise stage and lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La misión InSight finalizó el 15 de diciembre de 2022.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "End of Mission: Dec. 15, 2022",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "InSight's First Selfie (PIA22876) – NASA Science Resource",
+      "url": "https://science.nasa.gov/resource/insights-first-selfie/",
+      "editor": "NASA Science / JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "InSight Workspace Mosaic (PIA22874) – NASA JPL Photojournal",
+      "url": "https://photojournal.jpl.nasa.gov/catalog/PIA22874",
+      "editor": "NASA JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "First and last InSight selfies on Mars – DLR",
+      "url": "https://www.dlr.de/en/latest/news/2024/explanation-found-for-encrusting-of-the-martian-soil/first-and-last-insight-selfies-on-mars",
+      "editor": "German Aerospace Center (DLR)",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "InSight Lander – NASA Science Mission Page",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "El dato [6] afirma que InSight aterrizó 'en Elysium Planitia', pero la cita textual de esa fuente (https://science.nasa.gov/mission/insight/) solo menciona la fecha y hora del aterrizaje; la ubicación en Elysium Planitia está respaldada por el dato [7], no por la cita de [6]."
+  ],
+  "huecos": [
+    "El nombre 'Homestead Hollow' para describir la depresión sin rocas donde aterrizó InSight no pudo confirmarse en ninguna de las fuentes leídas; aparece en los datos del evento pero no en las páginas verificadas.",
+    "La fecha de publicación oficial de las imágenes (11 de diciembre de 2018, según la nota del evento) no fue confirmada en ninguna de las fuentes leídas; las páginas del fotojournal solo indican la fecha de toma (6 de diciembre de 2018).",
+    "Las especificaciones técnicas de la cámara IDC (resolución, distancia focal, sensor) no aparecen en las páginas leídas.",
+    "No se encontró en las fuentes leídas una descripción explícita de la textura o composición del terreno visible en el mosaico del espacio de trabajo (arena, sin rocas, depresión).",
+    "El evento original menciona que InSight aterrizó en 'una depresión casi sin rocas rellena de arena', pero ninguno de los datos del dossier describe la textura del terreno, la ausencia de rocas ni la presencia de arena en el sitio de aterrizaje.",
+    "El párrafo del borrador sobre los socios europeos (CNES/IPGP de Francia para SEIS, DLR de Alemania para HP3, CAB de España para sensores de viento) no está respaldado por ninguna de las citas del dossier; las fuentes del DLR se usaron pero las citas extraídas no mencionan la autoría de esos instrumentos."
+  ],
+  "ideas_visuales": [
+    "Vista de la primera selfie completa de InSight en sol 10: el lander con paneles solares limpios, instrumentos sobre la cubierta, brazos de sensores meteorológicos y antena UHF visibles.",
+    "Mosaico de 52 imágenes del espacio de trabajo (4 × 2 m) frente al lander, con las zonas anotadas para la colocación de SEIS y HP3.",
+    "El brazo robótico de 1,8 m de InSight extendido, con la cámara IDC visible en su codo, en posición de captura fotográfica.",
+    "Comparación lado a lado de la primera selfie (sol 10, paneles limpios) y la última selfie (sol 1211, lander cubierto de polvo).",
+    "Vista de Elysium Planitia: la llanura plana y suave cerca del ecuador marciano donde aterrizó InSight."
+  ],
+  "datos_no_verificados": []
+}

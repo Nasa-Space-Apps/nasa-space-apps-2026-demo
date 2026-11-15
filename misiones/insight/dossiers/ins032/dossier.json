@@ -1,0 +1,141 @@
+{
+  "evento_id": "ins032",
+  "titulo": "Primer sismo probable detectado en Marte – Sol 128 (6 de abril de 2019)",
+  "contexto_ampliado": "El 26 de noviembre de 2018, la sonda InSight de la NASA aterrizó en Elysium Planitia, una extensa planicie de Marte. Poco después, el 19 de diciembre de 2018, su brazo robótico colocó sobre la superficie marciana el sismómetro SEIS (Seismic Experiment for Interior Structure). Ese despliegue fue el primer sistema de colocación robótica de instrumentos de precisión con éxito en otro cuerpo astronómico desde las misiones Apolo. Para proteger al delicado instrumento de los vientos fuertes y los cambios extremos de temperatura de Marte, se le cubrió con un domo aislante construido por JPL llamado Wind and Thermal Shield.\n\nEl 6 de abril de 2019, cuando la misión llevaba 128 días marcianos (sols), SEIS captó una señal sísmica tenue que marcó un hito: era el primer temblor registrado que aparentemente provenía del interior de Marte, y no de fuerzas externas como el viento. Con ese registro, Marte se convirtió en el tercer cuerpo astronómico —tras la Tierra y la Luna— en el que se detectaba un sismo.\n\n¿Cómo fue posible captar una señal tan débil? La superficie marciana es extraordinariamente silenciosa. En la Tierra, el suelo vibra constantemente por el ruido sísmico que generan los océanos y el clima. En Marte, esa quietud permitió a SEIS percibir temblores muy tenues que en nuestro planeta pasarían completamente desapercibidos.\n\nA pesar de su importancia histórica, la señal del Sol 128 era demasiado pequeña para proporcionar datos sólidos sobre el interior marciano, que era uno de los objetivos principales de la misión. Sin embargo, su tamaño y su duración prolongada encajaban con el perfil de los sismos lunares detectados durante las misiones Apolo en la superficie de la Luna.\n\nMarte y la Luna no tienen placas tectónicas como la Tierra. En ambos cuerpos, los sismos son provocados por un proceso continuo de enfriamiento y contracción: con el tiempo, el estrés acumulado se vuelve lo bastante intenso como para fracturar la corteza, generando un temblor.\n\nEl evento del Sol 128 no fue un caso aislado de aquellas semanas. Se detectaron tres señales adicionales: en el Sol 105 (14 de marzo), Sol 132 (10 de abril) y Sol 133 (11 de abril). Estas tres señales, captadas por los sensores Very Broad Band de SEIS, eran aún más pequeñas que la del Sol 128 y de origen más ambiguo.\n\nSEIS fue aportado a la misión por la agencia espacial francesa CNES. Los primeros eventos sísmicos fueron identificados por el Marsquake Service, equipo liderado por el Instituto Federal de Tecnología de Suiza (ETH Zúrich). Gracias a la colaboración internacional y a la sensibilidad sin precedentes de SEIS, la sismología marciana dejó de ser una aspiración para convertirse en una disciplina con datos reales.",
+  "datos_reales": [
+    {
+      "afirmacion": "El primer sismo marciano probable fue registrado el 6 de abril de 2019, Sol 128 de la misión InSight.",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "The faint seismic signal, detected by the lander's Seismic Experiment for Interior Structure (SEIS) instrument, was recorded on April 6, the lander's 128th Martian day, or sol.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La señal fue el primer temblor registrado que aparentemente provino del interior del planeta, no de fuerzas en la superficie como el viento.",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "This is the first recorded trembling that appears to have come from inside the planet, as opposed to being caused by forces above the surface, such as wind.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sismómetro SEIS fue colocado sobre la superficie de Marte el 19 de diciembre de 2018.",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "InSight's seismometer, which the lander placed on the planet's surface on Dec. 19, 2018",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La señal del Sol 128 era demasiado pequeña para proporcionar datos sólidos sobre el interior marciano.",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "The new seismic event was too small to provide solid data on the Martian interior, which is one of InSight's main objectives.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La superficie marciana es extremadamente tranquila, lo que permite a SEIS captar temblores muy tenues que en la Tierra pasarían desapercibidos.",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "The Martian surface is extremely quiet, allowing SEIS, InSight's specially designed seismometer, to pick up faint rumbles. In contrast, Earth's surface is quivering constantly from seismic noise created by oceans and weather.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El evento del Sol 128 tenía un tamaño y una duración más larga que encajaban con el perfil de los sismos lunares detectados durante las misiones Apolo.",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "The Martian Sol 128 event is exciting because its size and longer duration fit the profile of moonquakes detected on the lunar surface during the Apollo missions",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se detectaron tres señales sísmicas adicionales: Sol 105 (14 de marzo), Sol 132 (10 de abril) y Sol 133 (11 de abril), todas más pequeñas y de origen más ambiguo.",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "Three other seismic signals occurred on March 14 (Sol 105), April 10 (Sol 132) and April 11 (Sol 133). Detected by SEIS' more sensitive Very Broad Band sensors, these signals were even smaller than the Sol 128 event and more ambiguous in origin.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Marte y la Luna no tienen placas tectónicas; sus sismos son causados por el enfriamiento y la contracción graduales que generan estrés hasta fracturar la corteza.",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "Mars and the Moon do not have tectonic plates, but they still experience quakes – in their cases, caused by a continual process of cooling and contraction that creates stress. This stress builds over time, until it is strong enough to break the crust, causing a quake.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El instrumento SEIS fue aportado por la agencia espacial francesa CNES; los primeros eventos sísmicos fueron identificados por el Marsquake Service, liderado por el Instituto Federal de Tecnología de Suiza (ETH Zúrich).",
+      "fuente_url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "cita": "The instrument was provided for InSight by the French space agency, Centre National d'Études Spatiales (CNES), while these first seismic events were identified by InSight's Marsquake Service team, led by the Swiss Federal Institute of Technology.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "SEIS está protegido por un escudo aislante llamado Wind and Thermal Shield, construido por JPL, que lo protege de los cambios extremos de temperatura y los vientos fuertes.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-insight-lander-captures-audio-of-first-likely-quake-on-mars/",
+      "cita": "InSight's instrument has several ingenious insulating barriers, including a cover built by JPL called the Wind and Thermal Shield, to protect it from the planet's extreme temperature changes and high winds.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sismo del Sol 128 fue el primer sismo detectado en un cuerpo astronómico que no fuera la Tierra ni la Luna.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20220008367",
+      "cita": "This is the first quake detected on an astronomical body other than Earth or the Moon.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El brazo robótico de InSight fue el primer sistema de despliegue robótico de instrumentos de precisión con éxito en otro cuerpo astronómico desde las misiones Apolo.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/20220008367",
+      "cita": "This paper describes NASA's first successful precision robotics instrument placement and release on another astronomical body since Apollo.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's InSight Detects First Likely 'Quake' on Mars",
+      "url": "https://science.nasa.gov/missions/insight/nasas-insight-detects-first-likely-quake-on-mars/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "InSight Lander – Mission Overview",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Robotics Instrument Deployment System Surface Operations for the InSight Mars Lander (NTRS 20220008367)",
+      "url": "https://ntrs.nasa.gov/citations/20220008367",
+      "editor": "NASA Technical Reports Server",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "NASA's InSight lander captures audio of first likely quake on Mars (press release)",
+      "url": "https://www.nasa.gov/news-release/nasas-insight-lander-captures-audio-of-first-likely-quake-on-mars/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [],
+  "huecos": [
+    "La magnitud numérica exacta del sismo del Sol 128 no aparece en ninguna de las fuentes leídas; los artículos solo lo describen cualitativamente como 'faint' (tenue) y 'too small'.",
+    "La causa exacta de la señal del Sol 128 no fue determinada en el momento de la publicación; la NASA indicó que los científicos seguían analizando los datos.",
+    "La fecha exacta en que NASA publicó el audio del sismo (mencionada en el evento como 23 de abril) no fue confirmada con una cita literal de las páginas leídas con leer_pagina; la fecha de 23 de abril aparece solo en fragmentos de búsqueda sin lectura completa.",
+    "El evento original no especifica que NASA publicó el audio 'el 23 de abril', pero ningún dato del dossier confirma ni desmiente esa fecha concreta; solo el hueco previo lo señala. No hay fuente que respalde la declaración de Bruce Banerdt sobre 'un campo completamente nuevo' ni la de Philippe Lognonné sobre que Marte sigue sísmicamente activo, ambas presentes en el relato original del borrador pero sin dato numerado que las sostenga.",
+    "El papel del IPGP (Institut de Physique du Globe de Paris) en la investigación de SEIS, mencionado en el relato del borrador, no está respaldado por ninguna cita literal de las fuentes consultadas."
+  ],
+  "ideas_visuales": [
+    "Brazo robótico de InSight depositando el sismómetro SEIS sobre la superficie de Marte (19 de diciembre de 2018), con el lander al fondo y el suelo plano de Elysium Planitia.",
+    "El domo aislante Wind and Thermal Shield cubriendo a SEIS en la superficie marciana, con indicaciones de su función contra el viento y la temperatura.",
+    "Gráfica estilizada de la señal sísmica del Sol 128: una onda tenue sobre un fondo silencioso, comparada con el ruido sísmico constante de la Tierra.",
+    "Diagrama del interior de Marte mostrando cómo el enfriamiento y la contracción generan estrés que fractura la corteza, causando un sismo.",
+    "Línea de tiempo visual con los cuatro eventos sísmicos detectados: Sol 105, Sol 128 (destacado como el principal), Sol 132 y Sol 133."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "InSight aterrizó en Marte el 26 de noviembre de 2018 en Elysium Planitia.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "Landed: Nov. 26, 2018, at 11:52:59 a.m. PT (2:52:59 p.m. ET)\n- Landing Site: Elysium Planitia, Mars",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

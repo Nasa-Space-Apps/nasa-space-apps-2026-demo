@@ -1,0 +1,138 @@
+{
+  "evento_id": "ins026",
+  "titulo": "SEIS se coloca sobre la superficie marciana (19 de diciembre de 2018)",
+  "contexto_ampliado": "El 26 de noviembre de 2018, el lander InSight de la NASA llegó a Marte. Antes de desplegar sus instrumentos, el equipo necesitaba estudiar con detalle el terreno que tenía delante. El 17 de diciembre de 2018 —apenas dos días antes del despliegue— las ubicaciones definitivas de los instrumentos fueron certificadas, aprobadas por los investigadores principales y seleccionadas por el proyecto.\n\nEl encargado de mover los instrumentos era el brazo robótico IDA (Instrument Deployment Arm), con un alcance de 1,8 metros y capacidad para levantar cargas de hasta 9 kg a 1,65 m de distancia en condiciones de gravedad marciana. La operación de colocar el sismómetro se dividió en cuatro pasos bien definidos: primero, alinear la garra del brazo sobre el gancho del instrumento en la cubierta del lander; segundo, abrir la garra y engancharla al instrumento; tercero, levantar el sismómetro de la cubierta y transportarlo hasta que hiciera contacto con la superficie en la ubicación elegida; y cuarto, soltar la garra y retirar el brazo. Todo el proceso de despliegue de SEIS se extendió entre los soles 19 y 25 de la misión.\n\nEl 19 de diciembre de 2018, el sismómetro SEIS quedó colocado sobre la superficie de Marte. Fue la primera vez en la historia que una nave espacial depositó robóticamente un sismómetro sobre la superficie de otro planeta. La imagen que registró el momento muestra el instrumento, de color cobrizo, posado sobre el suelo marciano y fue tomada alrededor del atardecer del planeta rojo.\n\nSEIS —acrónimo de Seismic Explorations for Interior Structure— fue proporcionado a la NASA por la agencia espacial francesa CNES. Su propósito es medir las ondas sísmicas producidas por maremotos (marsquakes), impactos de meteoritos y otros fenómenos. Al estudiar cómo esas ondas viajan por el interior de Marte, los científicos pueden deducir cómo están estratificadas la corteza, el manto y el núcleo del planeta.\n\nTras la colocación, el trabajo no había terminado. Entre los soles 26 y 36, el equipo científico de SEIS realizó tareas de nivelación y comprobación del instrumento, mientras el equipo de despliegue tomaba imágenes del hardware. Quedaba todavía una pieza fundamental por instalar: el escudo de viento y térmico (WTS, Wind and Thermal Shield), diseñado para aislar al sismómetro de los cambios de temperatura y del viento marciano.\n\nEl WTS fue desplegado semanas después, entre los soles 64 y 70. Aunque técnicamente era una operación más directa que la del propio sismómetro, tenía una exigencia crítica: debía colocarse sobre el SEIS sin que ninguna parte lo tocara. Cualquier contacto habría transmitido ruido de viento y variaciones térmicas al instrumento, arruinando la calidad de sus mediciones. La culminación de esta secuencia dejó a SEIS listo para escuchar el interior de Marte.",
+  "datos_reales": [
+    {
+      "afirmacion": "El sismómetro SEIS fue colocado por el lander InSight sobre la superficie de Marte el 19 de diciembre de 2018.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-insight-lander-captures-audio-of-first-likely-quake-on-mars/",
+      "cita": "InSight's seismometer, which the lander placed on the planet's surface on Dec. 19, 2018, will enable scientists to gather similar data about Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Fue la primera vez en la historia que una nave espacial colocó robóticamente un sismómetro sobre la superficie de otro planeta.",
+      "fuente_url": "https://science.nasa.gov/resource/seis-deployed-on-mars/",
+      "cita": "NASA's InSight lander placed its seismometer onto Mars on Dec. 19, 2018. This was the first time a spacecraft robotically placed a seismometer onto the surface of another planet.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La imagen del sismómetro colocado en el suelo marciano fue tomada alrededor del atardecer marciano.",
+      "fuente_url": "https://science.nasa.gov/resource/seis-deployed-on-mars/",
+      "cita": "The seismometer is the copper-colored object in this image, which was taken around Martian dusk.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El despliegue completo de SEIS sobre la superficie se extendió entre los soles 19 y 25 de la misión.",
+      "fuente_url": "https://link.springer.com/article/10.1007/s11214-023-00964-0",
+      "cita": "The SEIS was successfully deployed into the workspace between sols 19 to 25 as shown in Fig. 5.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El escudo de viento y térmico (WTS) fue desplegado sobre el sismómetro entre los soles 64 y 70 de la misión.",
+      "fuente_url": "https://link.springer.com/article/10.1007/s11214-023-00964-0",
+      "cita": "The WTS was successfully deployed between sols 64 and 70 (Fig. 6).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El despliegue de SEIS se dividió en cuatro pasos: alinear la garra, enganchar el instrumento, trasladarlo hasta el suelo, y soltar la garra y apartar el brazo.",
+      "fuente_url": "https://link.springer.com/article/10.1007/s11214-023-00964-0",
+      "cita": "The four steps of the deployment were: 1) align IDA grapple over the grapple hook of the instrument on the deck, 2) open the grapple and hook onto the instrument, 3) lift the instrument off of the deck and carry it all the way to contact with the surface at the commanded location, and 4) open the grapple and back off with IDA.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las ubicaciones definitivas de los instrumentos fueron certificadas y seleccionadas por el equipo el 17 de diciembre de 2018, dos días antes del despliegue.",
+      "fuente_url": "https://link.springer.com/article/10.1007/s11214-023-00964-0",
+      "cita": "The instrument placement locations (Fig. 4c) were certified, approved by the instrument Principal Investigators and selected by the project on 17 December 2018.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El brazo IDA tiene un alcance de 1,8 metros y puede levantar una carga de 9 kg a una distancia de 1,65 m sobre el suelo marciano.",
+      "fuente_url": "https://link.springer.com/article/10.1007/s11214-023-00964-0",
+      "cita": "It has a reach of 1.8 meters and can lift a 9 kg (33 N) payload at a distance of 1.65 m on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El brazo robótico del lander InSight medía más de 1,8 metros (5 pies 9 pulgadas) de longitud.",
+      "fuente_url": "https://science.nasa.gov/mission/insight/",
+      "cita": "InSight's robotic arm was over 5 feet 9 inches (1.8 meters) long. It lifted a seismometer and heat flow probe from the deck and placed them on the surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "SEIS mide las ondas sísmicas causadas por marsquakes, impactos de meteoritos y otros fenómenos para estudiar la corteza, el manto y el núcleo de Marte.",
+      "fuente_url": "https://science.nasa.gov/resource/seis-deployed-on-mars/",
+      "cita": "The seismometer, called Seismic Explorations for Interior Structure (SEIS), will measure seismic waves caused by marsquakes, meteorite strikes and other phenomena. Watching how these waves travel through Mars' interior will let scientists study how the planet's crust, mantle and core are layered.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El WTS (escudo de viento y térmico) tenía que colocarse sobre el SEIS sin tocarlo, ya que cualquier contacto habría transmitido ruido de viento y temperatura al instrumento.",
+      "fuente_url": "https://link.springer.com/article/10.1007/s11214-023-00964-0",
+      "cita": "Although the WTS was technically a more straightforward deployment than SEIS, as there was no tether weighing part of it down, it had to be placed over the SEIS without any contact. If any part of the SEIS, including the now expanded LSA, had been in contact with the WTS, it would have transmitted wind and thermal noise back into the SEIS.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Después de la colocación de SEIS, entre los soles 26 y 36 el equipo realizó tareas de nivelación y comprobación del instrumento.",
+      "fuente_url": "https://link.springer.com/article/10.1007/s11214-023-00964-0",
+      "cita": "From sols 26 to 36, the SEIS science team performed leveling and checkout activities while the IDS team imaged the hardware.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's InSight Lander Captures Audio of First Likely Quake on Mars",
+      "url": "https://www.nasa.gov/news-release/nasas-insight-lander-captures-audio-of-first-likely-quake-on-mars/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "SEIS Deployed on Mars – NASA Science",
+      "url": "https://science.nasa.gov/resource/seis-deployed-on-mars/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "InSight Lander – NASA Science Mission Page",
+      "url": "https://science.nasa.gov/mission/insight/",
+      "editor": null,
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Deployment of InSight Instruments – Golombek et al. 2023 (Space Science Reviews)",
+      "url": "https://link.springer.com/article/10.1007/s11214-023-00964-0",
+      "editor": "Space Science Reviews / Springer",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "El rango de soles para la colocación de SEIS difiere según la fuente: Golombek et al. 2023 (https://link.springer.com/article/10.1007/s11214-023-00964-0) indica 'sols 19 to 25' para el despliegue completo, mientras que múltiples fuentes NASA (https://www.nasa.gov/news-release/nasas-insight-lander-captures-audio-of-first-likely-quake-on-mars/ y https://science.nasa.gov/resource/seis-deployed-on-mars/) citan el 19 de diciembre de 2018 como la fecha en que el instrumento quedó sobre la superficie. Calculando desde el aterrizaje (26 de noviembre de 2018), el 19 de diciembre corresponde aproximadamente al sol 22, que cae dentro del rango Golombek pero no queda explícitamente confirmado en el texto leído del artículo científico como el sol específico del contacto final con el suelo.",
+    "El dato [7] del borrador traduce 'at a distance of 1.65 m on Mars' (https://link.springer.com/article/10.1007/s11214-023-00964-0) como 'a 1,65 m sobre el suelo marciano', interpretando la distancia como altura sobre el suelo. Sin embargo, 'on Mars' en la cita se refiere a las condiciones de gravedad marciana, y 'distance' probablemente indica alcance horizontal del brazo, no elevación. La narrativa del borrador refuerza esta lectura errónea."
+  ],
+  "huecos": [
+    "El número de sol exacto dentro del rango 19–25 en que la garra liberó el sismómetro y este tocó definitivamente el suelo marciano no queda explicitado en ninguno de los fragmentos leídos del artículo de Golombek et al. 2023 (la sección 5.4 completa fue truncada).",
+    "No se encontró el peso exacto del sismómetro SEIS en las páginas leídas (la cita de 9 kg del brazo IDA es la carga máxima del brazo, no necesariamente la masa de SEIS).",
+    "No se pudo acceder al contenido de la página JPL https://www.jpl.nasa.gov/news/nasas-insight-places-first-instrument-on-mars/ (devolvió texto vacío).",
+    "No se encontró en los fragmentos leídos la temperatura o las condiciones meteorológicas exactas del sol en que se realizó la colocación.",
+    "El borrador afirma que el brazo IDA tiene 'cuatro grados de libertad' y una 'garra de cinco dedos', pero ninguna cita del dossier respalda estos detalles técnicos.",
+    "El borrador menciona contribuciones de instituciones de Alemania, Suiza, el Reino Unido y el JPL al sismómetro SEIS, pero la única cita disponible (dato [9]) solo confirma la participación de CNES; el papel del IPGP y de los otros países no está respaldado por ninguna fuente del dossier.",
+    "El borrador incluye detalles sobre actividades en los soles 37, 40 y 56-59 (apertura de caja de cable, ensamblaje LSA, procedimiento de contingencia) y sobre la reducción del ruido en 'un orden de magnitud', pero ninguno de estos datos aparece en las citas recopiladas."
+  ],
+  "ideas_visuales": [
+    "El brazo robótico IDA extendido (1,8 m de alcance) con la garra alineándose sobre el sismómetro SEIS en la cubierta del lander, paso 1 del despliegue.",
+    "SEIS, de color cobrizo, recién depositado sobre el suelo marciano al atardecer, tal como lo muestra la imagen real tomada alrededor del crepúsculo.",
+    "Esquema de los cuatro pasos del despliegue: alinear, enganchar, transportar hasta el suelo, soltar y retirar el brazo.",
+    "El equipo de SEIS realizando tareas de nivelación y comprobación del instrumento en el suelo entre los soles 26 y 36.",
+    "El escudo de viento y térmico (WTS) siendo colocado sobre SEIS sin tocarlo, entre los soles 64 y 70, con una línea que muestre la separación crítica entre ambos."
+  ],
+  "datos_no_verificados": []
+}

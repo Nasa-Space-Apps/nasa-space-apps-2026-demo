@@ -1,0 +1,19 @@
+{
+  "id": "beagle2",
+  "nombre": "Beagle 2",
+  "tipo": "lander",
+  "cuerpo": "Marte",
+  "agencia": "ESA/Reino Unido",
+  "prefijo_eventos": "bgl",
+  "publico": "estudiantes de 5.º de secundaria (17 años)",
+  "sol": {
+    "sin_sol": true
+  },
+  "creada": "2026-11-15",
+  "fuentes_semilla": [
+    "https://sci.esa.int/web/mars-express/-/55264-beagle-2-on-mars",
+    "https://science.nasa.gov/resource/beagle-2-lander-on-mars-with-panels-deployed/",
+    "https://www.uahirise.org/ESP_039308_1915"
+  ],
+  "nota": "Misión de ESA/Reino Unido, no de la NASA: el vínculo con el reto es que HiRISE (Mars Reconnaissance Orbiter, NASA) lo localizó en 2015. Existe un vehículo ficticio 'beagle-2' en la demo web (src/lib/checkpoints-demo.ts); este pipeline no lo toca."
+}

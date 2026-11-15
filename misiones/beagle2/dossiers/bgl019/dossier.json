@@ -1,0 +1,146 @@
+{
+  "evento_id": "bgl019",
+  "titulo": "Mars Express suelta a Beagle 2 rumbo a Marte — 19 de diciembre de 2003",
+  "contexto_ampliado": "Tras un crucero interplanetario de 400 millones de kilómetros que comenzó con el lanzamiento el 2 de junio de 2003, la nave Mars Express de la Agencia Espacial Europea (ESA) y el pequeño módulo de aterrizaje Beagle 2 llegaron a las cercanías de Marte. El 19 de diciembre de 2003, a las 08:31 GMT, se produjo la separación física entre ambas naves: Beagle 2 quedó libre, girando solo en el espacio, con una masa de aterrizaje de apenas 72 libras (unos 33 kg).\n\nDías antes de ese momento crucial, los controladores de vuelo del Centro Europeo de Operaciones Espaciales (ESOC), en Darmstadt, Alemania, habían ejecutado una maniobra de apuntado de precisión con Mars Express. ¿Por qué era tan importante? Porque Beagle 2 no contaba con ningún sistema de propulsión propio para corregir su rumbo: el orbitador debía entregarlo en la trayectoria perfecta hacia su destino, la cuenca de Isidis Planitia, situada cerca del ecuador de Marte.\n\nEl dispositivo encargado de liberar a Beagle 2 fue el SUEM (Spin-Up and Ejection Mechanism), diseñado y construido por la empresa INSYS Limited. Su funcionamiento consistía en disparar un pasador explosivo que liberaba el sistema de retención, desconectaba el cordón umbilical eléctrico y permitía que un resorte guiado girara y eyectara al módulo fuera de Mars Express. Ese giro, similar al de una peonza, no era casual: servía para mantener a Beagle 2 estabilizado durante su vuelo libre hacia el planeta rojo.\n\nAproximadamente dos minutos después de la eyección, la cámara de monitoreo visual (VMC) del orbitador captó una imagen del pequeño módulo alejándose: sería la última vista de Beagle 2 desde Mars Express.\n\nLo que siguió fueron dos horas de completo silencio. La telemetría de Mars Express no estuvo disponible ni en el momento del despliegue ni durante las dos horas posteriores. Cuando los datos volvieron a fluir, los ingenieros necesitaron media hora adicional de análisis antes de que los responsables de la misión pudieran confirmar con certeza absoluta que la eyección había sido exitosa.\n\nCon la separación confirmada, comenzó la cuenta atrás hacia el día de Navidad. El aterrizaje en Isidis Planitia estaba previsto para las 02:54 GMT del 25 de diciembre de 2003, seis días después de la eyección. La primera oportunidad de recibir alguna señal del módulo llegaría a las 05:15 GMT, cuando la sonda Mars Odyssey de la NASA sobrevolara el lugar de aterrizaje para actuar como relé de comunicación.",
+  "datos_reales": [
+    {
+      "afirmacion": "La separación física entre Mars Express y Beagle 2 se produjo el 19 de diciembre de 2003 a las 08:31 GMT (03:31 EST).",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "The physical separation between the two spacecraft, which have spent six months flying as one since launching from Earth June 2, occurred as planned at 0831 GMT (3:31 a.m. EST).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante las dos horas siguientes a la eyección no hubo telemetría disponible, y una vez reanudada fue necesaria media hora más de análisis para confirmar que la eyección fue exitosa.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "Telemetry data was not available from Mars Express at the time of deploy or the subsequent two hours. When information did resume flowing, it took a half-hour for engineers to analyze the data before mission officials could confirm with absolute certainty that Beagle 2 was ejected safely.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Días antes de la separación, los controladores de vuelo del ESOC en Darmstadt ejecutaron una maniobra de apuntado de precisión con Mars Express para preparar la liberación del módulo.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "Earlier this week, flight controllers at the European Space Operations Center in Darmstadt, Germany, put Mars Express through a precision-pointing maneuver to prepare for the lander release.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Beagle 2 no contaba con ningún sistema de propulsión propio para modificar su trayectoria, por lo que el orbitador debía entregarlo en la trayectoria exacta.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "Beagle 2 has no propulsion system to change its course, meaning the orbiter had to deliver the lander on the perfect trajectory for its journey to the planet.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El mecanismo de separación fue el SUEM (Spin-Up and Ejection Mechanism), diseñado y construido por la empresa INSYS Limited.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "INSYS Limited designed and developed the so-called Spin-Up and Ejection Mechanism, or SUEM, that held Beagle 2 to Mars Express and then deployed the lander this morning.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La eyección se ejecutó disparando un pasador explosivo que liberó el sistema de retención, desconectó el umbilical eléctrico y permitió que un resorte guiado girara y eyectara a Beagle 2.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "This is performed by firing an explosive pin, which releases the ball latching system, separates the electrical umbilical connector and finally, allows a guided spring to spin up and eject Beagle 2 from Mars Express.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El mecanismo imprimió a Beagle 2 una rotación similar a la de una peonza para mantenerlo estabilizado durante su vuelo libre hacia Marte.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "The mechanism placed Beagle 2 in a rotating motion, like a spinning top, in an effort to keep it stabilized during the cruise to Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara de monitoreo visual (VMC) del orbitador captó una imagen de Beagle 2 aproximadamente dos minutos después de la eyección.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "The Visual Monitoring Camera aboard the orbiter captured this view of Beagle 2 about two minutes after deploy.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La masa de aterrizaje de Beagle 2 era de tan solo 72 libras (aproximadamente 33 kg).",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "With a landed mass of just 72 pounds, the minuscule craft has a daunting task ahead of it",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sitio de aterrizaje designado era Isidis Planitia, una cuenca situada cerca del ecuador de Marte.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "Beagle's landing site is Isidis Planitia, a basin located near the equator of Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El aterrizaje estaba previsto para las 02:54 GMT del día de Navidad, 25 de diciembre de 2003.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "Landing is expected around 0254 GMT Christmas Day (9:54 p.m. EST Dec. 24).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La sonda Mars Odyssey de la NASA sobrevolaría el lugar de aterrizaje a las 05:15 GMT del 25 de diciembre, constituyendo el primer posible relé de señal del módulo.",
+      "fuente_url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "cita": "NASA's Mars Odyssey spacecraft will fly over Beagle at 0515 GMT (12:15 a.m. EST), providing the first possible signal relay from the lander.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Beagle 2 fue liberado el 19 de diciembre y entró en la atmósfera marciana seis días después, como parte de un crucero interplanetario de 400 millones de kilómetros.",
+      "fuente_url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_no_signal_from_Beagle_2_so_far",
+      "cita": "Beagle 2 was released on 19 December on a course towards the Red Planet by Mars Express, the mothership for the 400 million kilometre interplanetary cruise. Six days later it entered the Martian atmosphere",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El blog de la misión Mars Express de la ESA confirma que Beagle 2 fue eyectado el 19 de diciembre de 2003.",
+      "fuente_url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+      "cita": "The spacecraft was ejected from Mars Express on 19 December 2003.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Beagle 2 released to hunt for life on Martian surface",
+      "url": "https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html",
+      "editor": "Spaceflight Now (Justin Ray y Stephen Clark)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Mars Express: no signal from Beagle 2 so far",
+      "url": "https://www.esa.int/Newsroom/Press_Releases/Mars_Express_no_signal_from_Beagle_2_so_far",
+      "editor": "ESA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Beagle retrospective (ESA Mars Express Blog)",
+      "url": "https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/",
+      "editor": "ESA Mars Express Blog",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "FECHA DE SEPARACIÓN — El evento señala que un comunicado de ESA de junio de 2003 preveía la separación para el 20 de diciembre, pero todas las fuentes posteriores consultadas coinciden en el 19 de diciembre: Spaceflight Now (https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html), el comunicado oficial de ESA tras el aterrizaje (https://www.esa.int/Newsroom/Press_Releases/Mars_Express_no_signal_from_Beagle_2_so_far) y el blog ESA Mars Express (https://blogs.esa.int/mex/2015/01/16/beagle-retrospective/). No se pudo acceder al comunicado original de junio de 2003 para verificar si realmente indicaba el día 20.",
+    "El evento original indica que la confirmación llegó 'tras unas dos horas sin telemetría', lo cual podría interpretarse como que bastaron esas dos horas. Sin embargo, el dato [1] (Spaceflight Now: https://www.spaceflightnow.com/mars/marsexpress/031219deploy.html) precisa que, además de las dos horas sin telemetría, fue necesaria media hora adicional de análisis para confirmar la eyección. No es una contradicción directa, pero el evento original omite esa media hora extra."
+  ],
+  "huecos": [
+    "No se localizó ni accedió al comunicado de ESA de junio de 2003 que supuestamente preveía la separación el 20 de diciembre; sin esa URL no es posible verificar directamente el origen de la discrepancia de fechas.",
+    "No se confirmó la causa exacta por la que la separación se adelantó un día respecto a la planificación de junio de 2003 (si cambió la estrategia de trayectoria o si la fecha original era simplemente una estimación).",
+    "No se pudo confirmar si la maniobra de apuntado de precisión de días previos se realizó en un único quemado o en varias sesiones, ni la duración exacta de dicha maniobra.",
+    "No se verificó la masa total del módulo con su escudo térmico y paracaídas integrados; solo se dispone de la 'masa de aterrizaje' de 72 libras (~33 kg).",
+    "No se confirmó la velocidad de rotación exacta (rpm) que el SUEM imprimió a Beagle 2 tras la eyección.",
+    "El relato del borrador menciona que Beagle 2 'buscaba evidencia de vida pasada en Marte' y que fue hallado en 2015 por la cámara HiRISE parcialmente desplegado, pero ninguno de los datos numerados respalda esas afirmaciones; quedan fuera del dossier verificado.",
+    "No se confirmó con fuentes la velocidad de separación (en m/s) que el SUEM imprimió a Beagle 2 al momento de la eyección."
+  ],
+  "ideas_visuales": [
+    "Diagrama del mecanismo SUEM mostrando el pasador explosivo, el sistema de retención, el umbilical eléctrico y el resorte guiado, con etiquetas explicativas.",
+    "Imagen de la cámara VMC de Mars Express captando a Beagle 2 alejándose dos minutos después de la eyección, con el espacio negro de fondo.",
+    "Mapa de Marte señalando Isidis Planitia cerca del ecuador, con la trayectoria curva de Beagle 2 desde la separación hasta la entrada atmosférica.",
+    "Línea de tiempo visual: lanzamiento (2 de junio) → maniobra de apuntado → separación (19 de diciembre, 08:31 GMT) → dos horas sin telemetría → confirmación → aterrizaje previsto (25 de diciembre, 02:54 GMT).",
+    "Ilustración comparativa del tamaño de Beagle 2 (33 kg de masa de aterrizaje) junto a un objeto cotidiano de referencia, como una maleta de cabina."
+  ],
+  "datos_no_verificados": []
+}

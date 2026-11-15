@@ -1,0 +1,183 @@
+[
+ {
+  "fecha_inicio": "2003",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Los instrumentos del paquete científico de Beagle 2",
+  "detalle": "El brazo robótico PAW, de 109 cm extendido, llevaba cámaras estéreo, microscopio, espectrómetros Mössbauer y de rayos X, un taladro y una lámpara. El paquete GAP debía medir isótopos de carbono y metano, y el 'topo' PLUTO estaba pensado para excavar hasta 1,5 m. Toda la carga científica pesaba 9 kg.",
+  "datos_clave": [
+   "PAW: 109 cm extendido, alcance de unos 70 cm",
+   "Microscopio con resolución de 6 µm",
+   "GAP: isótopos de carbono y metano",
+   "PLUTO: hasta 1,5 m de profundidad, cable de 3 m",
+   "Carga científica: 9 kg"
+  ],
+  "etapa": "Diseño del laboratorio",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "desarrollo",
+  "discutido": true,
+  "nota": "Solo se dispone de Wikipedia (pista); otras fuentes de este mismo tema pueden dar cifras distintas.",
+  "fuentes": [
+   {
+    "titulo": "Beagle 2",
+    "editor": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Beagle_2",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "1998",
+  "fecha_fin": null,
+  "precision_fecha": "aproximada",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Socios industriales y universitarios que construyeron el módulo",
+  "detalle": "Además de Open University, Leicester y Astrium, Martin-Baker se encargó del sistema de entrada, descenso y aterrizaje y Logica del software de crucero y descenso. SCISYS hizo el segmento terrestre y el software del módulo, la Universidad de Gales en Aberystwyth el brazo robótico y McLaren Applied Technologies los materiales compuestos de los paneles solares.",
+  "datos_clave": [
+   "Martin-Baker: entrada, descenso y aterrizaje",
+   "Logica: software de crucero y descenso",
+   "SCISYS: segmento terrestre y software",
+   "Aberystwyth: brazo robótico",
+   "McLaren Applied Technologies: paneles solares"
+  ],
+  "etapa": "Quién hizo qué",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "desarrollo",
+  "discutido": false,
+  "nota": "Las fechas de incorporación de cada socio no aparecen en la fuente; se usa 1998 como fecha aproximada.",
+  "fuentes": [
+   {
+    "titulo": "Beagle 2",
+    "editor": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Beagle_2",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2003",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Escudo térmico NORCOAT y diseño de entrada: 69 kg al lanzamiento, 33,2 kg al aterrizar",
+  "detalle": "El escudo era de material ablativo NORCOAT fabricado por EADS y debía soportar un calentamiento máximo estimado de 100 W/cm2. El módulo entraba a unos 20 000 km/h; la masa total de 69 kg al lanzamiento incluía escudo, paracaídas y airbags, y quedaban 33,2 kg al aterrizar.",
+  "datos_clave": [
+   "Escudo NORCOAT (EADS)",
+   "Pico de calentamiento estimado: 100 W/cm2",
+   "Velocidad de entrada: unos 20 000 km/h",
+   "Masa: 69 kg al lanzamiento, 33,2 kg al aterrizar"
+  ],
+  "etapa": "Diseño de entrada",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "desarrollo",
+  "discutido": false,
+  "nota": null,
+  "fuentes": [
+   {
+    "titulo": "Beagle 2",
+    "editor": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Beagle_2",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2003",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Una carta de calibración firmada por Damien Hirst viaja a Marte",
+  "detalle": "El artista Damien Hirst cedió un diseño de puntos de colores como carta de calibración para los instrumentos de imagen de Beagle 2. Pillinger lo reclutó en parte para atraer atención pública hacia la misión.",
+  "datos_clave": [
+   "Autor: Damien Hirst",
+   "Función: calibrar instrumentos de color",
+   "Reclutado también por publicidad"
+  ],
+  "etapa": "Arte y divulgación",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "hito",
+  "discutido": true,
+  "nota": "Una búsqueda mencionó una obra de mano sobre aluminio titulada 'DHS 667 MARS', pero no pude confirmarlo en una página abierta; no se incluye.",
+  "fuentes": [
+   {
+    "titulo": "Britain's great Martian adventure",
+    "editor": "Science Museum Group",
+    "url": "https://blog.sciencemuseum.org.uk/britains-great-martian-adventure/",
+    "tipo": "libro/medio",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   },
+   {
+    "titulo": "Beagle 2",
+    "editor": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Beagle_2",
+    "tipo": "comunitaria",
+    "verificacion": "página abierta (resumen automático de la herramienta)"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2000",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Requisitos de diseño de los airbags: 33 kg, 30 m/s y 200 g",
+  "detalle": "Un trabajo de análisis de elementos finitos (LS-DYNA) optimizó los airbags de Beagle 2 con estos requisitos: módulo de 33 kg, velocidad de descenso final de 30 m/s y desaceleración máxima de 200 g.",
+  "datos_clave": [
+   "Masa: 33 kg",
+   "Velocidad terminal de descenso: 30 m/s",
+   "Desaceleración máxima: 200 g",
+   "Método: LS-DYNA"
+  ],
+  "etapa": "Pruebas y diseño de aterrizaje",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "pruebas",
+  "discutido": false,
+  "nota": "El PDF devolvió error 503 al abrirlo; solo se vio el extracto del buscador. Año tomado del nombre de la conferencia (2000).",
+  "fuentes": [
+   {
+    "titulo": "Design Optimization of the Beagle II Mars Lander Airbags",
+    "editor": "Dynalook (conferencia 2000)",
+    "url": "https://www.dynalook.com/conferences/international-conf-2000/session18-2.pdf",
+    "tipo": "científica",
+    "verificacion": "solo extracto de búsqueda"
+   }
+  ]
+ },
+ {
+  "fecha_inicio": "2002",
+  "fecha_fin": null,
+  "precision_fecha": "año",
+  "sol": null,
+  "sol_texto": null,
+  "titulo": "Un nuevo paracaídas en tres meses y prueba de caída desde globo",
+  "detalle": "Según una fuente del sector, la dirección del programa concluyó que los airbags no resistirían la velocidad de impacto original y se necesitaba una caída más lenta. Astrium desarrolló y probó un nuevo paracaídas principal en unos tres meses, y una prueba de lanzamiento desde un globo cerró la serie de ensayos.",
+  "datos_clave": [
+   "Desarrollo y prueba: unos 3 meses",
+   "Prueba de caída desde plataforma de globo (2002)",
+   "Responsable: Astrium"
+  ],
+  "etapa": "Pruebas de calificación",
+  "fase": "planificacion_y_desarrollo",
+  "categoria": "pruebas",
+  "discutido": true,
+  "nota": "Solo extracto de búsqueda; la URL redirigía en bucle. Las fechas exactas no se confirmaron.",
+  "fuentes": [
+   {
+    "titulo": "Astrium Develops New High Performance Parachute For Beagle 2",
+    "editor": "Energy Daily / Mars Daily",
+    "url": "https://www.energy-daily.com/reports/Astrium_Develops_New_High_Performance_Parachute_For_Beagle_2.html",
+    "tipo": "prensa",
+    "verificacion": "solo extracto de búsqueda"
+   }
+  ]
+ }
+]

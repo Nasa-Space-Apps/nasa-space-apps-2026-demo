@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.15665184999999998,
+  "turnos": 7,
+  "duracion_s": 88.9,
+  "duracion_api_s": 71.4,
+  "tokens": {
+    "input_tokens": 5,
+    "cache_creation_input_tokens": 8293,
+    "cache_read_input_tokens": 12947,
+    "output_tokens": 8008,
+    "output_tokens_details": {
+      "thinking_tokens": 3059
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8293
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1374,
+      "outputTokens": 32,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001534,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 5,
+      "outputTokens": 8008,
+      "cacheReadInputTokens": 12947,
+      "cacheCreationInputTokens": 8293,
+      "webSearchRequests": 0,
+      "costUSD": 0.15511785,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 3059,
+      "cacheCreationEphemeral5mInputTokens": 8293,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 1,
+    "leer_pagina": 4,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "4",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.11231075,
+    "turnos": 2,
+    "duracion_s": 38.3,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4007,
+        "outputTokens": 29,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004152,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 3073,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5011,
+        "webSearchRequests": 0,
+        "costUSD": 0.10815875,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 1238,
+        "cacheCreationEphemeral5mInputTokens": 5011,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 13,
+      "datos_despues": 13,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 4,
+      "observaciones": "Se eliminaron del relato todos los detalles no respaldados por citas (universidad de Swansea, instrumentos de Beagle 2, fecha exacta del 25 de diciembre, cita inventada de Giménez). Se corrigió «Gloucestershire» por «Bristol» según la fuente."
+    }
+  },
+  "costo_usd_referencia_total": 0.2689626,
+  "costos": {
+    "total_usd": 0.268963,
+    "por_paso": {
+      "investigacion": 0.156652,
+      "revision": 0.112311
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.005686,
+        "entrada": 5381,
+        "salida": 61,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.155118,
+        "entrada": 5,
+        "salida": 8008,
+        "cache_leida": 12947,
+        "cache_escrita": 8293,
+        "razonamiento": 3059
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.108159,
+        "entrada": 3,
+        "salida": 3073,
+        "cache_leida": 0,
+        "cache_escrita": 5011,
+        "razonamiento": 1238
+      }
+    }
+  }
+}

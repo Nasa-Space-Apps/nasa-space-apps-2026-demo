@@ -1,0 +1,155 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.19157475000000002,
+  "turnos": 8,
+  "duracion_s": 76.4,
+  "duracion_api_s": 75.2,
+  "tokens": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 17073,
+    "cache_read_input_tokens": 31570,
+    "output_tokens": 7747,
+    "output_tokens_details": {
+      "thinking_tokens": 2174
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 17073
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1702,
+      "outputTokens": 31,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001857,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 6,
+      "outputTokens": 7747,
+      "cacheReadInputTokens": 31570,
+      "cacheCreationInputTokens": 17073,
+      "webSearchRequests": 0,
+      "costUSD": 0.18971775000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 2174,
+      "cacheCreationEphemeral5mInputTokens": 17073,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 6,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "4",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.11685099999999998,
+    "turnos": 2,
+    "duracion_s": 38.7,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4536,
+        "outputTokens": 35,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004711,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 3100,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5540,
+        "webSearchRequests": 0,
+        "costUSD": 0.11213999999999999,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 1253,
+        "cacheCreationEphemeral5mInputTokens": 5540,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 12,
+      "datos_despues": 11,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 3,
+      "observaciones": "Se descartó el dato [11] porque su afirmación menciona «espectrómetro de masa y cromatografía de gases» sin respaldo en la cita, que solo habla de proporciones isotópicas. También se detectó una discrepancia terminológica entre «airbags» (evento y Wikipedia) y «globo que se desinfla» (NASA Astrobiology) para el sistema de aterrizaje."
+    }
+  },
+  "costo_usd_referencia_total": 0.30842575,
+  "costos": {
+    "total_usd": 0.308426,
+    "por_paso": {
+      "investigacion": 0.191575,
+      "revision": 0.116851
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006568,
+        "entrada": 6238,
+        "salida": 66,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.189718,
+        "entrada": 6,
+        "salida": 7747,
+        "cache_leida": 31570,
+        "cache_escrita": 17073,
+        "razonamiento": 2174
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.11214,
+        "entrada": 3,
+        "salida": 3100,
+        "cache_leida": 0,
+        "cache_escrita": 5540,
+        "razonamiento": 1253
+      }
+    }
+  }
+}
