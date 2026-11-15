@@ -82,6 +82,23 @@ function beagle2(p: VehiclePalette): VehicleRig {
   return b.finish({ halfLen: 4.4, halfWid: 4.4 });
 }
 
+/** Surveyor 3: three light legs under a triangular frame, a thick mast and a big tilted dark solar panel with a light frame. */
+function surveyor3(p: VehiclePalette): VehicleRig {
+  const b = new Kit(p);
+  for (let k = 0; k < 3; k++) {
+    const a = (k * Math.PI * 2) / 3;
+    const [sx, cz] = [Math.sin(a), Math.cos(a)];
+    b.tube([sx * 1.8, 3.6, cz * 1.8], [sx * 4.6, 0.3, cz * 4.6], 0.4, { tone: LIGHT, seg: 6 });
+    b.ball(0.8, sx * 4.6, 0.7, cz * 4.6, { tone: DARK });
+  }
+  b.cyl(2.5, 1.0, "y", 0, 3.7, 0, { tone: MID, seg: 6 });
+  b.box(2.6, 1.6, 2.2, -1.6, 4.5, -1, { tone: LIGHT, r: 0.3 }); // thermal compartment
+  b.tube([0, 3.8, 0], [0, 8.2, 0], 0.55, { tone: LIGHT, seg: 6 });
+  b.box(7, 0.55, 5.6, 0, 8.7, -0.2, { tone: LIGHT, rot: [-0.38, 0, 0] });
+  b.box(6.3, 0.62, 4.9, 0, 8.76, -0.2, { tone: DARK, rot: [-0.38, 0, 0] });
+  return b.finish({ halfLen: 4.6, halfWid: 4.6 });
+}
+
 /** The globe marker of a vehicle model: a few primitives in one mesh, one material. `dispose()` when done. */
 export function buildMarker(model: VehicleModel, palette: VehiclePalette): VehicleRig {
   if (model === "sev") return sev(palette);
@@ -89,5 +106,6 @@ export function buildMarker(model: VehicleModel, palette: VehiclePalette): Vehic
   if (model === "ingenuity") return ingenuity(palette);
   if (model === "insight") return insight(palette);
   if (model === "beagle2") return beagle2(palette);
+  if (model === "surveyor3") return surveyor3(palette);
   return rover(palette, { len: 6.6, wheel: 1.5, mast: 3.4 }); // opportunity, spirit
 }

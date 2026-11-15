@@ -6,6 +6,7 @@ import { opportunity } from "./vehicles/opportunity";
 import { perseverance } from "./vehicles/perseverance";
 import { sev } from "./vehicles/sev";
 import { spirit } from "./vehicles/spirit";
+import { surveyor3 } from "./vehicles/surveyor3";
 
 /**
  * Procedural vehicles in the flat illustration style (see docs/design.md): every surface is one of THREE tones of one hue (dark / mid / light),
@@ -13,7 +14,7 @@ import { spirit } from "./vehicles/spirit";
  * with proportions measured on the reference GLBs of public/models.
  */
 export type { VehiclePalette, VehicleRig };
-export type VehicleModel = "opportunity" | "sev" | "perseverance" | "spirit" | "ingenuity" | "insight" | "beagle2";
+export type VehicleModel = "opportunity" | "sev" | "perseverance" | "spirit" | "ingenuity" | "insight" | "beagle2" | "surveyor3";
 
 export function buildVehicle(model: VehicleModel, palette: VehiclePalette): VehicleRig {
   if (model === "sev") return sev(palette);
@@ -22,5 +23,6 @@ export function buildVehicle(model: VehicleModel, palette: VehiclePalette): Vehi
   if (model === "ingenuity") return ingenuity(palette);
   if (model === "insight") return insight(palette);
   if (model === "beagle2") return beagle2(palette);
+  if (model === "surveyor3") return surveyor3(palette);
   return opportunity(palette);
 }

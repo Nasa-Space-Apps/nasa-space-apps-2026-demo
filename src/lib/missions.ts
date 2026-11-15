@@ -1,7 +1,7 @@
 import { THEME } from "./themes";
 import type { TerrainStyle } from "./terrain";
 import { PERSEVERANCE_CHECKPOINTS, SEV_CHECKPOINTS, type Checkpoint } from "./checkpoints";
-import { BEAGLE2_CHECKPOINTS, INSIGHT_CHECKPOINTS, SPIRIT_CHECKPOINTS } from "./checkpoints-demo";
+import { BEAGLE2_CHECKPOINTS, INSIGHT_CHECKPOINTS, SPIRIT_CHECKPOINTS, SURVEYOR3_CHECKPOINTS } from "./checkpoints-demo";
 import { storyOf } from "./story";
 import type { VehicleModel, VehiclePalette } from "./vehicles";
 
@@ -76,6 +76,31 @@ export const MISSIONS: Mission[] = [
     tracks: MARS_TRACKS,
     checkpoints: storyOf("opportunity")!.checkpoints, // the real story: 13 Mars events (public/models/opportunity/story.json); the 5 before the landing are comic pages
     checkpointRadius: 15, // 13 stops 36–130 u apart
+  },
+  {
+    // 3D model first: placeholder route and text (lib/checkpoints-demo.ts), the real story comes later. Drives on the same Moon terrain as the SEV.
+    id: "surveyor-3",
+    name: "Surveyor 3 · Moon (demo)",
+    title: "Surveyor 3 · Oceanus Procellarum (demo)",
+    terrainUrl: "/models/moon-terrain.stl",
+    terrain: MOON_TERRAIN,
+    rover: {
+      model: "surveyor3",
+      palette: { dark: "#5C7A1F", mid: "#B3CC6A", light: "#F1F7DC", bg: THEME.paperLight }, // olive
+      maxSpeed: 14, boostSpeed: 26,
+      heading: -Math.PI * 0.75,
+    },
+    env: {
+      sky: THEME.canvas,
+      fogNear: 70,
+      fogFar: 270,
+      hemi: ["#ffffff", "#B9B4E8", 0.8],
+      sun: { color: "#ffffff", intensity: 2.5, offset: [55, 75, 40] },
+    },
+    dust: { color: "#E9E2F8", drag: 0.5, lift: -4, up: 0.8, life: 0.8, size: 0.75, alpha: 0.55 },
+    tracks: { color: "#4B4660", opacity: 0.35 },
+    checkpoints: SURVEYOR3_CHECKPOINTS,
+    checkpointRadius: 14,
   },
   {
     id: "sev",

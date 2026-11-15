@@ -316,6 +316,14 @@ El usuario pidió: generalizar los scripts (otras misiones con el mismo estilo),
 - **Purga:** fotos PIA y `images.json` de `public/models/ingenuity/images`, `INGENUITY_CHECKPOINTS` y `public/images/checkpoints/mars-ingenuity-*.jpg`.
 - Verificado en el navegador: cómic (sin errores de consola), 3D con tarjeta, fuentes y minimapa de 13 paradas, y epílogo con la tarjeta final. `tsc` y `lint` limpios. **Sin probar:** conducir las 13 paradas con el helicóptero ni escuchar los 20 clips.
 
+### 41. Surveyor 3: primero el 3D
+El usuario pidió **adelantar el modelo 3D** de Surveyor 3 (la información de la misión llegará después): buscar imágenes, dibujarlo, ponerlo en el globo y poder verlo en la escena 3D, **sin checkpoints, narración ni nada más** (valía información falsa).
+- **Referencias** (vistas en el navegador, sin descargar nada): foto del Apollo 12 junto a la sonda (AS12-48-7133, NASA/JSC), el modelo de ingeniería del National Air and Space Museum (vistas frontal y desde abajo, en la página de Wikipedia de Surveyor 3) y la descripción de Wikipedia/NASA (marco tetraédrico de tubos de aluminio, mástil con panel solar y antena plana de alta ganancia, cámara de TV con espejo, brazo muestreador, ~3 m de alto, 4,3 m entre patas). No hay GLB: las proporciones se tomaron de las fotos (2,2 unidades por metro).
+- **Modelo:** `src/lib/vehicles/surveyor3.ts` (Kit; trípode de tres patas con amortiguador y estabilizador, marco triangular, dos compartimentos térmicos, mástil con arriostrado, cámara + espejo, antena plana, panel solar inclinado con celdas, dos antenas omni con cono, tres motores vernier y brazo pantógrafo con la cuchara). **Ficción como InSight:** una rueda bajo cada pata para que pueda conducir (una delante, dos detrás). Versión mini para el globo en `mini.ts`. Paleta oliva.
+- **Misión y globo:** `surveyor-3` en `missions.ts` (terreno de la Luna, el de SEV) y en `bodies.ts` (Oceanus Procellarum, 3,016° S 23,418° O; hechos reales: aterrizó el 20 abr 1967, visitado por el Apollo 12 el 19 nov 1969, 6 315 imágenes). Ruta `/moon/surveyor-3`.
+- **Placeholders:** `SURVEYOR3_CHECKPOINTS` (`checkpoints-demo.ts`, `demo: true`): 2 paradas con texto inventado y fotos/clips tomados de la historia de SEV, solo para que la escena tenga ruta. **No se grabó audio.** Cuando llegue la información real: sustituirlas (receta en [themes-and-missions.md](themes-and-missions.md)), quitar «(demo)» del nombre y de `bodies.ts`.
+- Verificado en el navegador: la escena 3D (modelo, selector de vehículo, tarjeta, minimapa) y que el marcador aparece en el globo. **Sin probar:** la tarjeta del globo (gira solo y no se pudo pinchar con fiabilidad), conducir las dos paradas y ver el modelo de frente/de atrás. `tsc` y `lint` limpios.
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |
