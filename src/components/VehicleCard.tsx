@@ -15,6 +15,7 @@ export default function VehicleCard({
   mission,
   vehicle,
   bodyName,
+  soon,
   onTravel,
   onClose,
 }: {
@@ -22,6 +23,7 @@ export default function VehicleCard({
   mission: Mission;
   vehicle: AbandonedVehicle;
   bodyName: string;
+  soon: boolean; // the vehicle has no story yet: «coming soon» instead of the way in (its 3D demo is not open)
   onTravel: () => void;
   onClose: () => void;
 }) {
@@ -31,7 +33,7 @@ export default function VehicleCard({
   const nudge = useRef<HTMLSpanElement>(null);
   useEffect(() => {
     const el = nudge.current;
-    if (!el || reducedMotion()) return;
+    if (soon || !el || reducedMotion()) return;
     const a = el.animate(
       [
         { transform: "translateX(0)", offset: 0 },
@@ -44,7 +46,7 @@ export default function VehicleCard({
       { duration: 2600, iterations: Infinity, easing: "ease-out" },
     );
     return () => a.cancel();
-  }, []);
+  }, [soon]);
 
   return (
     <div style={{ ...panel, padding: 12, fontFamily: theme.font, rotate: "0.6deg" /* a page floating beside its vehicle */ }} className="w-full select-none">
@@ -73,12 +75,21 @@ export default function VehicleCard({
           ))}
         </div>
 
-        <button type="button" className="ui-btn" onClick={onTravel} style={{ marginTop: 18, marginBottom: 4, width: "100%", justifyContent: "space-between" }}>
-          Travel to the past
-          <span ref={nudge} className="flex">
-            <Icon className="ui-arrow" name="arrow-right" size={18} />
-          </span>
-        </button>
+        {soon ? (
+          <>
+            <button type="button" className="ui-btn is-ghost" disabled aria-disabled="true" style={{ marginTop: 18, marginBottom: 4, width: "100%", justifyContent: "center" }}>
+              Coming soon
+            </button>
+            <p style={{ ...text, margin: "6px 4px 4px", fontSize: 12, color: theme.muted, textAlign: "center" }}>Its story is still being researched.</p>
+          </>
+        ) : (
+          <button type="button" className="ui-btn" onClick={onTravel} style={{ marginTop: 18, marginBottom: 4, width: "100%", justifyContent: "space-between" }}>
+            Travel to the past
+            <span ref={nudge} className="flex">
+              <Icon className="ui-arrow" name="arrow-right" size={18} />
+            </span>
+          </button>
+        )}
       </div>
     </div>
   );

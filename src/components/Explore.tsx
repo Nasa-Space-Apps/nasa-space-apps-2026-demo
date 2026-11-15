@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { BODIES } from "@/lib/bodies";
 import { MISSIONS } from "@/lib/missions";
 import { PERF } from "@/lib/perf";
+import { storyOf } from "@/lib/story";
 import { THEME as theme } from "@/lib/themes";
 import { ease } from "@/lib/ui";
 import Ambient, { AmbientButton } from "./Ambient";
@@ -86,7 +87,7 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
     window.history.pushState(null, "", `/${id}`); // Next syncs usePathname with the History API
   };
   const travel = () => {
-    if (!cardMission || leaving) return;
+    if (!cardMission || leaving || !storyOf(cardMission.id)) return; // vehicles without a story are «coming soon»: no way into their demo 3D
     setLeaving(true);
     timer.current = window.setTimeout(() => router.push(`/${body.id}/${cardMission.id}`), theme.dur.base + 150);
   };
@@ -184,7 +185,7 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
             to="scale(0.6) rotate(5deg) translateX(-20px)"
             style={{ pointerEvents: picked !== null ? "auto" : "none" }}
           >
-            <VehicleCard theme={theme} mission={cardMission} vehicle={cardVehicle} bodyName={body.name} onTravel={travel} onClose={() => select(null)} />
+            <VehicleCard theme={theme} mission={cardMission} vehicle={cardVehicle} bodyName={body.name} soon={!storyOf(cardMission.id)} onTravel={travel} onClose={() => select(null)} />
           </Pop>
         </div>
       )}
