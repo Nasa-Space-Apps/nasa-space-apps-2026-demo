@@ -47,7 +47,7 @@ Para jugar **no hace falta ninguna clave ni variable de entorno**. La API key de
 | Tecla / acción | Efecto |
 | --- | --- |
 | Arrastrar el globo | (vista del globo) Girarlo en dos ejes (horizontal: sobre su propio eje; vertical: lo inclina; nunca rueda de lado); al soltar sigue girando con inercia y la inclinación vuelve sola a la inicial |
-| Rueda / `Ctrl`+rueda / pellizco / `Ctrl` +, −, 0 | (vista del globo) Acercar o alejar **solo el globo y los vehículos** (los botones no cambian de tamaño; se evita el zoom de la página) |
+| Rueda / `Ctrl`+rueda / pellizco / `Ctrl` +, −, 0 | (vista del globo) Acercar o alejar **solo el globo y los vehículos** (los botones no cambian de tamaño; se evita el zoom de la página); límites 0,75–2,6, y al acercar el globo se recoloca para que haya un vehículo a la vista |
 | Clic en el marcador / en el vehículo de la lista | (vista del globo) Abrir la tarjeta del vehículo |
 | `Esc` | (vista del globo) Cerrar la tarjeta |
 | `Espacio` (mantener) | Avanzar por la ruta hasta el siguiente checkpoint; allí se detiene (suelta y vuelve a pulsar para seguir) |

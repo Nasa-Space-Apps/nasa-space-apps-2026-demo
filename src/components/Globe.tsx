@@ -23,12 +23,20 @@ const TILT = 0.5; // starting elevation (~29°): shows the north pole like an is
  */
 const MAX_OFF = (45 * Math.PI) / 180;
 const SNAP_OFF = (25 * Math.PI) / 180;
-const ZOOM_MIN = 0.6;
-const ZOOM_MAX = 3.2;
+/**
+ * Zoom limits. The user's zoom is a multiplier of the framing zoom: `ZOOM_MIN` keeps the globe from shrinking to a dot, `ZOOM_MAX` from filling the screen with
+ * ground. Two things lower the real limits while the globe is on screen (see `BodyGlobe`): the more you zoom in the narrower the window on the globe is, so the
+ * visible face must stay nearer to a vehicle (`windowFraction`); and with a vehicle selected the zoom stops before that vehicle would leave the screen.
+ */
+const ZOOM_MIN = 0.75;
+const ZOOM_MAX = 2.6;
+const ZOOM_IDLE = 1.2; // above this zoom the globe stops spinning by itself: the window is narrow and you are looking at something
+const windowFraction = 0.55; // how much of the visible window (as an angle seen from the centre) the vehicles may use
 /** Zoom of the globe view (a multiplier of the framing zoom). Module-level so the wheel handler and the render loop share it. */
-const view = { target: 1, cur: 1 };
+const view = { target: 1, cur: 1, cap: ZOOM_MAX, touched: false }; // cap: the highest zoom allowed right now (a selected vehicle must stay on screen); touched: the user just zoomed
 const zoomBy = (f: number) => {
-  view.target = THREE.MathUtils.clamp(view.target * f, ZOOM_MIN, ZOOM_MAX);
+  view.target = THREE.MathUtils.clamp(view.target * f, ZOOM_MIN, Math.min(ZOOM_MAX, view.cap));
+  view.touched = true;
 };
 const PITCH_MAX = 1.45; // the globe can be tipped up to this far (rad) either way, never over the pole
 const DEG = 180 / Math.PI;
@@ -68,7 +76,10 @@ function Fit() {
       if (!onGlobe() || !(e.ctrlKey || e.metaKey) || e.altKey) return;
       if (e.key === "+" || e.key === "=") zoomBy(1.2);
       else if (e.key === "-" || e.key === "_") zoomBy(1 / 1.2);
-      else if (e.key === "0") view.target = 1;
+      else if (e.key === "0") {
+        view.target = 1;
+        view.touched = true;
+      }
       else return;
       e.preventDefault();
     };
@@ -412,9 +423,9 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
   );
   /** The vehicles as unit vectors in the globe's own frame. */
   const dirs = useMemo(() => body.vehicles.map((v) => new THREE.Vector3(...latLonDir(v.lat, v.lon))), [body]);
-  /** The point of the globe at the centre of the screen (latitude = pitch), the vehicle nearest to it and their angular distance. */
-  const look = () => {
-    st.c.set(...latLonDir(st.pitch * DEG, lonOf(st.spin)));
+  /** The point of the globe at the centre of the screen for a view (latitude = pitch), the vehicle nearest to it and their angular distance (leaves the point in `st.c`). */
+  const lookAt = (pitch: number, spinAngle: number) => {
+    st.c.set(...latLonDir(pitch * DEG, lonOf(spinAngle)));
     let best = 0;
     let bd = Infinity;
     dirs.forEach((d, i) => {
@@ -426,6 +437,7 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
     });
     return { i: best, a: bd };
   };
+  const look = () => lookAt(st.pitch, st.spin);
   /** The (pitch, spin) that leave the screen centre exactly `off` away from vehicle `i`, on the side it is now (call `look()` first): the nearest allowed view. */
   const toward = (i: number, off: number) => {
     const v = dirs[i];
@@ -436,26 +448,49 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
     const lon = (Math.atan2(-goal.z, goal.x) * 180) / Math.PI;
     return { p: Math.asin(THREE.MathUtils.clamp(goal.y, -1, 1)), s: st.spin + wrap(faceAngle(lon) - st.spin) };
   };
-  /** Does the upright view centred on longitude `lon` (degrees) have a vehicle within MAX_OFF? Its centre is at the starting elevation's latitude. */
+  /** Radius of the globe on screen (px) at zoom 1. */
+  const radiusPx = () => R * (outer.current?.scale.x ?? 1.5) * frame(size.width, size.height).zoom;
+  /**
+   * How far from a vehicle the centre of the visible face may be (rad): MAX_OFF, or less when zoomed in. Zoomed in, the screen only shows a window around the
+   * centre of the globe (its half-angle is asin(half the screen / globe radius on screen)); the vehicles have to fit in a part of it (`windowFraction`).
+   */
+  const maxOff = () => {
+    const win = Math.asin(Math.min(1, Math.min(size.width, size.height) / 2 / (radiusPx() * Math.max(view.cur, view.target))));
+    return Math.min(MAX_OFF, windowFraction * win);
+  };
+  const snapOff = () => Math.min(SNAP_OFF, 0.5 * maxOff());
+  /** Does the upright view centred on longitude `lon` (degrees) have a vehicle within the allowed distance? Its centre is at the starting elevation's latitude. */
   const showsVehicle = (lon: number) => {
     const c = new THREE.Vector3(...latLonDir(TILT * DEG, lon));
-    return dirs.some((d) => Math.acos(THREE.MathUtils.clamp(d.dot(c), -1, 1)) <= MAX_OFF);
+    const lim = maxOff();
+    return dirs.some((d) => Math.acos(THREE.MathUtils.clamp(d.dot(c), -1, 1)) <= lim);
   };
-  /** The spin of the upright view that keeps the longitude the globe is turned to; if no vehicle is visible there, the nearest longitude that has one. */
-  const uprightSpin = () => {
+  /**
+   * Where the globe goes when let go: the starting pitch, keeping the longitude it is turned to — or the nearest longitude that shows a vehicle. Zoomed in far
+   * enough the window is so narrow that no longitude at the starting pitch has a vehicle in it: then it is the nearest allowed view to that one.
+   */
+  const uprightTarget = () => {
     const lon0 = lonOf(st.spin);
     let lon = lon0;
-    for (let d = 1; d <= 180 && !showsVehicle(lon); d++) {
+    let found = showsVehicle(lon);
+    for (let d = 1; d <= 180 && !found; d++) {
       lon = lon0 + d;
-      if (!showsVehicle(lon)) lon = lon0 - d;
+      found = showsVehicle(lon);
+      if (!found) {
+        lon = lon0 - d;
+        found = showsVehicle(lon);
+      }
     }
-    return st.spin + wrap(faceAngle(lon) - st.spin);
+    if (found) return { p: TILT, s: st.spin + wrap(faceAngle(lon) - st.spin) };
+    const seen = lookAt(TILT, st.spin);
+    return toward(seen.i, maxOff());
   };
-  /** Keep the visible face within MAX_OFF of a vehicle; true if it had to be pulled back. */
+  /** Keep the visible face within `maxOff()` of a vehicle; true if it had to be pulled back. */
   const constrain = () => {
     const { i, a } = look();
-    if (a <= MAX_OFF) return false;
-    const g = toward(i, MAX_OFF);
+    const lim = maxOff();
+    if (a <= lim) return false;
+    const g = toward(i, lim);
     st.pitch = g.p;
     st.spin = g.s;
     return true;
@@ -494,6 +529,32 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
     o.scale.setScalar(springStep(pop, portrait ? 0.85 : 1.5, dt, 70, 8));
     o.position.set(x, 0, 0);
 
+    // zoom: with a vehicle selected, never zoom in past the point where it would leave the screen
+    if (selectedId !== null) {
+      const k = body.vehicles.findIndex((v) => v.missionId === selectedId);
+      if (k >= 0) {
+        st.t.copy(dirs[k]).applyQuaternion(st.q);
+        const off = radiusPx() * Math.hypot(st.t.x, st.t.y); // its distance from the screen centre (px) at zoom 1
+        view.cap = st.t.z > 0 ? Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, (0.8 * Math.min(size.width, size.height)) / 2 / Math.max(off, 1))) : ZOOM_MAX;
+      }
+      view.target = Math.min(view.target, view.cap);
+      view.touched = false;
+    } else {
+      view.cap = ZOOM_MAX;
+      if (view.touched) {
+        // zooming is steering too: if the window on the globe no longer has a vehicle in it, turn quickly to one (and keep the limit while zoomed in)
+        view.touched = false;
+        st.manual = true;
+        const seen = look();
+        if (seen.a > maxOff() && !st.drag) {
+          const g = toward(seen.i, snapOff());
+          st.tp = g.p;
+          st.ts = g.s;
+          st.snap = true;
+        }
+      }
+    }
+
     if (st.snap) {
       // the user grabbed a face with no vehicle: turn quickly until one is in view, then the drag takes over
       const k = 1 - Math.exp(-14 * dt);
@@ -521,7 +582,7 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
         st.vs = 0;
       } else {
         // after a drag the globe keeps its spin momentum and settles back to the idle spin; it pauses while the pointer is over a vehicle
-        const idle = hot.n > 0 ? 0 : IDLE;
+        const idle = hot.n > 0 || view.target > ZOOM_IDLE ? 0 : IDLE; // it also holds still while zoomed in
         st.vs += (idle - st.vs) * (1 - Math.exp(-1.5 * dt));
         st.vp += (0 - st.vp) * (1 - Math.exp(-2.5 * dt));
         st.spin += st.vs * dt;
@@ -529,11 +590,11 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
         if (st.norm) {
           // let go: the pitch returns quickly to the starting elevation; the spin (the longitude) is kept, unless no vehicle would be in view there
           const k = 1 - Math.exp(-9 * dt);
-          const want = uprightSpin();
-          st.pitch += (TILT - st.pitch) * k;
-          st.spin += wrap(want - st.spin) * k;
-          if (Math.abs(TILT - st.pitch) < 0.003 && Math.abs(wrap(want - st.spin)) < 0.003) {
-            st.pitch = TILT;
+          const want = uprightTarget();
+          st.pitch += (want.p - st.pitch) * k;
+          st.spin += wrap(want.s - st.spin) * k;
+          if (Math.abs(want.p - st.pitch) < 0.003 && Math.abs(wrap(want.s - st.spin)) < 0.003) {
+            st.pitch = want.p;
             st.norm = false;
           }
         }
@@ -543,7 +604,7 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
             st.vs *= 0.6;
             st.vp *= 0.6;
           }
-          if (!st.norm && Math.abs(st.vp) < 0.03 && Math.abs(st.vs - IDLE) < 0.03) st.manual = false;
+          if (!st.norm && Math.abs(st.vp) < 0.03 && Math.abs(st.vs - idle) < 0.03) st.manual = false;
         }
       }
     }
@@ -596,8 +657,8 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
               st.manual = true;
               st.norm = false; // grabbing it again cancels the pitch's return
               const seen = look();
-              if (seen.a > MAX_OFF) {
-                const g = toward(seen.i, SNAP_OFF); // no vehicle on this face: turn quickly to one
+              if (seen.a > maxOff()) {
+                const g = toward(seen.i, snapOff()); // no vehicle on this face: turn quickly to one
                 st.tp = g.p;
                 st.ts = g.s;
                 st.snap = true;
