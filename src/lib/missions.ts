@@ -1,8 +1,8 @@
 import { THEME } from "./themes";
 import type { TerrainStyle } from "./terrain";
 import { PERSEVERANCE_CHECKPOINTS, SEV_CHECKPOINTS, type Checkpoint } from "./checkpoints";
-import { BEAGLE2_CHECKPOINTS, INGENUITY_CHECKPOINTS, INSIGHT_CHECKPOINTS, SPIRIT_CHECKPOINTS } from "./checkpoints-demo";
-import { OPPORTUNITY_STORY_CHECKPOINTS } from "./opportunity";
+import { BEAGLE2_CHECKPOINTS, INSIGHT_CHECKPOINTS, SPIRIT_CHECKPOINTS } from "./checkpoints-demo";
+import { storyOf } from "./story";
 import type { VehicleModel, VehiclePalette } from "./vehicles";
 
 export type RoverConfig = {
@@ -74,7 +74,7 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: OPPORTUNITY_STORY_CHECKPOINTS, // the real story: 13 Mars events (public/models/opportunity/story.json); the 5 before the landing are comic pages
+    checkpoints: storyOf("opportunity")!.checkpoints, // the real story: 13 Mars events (public/models/opportunity/story.json); the 5 before the landing are comic pages
     checkpointRadius: 15, // 13 stops 36–130 u apart
   },
   {
@@ -141,8 +141,8 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: "ingenuity",
-    name: "Ingenuity · Mars (demo)",
-    title: "Ingenuity · Jezero (demo)",
+    name: "Ingenuity · Mars",
+    title: "Ingenuity · Jezero",
     terrainUrl: "/models/gale-terrain.stl",
     terrain: GALE_TERRAIN,
     rover: {
@@ -154,8 +154,8 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: INGENUITY_CHECKPOINTS,
-    checkpointRadius: 16,
+    checkpoints: storyOf("ingenuity")!.checkpoints, // the real story: 13 Mars events (public/models/ingenuity/story.json); the 5 before the landing are comic pages
+    checkpointRadius: 15, // 13 stops 39–70 u apart
   },
   {
     id: "insight",

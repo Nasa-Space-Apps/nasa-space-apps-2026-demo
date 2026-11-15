@@ -1,25 +1,31 @@
 #!/usr/bin/env node
 /**
- * Plans the 3D route of the Opportunity story: where the rover stops (one stop per Mars event) and the waypoints (`via`) between stops, on the Meridiani
- * terrain (public/models/terrain.stl). The terrain is a scale model, not a map: the stops follow the path the earlier hand-made route took (landing crater →
- * Eagle → Endurance → Victoria → Perseverance Valley), spread evenly along it, each snapped to a nearby flat spot; the legs between them come from an A*
- * search over the slope map (cost grows with the square of the slope), so the vehicle never climbs a steep wall.
+ * Plans the 3D route of a mission's story: where the vehicle stops (one stop per Mars event) and the waypoints (`via`) between stops, on the mission's
+ * terrain. The terrain is a scale model, not a map: the stops follow the line `ANCHORS` of scripts/data/<mission>-story.mjs, spread evenly along it, each
+ * snapped to a nearby flat spot; the legs between them come from an A* search over the slope map (cost grows with the square of the slope), so the vehicle
+ * never climbs a steep wall.
  *
- *   node scripts/plan-opportunity-route.mjs [stops]      prints the plan and writes scripts/data/opportunity-route.json
+ *   npm run story-route -- <mission> [stops]    prints the plan and writes scripts/data/<mission>-route.json
  *
- * `stops` (default 13) = number of Mars events (see scripts/build-opportunity-story.mjs). Re-run it only if the terrain or the number of stops changes.
+ * `stops` defaults to the number of Mars beats of the mission. Re-run it only if the terrain, the anchors or the number of stops change.
  */
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { pathToFileURL } from "node:url";
 import { loadTerrain } from "./lib/terrain-node.mjs";
+import { ROOT } from "./lib/tts.mjs";
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const N = Number(process.argv[2] ?? 13);
-const T = loadTerrain(path.join(ROOT, "public/models/terrain.stl"), { fade: 45, res: 1 });
+const mission = process.argv[2];
+if (!mission || mission.startsWith("--")) {
+  console.error("Usage: node scripts/plan-story-route.mjs <mission> [stops]");
+  process.exit(1);
+}
+const D = await import(pathToFileURL(path.join(ROOT, `scripts/data/${mission}-story.mjs`)).href);
+const N = Number(process.argv[3] ?? D.BEATS.filter((b) => b.part === "mars").length);
+const T = loadTerrain(path.join(ROOT, D.TERRAIN), { fade: 45, res: 1 });
 
-// the previous route, stop and waypoint by waypoint (landing, Eagle, Endurance, Victoria, Perseverance Valley): the line the new stops follow
-const OLD = [[0, 0], [-69, -5], [-97, -35], [-90, -70], [97, -91], [205, -170], [173, -43], [177, 95], [219, 159], [275, 175], [60, 205]];
+// the line the stops follow: first anchor = where the vehicle starts, last = where the story ends
+const OLD = D.ANCHORS;
 const seg = OLD.slice(1).map((p, i) => Math.hypot(p[0] - OLD[i][0], p[1] - OLD[i][1]));
 const total = seg.reduce((a, b) => a + b, 0);
 const along = (s) => {
@@ -53,7 +59,7 @@ function snap([tx, tz], prev, reach = 18) {
   return best.map((v) => Math.round(v));
 }
 
-// stops: evenly spaced along the old line; the first one is the landing crater, the last one Perseverance Valley (keep them where they were)
+// stops: evenly spaced along the old line; the first one is the landing crater, the last one the end of the line (keep them there)
 const stops = [];
 for (let k = 0; k < N; k++) {
   const p = along((total * k) / (N - 1));
@@ -129,4 +135,4 @@ const plan = stops.map((s, k) => {
 console.log(JSON.stringify(plan, null, 1));
 console.log(`\n${N} stops · legs ${plan.slice(1).map((p) => p.leg).join(", ")} u · max slope ${Math.max(...plan.slice(1).map((p) => p.maxSlope))}°`);
 mkdirSync(path.join(ROOT, "scripts/data"), { recursive: true });
-writeFileSync(path.join(ROOT, "scripts/data/opportunity-route.json"), JSON.stringify(plan, null, 2));
+writeFileSync(path.join(ROOT, `scripts/data/${mission}-route.json`), JSON.stringify(plan, null, 2));

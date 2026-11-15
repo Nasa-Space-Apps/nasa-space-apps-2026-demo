@@ -1,7 +1,7 @@
 /**
  * Terrain height field in plain Node (no three.js), built the same way as src/lib/terrain.ts: the STL (Z-up) is rotated to Y-up, centred on X/Z, its borders
  * are flattened with a smoothstep over `fade` units, and every triangle is rasterised on a grid keeping the highest value. Used by the route planner
- * (scripts/plan-opportunity-route.mjs) to put checkpoints on flat ground and to find paths that avoid steep slopes. Not used by the app.
+ * (scripts/plan-story-route.mjs) to put checkpoints on flat ground and to find paths that avoid steep slopes. Not used by the app.
  */
 import { readFileSync } from "node:fs";
 

@@ -1,32 +1,26 @@
-#!/usr/bin/env node
 /**
- * Builds everything the Opportunity story consumes into public/models/opportunity/ (the app imports story.json and serves images and audio from there):
- *
- *   story.json      the 20 beats in chronological order: English copy (title, short summary, spoken narration, 3 facts), source, image, audio and — for the
- *                   Mars beats — the 3D stop (x, z, via) from scripts/data/opportunity-route.json
- *   images/<id>.jpg the AI illustrations (4:5) from the folder of generated art, resized for the web
- *   audio/          narration clips + manifest.json (recorded with scripts/generate-story-audio.mjs, not here)
- *
- * The facts and sources come from the research dossiers (agents/opportunity-research/salida/oppNNN) and story/data/linea_de_tiempo_opportunity.json; the
- * copy below is editorial English written from the verified facts (docs/story.md). Run:
- *
- *   node scripts/build-opportunity-story.mjs [path to the folder with 001.jpeg … 081.jpeg]     (default: ~/Downloads/images/v2)
- *
- * If you change a `narration`, run `npm run story-audio` afterwards to re-record that clip.
+ * Story data of Opportunity: the copy (English) of its 20 beats, in chronological order, plus where its facts, art and 3D terrain come from. Read by
+ * scripts/build-story.mjs, which writes public/models/opportunity/story.json. See docs/story.md for the format and the rules (narration ~45 words, numbers spelled
+ * out, every fact from the dossiers). part: intro = before the 3D (comic pages), mars = a 3D stop, outro = comic pages after the 3D.
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
-import sharp from "sharp";
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = path.join(ROOT, "public/models/opportunity");
-const SRC_IMAGES = process.argv[2] ?? path.join(os.homedir(), "Downloads/images/v2");
-const DOSSIERS = path.join(ROOT, "agents/opportunity-research/salida");
+export const MISSION = "opportunity";
+export const NAME = "Opportunity";
+export const TITLE = "Opportunity: from an idea to the last signal";
+/** Research dossiers of the mission (oppNNN/dossier.json) */
+export const DOSSIERS = "misiones/opportunity/dossiers";
+/** Where the generated art was kept before it was processed into public/models/opportunity/images (the originals are outside the repo) */
+export const sourceImage = (id) => path.join(os.homedir(), "Downloads/images/v2", `${id.slice(3)}.jpeg`);
+/** 3D terrain of the mission and the line its stops follow (the earlier hand-made route: landing → Eagle → Endurance → Victoria → Perseverance Valley) */
+export const TERRAIN = "public/models/terrain.stl";
+export const ANCHORS = [[0, 0], [-69, -5], [-97, -35], [-90, -70], [97, -91], [205, -170], [173, -43], [177, 95], [219, 159], [275, 175], [60, 205]];
+/** The closing card after the last page of the story */
+export const CLOSING = { title: "thank you, Opportunity", text: "Planned for 90 sols, it worked for almost 15 years and drove 45.16 km across Mars." };
 
 /** part: intro = before the 3D (comic pages), mars = a 3D stop, outro = comic pages after the 3D. */
-const BEATS = [
+export const BEATS = [
   // ───────────────────────────── before Mars: the comic ─────────────────────────────
   {
     id: "opp001", part: "intro", date: "1987", title: "A robot geologist",
@@ -172,63 +166,9 @@ const BEATS = [
   },
 ];
 
-const PARTS = [
+export const PARTS = [
   { id: "intro", title: "Earth", blurb: "Before Mars: the idea, the decision, the launch and the landing, told as a comic." },
   { id: "mars", title: "Mars", blurb: "Fourteen years on Meridiani Planum: drive the rover from one story to the next." },
   { id: "outro", title: "Legacy", blurb: "After the last signal." },
 ];
 
-/** Up to 3 sources of a dossier, official NASA/JPL first, then scientific, then press (community sources are left out). The card shows them as links. */
-const KINDS = { "oficial NASA/JPL": "official", "científica": "scientific", "prensa": "press" };
-function sourcesOf(id) {
-  const file = path.join(DOSSIERS, id, "dossier.json");
-  if (!existsSync(file)) return [];
-  const list = (JSON.parse(readFileSync(file, "utf8")).fuentes_nuevas ?? []).filter((f) => KINDS[f.tipo] && f.url.startsWith("http"));
-  const order = Object.keys(KINDS);
-  list.sort((a, b) => order.indexOf(a.tipo) - order.indexOf(b.tipo));
-  const seen = new Set(); // one link per site: three « science.nasa.gov » in a row would say nothing
-  return list
-    .map((f) => ({ type: KINDS[f.tipo], host: new URL(f.url).hostname.replace("www.", ""), url: f.url }))
-    .filter((f) => !seen.has(f.host) && seen.add(f.host))
-    .slice(0, 3);
-}
-
-const route = JSON.parse(readFileSync(path.join(ROOT, "scripts/data/opportunity-route.json"), "utf8"));
-const marsBeats = BEATS.filter((b) => b.part === "mars");
-if (route.length !== marsBeats.length) throw new Error(`The route has ${route.length} stops but there are ${marsBeats.length} Mars beats: run scripts/plan-opportunity-route.mjs ${marsBeats.length}`);
-
-mkdirSync(path.join(OUT, "images"), { recursive: true });
-mkdirSync(path.join(OUT, "audio"), { recursive: true });
-
-let n = 0;
-let stop = 0;
-const beats = [];
-for (const b of BEATS) {
-  n++;
-  const num = b.id.slice(3);
-  const srcImg = path.join(SRC_IMAGES, `${num}.jpeg`);
-  if (!existsSync(srcImg)) throw new Error(`Missing illustration ${srcImg}`);
-  await sharp(srcImg).resize({ width: 1040 }).jpeg({ quality: 80, mozjpeg: true }).toFile(path.join(OUT, "images", `${b.id}.jpg`));
-  const beat = {
-    id: b.id, n, part: b.part, date: b.date, ...(b.place ? { place: b.place } : {}), title: b.title, summary: b.summary, narration: b.narration, facts: b.facts,
-    sources: sourcesOf(b.id), image: `/models/opportunity/images/${b.id}.jpg`, imageRatio: "4 / 5", audio: `/models/opportunity/audio/${b.id}.mp3`,
-  };
-  if (b.part === "mars") {
-    const r = route[stop++];
-    beat.route = { x: r.x, z: r.z, ...(r.via ? { via: r.via } : {}) };
-  }
-  beats.push(beat);
-}
-
-const story = {
-  version: 1,
-  mission: "opportunity",
-  language: "en",
-  title: "Opportunity: from an idea to the last signal",
-  note: "Illustrations are AI-generated artwork based on the verified events; every fact and its source come from the research dossiers (agents/opportunity-research). Narration is written for short, clear audio (~50 words).",
-  parts: PARTS.map((p) => ({ ...p, beats: beats.filter((b) => b.part === p.id).map((b) => b.id) })),
-  beats,
-};
-writeFileSync(path.join(OUT, "story.json"), JSON.stringify(story, null, 2) + "\n");
-const words = beats.map((b) => b.narration.split(/\s+/).length);
-console.log(`story.json: ${beats.length} beats (${PARTS.map((p) => `${p.id} ${beats.filter((b) => b.part === p.id).length}`).join(", ")}) · narration ${Math.min(...words)}–${Math.max(...words)} words, ${beats.reduce((a, b) => a + b.narration.length, 0)} characters`);

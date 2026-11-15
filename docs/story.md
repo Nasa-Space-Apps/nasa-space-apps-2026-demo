@@ -26,19 +26,21 @@ story/data/linea_de_tiempo_opportunity.json              los 81 eventos         
 story/data/historia_opportunity.json                     la selección de 20 en 5 actos                           │
 ~/Downloads/images/v2/NNN.jpeg                           20 ilustraciones IA (1856×2304, 4:5)                    ┘
           │
-          ▼  scripts/plan-opportunity-route.mjs   → scripts/data/opportunity-route.json   (posiciones y trayectos llanos de las 13 paradas)
-          ▼  scripts/build-opportunity-story.mjs  (npm run story)
+          ▼  scripts/plan-story-route.mjs <misión>   → scripts/data/<misión>-route.json   (posiciones y trayectos llanos de las 13 paradas)
+          ▼  scripts/build-story.mjs <misión>  (npm run story -- <misión>)   ← copy y anclas en scripts/data/<misión>-story.mjs
 public/models/opportunity/story.json      los 20 beats: copy en inglés, hechos, fuente, imagen, audio, parada 3D
 public/models/opportunity/images/oppNNN.jpg   ilustraciones a 1040 px (≈ 4 MB en total)
-public/models/opportunity/audio/oppNNN.mp3    narraciones (npm run story-audio)  +  audio/manifest.json
+public/models/opportunity/audio/oppNNN.mp3    narraciones (npm run story-audio -- <misión>)  +  audio/manifest.json
           │
-          ▼  src/lib/opportunity.ts  (importa story.json: tipos, INTRO/MARS/OUTRO_BEATS, OPPORTUNITY_STORY_CHECKPOINTS)
-          ▼  src/lib/missions.ts     (la misión `opportunity` usa esos checkpoints)
+          ▼  src/lib/story.ts  (importa los story.json: tipos y `storyOf(misión)` → intro/mars/outro, closing, checkpoints)
+          ▼  src/lib/missions.ts     (las misiones `opportunity` e `ingenuity` usan esos checkpoints)
 ```
 
-**Todo lo que consume la app está en `public/models/opportunity/`** (como se pidió). La guía de voz **general** (las 62 frases de `public/guide/`) se queda donde estaba; las frases **por checkpoint** (`next/remind-<id>`) no existen para los eventos nuevos, así que la guía calla sobre ellos (`noGuide: true`) y sigue diciendo las frases genéricas (progreso, parado, `Space`…).
+**Todo lo que consume la app está en `public/models/<misión>/`** (`story.json`, `images/<id>.jpg`, `audio/<id>.mp3`: **la misma estructura para todas las misiones**; lo de abajo describe Opportunity y vale igual para Ingenuity, hito 40). La guía de voz **general** (las 62 frases de `public/guide/`) se queda donde estaba; las frases **por checkpoint** (`next/remind-<id>`) no existen para los eventos nuevos, así que la guía calla sobre ellos (`noGuide: true`) y sigue diciendo las frases genéricas (progreso, parado, `Space`…).
 
-Para cambiar algo: edita el copy en `scripts/build-opportunity-story.mjs` → `npm run story` (regenera `story.json` y las imágenes) → si cambiaste una `narration`, `npm run story-audio` (solo regraba ese clip).
+Para cambiar algo: edita el copy en `scripts/data/<misión>-story.mjs` → `npm run story -- <misión>` (regenera `story.json`; si el módulo define `sourceImage`, también reprocesa las imágenes) → si cambiaste una `narration`, `npm run story-audio -- <misión>` (solo regraba ese clip).
+
+**Añadir otra misión** (receta, hito 40): 1) dossiers en `misiones/<id>/dossiers`; 2) imágenes: `scripts/data/<id>-image-prompts.mjs` + `npm run story-images -- <id>` (→ `public/models/<id>/images`); 3) `scripts/data/<id>-story.mjs` con `NAME`, `TITLE`, `DOSSIERS`, `TERRAIN`, `ANCHORS` (línea que siguen las paradas), `CLOSING`, `BEATS` y `PARTS` (copia el formato de `opportunity-story.mjs`); 4) `npm run story-route -- <id>` y `npm run story -- <id>`; 5) `npm run story-audio -- <id>`; 6) importar su `story.json` en `src/lib/story.ts` (`STORIES`) y usar `storyOf(<id>)!.checkpoints` en `missions.ts`. `SceneLoader` monta `Journey` solo si `storyOf` devuelve algo.
 
 ## El reparto antes / después del 3D
 
@@ -67,7 +69,7 @@ Para cambiar algo: edita el copy en `scripts/build-opportunity-story.mjs` → `n
 
 **Criterio** (propuesto, ajustable en `PART`/orden de `BEATS`): «antes del 3D» = lo que pasa **antes de que el rover esté sobre Marte** (idea, decisión, lanzamiento y la caída; el aterrizaje cierra el cómic y el 3D empieza con el rover ya posado). «En el 3D» = todo lo que ocurre con el rover **sobre el terreno**, incluidos los dos eventos sin lugar propio (`opp045` Spirit, `opp059` memoria): se muestran donde está el rover en ese momento de la historia. «Después» = lo que ocurre cuando el rover ya no responde (la declaración de fin y el récord de Perseverance), otra vez en cómic.
 
-Las posiciones del 3D **no son un mapa real** (el terreno es una maqueta): `plan-opportunity-route.mjs` reparte las 13 paradas a lo largo del recorrido del terreno de Meridiani (aterrizaje → Eagle → Endurance → Victoria → Perseverance Valley), cada una en suelo llano (< 6° de pendiente), con trayectos de A\* sobre el mapa de pendientes (máx. 19°). Con 13 paradas la línea de tiempo no muestra nombres bajo los marcadores (la línea de arriba dice «Next: …») y el radio de activación baja a 15.
+Las posiciones del 3D **no son un mapa real** (el terreno es una maqueta): `plan-story-route.mjs` reparte las 13 paradas a lo largo del recorrido del terreno de Meridiani (aterrizaje → Eagle → Endurance → Victoria → Perseverance Valley), cada una en suelo llano (< 6° de pendiente), con trayectos de A\* sobre el mapa de pendientes (máx. 19°). Con 13 paradas la línea de tiempo no muestra nombres bajo los marcadores (la línea de arriba dice «Next: …») y el radio de activación baja a 15.
 
 ## Las narraciones
 
@@ -109,18 +111,27 @@ La misma receta que se usó a mano con Opportunity (pasar el dossier a una IA qu
 misiones/ingenuity/dossiers/ingNNN/dossier.md  ──(prompt escrito a partir del contexto y las «ideas visuales»)──▶  scripts/data/ingenuity-image-prompts.mjs
 npm run story-images -- ingenuity                    # Replicate · google/nano-banana-2.1 · 4:5 · 2K  (necesita REPLICATE_API_KEY en .env.local)
    ├─ ~/Downloads/images/ingenuity/ingNNN.jpg                    originales de 1856×2304 (fuera del repo, como los de Opportunity)
-   └─ public/models/ingenuity/story/images/ingNNN.jpg + manifest.json   1040 px para la web (≈ 3,7 MB) y el prompt/predicción de cada imagen
+   └─ public/models/ingenuity/images/ingNNN.jpg + manifest.json   1040 px para la web (≈ 3,7 MB) y el prompt/predicción de cada imagen
 ```
 
 - **Los 20 prompts** (uno por dossier: ing001, 010, 018, 019, 021, 023, 026, 027, 029, 032, 034, 038, 043, 069, 072, 083, 107, 127, 130, 137) usan el **mismo bloque de estilo** que Opportunity (novela gráfica sucia, tinta gruesa, paleta naranja quemado/óxido/marrón/crema, una sola luz cálida, grano de risografía) + una escena + una composición + «sin texto». Se escribieron leyendo cada dossier; los vehículos se describen igual en todas para que se reconozcan (Ingenuity: cuerpo cúbico envuelto en lámina dorada, dos rotores finos apilados, cuatro patas largas; Perseverance: seis ruedas, chasis crema, mástil con cabeza de cámara). Las personas son figuras estilizadas anónimas (sin parecido con personas reales).
 - Banderas del script: `--dry-run` (imprime los prompts sin llamar a nada), `--only id,id`, `--force`, `--resolution 1K|2K|4K`, `--aspect`, `--concurrency`. Solo genera lo que falta; reintenta si Replicate limita el ritmo. **La clave solo se lee de `.env.local` y nunca se imprime.**
 - Para regenerar una imagen: edita su `scene`/`composition` en el archivo de prompts y `npm run story-images -- ingenuity --only ing043 --force`. Para otra misión: crea `scripts/data/<id>-image-prompts.mjs` con el mismo formato (`STYLE`, `ENDING`, `PROMPTS`).
-- Hecho: las 20 imágenes de Ingenuity (≈ 25–35 s cada una, 3 en paralelo; revisadas en una hoja de contacto: sin texto ni artefactos y con un estilo coherente con el de Opportunity). **Aún no se usan en la app** (el hito 39 solo genera las imágenes; la historia de Ingenuity —textos, narración y vistas— está por hacer).
+- Hecho: las 20 imágenes de Ingenuity (≈ 25–35 s cada una, 3 en paralelo; revisadas en una hoja de contacto: sin texto ni artefactos y con un estilo coherente con el de Opportunity). Desde el hito 40 se usan en la app (ver abajo).
+
+## Historia de Ingenuity (hito 40)
+
+Mismo flujo que Opportunity —cómic de 5 páginas → 3D con 13 paradas → cómic de 2 páginas + tarjeta final «thank you, Ingenuity»— con **su** información, en `/mars/ingenuity`:
+
+- **Datos:** `scripts/data/ingenuity-story.mjs` (20 eventos: 5 de la Tierra —el mesicóptero de los 90, el prototipo de 2016, el nombre, el lanzamiento, el aterrizaje—, 13 en Jezero —de la tela del Flyer 1 al vuelo 72— y 2 de legado: el fin de la misión y Mars Chopper). Hechos y fuentes salen de `misiones/ingenuity/dossiers`; las cifras en disputa (distancias de los vuelos 6 y 26, fecha exacta del vuelo 34, mph de Mars Chopper) se evitaron. Narraciones de 42–51 palabras.
+- **3D:** terreno de Gale (`gale-terrain.stl`, el único otro modelo de elevación) con la línea de la antigua ruta demo como `ANCHORS`; vehículo procedural de Ingenuity (sin restricción de pendiente). Radio de activación 15.
+- **Audio:** 20 clips grabados con Bill / `eleven_v4` (5 774 caracteres, 2 311 créditos), a petición del usuario.
+- **Retirado:** los checkpoints ficticios `INGENUITY_CHECKPOINTS` de `checkpoints-demo.ts` y sus 4 fotos `public/images/checkpoints/mars-ingenuity-*.jpg`; las 4 fotos PIA de `public/models/ingenuity/images` se sustituyeron por las ilustraciones (ahora todas las misiones guardan las imágenes de su historia en `public/models/<misión>/images`).
 
 ## Pendiente
 
 - **Revisar las 20 narraciones de oído** (voz Bill; si alguna no convence, edita su texto y vuelve a `npm run story-audio`).
-- Ilustraciones: aún no se muestran los **créditos del generador/herramienta** ni hay versión en alta resolución; si se quiere un `webp`, ajustar `build-opportunity-story.mjs`.
+- Ilustraciones: aún no se muestran los **créditos del generador/herramienta** ni hay versión en alta resolución; si se quiere un `webp`, ajustar `build-story.mjs`.
 - Los clips y frases de la guía por checkpoint de los eventos nuevos (`next/remind-<id>`) no existen; la guía es solo genérica.
 - El 3D todavía usa el vehículo y el terreno de siempre (maqueta): las paradas no corresponden a lugares reales de Meridiani.
 - Los clips antiguos de Opportunity (`public/narration/landing|eagle|endurance|victoria|perseverance.mp3`) y sus fotos de NASA siguen en el repo pero **ya no se usan** en la experiencia.

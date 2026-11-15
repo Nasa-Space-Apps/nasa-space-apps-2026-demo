@@ -53,7 +53,7 @@ Es el **menú previo al juego** (hito 31): un globo (por defecto la Luna) a pant
 
 **`Comic`** (`components/Comic.tsx`): páginas absolutas centradas con `--pw` (`min(44vw, 54vh)`); la activa en el centro y las vecinas asoman (`translate` + `rotate` + `scale`, transición con `THEME.pop`). Cada página es papel con el recuadro de tinta de `ui().frame`, la ilustración, el sello de la fecha y el recuadro de título + resumen. `playNarration(beatToCheckpoint(beat))` al llegar a una página (el mismo almacén que el 3D: mismos subtítulos con `Captions`). Manchas rosa/azul de fondo que se mueven con cada página (`Blobs`). Entrada: las páginas suben con rebote; salida: la activa cae y el azul se disuelve (se ve el 3D de detrás).
 
-Los **checkpoints de Opportunity** se generan de `MARS_BEATS` (`lib/opportunity.ts`, `beatToCheckpoint`): `Checkpoint` ganó `imageRatio` (la tarjeta pasa a vertical), `source` (se muestra «facts: <editor>») y `noGuide` (la guía no habla de ellos). `Timeline` no pone nombres bajo los marcadores si hay más de 8 paradas. Detalle del flujo y los datos: [story.md](story.md).
+Los **checkpoints de Opportunity** se generan de `storyOf(misión).mars` (`lib/story.ts`, `beatToCheckpoint`; Opportunity e Ingenuity): `Checkpoint` ganó `imageRatio` (la tarjeta pasa a vertical), `source` (se muestra «facts: <editor>») y `noGuide` (la guía no habla de ellos). `Timeline` no pone nombres bajo los marcadores si hay más de 8 paradas. Detalle del flujo y los datos: [story.md](story.md).
 
 ## Vista general (escena del rover)
 

@@ -10,7 +10,7 @@ Lista de vehículos: `C:\Users\Usuario\Downloads\vehiculos.jpeg` (Opportunity, S
 | --- | --- | --- | --- |
 | `opportunity/` | `opportunity.glb` (aportado por el usuario) | — | Cubierto (ya hay vehículo procedural) |
 | `spirit/` | `MER static (24883).glb` (NASA, 12 MB, descargado) + `…Spirit and Opportunity.zip` (aportado por el usuario: solo contiene el `.blend`, 12 MB) | 8 en `images/` | **Cubierto**: el modelo oficial de NASA es el **MER genérico** (Spirit y Opportunity son idénticos; solo cambia la elección de colores/marcas) |
-| `ingenuity/` | `Ingenuity Mars Helicopter.glb` (aportado por el usuario, 2 MB, Draco) | 6 en `images/` | **Cubierto** |
+| `ingenuity/` | `Ingenuity Mars Helicopter.glb` (aportado por el usuario, 2 MB, Draco) | — (las 20 ilustraciones de IA de su historia están en `images/`) | **Cubierto** |
 | `insight/` | `InSight Cruise Lander (arm deployed).glb` (NASA, 3.9 MB, Draco) y `InSight deployed (24880).glb` (NASA, 22 MB, sin comprimir) | 9 en `images/` | **Cubierto** (el modelo es la configuración de aterrizaje: con brazo y paneles desplegados; sin el sismómetro y el topo sobre el suelo, que se pueden añadir a mano con las fotos) |
 | `beagle-2/` | **No hay** | 5 orbitales NASA/HiRISE + 6 de réplicas y maquetas reales (Wikimedia Commons) | **Sin 3D**: no existe un modelo descargable (ver abajo). Hay buenas fotos de la réplica a escala 1:1 para modelarlo |
 | `sev/`, `perseverance/` | `sev.glb`, `perseverance.glb` (aportados por el usuario) | — | Cubiertos (ya hay vehículo procedural) |

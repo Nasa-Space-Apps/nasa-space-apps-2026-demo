@@ -1,9 +1,14 @@
 {
   "version": 1,
   "mission": "opportunity",
+  "name": "Opportunity",
   "language": "en",
   "title": "Opportunity: from an idea to the last signal",
-  "note": "Illustrations are AI-generated artwork based on the verified events; every fact and its source come from the research dossiers (agents/opportunity-research). Narration is written for short, clear audio (~50 words).",
+  "note": "Illustrations are AI-generated artwork based on the verified events; every fact and its source come from the research dossiers. Narration is written for short, clear audio (~50 words).",
+  "closing": {
+    "title": "thank you, Opportunity",
+    "text": "Planned for 90 sols, it worked for almost 15 years and drove 45.16 km across Mars."
+  },
   "parts": [
     {
       "id": "intro",

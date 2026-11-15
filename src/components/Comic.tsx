@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
-import { beatToCheckpoint, type StoryBeat } from "@/lib/opportunity";
+import { beatToCheckpoint, type StoryBeat } from "@/lib/story";
 import { playNarration, preloadNarration, stopNarration, toggleNarration } from "@/lib/narration";
 import { THEME as theme } from "@/lib/themes";
 import { ease, ui } from "@/lib/ui";
@@ -41,11 +41,12 @@ function Blobs({ at }: { at: number }) {
 }
 
 /**
- * Comic pages of the Opportunity story (the events before the 3D, and the legacy after it): paper pages with an ink-framed illustration, a date sticker and a
+ * Comic pages of a mission's story (the events before the 3D, and the legacy after it): paper pages with an ink-framed illustration, a date sticker and a
  * caption, laid out in a row like ponpon-mania.com/chapter/3. The active page is centred, the others peek at its sides. Next: Space / → / click / swipe /
  * wheel; back: ← . Each page narrates itself when it arrives (subtitled). Everything springs in and out with the theme's `pop` curve.
  */
 export default function Comic({
+  name,
   beats,
   label,
   doneLabel,
@@ -58,6 +59,7 @@ export default function Comic({
   onBackPast,
   startAt = 0,
 }: {
+  name: string; // the mission («Opportunity»)
   beats: StoryBeat[];
   label: string; // part name in the progress pill ("earth")
   doneLabel: string; // the button of the last page ("land on mars")
@@ -150,7 +152,7 @@ export default function Comic({
     <div
       className="fixed inset-0 z-40 select-none overflow-hidden"
       role="region"
-      aria-label="Opportunity, the story"
+      aria-label={`${name}, the story`}
       style={
         {
           "--pw": "min(44vw, 50vh)", // width of a page: its 4:5 picture sets the height (the subtitles sit under it)
@@ -189,7 +191,7 @@ export default function Comic({
           <Icon name="arrow-left" size={16} /> globe
         </button>
         <div className="pointer-events-none text-center" style={{ transform: entered ? "none" : "translateY(-30px)", transition: `transform ${theme.dur.base}ms ${theme.pop}` }}>
-          <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.9, color: theme.ink }}>opportunity</div>
+          <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.9, color: theme.ink }}>{name.toLowerCase()}</div>
           <div style={{ fontSize: 12, fontWeight: 700, color: theme.ink, marginTop: 4 }}>the story · {label}</div>
         </div>
         {onSkip ? (

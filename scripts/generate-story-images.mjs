@@ -11,8 +11,8 @@
  *
  * The API key is read from REPLICATE_API_KEY (.env.local or the shell) and is never printed. Every image is saved twice:
  *   ~/Downloads/images/<mission>/<id>.jpg                 the original (full size, NOT in the repo, like the Opportunity set)
- *   public/models/<mission>/story/images/<id>.jpg         resized to 1040 px wide for the web (what the app will load)
- * plus public/models/<mission>/story/images/manifest.json (prompt, model, prediction id and date of each image).
+ *   public/models/<mission>/images/<id>.jpg         resized to 1040 px wide for the web (what the app will load)
+ * plus public/models/<mission>/images/manifest.json (prompt, model, prediction id and date of each image).
  */
 import { existsSync } from "node:fs";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
@@ -41,7 +41,7 @@ const ASPECT = opt("aspect", "4:5");
 const CONCURRENCY = Number(opt("concurrency", 3));
 const ONLY = opt("only")?.split(",").map((s) => s.trim()).filter(Boolean);
 const RAW_DIR = path.join(os.homedir(), "Downloads/images", mission);
-const OUT_DIR = path.join(ROOT, "public/models", mission, "story/images");
+const OUT_DIR = path.join(ROOT, "public/models", mission, "images");
 const MANIFEST = path.join(OUT_DIR, "manifest.json");
 
 const { STYLE, ENDING, PROMPTS } = await import(pathToFileURL(path.join(ROOT, `scripts/data/${mission}-image-prompts.mjs`)).href);

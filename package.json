@@ -10,7 +10,8 @@
     "narration": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-narration.mjs",
     "ambient": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-ambient.mjs",
     "guide": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-guide.mjs",
-    "story": "node scripts/build-opportunity-story.mjs",
+    "story": "node scripts/build-story.mjs",
+    "story-route": "node scripts/plan-story-route.mjs",
     "story-audio": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-story-audio.mjs",
     "story-images": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-story-images.mjs"
   },

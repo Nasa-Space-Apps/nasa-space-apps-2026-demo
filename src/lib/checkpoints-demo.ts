@@ -1,7 +1,7 @@
 import type { Checkpoint } from "./checkpoints";
 
 /**
- * FICTIONAL stories for the vehicles added to try their 3D models (Spirit, Ingenuity, InSight, Beagle 2): invented places, dates and figures,
+ * FICTIONAL stories for the vehicles added to try their 3D models (Spirit, InSight, Beagle 2; Ingenuity now has its real story, lib/story.ts): invented places, dates and figures,
  * laid out on the Mars terrains we already have. Every checkpoint is `demo: true`:
  *  - no audio is recorded for them: `audio` points to a clip of ANOTHER checkpoint (placeholder, the subtitle text does not match what is said);
  *  - the voice guide stays silent about them (no `next-` / `remind-` lines exist);
@@ -108,105 +108,6 @@ export const SPIRIT_CHECKPOINTS: Checkpoint[] = [
       ["Status", "Stuck"],
       ["Ending", "Fictional"],
       ["Last signal", "Sol 1400"],
-    ],
-  },
-];
-
-export const INGENUITY_CHECKPOINTS: Checkpoint[] = [
-  {
-    id: "ingenuity-airfield-zero",
-    name: "Airfield Zero",
-    place: "Flight 0 · Fiction",
-    x: -277,
-    z: -157,
-    demo: true,
-    image: "/images/checkpoints/mars-ingenuity-airfield.jpg",
-    credit: "NASA/JPL-Caltech · PIA23882 (the helicopter in a studio)",
-    text: "Where the demo flight plan begins. In this fictional story the helicopter waits on a flat airfield for its first takeoff. The photo shows the real helicopter in a studio, on Earth.",
-    narration:
-      "Flight zero. A tiny helicopter stands on a flat patch of ground, its legs spread wide and its blades folded still. In this story it is only a test, planned for five flights. Nobody expects it to cross the whole crater.",
-    audio: "/narration/wright-brothers.mp3",
-    facts: [
-      ["Story", "Fictional"],
-      ["Type", "Helicopter"],
-      ["Planned", "5 flights"],
-    ],
-  },
-  {
-    id: "ingenuity-hover-pad",
-    name: "Hover Pad",
-    place: "Flight 5 · Fiction",
-    x: -299,
-    z: -59,
-    via: [[-309, -91]],
-    demo: true,
-    image: "/images/checkpoints/mars-ingenuity-hover.jpg",
-    credit: "NASA/JPL-Caltech · PIA24547 (a close-up on Mars)",
-    text: "A short hop and a steady hover. The photo is a close-up of the helicopter standing on the ground, with its long shadow beside it.",
-    narration:
-      "Flight five. The blades spin up, the helicopter rises three meters and holds, steady as a leaf on still water. The air is so thin here that its rotors must turn far faster than any on Earth. It lands exactly where it started.",
-    audio: "/narration/montdenier.mp3",
-    facts: [
-      ["Altitude", "3 m"],
-      ["Hover", "30 s"],
-      ["Result", "Success"],
-    ],
-  },
-  {
-    id: "ingenuity-sky-eye",
-    name: "Sky Eye",
-    place: "Flight 12 · Fiction",
-    x: -247,
-    z: 45,
-    demo: true,
-    image: "/images/checkpoints/mars-ingenuity-eye.jpg",
-    credit: "NASA/JPL-Caltech · PIA23969 (the underside camera, tested on Earth)",
-    text: "The downward camera photographs the ground to find a safe place to land. In this story it spots a rocky field and steers around it.",
-    narration:
-      "Flight twelve. A small camera on the belly looks straight down and photographs the ground, again and again. It finds a field of sharp rocks ahead, and the helicopter swings sixty meters to the side to land on smooth sand.",
-    audio: "/narration/delta.mp3",
-    facts: [
-      ["Camera", "Looking down"],
-      ["Detour", "60 m"],
-      ["Landing", "Smooth sand"],
-    ],
-  },
-  {
-    id: "ingenuity-long-hop",
-    name: "Long Hop",
-    place: "Flight 31 · Fiction",
-    x: -149,
-    z: 119,
-    demo: true,
-    image: "/images/checkpoints/mars-wright-brothers.jpg",
-    credit: "NASA/JPL-Caltech/ASU/MSSS · PIA24590 (an earlier flight, filmed from the rover)",
-    text: "The longest hop of the story: the helicopter crosses the wall of a crater to a new airfield. The photo shows an earlier flight, filmed from the rover.",
-    narration:
-      "Flight thirty-one. The longest hop yet. The helicopter climbs ten meters, crosses the steep wall of the crater, and glides down the other side to a new airfield, four hundred meters away. On the ground, the team holds its breath.",
-    audio: "/narration/three-forks.mp3",
-    facts: [
-      ["Distance", "400 m"],
-      ["Altitude", "10 m"],
-      ["Crossing", "Crater wall"],
-    ],
-  },
-  {
-    id: "ingenuity-last-flight",
-    name: "Last Flight",
-    place: "Flight 41 · Fiction ending",
-    x: 75,
-    z: 85,
-    demo: true,
-    image: "/images/checkpoints/mars-ingenuity-last.jpg",
-    credit: "NASA/JPL-Caltech · PIA24466 (illustration of the helicopter in flight)",
-    text: "The demo ending. After a last, perfect hover the helicopter lands on the crater floor and rests. The picture is an illustration of the helicopter flying near a rover.",
-    narration:
-      "Flight forty-one. One last hover over the crater floor, then the blades slow and stop. The helicopter settles on the sand and folds its mission. It was built for five flights. In this story, it flew forty-one.",
-    audio: "/narration/last-sol.mp3",
-    facts: [
-      ["Status", "Landed for good"],
-      ["Ending", "Fictional"],
-      ["Flights", "41"],
     ],
   },
 ];

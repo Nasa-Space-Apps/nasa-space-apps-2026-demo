@@ -7,7 +7,7 @@ import { bodyOfMission } from "@/lib/bodies";
 import { game } from "@/lib/game";
 import { loadNarration, stopNarration } from "@/lib/narration";
 import { MISSIONS } from "@/lib/missions";
-import { beatToCheckpoint, INTRO_BEATS, MARS_BEATS, OUTRO_BEATS, STORY_BEATS } from "@/lib/opportunity";
+import { beatToCheckpoint, storyOf, type Story } from "@/lib/story";
 import { THEME as theme } from "@/lib/themes";
 import Ambient from "./Ambient";
 import Comic from "./Comic";
@@ -21,19 +21,20 @@ const Scene = dynamic(() => import("./Scene"), { ssr: false, loading: () => null
 type Phase = "intro" | "mars" | "outro";
 
 /**
- * The whole Opportunity experience on one route (/mars/opportunity), in three acts that share one blue field:
+ * The whole story of a mission on one route (/mars/opportunity, /mars/ingenuity), in three acts that share one blue field:
  *
- *   intro  comic pages: the idea, the decision, the launch, the landing (the 5 events before the rover is on Mars)
- *   mars   the 3D route: one stop per event on Meridiani Planum (the scene loads behind the last comic pages and waits: `game.hold`)
+ *   intro  comic pages: the idea, the decision, the launch, the landing (the events before the vehicle is on Mars)
+ *   mars   the 3D route: one stop per event on the Martian surface (the scene loads behind the last comic pages and waits: `game.hold`)
  *   outro  comic pages again (the farewell and the legacy) and a closing card with «play again» / «globe»
  *
  * Like the scene, it releases everything when its route is not the current one (Next keeps visited routes alive) and starts over on the way back.
  */
 export default function Journey({ missionId }: { missionId: string }) {
   const pathname = usePathname();
+  const story = storyOf(missionId);
   const [run, setRun] = useState(0); // «play again» remounts the whole experience
-  if (pathname !== `/${bodyOfMission(missionId)?.id ?? "mars"}/${missionId}`) return null;
-  return <JourneyView key={run} missionId={missionId} onReplay={() => setRun((r) => r + 1)} />;
+  if (!story || pathname !== `/${bodyOfMission(missionId)?.id ?? "mars"}/${missionId}`) return null;
+  return <JourneyView key={run} missionId={missionId} story={story} onReplay={() => setRun((r) => r + 1)} />;
 }
 
 const decode = (src: string) =>
@@ -44,14 +45,14 @@ const decode = (src: string) =>
   });
 
 /**
- * Gets everything the story needs READY before the first page: the 20 narration clips (into memory, see lib/narration.ts) and the 20 illustrations (downloaded and
+ * Gets everything the story needs READY before the first page: the narration clips (into memory, see lib/narration.ts) and the illustrations (downloaded and
  * decoded). Without this, a page narrated for the first time waited on the network ("loading" for seconds, no subtitles). Never waits more than 25 s, and never
  * flashes: at least 0.8 s of the loading screen.
  */
-function useStoryAssets() {
+function useStoryAssets(beats: Story["beats"]) {
   const [done, setDone] = useState(0);
   const [ready, setReady] = useState(false);
-  const total = STORY_BEATS.length * 2;
+  const total = beats.length * 2;
   useEffect(() => {
     let alive = true;
     const t0 = performance.now();
@@ -60,7 +61,7 @@ function useStoryAssets() {
       n++;
       if (alive) setDone(n);
     };
-    const jobs = STORY_BEATS.flatMap((b) => [loadNarration(beatToCheckpoint(b)).then(tick), decode(b.image).then(tick)]);
+    const jobs = beats.flatMap((b) => [loadNarration(beatToCheckpoint(b)).then(tick), decode(b.image).then(tick)]);
     const cap = new Promise<void>((r) => window.setTimeout(r, 25000));
     void Promise.race([Promise.all(jobs), cap]).then(() => {
       window.setTimeout(() => alive && setReady(true), Math.max(0, 800 - (performance.now() - t0)));
@@ -68,12 +69,12 @@ function useStoryAssets() {
     return () => {
       alive = false;
     };
-  }, []);
+  }, [beats]);
   return { ready, progress: Math.round((Math.min(done, total) / total) * 100) };
 }
 
-function JourneyView({ missionId, onReplay }: { missionId: string; onReplay: () => void }) {
-  const { ready, progress } = useStoryAssets();
+function JourneyView({ missionId, story, onReplay }: { missionId: string; story: Story; onReplay: () => void }) {
+  const { ready, progress } = useStoryAssets(story.beats);
   const router = useRouter();
   const body = bodyOfMission(missionId)?.id ?? "mars";
   const [phase, setPhase] = useState<Phase>("intro");
@@ -110,7 +111,7 @@ function JourneyView({ missionId, onReplay }: { missionId: string; onReplay: () 
   const backToIntro = () => {
     stopNarration();
     game.hold = true;
-    setIntroStart(INTRO_BEATS.length - 1);
+    setIntroStart(story.intro.length - 1);
     setPhase("intro");
     setComicOn(true);
   };
@@ -131,13 +132,14 @@ function JourneyView({ missionId, onReplay }: { missionId: string; onReplay: () 
     <>
       <Ambient track="timeline" />
       {sceneOn && <Scene missionId={missionId} onBack={backToIntro} backLabel="Story" lockVehicle />}
-      {phase === "mars" && <MarsActions lastId={MARS_BEATS[MARS_BEATS.length - 1].id} onClick={startOutro} />}
-      {!ready && <Loading title="Opportunity" stage="Preparing the story" progress={progress} />}
+      {phase === "mars" && <MarsActions lastId={story.mars[story.mars.length - 1].id} onClick={startOutro} />}
+      {!ready && <Loading title={story.name} stage="Preparing the story" progress={progress} />}
 
       {ready && comicOn && phase === "intro" && (
         <Comic
           key="intro"
-          beats={INTRO_BEATS}
+          name={story.name}
+          beats={story.intro}
           label="earth"
           doneLabel="land on mars"
           onDone={startMars}
@@ -153,7 +155,8 @@ function JourneyView({ missionId, onReplay }: { missionId: string; onReplay: () 
       {ready && comicOn && phase === "outro" && (
         <Comic
           key="outro"
-          beats={OUTRO_BEATS}
+          name={story.name}
+          beats={story.outro}
           label="legacy"
           doneLabel=""
           onDone={() => {}}
@@ -161,9 +164,9 @@ function JourneyView({ missionId, onReplay }: { missionId: string; onReplay: () 
           onBackPast={backToMars}
           end={
             <>
-              <div style={{ fontSize: 34, fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.95, color: theme.ink }}>thank you, Opportunity</div>
+              <div style={{ fontSize: 34, fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.95, color: theme.ink }}>{story.closing.title}</div>
               <p style={{ marginTop: 14, fontSize: 15, fontWeight: 500, lineHeight: 1.4, color: theme.ink }}>
-                Planned for 90 sols, it worked for almost 15 years and drove 45.16 km across Mars.
+                {story.closing.text}
               </p>
               <div className="mt-6 flex flex-col gap-2.5">
                 <button type="button" className="ui-btn" onClick={onReplay}>
