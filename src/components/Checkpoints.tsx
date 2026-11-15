@@ -39,11 +39,13 @@ export default function Checkpoints({
   radius,
   terrain,
   colors,
+  hidden = false,
 }: {
   checkpoints: Checkpoint[];
   radius: number;
   terrain: TerrainData;
   colors: { pending: string; active: string; done: string }; // beacon colour: not reached yet / the vehicle is inside / already reached
+  hidden?: boolean; // a stationary vehicle (InSight, Beagle 2): all its moments are the same spot, so no beacons
 }) {
   const height = radius * 1.6;
   const gemR = radius * 0.14;
@@ -71,15 +73,34 @@ export default function Checkpoints({
     if (!game.terrain) return; // mission still (re)starting
     const dist = (c: Checkpoint) => Math.hypot(game.x - c.x, game.z - c.z);
 
+    const still = game.stationary;
+    if (still && game.route) {
+      // a vehicle that never moves: the moment is the stop the story cursor is on (not a place the vehicle reaches). The card and the narration open when the cursor
+      // settles on a stop and close while it glides; the moments it passes on the way count as visited
+      const rt = game.route;
+      rt.stops.forEach((x, i) => {
+        if (game.s >= x - 0.6 && checkpoints[i]) game.visited.add(checkpoints[i].id);
+      });
+      const idx = rt.stops.findIndex((x) => Math.abs(x - game.s) < 0.6);
+      const want = !game.hold && game.travel === null && idx >= 0 ? checkpoints[idx] : undefined;
+      if ((want?.id ?? null) !== game.active) {
+        game.active = want?.id ?? null;
+        if (want) {
+          stopGuide();
+          void playNarration(want); // no-op if narration is switched off
+        } else stopNarration();
+      }
+    }
+
     // proximity: enter at `radius`, leave at 1.15x so the card does not flicker at the edge
-    if (game.active && !game.hold) {
+    if (!still && game.active && !game.hold) {
       const cur = checkpoints.find((c) => c.id === game.active);
       if (!cur || dist(cur) > radius * 1.15) {
         game.active = null;
         stopNarration();
       }
     }
-    if (!game.active && !game.hold) {
+    if (!still && !game.active && !game.hold) {
       // (game.hold: the story's comic pages are on top: the first checkpoint opens, with its narration, when they leave)
       for (const c of checkpoints) {
         if (dist(c) < radius) {
@@ -116,6 +137,7 @@ export default function Checkpoints({
     });
   });
 
+  if (hidden) return null;
   return (
     <>
       {items.map(({ c, y, ring, mat, gemMat }, i) => (

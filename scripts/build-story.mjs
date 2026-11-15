@@ -84,6 +84,7 @@ const story = {
   title: D.TITLE,
   note: `Illustrations are AI-generated artwork based on the verified events; every fact and its source come from the research dossiers. Narration is written for short, clear audio (~50 words).`,
   closing: D.CLOSING,
+  stationary: Boolean(D.STATIONARY), // the vehicle never moves (InSight, Beagle 2): in the 3D, Space goes to the next moment instead of driving
   parts: D.PARTS.map((p) => ({ ...p, beats: beats.filter((b) => b.part === p.id).map((b) => b.id) })),
   beats,
 };

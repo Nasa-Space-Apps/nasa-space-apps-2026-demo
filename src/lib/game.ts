@@ -23,6 +23,7 @@ export const game = {
   visited: new Set<string>(), // checkpoint ids already reached
   active: null as string | null, // checkpoint the rover is currently inside
   mission: "", // id of the active mission (vehicle), e.g. "opportunity" | "sev"
+  stationary: false, // the vehicle never moves (InSight, Beagle 2): `s` is a cursor on a virtual route, Space steps to the next moment (see `stepForward`)
   hold: false, // the scene waits behind something else (the story's comic pages): no driving, no checkpoint detection, no narration or guide
 };
 
@@ -37,10 +38,22 @@ export function travelTo(index: number) {
   game.travel = index;
 }
 
+/** Stationary vehicle: go to the next moment of its story (Space). Ignored while the story's comic is on top or the cursor is already moving. */
+export function stepForward() {
+  const route = game.route;
+  if (!route || game.hold || game.travel !== null) return;
+  const i = route.stops.findIndex((x) => Math.abs(x - game.s) < 0.6);
+  if (i >= 0 && i < route.stops.length - 1) game.travel = i + 1;
+}
+
 export function bindKeyboard() {
   const down = (e: KeyboardEvent) => {
     if (e.code !== "Space") return;
     e.preventDefault();
+    if (game.stationary) {
+      if (!e.repeat) stepForward(); // the vehicle never moves: Space only changes the moment
+      return;
+    }
     input.go = true;
   };
   const up = (e: KeyboardEvent) => {

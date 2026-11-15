@@ -1,4 +1,6 @@
+import beagle2 from "../../public/models/beagle2/story.json";
 import ingenuity from "../../public/models/ingenuity/story.json";
+import insight from "../../public/models/insight/story.json";
 import opportunity from "../../public/models/opportunity/story.json";
 import spirit from "../../public/models/spirit/story.json";
 import surveyor3 from "../../public/models/surveyor3/story.json";
@@ -38,6 +40,7 @@ type StoryFile = {
   title: string;
   note: string;
   closing: { title: string; text: string };
+  stationary?: boolean;
   parts: { id: StoryPart; title: string; blurb: string; beats: string[] }[];
   beats: StoryBeat[];
 };
@@ -69,6 +72,7 @@ export type Story = {
   name: string; // «Opportunity»
   title: string;
   closing: { title: string; text: string }; // the card after the last comic page
+  stationary: boolean; // the vehicle never moved (InSight, Beagle 2): in the 3D, Space goes to the next moment of the story instead of driving
   parts: StoryFile["parts"];
   beats: StoryBeat[];
   intro: StoryBeat[];
@@ -85,6 +89,7 @@ function build(data: StoryFile): Story {
     name: data.name,
     title: data.title,
     closing: data.closing,
+    stationary: Boolean(data.stationary),
     parts: data.parts,
     beats: data.beats,
     intro: data.beats.filter((b) => b.part === "intro"),
@@ -98,6 +103,8 @@ const STORIES: Record<string, Story> = {
   opportunity: build(opportunity as unknown as StoryFile),
   ingenuity: build(ingenuity as unknown as StoryFile),
   spirit: build(spirit as unknown as StoryFile),
+  insight: build(insight as unknown as StoryFile),
+  "beagle-2": build(beagle2 as unknown as StoryFile), // the mission id has a hyphen, the folder public/models/beagle2 does not
   "surveyor-3": build(surveyor3 as unknown as StoryFile), // the mission id has a hyphen, the folder public/models/surveyor3 does not
 };
 

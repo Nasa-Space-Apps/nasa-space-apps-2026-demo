@@ -59,10 +59,10 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
         setAt(stopIdx);
       }
       let next: string;
-      if (game.travel !== null) next = `Traveling to ${list[game.travel]?.name ?? ""}`;
+      if (game.travel !== null) next = `${game.stationary ? "Going to" : "Traveling to"} ${list[game.travel]?.name ?? ""}`;
       else {
         const k = stops.findIndex((x) => x > game.s + 0.6);
-        next = k < 0 ? "End of the route" : `Next: ${list[k]?.name ?? ""}`;
+        next = k < 0 ? (game.stationary ? "The last moment" : "End of the route") : `Next: ${list[k]?.name ?? ""}`;
       }
       if (next !== lastStatus) {
         lastStatus = next;

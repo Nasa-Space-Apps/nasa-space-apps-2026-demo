@@ -87,6 +87,19 @@ conducción libre); el `useEffect` de `Scene.tsx` atiende `M` (siguiente vehícu
 **Archivos de datos:** `lib/missions.ts` (vehículo + terreno + entorno), `lib/themes.ts` (el tema único), `lib/story.ts`
 (las historias: de cada beat sale un checkpoint, y el orden de la lista es el orden del recorrido; `via` son los puntos intermedios de cada tramo) y `lib/checkpoints.ts` (solo el tipo `Checkpoint`). **Solo en mantenimiento:** `scripts/build-story.mjs`, `plan-story-route.mjs`, `generate-story-images.mjs`, `generate-story-audio.mjs` y `generate-guide.mjs` (graban los mp3 de `public/models/<misión>/audio` y `public/guide`; comparten `scripts/lib/tts.mjs`).
 
+## Vehículos inmóviles (hito 52)
+
+InSight y Beagle 2 nunca se movieron, así que su escena 3D no se conduce. Se reutiliza **toda** la maquinaria de la ruta (línea de tiempo, tarjeta, narración, minimapa) con una ruta **virtual**:
+
+- `Mission.stationary` (de `Story.stationary`) → `Experience` publica `game.stationary = true` y construye `buildStationaryRoute(checkpoints, heading)` (`lib/route.ts`): el vehículo está en el spot del primer checkpoint (todos son el mismo, `BASE`) y las paradas están a 100 unidades virtuales una de otra; `game.s` es un **cursor de tiempo**, no una distancia recorrida.
+- **`Rover.tsx`**: en modo inmóvil el cursor se desliza a `STILL_RATE` (360 u/s) hacia `stops[game.travel]`; `game.speed` es siempre 0 (sin vibración, polvo ni huellas); el vehículo queda quieto en su sitio y sigue el terreno.
+- **`lib/game.ts`**: `stepForward()` pone `game.travel` en la parada siguiente (ignora `game.hold`, un viaje en curso y la última parada); en `bindKeyboard`, con `game.stationary`, **Espacio** llama a `stepForward` (una vez por pulsación, sin repeticiones) en vez de poner `input.go`.
+- **`Checkpoints.tsx`**: en modo inmóvil la proximidad no sirve (todos están en el mismo punto): el momento activo es el de la parada donde se detiene el cursor (`game.active`); mientras el cursor se desliza no hay tarjeta ni narración, y los momentos que pasa de largo cuentan como visitados. Sin balizas (`hidden`).
+- **`Scene.tsx`**: `CameraRig` orbita alrededor del vehículo (`cur.ang`, ~0,5 rad por momento + deriva) y se acerca un 15 %; no se monta `<Guide/>`; `Hints` recibe `still` («Next moment», sin chip `G`).
+- **`Timeline.tsx`** y **`Minimap.tsx`**: textos «Going to…» / «The last moment»; el minimapa no dibuja ruta ni cuadrados numerados (solo el punto del vehículo).
+- **Modelos** (`lib/vehicles/insight.ts`, `beagle2.ts`): sin ruedas (`rig.wheels` vacío; `halfLen/halfWid` se pasan a `finish`), así que `Dust` y `Tracks` no emiten nada.
+- **Datos**: `STATIONARY`/`BASE` en `scripts/data/<misión>-story.mjs`; `plan-story-route.mjs` no planifica trayectos (escribe N paradas iguales).
+
 ## Tema por mundo (hito 46)
 
 `lib/themes.ts` define `BASE` (lo común) y `WORLDS` (campo, tinte, acento, baliza de **Marte** y de la **Luna**); `themeFor(mundo)` devuelve el `Theme` completo y `worldOfPath(ruta)` el mundo de una URL (`/mars…` = Marte, el resto = Luna). Los componentes de UI usan `useTheme()` (`lib/use-theme.ts`, lee `usePathname`, así que sigue al `pushState` del selector de mundo del globo); las variables CSS (`--canvas`, `--accent`…) las publica `components/WorldVars.tsx` y un script del `<head>` (`app/layout.tsx`) las fija antes del primer pintado. Dentro del `<Canvas>` de R3F no hay contexto de React: `Experience` usa `themeFor(bodyOfMission(mission.id).id)` y el globo recibe el tema por props. `missions.ts` toma el cielo y la niebla de `themeFor(<mundo>).canvas`. Detalle: [design.md](design.md#paleta-por-mundo-hito-46).

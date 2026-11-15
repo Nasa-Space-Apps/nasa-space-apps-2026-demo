@@ -1,0 +1,225 @@
+{
+  "clips": {
+    "bgl001": {
+      "file": "/models/beagle2/audio/bgl001.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "cb885e1bdb69de01",
+      "chars": 343,
+      "bytes": 405463,
+      "generatedAt": "2026-11-15T22:15:52.678Z"
+    },
+    "bgl002": {
+      "file": "/models/beagle2/audio/bgl002.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "46e9c5db5baa406d",
+      "chars": 291,
+      "bytes": 353218,
+      "generatedAt": "2026-11-15T22:15:57.823Z"
+    },
+    "bgl003": {
+      "file": "/models/beagle2/audio/bgl003.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "28d18b97f33016c4",
+      "chars": 318,
+      "bytes": 368265,
+      "generatedAt": "2026-11-15T22:16:03.873Z"
+    },
+    "bgl009": {
+      "file": "/models/beagle2/audio/bgl009.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "aab92984be16cb4d",
+      "chars": 330,
+      "bytes": 409225,
+      "generatedAt": "2026-11-15T22:16:09.680Z"
+    },
+    "bgl017": {
+      "file": "/models/beagle2/audio/bgl017.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "f134775063d21b3f",
+      "chars": 324,
+      "bytes": 391670,
+      "generatedAt": "2026-11-15T22:16:15.362Z"
+    },
+    "bgl019": {
+      "file": "/models/beagle2/audio/bgl019.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "3686be34da72a682",
+      "chars": 317,
+      "bytes": 391670,
+      "generatedAt": "2026-11-15T22:16:20.715Z"
+    },
+    "bgl020": {
+      "file": "/models/beagle2/audio/bgl020.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "12ef95ce399ae752",
+      "chars": 293,
+      "bytes": 395432,
+      "generatedAt": "2026-11-15T22:16:26.918Z"
+    },
+    "bgl023": {
+      "file": "/models/beagle2/audio/bgl023.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "ecfed83c43de7a6b",
+      "chars": 278,
+      "bytes": 331484,
+      "generatedAt": "2026-11-15T22:16:31.752Z"
+    },
+    "bgl027": {
+      "file": "/models/beagle2/audio/bgl027.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "453a2144de8a2aaa",
+      "chars": 340,
+      "bytes": 381221,
+      "generatedAt": "2026-11-15T22:16:37.754Z"
+    },
+    "bgl032": {
+      "file": "/models/beagle2/audio/bgl032.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "48c395e532dacdcf",
+      "chars": 338,
+      "bytes": 438900,
+      "generatedAt": "2026-11-15T22:16:44.993Z"
+    },
+    "bgl033": {
+      "file": "/models/beagle2/audio/bgl033.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "014b0a8d5aca651f",
+      "chars": 322,
+      "bytes": 371190,
+      "generatedAt": "2026-11-15T22:16:50.482Z"
+    },
+    "bgl041": {
+      "file": "/models/beagle2/audio/bgl041.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "0dc8d88da5a52f1d",
+      "chars": 285,
+      "bytes": 358234,
+      "generatedAt": "2026-11-15T22:16:56.234Z"
+    },
+    "bgl037": {
+      "file": "/models/beagle2/audio/bgl037.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "046a0cece87c0d62",
+      "chars": 334,
+      "bytes": 401701,
+      "generatedAt": "2026-11-15T22:17:01.418Z"
+    },
+    "bgl043": {
+      "file": "/models/beagle2/audio/bgl043.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "e09e5c0d56c11ae7",
+      "chars": 334,
+      "bytes": 389998,
+      "generatedAt": "2026-11-15T22:17:06.895Z"
+    },
+    "bgl044": {
+      "file": "/models/beagle2/audio/bgl044.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "5935778734174681",
+      "chars": 323,
+      "bytes": 368265,
+      "generatedAt": "2026-11-15T22:17:12.552Z"
+    },
+    "bgl045": {
+      "file": "/models/beagle2/audio/bgl045.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "7ff5fb908594fe13",
+      "chars": 341,
+      "bytes": 442661,
+      "generatedAt": "2026-11-15T22:17:19.373Z"
+    },
+    "bgl048": {
+      "file": "/models/beagle2/audio/bgl048.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "96d29cf17bc7e5a3",
+      "chars": 310,
+      "bytes": 407971,
+      "generatedAt": "2026-11-15T22:17:25.201Z"
+    },
+    "bgl049": {
+      "file": "/models/beagle2/audio/bgl049.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "41bf35346e4c47a3",
+      "chars": 311,
+      "bytes": 377460,
+      "generatedAt": "2026-11-15T22:17:30.452Z"
+    },
+    "bgl051": {
+      "file": "/models/beagle2/audio/bgl051.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "eac9a92c178f928e",
+      "chars": 330,
+      "bytes": 423435,
+      "generatedAt": "2026-11-15T22:17:36.736Z"
+    },
+    "bgl052": {
+      "file": "/models/beagle2/audio/bgl052.mp3",
+      "voiceId": "pqHfZKP75CvOlQylNhV4",
+      "voiceName": "Bill",
+      "model": "eleven_v4",
+      "format": "mp3_44100_128",
+      "hash": "283127b0647a35ea",
+      "chars": 322,
+      "bytes": 420927,
+      "generatedAt": "2026-11-15T22:17:43.046Z"
+    }
+  },
+  "updatedAt": "2026-11-15T22:17:43.046Z"
+}

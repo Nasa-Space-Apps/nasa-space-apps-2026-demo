@@ -40,6 +40,7 @@ export type Mission = {
   tracks: { color: string; opacity: number };
   checkpoints: Checkpoint[];
   checkpointRadius: number; // trigger radius (also sizes the beacon); ~1.5x the vehicle width
+  stationary?: boolean; // the vehicle never moves (InSight, Beagle 2): Space steps through the moments of its story and nothing drives
 };
 
 // shared by the Mars demo missions below (same values as `opportunity` / `perseverance`)
@@ -184,10 +185,10 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: "insight",
-    name: "InSight · Mars (demo)",
-    title: "InSight · Elysium (demo)",
-    terrainUrl: "/models/gale-terrain.stl",
-    terrain: GALE_TERRAIN,
+    name: "InSight · Mars",
+    title: "InSight · Elysium Planitia",
+    terrainUrl: "/models/terrain.stl", // the flat plain of the Meridiani model stands in for Elysium Planitia
+    terrain: MARS_TERRAIN,
     rover: {
       model: "insight",
       palette: { dark: "#12808F", mid: "#6CC3CC", light: "#E6F6F7", bg: THEME.paperLight }, // teal
@@ -197,15 +198,16 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
-    checkpointRadius: 20,
+    checkpoints: storyOf("insight")!.checkpoints, // the real story: 14 moments (public/models/insight/story.json); the 4 before the landing are comic pages
+    checkpointRadius: 15,
+    stationary: storyOf("insight")!.stationary, // the lander never moved: the moments are not places
   },
   {
     id: "beagle-2",
-    name: "Beagle 2 · Mars (demo)",
-    title: "Beagle 2 · Isidis (demo)",
-    terrainUrl: "/models/terrain.stl",
-    terrain: MARS_TERRAIN,
+    name: "Beagle 2 · Mars",
+    title: "Beagle 2 · Isidis Planitia",
+    terrainUrl: "/models/gale-terrain.stl", // the flat floor of the Gale model stands in for Isidis Planitia
+    terrain: GALE_TERRAIN,
     rover: {
       model: "beagle2",
       palette: { dark: "#B0306A", mid: "#E88AB4", light: "#FDEAF2", bg: THEME.paperLight }, // berry
@@ -215,8 +217,9 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
-    checkpointRadius: 20,
+    checkpoints: storyOf("beagle-2")!.checkpoints, // the real story: 12 moments (public/models/beagle2/story.json); the 6 before the landing are comic pages
+    checkpointRadius: 15,
+    stationary: storyOf("beagle-2")!.stationary, // the lander never moved nor called home: the moments are not places
   },
 ];
 

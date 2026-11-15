@@ -150,11 +150,34 @@ El mismo flujo en `/mars/spirit`: cómic de **6** páginas → 3D con **12** par
 - **Imagen a revisar:** el sello de la carpeta en `spi001` muestra la palabra «REJECTED» (el modelo la escribió); se arregla con `npm run story-images -- spirit --only spi001 --force`.
 - **Si «no suena la narración»:** casi seguro es la preferencia `poc-narration = "off"` del navegador (tecla `N`); ver [gotchas.md](gotchas.md).
 
+## Historias de InSight y Beagle 2 (hito 52): vehículos inmóviles
+
+Las dos misiones tienen ya su historia completa (cómic → 3D → cómic, narración, fuentes) con `/mars/insight` y `/mars/beagle-2`. Como **ni InSight ni Beagle 2 se movieron**, el 3D no es una ruta que se conduce: ver «Vehículos inmóviles» abajo.
+
+| | InSight | Beagle 2 |
+| --- | --- | --- |
+| Reparto | 4 de Tierra (concurso de 2012, fuga del sismómetro, lanzamiento, aterrizaje) · **14 momentos** en Marte (viento, selfie, sismómetro, topo, primer sismo, fin del topo, limpieza con arena, interior de Marte, impacto de Nochebuena, última selfie, mayor sismo, solo SEIS, último mensaje) · 2 de legado (fin de la misión, foto de HiRISE) | 6 de Tierra (propuesta de Pillinger, 1 de 3 propuestas, el nombre, el laboratorio de 60 kg, lanzamiento, separación) · **12 momentos** (silencio de Navidad, lo que esperaban oír, cráter en la elipse, el «hail», declarado perdido, búsqueda con MGS, informe, 26 fotos de HiRISE, foto de 2013, muerte de Pillinger, Croon, hallazgo) · 2 de legado (el anuncio de 2015, «dio en el larguero») |
+| Terreno 3D | `terrain.stl` (llano en (0, 75), pendiente 1°) | `gale-terrain.stl` (suelo del cráter en (90, 80), pendiente 0°) |
+| Audio | 20 clips de Bill, 6 113 caracteres, 2 444 créditos | 20 clips de Bill, 6 384 caracteres, 2 553 créditos |
+| Datos | `scripts/data/insight-story.mjs` | `scripts/data/beagle2-story.mjs` (id de la misión `beagle-2`, carpeta `beagle2`) |
+
+Cifras en disputa evitadas: hasta dónde llegó el topo (30 o 40 cm: «nunca bajó mucho»), el día exacto del fin de InSight (20 o 21 dic), el radio del núcleo (se da el de 2021 con su año), cuántos paneles se abrieron (solo «al menos uno quedó cerrado»), la masa de Beagle 2 (33 kg en superficie / 69 kg empaquetado, cada uno con su contexto) y el coste (£45 M en 1997 / $40 M frente a los $1 000 M de Viking). Beagle 2 es de la ESA y el Reino Unido, no de la NASA: se cuenta porque HiRISE (NASA) lo localizó en 2015.
+
+### Vehículos inmóviles
+
+`STATIONARY = true` y `BASE = [x, z]` en el módulo de datos de la misión (`npm run story-route` escribe N paradas **iguales**; `npm run story` pone `stationary: true` en el `story.json`; `lib/story.ts` lo expone como `Story.stationary` y `missions.ts` como `Mission.stationary`). En el 3D:
+
+- **El módulo no se mueve ni tiene ruedas** (`lib/vehicles/insight.ts`: tres patas con apoyos redondos; `beagle2.ts`: tumbado en el suelo). **Espacio** (una pulsación, sin repetición) pasa al siguiente momento; un clic en un marcador de la línea de tiempo salta a ese momento. El chip dice «Next moment», no hay chip de guía (`G`) ni guía de voz, no hay balizas ni ruta en el minimapa (solo el punto del módulo) y la línea de tiempo dice «Going to…» / «The last moment».
+- **La cámara** da una vuelta lenta alrededor del módulo: un paso (~0,5 rad) por cada momento, más una deriva suave.
+- Al llegar al último momento aparece «continue the story», igual que en las demás historias.
+- Cómo funciona por dentro: [architecture.md](architecture.md#vehículos-inmóviles-hito-52).
+- **Mejora posible:** que la escena cambie con el momento (el sismómetro y el topo en el suelo solo después de desplegarse, polvo acumulándose en los paneles, los tres elementos hallados de Beagle 2). Hoy el módulo es el mismo en todos los momentos.
+
 ## Ilustraciones de InSight y Beagle 2 (hito 51)
 
 Las 40 ilustraciones (20 por misión, uno por dossier de `misiones/insight` y `misiones/beagle2`) ya están generadas con la receta de siempre: `scripts/data/insight-image-prompts.mjs` y `scripts/data/beagle2-image-prompts.mjs` (mismo `STYLE`/`ENDING` que Ingenuity, importados; cada archivo define el vehículo una sola vez, `LANDER`, y los prompts lo reutilizan para que se reconozca) → `npm run story-images -- insight` y `-- beagle2` → `public/models/<misión>/images`. **La carpeta de Beagle 2 es `beagle2`** (como en `misiones/`), mientras que su id en `missions.ts` es `beagle-2` (igual que `surveyor3` ↔ `surveyor-3`). Revisadas en hojas de contactos: estilo coherente con el resto, sin texto legible salvo algún garabato (el calendario de `bgl032` muestra abreviaturas de los días de la semana; el «post» de `ins072`, líneas ilegibles). Beagle 2 no es de la NASA (ESA/Reino Unido): el vínculo con el reto es que HiRISE (MRO) lo localizó en 2015.
 
-**Falta para abrirlas en la demo** (receta: [Añadir otra misión](#el-reparto-antes--después-del-3d) y los pasos de arriba): `scripts/data/<misión>-story.mjs` (copy, anclas, cierre), `npm run story-route`, `npm run story`, `npm run story-audio`, `STORIES` en `lib/story.ts`, `checkpoints` en `missions.ts` y datos reales en `bodies.ts`. InSight no se mueve (ficción: el modelo lleva ruedas) y Beagle 2 tampoco: hay que decidir el terreno (¿Meridiani, Gale?) y cómo se cuenta una historia 3D de un módulo inmóvil.
+Ya están conectadas a la historia (hito 52, arriba).
 
 ## Pendiente
 

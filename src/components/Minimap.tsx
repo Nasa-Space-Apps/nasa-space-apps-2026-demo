@@ -189,7 +189,7 @@ export default function Minimap({ theme, title, accent }: { theme: Theme; title:
 
       // route: the whole path faint and dashed, the part already driven solid
       const rt = game.route;
-      if (rt && rt.points.length > 1) {
+      if (rt && rt.points.length > 1 && !game.stationary) {
         ctx.lineCap = "round";
         ctx.lineJoin = "round";
         ctx.strokeStyle = trail.color;
@@ -215,11 +215,11 @@ export default function Minimap({ theme, title, accent }: { theme: Theme; title:
       const cr = 8 * u;
       const stops = rt?.stops ?? [];
       const onStop = stops.findIndex((x) => Math.abs(x - game.s) < 0.6);
-      veh += ((onStop >= 0 ? 0 : 1) - veh) * k;
+      veh += ((onStop >= 0 && !game.stationary ? 0 : 1) - veh) * k; // a stationary vehicle has no route or numbered squares: its dot always shows
       ctx.font = `800 ${9 * u}px ${getComputedStyle(cv).getPropertyValue("--font-sans") || "Helvetica"}, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      game.checkpoints.forEach((c, i) => {
+      (game.stationary ? [] : game.checkpoints).forEach((c, i) => {
         const px = toX(c.x);
         const py = toY(c.z);
         const reached = game.visited.has(c.id);

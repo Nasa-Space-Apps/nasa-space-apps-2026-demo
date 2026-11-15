@@ -24,6 +24,17 @@ const D = await import(pathToFileURL(path.join(ROOT, `scripts/data/${mission}-st
 const N = Number(process.argv[3] ?? D.BEATS.filter((b) => b.part === "mars").length);
 const T = loadTerrain(path.join(ROOT, D.TERRAIN), { fade: D.FADE ?? 45, res: 1 });
 
+// a vehicle that never moves (InSight, Beagle 2: STATIONARY + BASE in the data module): every stop is the same spot, there are no legs to plan
+if (D.STATIONARY) {
+  const [bx, bz] = D.BASE;
+  const slope = Math.round(T.slopeAt(bx, bz));
+  const plan = Array.from({ length: N }, () => ({ x: bx, z: bz, slope }));
+  console.log(`${N} stops, all at (${bx}, ${bz}) · slope ${slope}° · stationary vehicle`);
+  mkdirSync(path.join(ROOT, "scripts/data"), { recursive: true });
+  writeFileSync(path.join(ROOT, `scripts/data/${mission}-route.json`), JSON.stringify(plan, null, 2));
+  process.exit(0);
+}
+
 // the line the stops follow: first anchor = where the vehicle starts, last = where the story ends
 const OLD = D.ANCHORS;
 const seg = OLD.slice(1).map((p, i) => Math.hypot(p[0] - OLD[i][0], p[1] - OLD[i][1]));

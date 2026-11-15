@@ -3,26 +3,13 @@ import { DARK, Kit, LIGHT, MID, type VehiclePalette, type VehicleRig } from "./k
 /**
  * Beagle 2, as in the photos of the full-size replicas (no 3D model of it exists): a flat "flower" with the round dark base and its yellow
  * calibration frame in the middle, the gold lid with the folded sampling arm, and four round solar panels laid out around it like petals.
- * FICTION: the real lander never moved nor called home; this demo version carries a four-wheel chassis under the base so that it can drive.
- * The lid sits behind, the vehicle drives along +z.
+ * The real lander never moved nor called home, so it has no wheels: it lies on the ground (the 3D scene is a «time» scene, see lib/route.ts).
+ * The lid sits behind; the lander faces +z.
  */
 export function beagle2(p: VehiclePalette): VehicleRig {
   const b = new Kit(p);
-  const R = 0.95;
   const BASE = 2.45; // radius of the central base
-  const Y = 2.15; // underside of the petals
-  const WZ = 1.35;
-
-  // ---- chassis and wheels under the base ----
-  for (const s of [-1, 1])
-    for (const z of [-WZ, WZ]) {
-      b.wheel(s * 3.0, z, R, () => b.tyre(R, 0.7, { cleats: 14, spokes: 5, hub: 0.36 }));
-      b.box(0.3, 1.0, 0.7, s * 2.45, R + 0.4, z, { r: 0.08 }); // fork
-    }
-  for (const z of [-WZ, WZ]) b.cyl(0.14, 5.6, "x", 0, R, z, { tone: MID, seg: 10 }); // axles
-  b.box(3.6, 0.55, 3.4, 0, Y - 0.35, 0, { r: 0.12, tone: MID }); // frame
-  b.tube([-1.4, Y - 0.2, 0], [-2.7, R + 0.2, WZ], 0.1, { seg: 8 });
-  b.tube([1.4, Y - 0.2, 0], [2.7, R + 0.2, -WZ], 0.1, { seg: 8 });
+  const Y = 0.25; // underside of the petals: the lander lies on the ground
 
   // ---- central base: dark disc with the yellow calibration frame ----
   b.cyl(BASE, 0.7, "y", 0, Y + 0.35, 0, { seg: 40 });
@@ -69,5 +56,5 @@ export function beagle2(p: VehiclePalette): VehicleRig {
   b.tube([-2.0, Y + 0.95, 1.9], [-2.0, Y + 2.2, 1.9], 0.05, { seg: 6 }); // UHF antenna
   b.ball(0.1, -2.0, Y + 2.25, 1.9, { tone: MID });
 
-  return b.finish();
+  return b.finish({ halfLen: 3.6, halfWid: 3.6 }); // no wheels: the footprint is given
 }

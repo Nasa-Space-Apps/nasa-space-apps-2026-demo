@@ -1,6 +1,6 @@
-# Rover PoC — historias de Opportunity, Spirit, Ingenuity y Surveyor 3
+# Rover PoC — historias de Opportunity, Spirit, Ingenuity, Surveyor 3, InSight y Beagle 2
 
-> **Enfoque:** la demo es un **juego** con modo **Historia** (ya implementado para **Opportunity**, **Spirit**, **Ingenuity** y **Surveyor 3**: cómic 2D → recorrido 3D → cómic final, con 20 eventos reales cada una) y modo **Decisiones** (aún sin implementar). Ver [`docs/game-design.md`](docs/game-design.md) y [`docs/story.md`](docs/story.md). Los vehículos que aún no tienen historia (Perseverance, SEV, InSight, Beagle 2) salen en el globo con «coming soon» y su 3D no se abre.
+> **Enfoque:** la demo es un **juego** con modo **Historia** (ya implementado para **Opportunity**, **Spirit**, **Ingenuity**, **Surveyor 3**, **InSight** y **Beagle 2**: cómic 2D → recorrido 3D → cómic final, con 20 eventos reales cada una) y modo **Decisiones** (aún sin implementar). Ver [`docs/game-design.md`](docs/game-design.md) y [`docs/story.md`](docs/story.md). Los vehículos que aún no tienen historia (Perseverance, SEV) salen en el globo con «coming soon» y su 3D no se abre.
 
 Prueba de concepto 3D en el navegador: un rover recorre una **ruta definida** sobre un terreno real (modelos STL) en
 «expediciones» (Marte y Luna), con polvo, huellas, cámara de seguimiento, minimapa y **storytelling**: paradas sobre el
@@ -17,7 +17,7 @@ No hay conducción libre: el jugador avanza con `Espacio` o salta de checkpoint 
 - **Vista del globo (`/moon`, `/mars`):** un globo alámbrico (rejilla fina, solo lo de delante, cuadrados que orbitan con él, vehículos en miniatura hundidos en el suelo)
   que **gira solo** y se puede **girar en X e Y** (arrastrar le da inercia; al manipularlo la cara visible siempre muestra algún vehículo: si agarras una cara vacía, gira rápido hasta uno; al soltar se endereza solo, conservando hacia dónde lo giraste) y **acercar con la rueda** (el zoom solo escala el globo y los vehículos, no los botones), con un selector Luna/Marte a la izquierda, un botón de música (icono) a la derecha y el marcador del vehículo abandonado → su tarjeta con el vehículo ilustrado en 3 tonos →
   **«Travel to the past»** abre `/<mundo>/<vehículo>` (p. ej. `/moon/surveyor-3`), la historia; si el vehículo aún no tiene historia, el botón es **«Coming soon»**. `Esc` cierra la tarjeta; `← Globe` vuelve. Cada ruta carga solo sus recursos.
-- **4 historias** con vehículo propio: Opportunity y Spirit (Marte, terreno de Meridiani), Ingenuity (Marte, terreno de Gale) y Surveyor 3 (Luna). Cada una: cómic de apertura, recorrido 3D y cómic final con tarjeta de cierre.
+- **6 historias** con vehículo propio: Opportunity, Spirit e InSight (Marte, terreno de Meridiani), Ingenuity y Beagle 2 (Marte, terreno de Gale) y Surveyor 3 (Luna). Cada una: cómic de apertura, recorrido 3D y cómic final con tarjeta de cierre.
 - **Un solo tema, «Ink & Paper»** (cómic; referencia: ponpon-mania.com/chapter/2), con **una paleta por mundo** (hito 46): campo con grano —**terracota `#E2603A` en Marte, azul acero `#4B7DB8` en la Luna**—, papel crema `#FEECE3` con trazo de tinta `#171717` de 3 px, un acento por mundo (**mantequilla `#FFC247` en Marte, menta `#6BE3C3` en la Luna**), botones en píldora, Libre Franklin (800 títulos, 700 minúscula en etiquetas), vehículos de 3 tonos y movimiento suave en todo. Ver [`docs/design.md`](docs/design.md).
 - **Minimapa** con relieve (curvas de nivel), la ruta (recorrida y pendiente), rumbo, posición y velocidad.
 - **Línea de tiempo** (barra horizontal abajo): un marcador por checkpoint y el progreso del vehículo; solo se puede viajar a los
@@ -51,6 +51,7 @@ Para jugar **no hace falta ninguna clave ni variable de entorno**. La API key de
 | Clic en el marcador / en el vehículo de la lista | (vista del globo) Abrir la tarjeta del vehículo |
 | `Esc` | (vista del globo) Cerrar la tarjeta |
 | `Espacio` (mantener) | Avanzar por la ruta hasta el siguiente checkpoint; allí se detiene (suelta y vuelve a pulsar para seguir) |
+| `Espacio` (pulsar) | **InSight y Beagle 2** (módulos inmóviles): pasar al siguiente momento de la historia (tarjeta y narración nuevas; el módulo no se mueve) |
 | Clic en un marcador de la línea de tiempo | Viaje automático hasta ese checkpoint (hacia delante o hacia atrás) |
 | `N` | Activar/desactivar la narración automática (chip «Narration on/off»; se recuerda en `localStorage`: si «no suena nada», mira que no esté en off) |
 | `S` / botón de altavoz del globo | Música de fondo on/off |
@@ -66,7 +67,7 @@ En la escena, arriba a la izquierda está `← story` (vuelve a la última pági
 | --- | --- |
 | `/` | redirige a `/moon` |
 | `/moon`, `/mars` | globo con el selector de mundo (cambiar de mundo no recarga) |
-| `/mars/opportunity`, `/mars/spirit`, `/mars/ingenuity`, `/moon/surveyor-3` | la historia del vehículo (`/<mundo>/<id de la misión>`): cómic → 3D → cómic; los demás vehículos redirigen al globo; `/mars#opportunity` abre el globo con la tarjeta |
+| `/mars/opportunity`, `/mars/spirit`, `/mars/ingenuity`, `/mars/insight`, `/mars/beagle-2`, `/moon/surveyor-3` | la historia del vehículo (`/<mundo>/<id de la misión>`): cómic → 3D → cómic; los demás vehículos redirigen al globo; `/mars#opportunity` abre el globo con la tarjeta |
 
 Cada ruta descarga solo lo suyo: el globo no carga la escena del rover, y la escena solo el terreno y el modelo de su vehículo.
 
@@ -76,6 +77,8 @@ Cada ruta descarga solo lo suyo: el globo no carga la escena del rover, y la esc
 | --- | --- | --- |
 | **Opportunity · Mars** | `terrain.stl` | 13 (de las rocas empapadas de Eagle Crater a la última señal) |
 | **Spirit · Mars** | `terrain.stl` (maqueta de Gusev; el montículo de Gale era demasiado empinado) | 12 (del bucle de reinicios del sol 18 a la última señal en Troy) |
+| **InSight · Mars** | `terrain.stl` (llano, maqueta de Elysium Planitia) | 14 **momentos** (el módulo no se mueve; Espacio pasa al siguiente) |
+| **Beagle 2 · Mars** | `gale-terrain.stl` (suelo llano del cráter, maqueta de Isidis Planitia) | 12 **momentos** (el módulo no se mueve) |
 | **Ingenuity · Mars** | `gale-terrain.stl` (cráter Gale, como maqueta de Jezero) | 13 (de la tela del Flyer 1 al vuelo 72) |
 | **Surveyor 3 · Moon** | `moon-terrain.stl` | 11 (del radar que falla a la visita del Apollo 12) |
 

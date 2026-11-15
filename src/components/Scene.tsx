@@ -7,7 +7,7 @@ import { Preload, useProgress } from "@react-three/drei";
 import * as THREE from "three";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 import { buildTerrain } from "@/lib/terrain";
-import { buildRoute } from "@/lib/route";
+import { buildRoute, buildStationaryRoute } from "@/lib/route";
 import { game } from "@/lib/game";
 import { MISSIONS, type Mission } from "@/lib/missions";
 import { useTheme } from "@/lib/use-theme";
@@ -67,7 +67,7 @@ function Sun({ mission }: { mission: Mission }) {
 }
 
 function CameraRig() {
-  const cur = useMemo(() => ({ x: NaN, y: 0, z: 0, fov: 35 }), []);
+  const cur = useMemo(() => ({ x: NaN, y: 0, z: 0, fov: 35, ang: 0 }), []);
   useFrame((state, dtRaw) => {
     const dt = Math.min(dtRaw, 0.05);
     const cam = state.camera as THREE.PerspectiveCamera;
@@ -83,10 +83,16 @@ function CameraRig() {
     cur.y = damp(cur.y, game.y, 3.5, dt);
     cur.z = damp(cur.z, tz, 3.5, dt);
     const shake = game.boost ? 0.05 : 0;
+    // a vehicle that never moves: the camera circles it, a step for every moment of the story (game.s is 100 per moment), with a slow drift in between
+    const orbit = game.stationary ? game.s * 0.005 + Math.sin(state.clock.elapsedTime * 0.12) * 0.07 : 0;
+    cur.ang = damp(cur.ang, orbit, 2.2, dt);
+    const ca = Math.cos(cur.ang);
+    const sa = Math.sin(cur.ang);
+    const near = game.stationary ? 0.85 : 1;
     cam.position.set(
-      cur.x + 22 + (Math.random() - 0.5) * shake,
-      cur.y + 16 + (Math.random() - 0.5) * shake,
-      cur.z + 24,
+      cur.x + (22 * ca + 24 * sa) * near + (Math.random() - 0.5) * shake,
+      cur.y + 16 * near + (Math.random() - 0.5) * shake,
+      cur.z + (-22 * sa + 24 * ca) * near,
     );
     cam.lookAt(cur.x, cur.y + 2, cur.z);
     const targetFov = 35 + Math.min(1, Math.abs(game.speed) / game.topSpeed) * 9;
@@ -103,7 +109,10 @@ function Experience({ mission }: { mission: Mission }) {
   const theme = themeFor((bodyOfMission(mission.id)?.id ?? "moon") as WorldId); // inside the Canvas React context does not reach: take the world from the mission
   const stl = useLoader(STLLoader, mission.terrainUrl);
   const { mesh, data } = useMemo(() => buildTerrain(stl, mission.terrain), [stl, mission]);
-  const route = useMemo(() => buildRoute(mission.checkpoints), [mission]);
+  const route = useMemo(
+    () => (mission.stationary ? buildStationaryRoute(mission.checkpoints, mission.rover.heading) : buildRoute(mission.checkpoints)),
+    [mission],
+  );
 
   // (re)start the mission: put the rover at the start of the route and publish the terrain and the route
   useEffect(() => {
@@ -126,6 +135,7 @@ function Experience({ mission }: { mission: Mission }) {
       visited: new Set<string>(),
       active: null,
       mission: mission.id,
+      stationary: Boolean(mission.stationary),
     });
     return () => {
       game.terrain = null;
@@ -151,8 +161,9 @@ function Experience({ mission }: { mission: Mission }) {
         radius={mission.checkpointRadius}
         terrain={data}
         colors={theme.beacon}
+        hidden={mission.stationary}
       />
-      <Guide />
+      {!mission.stationary && <Guide />}
       <Rover config={mission.rover} />
       <Dust config={mission.dust} />
       <CameraRig />
@@ -260,7 +271,7 @@ function SceneView({ missionId, onBack, backLabel, lockVehicle }: { missionId: s
       {/* bottom centre, between the card (left) and the minimap (right): caption above, then the key chips, then the timeline */}
       <div className="pointer-events-none fixed bottom-5 left-1/2 z-10 flex w-[clamp(440px,calc(100vw-900px),560px)] -translate-x-1/2 flex-col items-stretch gap-2.5">
         <Captions theme={theme} />
-        <Hints theme={theme} />
+        <Hints theme={theme} still={mission.stationary} />
         <Timeline theme={theme} accent={mission.rover.palette.dark} />
       </div>
       <div

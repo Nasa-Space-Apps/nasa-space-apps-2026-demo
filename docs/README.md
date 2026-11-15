@@ -2,7 +2,7 @@
 
 Índice de la carpeta `docs/`. Si retomas el proyecto, léelos en este orden:
 
-0. **[story.md](story.md)** — **las historias implementadas** (Opportunity hito 36, Ingenuity hito 40, Surveyor 3 hito 42, Spirit hito 45): 20 eventos reales cada una (cómic → 3D → cómic), ilustraciones de IA, narraciones cortas, datos en `public/models/<misión>/`, cómo regenerarlas, la receta para añadir otra misión y qué falta.
+0. **[story.md](story.md)** — **las historias implementadas** (Opportunity hito 36, Ingenuity hito 40, Surveyor 3 hito 42, Spirit hito 45, InSight y Beagle 2 hito 52 —vehículos inmóviles—): 20 eventos reales cada una (cómic → 3D → cómic), ilustraciones de IA, narraciones cortas, datos en `public/models/<misión>/`, cómo regenerarlas, la receta para añadir otra misión y qué falta.
 0. **[game-design.md](game-design.md)** — **enfoque vigente (hito 29): el juego sobre Opportunity**, con modo Historia y modo Decisiones, Parte 1 (2D) y Parte 2 (3D), reglas, impacto en el código y preguntas abiertas. *Léelo antes que nada: define hacia dónde va el proyecto.* El resto de la documentación describe lo que **ya está construido**.
 1. **[history.md](history.md)** — qué se hizo, en qué orden y por qué (incluye las decisiones de diseño y las preferencias del
    usuario). *Léelo primero para recuperar el contexto.*
@@ -34,7 +34,7 @@ src/
   app/            layout.tsx (fuentes), page.tsx (→ /moon), [body]/page.tsx (globo), [body]/[vehicle]/page.tsx (escena del rover), globals.css
   components/     Explore + Globe + GlobeLabels + VehicleCard + VehicleView (globo y tarjeta del vehículo abandonado; ExploreLoader/SceneLoader cargan cada vista), Scene (Canvas + overlays), Rover (sigue la ruta), Dust, Tracks, Checkpoints (balizas), CheckpointCard, Timeline (línea de tiempo), Guide + GuideCaption (guía de voz), Minimap, Hud
   lib/            themes (BASE + paleta por mundo) + use-theme (useTheme), perf (perfil de rendimiento light/full), ui (estilos DOM compartidos), vehicles + vehicles/ (vehículos procedurales de 3 tonos: kit de primitivas y un archivo por vehículo), bodies (mundos + vehículos abandonados), game (estado), terrain (STL → malla + mapa de alturas), route (ruta del vehículo), missions, themes, checkpoints (storytelling + ruta), narration (voz del checkpoint), guide + guide-lines (guía de voz)
-public/models/    STL (terrenos) + una carpeta por historia (opportunity/, spirit/, ingenuity/, surveyor3/: story.json, images/, audio/); los GLB de referencia se eliminaron (hito 43, ver model-sources.md)
+public/models/    STL (terrenos) + una carpeta por historia (opportunity/, spirit/, ingenuity/, surveyor3/, insight/, beagle2/: story.json, images/, audio/); los GLB de referencia se eliminaron (hito 43, ver model-sources.md)
 public/guide/     mp3 pregrabados de la guía de voz genérica (30 frases) + manifest.json
 public/story/     visores HTML del equipo (historia y juego de Opportunity)
 public/ambient/   mp3 pregrabados de la música de fondo (moon, mars, timeline) + manifest.json

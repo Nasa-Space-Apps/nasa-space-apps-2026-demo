@@ -28,7 +28,7 @@ agents/opportunity-research/               código: agente.py, pipeline.py, proc
 story/                                     juego de decisiones y visores de Opportunity (fuera del alcance actual)
 ```
 
-Misiones con base hoy: opportunity, spirit, insight, beagle2, ingenuity y surveyor3. **Con dossiers: opportunity (30), ingenuity, surveyor3, spirit, insight y beagle2 (20 cada una)**; las cuatro primeras ya están **implementadas en la demo web** como modo Historia (`docs/story.md`: ilustraciones con Nano Banana, narración con ElevenLabs, ruta 3D). **InSight y Beagle 2** tienen sus 20 ilustraciones (`public/models/<misión>/images`) pero no historia en la demo todavía. El juego de decisiones de Opportunity sigue en `story/` (no implementado en la demo).
+Misiones con base hoy: opportunity, spirit, insight, beagle2, ingenuity y surveyor3. **Con dossiers: opportunity (30), ingenuity, surveyor3, spirit, insight y beagle2 (20 cada una)**; las seis ya están **implementadas en la demo web** como modo Historia (`docs/story.md`: ilustraciones con Nano Banana, narración con ElevenLabs, ruta 3D). **InSight y Beagle 2 son vehículos inmóviles** (hito 52: en el 3D Espacio pasa al siguiente momento, no se conduce; ver `docs/story.md`). El juego de decisiones de Opportunity sigue en `story/` (no implementado en la demo).
 
 ## Reglas de trabajo (del usuario)
 

@@ -6,13 +6,14 @@
 
 Estado (hito 48): 4 historias completas (Opportunity, Spirit, Ingenuity, Surveyor 3) con cómic, 3D, narración y fuentes; paleta por mundo; globo libre; tarjeta 3D con ilustración a todo el ancho. Candidatos, en el orden en que encajan con lo pedido hasta ahora:
 
-1. **Revisar de oído las 80 narraciones** y las 20 ilustraciones de Spirit (el sello de «REJECTED» de `spi001`); regrabar solo lo que no guste (`--only`).
-2. **Más historias:** **InSight y Beagle 2 ya tienen dossiers (20 cada uno) y sus 40 ilustraciones** (hito 51): falta el `<misión>-story.mjs`, la ruta 3D, la narración y registrarlas (ver [story.md](story.md#ilustraciones-de-insight-y-beagle-2-hito-51)). Perseverance y SEV siguen «coming soon» (sin dossiers).
-3. **Modo Decisiones** (definido en [game-design.md](game-design.md), no implementado; los 30 nodos de Opportunity están en `story/data/juego_opportunity.json`).
-4. **Terreno propio de Gusev** (hoy Spirit usa Meridiani como maqueta) y de Jezero (Ingenuity usa Gale): las paradas no son lugares reales.
-5. **Alinear el color de cada vehículo con la paleta de su mundo** (hoy: Spirit violeta, Ingenuity ámbar, Opportunity coral, Surveyor 3 oliva).
-6. Comprobar la tarjeta del 3D en pantallas pequeñas (≤ 720 px de alto) y en vertical; el zoom táctil (pellizco) del globo no está hecho.
-7. Deudas viejas: escala real de los vehículos (abajo), progreso `visited` no persistente, build servido sin probar.
+1. **Revisar de oído las 120 narraciones** y las 20 ilustraciones de Spirit (el sello de «REJECTED» de `spi001`); regrabar solo lo que no guste (`--only`).
+2. **Más historias:** InSight y Beagle 2 ya están completas (hito 52). Perseverance y SEV siguen «coming soon» (sin dossiers). Receta: [story.md](story.md).
+3. **Escenas 3D que cambien con el momento** en los módulos inmóviles (el sismómetro y el topo solo tras desplegarse, polvo en los paneles de InSight, lo hallado en 2015 de Beagle 2): hoy el modelo es el mismo en todos los momentos (ver [story.md](story.md#vehículos-inmóviles)).
+4. **Modo Decisiones** (definido en [game-design.md](game-design.md), no implementado; los 30 nodos de Opportunity están en `story/data/juego_opportunity.json`).
+5. **Terreno propio de Gusev** (hoy Spirit usa Meridiani como maqueta) y de Jezero (Ingenuity usa Gale): las paradas no son lugares reales.
+6. **Alinear el color de cada vehículo con la paleta de su mundo** (hoy: Spirit violeta, Ingenuity ámbar, Opportunity coral, Surveyor 3 oliva).
+7. Comprobar la tarjeta del 3D en pantallas pequeñas (≤ 720 px de alto) y en vertical; el zoom táctil (pellizco) del globo no está hecho.
+8. Deudas viejas: escala real de los vehículos (abajo), progreso `visited` no persistente, build servido sin probar.
 
 Ideas y deudas técnicas detectadas, sin orden estricto. Lo marcado ⭐ es lo que más encaja con lo que el usuario ha pedido.
 

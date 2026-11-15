@@ -27,9 +27,9 @@ Sin assets: los globos son una rejilla de líneas generada por código (`Globe.t
 
 `story.json` (20 beats), `images/spiNNN.jpg` (20 ilustraciones de IA, Nano Banana 2.1 en Replicate, 1040 px, 4:5, ≈ 3,9 MB, con `manifest.json` y el prompt de cada una; originales de 1856×2304 en `~/Downloads/images/spirit/`, fuera del repo) y `audio/spiNNN.mp3` + `manifest.json` (20 clips de Bill, ≈ 7,1 MB, 2 394 créditos). Se generan con `npm run story-images`, `story-route`, `story` y `story-audio` (`-- spirit`); ver [story.md](story.md#historia-de-spirit-hito-45).
 
-## InSight y Beagle 2 (`public/models/insight/` y `public/models/beagle2/`, hito 51)
+## InSight y Beagle 2 (`public/models/insight/` y `public/models/beagle2/`, hitos 51–52)
 
-Solo **ilustraciones** por ahora (la historia, la ruta 3D y la narración aún no existen): 20 `insNNN.jpg` y 20 `bglNNN.jpg` (Nano Banana 2.1 en Replicate, 4:5, 1040 px, ≈ 3,6 y 4,0 MB) con su `manifest.json` (prompt y predicción de cada imagen) en `images/`; los originales de 1856×2304 están en `~/Downloads/images/<misión>/`, fuera del repo. Se generan con `npm run story-images -- insight` / `-- beagle2` desde `scripts/data/<misión>-image-prompts.mjs`. No hay más archivos de estos vehículos en `public/` (su modelo procedural, `lib/vehicles/insight.ts` y `beagle2.ts`, se sigue usando en el globo).
+Historias completas desde el hito 52 (`story.json`, `audio/insNNN.mp3` ≈ 7,4 MB y `audio/bglNNN.mp3` ≈ 8 MB con sus `manifest.json`, 4 997 créditos en total; ver [story.md](story.md#historias-de-insight-y-beagle-2-hito-52-vehículos-inmóviles)) y 40 **ilustraciones**: 20 `insNNN.jpg` y 20 `bglNNN.jpg` (Nano Banana 2.1 en Replicate, 4:5, 1040 px, ≈ 3,6 y 4,0 MB) con su `manifest.json` (prompt y predicción de cada imagen) en `images/`; los originales de 1856×2304 están en `~/Downloads/images/<misión>/`, fuera del repo. Se generan con `npm run story-images -- insight` / `-- beagle2` desde `scripts/data/<misión>-image-prompts.mjs`. No hay más archivos de estos vehículos en `public/` (su modelo procedural, `lib/vehicles/insight.ts` y `beagle2.ts`, sin ruedas desde el hito 52, se usa en el globo y en el 3D).
 
 ## Historia de Ingenuity (`public/models/ingenuity/`, hitos 39–40)
 
@@ -79,8 +79,8 @@ al sureste; terreno alto al oeste (X ≈ −300). Luna: meseta alta al este/sure
 | `perseverance` | 6 (radio 1,15, radios curvos) en rocker-bogie con dirección en las 4 esquinas | 12,3 × 14,6 × 11,0 | 16,3 mil | × 4,4 (1 m = 4,4 u) | cuerpo con panza y cubierta, barra diferencial, generador nuclear inclinado entre sus dos placas, mástil **desplegado** con el ojo de SuperCam sobre las Mastcam-Z, brazo plegado delante con torreta y taladro, plato hexagonal, lata UHF, antena de baja ganancia, equipo de cubierta |
 | `spirit` | 6 (como Opportunity); la delantera derecha **fija** (bloqueada) | 10,9 × 8,9 × 9,0 | 15,9 mil | × 1,25 | el mismo MER de Opportunity con una rueda muerta (**real**: el motor de la delantera derecha murió en el sol 779); violeta |
 | `ingenuity` | **ninguna** (flota 6,4 u sobre el suelo); 2 rotores contrarrotantes (`rig.rotors`) | 10,5 × 5,7 × 5,9 | 5,1 mil | × 9 (1 m = 9 u) | fuselaje dorado, 4 patas, panel solar, antena; ámbar |
-| `insight` | 3 (radio 1,0), una bajo cada pata (**ficción**: el real no se mueve) | 15,1 × 7,0 × 7,6 | 9,1 mil | × 2,15 | cubierta hexagonal, 2 abanicos solares de 12 lados, brazo con pinza, domo, antenas; turquesa |
-| `beagle2` | 4 (radio 0,95) bajo la base (**ficción**) | 12,7 × 4,9 × 13,0 | 10,9 mil | × 7 (de las fotos de réplicas) | base con marco de calibración, tapa dorada con brazo, 4 paneles redondos; frambuesa |
+| `insight` | **ninguna** (hito 52: 3 patas con apoyos redondos; el real no se mueve) | 15,1 × 6,0 × 6,5 | ~9 mil | × 2,15 | cubierta hexagonal, 2 abanicos solares de 12 lados, brazo con pinza, domo, antenas; turquesa |
+| `beagle2` | **ninguna** (hito 52: tumbado en el suelo; el real no se movió) | 12,7 × 2,5 × 13,0 | ~9 mil | × 7 (de las fotos de réplicas) | base con marco de calibración, tapa dorada con brazo, 4 paneles redondos; frambuesa |
 
 Todos avanzan por **+z**, con las ruedas en y=0 y centradas en x/z (la carrocería no: morros, colas y brazos sobresalen; `rig.center` da el centro real). Cada vehículo son **7 mallas** (1 cuerpo + 6 ruedas) con un solo material. Las ruedas son algo más grandes que en el GLB.
 Los GLB originales ya no están en `public/models` (hito 43; recuperables desde git). El SEV no sale de ninguna misión real en Apollo 14.

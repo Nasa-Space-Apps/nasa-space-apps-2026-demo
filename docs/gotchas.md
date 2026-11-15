@@ -131,7 +131,11 @@ Con la extensión Claude in Chrome (o cualquier navegador):
 - **El globo usa cámara ortográfica** (`orthographic` en el `Canvas`): los shaders de `Globe.tsx` (rejilla, cuadrados orbitantes) y el `front` de `Pin` asumen una dirección de vista constante (+z en vista). Si vuelves a perspectiva, hay que recuperar la dirección hacia la cámara por vértice. El zoom (píxeles por unidad) lo fija `Fit` con `frame()` × el zoom del usuario (`view.cur`).
 - Los scripts de edición con *heredoc* de varias líneas con comillas fallaron en el shell de la herramienta; para ediciones largas escribe el script a un archivo y ejecútalo.
 
-## Hitos 45–50 (Spirit, paletas, UI, límite y enderezado del globo)
+## Hitos 45–52 (Spirit, paletas, UI, globo, vehículos inmóviles)
+
+- **Vehículos inmóviles (hito 52):** con `game.stationary`, `game.s` es un cursor de tiempo, no una distancia; no uses `game.x/z` ni la proximidad para saber en qué momento estás (usa `game.active` o `route.stops`). Espacio llama a `stepForward()`, no pone `input.go`; `left_click`/`key` de prueba: una pulsación = un momento. El modelo **no puede tener ruedas** (`rig.wheels` vacío, y `halfLen/halfWid` hay que pasarlos a `finish()`: salen de las ruedas).
+- **`beagle-2` ↔ `beagle2`:** el id de la misión y de la ruta (`/mars/beagle-2`) lleva guion; la carpeta de datos y los scripts (`npm run story -- beagle2`) no. `STORIES` en `lib/story.ts` usa el id con guion.
+- **El botón «skip to mars» del cómic** no está siempre en (1405, 40): depende del ancho del viewport (a 1531 de ancho, ~(1473, 24)); mira la captura antes de pulsar.
 
 - **Enderezado al soltar (hito 50):** la orientación «derecha» es `Rx(TILT)·Ry(a)`; su centro está siempre a latitud `TILT` (≈ 28,6°) y a longitud `l` con `a = faceAngle(l)`. `upright()` toma la longitud del centro actual (`atan2(−c.z, c.x)`) y busca la más cercana con vehículo (`showsVehicle`, barrido de 1°). Por eso, tras soltar, el centro queda a latitud 28,6° aunque el usuario lo hubiese subido o bajado: la tilde es lo que se «normaliza». Con la cámara del navegador de pruebas `left_click_drag` suelta dentro de la misma acción, así que la captura siguiente ya muestra el globo enderezado.
 

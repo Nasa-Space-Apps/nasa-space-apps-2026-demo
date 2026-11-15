@@ -9,6 +9,7 @@ import { buildVehicle } from "@/lib/vehicles";
 
 const damp = THREE.MathUtils.damp;
 const DECEL = 28; // braking used to stop exactly on a checkpoint (units/s²)
+const STILL_RATE = 360; // a stationary vehicle: how fast the story cursor glides from moment to moment (virtual units/s; moments are 100 apart)
 
 export default function Rover({ config }: { config: RoverConfig }) {
   const rig = useMemo(() => buildVehicle(config.model, config.palette), [config]);
@@ -39,6 +40,21 @@ export default function Rover({ config }: { config: RoverConfig }) {
     // Space held = go to the next checkpoint and stop there (release and press again to continue);
     // a timeline click (game.travel) = autopilot to that checkpoint, forward or backward, passing the ones in between.
     const stops = route.stops;
+    if (game.stationary) {
+      // a vehicle that never moves: `game.s` is a cursor on a virtual route (one stop per moment of its story). It glides to the target moment; the vehicle stays put
+      if (game.hold) game.travel = null;
+      game.speed = 0;
+      game.boost = false;
+      if (game.travel !== null) {
+        const goal = stops[game.travel];
+        const step = Math.min(Math.abs(goal - game.s), STILL_RATE * dt);
+        game.s += Math.sign(goal - game.s) * step;
+        if (Math.abs(goal - game.s) < 0.01) {
+          game.s = goal;
+          game.travel = null;
+        }
+      }
+    } else {
     const go = input.go && !game.hold; // the scene can wait behind the comic pages of the story
     if (!go) {
       st.locked = false;
@@ -78,6 +94,7 @@ export default function Rover({ config }: { config: RoverConfig }) {
       game.travel = null;
       st.locked = go;
       st.goal = null;
+    }
     }
 
     route.at(game.s, st.pt);

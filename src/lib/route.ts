@@ -76,3 +76,19 @@ export function buildRoute(cps: Checkpoint[]): Route {
     },
   };
 }
+
+/**
+ * The «route» of a vehicle that never moves (InSight, Beagle 2): the vehicle stays at the first checkpoint's spot and the route is virtual, one stop every `gap`
+ * units of a cursor (`game.s`) that the scene glides from moment to moment. That way the timeline, the narration and the cards work as they do for a driving
+ * vehicle, but nothing moves on the ground.
+ */
+export function buildStationaryRoute(cps: Checkpoint[], heading: number, gap = 100): Route {
+  const x = cps[0]?.x ?? 0;
+  const z = cps[0]?.z ?? 0;
+  return {
+    length: Math.max(0, cps.length - 1) * gap,
+    stops: cps.map((_, i) => i * gap),
+    points: [{ x, z }],
+    at: (_s, out = { x: 0, z: 0, heading: 0 }) => Object.assign(out, { x, z, heading }),
+  };
+}

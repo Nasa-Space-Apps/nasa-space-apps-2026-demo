@@ -9,19 +9,19 @@ import { ease } from "@/lib/ui";
 import Icon from "./Icon";
 
 /** Key hints (bottom centre): the key in an ink block, its action beside it. */
-export function Hints({ theme }: { theme: Theme }) {
+export function Hints({ theme, still = false }: { theme: Theme; still?: boolean }) {
   const narration = useSyncExternalStore(subscribeNarration, getNarration, getNarration);
   const guide = useSyncExternalStore(subscribeGuide, getGuide, getGuide);
   const ambient = useSyncExternalStore(subscribeAmbient, getAmbient, getAmbient);
   const items: [string, string, boolean][] = [
-    ["Space", "Hold to drive", true],
+    ["Space", still ? "Next moment" : "Hold to drive", true],
     ["N", narration.enabled ? "Narration on" : "Narration off", narration.enabled],
     ["G", guide.enabled ? "Guide on" : "Guide off", guide.enabled],
     ["S", ambient.enabled ? "Music on" : "Music off", ambient.enabled],
   ];
   return (
     <div className="flex select-none flex-wrap justify-center gap-1.5" style={{ fontFamily: theme.mono }}>
-      {items.map(([k, l, on]) => (
+      {(still ? items.filter(([k]) => k !== "G") : items).map(([k, l, on]) => (
         <span
           key={k}
           className="flex items-center gap-2"
