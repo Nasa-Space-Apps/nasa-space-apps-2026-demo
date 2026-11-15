@@ -15,7 +15,7 @@ No hay conducción libre: el jugador avanza con `Espacio` o salta de checkpoint 
 ## Qué incluye la demo
 
 - **Vista del globo (`/moon`, `/mars`):** un globo alámbrico (rejilla fina, solo lo de delante, cuadrados que orbitan con él, vehículos en miniatura hundidos en el suelo)
-  que **gira solo** y se puede **girar en X e Y** (arrastrar le da inercia; al manipularlo la cara visible siempre muestra algún vehículo: si agarras una cara vacía, gira rápido hasta uno; al soltar se endereza solo, conservando hacia dónde lo giraste) y **acercar con la rueda** (el zoom solo escala el globo y los vehículos, no los botones), con un selector Luna/Marte a la izquierda, un botón de música (icono) a la derecha y el marcador del vehículo abandonado → su tarjeta con el vehículo ilustrado en 3 tonos →
+  que **gira solo** y se puede **girar en dos ejes** (sobre su propio eje y cabeceando; nunca rueda de lado) (arrastrar le da inercia; al manipularlo la cara visible siempre muestra algún vehículo: si agarras una cara vacía, gira rápido hasta uno; al soltar, la inclinación vuelve sola a la inicial, conservando hacia dónde lo giraste) y **acercar con la rueda** (el zoom solo escala el globo y los vehículos, no los botones), con un selector Luna/Marte a la izquierda, un botón de música (icono) a la derecha y el marcador del vehículo abandonado → su tarjeta con el vehículo ilustrado en 3 tonos →
   **«Travel to the past»** abre `/<mundo>/<vehículo>` (p. ej. `/moon/surveyor-3`), la historia; si el vehículo aún no tiene historia, el botón es **«Coming soon»**. `Esc` cierra la tarjeta; `← Globe` vuelve. Cada ruta carga solo sus recursos.
 - **6 historias** con vehículo propio: Opportunity, Spirit e InSight (Marte, terreno de Meridiani), Ingenuity y Beagle 2 (Marte, terreno de Gale) y Surveyor 3 (Luna). Cada una: cómic de apertura, recorrido 3D y cómic final con tarjeta de cierre.
 - **Un solo tema, «Ink & Paper»** (cómic; referencia: ponpon-mania.com/chapter/2), con **una paleta por mundo** (hito 46): campo con grano —**terracota `#E2603A` en Marte, azul acero `#4B7DB8` en la Luna**—, papel crema `#FEECE3` con trazo de tinta `#171717` de 3 px, un acento por mundo (**mantequilla `#FFC247` en Marte, menta `#6BE3C3` en la Luna**), botones en píldora, Libre Franklin (800 títulos, 700 minúscula en etiquetas), vehículos de 3 tonos y movimiento suave en todo. Ver [`docs/design.md`](docs/design.md).
@@ -46,7 +46,7 @@ Para jugar **no hace falta ninguna clave ni variable de entorno**. La API key de
 
 | Tecla / acción | Efecto |
 | --- | --- |
-| Arrastrar el globo | (vista del globo) Girarlo libremente en X e Y; al soltar sigue girando con inercia |
+| Arrastrar el globo | (vista del globo) Girarlo en dos ejes (horizontal: sobre su propio eje; vertical: lo inclina; nunca rueda de lado); al soltar sigue girando con inercia y la inclinación vuelve sola a la inicial |
 | Rueda / `Ctrl`+rueda / pellizco / `Ctrl` +, −, 0 | (vista del globo) Acercar o alejar **solo el globo y los vehículos** (los botones no cambian de tamaño; se evita el zoom de la página) |
 | Clic en el marcador / en el vehículo de la lista | (vista del globo) Abrir la tarjeta del vehículo |
 | `Esc` | (vista del globo) Cerrar la tarjeta |

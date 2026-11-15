@@ -41,7 +41,7 @@ Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría
 ## Hecho (última versión de la demo)
 
 - ✅ **Historias** de Opportunity (hito 36), Ingenuity (hito 40), Surveyor 3 (hito 42) y **Spirit (hito 45)** con el mismo flujo (cómic → 3D → cómic, narración, fuentes); scripts genéricos por misión; vehículos sin historia con «coming soon» (hito 43–44).
-- ✅ **Paleta por mundo** (hito 46: Marte terracota + mantequilla, Luna azul acero + menta) y **UI** (hitos 47–48): globo libre en X e Y con zoom propio, botón de música como icono, «skip the 3D» de acento, etiqueta «05. Título» en el cómic, tarjeta 3D con la ilustración a todo el ancho. Lo siguiente de esta lista describe etapas anteriores.
+- ✅ **Paleta por mundo** (hito 46: Marte terracota + mantequilla, Luna azul acero + menta) y **UI** (hitos 47–48): globo en dos ejes (giro propio + cabeceo, sin roll) con zoom propio, botón de música como icono, «skip the 3D» de acento, etiqueta «05. Título» en el cómic, tarjeta 3D con la ilustración a todo el ancho. Lo siguiente de esta lista describe etapas anteriores.
 
 - ✅ 3 expediciones (Opportunity y Perseverance en Marte, SEV en la Luna), tema único (flat; «Ink & Paper» desde el hito 30, antes «Primer»), minimapa, polvo, huellas, cámara de seguimiento.
 - ✅ **Storytelling**: 5 o 6 checkpoints por expedición, salida y final incluidos (balizas, rombos en el minimapa, tarjeta con foto y datos).
@@ -49,7 +49,7 @@ Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría
   los checkpoints para viajar (hacia delante o atrás).
 - ✅ **Narración** pregrabada con ElevenLabs (voz Bill, `eleven_v4`), automática al entrar, tecla `N`, botón Listen/Stop.
 - ✅ Interfaz y audios en inglés.
-- ✅ **Vista de entrada con el globo** (`/moon`, `/mars`): globo alámbrico claro sin assets, gira solo (inercia al arrastrar; desde el hito 47 gira libre en X e Y y tiene zoom propio), cuadrados negros que orbitan con él
+- ✅ **Vista de entrada con el globo** (`/moon`, `/mars`): globo alámbrico claro sin assets, gira solo (inercia al arrastrar; desde el hito 51 gira en dos ejes —su propio eje y el cabeceo— y tiene zoom propio), cuadrados negros que orbitan con él
   (solo los de delante), selector de mundo, marcadores/etiquetas de los vehículos abandonados y tarjeta con el modelo 3D empolvado → «Travel to the past».
 - ✅ **Rutas por vehículo** (`/moon/sev`, `/mars/opportunity`) con carga de recursos por ruta (`cacheComponents` + `generateStaticParams`).
 - ✅ **Rediseño completo en el tema «Primer»**: tokens únicos, tipografía, UI, globo, escena 3D y movimiento suave (ver [design.md](design.md)).

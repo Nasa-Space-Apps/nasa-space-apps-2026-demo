@@ -15,7 +15,7 @@ import { labelEls, placeFloating } from "./GlobeLabels";
 
 const R = 1.5; // globe radius at scale 1
 const IDLE = 0.1; // automatic spin, rad/s
-const TILT = 0.5; // starting elevation (~29°): shows the north pole like an isometric drawing. The globe is free: drag turns it about both screen axes
+const TILT = 0.5; // starting elevation (~29°): shows the north pole like an isometric drawing. Drag turns the globe about two axes only: its own (spin) and the horizontal one (pitch)
 /**
  * While the user steers the globe by hand, the centre of the face the camera sees must stay within MAX_OFF of at least one vehicle, so the visible side always has
  * a vehicle in it (the automatic spin is free: it may show empty ground). If the user grabs the globe while it shows none, it first turns quickly (the snap) until
@@ -30,6 +30,10 @@ const view = { target: 1, cur: 1 };
 const zoomBy = (f: number) => {
   view.target = THREE.MathUtils.clamp(view.target * f, ZOOM_MIN, ZOOM_MAX);
 };
+const PITCH_MAX = 1.45; // the globe can be tipped up to this far (rad) either way, never over the pole
+const DEG = 180 / Math.PI;
+/** Longitude (degrees) at the centre of the screen for a given spin of the globe (the inverse of `faceAngle`). */
+const lonOf = (spin: number) => (-spin - Math.PI / 2) * DEG;
 const AX = new THREE.Vector3(1, 0, 0);
 const AY = new THREE.Vector3(0, 1, 0);
 
@@ -390,24 +394,27 @@ type GlobeProps = {
 
 function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
   const outer = useRef<THREE.Group>(null); // position + scale
-  const spin = useRef<THREE.Group>(null); // the globe's orientation (free: the user can turn it about both screen axes)
+  const spin = useRef<THREE.Group>(null); // the globe's orientation: a turntable (spin about its own axis + pitch about the screen's horizontal axis, never roll)
   const size = useThree((s) => s.size);
   const st = useMemo(
     () => ({
-      drag: false, moved: 0, vx: 0, vy: 0, settle: 0, free: false,
+      drag: false, moved: 0, settle: 0, free: false,
+      pitch: TILT, // rad: how far the pole leans towards the viewer = the latitude at the centre of the screen
+      spin: 0, // rad: turn about the globe's own axis (the longitude at the centre of the screen is −spin − 90°)
+      vp: 0, vs: 0, // their speeds (the flick after a drag; `vs` relaxes to the idle spin)
       manual: false, // the user has grabbed the globe and it has not yet settled back to its idle spin: the limit applies
       snap: false, // turning quickly to bring a vehicle into view (see SNAP_OFF)
-      norm: false, // after letting go: turning quickly back to the upright orientation (see `upright`)
-      q: new THREE.Quaternion(), tq: new THREE.Quaternion(), dq: new THREE.Quaternion(), qi: new THREE.Quaternion(), rot: new THREE.Quaternion(),
-      c: new THREE.Vector3(), t: new THREE.Vector3(),
+      tp: TILT, ts: 0, // where the snap is going
+      norm: false, // after letting go: the pitch returns to its starting elevation
+      q: new THREE.Quaternion(), qa: new THREE.Quaternion(), c: new THREE.Vector3(), t: new THREE.Vector3(),
     }),
     [],
   );
   /** The vehicles as unit vectors in the globe's own frame. */
   const dirs = useMemo(() => body.vehicles.map((v) => new THREE.Vector3(...latLonDir(v.lat, v.lon))), [body]);
-  /** The point of the globe at the centre of the screen (in the globe's frame), the vehicle nearest to it and their angular distance. */
+  /** The point of the globe at the centre of the screen (latitude = pitch), the vehicle nearest to it and their angular distance. */
   const look = () => {
-    st.c.set(0, 0, 1).applyQuaternion(st.qi.copy(st.q).invert());
+    st.c.set(...latLonDir(st.pitch * DEG, lonOf(st.spin)));
     let best = 0;
     let bd = Infinity;
     dirs.forEach((d, i) => {
@@ -419,45 +426,40 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
     });
     return { i: best, a: bd };
   };
-  /** `out` = the current orientation turned by the smallest rotation that leaves the screen centre exactly `off` away from vehicle `i`, on the side it is now (call `look()` first). */
-  const toward = (i: number, off: number, out: THREE.Quaternion) => {
+  /** The (pitch, spin) that leave the screen centre exactly `off` away from vehicle `i`, on the side it is now (call `look()` first): the nearest allowed view. */
+  const toward = (i: number, off: number) => {
     const v = dirs[i];
     st.t.copy(st.c).addScaledVector(v, -v.dot(st.c)); // tangent at the vehicle, pointing to the centre
     if (st.t.lengthSq() < 1e-8) st.t.crossVectors(v, Math.abs(v.y) < 0.9 ? AY : AX); // the centre is right on it (or opposite): any direction
     st.t.normalize();
     const goal = v.clone().multiplyScalar(Math.cos(off)).addScaledVector(st.t, Math.sin(off));
-    st.rot.setFromUnitVectors(st.c, goal); // takes the current centre to the goal in the globe's frame
-    return out.copy(st.q).multiply(st.rot.invert());
+    const lon = (Math.atan2(-goal.z, goal.x) * 180) / Math.PI;
+    return { p: Math.asin(THREE.MathUtils.clamp(goal.y, -1, 1)), s: st.spin + wrap(faceAngle(lon) - st.spin) };
   };
   /** Does the upright view centred on longitude `lon` (degrees) have a vehicle within MAX_OFF? Its centre is at the starting elevation's latitude. */
   const showsVehicle = (lon: number) => {
-    const c = new THREE.Vector3(...latLonDir((TILT * 180) / Math.PI, lon));
+    const c = new THREE.Vector3(...latLonDir(TILT * DEG, lon));
     return dirs.some((d) => Math.acos(THREE.MathUtils.clamp(d.dot(c), -1, 1)) <= MAX_OFF);
   };
-  /**
-   * The upright orientation nearest to the current one that keeps its longitude: the pole axis vertical on screen (no roll) at the starting elevation, turned
-   * about the globe's own axis so that it looks at the same longitude as now (the spin the user gave is kept; the tilt and roll are the ones that are undone).
-   * If no vehicle is visible at that longitude it takes the closest longitude that has one. Writes it to `out`.
-   */
-  const upright = (out: THREE.Quaternion) => {
-    look();
-    const lon0 = (Math.atan2(-st.c.z, st.c.x) * 180) / Math.PI;
+  /** The spin of the upright view that keeps the longitude the globe is turned to; if no vehicle is visible there, the nearest longitude that has one. */
+  const uprightSpin = () => {
+    const lon0 = lonOf(st.spin);
     let lon = lon0;
     for (let d = 1; d <= 180 && !showsVehicle(lon); d++) {
       lon = lon0 + d;
       if (!showsVehicle(lon)) lon = lon0 - d;
     }
-    return orient(out, faceAngle(lon));
+    return st.spin + wrap(faceAngle(lon) - st.spin);
   };
   /** Keep the visible face within MAX_OFF of a vehicle; true if it had to be pulled back. */
   const constrain = () => {
     const { i, a } = look();
     if (a <= MAX_OFF) return false;
-    toward(i, MAX_OFF, st.q);
+    const g = toward(i, MAX_OFF);
+    st.pitch = g.p;
+    st.spin = g.s;
     return true;
   };
-  /** Orientation with the starting elevation and the given turn about the globe's own axis. */
-  const orient = (out: THREE.Quaternion, angle: number) => out.setFromAxisAngle(AX, TILT).multiply(st.dq.setFromAxisAngle(AY, angle));
   const pop = useMemo<Spring>(() => ({ x: 0.25, v: 0 }), []); // the globe's size: it pops in with an overshoot
   const target = useMemo(() => {
     const v = body.vehicles.find((x) => x.missionId === faceId) ?? body.vehicles[0];
@@ -466,9 +468,11 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
 
   // a newly shown body spins in from the side and pops up (a springy grow)
   useEffect(() => {
-    st.q.setFromAxisAngle(AX, TILT).multiply(st.dq.setFromAxisAngle(AY, faceAngle(body.vehicles[0].lon) + 1.4));
+    st.pitch = TILT;
+    st.spin = faceAngle(body.vehicles[0].lon) + 1.4;
     st.manual = false;
     st.snap = false;
+    st.norm = false;
     pop.x = 0.25;
     pop.v = 0;
   }, [body, st, pop]);
@@ -492,45 +496,54 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
 
     if (st.snap) {
       // the user grabbed a face with no vehicle: turn quickly until one is in view, then the drag takes over
-      st.q.slerp(st.tq, 1 - Math.exp(-14 * dt));
-      if (st.q.angleTo(st.tq) < 0.004) {
-        st.q.copy(st.tq);
+      const k = 1 - Math.exp(-14 * dt);
+      st.pitch += (st.tp - st.pitch) * k;
+      st.spin += wrap(st.ts - st.spin) * k;
+      if (Math.abs(st.tp - st.pitch) < 0.004 && Math.abs(wrap(st.ts - st.spin)) < 0.004) {
+        st.pitch = st.tp;
+        st.spin = st.ts;
         st.snap = false;
       }
-      st.vx = 0;
-      st.vy = 0;
+      st.vp = 0;
+      st.vs = 0;
     } else if (!st.drag && st.settle < 2.2) {
+      // turn to face the vehicle (and the starting elevation)
       st.settle += dt;
-      st.q.slerp(orient(st.tq, target), 1 - Math.exp(-2.8 * dt)); // turn to face the vehicle
-      st.vx = 0;
-      st.vy = 0;
+      const k = 1 - Math.exp(-2.8 * dt);
+      st.pitch += (TILT - st.pitch) * k;
+      st.spin += wrap(target - st.spin) * k;
+      st.vp = 0;
+      st.vs = 0;
     } else if (!st.drag) {
       if (selectedId !== null) {
         // a card is open: the globe stops dead (no drifting after a flick)
-        st.vx = 0;
-        st.vy = 0;
+        st.vp = 0;
+        st.vs = 0;
       } else {
-        // after a drag the globe keeps its momentum and settles back to the idle spin about its own axis; it pauses while the pointer is over a vehicle
+        // after a drag the globe keeps its spin momentum and settles back to the idle spin; it pauses while the pointer is over a vehicle
         const idle = hot.n > 0 ? 0 : IDLE;
-        st.vx += (idle - st.vx) * (1 - Math.exp(-1.5 * dt));
-        st.vy += (0 - st.vy) * (1 - Math.exp(-2.5 * dt));
-        st.q.premultiply(st.dq.setFromAxisAngle(AX, st.vy * dt)); // a flick up or down: about the screen's horizontal axis
-        st.q.multiply(st.dq.setFromAxisAngle(AY, st.vx * dt)); // the idle spin and a sideways flick: about the globe's own axis
+        st.vs += (idle - st.vs) * (1 - Math.exp(-1.5 * dt));
+        st.vp += (0 - st.vp) * (1 - Math.exp(-2.5 * dt));
+        st.spin += st.vs * dt;
+        st.pitch = THREE.MathUtils.clamp(st.pitch + st.vp * dt, -PITCH_MAX, PITCH_MAX);
         if (st.norm) {
-          // let go: the globe turns quickly back upright (tilt and roll to zero) while keeping the longitude it was left at
-          st.q.slerp(upright(st.tq), 1 - Math.exp(-9 * dt));
-          if (st.q.angleTo(st.tq) < 0.003) {
-            st.q.copy(st.tq);
+          // let go: the pitch returns quickly to the starting elevation; the spin (the longitude) is kept, unless no vehicle would be in view there
+          const k = 1 - Math.exp(-9 * dt);
+          const want = uprightSpin();
+          st.pitch += (TILT - st.pitch) * k;
+          st.spin += wrap(want - st.spin) * k;
+          if (Math.abs(TILT - st.pitch) < 0.003 && Math.abs(wrap(want - st.spin)) < 0.003) {
+            st.pitch = TILT;
             st.norm = false;
           }
         }
         if (st.manual) {
           // the flick after a manual drag is still under the limit; once the globe is back to its idle spin the limit is released
           if (constrain()) {
-            st.vx *= 0.6;
-            st.vy *= 0.6;
+            st.vs *= 0.6;
+            st.vp *= 0.6;
           }
-          if (!st.norm && Math.abs(st.vy) < 0.03 && Math.abs(st.vx - IDLE) < 0.03) st.manual = false;
+          if (!st.norm && Math.abs(st.vp) < 0.03 && Math.abs(st.vs - IDLE) < 0.03) st.manual = false;
         }
       }
     }
@@ -538,7 +551,8 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
       st.manual = false;
       st.norm = false; // a vehicle was picked: the globe holds still where it is
     }
-    st.q.normalize();
+    // orientation = pitch about the screen's horizontal axis, then the spin about the globe's own axis (no roll, ever)
+    st.q.setFromAxisAngle(AX, st.pitch).multiply(st.qa.setFromAxisAngle(AY, st.spin));
     g.quaternion.copy(st.q);
   });
 
@@ -550,15 +564,15 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
     const mx = e.nativeEvent.movementX;
     const my = e.nativeEvent.movementY;
     st.moved += Math.abs(mx) + Math.abs(my);
-    // free trackball: the pointer turns the globe about the screen's vertical and horizontal axes (both applied in world space)
-    st.q.premultiply(st.dq.setFromAxisAngle(AY, mx * k));
-    st.q.premultiply(st.dq.setFromAxisAngle(AX, my * k));
-    st.vx = THREE.MathUtils.clamp(st.vx * 0.5 + ((mx * k) / 0.016) * 0.5, -6, 6); // smoothed flick velocity, kept when the pointer is released
-    st.vy = THREE.MathUtils.clamp(st.vy * 0.5 + ((my * k) / 0.016) * 0.5, -6, 6);
+    // two axes only: sideways turns the globe about its own axis (the spin), up and down tips it (the pitch); it never rolls
+    st.spin += mx * k;
+    st.pitch = THREE.MathUtils.clamp(st.pitch + my * k, -PITCH_MAX, PITCH_MAX);
+    st.vs = THREE.MathUtils.clamp(st.vs * 0.5 + ((mx * k) / 0.016) * 0.5, -6, 6); // smoothed flick velocity, kept when the pointer is released
+    st.vp = THREE.MathUtils.clamp(st.vp * 0.5 + ((my * k) / 0.016) * 0.5, -6, 6);
     if (constrain()) {
       // it hit the edge of the allowed area: the globe slides along it, and the flick dies
-      st.vx *= 0.3;
-      st.vy *= 0.3;
+      st.vs *= 0.3;
+      st.vp *= 0.3;
     }
   };
 
@@ -577,13 +591,15 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
               st.free = true;
               st.settle = 2.2; // a drag cancels the "face the vehicle" turn
               st.moved = 0;
-              st.vx = 0;
-              st.vy = 0;
+              st.vs = 0;
+              st.vp = 0;
               st.manual = true;
-              st.norm = false; // grabbing it again cancels the turn back upright
+              st.norm = false; // grabbing it again cancels the pitch's return
               const seen = look();
               if (seen.a > MAX_OFF) {
-                toward(seen.i, SNAP_OFF, st.tq); // no vehicle on this face: turn quickly to one
+                const g = toward(seen.i, SNAP_OFF); // no vehicle on this face: turn quickly to one
+                st.tp = g.p;
+                st.ts = g.s;
                 st.snap = true;
               }
               document.body.style.cursor = "grabbing";
@@ -593,8 +609,8 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
               if (!st.drag) return;
               (e.target as unknown as PointerTarget).releasePointerCapture(e.pointerId);
               st.drag = false;
-              st.norm = true; // let go: back upright, quickly (the tilt and roll go to zero; the longitude stays)
-              st.vy = 0;
+              st.norm = true; // let go: the pitch goes back to the starting elevation, quickly (the spin stays)
+              st.vp = 0;
               document.body.style.cursor = "grab";
             }}
             onPointerOver={() => (document.body.style.cursor = selectedId !== null ? "" : "grab")}
