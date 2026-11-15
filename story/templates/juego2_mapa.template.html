@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opportunity: mapa del juego (v2)</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--fg:#1c1b19;--mut:#6c6862;--bd:#e3e1dc;--chip:#efede8;--acc:#c2410c;
+--hist:#2563eb;--dec:#d97706;--fic1:#7c3aed;--fic2:#dc2626;--ok:#15803d}
+@media(prefers-color-scheme:dark){:root{--bg:#121110;--card:#1b1a18;--fg:#ece9e4;--mut:#a09a92;--bd:#34312d;--chip:#2a2825;--acc:#fb923c;
+--hist:#60a5fa;--dec:#fbbf24;--fic1:#a78bfa;--fic2:#f87171;--ok:#4ade80}}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,Segoe UI,sans-serif;display:flex;flex-direction:column}
+header{padding:8px 14px;border-bottom:1px solid var(--bd);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+header h1{font-size:15px;margin:0}.mut{color:var(--mut)}
+.tabs button,.tool button,a.btn{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:999px;padding:3px 12px;cursor:pointer;font:inherit;font-size:13px;text-decoration:none}
+.tabs button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.layout{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 430px;min-height:0}
+#view{overflow:auto;padding:12px 14px}#det{overflow:auto;border-left:1px solid var(--bd);padding:12px 16px;background:var(--card)}
+@media(max-width:1000px){.layout{grid-template-columns:1fr;grid-template-rows:60% 40%}#det{border-left:0;border-top:1px solid var(--bd)}}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 8px;font-size:12.5px;align-items:center}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.sw{width:22px;height:14px;border-radius:4px;border:2px solid;display:inline-block}.sw.hex{clip-path:polygon(15% 0,85% 0,100% 50%,85% 100%,15% 100%,0 50%)}.sw.d{border-style:dashed}
+.ln{width:26px;height:0;border-top:2px solid;display:inline-block}.ln.d{border-top-style:dashed}.ln.dot{border-top-style:dotted}
+.tool{display:flex;gap:6px;margin:0 0 8px;align-items:center}
+svg text{font-family:system-ui,Segoe UI,sans-serif}
+.nodo{cursor:pointer}.nodo .f{fill:var(--card);stroke-width:2}.nodo:hover .f{stroke-width:3.5}
+.nodo.sel .f{stroke-width:4;filter:drop-shadow(0 0 4px var(--acc))}
+.t-historia .f{stroke:var(--hist);fill:color-mix(in srgb,var(--hist) 10%,var(--card))}
+.t-decision .f{stroke:var(--dec);fill:color-mix(in srgb,var(--dec) 14%,var(--card))}
+.t-escena_alternativa .f{stroke:var(--fic1);stroke-dasharray:6 4;fill:color-mix(in srgb,var(--fic1) 9%,var(--card))}
+.t-fallo .f{stroke:var(--fic2);stroke-dasharray:6 4;fill:color-mix(in srgb,var(--fic2) 9%,var(--card))}
+.nodo .id{font-size:10px;fill:var(--mut);font-weight:700}.nodo .ti{font-size:12px;fill:var(--fg)}
+.band{fill:var(--chip);opacity:.55}.bandl{font-size:11px;fill:var(--mut);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.e{fill:none;stroke-width:2}.e-continuar{stroke:var(--mut)}.e-opcion_correcta{stroke:var(--ok);stroke-width:2.5}.e-opcion_equivocada{stroke:var(--fic2);stroke-dasharray:6 4}.e-volver_a_decidir{stroke:var(--fic1);stroke-dasharray:2 4}
+.badgeb{font-size:10px;font-weight:700}.vl{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}
+.chip{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;border:1.5px solid var(--bd);background:var(--chip);margin:0 4px 4px 0}
+.chip.historia{border-color:var(--hist);color:var(--hist)}.chip.decision{border-color:var(--dec);color:var(--dec)}.chip.escena_alternativa{border-color:var(--fic1);color:var(--fic1);border-style:dashed}.chip.fallo{border-color:var(--fic2);color:var(--fic2);border-style:dashed}
+.chip.ok{border-color:var(--ok);color:var(--ok)}.chip.link{cursor:pointer}.chip.link:hover{border-color:var(--acc)}
+h2{font-size:17px;margin:2px 0 4px}h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:14px 0 4px}
+.box{background:var(--chip);border-radius:8px;padding:8px 10px;margin:6px 0;font-size:13.5px}
+.op{border:1.5px solid var(--bd);border-radius:8px;padding:6px 10px;margin:6px 0}.op.ok{border-color:var(--ok)}.op.mal{border-color:var(--fic2);border-style:dashed}
+.ref{font:12px ui-monospace,Consolas,monospace}details{margin:6px 0}summary{cursor:pointer;color:var(--mut)}pre{background:var(--chip);padding:8px;border-radius:6px;overflow:auto;max-height:300px;font-size:11.5px}
+.tree ul{list-style:none;margin:2px 0 2px 18px;padding:0;border-left:2px solid var(--bd)}.tree li{margin:3px 0 3px 8px}
+.tree .it{cursor:pointer;display:inline-block;padding:1px 6px;border-radius:6px}.tree .it:hover,.tree .it.sel{background:var(--chip);outline:1.5px solid var(--acc)}
+.tree .cap{font-weight:700;color:var(--acc);margin:14px 0 4px;text-transform:uppercase;font-size:12px;letter-spacing:.05em}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid var(--bd);padding:5px 8px;text-align:left;vertical-align:top}th{color:var(--mut);font-size:11.5px;text-transform:uppercase}
+tr.fila{cursor:pointer}tr.fila:hover,tr.fila.sel{background:var(--chip)}
+input,select{padding:4px 8px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--fg);font:inherit;font-size:13px}
+.chk{display:flex;gap:8px;margin:3px 0}.chk b.ok{color:var(--ok)}.chk b.no{color:var(--fic2)}
+kbd{background:var(--chip);border:1px solid var(--bd);border-radius:4px;padding:0 5px;font:11.5px ui-monospace,monospace}
+</style></head><body>
+<header><h1>Opportunity · mapa del juego <span class="mut">(v2, herramienta interna)</span></h1><span class="mut" id="stats"></span>
+<span class="tabs" id="tabs"></span><span style="flex:1"></span><span class="tool"><a class="btn" id="proto" href="juego2.html">Probar prototipo jugable</a><button id="dl">Descargar JSON</button></span></header>
+<div class="layout"><div id="view"></div><aside id="det"><p class="mut">Haz clic en un nodo del mapa para ver todo su contenido.</p></aside></div>
+<script src="../data/juego2_opportunity.js"></script>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+async function arrancar(){
+  const crudo=document.getElementById('data').textContent.trim();
+  if(crudo[0]==='{')return iniciar(JSON.parse(crudo));
+  if(window.DATOS)return iniciar(window.DATOS);
+  try{const r=await fetch('../data/juego2_opportunity.json');if(!r.ok)throw new Error(r.status);return iniciar(await r.json())}
+  catch(_){document.body.innerHTML='<p style="max-width:600px;margin:60px auto;font:16px system-ui">Esto es una plantilla sin datos. Abre <code>public/story/juego2_mapa.html</code> o ejecuta <code>python story/build_juego2.py</code>.</p>'}
+}
+function iniciar(D){
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const N=Object.fromEntries(D.nodos.map(n=>[n.id,n]));
+const TIPO={historia:'Historia real',decision:'Decisión',escena_alternativa:'Ficticio · nivel 1 (consecuencia)',fallo:'Ficticio · nivel 2 (final alternativo)'};
+const ARI={continuar:'continúa',opcion_correcta:'opción correcta',opcion_equivocada:'opción equivocada',volver_a_decidir:'vuelve a decidir'};
+const sal=id=>D.aristas.filter(a=>a.desde===id),ent=id=>D.aristas.filter(a=>a.hacia===id);
+// camino real
+const REAL=[];(function(){let i=D.inicio;while(i){const n=N[i];REAL.push(n);i=n.siguiente||(n.tipo==='decision'?n.opciones.find(o=>o.correcta).siguiente:null)}})();
+let sel=null,vista='mapa',esc_=Math.min(1,Math.max(.6,(innerWidth-470)/1150));
+$('#stats').textContent=`${D.nodos.length} nodos · ${D.resumen.historia} historia · ${D.resumen.decisiones} decisiones · ${D.resumen.ficticios_nivel_1+D.resumen.ficticios_nivel_2} ficticios · ${D.aristas.length} conexiones`;
+const VISTAS=[['mapa','Mapa (grafo)'],['arbol','Árbol de decisiones'],['nodos','Todos los nodos'],['valid','Validación y campos']];
+$('#tabs').innerHTML=VISTAS.map(([k,l])=>`<button data-v="${k}" class="${k===vista?'on':''}">${l}</button>`).join(' ');
+$('#tabs').onclick=e=>{const v=e.target.dataset.v;if(!v)return;vista=v;document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));dibujar()};
+
+// ---------- MAPA ----------
+const X=205,W=156,H=62,XM=80,BH=300,YB=72,YF=178; // BH alto de cada franja de capítulo; YB y YF alturas (dentro de la franja) de la fila real y de la fila ficticia
+const bandTop=c=>(c-1)*BH+14;
+function pos(){const p={};const porCap={};REAL.forEach(n=>(porCap[n.capitulo]=porCap[n.capitulo]||[]).push(n));
+  Object.entries(porCap).forEach(([c,l])=>l.forEach((n,j)=>p[n.id]={x:XM+j*X,y:bandTop(+c)+YB}));
+  REAL.filter(n=>n.tipo==='decision').forEach(d=>{const mala=d.opciones.find(o=>!o.correcta),n1=N[mala.siguiente],n2=N[n1.siguiente],y=bandTop(d.capitulo)+YF;
+    p[n1.id]={x:p[d.id].x+X*.5,y};p[n2.id]={x:p[d.id].x+X*1.5,y}});return p}
+function envolver(s,m){const w=s.split(' '),L=[''];w.forEach(x=>{if((L[L.length-1]+' '+x).trim().length>m&&L[L.length-1])L.push(x);else L[L.length-1]=(L[L.length-1]+' '+x).trim()});
+  if(L.length>2){L.length=2;L[1]=L[1].slice(0,m-1)+'…'}return L}
+function forma(n){const hw=W/2,hh=H/2;
+  if(n.tipo==='decision')return `<polygon class="f" points="${-hw+16},${-hh} ${hw-16},${-hh} ${hw},0 ${hw-16},${hh} ${-hw+16},${hh} ${-hw},0"/>`;
+  return `<rect class="f" x="${-hw}" y="${-hh}" width="${W}" height="${H}" rx="10"/>`+(n.final?`<rect class="f" x="${-hw+5}" y="${-hh+5}" width="${W-10}" height="${H-10}" rx="7" style="fill:none;stroke-dasharray:none"/>`:'')}
+function nodoSvg(n,p){const L=envolver(n.titulo,21),ord=n.orden_camino_real?` · #${n.orden_camino_real}`:'';
+  return `<g class="nodo t-${n.tipo} ${n.id===sel?'sel':''}" data-id="${n.id}" transform="translate(${p.x},${p.y})"><title>${esc(n.id+' · '+n.titulo+' — '+TIPO[n.tipo])}</title>${forma(n)}
+  <text class="id" x="${-W/2+10}" y="${-H/2+14}">${n.id}${ord}${n.final?' · FIN':''}</text>
+  ${L.map((l,i)=>`<text class="ti" text-anchor="middle" x="0" y="${6+i*14}">${esc(l)}</text>`).join('')}</g>`}
+function bordeDerecho(cap,P){return Math.max(...D.nodos.filter(n=>n.capitulo===cap).map(n=>P[n.id].x))+W/2+22}
+function arista(a,P){const A=P[a.desde],B=P[a.hacia];if(!A||!B)return '';
+  const cls=`e e-${a.tipo}`,mk=`url(#m-${a.tipo})`,ca=N[a.desde].capitulo,cb=N[a.hacia].capitulo;let d,lx,ly,lab='';
+  if((a.tipo==='continuar'||a.tipo==='opcion_correcta')&&ca!==cb){ // salto a la franja siguiente: sale por la derecha, baja por el hueco entre franjas y entra por arriba
+    const xr=bordeDerecho(ca,P),ym=bandTop(cb)-8;d=`M${A.x+W/2},${A.y} L${xr},${A.y} L${xr},${ym} L${B.x},${ym} L${B.x},${B.y-H/2-3}`;lx=A.x+W/2+26;ly=A.y}
+  else if(a.tipo==='continuar'||a.tipo==='opcion_correcta'){d=`M${A.x+W/2},${A.y} L${B.x-W/2-3},${B.y}`;lx=(A.x+B.x)/2;ly=A.y-12}
+  else if(a.tipo==='opcion_equivocada'){const x1=A.x-34,y1=A.y+H/2,x2=B.x-W/4,y2=B.y-H/2-3;d=`M${x1},${y1} C${x1},${y1+58} ${x2-14},${y2-50} ${x2},${y2}`;lx=(x1+x2)/2-14;ly=(y1+y2)/2}
+  else{const x1=A.x-W/4,y1=A.y-H/2,x2=B.x+34,y2=B.y+H/2+3;d=`M${x1},${y1} C${x1},${y1-50} ${x2+70},${y2+62} ${x2},${y2}`;lx=(x1+x2)/2+30;ly=(y1+y2)/2-2}
+  if(a.opcion){const L=a.opcion.slice(-1),ok=a.tipo==='opcion_correcta';lab=`<g transform="translate(${lx},${ly})"><title>${esc((ok?'✓ ':'✗ ')+a.etiqueta)}</title><circle r="11" fill="var(--card)" stroke="${ok?'var(--ok)':'var(--fic2)'}" stroke-width="2"/><text class="badgeb" text-anchor="middle" y="4" fill="${ok?'var(--ok)':'var(--fic2)'}">${ok?'✓':'✗'}${L}</text></g>`}
+  if(a.tipo==='volver_a_decidir')lab=`<g transform="translate(${lx},${ly})"><title>Vuelve a la decisión</title><text class="badgeb vl" text-anchor="middle" fill="var(--fic1)">↩ vuelve a decidir</text></g>`;
+  return `<path class="${cls}" d="${d}" marker-end="${mk}"/>${lab}`}
+let ancho0=0;
+function mapa(){const P=pos(),caps=D.capitulos.map(c=>c.n),ancho=Math.max(...caps.map(c=>bordeDerecho(c,P)))+14,alto=caps.length*BH+14;ancho0=ancho;
+  const bandas=D.capitulos.map(c=>{const y=bandTop(c.n)-10,x1=bordeDerecho(c.n,P);
+    return `<rect class="band" x="8" y="${y}" width="${x1-8}" height="${BH-18}" rx="12"/><text class="bandl" text-anchor="end" x="${x1-12}" y="${y+20}">Capítulo ${c.n} · ${esc(c.titulo)}</text>`}).join('');
+  const marks=['continuar','opcion_correcta','opcion_equivocada','volver_a_decidir'].map(t=>`<marker id="m-${t}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${({continuar:'var(--mut)',opcion_correcta:'var(--ok)',opcion_equivocada:'var(--fic2)',volver_a_decidir:'var(--fic1)'})[t]}"/></marker>`).join('');
+  $('#view').innerHTML=`<div class="legend"><b>Leyenda</b>
+   <span><i class="sw" style="border-color:var(--hist)"></i>Historia real</span><span><i class="sw hex" style="border-color:var(--dec);background:var(--dec)"></i>Decisión</span>
+   <span><i class="sw d" style="border-color:var(--fic1)"></i>Ficticio nivel 1 (consecuencia)</span><span><i class="sw d" style="border-color:var(--fic2)"></i>Ficticio nivel 2 (final alternativo)</span>
+   <span><i class="ln" style="border-color:var(--mut)"></i>continúa</span><span><i class="ln" style="border-color:var(--ok)"></i>✓ opción correcta</span>
+   <span><i class="ln d" style="border-color:var(--fic2)"></i>✗ opción equivocada</span><span><i class="ln dot" style="border-color:var(--fic1)"></i>vuelve a decidir</span></div>
+   <div class="tool"><button id="zm">−</button><button id="zp">+</button><button id="zf">Ajustar al ancho</button><span class="mut">Cada franja es un capítulo: arriba la historia real; debajo, las ramas ficticias (2 nodos por opción equivocada). Teclado: <kbd>→</kbd> sigue · <kbd>↓</kbd> rama equivocada · <kbd>↑</kbd> decisión · <kbd>←</kbd> anterior.</span></div>
+   <svg id="svg" width="${ancho*esc_}" height="${alto*esc_}" viewBox="0 0 ${ancho} ${alto}"><defs>${marks}</defs>${bandas}
+   ${D.aristas.map(a=>arista(a,P)).join('')}${D.nodos.map(n=>nodoSvg(n,P[n.id])).join('')}</svg>`;
+  $('#zp').onclick=()=>{esc_=Math.min(2,esc_+.15);mapa()};$('#zm').onclick=()=>{esc_=Math.max(.4,esc_-.15);mapa()};
+  $('#zf').onclick=()=>{esc_=Math.max(.4,Math.min(1.6,($('#view').clientWidth-30)/ancho0));mapa()}}
+
+// ---------- ÁRBOL ----------
+function it(n,extra=''){return `<span class="it ${n.id===sel?'sel':''}" data-id="${n.id}"><span class="chip ${n.tipo}">${({historia:'historia',decision:'decisión',escena_alternativa:'ficticio 1',fallo:'ficticio 2'})[n.tipo]}</span><b>${n.id}</b> ${esc(n.titulo)}${extra}</span>`}
+function arbol(){let h='<div class="tree"><p class="mut">Camino real en orden; en cada decisión, sus dos opciones y a dónde lleva cada una.</p>',cap=0;
+  REAL.forEach(n=>{if(n.capitulo!==cap){cap=n.capitulo;h+=`<div class="cap">Capítulo ${cap} · ${esc(D.capitulos.find(c=>c.n===cap).titulo)}</div>`}
+    h+=`<div>${it(n,` <span class="mut">· #${n.orden_camino_real} · ${esc(n.fecha)}</span>`)}</div>`;
+    if(n.tipo==='decision'){h+='<ul>';n.opciones.forEach(o=>{const d=N[o.siguiente];
+      if(o.correcta)h+=`<li><span class="chip ok">✓ ${o.id.slice(-1)} opción correcta</span> ${esc(o.texto)} <span class="mut">→ sigue la historia real: ${it(d)}</span></li>`;
+      else{const d2=N[d.siguiente];h+=`<li><span class="chip" style="border-color:var(--fic2);color:var(--fic2)">✗ ${o.id.slice(-1)} opción equivocada</span> ${esc(o.texto)}<ul><li>${it(d)}</li><li>${it(d2)} <span class="mut">↩ vuelve a ${n.id}</span></li></ul></li>`}});h+='</ul>'}});
+  $('#view').innerHTML=h+'</div>'}
+
+// ---------- TABLA ----------
+let fT='',fC='',fQ='';
+function tabla(){const l=D.nodos.filter(n=>(!fT||n.tipo===fT)&&(!fC||String(n.capitulo)===fC)&&(!fQ||(n.titulo+' '+n.narrativa.texto+' '+n.id).toLowerCase().includes(fQ.toLowerCase())));
+  $('#view').innerHTML=`<div class="tool"><select id="ft"><option value="">Todos los tipos</option>${Object.entries(TIPO).map(([k,v])=>`<option value="${k}" ${k===fT?'selected':''}>${v}</option>`).join('')}</select>
+   <select id="fc"><option value="">Todos los capítulos</option>${D.capitulos.map(c=>`<option value="${c.n}" ${String(c.n)===fC?'selected':''}>Cap. ${c.n}</option>`).join('')}</select>
+   <input id="fq" type="search" placeholder="Buscar…" value="${esc(fQ)}"><span class="mut">${l.length} de ${D.nodos.length}</span></div>
+   <table><tr><th>Id</th><th>#</th><th>Tipo</th><th>Cap.</th><th>Título</th><th>Fecha</th><th>Datos de respaldo</th><th>Fuentes</th><th>Palabras</th></tr>
+   ${l.map(n=>`<tr class="fila ${n.id===sel?'sel':''}" data-id="${n.id}"><td><b>${n.id}</b></td><td>${n.orden_camino_real??'—'}</td><td><span class="chip ${n.tipo}">${TIPO[n.tipo]}</span></td><td>${n.capitulo}</td><td>${esc(n.titulo)}</td><td>${esc(n.fecha)}</td><td>${n.respaldo_detalle.length||'—'}</td><td>${n.fuentes.length||'—'}</td><td>${n.narrativa.texto.split(/\s+/).length}</td></tr>`).join('')}</table>`;
+  $('#ft').onchange=e=>{fT=e.target.value;tabla()};$('#fc').onchange=e=>{fC=e.target.value;tabla()};$('#fq').oninput=e=>{fQ=e.target.value;clearTimeout(tabla._t);tabla._t=setTimeout(()=>{tabla();$('#fq').focus();$('#fq').setSelectionRange(fQ.length,fQ.length)},250)}}
+
+// ---------- VALIDACIÓN ----------
+function validacion(){const dec=D.nodos.filter(n=>n.tipo==='decision'),cnt=t=>D.nodos.filter(n=>n.tipo===t).length;
+  const malas=dec.map(d=>{const o=d.opciones.find(x=>!x.correcta),a=N[o.siguiente],b=a&&N[a.siguiente];return a&&b&&a.tipo==='escena_alternativa'&&b.tipo==='fallo'&&b.volver_a===d.id});
+  const alc=new Set(),pila=[D.inicio];while(pila.length){const i=pila.pop();if(alc.has(i))continue;alc.add(i);sal(i).forEach(a=>pila.push(a.hacia))}
+  const reales=D.nodos.filter(n=>!n.ficticio),fic=D.nodos.filter(n=>n.ficticio);
+  const C=[[D.nodos.length===30,`30 nodos (hay ${D.nodos.length})`],
+   [cnt('historia')===12&&cnt('decision')===6&&cnt('escena_alternativa')===6&&cnt('fallo')===6,`12 historia · 6 decisiones · 6 ficticios nivel 1 · 6 nivel 2 (${cnt('historia')} · ${cnt('decision')} · ${cnt('escena_alternativa')} · ${cnt('fallo')})`],
+   [dec.every(d=>d.opciones.length===2&&d.opciones.filter(o=>o.correcta).length===1),'cada decisión tiene 2 opciones y una sola correcta'],
+   [malas.every(Boolean),'cada opción equivocada lleva a 2 nodos ficticios (consecuencia → final alternativo) y vuelve a la decisión'],
+   [REAL.length===18&&REAL[0].tipo==='historia'&&REAL[1].tipo==='historia'&&REAL[2].tipo==='decision','el camino real tiene 18 nodos y empieza con 2 historias y una decisión'],
+   [REAL.every((n,i)=>!(n.tipo==='decision'&&REAL[i+1]&&REAL[i+1].tipo==='decision')),'nunca hay dos decisiones seguidas'],
+   [reales.every(n=>n.respaldo.length>=3&&n.fuentes.length>0),`los ${reales.length} nodos reales tienen respaldo (≥3 datos verificados) y fuentes`],
+   [fic.every(n=>!n.respaldo.length&&!n.fuentes.length),`los ${fic.length} ficticios no llevan fuentes ni respaldo`],
+   [D.aristas.length===35&&D.aristas.every(a=>N[a.desde]&&N[a.hacia]),`${D.aristas.length} conexiones, todas con extremos válidos`],
+   [alc.size===D.nodos.length,`todos los nodos son alcanzables desde ${D.inicio} (${alc.size})`]];
+  const refs=D.nodos.reduce((s,n)=>s+n.respaldo_detalle.length,0);
+  $('#view').innerHTML=`<h2>Validación</h2>${C.map(([ok,t])=>`<div class="chk"><b class="${ok?'ok':'no'}">${ok?'✓':'✗'}</b><span>${esc(t)}</span></div>`).join('')}
+   <p class="mut">Referencias a datos verificados en el JSON: ${refs}. Las pruebas completas (incluida la existencia de cada dato en su dossier) están en <code>story/tests/test_juego2.py</code>.</p>
+   <h2>Cómo usar este JSON (para otros agentes)</h2><ul>${D.uso_para_agentes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+   <h2>Campos</h2><table><tr><th>Campo</th><th>Qué es</th></tr>${Object.entries(D.diccionario).map(([k,v])=>`<tr><td><code>${esc(k)}</code></td><td>${esc(v)}</td></tr>`).join('')}</table>`}
+
+// ---------- DETALLE ----------
+function conex(id){const s=sal(id),e=ent(id);
+  return `<h3>Conexiones</h3>${s.map(a=>`<span class="chip link" data-go="${a.hacia}">${ARI[a.tipo]}${a.opcion?' '+a.opcion.slice(-1):''} → ${a.hacia}</span>`).join('')||'<span class="mut">Es el último nodo.</span>'}
+  <div class="mut" style="margin-top:4px">Llega desde: ${e.map(a=>`<span class="chip link" data-go="${a.desde}">${a.desde}</span>`).join('')||'—'}</div>`}
+function detalle(){if(!sel){$('#det').innerHTML='<p class="mut">Haz clic en un nodo para ver todo su contenido.</p>';return}
+  const n=N[sel],nar=n.narrativa;let h=`<span class="chip ${n.tipo}">${TIPO[n.tipo]}</span><span class="chip">${n.camino==='real'?'camino real':'camino alternativo'}</span>${n.ficticio?'<span class="chip">sin fuentes · inventado</span>':'<span class="chip ok">verificado</span>'}
+   <h2>${n.id} · ${esc(n.titulo)}</h2><div class="mut">Cap. ${n.capitulo} · ${esc(n.capitulo_titulo)} · ${esc(n.fecha)}${n.orden_camino_real?` · nodo #${n.orden_camino_real} de 18`:''}</div>`;
+  if(n.rama_de)h+=`<div class="box">Rama equivocada de la decisión <span class="chip link" data-go="${n.rama_de}">${n.rama_de}</span> (opción ${n.opcion_origen}) · nivel ${n.nivel} de 2</div>`;
+  h+=`<h3>${n.tipo==='decision'?'Situación':'Texto del nodo'}</h3><div class="box">${esc(nar.texto)}</div>`;
+  if(n.contexto)h+=`<h3>Lo que sabe el equipo</h3><ul>${n.contexto.lo_que_sabes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h3>Lo que está en juego</h3><div class="box">${esc(n.contexto.en_juego)}</div>`;
+  if(n.opciones)h+=`<h3>${esc(n.pregunta)}</h3>${n.opciones.map(o=>`<div class="op ${o.correcta?'ok':'mal'}"><b>${o.correcta?'✓':'✗'} ${o.id.slice(-1)}.</b> ${esc(o.texto)}<div class="mut">${esc(o.detalle)}</div><span class="chip link" data-go="${o.siguiente}">→ ${o.siguiente}</span></div>`).join('')}<h3>Resultado real (opción correcta)</h3><div class="box">${esc(n.resultado_real)}</div>`;
+  if(n.leccion)h+=`<h3>Lo que pasó en realidad</h3><div class="box">${esc(n.leccion)}</div>`;
+  if(n.dato_desbloqueado)h+=`<h3>Dato desbloqueado (cartilla)</h3><div class="box"><b>${esc(n.dato_desbloqueado.titulo)}</b><br>${esc(n.dato_desbloqueado.texto)}</div>`;
+  h+=`<h3>Para ilustrar</h3><div class="box"><b>Escena:</b> ${esc(nar.escena_visual)}<br><b>Emoción:</b> ${esc(nar.emocion)}</div>`;
+  if(n.respaldo_detalle.length)h+=`<h3>Datos verificados que lo respaldan (${n.respaldo_detalle.length})</h3>${n.respaldo_detalle.map(r=>`<div class="box"><span class="ref">${r.ref}</span> <span class="chip">${r.rol}</span><br>${esc(r.afirmacion)}<br><a href="${esc(r.fuente_url)}" target="_blank" rel="noopener">${esc(r.fuente_url.split('/')[2].replace('www.',''))}</a></div>`).join('')}`;
+  h+=conex(n.id)+`<details><summary>JSON del nodo</summary><pre>${esc(JSON.stringify(n,null,2))}</pre></details><button class="chip link" id="cp">Copiar JSON del nodo</button>`;
+  $('#det').innerHTML=h;$('#det').scrollTop=0;const c=$('#cp');if(c)c.onclick=()=>{navigator.clipboard?.writeText(JSON.stringify(n,null,2));c.textContent='Copiado'}}
+
+function elegir(id){if(!N[id])return;sel=id;history.replaceState(null,'','#'+id);detalle();
+  document.querySelectorAll('.nodo').forEach(g=>g.classList.toggle('sel',g.dataset.id===id));
+  document.querySelectorAll('.tree .it,tr.fila').forEach(e=>e.classList.toggle('sel',e.dataset.id===id))}
+function dibujar(){({mapa,arbol,nodos:tabla,valid:validacion})[vista]();if(vista==='mapa'&&!$('#zp').dataset.i){$('#zp').dataset.i=1}}
+document.addEventListener('click',e=>{const g=e.target.closest('[data-id]');if(g&&!e.target.closest('#det')){elegir(g.dataset.id);return}
+  const l=e.target.closest('[data-go]');if(l){elegir(l.dataset.go)}});
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)||e.ctrlKey||e.metaKey)return;if(!sel){if(e.key.startsWith('Arrow'))elegir(D.inicio);return}
+  const s=sal(sel),n=N[sel];let to=null;
+  if(e.key==='ArrowRight')to=(s.find(a=>a.tipo==='continuar'||a.tipo==='opcion_correcta')||s[0]||{}).hacia;
+  else if(e.key==='ArrowLeft'){const x=ent(sel).find(a=>a.tipo!=='volver_a_decidir');to=x&&x.desde}
+  else if(e.key==='ArrowDown'){const x=s.find(a=>a.tipo==='opcion_equivocada');to=x&&x.hacia}
+  else if(e.key==='ArrowUp'){to=n.rama_de||null}
+  if(to){e.preventDefault();elegir(to);const g=document.querySelector(`.nodo[data-id="${to}"]`);g&&g.scrollIntoView({block:'nearest',inline:'center'})}});
+/* Desde story/templates/ el prototipo se llama juego2.template.html; desde public/story/ se llama juego2.html. */
+if(/\/templates\//.test(location.pathname))$('#proto').href='juego2.template.html';
+$('#dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));a.download='juego2_opportunity.json';a.click()};
+dibujar();const h0=location.hash.slice(1);if(N[h0])elegir(h0);else detalle();
+}
+arrancar();
+</script></body></html>

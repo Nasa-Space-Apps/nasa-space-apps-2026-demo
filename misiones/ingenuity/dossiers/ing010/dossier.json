@@ -1,0 +1,166 @@
+{
+  "evento_id": "ing010",
+  "titulo": "Primer vuelo libre de un prototipo a escala real en condiciones marcianas simuladas (31 de mayo de 2016)",
+  "contexto_ampliado": "El 31 de mayo de 2016, en el Space Simulator del Laboratorio de Propulsión a Chorro (JPL) de la NASA en el sur de California, un pequeño helicóptero hizo historia: logró volar de forma controlada dentro de una cámara que imitaba las condiciones atmosféricas de Marte. Esa cámara de vacío, de unos 25 pies de ancho y 85 de alto (aproximadamente 8 metros por 26 metros), fue vaciada y rellenada con una delgada atmósfera de dióxido de carbono (CO₂) para reproducir el ambiente marciano [0][3].\n\nEl vehículo de prueba era un prototipo a escala real con un diámetro de rotor de 1,21 metros y un diseño de rotor coaxial, es decir, dos rotores superpuestos [13]. En su diseño y fabricación participaron AeroVironment Inc., Qualcomm y SolAero, que aportaron asistencia en el diseño y componentes principales del vehículo [2].\n\nEl gran desafío era generar sustentación en una atmósfera extremadamente tenue. La cámara termovacío, aunque es una de las más grandes del mundo para este tipo de ensayos, resultaba demasiado pequeña para permitir movimiento horizontal significativo, de modo que las pruebas se limitaban principalmente a vuelos estacionarios (hovering) [6]. Para compensar esa limitación, los ingenieros construyeron una «pared de viento» a medida dentro de la cámara, diseñada para simular los vientos marcianos y las condiciones aerodinámicas del vuelo hacia adelante [7].\n\nEl resultado fue un hito: aquella prueba constituyó la primera demostración de que el vuelo propulsado y controlado podía ejecutarse con éxito en condiciones tipo Marte [1]. El equipo de ingeniería de Ingenuity se refiere a ese ensayo como su «momento Wright Brothers en Kitty Hawk», es decir, el instante en que supieron que era posible [5]. El vuelo exitoso dio a la NASA la confianza necesaria para comprometerse definitivamente con el proyecto [4]. Además, la misma cámara de 25 pies del JPL se empleó después para probar el Modelo de Desarrollo de Ingeniería (EDM) del diseño final que iría a Marte [14].\n\nCasi cinco años después, el 19 de abril de 2021, el helicóptero Ingenuity —sucesor de aquel prototipo— despegó de la superficie marciana en su primer vuelo real, cuyo desempeño coincidió casi exactamente con lo observado en las innumerables pruebas en cámara [9]. Con cada vuelo posterior, Ingenuity superó sus propios récords: en el Vuelo 10 ya volaba a 12 metros de altitud y 5 metros por segundo (11 mph), mostrando lo lejos que los ingenieros de NASA y AeroVironment habían llevado la aeronave desde aquellas primeras pruebas en cámara medio decenio antes [8].\n\nLo que había comenzado como una demostración tecnológica con la esperanza de lograr cinco vuelos se convirtió en una expedición de más de 70 vuelos y 128 minutos de tiempo de vuelo acumulado [10]. El 18 de enero, la NASA se despidió de Ingenuity después de que el helicóptero sufriera daños irreparables en el rotor —posiblemente por un aterrizaje brusco— tras su vuelo número 72, el último [11].\n\nPara honrar el legado del proyecto, el JPL donó el prototipo original de Ingenuity al Museo Nacional del Aire y el Espacio, donde se unió a otros exploradores de Marte como el prototipo de Mars Pathfinder y la copia de respaldo del rover Sojourner, Marie Curie [12].",
+  "datos_reales": [
+    {
+      "afirmacion": "El vuelo del prototipo tuvo lugar el 31 de mayo de 2016 en el Space Simulator de JPL, una cámara de vacío de 7,62 m de ancho y 26 m de alto (25 pies × 85 pies).",
+      "fuente_url": "https://science.nasa.gov/resource/first-controlled-flight-of-mars-helicopter-prototype/?site=msl",
+      "cita": "The flight took place on May 31, 2016, in the 25-foot-wide, 85-foot-tall (8-meter-by-26-meter) Space Simulator Facility at NASA's Jet Propulsion Laboratory in Southern California.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vuelo fue la primera demostración de que el vuelo propulsado y controlado podía ejecutarse exitosamente en condiciones tipo Marte.",
+      "fuente_url": "https://science.nasa.gov/resource/first-controlled-flight-of-mars-helicopter-prototype/?site=msl",
+      "cita": "The flight was the first demonstration that powered-controlled flight could be successfully executed in Mars-like conditions.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "AeroVironment Inc. participó en el diseño y construcción de los componentes principales del prototipo.",
+      "fuente_url": "https://science.nasa.gov/resource/first-controlled-flight-of-mars-helicopter-prototype/?site=msl",
+      "cita": "AeroVironment Inc., Qualcomm, and SolAero also provided design assistance and major vehicle components.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara fue vaciada y rellenada con una delgada atmósfera de dióxido de carbono (CO₂) para simular la atmósfera marciana.",
+      "fuente_url": "https://airandspace.si.edu/air-and-space-quarterly/issue-10/mars-ingenuity",
+      "cita": "The test took place inside JPL's space simulator, a 25-foot-wide vacuum chamber that had been emptied and backfilled with a thin carbon dioxide atmosphere.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vuelo exitoso de 2016 dio a la NASA la confianza para comprometerse definitivamente con el proyecto Ingenuity.",
+      "fuente_url": "https://airandspace.si.edu/air-and-space-quarterly/issue-10/mars-ingenuity",
+      "cita": "The successful flight gave NASA the confidence to commit to the project.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo de ingeniería de Ingenuity califica ese ensayo como su «momento Wright Brothers en Kitty Hawk».",
+      "fuente_url": "https://airandspace.si.edu/air-and-space-quarterly/issue-10/mars-ingenuity",
+      "cita": "The Ingenuity engineering team refers to that test as their \"Wright brothers-at-Kitty Hawk moment.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara termovacío era demasiado pequeña para movimiento horizontal significativo, limitando los ensayos principalmente a vuelos estacionarios (hovering).",
+      "fuente_url": "https://science.nasa.gov/blog/the-right-stuff/",
+      "cita": "Despite being one of the largest thermal-vac chambers in the world, it was still too small for significant horizontal motion, mostly limiting test flights to simple hovering.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los ingenieros construyeron una «pared de viento» especial dentro de la cámara para simular los vientos marcianos y las condiciones aerodinámicas del vuelo hacia adelante.",
+      "fuente_url": "https://science.nasa.gov/blog/the-right-stuff/",
+      "cita": "Engineers worked around this to some extent by building a custom wind wall to simulate Martian winds and the aerodynamic conditions seen in forward flight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En el Vuelo 10 real en Marte, Ingenuity volaba a 12 metros de altitud y 5 metros por segundo (11 mph), muy por encima de los primeros ensayos en cámara.",
+      "fuente_url": "https://science.nasa.gov/blog/the-right-stuff/",
+      "cita": "By Flight 10, Ingenuity was flying at an altitude of 12 meters (40 feet) and a speed of 5 meters per second (11 mph), showing just how far engineers from NASA and AeroVironment had pushed her since those early chamber tests half a decade earlier.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El primer vuelo real de Ingenuity en Marte ocurrió el 19 de abril de 2021 y coincidió casi exactamente con las pruebas realizadas en cámara.",
+      "fuente_url": "https://science.nasa.gov/blog/the-right-stuff/",
+      "cita": "This historic first flight on April 19, 2021, was performed flawlessly, matching its performance in countless chamber tests almost exactly.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity completó más de 70 vuelos y 128 minutos de tiempo de vuelo acumulado antes de ser retirado.",
+      "fuente_url": "https://airandspace.si.edu/air-and-space-quarterly/issue-10/mars-ingenuity",
+      "cita": "What had started as a technology demonstration—engineers had hoped to achieve five flights—became an expedition of more than 70 flights and 128 minutes of flying time.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity fue declarado fuera de servicio el 18 de enero tras sufrir daños irreparables en el rotor, posiblemente por un aterrizaje duro, en su vuelo 72.",
+      "fuente_url": "https://airandspace.si.edu/air-and-space-quarterly/issue-10/mars-ingenuity",
+      "cita": "On January 18, NASA bid goodnight to Ingenuity, the first aircraft to make a controlled, powered flight on another world. The 3.5-pound helicopter sustained irreparable rotor damage—possibly due to a hard landing—following its 72nd and final flight over Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El JPL donó el prototipo original al Museo Nacional del Aire y el Espacio, donde se une a otros exploradores de Marte.",
+      "fuente_url": "https://airandspace.si.edu/air-and-space-quarterly/issue-10/mars-ingenuity",
+      "cita": "NASA's Jet Propulsion Laboratory (JPL) has honored the helicopter's achievement by donating the prototype of Ingenuity to the National Air and Space Museum, where it joins a pantheon of Mars explorers that includes the Mars Pathfinder prototype and the Sojourner rover back-up, Marie Curie.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El prototipo volado en mayo de 2016 era a escala real, con un diámetro de rotor de 1,21 m, y empleaba un diseño de rotor coaxial.",
+      "fuente_url": "https://rotorcraft.arc.nasa.gov/Publications/files/Balaram_AIAA2018_0023.pdf",
+      "cita": "In May of 2016, a full-scale prototype (shown in Fig. 1) with a rotor diameter of 1.21 m was flown under simulated Mars atmosphere conditions in the JPL 25-foot diameter environment chamber. The helicopter was of a co-axial rotor design with a cyclic and collective on the lower rotor, and only a col",
+      "confianza": "media",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "PIA26233: First Controlled Flight of Mars Helicopter Prototype",
+      "url": "https://science.nasa.gov/resource/first-controlled-flight-of-mars-helicopter-prototype/?site=msl",
+      "editor": "NASA/JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "PIA23159: Mars Helicopter Prototype (JPL Image Gallery)",
+      "url": "https://www.jpl.nasa.gov/images/pia23159-mars-helicopter-prototype/",
+      "editor": "NASA/JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "The Right Stuff (NASA Science Blog — Travis Brown y Martin Cacan, JPL)",
+      "url": "https://science.nasa.gov/blog/the-right-stuff/",
+      "editor": "NASA Science / JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "The Little Copter That Could — Air & Space Quarterly, Smithsonian National Air and Space Museum",
+      "url": "https://airandspace.si.edu/air-and-space-quarterly/issue-10/mars-ingenuity",
+      "editor": "Smithsonian National Air and Space Museum",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Mars Helicopter Technology Demonstrator — Balaram et al., AIAA 2018-0023",
+      "url": "https://rotorcraft.arc.nasa.gov/Publications/files/Balaram_AIAA2018_0023.pdf",
+      "editor": "NASA Ames Rotorcraft / JPL",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "El evento original indica que la cámara mide '7,62 m × 26 m', pero la cita de la fuente NASA Science (https://science.nasa.gov/resource/first-controlled-flight-of-mars-helicopter-prototype/?site=msl) da la conversión métrica como '8-meter-by-26-meter'. Ambas corresponden a 25 pies, pero difieren en el redondeo métrico (7,62 m exacto vs. 8 m redondeado).",
+    "El evento original dice que el prototipo fue 'construido por AeroVironment', pero la cita de la misma fuente NASA Science (https://science.nasa.gov/resource/first-controlled-flight-of-mars-helicopter-prototype/?site=msl) aclara que 'AeroVironment Inc., Qualcomm, and SolAero also provided design assistance and major vehicle components', indicando una colaboración de al menos tres empresas, no construcción exclusiva de AeroVironment."
+  ],
+  "huecos": [
+    "Masa exacta del prototipo volado en mayo de 2016: el evento menciona ~850 g, pero ninguna fuente leída confirma este valor. La cifra de 1,8 kg corresponde al helicóptero de vuelo final (Ingenuity), no al prototipo de 2016.",
+    "Número exacto de vuelos y duración individual de cada ensayo realizados dentro de la cámara durante mayo de 2016: las fuentes solo mencionan el 31 de mayo como fecha de la prueba exitosa.",
+    "Altitud máxima alcanzada durante las pruebas de hovering en la cámara termovacío: las fuentes indican que era muy modesta (vuelo básicamente estacionario) pero no dan una cifra precisa.",
+    "Acceso completo al artículo técnico Balaram et al. AIAA 2018-0023 y al Grip et al. AIAA 2018-1849: ambos PDFs devolvieron contenido vacío al intentar leerlos; los datos de esos papeles provienen solo de fragmentos de búsqueda.",
+    "El evento original menciona que la atmósfera simulada tenía 'la densidad marciana', pero ninguna de las fuentes citadas confirma explícitamente que la densidad dentro de la cámara igualara la densidad atmosférica de Marte; solo dicen 'thin carbon dioxide atmosphere' o 'simulated Mars atmosphere conditions'.",
+    "El borrador narrativo afirmaba que el blog 'The Right Stuff' fue escrito por 'los ingenieros jefe Travis Brown y Martin Cacan', pero ningún dato del dossier respalda la autoría; se eliminó del relato.",
+    "No se confirma en ninguna fuente la descripción de los rotores coaxiales como 'girando en sentidos opuestos'; la cita de Balaram et al. solo dice 'co-axial rotor design' sin detallar el sentido de giro."
+  ],
+  "ideas_visuales": [
+    "Interior de la cámara Space Simulator del JPL (25 ft × 85 ft) con el prototipo de rotor coaxial de 1,21 m suspendido en vuelo estacionario dentro de la atmósfera de CO₂ [0][1][13].",
+    "Detalle de la 'pared de viento' construida a medida dentro de la cámara, generando flujo lateral sobre el prototipo en hovering [7].",
+    "Comparación lado a lado: el prototipo de 2016 dentro de la cámara vs. Ingenuity en la superficie de Marte durante su primer vuelo del 19 de abril de 2021 [9][13].",
+    "Infografía de progresión: del hovering en cámara al Vuelo 10 en Marte (12 m de altitud, 5 m/s), con siluetas a escala y datos numéricos [6][8].",
+    "El prototipo original de Ingenuity exhibido en el Museo Nacional del Aire y el Espacio junto al prototipo de Mars Pathfinder y Marie Curie [12]."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El JPL 25-ft Space Simulator se usó tanto para el prototipo volado en 2016 como para el modelo de desarrollo de ingeniería (EDM) del diseño final.",
+      "fuente_url": "https://rotorcraft.arc.nasa.gov/Publications/files/Balaram_AIAA2018_0023.pdf",
+      "cita": "The JPL 25-ft Space Simulator chamber was used to test the helicopter prototype that was successfully flown in 2016. It is also in use to test the Engineering Development Model (EDM) of the Mars technology demonstrator design.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    }
+  ]
+}

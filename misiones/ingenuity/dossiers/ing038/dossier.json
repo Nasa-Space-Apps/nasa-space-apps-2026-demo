@@ -1,0 +1,174 @@
+{
+  "evento_id": "ing038",
+  "titulo": "Ingenuity: de demostración tecnológica a explorador aéreo de Marte (30 abr 2021)",
+  "contexto_ampliado": "El 30 de abril de 2021, la NASA anunció que Ingenuity —el pequeño helicóptero que había viajado a Marte adosado al rover Perseverance— dejaría atrás su fase inicial de demostración tecnológica para iniciar una nueva etapa denominada «demostración de operaciones». Si hasta ese momento el objetivo había sido simplemente probar que el vuelo controlado con motor era posible en la delgada atmósfera marciana, ahora se trataba de explorar cómo el reconocimiento aéreo y otras funciones podrían beneficiar la exploración futura de Marte y otros mundos. Ingenuity, que originalmente estaba diseñado para operar solo 30 días en el planeta rojo, se preparaba así para una misión mucho más ambiciosa.\n\nLa extensión fue posible gracias al rendimiento excepcional del helicóptero. Sus sistemas de energía, telecomunicaciones y navegación en vuelo habían funcionado por encima de lo esperado, lo que abría la oportunidad de continuar sin afectar significativamente la agenda del rover. Bob Balaram, ingeniero jefe de Ingenuity, lo confirmó con entusiasmo: el panel solar, la batería y la radio habían funcionado de maravilla desde el primer vuelo. Thomas Zurbuchen, administrador asociado de la Dirección de Misiones Científicas de la NASA, calificó la demostración tecnológica como «un rotundo éxito» y anunció que el helicóptero se utilizaría para beneficiar futuras plataformas aéreas, priorizando a la vez los objetivos científicos de Perseverance.\n\nLa decisión también dependió de las circunstancias del rover. Lori Glaze, directora de la División de Ciencias Planetarias de la NASA, explicó que, tras evaluar las estrategias científicas de Perseverance, se encontró espacio para ampliar la demostración de Ingenuity. Un cambio importante fue que Perseverance dejaría de fotografiar los vuelos del helicóptero, una tarea que, según Jennifer Trosper —directora adjunta del proyecto del rover—, consumía una enorme cantidad de tiempo y restaba capacidad a la misión científica.\n\nLa transición hacia la nueva fase se planificó de forma gradual. El cuarto vuelo estaba programado para enviar al helicóptero unos 133 metros hacia el sur, donde fotografiaría desde el aire una posible nueva zona de aterrizaje, y luego regresaría al campo Wright Brothers Field, cubriendo un trayecto de ida y vuelta de 266 metros que superaría los récords de distancia, velocidad y duración del tercer vuelo. A partir de ahí, la fase de demostración de operaciones comenzaría formalmente con el sexto vuelo, aproximadamente dos semanas después del anuncio.\n\nEn esta nueva etapa, la cadencia de vuelos se reduciría considerablemente: de uno cada pocos días a uno cada dos o tres semanas, siempre programados para no interferir con las operaciones científicas de Perseverance. Ingenuity volaría hasta un kilómetro por delante del rover para explorar rasgos geológicos prometedores y zonas inaccesibles para el vehículo de superficie, además de crear mapas de elevación digital del terreno. MiMi Aung, directora del proyecto en el JPL, describió este nuevo rol como la oportunidad de demostrar los beneficios de contar con un compañero aéreo capaz de ofrecer una perspectiva diferente —la vista desde el cielo— tanto para misiones robóticas como para futuras misiones tripuladas.\n\nEl equipo estableció dos referentes temporales. Primero, una evaluación del rendimiento tras 30 soles adicionales, aunque ese plazo no era un límite rígido y podría extenderse si el helicóptero se mantenía en buen estado y no perjudicaba la ciencia del rover. Segundo, un cierre definitivo de las operaciones de vuelo a más tardar a finales de agosto de 2021. Este segundo límite se fijó para que el equipo de Perseverance tuviera tiempo de prepararse para la conjunción solar de mediados de octubre, el período en que Marte y la Tierra quedan en lados opuestos del Sol y las comunicaciones entre ambos mundos se interrumpen.\n\nMiMi Aung advirtió que la nueva fase implicaba riesgos mayores a los contemplados en el diseño original: volar sobre terrenos no cartografiados y aterrizar en campos de vuelo poco caracterizados aumentaba la probabilidad de un aterrizaje problemático. Aun así, el equipo decidió aprovechar la oportunidad. Con apenas 1,8 kilogramos de masa, Ingenuity se preparaba para demostrar que un pequeño explorador aéreo podía convertirse en una herramienta valiosa para la exploración de Marte.",
+  "datos_reales": [
+    {
+      "afirmacion": "El 30 de abril de 2021, NASA anunció que Ingenuity iniciaría una nueva fase de demostración de operaciones, explorando cómo el reconocimiento aéreo podría beneficiar la exploración futura de Marte.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "Having proven that powered, controlled flight is possible on the Red Planet, the Ingenuity experiment will soon embark on a new operations demonstration phase, exploring how aerial scouting and other functions could benefit future exploration of Mars and other worlds.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los sistemas de energía, telecomunicaciones y navegación en vuelo de Ingenuity funcionaron por encima de lo esperado, lo que permitió la extensión de la misión.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "With the Mars Helicopter's energy, telecommunications, and in-flight navigation systems performing beyond expectation, an opportunity arose to allow the helicopter to continue exploring its capabilities with an operations demonstration, without significantly impacting rover scheduling.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Thomas Zurbuchen, administrador asociado de la Dirección de Misiones Científicas de NASA, declaró el éxito rotundo de la demostración tecnológica.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "\"The Ingenuity technology demonstration has been a resounding success,\" said Thomas Zurbuchen, associate administrator for NASA's Science Mission Directorate. \"Since Ingenuity remains in excellent health, we plan to use it to benefit future aerial platforms while prioritizing and moving forward with the Perseverance rover team's near-term science goals.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La fase de demostración de operaciones comenzaría con el sexto vuelo de Ingenuity, aproximadamente dos semanas después del anuncio.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "The operations demonstration will begin in about two weeks with the helicopter's sixth flight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vuelo 4 recorrió 133 metros al sur y regresó (266 metros en total) para fotografiar desde el aire una posible nueva zona de aterrizaje, superando las marcas de distancia, velocidad y duración del vuelo 3.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "Flight four will send the rotorcraft about 436 feet (133 meters) south to collect aerial imagery of a potential new landing zone before returning to land at Wright Brothers Field... This 873-foot (266-meter) roundtrip effort would surpass the range, speed, and duration marks achieved on the third flight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante la fase de demostración de operaciones, la cadencia de vuelos se redujo de uno cada pocos días a uno cada dos o tres semanas.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "The cadence of flights during Ingenuity's operations demonstration phase will slow from once every few days to about once every two or three weeks, and the forays will be scheduled to avoid interfering with Perseverance's science operations.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo evaluaría las operaciones después de 30 soles y completaría las operaciones de vuelo no más tarde del fin de agosto de 2021.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "The team will assess flight operations after 30 sols and will complete flight operations no later than the end of August.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El plazo de fin de agosto se estableció para prepararse para la conjunción solar de mediados de octubre de 2021, cuando Marte y la Tierra quedan en lados opuestos del Sol bloqueando las comunicaciones.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "That timing will allow the rover team time to wrap up its planned science activities and prepare for solar conjunction – the period in mid-October when Mars and Earth are on opposite sides of the Sun, blocking communications.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "MiMi Aung, directora del proyecto Ingenuity en JPL, describió el nuevo rol como demostrar los beneficios de tener un compañero aéreo para misiones robóticas y tripuladas.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "cita": "\"Now we have a chance to pay it forward, demonstrating for future robotic and even crewed missions the benefits of having a partner nearby that can provide a different perspective – one from the sky. We are going to take this opportunity and run with it – and fly with it.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity fue originalmente diseñado para operar solo 30 días en Marte, con el objetivo de demostrar si era posible el vuelo controlado con motor en ese planeta.",
+      "fuente_url": "https://www.space.com/nasa-mars-helicopter-ingenuity-mission-extended",
+      "cita": "Ingenuity was originally slated to operate for 30 days on Mars, conducting a technology-demonstrating mission designed to test whether or not powered, controlled flight is possible on Mars.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El plazo de 30 soles adicionales no era un límite rígido; al finalizar ese período el equipo evaluaría el estado del helicóptero y su impacto en la ciencia de Perseverance.",
+      "fuente_url": "https://www.space.com/nasa-mars-helicopter-ingenuity-mission-extended",
+      "cita": "And that 30-sol target is not a hard deadline for the extended mission.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Jennifer Trosper, directora de proyecto adjunta de Perseverance, explicó que fotografiar los vuelos de Ingenuity consumía una cantidad enorme de tiempo que ahora se dedicaría a la misión científica del rover.",
+      "fuente_url": "https://www.space.com/nasa-mars-helicopter-ingenuity-mission-extended",
+      "cita": "\"What we aren't going to be doing anymore, which took an enormous amount of time, is imaging the helicopter flights. That is what took away from our ability to continue with the science mission in one way or another,\" Jennifer Trosper, Perseverance rover deputy project manager at JPL, told Space.com.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Lori Glaze, directora de la División de Ciencias Planetarias de NASA, señaló que la extensión fue posible al evaluar las estrategias científicas de Perseverance.",
+      "fuente_url": "https://www.space.com/nasa-mars-helicopter-ingenuity-mission-extended",
+      "cita": "\"After assessing the Perseverance science strategies, there's room to expand the Ingenuity demonstration into a new phase,\" Lori Glaze, director of NASA's Planetary Science Division at NASA Headquarters, said during a news conference today.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En la nueva fase operacional, Ingenuity volaría hasta un kilómetro por delante del rover para explorar rasgos geológicos prometedores y zonas inaccesibles para Perseverance.",
+      "fuente_url": "https://www.bbc.co.uk/news/science-environment-56951752",
+      "cita": "In the helicopter's new operational phase, it will fly up to a kilometre ahead of the rover, scouting for promising geological features and exploring areas that Perseverance cannot reach.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Bob Balaram, ingeniero jefe de Ingenuity, describió el rendimiento excelente de todos los sistemas, incluyendo el panel solar, la batería y la radio.",
+      "fuente_url": "https://www.bbc.co.uk/news/science-environment-56951752",
+      "cita": "\"It's been riding the winds, it's been taking off great, all the engineering systems, the solar panel, the battery, the radio have all been working very well - everything has just been fantastic.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "MiMi Aung reconoció que la nueva fase implicaba riesgos mayores: volar sobre terrenos no cartografiados aumenta la probabilidad de un aterrizaje problemático.",
+      "fuente_url": "https://www.bbc.co.uk/news/science-environment-56951752",
+      "cita": "\"We will now be flying over unsurveyed terrains and transfer to airfields that are not well characterised so there's a higher probability of a bad landing.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity también crearía mapas de elevación digital del terreno para ayudar a los científicos a comprender mejor la topografía marciana.",
+      "fuente_url": "https://www.bbc.co.uk/news/science-environment-56951752",
+      "cita": "It will also make digital elevation maps, helping scientists to better understand the terrain.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity pesa 1,8 kilogramos (4 libras).",
+      "fuente_url": "https://www.space.com/nasa-mars-helicopter-ingenuity-mission-extended",
+      "cita": "the 4-lb. (1.8 kilograms) craft's abilities, which are impressive given Mars' thin atmosphere.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's Ingenuity Mars Helicopter to Begin New Demonstration Phase (30 abr 2021)",
+      "url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NASA extends Mars helicopter Ingenuity's high-flying mission on Red Planet",
+      "url": "https://www.space.com/nasa-mars-helicopter-ingenuity-mission-extended",
+      "editor": "Space.com / Chelsea Gohd",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Mars Ingenuity helicopter mission extended by Nasa",
+      "url": "https://www.bbc.co.uk/news/science-environment-56951752",
+      "editor": "BBC Science & Environment",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "El evento original describe la extensión como '+30 soles', lo que sugiere un período fijo de prolongación. Sin embargo, el dato [10] (Space.com, https://www.space.com/nasa-mars-helicopter-ingenuity-mission-extended) aclara explícitamente que 'that 30-sol target is not a hard deadline for the extended mission', y el dato [6] (nasa.gov, https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-to-begin-new-demonstration-phase/) indica que los 30 soles eran un punto de evaluación ('will assess flight operations after 30 sols'), mientras que el límite real era finales de agosto. La extensión podía durar más de 30 soles si las condiciones lo permitían.",
+    "El dato [4] (nasa.gov) describe el vuelo 4 en tiempo futuro ('Flight four will send the rotorcraft…'), indicando que al momento del anuncio del 30 de abril aún no se había ejecutado. El borrador narrativo original afirmaba que 'el vuelo 4 se ejecutó el mismo día del anuncio', pero la cita no respalda esa simultaneidad."
+  ],
+  "huecos": [
+    "No se pudo confirmar el sol marciano exacto (número de sol de la misión) en que comenzó oficialmente la fase de demostración de operaciones con el sexto vuelo.",
+    "No se encontraron artículos científicos ni informes técnicos en NTRS específicos sobre esta decisión de extensión de misión del 30 de abril de 2021.",
+    "No se confirmó el número exacto de vuelos que Ingenuity completó durante los primeros 30 soles de la fase extendida, ni si el plazo de 30 soles fue eventualmente ampliado.",
+    "No se pudo leer directamente el comunicado original de JPL (jpl.nasa.gov) porque la página devolvió contenido vacío; se utilizó la versión idéntica publicada en nasa.gov.",
+    "El evento original no lo menciona, pero el borrador narrativo afirmaba que Ingenuity debía 'realizar no más de cinco vuelos de prueba' en su fase tecnológica; ningún dato del dossier confirma ese número específico de cinco vuelos.",
+    "Ningún dato del dossier confirma la fecha exacta en que se ejecutó el vuelo 4 ni si coincidió con el día del anuncio (30 de abril); la cita de nasa.gov solo describe el plan en tiempo futuro."
+  ],
+  "ideas_visuales": [
+    "Infografía de línea temporal que muestra la transición: fase de demostración tecnológica (vuelos 1-3) → vuelos de transición (4 y 5) → fase de demostración de operaciones (a partir del vuelo 6), con las fechas clave de abril y agosto de 2021.",
+    "Vista cenital esquemática del trayecto planeado del vuelo 4: 133 m hacia el sur desde Wright Brothers Field para fotografiar una zona de aterrizaje y regreso (266 m totales), con escala de distancia.",
+    "Mapa conceptual de Marte mostrando a Ingenuity volando hasta 1 km por delante de Perseverance, señalando rasgos geológicos y áreas inaccesibles para el rover.",
+    "Diagrama del sistema solar explicando la conjunción solar de mediados de octubre de 2021: Marte y la Tierra en lados opuestos del Sol, con las comunicaciones bloqueadas.",
+    "Ilustración comparativa del tamaño de Ingenuity (1,8 kg) junto a objetos cotidianos para que los estudiantes dimensionen la escala del helicóptero marciano.",
+    "Panel de datos técnicos de Ingenuity: panel solar, batería y radio funcionando por encima de lo esperado, con indicadores visuales tipo 'tablero de instrumentos'."
+  ],
+  "datos_no_verificados": []
+}

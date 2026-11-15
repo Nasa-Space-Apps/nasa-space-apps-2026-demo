@@ -1,0 +1,156 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.19236355,
+  "turnos": 10,
+  "duracion_s": 98.1,
+  "duracion_api_s": 82.0,
+  "tokens": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 8285,
+    "cache_read_input_tokens": 19506,
+    "output_tokens": 10247,
+    "output_tokens_details": {
+      "thinking_tokens": 4676
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8285
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1555,
+      "outputTokens": 33,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.00172,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 6,
+      "outputTokens": 10247,
+      "cacheReadInputTokens": 19506,
+      "cacheCreationInputTokens": 8285,
+      "webSearchRequests": 0,
+      "costUSD": 0.19064355,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 4676,
+      "cacheCreationEphemeral5mInputTokens": 8285,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 5,
+    "buscar_web": 3,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.38929349999999996,
+    "turnos": 2,
+    "duracion_s": 153.9,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4326,
+        "outputTokens": 33,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004491,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 14059,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5330,
+        "webSearchRequests": 0,
+        "costUSD": 0.38480249999999994,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 11985,
+        "cacheCreationEphemeral5mInputTokens": 5330,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 15,
+      "datos_despues": 14,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 3,
+      "huecos_nuevos": 2,
+      "observaciones": "Se eliminó el dato [11] porque su cita textual no respalda la afirmación de «primera investigación de accidente aeronáutico en otro mundo» (solo describe una «evaluación detallada»). Se depuró el relato eliminando varias afirmaciones del borrador que no estaban respaldadas por ningún dato citado: el concepto Mars Chopper, las tormentas de polvo, la congelación de la computadora de vuelo y el cabec"
+    }
+  },
+  "costo_usd_referencia_total": 0.58165705,
+  "costos": {
+    "total_usd": 0.581657,
+    "por_paso": {
+      "investigacion": 0.192364,
+      "revision": 0.389293
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006211,
+        "entrada": 5881,
+        "salida": 66,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.190644,
+        "entrada": 6,
+        "salida": 10247,
+        "cache_leida": 19506,
+        "cache_escrita": 8285,
+        "razonamiento": 4676
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.384802,
+        "entrada": 3,
+        "salida": 14059,
+        "cache_leida": 0,
+        "cache_escrita": 5330,
+        "razonamiento": 11985
+      }
+    }
+  }
+}

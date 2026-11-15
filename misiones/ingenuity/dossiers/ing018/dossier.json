@@ -1,0 +1,160 @@
+{
+  "evento_id": "ing018",
+  "titulo": "Una estudiante de 11.º grado de Alabama nombra al helicóptero «Ingenuity»",
+  "contexto_ampliado": "El 28 de agosto de 2019, la NASA lanzó el concurso «Name the Rover» (Ponle nombre al rover), invitando a estudiantes desde jardín de infantes hasta 12.º grado de todos los estados y territorios de EE. UU. a proponer un nombre para su próximo rover marciano. La convocatoria, organizada gracias a un acuerdo de colaboración entre la NASA, Battelle de Columbus (Ohio) y Future Engineers de Burbank (California) —con Amazon Web Services como proveedor adicional de premios—, generó aproximadamente 28 000 ensayos.\n\nPara evaluar las propuestas, casi 4 700 jueces voluntarios —educadores, profesionales y entusiastas del espacio de todo el país— revisaron los ensayos. El grupo se redujo primero a 155 semifinalistas y luego a 9 finalistas. El público tuvo cinco días para votar y emitió más de 770 000 votos en línea. Finalmente, Thomas Zurbuchen, administrador asociado de la Dirección de Misiones Científicas de la NASA, eligió la propuesta de Alexander Mather, alumno de séptimo grado, quien nombró al rover «Perseverance».\n\nSin embargo, entre los miles de ensayos había una propuesta que también llamó la atención de la agencia: la de Vaneeza Rupani, alumna de 11.º grado en la Tuscaloosa County High School de Northport, Alabama. Los responsables de la NASA consideraron que, con tantos buenos ensayos, era adecuado elegir también un nombre para el pequeño helicóptero que acompañaría al rover a Marte. Así, volvieron a revisar las propuestas ya presentadas y el administrador de la NASA, Jim Bridenstine, tomó la decisión final: el helicóptero se llamaría «Ingenuity» (Ingenio), como había sugerido Rupani.\n\nEn su ensayo, Rupani escribió: «The ingenuity and brilliance of people working hard to overcome the challenges of interplanetary travel are what allow us all to experience the wonders of space exploration. Ingenuity is what allows people to accomplish amazing things, and it allows us to expand our horizons to the edges of the universe.» La NASA anunció públicamente el nombre y la historia detrás de él el 29 de abril de 2020.\n\nBridenstine explicó la elección con estas palabras: «Ingenuity encapsulates the values that our helicopter tech demo will showcase for everyone when it takes off next year as the first aircraft on another planet's surface.» Por su parte, MiMi Aung, directora del proyecto del helicóptero en el JPL, recordó que al inicio del proyecto se cuestionó la viabilidad de volar en Marte, pero que para entonces ya contaban con un helicóptero en el lugar de lanzamiento, instalado en el rover y listo para abordar el cohete que los llevaría al Planeta Rojo. Aung conectó el ensayo de Rupani con el trabajo del equipo: «Ingenuity and hard work led us to see beyond what was logical to what was possible.»\n\nEl helicóptero Ingenuity pesaba apenas 4 libras (unos 2 kilogramos) y funcionaba con energía solar. Había superado con éxito su programa de pruebas de vuelo en la cámara de simulación espacial de 25 pies del JPL en el sur de California. Para llegar a Marte, Ingenuity viajaría acoplado al vientre del rover Perseverance, a bordo de un cohete Atlas V de United Launch Alliance que partiría desde el Complejo de Lanzamiento 41 de Cabo Cañaveral en julio de 2020, con llegada prevista al Cráter Jezero el 18 de febrero de 2021.\n\nComo reconocimiento a todos los participantes, los nombres y ensayos de los 155 semifinalistas del concurso fueron grabados en un chip de silicio —con líneas de texto más pequeñas que una milésima del ancho de un cabello humano— para viajar a bordo del rover hasta la superficie marciana, convirtiendo a cientos de estudiantes en parte permanente de la historia de la exploración espacial.",
+  "datos_reales": [
+    {
+      "afirmacion": "El concurso recibió aproximadamente 28.000 ensayos enviados por estudiantes de K-12 de todos los estados y territorios de EE. UU.",
+      "fuente_url": "https://www.nasa.gov/news-release/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "Rupani's was among 28,000 essays submitted to NASA by K-12 students from every U.S. state and territory recommending names for the next Mars rover.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El ganador del concurso para el rover fue Alexander Mather, alumno de séptimo grado, quien propuso el nombre «Perseverance»; Thomas Zurbuchen eligió ese nombre, mientras que Jim Bridenstine eligió el nombre del helicóptero.",
+      "fuente_url": "https://www.nasa.gov/news-release/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "In March, the agency announced that seventh-grader Alexander Mather's essay earned him the honor of naming the rover Perseverance. [...] Thomas Zurbuchen, associate administrator of NASA's Science Mission Directorate, made the choice for the rover's name, and NASA Administrator Jim Bridenstine chose the name for the helicopter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA recuperó el nombre del helicóptero revisando de nuevo los ensayos ya presentados al concurso, pues quiso reconocer la calidad de otras propuestas.",
+      "fuente_url": "https://www.nasa.gov/news-release/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "But with so many good essays, it seemed fitting to also choose a name for the helicopter that will accompany the rover to Mars. So NASA officials went back to the submitted essays to choose a name for the helicopter.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El helicóptero Ingenuity pesaba 4 libras (2 kilogramos) y funcionaba con energía solar.",
+      "fuente_url": "https://www.nasa.gov/news-release/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "If the 4-pound (2-kilogram), solar-powered craft — a combination of specially designed components and off-the-shelf parts — survives the cold Martian nights during its pre-flight checkout, the team will proceed with testing.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity completó su programa de pruebas de vuelo en la cámara de simulación espacial de 25 pies del JPL en el sur de California.",
+      "fuente_url": "https://www.nasa.gov/news-release/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "The helicopter successfully completed its flight-testing program using the 25-foot space simulation chamber at NASA's Jet Propulsion Laboratory in Southern California.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El concurso «Name the Rover» comenzó el 28 de agosto de 2019.",
+      "fuente_url": "https://www.nasa.gov/press-release/virginia-middle-school-student-earns-honor-of-naming-nasas-next-mars-rover/",
+      "cita": "The contest that resulted in Alex's winning entry of Perseverance began Aug. 28, 2019.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Casi 4.700 jueces voluntarios revisaron los ensayos; las propuestas se redujeron a 155 semifinalistas y luego a 9 finalistas, y el público emitió más de 770.000 votos en línea.",
+      "fuente_url": "https://www.nasa.gov/press-release/virginia-middle-school-student-earns-honor-of-naming-nasas-next-mars-rover/",
+      "cita": "Nearly 4,700 volunteer judges – educators, professionals and space enthusiasts from around the country – reviewed submissions to help narrow the pool down to 155 semifinalists. Once that group was whittled down to nine finalists, the public had five days to weigh in on their favorites, logging more than 770,000 votes online.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los nombres y ensayos de los 155 semifinalistas fueron grabados en un chip de silicio con líneas de texto más pequeñas que una milésima del ancho de un cabello humano, para viajar a Marte a bordo del rover.",
+      "fuente_url": "https://www.nasa.gov/press-release/virginia-middle-school-student-earns-honor-of-naming-nasas-next-mars-rover/",
+      "cita": "All 155 semifinalists' proposed rover names and essays have been stenciled onto a silicon chip with lines of text smaller than one-thousandth the width of a human hair and will be flown to Mars aboard the rover.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Alabama High School Student Names NASA's Mars Helicopter (JPL, 29 abr 2020)",
+      "url": "https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "editor": "JPL/NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Alabama High School Student Names NASA's Mars Helicopter (NASA HQ, 29 abr 2020)",
+      "url": "https://www.nasa.gov/news-release/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Virginia Middle School Student Earns Honor of Naming NASA's Next Mars Rover (Perseverance)",
+      "url": "https://www.nasa.gov/press-release/virginia-middle-school-student-earns-honor-of-naming-nasas-next-mars-rover/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "High School Junior Names NASA's Mars Helicopter (science.nasa.gov)",
+      "url": "https://science.nasa.gov/resource/high-school-junior-names-nasas-mars-helicopter/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "El dato [8] afirma que el lanzamiento sería en «julio o agosto de 2020», pero la cita textual de JPL (https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/) solo dice «in July», sin mencionar agosto. El relato corregido usa solo «julio»."
+  ],
+  "huecos": [
+    "No se pudo leer la entrevista (Q&A) directa con Vaneeza Rupani publicada por JPL (la URL https://www.jpl.nasa.gov/news/news.php?feature=7651 devolvió una página vacía); sus respuestas personales sobre su motivación y reacción al ser elegida no están confirmadas desde fuentes primarias.",
+    "No se confirmó si Vaneeza Rupani asistió al lanzamiento de julio de 2020 ni a otros eventos de la NASA relacionados con la misión.",
+    "No se confirmó la fecha exacta en que se anunció el nombre del rover «Perseverance» ganado por Alexander Mather (solo se sabe que fue «en marzo» de 2020, según el artículo de JPL sobre Ingenuity).",
+    "No está confirmado si la propuesta de Rupani figuraba entre los 155 semifinalistas del concurso o si fue recuperada del conjunto completo de las 28.000 propuestas.",
+    "No se hallaron datos sobre el grado académico exacto ni la edad de Vaneeza Rupani al momento del concurso en ninguna fuente oficial leída.",
+    "El relato del borrador afirmaba que el concurso fue «el mayor concurso de nombres en la historia de la agencia», pero ninguna de las fuentes citadas respalda esa afirmación; se eliminó del contexto ampliado.",
+    "Ninguna fuente citada confirma explícitamente que Alexander Mather fuera de Virginia; el dato se infiere solo del título de la URL de NASA (https://www.nasa.gov/press-release/virginia-middle-school-student-earns-honor-of-naming-nasas-next-mars-rover/), no del texto de la cita."
+  ],
+  "ideas_visuales": [
+    "Vaneeza Rupani, estudiante de 11.º grado, en su escuela Tuscaloosa County High School de Northport, Alabama, redactando su ensayo para el concurso «Name the Rover».",
+    "Panel de casi 4 700 jueces voluntarios revisando pilas de ensayos, con gráficos que muestran la reducción de 28 000 propuestas a 155 semifinalistas y luego a 9 finalistas.",
+    "Jim Bridenstine anunciando el 29 de abril de 2020 que el helicóptero marciano se llamará «Ingenuity», con una imagen del helicóptero de 4 libras junto a él.",
+    "El helicóptero Ingenuity realizando pruebas de vuelo dentro de la cámara de simulación espacial de 25 pies del JPL en el sur de California.",
+    "El helicóptero Ingenuity montado en el vientre del rover Perseverance, listo para ser cargado en el cohete Atlas V en el Complejo de Lanzamiento 41 de Cabo Cañaveral.",
+    "Primer plano del chip de silicio con los nombres y ensayos de los 155 semifinalistas grabados en líneas más finas que una milésima del ancho de un cabello humano."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El nombre «Ingenuity» fue propuesto por Vaneeza Rupani, alumna de 11.º grado en la Tuscaloosa County High School de Northport, Alabama, dentro del concurso «Name the Rover» de la NASA.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "Vaneeza Rupani, a junior at Tuscaloosa County High School in Northport, Alabama, came up with the name and the motivation behind it during NASA's \"Name the Rover\" essay contest.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El texto del ensayo de Rupani que justifica el nombre «Ingenuity» dice: «La ingeniosidad y brillantez de las personas que trabajan duro para superar los retos del viaje interplanetario son lo que nos permite a todos experimentar las maravillas de la exploración espacial. La ingeniosidad es lo que permite a las personas lograr cosas asombrosas, y nos permite expandir nuestros horizontes hasta los confines del universo».",
+      "fuente_url": "https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "\"The ingenuity and brilliance of people working hard to overcome the challenges of interplanetary travel are what allow us all to experience the wonders of space exploration,\" Rupani wrote in her contest submission. \"Ingenuity is what allows people to accomplish amazing things, and it allows us to expand our horizons to the edges of the universe.\"",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El administrador de la NASA Jim Bridenstine declaró que «Ingenuity» encapsula los valores de la demostración tecnológica del helicóptero.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "\"Ingenuity encapsulates the values that our helicopter tech demo will showcase for everyone when it takes off next year as the first aircraft on another planet's surface,\" said Bridenstine.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Ingenuity y el rover Perseverance debían lanzarse en julio o agosto de 2020 en un cohete Atlas V de United Launch Alliance desde el Complejo de Lanzamiento 41 de Cabo Cañaveral, con llegada prevista al Cráter Jezero el 18 de febrero de 2021.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "They will launch on a United Launch Alliance Atlas V rocket from Space Launch Complex 41 at nearby Cape Canaveral Air Force Station in July and land at Mars' Jezero Crater on Feb. 18, 2021.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El concurso «Name the Rover» fue organizado en colaboración entre la NASA, Battelle de Columbus (Ohio) y Future Engineers de Burbank (California), con Amazon Web Services como proveedor adicional de premios.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "The \"Name the Rover\" contest partnership was part of a Space Act Agreement in educational and public outreach efforts between NASA, Battelle of Columbus, Ohio, and Future Engineers of Burbank, California. Amazon Web Services is an additional prize provider for the contest.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "MiMi Aung, directora del proyecto del helicóptero en JPL, declaró que al inicio del proyecto se cuestionó la viabilidad de volar en Marte, pero que gracias al ingenio y al trabajo duro el equipo logró ver más allá de lo lógico hacia lo posible.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "\"In the early days of this project, the feasibility of flying at Mars was questioned,\" said MiMi Aung, Mars Helicopter project manager at JPL. \"But today we have a helicopter down at the launch site, installed on the rover and waiting to board the rocket which will carry us to the Red Planet. Like Vaneeza said in her essay, ingenuity and hard work led us to see beyond what was logical to what was possible.\"",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El anuncio del nombre «Ingenuity» se realizó el 29 de abril de 2020.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/alabama-high-school-student-names-nasas-mars-helicopter/",
+      "cita": "Jet Propulsion Laboratory  https://www.jpl.nasa.gov/ April 29, 2020",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

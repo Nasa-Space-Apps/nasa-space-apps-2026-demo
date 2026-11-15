@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.21471800000000002,
+  "turnos": 13,
+  "duracion_s": 119.3,
+  "duracion_api_s": 100.5,
+  "tokens": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 9898,
+    "cache_read_input_tokens": 43815,
+    "output_tokens": 10798,
+    "output_tokens_details": {
+      "thinking_tokens": 3779
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9898
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 2307,
+      "outputTokens": 31,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.002462,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 8,
+      "outputTokens": 10798,
+      "cacheReadInputTokens": 43815,
+      "cacheCreationInputTokens": 9898,
+      "webSearchRequests": 0,
+      "costUSD": 0.212256,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 3779,
+      "cacheCreationEphemeral5mInputTokens": 9898,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "leer_pagina": 6,
+    "buscar_web": 4,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.23313849999999997,
+    "turnos": 2,
+    "duracion_s": 80.7,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5306,
+        "outputTokens": 31,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.005461,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 7529,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6310,
+        "webSearchRequests": 0,
+        "costUSD": 0.22767749999999998,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 5246,
+        "cacheCreationEphemeral5mInputTokens": 6310,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 18,
+      "datos_despues": 17,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 3,
+      "huecos_nuevos": 4,
+      "observaciones": "Se eliminó el dato [16] porque su cita literal no respalda las afirmaciones sobre 72 vuelos ni la fecha de fin de misión. Se corrigió la atribución errónea del anuncio OACI a Zurbuchen (fue Håvard Grip) y se eliminaron del relato detalles sin respaldo en las citas, como los nombres de cámaras específicas, la distancia de «173 millones de km» y la fecha del último vuelo."
+    }
+  },
+  "costo_usd_referencia_total": 0.4478565,
+  "costos": {
+    "total_usd": 0.447856,
+    "por_paso": {
+      "investigacion": 0.214718,
+      "revision": 0.233138
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.007923,
+        "entrada": 7613,
+        "salida": 62,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.212256,
+        "entrada": 8,
+        "salida": 10798,
+        "cache_leida": 43815,
+        "cache_escrita": 9898,
+        "razonamiento": 3779
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.227677,
+        "entrada": 3,
+        "salida": 7529,
+        "cache_leida": 0,
+        "cache_escrita": 6310,
+        "razonamiento": 5246
+      }
+    }
+  }
+}

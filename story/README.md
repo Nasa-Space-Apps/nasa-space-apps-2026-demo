@@ -3,6 +3,8 @@
 Dos productos narrativos sobre la misión de Opportunity (MER-B), pensados para estudiantes de 5.º de secundaria. Son páginas HTML
 independientes (con el JSON incrustado) que se sirven desde `public/story/` y no dependen del resto de la app.
 
+> **Guía completa del juego** (qué hay, cómo se hizo, cómo reproducirlo y cómo continuar): [`README_JUEGO.md`](README_JUEGO.md).
+
 | Producto | JSON (fuente) | HTML | URL en `npm run dev` |
 |---|---|---|---|
 | Historia: 20 eventos en 5 actos | `data/historia_opportunity.json` | `public/story/historia.html` | `/story/historia.html` |

@@ -1,0 +1,172 @@
+{
+  "evento_id": "ing019",
+  "titulo": "Lanzamiento de Mars 2020: Perseverance e Ingenuity despegan a bordo del Atlas V 541 (30 de julio de 2020)",
+  "contexto_ampliado": "El 30 de julio de 2020, a las 7:50 a.m. EDT (4:50 a.m. PDT), un cohete Atlas V de United Launch Alliance despegó del Complejo de Lanzamiento Espacial 41 (SLC-41) en la Estación de la Fuerza Aérea de Cabo Cañaveral, Florida. A bordo viajaba la misión Mars 2020, con el rover Perseverance —descrito por la NASA como «el rover más sofisticado de la humanidad»— y un pasajero mucho más pequeño: el helicóptero Ingenuity, fijado al vientre del rover.\n\nEl cohete Atlas V, en su configuración 541, contaba con una ojiva de 5 metros de diámetro y medía 197 pies (unos 60 metros) de altura. Su motor principal era un RD-180 fabricado por RD AMROSS, acompañado de cuatro propulsores sólidos AJ-60A de Aerojet Rocketdyne. La etapa superior Centaur empleaba un motor RL10C-1, también de Aerojet Rocketdyne. Para ULA, esta misión representó su viaje número 20 al planeta rojo y el lanzamiento exitoso número 85 de un Atlas V.\n\nIngenuity no era un robot científico, sino un demostrador tecnológico: su único objetivo era probar que el vuelo controlado es posible en la delgada atmósfera de Marte, por lo que no llevaba ningún instrumento científico. Con una masa seca de apenas 1,8 kilogramos (4 libras), el pequeño helicóptero había sido montado en el vientre de Perseverance ya en agosto de 2019. La NASA invirtió aproximadamente 80 millones de dólares en su construcción y unos 5 millones en su operación. Su nombre fue elegido en abril de 2020 por Vaneeza Rupani, una estudiante de undécimo grado del Tuscaloosa County High School en Northport, Alabama, quien ganó el concurso «Name the Rover» de la NASA con un ensayo.\n\nDurante el viaje a Marte, Perseverance, su etapa de descenso e Ingenuity estaban encapsulados dentro de un aeroshell —una cápsula aerodinámica— unido a una etapa de crucero con paneles solares. Además, una placa protectora llamada «debris shield» (escudo antiescombros) cubría la parte inferior de Perseverance para proteger a Ingenuity durante el aterrizaje; esta placa fue liberada más adelante, el 21 de marzo de 2021 (sol 30 de la misión). Ingenuity permaneció fijado al vientre del rover durante todo el trayecto interplanetario y los primeros 60 o más días en la superficie marciana.\n\nPoco después del lanzamiento, la nave entró en «modo seguro» (safe mode), probablemente porque una parte del vehículo se enfrió más de lo esperado al cruzar la sombra de la Tierra. Sin embargo, una vez que la nave salió de dicha sombra, todas las temperaturas regresaron a valores nominales y el incidente quedó resuelto.\n\nPor delante, la misión tenía aproximadamente siete meses de travesía y unos 290 millones de millas (cerca de 467 millones de km) por recorrer en el frío y oscuro espacio interplanetario. El plan inicial para Ingenuity en Marte era modesto: intentar hasta cinco vuelos controlados y propulsados a lo largo de 30 soles (31 días terrestres), lo suficiente para demostrar la viabilidad del vuelo en otro planeta.",
+  "datos_reales": [
+    {
+      "afirmacion": "Lanzamiento el 30 de julio de 2020 a las 7:50 a.m. EDT (4:50 a.m. PDT), desde el Complejo de Lanzamiento Espacial 41 en la Estación de la Fuerza Aérea de Cabo Cañaveral, Florida.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/",
+      "cita": "Humanity's most sophisticated rover launched with the Ingenuity Mars Helicopter at 7:50 a.m. EDT (4:50 a.m. PDT) Thursday on a United Launch Alliance (ULA) Atlas V rocket from Space Launch Complex 41 at Cape Canaveral Air Force Station in Florida.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cohete Atlas V 541 incluía una ojiva de 5 metros de diámetro y medía 197 pies de altura.",
+      "fuente_url": "https://www.ulalaunch.com/about/news-detail/2020/07/30/united-launch-alliance-atlas-v-successfully-launches-mars-2020-mission-for-nasa",
+      "cita": "This Atlas V 541 configuration vehicle included a 5-meter payload fairing (PLF) and stood at 197 ft. tall.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El cohete Atlas V usó un motor principal RD-180 de RD AMROSS; cuatro propulsores sólidos AJ-60A de Aerojet Rocketdyne; y un motor RL10C-1 para la etapa superior Centaur.",
+      "fuente_url": "https://www.ulalaunch.com/about/news-detail/2020/07/30/united-launch-alliance-atlas-v-successfully-launches-mars-2020-mission-for-nasa",
+      "cita": "The Atlas booster for this mission was powered by the RD AMROSS RD-180 engine. Aerojet Rocketdyne provided the four AJ-60A SRBs and RL10C-1 engine for the Centaur upper stage.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El lanzamiento de Mars 2020 fue el viaje número 20 de ULA al planeta rojo y el lanzamiento exitoso número 85 de un Atlas V.",
+      "fuente_url": "https://www.ulalaunch.com/about/news-detail/2020/07/30/united-launch-alliance-atlas-v-successfully-launches-mars-2020-mission-for-nasa",
+      "cita": "The launch of this mission marks ULA's 20th trip to the red planet and the 85th successful launch of an Atlas V rocket.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity permaneció unido al vientre de Perseverance durante el vuelo a Marte y los primeros 60 o más días en la superficie.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/",
+      "cita": "Also future-leaning is the Ingenuity Mars Helicopter, which will remain attached to the belly of Perseverance for the flight to Mars and the first 60 or so days on the surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity era un demostrador tecnológico y no llevaba ningún instrumento científico.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/",
+      "cita": "A technology demonstrator, Ingenuity's goal is a pure flight test – it carries no science instruments.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El plan inicial de misión para Ingenuity era intentar hasta cinco vuelos controlados a lo largo de 30 soles (31 días terrestres).",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/",
+      "cita": "Over 30 sols (31 Earth days), the helicopter will attempt up to five powered, controlled flights.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras el lanzamiento, Mars 2020 entró en modo seguro (safe mode) probablemente por enfriamiento en la sombra terrestre; después de salir de la sombra todos los sistemas volvieron a valores nominales.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/",
+      "cita": "Data indicate the spacecraft had entered a state known as safe mode, likely because a part of the spacecraft was a little colder than expected while Mars 2020 was in Earth's shadow. All temperatures are now nominal and the spacecraft is out of Earth's shadow.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El jefe del proyecto Mars 2020 cifró la distancia del viaje en 290 millones de millas (aproximadamente 467 millones de km) y estimó una duración de alrededor de siete meses.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/",
+      "cita": "About seven cold, dark, unforgiving months of interplanetary space travel lay ahead for the mission [...] 'About 290 million miles of them. But if there was ever a team that could make it happen, it is this one.'",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante el viaje a Marte, Perseverance, su etapa de descenso e Ingenuity estaban encapsulados dentro de un aeroshell unido a la etapa de crucero con paneles solares.",
+      "fuente_url": "https://www.jpl.nasa.gov/news/press_kits/mars_2020/download/ingenuity_landing_press_kit.pdf",
+      "cita": "During cruise to Mars, the Perseverance rover, its descent stage, and the Ingenuity Mars Helicopter are encased inside a capsule known as an aeroshell; the aeroshell is attached to the disk-shaped, solar-powered cruise stage.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El debris shield (placa-escudo antiescombros) es una cubierta protectora en la parte inferior de Perseverance que protegía a Ingenuity durante el aterrizaje; fue liberada el 21 de marzo de 2021 (sol 30 de la misión).",
+      "fuente_url": "https://science.nasa.gov/resource/perseverance-rover-drops-its-debris-shield/",
+      "cita": "The debris shield, a protective covering on the bottom of NASA's Perseverance rover, was released on March 21, 2021, the 30th Martian day, or sol, of the mission. The debris shield protects the agency's Ingenuity helicopter during landing; releasing it allows the helicopter to rotate down out of the rover's belly.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity tiene una masa seca de 1,8 kilogramos (4,0 libras).",
+      "fuente_url": "https://en.wikipedia.org/wiki/Ingenuity_(helicopter)",
+      "cita": "Dry mass: 1.8 kilograms (4.0 lb)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity fue montado en el vientre de Perseverance en agosto de 2019, antes del lanzamiento.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Ingenuity_(helicopter)",
+      "cita": "was mounted on the underside of the Perseverance rover in August 2019",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA gastó aproximadamente 80 millones de dólares en construir Ingenuity y unos 5 millones en operar el helicóptero.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Ingenuity_(helicopter)",
+      "cita": "NASA spent about $80 million to build Ingenuity and about $5 million to operate the helicopter.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA, ULA Launch Mars 2020 Perseverance Rover Mission to Red Planet",
+      "url": "https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "United Launch Alliance Atlas V Successfully Launches Mars 2020 Mission for NASA",
+      "url": "https://www.ulalaunch.com/about/news-detail/2020/07/30/united-launch-alliance-atlas-v-successfully-launches-mars-2020-mission-for-nasa",
+      "editor": "United Launch Alliance (ULA)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Perseverance Rover Drops its Debris Shield",
+      "url": "https://science.nasa.gov/resource/perseverance-rover-drops-its-debris-shield/",
+      "editor": "NASA/JPL-Caltech/MSSS",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Ingenuity Mars Helicopter Landing Press Kit (PDF)",
+      "url": "https://www.jpl.nasa.gov/news/press_kits/mars_2020/download/ingenuity_landing_press_kit.pdf",
+      "editor": "JPL/NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Ingenuity (helicopter) – Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ingenuity_(helicopter)",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Atlas V Mars 2020 Mission Page – ULA",
+      "url": "https://www.ulalaunch.com/missions/archived-launched/atlas-v-mars-2020",
+      "editor": "United Launch Alliance (ULA)",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "DISTANCIA DEL VIAJE: El evento indica '~471 millones de km', pero el comunicado oficial de la NASA cita al jefe del proyecto John McNamee diciendo '290 million miles' (≈467 millones de km) — https://www.nasa.gov/news-release/nasa-ula-launch-mars-2020-perseverance-rover-mission-to-red-planet/. La diferencia (~4 millones de km) puede deberse a distintos momentos de cálculo de la trayectoria, pero no es posible confirmar '471 millones' desde ninguna fuente oficial consultada.",
+    "El evento original describe el debris shield como protección 'contra escombros' durante 'el viaje', pero la fuente de la NASA (https://science.nasa.gov/resource/perseverance-rover-drops-its-debris-shield/) precisa que el debris shield protegía a Ingenuity específicamente 'during landing' (durante el aterrizaje), no durante el tránsito interplanetario."
+  ],
+  "huecos": [
+    "No se pudo confirmar, con cita directa de fuente oficial, que Ingenuity dependiera de la energía eléctrica del rover Perseverance durante la fase de crucero interplanetaria (dentro del aeroshell los paneles solares del helicóptero no funcionan, pero no se leyó cita textual al respecto en ninguna fuente consultada).",
+    "No se pudo acceder al contenido completo del press kit oficial de JPL (https://www.jpl.nasa.gov/news/press_kits/ingenuity/landing/ y subpáginas) porque la herramienta devolvió texto vacío; la cita del PDF del press kit proviene solo del fragmento de búsqueda.",
+    "No se verificó el dato exacto '471 millones de km' en ninguna fuente oficial; la cifra más cercana hallada es '290 million miles' (~467 millones de km) en el comunicado de la NASA.",
+    "No se confirmó si el cohete Atlas V 541 de Mars 2020 fue exactamente el mismo que transportó Curiosity (el comunicado de ULA menciona que un 541 llevó Curiosity en un 'viaje de 354 millones de millas', distinto al de Mars 2020), lo que podría indicar diferencias en la trayectoria según la oportunidad de lanzamiento.",
+    "No se encontró en fuentes oficiales consultadas el desglose técnico completo de la dependencia de comunicaciones de Ingenuity respecto a Perseverance durante el crucero.",
+    "El evento original afirma que Ingenuity dependía del rover para 'protección' durante el viaje, pero ningún dato del dossier establece explícitamente que Perseverance proporcionara protección a Ingenuity de forma activa: los datos solo indican que ambos iban encapsulados dentro del mismo aeroshell [9] y que el debris shield protegía al helicóptero durante el aterrizaje [10], sin atribuir una función protectora específica del rover sobre Ingenuity durante el crucero.",
+    "El borrador narrativo mencionaba la hora de recepción de la primera señal (9:15 a.m. EDT) y la hora del reporte de safe mode (11:30 a.m. EDT), pero ningún dato del dossier respalda esas horas concretas; se eliminaron del relato reescrito."
+  ],
+  "ideas_visuales": [
+    "El cohete Atlas V 541 despegando de la plataforma SLC-41 en Cabo Cañaveral, con sus cuatro propulsores sólidos AJ-60A encendidos y la ojiva de 5 metros visible en la punta.",
+    "Corte transversal del aeroshell mostrando a Perseverance, la etapa de descenso e Ingenuity encapsulados, con la etapa de crucero y sus paneles solares desplegados arriba.",
+    "Detalle del vientre de Perseverance con Ingenuity montado y cubierto por el debris shield antes del lanzamiento.",
+    "Infografía comparativa de escala: Ingenuity (1,8 kg, tamaño de una caja pequeña) junto al rover Perseverance y al cohete Atlas V de 60 metros de altura.",
+    "La nave Mars 2020 cruzando la sombra de la Tierra poco después del lanzamiento, momento en que entró en modo seguro por el enfriamiento inesperado."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El nombre 'Ingenuity' fue elegido en abril de 2020 por Vaneeza Rupani, estudiante de undécimo grado del Tuscaloosa County High School en Northport, Alabama, ganadora del concurso 'Name the Rover' de la NASA.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Ingenuity_(helicopter)",
+      "cita": "In April 2020, the vehicle was named Ingenuity by Vaneeza Rupani, a girl in the 11th grade at Tuscaloosa County High School in Northport, Alabama, who submitted an essay into NASA's 'Name the Rover' contest.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

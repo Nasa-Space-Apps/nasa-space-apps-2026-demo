@@ -1,0 +1,3326 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opportunity: mapa del juego (v2)</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--fg:#1c1b19;--mut:#6c6862;--bd:#e3e1dc;--chip:#efede8;--acc:#c2410c;
+--hist:#2563eb;--dec:#d97706;--fic1:#7c3aed;--fic2:#dc2626;--ok:#15803d}
+@media(prefers-color-scheme:dark){:root{--bg:#121110;--card:#1b1a18;--fg:#ece9e4;--mut:#a09a92;--bd:#34312d;--chip:#2a2825;--acc:#fb923c;
+--hist:#60a5fa;--dec:#fbbf24;--fic1:#a78bfa;--fic2:#f87171;--ok:#4ade80}}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,Segoe UI,sans-serif;display:flex;flex-direction:column}
+header{padding:8px 14px;border-bottom:1px solid var(--bd);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+header h1{font-size:15px;margin:0}.mut{color:var(--mut)}
+.tabs button,.tool button,a.btn{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:999px;padding:3px 12px;cursor:pointer;font:inherit;font-size:13px;text-decoration:none}
+.tabs button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.layout{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 430px;min-height:0}
+#view{overflow:auto;padding:12px 14px}#det{overflow:auto;border-left:1px solid var(--bd);padding:12px 16px;background:var(--card)}
+@media(max-width:1000px){.layout{grid-template-columns:1fr;grid-template-rows:60% 40%}#det{border-left:0;border-top:1px solid var(--bd)}}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 8px;font-size:12.5px;align-items:center}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.sw{width:22px;height:14px;border-radius:4px;border:2px solid;display:inline-block}.sw.hex{clip-path:polygon(15% 0,85% 0,100% 50%,85% 100%,15% 100%,0 50%)}.sw.d{border-style:dashed}
+.ln{width:26px;height:0;border-top:2px solid;display:inline-block}.ln.d{border-top-style:dashed}.ln.dot{border-top-style:dotted}
+.tool{display:flex;gap:6px;margin:0 0 8px;align-items:center}
+svg text{font-family:system-ui,Segoe UI,sans-serif}
+.nodo{cursor:pointer}.nodo .f{fill:var(--card);stroke-width:2}.nodo:hover .f{stroke-width:3.5}
+.nodo.sel .f{stroke-width:4;filter:drop-shadow(0 0 4px var(--acc))}
+.t-historia .f{stroke:var(--hist);fill:color-mix(in srgb,var(--hist) 10%,var(--card))}
+.t-decision .f{stroke:var(--dec);fill:color-mix(in srgb,var(--dec) 14%,var(--card))}
+.t-escena_alternativa .f{stroke:var(--fic1);stroke-dasharray:6 4;fill:color-mix(in srgb,var(--fic1) 9%,var(--card))}
+.t-fallo .f{stroke:var(--fic2);stroke-dasharray:6 4;fill:color-mix(in srgb,var(--fic2) 9%,var(--card))}
+.nodo .id{font-size:10px;fill:var(--mut);font-weight:700}.nodo .ti{font-size:12px;fill:var(--fg)}
+.band{fill:var(--chip);opacity:.55}.bandl{font-size:11px;fill:var(--mut);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.e{fill:none;stroke-width:2}.e-continuar{stroke:var(--mut)}.e-opcion_correcta{stroke:var(--ok);stroke-width:2.5}.e-opcion_equivocada{stroke:var(--fic2);stroke-dasharray:6 4}.e-volver_a_decidir{stroke:var(--fic1);stroke-dasharray:2 4}
+.badgeb{font-size:10px;font-weight:700}.vl{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}
+.chip{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;border:1.5px solid var(--bd);background:var(--chip);margin:0 4px 4px 0}
+.chip.historia{border-color:var(--hist);color:var(--hist)}.chip.decision{border-color:var(--dec);color:var(--dec)}.chip.escena_alternativa{border-color:var(--fic1);color:var(--fic1);border-style:dashed}.chip.fallo{border-color:var(--fic2);color:var(--fic2);border-style:dashed}
+.chip.ok{border-color:var(--ok);color:var(--ok)}.chip.link{cursor:pointer}.chip.link:hover{border-color:var(--acc)}
+h2{font-size:17px;margin:2px 0 4px}h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:14px 0 4px}
+.box{background:var(--chip);border-radius:8px;padding:8px 10px;margin:6px 0;font-size:13.5px}
+.op{border:1.5px solid var(--bd);border-radius:8px;padding:6px 10px;margin:6px 0}.op.ok{border-color:var(--ok)}.op.mal{border-color:var(--fic2);border-style:dashed}
+.ref{font:12px ui-monospace,Consolas,monospace}details{margin:6px 0}summary{cursor:pointer;color:var(--mut)}pre{background:var(--chip);padding:8px;border-radius:6px;overflow:auto;max-height:300px;font-size:11.5px}
+.tree ul{list-style:none;margin:2px 0 2px 18px;padding:0;border-left:2px solid var(--bd)}.tree li{margin:3px 0 3px 8px}
+.tree .it{cursor:pointer;display:inline-block;padding:1px 6px;border-radius:6px}.tree .it:hover,.tree .it.sel{background:var(--chip);outline:1.5px solid var(--acc)}
+.tree .cap{font-weight:700;color:var(--acc);margin:14px 0 4px;text-transform:uppercase;font-size:12px;letter-spacing:.05em}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid var(--bd);padding:5px 8px;text-align:left;vertical-align:top}th{color:var(--mut);font-size:11.5px;text-transform:uppercase}
+tr.fila{cursor:pointer}tr.fila:hover,tr.fila.sel{background:var(--chip)}
+input,select{padding:4px 8px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--fg);font:inherit;font-size:13px}
+.chk{display:flex;gap:8px;margin:3px 0}.chk b.ok{color:var(--ok)}.chk b.no{color:var(--fic2)}
+kbd{background:var(--chip);border:1px solid var(--bd);border-radius:4px;padding:0 5px;font:11.5px ui-monospace,monospace}
+</style></head><body>
+<header><h1>Opportunity · mapa del juego <span class="mut">(v2, herramienta interna)</span></h1><span class="mut" id="stats"></span>
+<span class="tabs" id="tabs"></span><span style="flex:1"></span><span class="tool"><a class="btn" id="proto" href="juego2.html">Probar prototipo jugable</a><button id="dl">Descargar JSON</button></span></header>
+<div class="layout"><div id="view"></div><aside id="det"><p class="mut">Haz clic en un nodo del mapa para ver todo su contenido.</p></aside></div>
+<script id="data" type="application/json">{
+  "esquema_version": "juego-2.0",
+  "mision": "Opportunity",
+  "idioma": "es",
+  "titulo": "Opportunity: tú decides",
+  "publico": "Estudiantes de 5.º de secundaria (último año)",
+  "inicio": "n01",
+  "capitulos": [
+    {
+      "n": 1,
+      "titulo": "Una pregunta y un riesgo"
+    },
+    {
+      "n": 2,
+      "titulo": "Elegir un mundo"
+    },
+    {
+      "n": 3,
+      "titulo": "Despegue y llegada"
+    },
+    {
+      "n": 4,
+      "titulo": "Marte pone a prueba"
+    },
+    {
+      "n": 5,
+      "titulo": "El agua y el adiós"
+    }
+  ],
+  "reglas": "Cada decisión tiene dos opciones: la correcta sigue la historia real y la otra abre una rama de 2 nodos ficticios narrados como si hubieran ocurrido, que termina en un final alternativo. Al final de la rama se muestra lo que pasó en realidad.",
+  "aviso": "Los nodos con ficticio=true no ocurrieron y no llevan fuentes. Todo lo demás sale de los dossiers verificados (campo `respaldo`).",
+  "nodos": [
+    {
+      "id": "n01",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 1,
+      "capitulo_titulo": "Una pregunta y un riesgo",
+      "personaje": "Opportunity",
+      "titulo": "Cuatro propuestas",
+      "fecha": "1987-1997",
+      "narrativa": {
+        "texto": "Todo empezó con una persona y una idea. Steve Squyres, profesor de la Universidad de Cornell, quería enviar a Marte un robot que trabajara como lo hace un geólogo en el campo: un «geólogo de campo robótico». Su interés por Marte había nacido de joven, mirando fotos de la misión Viking en la universidad. Entre 1987 y 1997 escribió cuatro propuestas a la NASA para una misión con un rover. Las tres primeras fueron rechazadas, y cada vez él las fue mejorando. Su meta científica era ir a lugares donde hubo agua líquida en el pasado.",
+        "escena_visual": "Un joven profesor ante una mesa con fotos de Marte de la misión Viking y borradores de una propuesta.",
+        "emocion": "perseverancia"
+      },
+      "respaldo": [
+        "opp001#0",
+        "opp001#1",
+        "opp001#2",
+        "opp001#5",
+        "opp001#8"
+      ],
+      "eventos_base": [
+        "opp001"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+          "editor": "cornellsun.com",
+          "url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.pbs.org/wgbh/nova/mars/mission.html",
+          "editor": "pbs.org",
+          "url": "https://www.pbs.org/wgbh/nova/mars/mission.html",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Cuatro intentos",
+        "texto": "Squyres escribió cuatro propuestas entre 1987 y 1997; las tres primeras fueron rechazadas."
+      },
+      "siguiente": "n02",
+      "rol": "historia_real",
+      "orden_camino_real": 1,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp001#0",
+          "rol": "narrativa",
+          "afirmacion": "Entre 1987 y 1997 Squyres escribió cuatro propuestas a la NASA para una misión de rover a Marte.",
+          "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+          "cita": "From 1987 to 1997, Squyres said he wrote four proposals to NASA for a Mars Rover mission."
+        },
+        {
+          "ref": "opp001#1",
+          "rol": "narrativa",
+          "afirmacion": "Las tres primeras propuestas fueron rechazadas y él las fue refinando.",
+          "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+          "cita": "Though his first three proposals were rejected, Squyres said he rebounded from the rejections by refining his next proposal."
+        },
+        {
+          "ref": "opp001#2",
+          "rol": "narrativa",
+          "afirmacion": "Squyres diseñó los rovers a partir de su formación de geólogo, como un «geólogo de campo robótico».",
+          "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+          "cita": "Squyres said he used his training as a geologist to design the rovers as a “robotic field geologist.”"
+        },
+        {
+          "ref": "opp001#5",
+          "rol": "narrativa",
+          "afirmacion": "Su interés por Marte se despertó viendo fotos de la misión Viking en la universidad.",
+          "fuente_url": "https://www.cornellsun.com/article/2014/11/cornell-close-ups-professor-steven-squyres-the-man-behind-the-mars-rover-project",
+          "cita": "“I was in that room for four hours, and I came out of there knowing exactly what I wanted to do for the rest of my life,”"
+        },
+        {
+          "ref": "opp001#8",
+          "rol": "narrativa",
+          "afirmacion": "El objetivo científico era ir a lugares donde hubo agua líquida en el pasado.",
+          "fuente_url": "https://www.pbs.org/wgbh/nova/mars/mission.html",
+          "cita": "The science of this mission involves going to places where there was liquid water in the past,"
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 1,
+      "capitulo_titulo": "Una pregunta y un riesgo",
+      "personaje": "Opportunity",
+      "titulo": "Dos fracasos en un año",
+      "fecha": "1999",
+      "narrativa": {
+        "texto": "En 1999 la NASA perdió dos misiones a Marte. El Mars Climate Orbiter se destruyó en la atmósfera marciana el 23 de septiembre, nueve meses después de su lanzamiento. La causa fue un error de navegación: el software de tierra usaba unidades inglesas y el de a bordo, unidades métricas. El Mars Polar Lander desapareció durante la entrada en la atmósfera. Estos fracasos pesaron mucho en las decisiones que vinieron después.",
+        "escena_visual": "Una sala de control en silencio, con pantallas sin señal y el equipo mirando en la misma dirección.",
+        "emocion": "tensión y cautela"
+      },
+      "respaldo": [
+        "opp004#0",
+        "opp004#1",
+        "opp009#10"
+      ],
+      "eventos_base": [
+        "opp004",
+        "opp009"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "editor": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Un error de unidades",
+        "texto": "El Mars Climate Orbiter se perdió porque un software usaba unidades inglesas y otro, métricas."
+      },
+      "siguiente": "n03",
+      "rol": "historia_real",
+      "orden_camino_real": 2,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp004#0",
+          "rol": "narrativa",
+          "afirmacion": "El Mars Climate Orbiter falló por un error de navegación causado por no traducir las unidades inglesas al sistema métrico: el software de tierra usaba unidades inglesas y el software de a bordo trabajaba en métrico.",
+          "fuente_url": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+          "cita": "the Mars Climate Orbiter was unsuccessful due to a navigation error caused by a failure to translate English units to metric. Ground software used English units, while onboard software worked in metric. The discrepancy caused errors in trajectory calculations which sent the spacecraft too close to Mars."
+        },
+        {
+          "ref": "opp004#1",
+          "rol": "narrativa",
+          "afirmacion": "El último contacto con el Mars Climate Orbiter fue el 23 de septiembre de 1999, nueve meses después de su lanzamiento, y la investigación concluyó que se destruyó en la atmósfera de Marte.",
+          "fuente_url": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+          "cita": "Last contact with the spacecraft was on Sept. 23, 1999, nine months after launch, and an investigation found that the spacecraft burned up in Mars' atmosphere."
+        },
+        {
+          "ref": "opp009#10",
+          "rol": "narrativa",
+          "afirmacion": "Los fracasos de 1999 —el Mars Climate Orbiter y el Mars Polar Lander— fueron detonantes clave: el primero se perdió por un error de navegación, y el segundo desapareció durante la entrada en la atmósfera.",
+          "fuente_url": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "cita": "The Climate Orbiter crashed into the planet due to an embarrassing navigation oversight while the Polar Lander simply disappeared during atmospheric entry, presumably due to problems with a landing sensor."
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "tipo": "decision",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 1,
+      "capitulo_titulo": "Una pregunta y un riesgo",
+      "personaje": "Equipo de la misión",
+      "titulo": "¿Uno o dos rovers?",
+      "fecha": "Julio de 2000",
+      "narrativa": {
+        "texto": "Julio de 2000. La NASA ya decidió construir un rover en lugar de un orbitador científico, y estudia enviar dos rovers a lugares distintos de Marte en 2003. El plan original era un solo rover, pariente del Pathfinder de 1997. En pocas semanas hay que decidir si se sigue adelante con dos.",
+        "escena_visual": "Una mesa de reuniones con la maqueta de un rover y un calendario que marca 2003.",
+        "emocion": "duda"
+      },
+      "contexto": {
+        "lo_que_sabes": [
+          "En 1999 se perdieron dos misiones a Marte: el Mars Climate Orbiter, por un error de unidades en la navegación, y el Mars Polar Lander, durante la entrada en la atmósfera.",
+          "Un rover costaría entre 350 y 400 millones de dólares, cohete incluido. El segundo costaría unos 200 millones más.",
+          "Cada rover podría recorrer unos 100 metros por día marciano y trabajaría al menos 90 días marcianos.",
+          "El objetivo es aprender sobre el agua y el clima antiguos de Marte."
+        ],
+        "en_juego": "Más ciencia y más seguridad cuestan más dinero; gastar menos significa depender de una sola máquina."
+      },
+      "pregunta": "¿Qué se construye para 2003?",
+      "opciones": [
+        {
+          "id": "n03-A",
+          "texto": "Construir un solo rover.",
+          "detalle": "Cuesta menos y es el plan original, pero toda la misión dependería de una sola nave.",
+          "correcta": false,
+          "siguiente": "n03a"
+        },
+        {
+          "id": "n03-B",
+          "texto": "Construir dos rovers iguales, para dos lugares distintos.",
+          "detalle": "Cuesta unos 200 millones más, que saldrían de otras divisiones de la NASA, pero habría dos naves trabajando.",
+          "correcta": true,
+          "siguiente": "n04"
+        }
+      ],
+      "resultado_real": "El 10 de agosto de 2000 la NASA anunció oficialmente que lanzaría dos grandes rovers científicos en 2003, en lugar del plan original de uno. Serían duplicados exactos y irían a lugares muy distintos de Marte. Scott Hubbard, de la NASA, explicó que con dos rovers se duplicaba el retorno científico y se daba más resiliencia al programa.",
+      "respaldo": [
+        "opp004#0",
+        "opp009#10",
+        "opp009#3",
+        "opp009#6",
+        "opp009#7",
+        "opp008#7",
+        "opp008#0",
+        "opp008#2",
+        "opp008#1"
+      ],
+      "respaldo_resultado": [
+        "opp009#0",
+        "opp008#5",
+        "opp008#6"
+      ],
+      "eventos_base": [
+        "opp004",
+        "opp008",
+        "opp009"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "editor": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/",
+          "editor": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://spacenews.com/nasa-goes-back-to-the-future-with-plans-for-a-mars-rover-in-2003-possible-second-rover-being-studied/",
+          "editor": "spacenews.com",
+          "url": "https://spacenews.com/nasa-goes-back-to-the-future-with-plans-for-a-mars-rover-in-2003-possible-second-rover-being-studied/",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "tiempo_s": 40,
+      "opcion_por_defecto": "n03-A",
+      "dato_desbloqueado": {
+        "titulo": "Dos es más seguro",
+        "texto": "Con dos rovers se duplicaba el retorno científico y el programa era más resiliente (Scott Hubbard, NASA)."
+      },
+      "rol": "decision",
+      "orden_camino_real": 3,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp004#0",
+          "rol": "narrativa",
+          "afirmacion": "El Mars Climate Orbiter falló por un error de navegación causado por no traducir las unidades inglesas al sistema métrico: el software de tierra usaba unidades inglesas y el software de a bordo trabajaba en métrico.",
+          "fuente_url": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+          "cita": "the Mars Climate Orbiter was unsuccessful due to a navigation error caused by a failure to translate English units to metric. Ground software used English units, while onboard software worked in metric. The discrepancy caused errors in trajectory calculations which sent the spacecraft too close to Mars."
+        },
+        {
+          "ref": "opp009#10",
+          "rol": "narrativa",
+          "afirmacion": "Los fracasos de 1999 —el Mars Climate Orbiter y el Mars Polar Lander— fueron detonantes clave: el primero se perdió por un error de navegación, y el segundo desapareció durante la entrada en la atmósfera.",
+          "fuente_url": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "cita": "The Climate Orbiter crashed into the planet due to an embarrassing navigation oversight while the Polar Lander simply disappeared during atmospheric entry, presumably due to problems with a landing sensor."
+        },
+        {
+          "ref": "opp009#3",
+          "rol": "narrativa",
+          "afirmacion": "El coste estimado inicial del proyecto era de alrededor de 600 millones de dólares: entre 350 y 400 millones para el primer rover (incluyendo el cohete Delta II) y aproximadamente 200 millones para el segundo.",
+          "fuente_url": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "cita": "The first mission will cost between $350 million and $400 million, including the cost of the Delta 2 rocket. Hubbard said the second vehicle will cost just $200 million or so, including the cost of the launcher, pushing the project's total cost to around $600 million."
+        },
+        {
+          "ref": "opp009#6",
+          "rol": "narrativa",
+          "afirmacion": "Cada rover podría recorrer unos 100 metros por día marciano, distancia equivalente a todo el recorrido que el Sojourner realizó durante su vida útil completa.",
+          "fuente_url": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "cita": "The solar-powered vehicles will be capable of traversing about 100 meters (330 feet) per day, the distance Pathfinder's Sojourner rover covered in its entire lifetime."
+        },
+        {
+          "ref": "opp009#7",
+          "rol": "narrativa",
+          "afirmacion": "Los rovers estaban diseñados para operar al menos 90 soles (días marcianos) y posiblemente más, dependiendo de cuánto polvo se acumulara en sus paneles solares.",
+          "fuente_url": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "cita": "The rovers are expected to operate for at least 90 days and possibly longer, depending on how fast sunlight-obscuring dust builds up on the solar arrays."
+        },
+        {
+          "ref": "opp008#7",
+          "rol": "narrativa",
+          "afirmacion": "El objetivo científico de ambos rovers era aprender sobre el agua y el clima antiguos de Marte (Steven Squyres, Cornell).",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/",
+          "cita": "The goal of both rovers will be to learn about ancient water and climate on Mars,"
+        },
+        {
+          "ref": "opp008#0",
+          "rol": "narrativa",
+          "afirmacion": "El 27 de julio de 2000 la NASA (Ed Weiler) anunció que elegía el rover en lugar del orbitador, y que estudiaba enviar dos rovers a dos lugares distintos de Marte en 2003.",
+          "fuente_url": "https://spacenews.com/nasa-goes-back-to-the-future-with-plans-for-a-mars-rover-in-2003-possible-second-rover-being-studied/",
+          "cita": "At the same time, we want to look into what could be an amazing opportunity, as well as a challenge, by sending two such rovers to two very different locations on Mars in 2003 rather than just one."
+        },
+        {
+          "ref": "opp008#2",
+          "rol": "narrativa",
+          "afirmacion": "La opción original era un rover pariente del Pathfinder de 1997; el otro plan estudiado era un orbitador científico.",
+          "fuente_url": "https://spacenews.com/nasa-goes-back-to-the-future-with-plans-for-a-mars-rover-in-2003-possible-second-rover-being-studied/",
+          "cita": "In 2003, NASA plans to launch a relative of the now-famous 1997 Mars Pathfinder rover."
+        },
+        {
+          "ref": "opp008#1",
+          "rol": "narrativa",
+          "afirmacion": "Weiler dijo que decidiría en pocas semanas si se procedía con dos rovers, para cumplir el calendario de un lanzamiento en 2003.",
+          "fuente_url": "https://spacenews.com/nasa-goes-back-to-the-future-with-plans-for-a-mars-rover-in-2003-possible-second-rover-being-studied/",
+          "cita": "I intend to make a decision in the next few weeks so that, if the decision is to proceed with two rovers, we can meet the development schedule for a 2003 launch."
+        },
+        {
+          "ref": "opp009#0",
+          "rol": "resultado_real",
+          "afirmacion": "El 10 de agosto de 2000, la NASA anunció planes para lanzar dos grandes rovers científicos a Marte en 2003, en lugar del plan original de uno solo.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/",
+          "cita": "NASA today announced plans to launch two large scientific rovers to the red planet in 2003, rather than the original plan for just one, said Dr. Ed Weiler, Associate Administrator for Space Science, NASA Headquarters, Washington, D.C."
+        },
+        {
+          "ref": "opp008#5",
+          "rol": "resultado_real",
+          "afirmacion": "Los dos rovers serían duplicados exactos que irían a lugares muy distintos.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/",
+          "cita": "The rovers will be exact duplicates, but that's where the similarities end."
+        },
+        {
+          "ref": "opp008#6",
+          "rol": "resultado_real",
+          "afirmacion": "Según Scott Hubbard (NASA), el enfoque de dos rovers duplicaba el retorno científico y daba resiliencia al programa.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/",
+          "cita": "We also determined that, in addition to the prospect of doubling our scientific return, this two-pronged approach adds resiliency and robustness to our exploration program."
+        }
+      ]
+    },
+    {
+      "id": "n03a",
+      "tipo": "escena_alternativa",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 1,
+      "capitulo": 1,
+      "capitulo_titulo": "Una pregunta y un riesgo",
+      "personaje": "Opportunity",
+      "titulo": "Todo depende de una nave",
+      "fecha": "2003",
+      "narrativa": {
+        "texto": "La NASA sigue adelante con un solo rover. El proyecto es más sencillo y más barato, y el equipo del JPL pone toda su energía en una sola máquina. Cada prueba cuenta más, porque no hay una segunda nave que pueda cubrir un error. El rover queda listo a tiempo para la ventana de lanzamiento de 2003. En los pasillos del laboratorio todavía se habla de 1999: dos misiones perdidas en un año, y esta vez no habría repuesto.",
+        "escena_visual": "Un único rover sobre la plataforma de pruebas, con un espacio vacío a su lado.",
+        "emocion": "esperanza con miedo"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "siguiente": "n03b",
+      "rol": "ficticio_consecuencia",
+      "orden_camino_real": null,
+      "rama_de": "n03",
+      "opcion_origen": "n03-A",
+      "respaldo_detalle": []
+    },
+    {
+      "id": "n03b",
+      "tipo": "fallo",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 2,
+      "capitulo": 1,
+      "capitulo_titulo": "Una pregunta y un riesgo",
+      "personaje": "Opportunity",
+      "titulo": "Sin segunda oportunidad",
+      "fecha": "2004",
+      "narrativa": {
+        "texto": "El rover viaja sin problemas durante meses. Pero en la entrada a la atmósfera de Marte la señal se corta y no vuelve. Sin una segunda nave, el equipo no tiene cómo compensar la pérdida. La misión termina antes de empezar, y la pregunta sobre el agua antigua de Marte queda sin respuesta.",
+        "escena_visual": "Una sala de control con la pantalla en negro y los ingenieros en silencio.",
+        "emocion": "decepción"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "volver_a": "n03",
+      "leccion": "En la realidad la NASA eligió dos rovers: duplicaban el retorno científico y daban resiliencia al programa. Además, a diferencia del Polar Lander de 1999, los nuevos módulos transmitirían señales durante toda la entrada en la atmósfera para poder diagnosticar fallos.",
+      "en_realidad_respaldo": [
+        "opp008#6",
+        "opp009#11"
+      ],
+      "rol": "ficticio_final_alternativo",
+      "orden_camino_real": null,
+      "rama_de": "n03",
+      "opcion_origen": "n03-A",
+      "respaldo_detalle": [
+        {
+          "ref": "opp008#6",
+          "rol": "en_realidad",
+          "afirmacion": "Según Scott Hubbard (NASA), el enfoque de dos rovers duplicaba el retorno científico y daba resiliencia al programa.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-plans-to-send-rover-twins-to-mars-in-2003/",
+          "cita": "We also determined that, in addition to the prospect of doubling our scientific return, this two-pronged approach adds resiliency and robustness to our exploration program."
+        },
+        {
+          "ref": "opp009#11",
+          "rol": "en_realidad",
+          "afirmacion": "A diferencia del Polar Lander de 1999, los nuevos módulos transmitirían señales durante toda la entrada en la atmósfera marciana para permitir diagnosticar posibles fallos.",
+          "fuente_url": "https://spaceflightnow.com/news/n0008/10marsrovers/index.html",
+          "cita": "Unlike the Polar Lander, which was designed to make its entry and descent while out of contact with Earth, the new landers will transmit signals all the way down to make sure engineers can figure out what happened if something goes wrong."
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 2,
+      "capitulo_titulo": "Elegir un mundo",
+      "personaje": "Opportunity",
+      "titulo": "Un destino con pistas",
+      "fecha": "2000-2002",
+      "narrativa": {
+        "texto": "Los rovers necesitaban un lugar donde buscar agua. En 2000, el instrumento TES del satélite Mars Global Surveyor descubrió hematita gris cristalina en una región de Meridiani Planum de unos 300 por 500 kilómetros, según el equipo que la descubrió. La hematita es un óxido de hierro que puede formarse cuando circula agua subterránea por rocas ricas en hierro. En 2002, el instrumento THEMIS, de Mars Odyssey, la confirmó con más detalle y mostró que el lugar no estaba cubierto de grandes rocas ni de extensas zonas de polvo, los dos peligros habituales para los aterrizajes.",
+        "escena_visual": "Un mapa de Marte visto desde la órbita con una región señalada en el ecuador.",
+        "emocion": "expectativa"
+      },
+      "respaldo": [
+        "opp005#0",
+        "opp005#1",
+        "opp005#4",
+        "opp010#1"
+      ],
+      "eventos_base": [
+        "opp005",
+        "opp010"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://christensen.asu.edu/?p=416",
+          "editor": "christensen.asu.edu",
+          "url": "https://christensen.asu.edu/?p=416",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+          "editor": "themis.mars.asu.edu",
+          "url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Un mineral como pista",
+        "texto": "La hematita es un óxido de hierro que puede formarse cuando circula agua subterránea por rocas ricas en hierro."
+      },
+      "siguiente": "n05",
+      "rol": "historia_real",
+      "orden_camino_real": 4,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp005#0",
+          "rol": "narrativa",
+          "afirmacion": "En 2000, el TES de Mars Global Surveyor descubrió hematita cristalina gris en una parte de Meridiani de unos 300 × 500 km.",
+          "fuente_url": "https://christensen.asu.edu/?p=416",
+          "cita": "In 2000, the Thermal Emission Spectrometer (TES) instrument aboard the Mars Global Surveyor orbiter discovered that a mineral called gray crystalline hematite sprawls across a portion of Meridiani roughly 300 by 500 kilometers (200 by 300 miles)."
+        },
+        {
+          "ref": "opp005#1",
+          "rol": "narrativa",
+          "afirmacion": "La hematita es un óxido de hierro que puede precipitar cuando circula agua subterránea por rocas ricas en hierro.",
+          "fuente_url": "https://christensen.asu.edu/?p=416",
+          "cita": "Hematite is an iron-oxide mineral that can precipitate when groundwater circulates through iron-rich rocks, whether at normal temperatures or in hot springs."
+        },
+        {
+          "ref": "opp005#4",
+          "rol": "narrativa",
+          "afirmacion": "THEMIS (Mars Odyssey) confirmó la hematita en 2002 con mayor resolución.",
+          "fuente_url": "https://christensen.asu.edu/?p=416",
+          "cita": "In 2002, the Thermal Emission Imaging Spectrometer (THEMIS) on the Mars Odyssey orbiter examined Meridiani at higher resolution than TES."
+        },
+        {
+          "ref": "opp010#1",
+          "rol": "narrativa",
+          "afirmacion": "Las imágenes nocturnas de THEMIS mostraron que el sitio de aterrizaje propuesto no estaba cubierto de grandes rocas ni de extensas zonas de polvo, los dos peligros habituales para los aterrizadores marcianos.",
+          "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+          "cita": "THEMIS then 'cemented the deal,' as Christensen puts it, when the instrument's nighttime images showed the site was safe to land on. It was littered neither with large rocks nor extensive patches of dust, two common traps that await Mars landers."
+        }
+      ]
+    },
+    {
+      "id": "n05",
+      "tipo": "decision",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 2,
+      "capitulo_titulo": "Elegir un mundo",
+      "personaje": "Equipo de la misión",
+      "titulo": "Elegir el lugar de aterrizaje",
+      "fecha": "11 de abril de 2003",
+      "narrativa": {
+        "texto": "Abril de 2003. Después de más de dos años de talleres con científicos y de estudiar 155 sitios candidatos, la NASA debe fijar los destinos de los dos rovers. Los ingenieros quieren lugares seguros para aterrizar; los científicos, lugares donde buscar agua. Ya hay una región con una señal mineral enorme. Falta decidir hacia dónde va el segundo rover.",
+        "escena_visual": "Una mesa con mapas de sitios marcianos y científicos señalando un punto en el ecuador.",
+        "emocion": "responsabilidad"
+      },
+      "contexto": {
+        "lo_que_sabes": [
+          "Los criterios de ingeniería piden un sitio cerca del ecuador, de baja altitud, poco inclinado, poco rocoso y con poca polvareda.",
+          "Las imágenes nocturnas de THEMIS muestran que Meridiani no está cubierto de grandes rocas ni de extensas zonas de polvo.",
+          "Ningún otro lugar de Marte se acercaba a Meridiani en la intensidad de su señal mineral.",
+          "El responsable científico de la NASA resumió el reto: hay que equilibrar el valor científico con la seguridad del aterrizaje."
+        ],
+        "en_juego": "Un aterrizaje fallido cuesta toda la misión; un sitio aburrido cuesta toda la ciencia."
+      },
+      "pregunta": "¿A qué tipo de lugar va el segundo rover?",
+      "opciones": [
+        {
+          "id": "n05-A",
+          "texto": "Una llanura casi sin rocas, con una señal de hematita que ningún otro lugar de Marte igualaba.",
+          "detalle": "Es más segura para aterrizar y tiene una pista clara de agua, pero el paisaje es poco vistoso.",
+          "correcta": true,
+          "siguiente": "n06"
+        },
+        {
+          "id": "n05-B",
+          "texto": "Una región de cañones y laderas, con paisajes espectaculares.",
+          "detalle": "Sería impactante en las fotos y fácil de explicar al público, pero tiene más rocas y pendientes, más difíciles para aterrizar.",
+          "correcta": false,
+          "siguiente": "n05a"
+        }
+      ],
+      "resultado_real": "La NASA fijó los dos destinos el 11 de abril de 2003: el cráter Gusev y Meridiani Planum. Squyres los describió como complementarios. El segundo rover, Opportunity, estaba programado para lanzarse el 25 de junio de 2003 hacia Meridiani Planum, con aterrizaje previsto el 25 de enero de 2004.",
+      "respaldo": [
+        "opp012#2",
+        "opp010#1",
+        "opp010#3",
+        "opp012#14",
+        "opp012#1",
+        "opp012#2"
+      ],
+      "respaldo_resultado": [
+        "opp012#0",
+        "opp012#8",
+        "opp012#6"
+      ],
+      "eventos_base": [
+        "opp010",
+        "opp012"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "editor": "marsoweb.nas.nasa.gov",
+          "url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+          "editor": "themis.mars.asu.edu",
+          "url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://ntrs.nasa.gov/citations/20030066722",
+          "editor": "ntrs.nasa.gov",
+          "url": "https://ntrs.nasa.gov/citations/20030066722",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "tiempo_s": 40,
+      "opcion_por_defecto": "n05-B",
+      "dato_desbloqueado": {
+        "titulo": "155 candidatos",
+        "texto": "Antes de elegir los dos destinos se estudiaron 155 sitios potenciales en Marte."
+      },
+      "rol": "decision",
+      "orden_camino_real": 5,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp012#2",
+          "rol": "narrativa",
+          "afirmacion": "Se estudiaron 155 sitios potenciales en Marte aplicando criterios de ingeniería: ubicación cercana al ecuador, baja altitud, poco inclinado, poco rocoso y poca polvareda, entre otros.",
+          "fuente_url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "cita": "To qualify, candidate sites had to be near the equator, low in elevation, not too steep, not too rocky and not too dusty, among other criteria; 155 potential sites were studied."
+        },
+        {
+          "ref": "opp010#1",
+          "rol": "narrativa",
+          "afirmacion": "Las imágenes nocturnas de THEMIS mostraron que el sitio de aterrizaje propuesto no estaba cubierto de grandes rocas ni de extensas zonas de polvo, los dos peligros habituales para los aterrizadores marcianos.",
+          "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+          "cita": "THEMIS then 'cemented the deal,' as Christensen puts it, when the instrument's nighttime images showed the site was safe to land on. It was littered neither with large rocks nor extensive patches of dust, two common traps that await Mars landers."
+        },
+        {
+          "ref": "opp010#3",
+          "rol": "narrativa",
+          "afirmacion": "Phil Christensen describió Meridiani como una señal extraordinaria visible desde la órbita: ningún otro lugar de Marte se le acercaba en intensidad de la señal mineral.",
+          "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+          "cita": "From the TES and THEMIS perspective, Meridiani really was the mother-lode. It was this incredible beacon screaming out that something unusual happened here. No other place on the planet came even close."
+        },
+        {
+          "ref": "opp012#14",
+          "rol": "narrativa",
+          "afirmacion": "El Dr. Ed Weiler, administrador asociado de la NASA para ciencias espaciales, declaró que la selección de sitios requirió equilibrar el valor científico con la seguridad de ingeniería en el aterrizaje.",
+          "fuente_url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "cita": "\"In choosing where to go, we need to balance science value with engineering safety considerations at the landing sites. The sites we have chosen provide such balance.\""
+        },
+        {
+          "ref": "opp012#1",
+          "rol": "narrativa",
+          "afirmacion": "La selección de los sitios de aterrizaje del MER implicó más de dos años de investigación y análisis, con la participación de amplios sectores de la comunidad científica planetaria a través de una serie de talleres abiertos.",
+          "fuente_url": "https://ntrs.nasa.gov/citations/20030066722",
+          "cita": "Selection of the landing sites for the Mars Exploration Rovers has involved over 2 years of research and analysis effort that has included the participation of broad sections of the planetary sciences community through a series of open landing site workshops."
+        },
+        {
+          "ref": "opp012#2",
+          "rol": "narrativa",
+          "afirmacion": "Se estudiaron 155 sitios potenciales en Marte aplicando criterios de ingeniería: ubicación cercana al ecuador, baja altitud, poco inclinado, poco rocoso y poca polvareda, entre otros.",
+          "fuente_url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "cita": "To qualify, candidate sites had to be near the equator, low in elevation, not too steep, not too rocky and not too dusty, among other criteria; 155 potential sites were studied."
+        },
+        {
+          "ref": "opp012#0",
+          "rol": "resultado_real",
+          "afirmacion": "Los sitios finales de aterrizaje (Meridiani Planum y el cráter Gusev) fueron seleccionados por la sede de la NASA el 11 de abril de 2003, antes del lanzamiento en junio.",
+          "fuente_url": "https://ntrs.nasa.gov/citations/20030066722",
+          "cita": "The final landing sites (Meridiani Planum and Gusev crater) were selected by NASA Headquarters on April 11, 2003, prior to launch in June."
+        },
+        {
+          "ref": "opp012#8",
+          "rol": "resultado_real",
+          "afirmacion": "El Dr. Steve Squyres, investigador principal de los instrumentos científicos de los rovers, describió los dos sitios como complementarios: Meridiani con firma química de agua pasada (hematita gris) y Gusev con un lecho de río seco que desemboca en el cráter.",
+          "fuente_url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "cita": "\"Meridiani has a chemical signature of past water. Gray hematite is usually, but not always, produced in an environment where there is liquid water. At Gusev, you've got a big hole in the ground with a dry riverbed going right into it. There had to have been a lake in Gusev Crater at some point. They are fabulous sites, and they complement each other because they're so different,\" he said."
+        },
+        {
+          "ref": "opp012#6",
+          "rol": "resultado_real",
+          "afirmacion": "El segundo rover fue programado para lanzarse el 25 de junio de 2003 con destino a Meridiani Planum, aproximadamente a 2 grados al sur del ecuador, con aterrizaje previsto el 25 de enero de 2004.",
+          "fuente_url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "cita": "The second, scheduled to launch June 25, will be targeted to land at Meridiani Planum, an area with deposits of an iron oxide mineral (gray hematite) about two degrees south of the equator... and the second on Jan. 25, 2004."
+        }
+      ]
+    },
+    {
+      "id": "n05a",
+      "tipo": "escena_alternativa",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 1,
+      "capitulo": 2,
+      "capitulo_titulo": "Elegir un mundo",
+      "personaje": "Opportunity",
+      "titulo": "Un paisaje de postal",
+      "fecha": "2003",
+      "narrativa": {
+        "texto": "La NASA elige una región de cañones y laderas. Las simulaciones de aterrizaje muestran más rocas y más pendientes de las que prefieren los ingenieros, pero los científicos defienden que las imágenes serían inolvidables. Los preparativos avanzan, y el rover viaja hacia Marte entre expectativa y nervios.",
+        "escena_visual": "Un paisaje de cañones marcianos y, en una esquina, la silueta de la cápsula descendiendo.",
+        "emocion": "inquietud"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "siguiente": "n05b",
+      "rol": "ficticio_consecuencia",
+      "orden_camino_real": null,
+      "rama_de": "n05",
+      "opcion_origen": "n05-B",
+      "respaldo_detalle": []
+    },
+    {
+      "id": "n05b",
+      "tipo": "fallo",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 2,
+      "capitulo": 2,
+      "capitulo_titulo": "Elegir un mundo",
+      "personaje": "Opportunity",
+      "titulo": "Los airbags no resisten",
+      "fecha": "2004",
+      "narrativa": {
+        "texto": "La entrada a la atmósfera sale según lo planeado, hasta el rebote. Al golpear una roca afilada, uno de los airbags se rasga y el módulo queda dañado. El rover no logra abrir sus pétalos. La misión termina el mismo día en que llegó.",
+        "escena_visual": "Airbags rasgados sobre rocas oscuras y una cápsula inclinada.",
+        "emocion": "decepción"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "volver_a": "n05",
+      "leccion": "En la realidad se eligió una llanura: las imágenes de THEMIS mostraban que Meridiani no estaba cubierto de grandes rocas ni de extensas zonas de polvo, los dos peligros habituales para los aterrizajes.",
+      "en_realidad_respaldo": [
+        "opp010#1"
+      ],
+      "rol": "ficticio_final_alternativo",
+      "orden_camino_real": null,
+      "rama_de": "n05",
+      "opcion_origen": "n05-B",
+      "respaldo_detalle": [
+        {
+          "ref": "opp010#1",
+          "rol": "en_realidad",
+          "afirmacion": "Las imágenes nocturnas de THEMIS mostraron que el sitio de aterrizaje propuesto no estaba cubierto de grandes rocas ni de extensas zonas de polvo, los dos peligros habituales para los aterrizadores marcianos.",
+          "fuente_url": "https://themis.mars.asu.edu/news/orbital-eyes-picked-mars-rover-opportunitys-landing-site",
+          "cita": "THEMIS then 'cemented the deal,' as Christensen puts it, when the instrument's nighttime images showed the site was safe to land on. It was littered neither with large rocks nor extensive patches of dust, two common traps that await Mars landers."
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 3,
+      "capitulo_titulo": "Despegue y llegada",
+      "personaje": "Opportunity",
+      "titulo": "Spirit abre el camino",
+      "fecha": "10 de junio de 2003",
+      "narrativa": {
+        "texto": "Spirit, el primer rover, despegó el 10 de junio de 2003 en un cohete Delta II estándar, dos semanas y media antes que Opportunity. Para Opportunity hacía falta más potencia: una versión nueva, el Delta II Heavy, con nueve cohetes sólidos de 46 pulgadas de diámetro que aumentaban el rendimiento en más de un 20 %. Era la primera vez que ese cohete se usaba con un escenario superior en una misión real. Opportunity estaba programado para despegar el 25 de junio de 2003, rumbo a Meridiani Planum.",
+        "escena_visual": "Un cohete despegando de noche y, al fondo, la plataforma de un segundo cohete a la espera.",
+        "emocion": "ansiedad"
+      },
+      "respaldo": [
+        "opp015#8",
+        "opp015#5",
+        "opp015#3",
+        "opp012#6"
+      ],
+      "eventos_base": [
+        "opp012",
+        "opp015"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://spaceflightnow.com/mars/merb/status2.html",
+          "editor": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1",
+          "editor": "boeing.mediaroom.com",
+          "url": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "editor": "marsoweb.nas.nasa.gov",
+          "url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Más potencia",
+        "texto": "El Delta II Heavy aumentaba el rendimiento del Delta II en más de un 20 %."
+      },
+      "siguiente": "n07",
+      "rol": "historia_real",
+      "orden_camino_real": 6,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp015#8",
+          "rol": "narrativa",
+          "afirmacion": "El rover gemelo Spirit fue lanzado el 10 de junio de 2003 con el Delta 2-7925 estándar, dos semanas y media antes que Opportunity.",
+          "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "cita": "The Spirit rover was carried aloft June 10 by the standard Delta 2-7925 configuration launcher."
+        },
+        {
+          "ref": "opp015#5",
+          "rol": "narrativa",
+          "afirmacion": "El Delta II Heavy aumentaba el rendimiento del Delta II en más del 20 %, equipado con nueve cohetes sólidos de 46 pulgadas de diámetro.",
+          "fuente_url": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1",
+          "cita": "\"Opportunity\" was launched aboard the new Delta II Heavy that features nine 46-inch diameter, stretched solid rocket boosters that provide increased lift performance to augment the Boeing Rocketdyne RS-27A main engine. The Delta II Heavy increases the performance of the Delta II by more than 20 percent to low-earth orbit."
+        },
+        {
+          "ref": "opp015#3",
+          "rol": "narrativa",
+          "afirmacion": "El lanzamiento de Opportunity fue la primera vez que el Delta II Heavy fue usado con un escenario superior (upper stage) en una misión real.",
+          "fuente_url": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+          "cita": "The launch of the MER-B spacecraft was the second use of a core Delta II 'Heavy' launch vehicle and the first use of a Delta II 'Heavy' launch vehicle with an upper stage."
+        },
+        {
+          "ref": "opp012#6",
+          "rol": "narrativa",
+          "afirmacion": "El segundo rover fue programado para lanzarse el 25 de junio de 2003 con destino a Meridiani Planum, aproximadamente a 2 grados al sur del ecuador, con aterrizaje previsto el 25 de enero de 2004.",
+          "fuente_url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "cita": "The second, scheduled to launch June 25, will be targeted to land at Meridiani Planum, an area with deposits of an iron oxide mineral (gray hematite) about two degrees south of the equator... and the second on Jan. 25, 2004."
+        }
+      ]
+    },
+    {
+      "id": "n07",
+      "tipo": "decision",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 3,
+      "capitulo_titulo": "Despegue y llegada",
+      "personaje": "Equipo de la misión",
+      "titulo": "Una batería en el último momento",
+      "fecha": "6 de julio de 2003",
+      "narrativa": {
+        "texto": "Domingo 6 de julio de 2003, Cabo Cañaveral. El lanzamiento de Opportunity ya se retrasó varios días: el corcho de aislamiento térmico del primer escenario del cohete se despegó repetidamente. Hoy, durante la cuenta regresiva, falla una celda de batería del sistema de terminación de vuelo, parte del sistema de seguridad del cohete. Hay que decidir si se despega o se espera.",
+        "escena_visual": "La plataforma de lanzamiento bajo reflectores, con el cohete cubierto de vapor frío.",
+        "emocion": "presión"
+      },
+      "contexto": {
+        "lo_que_sabes": [
+          "Spirit ya viaja hacia Marte desde el 10 de junio.",
+          "El aterrizaje de Opportunity está previsto para el 25 de enero de 2004.",
+          "La nave pesa 1.062 kilos y va montada en un cohete Delta II Heavy.",
+          "Es la primera vez que ese cohete vuela con un escenario superior en una misión real."
+        ],
+        "en_juego": "Un día de espera cuesta poco; un fallo en el cohete lo pierde todo."
+      },
+      "pregunta": "¿Qué se hace con la batería averiada?",
+      "opciones": [
+        {
+          "id": "n07-A",
+          "texto": "Despegar hoy, para no acumular más retrasos.",
+          "detalle": "Se respeta el calendario, pero se vuela con el sistema de seguridad con una falla.",
+          "correcta": false,
+          "siguiente": "n07a"
+        },
+        {
+          "id": "n07-B",
+          "texto": "Retrasar el lanzamiento un día y corregir la falla.",
+          "detalle": "Se pierde un día más, pero se revisa el sistema de seguridad antes de despegar.",
+          "correcta": true,
+          "siguiente": "n08"
+        }
+      ],
+      "resultado_real": "El lanzamiento se pasó del domingo 6 al lunes 7 de julio de 2003. Esa noche, a las 11:18:15 p. m. (hora del este), Opportunity despegó desde Cabo Cañaveral. La nave se separó del tercer escenario unos 83 minutos después, ya fuera de la órbita terrestre. El JPL recibió su señal a las 12:43 a. m. a través de las antenas de Goldstone y confirmó que todos los sistemas funcionaban correctamente.",
+      "respaldo": [
+        "opp015#8",
+        "opp015#11",
+        "opp015#2",
+        "opp015#5",
+        "opp015#3",
+        "opp015#6",
+        "opp015#7"
+      ],
+      "respaldo_resultado": [
+        "opp015#7",
+        "opp015#0",
+        "opp015#1",
+        "opp015#10"
+      ],
+      "eventos_base": [
+        "opp015"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://spaceflightnow.com/mars/merb/status2.html",
+          "editor": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/",
+          "editor": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/mission/mer-opportunity",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mer-opportunity",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1",
+          "editor": "boeing.mediaroom.com",
+          "url": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/",
+          "editor": "nasa.gov",
+          "url": "https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "tiempo_s": 40,
+      "opcion_por_defecto": "n07-A",
+      "dato_desbloqueado": {
+        "titulo": "Un día de retraso",
+        "texto": "El lanzamiento se atrasó del 6 al 7 de julio de 2003 por la falla de una celda de batería."
+      },
+      "rol": "decision",
+      "orden_camino_real": 7,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp015#8",
+          "rol": "narrativa",
+          "afirmacion": "El rover gemelo Spirit fue lanzado el 10 de junio de 2003 con el Delta 2-7925 estándar, dos semanas y media antes que Opportunity.",
+          "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "cita": "The Spirit rover was carried aloft June 10 by the standard Delta 2-7925 configuration launcher."
+        },
+        {
+          "ref": "opp015#11",
+          "rol": "narrativa",
+          "afirmacion": "Opportunity estaba programado para aterrizar en Meridiani Planum el 25 de enero de 2004, zona identificada con depósitos de hematites gris que suelen formarse en ambientes acuosos.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/",
+          "cita": "Opportunity is scheduled to arrive at a site on Mars called Meridiani Planum on Jan. 25, 2004 [...] NASA's Mars Global Surveyor orbiter has identified deposits at Meridiani Planum of a type of mineral that usually forms in wet environments."
+        },
+        {
+          "ref": "opp015#2",
+          "rol": "narrativa",
+          "afirmacion": "La masa de la nave espacial Opportunity era de 2.341 libras (1.062 kg).",
+          "fuente_url": "https://science.nasa.gov/mission/mer-opportunity",
+          "cita": "Spacecraft Mass | 2,341 pounds (1,062 kilograms)"
+        },
+        {
+          "ref": "opp015#5",
+          "rol": "narrativa",
+          "afirmacion": "El Delta II Heavy aumentaba el rendimiento del Delta II en más del 20 %, equipado con nueve cohetes sólidos de 46 pulgadas de diámetro.",
+          "fuente_url": "https://boeing.mediaroom.com/2003-07-07-Boeing-Delta-II-Launches-Opportunity-Sending-Second-NASA-Rover-to-Mars,1",
+          "cita": "\"Opportunity\" was launched aboard the new Delta II Heavy that features nine 46-inch diameter, stretched solid rocket boosters that provide increased lift performance to augment the Boeing Rocketdyne RS-27A main engine. The Delta II Heavy increases the performance of the Delta II by more than 20 percent to low-earth orbit."
+        },
+        {
+          "ref": "opp015#3",
+          "rol": "narrativa",
+          "afirmacion": "El lanzamiento de Opportunity fue la primera vez que el Delta II Heavy fue usado con un escenario superior (upper stage) en una misión real.",
+          "fuente_url": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+          "cita": "The launch of the MER-B spacecraft was the second use of a core Delta II 'Heavy' launch vehicle and the first use of a Delta II 'Heavy' launch vehicle with an upper stage."
+        },
+        {
+          "ref": "opp015#6",
+          "rol": "narrativa",
+          "afirmacion": "El corcho de aislamiento térmico del primer escenario del cohete se despegó repetidamente, retrasando el lanzamiento varios días a partir del intento del 28 de junio.",
+          "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "cita": "workers found sections of thermal insulating material on the Delta 2 rocket's exterior had come loose from the first stage liquid oxygen tank. Efforts to repair the debonded cork and understand the problem took almost a week"
+        },
+        {
+          "ref": "opp015#7",
+          "rol": "narrativa",
+          "afirmacion": "El fallo de una celda de batería del sistema de terminación de vuelo obligó a retrasar el lanzamiento del domingo 6 de julio al lunes 7 de julio de 2003.",
+          "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "cita": "The most recent glitch, which delayed liftoff from Sunday to Monday night, was the failure of a battery in the rocket's safety destruct system."
+        },
+        {
+          "ref": "opp015#7",
+          "rol": "resultado_real",
+          "afirmacion": "El fallo de una celda de batería del sistema de terminación de vuelo obligó a retrasar el lanzamiento del domingo 6 de julio al lunes 7 de julio de 2003.",
+          "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "cita": "The most recent glitch, which delayed liftoff from Sunday to Monday night, was the failure of a battery in the rocket's safety destruct system."
+        },
+        {
+          "ref": "opp015#0",
+          "rol": "resultado_real",
+          "afirmacion": "Opportunity despegó a las 11:18:15 p.m. EDT desde la Estación de la Fuerza Aérea de Cabo Cañaveral, Florida.",
+          "fuente_url": "https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/",
+          "cita": "Opportunity's dash to Mars began with liftoff at 11:18:15 p.m. EDT from Cape Canaveral Air Force Station, Florida."
+        },
+        {
+          "ref": "opp015#1",
+          "rol": "resultado_real",
+          "afirmacion": "La nave se separó del tercer escenario del Delta 83 minutos después del lanzamiento, habiendo sido impulsada fuera de la órbita terrestre.",
+          "fuente_url": "https://www.nasa.gov/image-article/july-7-2003-nasas-opportunity-rover-launches-mars/",
+          "cita": "The spacecraft separated successfully from the Delta's third stage 83 minutes later, after it had been boosted out of Earth orbit and onto a course toward Mars."
+        },
+        {
+          "ref": "opp015#10",
+          "rol": "resultado_real",
+          "afirmacion": "El JPL recibió señal de Opportunity a las 12:43 a.m. EDT del martes a través de las antenas de Goldstone (Red del Espacio Profundo), confirmando que todos los sistemas funcionaban correctamente.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/",
+          "cita": "Flight controllers at NASA's Jet Propulsion Laboratory, Pasadena, Calif., received a signal from Opportunity at 12:43 a.m. Tuesday EDT (9:43 p.m. Monday PDT) via the Goldstone, Calif., antenna complex of NASA's Deep Space Network."
+        }
+      ]
+    },
+    {
+      "id": "n07a",
+      "tipo": "escena_alternativa",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 1,
+      "capitulo": 3,
+      "capitulo_titulo": "Despegue y llegada",
+      "personaje": "Opportunity",
+      "titulo": "Cuenta regresiva",
+      "fecha": "2003",
+      "narrativa": {
+        "texto": "Se decide no esperar. La cuenta regresiva avanza sin más novedades y el cohete se enciende entre una nube de humo y fuego. En la sala de control los ingenieros siguen cada dato sin quitar la vista de los monitores. Al principio todo parece normal.",
+        "escena_visual": "El cohete elevándose con una columna de fuego sobre el mar, de noche.",
+        "emocion": "tensión"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "siguiente": "n07b",
+      "rol": "ficticio_consecuencia",
+      "orden_camino_real": null,
+      "rama_de": "n07",
+      "opcion_origen": "n07-A",
+      "respaldo_detalle": []
+    },
+    {
+      "id": "n07b",
+      "tipo": "fallo",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 2,
+      "capitulo": 3,
+      "capitulo_titulo": "Despegue y llegada",
+      "personaje": "Opportunity",
+      "titulo": "Una falla en el ascenso",
+      "fecha": "2003",
+      "narrativa": {
+        "texto": "Pocos minutos después del despegue, los datos de seguimiento empiezan a salirse de lo esperado. El cohete se desvía de su trayectoria y los controladores deben ordenar su destrucción. Opportunity nunca llega al espacio.",
+        "escena_visual": "Restos luminosos cayendo sobre el océano en la noche.",
+        "emocion": "decepción"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "volver_a": "n07",
+      "leccion": "En la realidad se esperó un día y se corrigió la falla de la batería del sistema de seguridad. Opportunity despegó el lunes 7 de julio de 2003 y su señal confirmó que todos los sistemas funcionaban bien.",
+      "en_realidad_respaldo": [
+        "opp015#7",
+        "opp015#10"
+      ],
+      "rol": "ficticio_final_alternativo",
+      "orden_camino_real": null,
+      "rama_de": "n07",
+      "opcion_origen": "n07-A",
+      "respaldo_detalle": [
+        {
+          "ref": "opp015#7",
+          "rol": "en_realidad",
+          "afirmacion": "El fallo de una celda de batería del sistema de terminación de vuelo obligó a retrasar el lanzamiento del domingo 6 de julio al lunes 7 de julio de 2003.",
+          "fuente_url": "https://spaceflightnow.com/mars/merb/status2.html",
+          "cita": "The most recent glitch, which delayed liftoff from Sunday to Monday night, was the failure of a battery in the rocket's safety destruct system."
+        },
+        {
+          "ref": "opp015#10",
+          "rol": "en_realidad",
+          "afirmacion": "El JPL recibió señal de Opportunity a las 12:43 a.m. EDT del martes a través de las antenas de Goldstone (Red del Espacio Profundo), confirmando que todos los sistemas funcionaban correctamente.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/newly-launched-opportunity-follows-mars-bound-spirit/",
+          "cita": "Flight controllers at NASA's Jet Propulsion Laboratory, Pasadena, Calif., received a signal from Opportunity at 12:43 a.m. Tuesday EDT (9:43 p.m. Monday PDT) via the Goldstone, Calif., antenna complex of NASA's Deep Space Network."
+        }
+      ]
+    },
+    {
+      "id": "n08",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 3,
+      "capitulo_titulo": "Despegue y llegada",
+      "personaje": "Opportunity",
+      "titulo": "Seis minutos de caída",
+      "fecha": "24 de enero de 2004",
+      "narrativa": {
+        "texto": "Opportunity entró en la atmósfera de Marte a unas 12.000 millas por hora, unos 5.400 metros por segundo. La caída duró unos seis minutos. El calentamiento máximo llegó 42 segundos después de la entrada, con una deceleración máxima de 6,3 g. Lo que se veía en la sala de control llevaba unos 11 minutos de retraso por la distancia. A las 9:05 p. m., hora del Pacífico, el JPL recibió la primera señal desde la superficie, y Rob Manning anunció que habían llegado a Marte. El módulo había rebotado y rodado hasta caer dentro de un cráter de unos 22 metros, el cráter Eagle, y se detuvo sobre uno de sus tres pétalos. Pete Theisinger resumió el momento: «We are two for two».",
+        "escena_visual": "La cápsula con los airbags inflados rodando sobre un paisaje plano y rojizo.",
+        "emocion": "tensión y euforia"
+      },
+      "respaldo": [
+        "opp018#8",
+        "opp018#7",
+        "opp018#9",
+        "opp018#11",
+        "opp018#0",
+        "opp018#1",
+        "opp018#16",
+        "opp018#15",
+        "opp018#2",
+        "opp018#14"
+      ],
+      "eventos_base": [
+        "opp018"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://spaceflightnow.com/mars/mera/040125landing.html",
+          "editor": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+          "editor": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.nasa.gov/?p=425313",
+          "editor": "nasa.gov",
+          "url": "https://www.nasa.gov/?p=425313",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Un rebote afortunado",
+        "texto": "El módulo rebotó, rodó y cayó dentro de un cráter de unos 22 metros: el cráter Eagle."
+      },
+      "siguiente": "n09",
+      "rol": "historia_real",
+      "orden_camino_real": 8,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp018#8",
+          "rol": "narrativa",
+          "afirmacion": "Opportunity entró en la atmósfera marciana a unas 12.000 mph (equivalen a unos 5.400 m/s).",
+          "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+          "cita": "Opportunity slammed into the upper atmosphere of Mars at midnight, plunging toward the ground at 12,000 mph."
+        },
+        {
+          "ref": "opp018#7",
+          "rol": "narrativa",
+          "afirmacion": "La descent de Opportunity duró unos seis minutos, según la prensa.",
+          "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+          "cita": "Opportunity's nail-biting, six-minute descent came off like clockwork"
+        },
+        {
+          "ref": "opp018#9",
+          "rol": "narrativa",
+          "afirmacion": "El calentamiento máximo ocurrió 42 segundos después de la entrada, seguido de la máxima deceleración (6,3 g).",
+          "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+          "cita": "Forty-two seconds later, at an altitude of 26.5 miles, atmospheric friction generated peak heating followed seconds later by maximum deceleration, a force equal to 6.3 times Earth's gravity at sea level."
+        },
+        {
+          "ref": "opp018#11",
+          "rol": "narrativa",
+          "afirmacion": "Lo que se veía en la sala de control llevaba unos 11 minutos de retraso por la distancia a Marte.",
+          "fuente_url": "https://spaceflightnow.com/mars/mera/040125landing.html",
+          "cita": "Because Mars currently is more than 100 million miles away, the drama playing out in mission control was 11 minutes behind the actual events on Mars."
+        },
+        {
+          "ref": "opp018#0",
+          "rol": "narrativa",
+          "afirmacion": "El JPL recibió la primera señal de Opportunity desde la superficie a las 9:05 p. m. PST del sábado, a través de la Red del Espacio Profundo (antenas en California y Australia).",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+          "cita": "received the first signal from Opportunity on the ground at 9:05 p.m. Pacific Standard Time Saturday via the NASA Deep Space Network, which was listening with antennas in California and Australia."
+        },
+        {
+          "ref": "opp018#1",
+          "rol": "narrativa",
+          "afirmacion": "Rob Manning, responsable del desarrollo del sistema de aterrizaje, anunció al equipo que habían llegado a Marte.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+          "cita": "JPL's Rob Manning, manager for development of the landing system, announced to the cheering flight team."
+        },
+        {
+          "ref": "opp018#16",
+          "rol": "narrativa",
+          "afirmacion": "El módulo tocó el suelo cerca del cráter, rebotó y rodó hasta caer dentro de él.",
+          "fuente_url": "https://www.nasa.gov/?p=425313",
+          "cita": "The airbag-cushioned lander, with Opportunity folded-up inside, first hit Martian ground near the crater, then bounced and rolled right into the crater."
+        },
+        {
+          "ref": "opp018#15",
+          "rol": "narrativa",
+          "afirmacion": "El cráter Eagle mide unos 22 m de diámetro y está en Meridiani Planum (1,95° S, 354,47° E).",
+          "fuente_url": "https://www.nasa.gov/?p=425313",
+          "cita": "Eagle Crater is about 72 feet (22 meters) in diameter, at 1.95 degrees south latitude, 354.47 degrees east longitude, in the Meridiani Planum region of Mars."
+        },
+        {
+          "ref": "opp018#2",
+          "rol": "narrativa",
+          "afirmacion": "El módulo envió señales durante el aterrizaje con rebotes y después de detenerse sobre uno de los tres pétalos laterales.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+          "cita": "NASA's second Mars Exploration Rover successfully sent signals to Earth during its bouncy landing and after it came to rest on one of the three side petals of its four-sided lander."
+        },
+        {
+          "ref": "opp018#14",
+          "rol": "narrativa",
+          "afirmacion": "Pete Theisinger, jefe del proyecto de los rovers, dijo «We are two for two» tras el aterrizaje.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-hears-from-opportunity-rover-on-mars/",
+          "cita": "We are two for two. Here we are tonight with Spirit on a path to recovery and with Opportunity on Mars."
+        }
+      ]
+    },
+    {
+      "id": "n09",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 3,
+      "capitulo_titulo": "Despegue y llegada",
+      "personaje": "Opportunity",
+      "titulo": "Rocas empapadas en agua",
+      "fecha": "2 de marzo de 2004",
+      "narrativa": {
+        "texto": "El 2 de marzo de 2004, Steve Squyres anunció en una conferencia de prensa en Washington que las rocas de Meridiani Planum estuvieron empapadas en agua líquida: «El agua líquida fluyó una vez por estas rocas. Cambió su textura y cambió su química». Las pruebas eran varias: el espectrómetro Mössbauer detectó jarosita, un sulfato de hierro hidratado, en la roca El Capitan; el APXS halló una concentración muy alta de azufre; la roca tenía cavidades alargadas llamadas vugs, y esferas incrustadas, las «arándanos» o blueberries. Squyres precisó que aquel lugar fue un ambiente habitable, lo que no significa que hubiera vida. Y el equipo reconoció que no sabía cuánto tiempo atrás existió el agua.",
+        "escena_visual": "Una roca con esferas incrustadas fotografiada de cerca por el brazo del rover.",
+        "emocion": "asombro"
+      },
+      "respaldo": [
+        "opp021#0",
+        "opp021#1",
+        "opp021#3",
+        "opp021#4",
+        "opp021#7",
+        "opp021#8",
+        "opp021#14",
+        "opp021#15"
+      ],
+      "eventos_base": [
+        "opp021"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://news.cornell.edu/node/294161",
+          "editor": "news.cornell.edu",
+          "url": "https://news.cornell.edu/node/294161",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+          "editor": "nssdc.gsfc.nasa.gov",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://astrobiology.nasa.gov/news/check-type-evidence-of-water-found-on-mars/",
+          "editor": "astrobiology.nasa.gov",
+          "url": "https://astrobiology.nasa.gov/news/check-type-evidence-of-water-found-on-mars/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://spaceflightnow.com/mars/mera/040302marswater.html",
+          "editor": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/mars/mera/040302marswater.html",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Un mineral con agua",
+        "texto": "La jarosita, un sulfato de hierro hidratado, fue una de las pruebas de que hubo agua líquida en Meridiani."
+      },
+      "siguiente": "n10",
+      "rol": "historia_real",
+      "orden_camino_real": 9,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp021#0",
+          "rol": "narrativa",
+          "afirmacion": "El 2 de marzo de 2004, Steve Squyres anunció en una conferencia de prensa en la sede de la NASA en Washington D.C. que las rocas de Meridiani Planum estuvieron empapadas en agua líquida.",
+          "fuente_url": "https://news.cornell.edu/node/294161",
+          "cita": "Squyres delivered the news of the probable existence of water in the rover Opportunity's landing site on Meridiani Planum at a hastily called news conference March 2 at NASA headquarters in the nation's capital."
+        },
+        {
+          "ref": "opp021#1",
+          "rol": "narrativa",
+          "afirmacion": "Steve Squyres declaró: 'El agua líquida fluyó una vez por estas rocas. Cambió su textura y cambió su química.'",
+          "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+          "cita": "\"Liquid water once flowed through these rocks. It changed their texture, and it changed their chemistry,\" said Dr. Steve Squyres of Cornell University, Ithaca, N.Y., principal investigator for the science instruments on Opportunity and its twin, Spirit."
+        },
+        {
+          "ref": "opp021#3",
+          "rol": "narrativa",
+          "afirmacion": "El espectrómetro Mössbauer detectó jarosita, un mineral hidratado de sulfato de hierro, en la roca El Capitan.",
+          "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+          "cita": "the rover's Moessbauer spectrometer, which identifies iron-bearing minerals, detected a hydrated iron sulfate mineral called jarosite."
+        },
+        {
+          "ref": "opp021#4",
+          "rol": "narrativa",
+          "afirmacion": "El espectrómetro APXS encontró una concentración muy alta de azufre en el afloramiento de El Capitan.",
+          "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+          "cita": "The rover found a very high concentration of sulfur in the outcrop with its alpha particle X-ray spectrometer, which identifies chemical elements in a sample."
+        },
+        {
+          "ref": "opp021#7",
+          "rol": "narrativa",
+          "afirmacion": "La roca El Capitan estaba llena de cavidades alargadas ('vugs') de aproximadamente un centímetro de longitud, formadas cuando cristales de sal crecen dentro de rocas en agua salina y luego desaparecen.",
+          "fuente_url": "https://nssdc.gsfc.nasa.gov/planetary/news/merb_pr_20040302.html",
+          "cita": "El Capitan, is thoroughly pocked with indentations about a centimeter (0.4 inch) long and one-fourth or less that wide, with apparently random orientations. This distinctive texture is familiar to geologists as the sites where crystals of salt minerals form within rocks that sit in briny water."
+        },
+        {
+          "ref": "opp021#8",
+          "rol": "narrativa",
+          "afirmacion": "Las esferas ('arándanos' o blueberries) incrustadas en la roca son concreciones: se forman cuando hay agua líquida en una roca y los minerales disueltos precipitan alrededor de un punto de nucleación.",
+          "fuente_url": "https://astrobiology.nasa.gov/news/check-type-evidence-of-water-found-on-mars/",
+          "cita": "\"Concretions form when there's liquid water in a rock. [The water has stuff dissolved in it [that] begins to precipitate out. And as it does so, it grows around a nucleation point to make a small spherical object.\""
+        },
+        {
+          "ref": "opp021#14",
+          "rol": "narrativa",
+          "afirmacion": "Squyres declaró que el lugar era un entorno habitable en algún momento del pasado de Marte, apto para la vida, aunque eso no significa que hubiera vida allí.",
+          "fuente_url": "https://spaceflightnow.com/mars/mera/040302marswater.html",
+          "cita": "\"We believe, at this place on Mars, for some period of time, it was a habitable environment. This was a ground water environment, this was the kind of place that would have been suitable for life. Now that doesn't mean life was there. We don't know that. But this was a habitable place on Mars at one point in time.\""
+        },
+        {
+          "ref": "opp021#15",
+          "rol": "narrativa",
+          "afirmacion": "El equipo reconoció que no sabía cuánto tiempo atrás existió el agua ni cuánto tiempo duró su presencia.",
+          "fuente_url": "https://spaceflightnow.com/mars/mera/040302marswater.html",
+          "cita": "Squyres said the rover team does not yet know how long ago the water might have existed or how long it was present."
+        }
+      ]
+    },
+    {
+      "id": "n10",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 4,
+      "capitulo_titulo": "Marte pone a prueba",
+      "personaje": "Opportunity",
+      "titulo": "Una roca caída del cielo",
+      "fecha": "6 de enero de 2005",
+      "narrativa": {
+        "texto": "El 6 de enero de 2005, el sol 339 de la misión, Opportunity identificó el primer meteorito de cualquier tipo hallado en otro planeta. Tiene el tamaño aproximado de una pelota de baloncesto y está hecho sobre todo de hierro y níquel. Su masa se estima en unos 40 kilos. Descansaba sobre una llanura de arenisca rica en sulfatos, sin ningún cráter visible a su alrededor. Los científicos no pueden saber si cayó hace 300.000 años o hace 3.000 millones.",
+        "escena_visual": "Una roca oscura sobre una llanura clara de arenisca, con las huellas del rover al fondo.",
+        "emocion": "sorpresa"
+      },
+      "respaldo": [
+        "opp030#0",
+        "opp030#1",
+        "opp030#2",
+        "opp030#5",
+        "opp030#6",
+        "opp030#7"
+      ],
+      "eventos_base": [
+        "opp030"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://science.nasa.gov/resource/iron-meteorite-on-mars/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/iron-meteorite-on-mars/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.astronomy.com/science/what-happened-when-this-meteorite-hit-mars/",
+          "editor": "astronomy.com",
+          "url": "https://www.astronomy.com/science/what-happened-when-this-meteorite-hit-mars/",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Un meteorito en Marte",
+        "texto": "Fue el primer meteorito de cualquier tipo identificado en otro planeta."
+      },
+      "siguiente": "n11",
+      "rol": "historia_real",
+      "orden_camino_real": 10,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp030#0",
+          "rol": "narrativa",
+          "afirmacion": "El hallazgo se produjo en el sol 339 de la misión, el 6 de enero de 2005.",
+          "fuente_url": "https://science.nasa.gov/resource/iron-meteorite-on-mars/",
+          "cita": "Opportunity used its panoramic camera to take the images used in this approximately true-color composite on the rover's 339th martian day, or sol (Jan. 6, 2005)."
+        },
+        {
+          "ref": "opp030#1",
+          "rol": "narrativa",
+          "afirmacion": "El objeto fue el primer meteorito de cualquier tipo identificado en otro planeta.",
+          "fuente_url": "https://science.nasa.gov/resource/iron-meteorite-on-mars/",
+          "cita": "Opportunity found an iron meteorite on Mars, the first meteorite of any type ever identified on another planet."
+        },
+        {
+          "ref": "opp030#2",
+          "rol": "narrativa",
+          "afirmacion": "El meteorito tiene el tamaño aproximado de una pelota de baloncesto y está compuesto principalmente de hierro y níquel.",
+          "fuente_url": "https://science.nasa.gov/resource/iron-meteorite-on-mars/",
+          "cita": "The pitted, basketball-size object is mostly made of iron and nickel. Readings from spectrometers on the rover determined that composition."
+        },
+        {
+          "ref": "opp030#5",
+          "rol": "narrativa",
+          "afirmacion": "La masa del meteorito se estima en unos 40 kilogramos (88 libras).",
+          "fuente_url": "https://www.astronomy.com/science/what-happened-when-this-meteorite-hit-mars/",
+          "cita": "Scientists estimate Heat Shield Rock's mass is 88 pounds (40 kilograms)."
+        },
+        {
+          "ref": "opp030#6",
+          "rol": "narrativa",
+          "afirmacion": "El meteorito descansa sobre una llanura de arenisca rica en sulfatos llamada Formación Burns, sin ningún cráter visible a su alrededor.",
+          "fuente_url": "https://www.astronomy.com/science/what-happened-when-this-meteorite-hit-mars/",
+          "cita": "Currently, the meteorite is resting on a flat plain of sulfate-rich sandstone, named the Burns Formation. There's no sign of a crater near it."
+        },
+        {
+          "ref": "opp030#7",
+          "rol": "narrativa",
+          "afirmacion": "Los científicos no pueden determinar si el meteorito aterrizó hace 300.000 o hace 3.000 millones de años.",
+          "fuente_url": "https://www.astronomy.com/science/what-happened-when-this-meteorite-hit-mars/",
+          "cita": "According to planetary researchers, Heat Shield Rock might have landed 3 billion years ago or 300,000 years ago. Scientists have no way to tell for sure."
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "tipo": "decision",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 4,
+      "capitulo_titulo": "Marte pone a prueba",
+      "personaje": "Equipo de la misión",
+      "titulo": "Atrapado en la arena",
+      "fecha": "26 de abril de 2005",
+      "narrativa": {
+        "texto": "26 de abril de 2005, sol 446. Opportunity conduce marcha atrás cuando sus ruedas se hunden más de 10 centímetros en un rizo de arena de un tercio de metro de alto y 2,5 metros de ancho. Llevaba casi 40 metros de un recorrido planeado de 90. Las ruedas patinan. En la Tierra hay que decidir cómo sacarlo.",
+        "escena_visual": "Ingenieros alrededor de una gran caja de arena con un rover de prueba y, en una pantalla, la duna real.",
+        "emocion": "angustia"
+      },
+      "contexto": {
+        "lo_que_sabes": [
+          "Las ruedas se hunden en material arenoso blando y siguen patinando.",
+          "Desde el sol 436, el motor de dirección de la rueda delantera derecha opera con restricciones.",
+          "El rover conducía marcha atrás: el equipo alterna la dirección de conducción para repartir la lubricación de las ruedas.",
+          "Estaba en el sol 446 de una misión planeada para al menos 90 días marcianos."
+        ],
+        "en_juego": "Un error puede dejar al rover atrapado para siempre; esperar cuesta semanas de ciencia."
+      },
+      "pregunta": "¿Cómo se intenta sacar a Opportunity?",
+      "opciones": [
+        {
+          "id": "n11-A",
+          "texto": "Seguir conduciendo con fuerza hasta salir de la arena.",
+          "detalle": "Es la salida más rápida, pero las ruedas patinan y podrían hundirse todavía más.",
+          "correcta": false,
+          "siguiente": "n11a"
+        },
+        {
+          "id": "n11-B",
+          "texto": "Reproducir la duna en la Tierra, probar maniobras y solo entonces mover el rover.",
+          "detalle": "Tarda semanas, pero se prueba antes de arriesgar la única máquina que hay en Marte.",
+          "correcta": true,
+          "siguiente": "n12"
+        }
+      ],
+      "resultado_real": "El equipo construyó una enorme caja de arena con arena, arcilla y material para tratar piscinas para simular las condiciones de Marte. Pasó más de una semana diseñando y probando antes de elegir cómo sacar al rover. La salida requirió más de cinco semanas de planificación, pruebas y conducción cuidadosamente supervisada. Opportunity quedó libre el sol 484, el 4 de junio de 2005.",
+      "respaldo": [
+        "opp033#2",
+        "opp033#13",
+        "opp033#4",
+        "opp033#0",
+        "opp012#9",
+        "opp033#0",
+        "opp033#2",
+        "opp033#1",
+        "opp033#3",
+        "opp033#4"
+      ],
+      "respaldo_resultado": [
+        "opp033#6",
+        "opp033#5",
+        "opp033#11",
+        "opp033#8",
+        "opp033#9"
+      ],
+      "eventos_base": [
+        "opp012",
+        "opp033"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.universetoday.com/articles/problem-with-opportunitys-front-wheel",
+          "editor": "universetoday.com",
+          "url": "https://www.universetoday.com/articles/problem-with-opportunitys-front-wheel",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/?p=940660",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/?p=940660",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "editor": "marsoweb.nas.nasa.gov",
+          "url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+          "editor": "news.cornell.edu",
+          "url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://pancam.sese.asu.edu/448B_track.html",
+          "editor": "pancam.sese.asu.edu",
+          "url": "https://pancam.sese.asu.edu/448B_track.html",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "tiempo_s": 40,
+      "opcion_por_defecto": "n11-A",
+      "dato_desbloqueado": {
+        "titulo": "Marte en una caja",
+        "texto": "El equipo simuló Marte en una caja de arena con arena, arcilla y material para tratar piscinas."
+      },
+      "rol": "decision",
+      "orden_camino_real": 11,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp033#2",
+          "rol": "narrativa",
+          "afirmacion": "Las ruedas de Opportunity se hundieron más de 10 centímetros (4 pulgadas) en el material arenoso blando de la duna durante el sol 446.",
+          "fuente_url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+          "cita": "Opportunity's wheels dug more than 10 centimeters (4 inches) deep into the soft, sandy material of a wind-shaped ripple in Mars' Meridiani Planum region during the rover's 446th martian day, or sol (April 26, 2005)."
+        },
+        {
+          "ref": "opp033#13",
+          "rol": "narrativa",
+          "afirmacion": "El motor de dirección de la rueda delantera derecha de Opportunity se atascó en el sol 433 durante un giro al final de una conducción; desde el sol 436, el rover operó con restricciones en ese motor.",
+          "fuente_url": "https://www.universetoday.com/articles/problem-with-opportunitys-front-wheel",
+          "cita": "Opportunity's right-front steering motor stalled out on sol 433 during an end-of-drive turn... the rover resumed normal science and driving operations on sol 436, but with restrictions on use of the right-front steering motor."
+        },
+        {
+          "ref": "opp033#4",
+          "rol": "narrativa",
+          "afirmacion": "El rover conducía marcha atrás en ese momento; el equipo alterna regularmente la dirección de conducción para mantener bien distribuida la lubricación de las ruedas.",
+          "fuente_url": "https://science.nasa.gov/?p=940660",
+          "cita": "The rover was driving backwards at the time. The rover team frequently alternates between backwards and forwards driving to keep wheel lubrication well distributed."
+        },
+        {
+          "ref": "opp033#0",
+          "rol": "narrativa",
+          "afirmacion": "El sol 446 de Opportunity corresponde al 26 de abril de 2005, día en que el rover quedó hundido hasta la altura de los cubos de las ruedas en una pequeña duna.",
+          "fuente_url": "https://science.nasa.gov/?p=940660",
+          "cita": "shows the rover's position after it dug itself to wheel-hub depth in a small dune during its 446th martian day, or sol (April 26, 2005)"
+        },
+        {
+          "ref": "opp012#9",
+          "rol": "narrativa",
+          "afirmacion": "La misión principal de cada rover estaba planificada para durar al menos 90 días marcianos (equivalentes a 92 días terrestres); los rovers funcionan con energía solar y se estimaba que en ese plazo el polvo acumulado sobre los paneles solares reduciría el suministro de energía.",
+          "fuente_url": "https://marsoweb.nas.nasa.gov/landingsites/mer2003/doc/finalists_selected.html",
+          "cita": "each rover's prime mission will last at least 90 Martian days (92 Earth days). The rovers are solar-powered, and in approximately 90 days, dust accumulating on the solar arrays likely will be diminishing the power supply."
+        },
+        {
+          "ref": "opp033#0",
+          "rol": "narrativa",
+          "afirmacion": "El sol 446 de Opportunity corresponde al 26 de abril de 2005, día en que el rover quedó hundido hasta la altura de los cubos de las ruedas en una pequeña duna.",
+          "fuente_url": "https://science.nasa.gov/?p=940660",
+          "cita": "shows the rover's position after it dug itself to wheel-hub depth in a small dune during its 446th martian day, or sol (April 26, 2005)"
+        },
+        {
+          "ref": "opp033#2",
+          "rol": "narrativa",
+          "afirmacion": "Las ruedas de Opportunity se hundieron más de 10 centímetros (4 pulgadas) en el material arenoso blando de la duna durante el sol 446.",
+          "fuente_url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+          "cita": "Opportunity's wheels dug more than 10 centimeters (4 inches) deep into the soft, sandy material of a wind-shaped ripple in Mars' Meridiani Planum region during the rover's 446th martian day, or sol (April 26, 2005)."
+        },
+        {
+          "ref": "opp033#1",
+          "rol": "narrativa",
+          "afirmacion": "La duna (o rizo de arena) que atrapó a Opportunity medía aproximadamente un tercio de metro de alto y 2,5 metros de ancho.",
+          "fuente_url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+          "cita": "The ripple that became a sand trap is about one-third meter (one foot) tall and 2.5 meters (8 feet) wide."
+        },
+        {
+          "ref": "opp033#3",
+          "rol": "narrativa",
+          "afirmacion": "Cuando las ruedas comenzaron a patinar, Opportunity había completado casi 40 metros de un recorrido planificado de 90 metros.",
+          "fuente_url": "https://science.nasa.gov/?p=940660",
+          "cita": "Opportunity had completed nearly 40 meters (131 feet) of a planned 90-meter (295-foot) drive that sol when its wheels began slipping."
+        },
+        {
+          "ref": "opp033#4",
+          "rol": "narrativa",
+          "afirmacion": "El rover conducía marcha atrás en ese momento; el equipo alterna regularmente la dirección de conducción para mantener bien distribuida la lubricación de las ruedas.",
+          "fuente_url": "https://science.nasa.gov/?p=940660",
+          "cita": "The rover was driving backwards at the time. The rover team frequently alternates between backwards and forwards driving to keep wheel lubrication well distributed."
+        },
+        {
+          "ref": "opp033#6",
+          "rol": "resultado_real",
+          "afirmacion": "El equipo construyó una caja de arena enorme llena de arena, arcilla y material para tratar piscinas para simular las condiciones en Marte.",
+          "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+          "cita": "built a giant sandbox -- filled with sand, clay, and material used to treat swimming pools -- to simulate the conditions on Mars."
+        },
+        {
+          "ref": "opp033#5",
+          "rol": "resultado_real",
+          "afirmacion": "El equipo de ingenieros pasó más de una semana diseñando y realizando pruebas en simulaciones de las condiciones de Marte en la Tierra antes de elegir cómo sacar al rover.",
+          "fuente_url": "https://science.nasa.gov/?p=940660",
+          "cita": "The rover team spent more than a week designing and conducting tests under simulated Mars conditions on Earth before choosing the best way for Opportunity to drive out of the dune."
+        },
+        {
+          "ref": "opp033#11",
+          "rol": "resultado_real",
+          "afirmacion": "Sacar al rover de la duna requirió más de cinco semanas de planificación, pruebas y conducción cuidadosamente supervisada.",
+          "fuente_url": "https://science.nasa.gov/resource/looking-back-at-purgatory-dune/",
+          "cita": "Getting the rover out of the ripple, dubbed 'Purgatory Dune,' required more than five weeks of planning, testing, and carefully monitored driving."
+        },
+        {
+          "ref": "opp033#8",
+          "rol": "resultado_real",
+          "afirmacion": "El rover fue liberado el sol 484, después de estar atrapado durante 38 soles.",
+          "fuente_url": "https://pancam.sese.asu.edu/448B_track.html",
+          "cita": "The team finally extracted Opportunity from the dune on Sol 484, after 38 sols."
+        },
+        {
+          "ref": "opp033#9",
+          "rol": "resultado_real",
+          "afirmacion": "Opportunity escapó de la trampa de arena el 4 de junio de 2005.",
+          "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+          "cita": "On June 4, Opportunity escaped from the sand trap now called Purgatory Dune."
+        }
+      ]
+    },
+    {
+      "id": "n11a",
+      "tipo": "escena_alternativa",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 1,
+      "capitulo": 4,
+      "capitulo_titulo": "Marte pone a prueba",
+      "personaje": "Opportunity",
+      "titulo": "A toda potencia",
+      "fecha": "2005",
+      "narrativa": {
+        "texto": "El equipo ordena avanzar con más fuerza para salir de un solo impulso. Las ruedas giran, levantan arena y el rover se hunde un poco más con cada vuelta. En la Tierra, los ingenieros miran los datos de cada movimiento con preocupación.",
+        "escena_visual": "Ruedas girando en la arena y un surco cada vez más profundo.",
+        "emocion": "urgencia"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "siguiente": "n11b",
+      "rol": "ficticio_consecuencia",
+      "orden_camino_real": null,
+      "rama_de": "n11",
+      "opcion_origen": "n11-A",
+      "respaldo_detalle": []
+    },
+    {
+      "id": "n11b",
+      "tipo": "fallo",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 2,
+      "capitulo": 4,
+      "capitulo_titulo": "Marte pone a prueba",
+      "personaje": "Opportunity",
+      "titulo": "Enterrado en la duna",
+      "fecha": "2005",
+      "narrativa": {
+        "texto": "Tras varios intentos, las ruedas quedan cubiertas hasta los cubos y el rover ya no avanza. La duna lo sujeta lejos de las rocas que quería estudiar. La misión, que ya había superado con mucho el tiempo para el que fue diseñada, termina ahí.",
+        "escena_visual": "El rover inmóvil, hundido en la arena, con el paisaje intacto alrededor.",
+        "emocion": "frustración"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "volver_a": "n11",
+      "leccion": "En la realidad el equipo no movió el rover enseguida: construyó una caja de arena para simular Marte y pasó más de una semana diseñando y probando antes de elegir la maniobra. Opportunity salió el 4 de junio de 2005.",
+      "en_realidad_respaldo": [
+        "opp033#6",
+        "opp033#5",
+        "opp033#9"
+      ],
+      "rol": "ficticio_final_alternativo",
+      "orden_camino_real": null,
+      "rama_de": "n11",
+      "opcion_origen": "n11-A",
+      "respaldo_detalle": [
+        {
+          "ref": "opp033#6",
+          "rol": "en_realidad",
+          "afirmacion": "El equipo construyó una caja de arena enorme llena de arena, arcilla y material para tratar piscinas para simular las condiciones en Marte.",
+          "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+          "cita": "built a giant sandbox -- filled with sand, clay, and material used to treat swimming pools -- to simulate the conditions on Mars."
+        },
+        {
+          "ref": "opp033#5",
+          "rol": "en_realidad",
+          "afirmacion": "El equipo de ingenieros pasó más de una semana diseñando y realizando pruebas en simulaciones de las condiciones de Marte en la Tierra antes de elegir cómo sacar al rover.",
+          "fuente_url": "https://science.nasa.gov/?p=940660",
+          "cita": "The rover team spent more than a week designing and conducting tests under simulated Mars conditions on Earth before choosing the best way for Opportunity to drive out of the dune."
+        },
+        {
+          "ref": "opp033#9",
+          "rol": "en_realidad",
+          "afirmacion": "Opportunity escapó de la trampa de arena el 4 de junio de 2005.",
+          "fuente_url": "https://www.news.cornell.edu/stories/2005/06/lucky-spirit-and-even-luckier-opportunity-continue-their-odyssey-drama-and-discovery",
+          "cita": "On June 4, Opportunity escaped from the sand trap now called Purgatory Dune."
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 4,
+      "capitulo_titulo": "Marte pone a prueba",
+      "personaje": "Opportunity",
+      "titulo": "El brazo atascado",
+      "fecha": "2008",
+      "narrativa": {
+        "texto": "El 15 de abril de 2008 (sol 1502), el motor del hombro del brazo robótico se bloqueó al inicio de un despliegue, con el brazo todavía plegado bajo el chasis. El diagnóstico apuntó a un problema eléctrico y no a un atasco mecánico. El 14 de mayo, el equipo dirigió la máxima corriente posible al motor caliente y logró llevar el brazo a una posición frontal. Entonces tomó una decisión: no volver a plegarlo nunca más. Opportunity conduciría con el brazo extendido al frente el resto de su vida, aunque eso limitaba los obstáculos que podía cruzar.",
+        "escena_visual": "El rover avanzando con el brazo extendido hacia adelante sobre una llanura arenosa.",
+        "emocion": "alivio y adaptación"
+      },
+      "respaldo": [
+        "opp039#0",
+        "opp039#3",
+        "opp039#6",
+        "opp039#7",
+        "opp039#8"
+      ],
+      "eventos_base": [
+        "opp039"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://www.planetary.org/articles/05-31-mer-update-2",
+          "editor": "planetary.org",
+          "url": "https://www.planetary.org/articles/05-31-mer-update-2",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.sciencedaily.com/releases/2008/04/080424085009.htm",
+          "editor": "sciencedaily.com",
+          "url": "https://www.sciencedaily.com/releases/2008/04/080424085009.htm",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "El brazo al frente",
+        "texto": "Desde mayo de 2008 Opportunity condujo con el brazo robótico extendido al frente."
+      },
+      "siguiente": "n13",
+      "rol": "historia_real",
+      "orden_camino_real": 12,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp039#0",
+          "rol": "narrativa",
+          "afirmacion": "El motor del Joint 1 (articulación azimut del hombro) se bloqueó en el Sol 1502 (15 de abril de 2008) al inicio de una maniobra de despliegue del brazo, con el brazo todavía plegado bajo el chasis.",
+          "fuente_url": "https://www.planetary.org/articles/05-31-mer-update-2",
+          "cita": "But on Sol 1502 (April 15, 2008), the motor stalled at the beginning of an unstow operation at the end of a drive with the arm still tucked underneath the rover."
+        },
+        {
+          "ref": "opp039#3",
+          "rol": "narrativa",
+          "afirmacion": "El diagnóstico técnico señaló un problema eléctrico (aumento de resistencia en el devanado del motor) y no un atasco mecánico.",
+          "fuente_url": "https://www.sciencedaily.com/releases/2008/04/080424085009.htm",
+          "cita": "The performance of the motor in the past week is consistent with increased resistance in the electrical circuit, such as from degrading of wire in the winding, rather than a mechanical jam."
+        },
+        {
+          "ref": "opp039#6",
+          "rol": "narrativa",
+          "afirmacion": "El Sol 1531 (14 de mayo de 2008), a las 8:30 hora marciana, Opportunity dirigió la máxima corriente posible a su motor de hombro caliente y logró mover el brazo robótico hasta una posición frontal (desplegada).",
+          "fuente_url": "https://www.planetary.org/articles/05-31-mer-update-2",
+          "cita": "Two sols later, at 8:30 Mars time on Sol 1531 (May 14, 2008), Opportunity directed as much current as possible to its warm shoulder azimuth motor. After a regimen of electrical stimulation and heat, it moved its shoulder joint and swung its robotic arm back to the front, to an unstowed position."
+        },
+        {
+          "ref": "opp039#7",
+          "rol": "narrativa",
+          "afirmacion": "Tras liberar el brazo, el equipo tomó la decisión de no volver a plegarlo nunca más; Opportunity conduciría con el brazo extendido al frente el resto de su vida.",
+          "fuente_url": "https://www.planetary.org/articles/05-31-mer-update-2",
+          "cita": "We do not ever intend to stow that arm again."
+        },
+        {
+          "ref": "opp039#8",
+          "rol": "narrativa",
+          "afirmacion": "Conducir con el brazo extendido al frente imponía limitaciones sobre los obstáculos que el rover podía intentar cruzar.",
+          "fuente_url": "https://www.planetary.org/articles/05-31-mer-update-2",
+          "cita": "We're going to leave it out and try driving with it in that configuration. We'll have to just take a little bit of the limitation on what sort of obstacles we're going to try to drive over."
+        }
+      ]
+    },
+    {
+      "id": "n13",
+      "tipo": "decision",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 4,
+      "capitulo_titulo": "Marte pone a prueba",
+      "personaje": "Equipo de la misión",
+      "titulo": "Rumbo a un cráter lejano",
+      "fecha": "28 de agosto de 2008",
+      "narrativa": {
+        "texto": "28 de agosto de 2008, sol 1634. Opportunity sale del cráter Victoria, de 800 metros de diámetro, donde pasó casi doce meses dentro y otros doce examinándolo desde el borde. A unos 12 kilómetros al sureste está Endeavour, un cráter de unos 22 kilómetros de diámetro y 300 metros de profundidad. Hay que decidir hacia dónde seguir.",
+        "escena_visual": "Un rover pequeño en una llanura enorme y, en el horizonte, el borde lejano de un gran cráter.",
+        "emocion": "riesgo y ambición"
+      },
+      "contexto": {
+        "lo_que_sabes": [
+          "Un satélite acaba de detectar arcillas (filosilicatos) en el borde occidental de Endeavour, minerales que se forman en agua.",
+          "Llegar tomaría unos dos años si el rover avanza unos 100 metros al día.",
+          "Podrían no llegar.",
+          "Para entonces Opportunity llevaba casi cinco años en Marte, en una misión diseñada para 90 días."
+        ],
+        "en_juego": "Quedarse es seguro pero conocido; irse promete más, pero podría no terminar."
+      },
+      "pregunta": "¿Hacia dónde sigue Opportunity?",
+      "opciones": [
+        {
+          "id": "n13-A",
+          "texto": "Emprender el viaje a Endeavour.",
+          "detalle": "Es un camino largo y arriesgado, sin garantía de llegar, hacia un cráter con arcillas y capas de roca mucho más profundas.",
+          "correcta": true,
+          "siguiente": "n14"
+        },
+        {
+          "id": "n13-B",
+          "texto": "Quedarse explorando los alrededores de Victoria.",
+          "detalle": "Es un terreno que ya conocen tras dos años allí y con poco riesgo, pero se renuncia a las arcillas de Endeavour.",
+          "correcta": false,
+          "siguiente": "n13a"
+        }
+      ],
+      "resultado_real": "El 22 de septiembre de 2008 la NASA anunció el destino Endeavour. Steve Squyres admitió que podían no llegar, pero que era la dirección científicamente correcta. John Callas lo describió como el objetivo más audaz y agresivo que el equipo había tenido. El viaje real duró casi tres años y unos 21 kilómetros, y Opportunity llegó a Endeavour el 9 de agosto de 2011.",
+      "respaldo": [
+        "opp041#14",
+        "opp041#5",
+        "opp041#4",
+        "opp041#11",
+        "opp040#0",
+        "opp040#1",
+        "opp041#10",
+        "opp041#2",
+        "opp041#3"
+      ],
+      "respaldo_resultado": [
+        "opp041#1",
+        "opp041#4",
+        "opp041#6",
+        "opp040#4"
+      ],
+      "eventos_base": [
+        "opp040",
+        "opp041"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://www.planetary.org/articles/05-mer-special-update-opportunitys-findings-at-endeavour-crater-so-far",
+          "editor": "planetary.org",
+          "url": "https://www.planetary.org/articles/05-mer-special-update-opportunitys-findings-at-endeavour-crater-so-far",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "editor": "planetary.org",
+          "url": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://news.cornell.edu/stories/2008/09/mars-rover-opportunity-sets-out-its-greatest-journey-yet",
+          "editor": "news.cornell.edu",
+          "url": "https://news.cornell.edu/stories/2008/09/mars-rover-opportunity-sets-out-its-greatest-journey-yet",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/photojournal/opportunity-sol-1742-traverse-map/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/photojournal/opportunity-sol-1742-traverse-map/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/mission/mer-opportunity/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/mission/mer-opportunity/",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "tiempo_s": 40,
+      "opcion_por_defecto": "n13-B",
+      "dato_desbloqueado": {
+        "titulo": "Casi tres años de viaje",
+        "texto": "Opportunity tardó casi tres años y unos 21 kilómetros en llegar al cráter Endeavour (9 de agosto de 2011)."
+      },
+      "rol": "decision",
+      "orden_camino_real": 13,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp041#14",
+          "rol": "narrativa",
+          "afirmacion": "Cuando el rover salió de Victoria, el instrumento CRISM del Mars Reconnaissance Orbiter acababa de detectar filosilicatos (arcilla de tipo smectita) en el borde occidental de Endeavour, minerales que se forman en agua de pH neutro o alcalino.",
+          "fuente_url": "https://www.planetary.org/articles/05-mer-special-update-opportunitys-findings-at-endeavour-crater-so-far",
+          "cita": "an instrument onboard the Mars Reconnaissance Orbiter had just found the signature for phyllosilicates, specifically a clay mineral known as smectite, harbored here and there in Endeavour's western rim... clays typically form in environments with more neutral to alkaline water."
+        },
+        {
+          "ref": "opp041#5",
+          "rol": "narrativa",
+          "afirmacion": "El equipo estimaba que el viaje a Endeavour duraría unos 2 años si el rover mantenía un ritmo de aproximadamente 110 yardas (unos 100 metros) al día.",
+          "fuente_url": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "cita": "Rover engineers at the Jet Propulsion Laboratory (JPL) where Spirit and Opportunity were designed, built, and are being managed, estimate the may be able to travel about 110 yards each day, according to Laubach. If Opportunity is able to maintain that pace, the journey will take, by Squyres' estimate, about 2 years."
+        },
+        {
+          "ref": "opp041#4",
+          "rol": "narrativa",
+          "afirmacion": "Steve Squyres admitió que podían no llegar a Endeavour, pero que era la dirección científicamente correcta.",
+          "fuente_url": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "cita": "\"We may not get there,\" Squyres admits. \"But it is scientifically the right direction to go anyway.\""
+        },
+        {
+          "ref": "opp041#11",
+          "rol": "narrativa",
+          "afirmacion": "El anuncio oficial fue hecho el 22 de septiembre, cuando Opportunity llevaba ya 1.658 días en Marte, casi 5 años después de una misión diseñada para 90 días.",
+          "fuente_url": "https://news.cornell.edu/stories/2008/09/mars-rover-opportunity-sets-out-its-greatest-journey-yet",
+          "cita": "NASA's Sept. 22 announcement was made on day 1,658 of Opportunity's original 90-day mission."
+        },
+        {
+          "ref": "opp040#0",
+          "rol": "narrativa",
+          "afirmacion": "Opportunity completó la salida del cráter Victoria durante el sol 1634 (28 de agosto de 2008), tras una conducción final de 6,8 metros.",
+          "fuente_url": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+          "cita": "The rover's navigation camera captured this view back into the crater just after finishing a 6.8-meter (22-foot) drive that brought Opportunity out onto level ground during the mission's 1,634th Martian day, or sol (Aug. 28, 2008)."
+        },
+        {
+          "ref": "opp040#1",
+          "rol": "narrativa",
+          "afirmacion": "Victoria Crater tiene 800 metros de diámetro (media milla).",
+          "fuente_url": "https://science.nasa.gov/photojournal/looking-back-at-arena-of-exploration/",
+          "cita": "NASA's Mars Exploration Rover Opportunity climbed out of 'Victoria Crater' following the tracks it had made when it descended into the 800-meter-diameter (half-mile-diameter) bowl nearly a year earlier."
+        },
+        {
+          "ref": "opp041#10",
+          "rol": "narrativa",
+          "afirmacion": "Victoria tenía 800 metros de diámetro; Opportunity pasó casi 12 meses explorando su interior y los 12 meses anteriores examinándola desde el borde.",
+          "fuente_url": "https://science.nasa.gov/photojournal/opportunity-sol-1742-traverse-map/",
+          "cita": "Opportunity climbed out of the 800-meter-wide (half-mile-wide) Victoria Crater on Sol 1634 (Aug. 28, 2008) after spending almost 12 months exploring the crater's interior and the preceding 12 months examining it from the rim."
+        },
+        {
+          "ref": "opp041#2",
+          "rol": "narrativa",
+          "afirmacion": "El cráter Endeavour tiene unos 22 kilómetros de diámetro y 300 metros de profundidad.",
+          "fuente_url": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "cita": "At 22-kilometers (13.7-miles) in diameter and 300 meters (984 feet) deep, this hole in the ground is more than 20 times larger than Victoria Crater, \"staggeringly large compared to anything we've seen before,\" as Squyres put it."
+        },
+        {
+          "ref": "opp041#3",
+          "rol": "narrativa",
+          "afirmacion": "El cráter Endeavour se encontraba a aproximadamente 12 kilómetros al sureste, una distancia ligeramente mayor a la total recorrida por Opportunity desde su aterrizaje en enero de 2004.",
+          "fuente_url": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "cita": "To reach the crater provisionally named Endeavour, Opportunity will have to drive approximately 12 kilometers (about 7.5 miles) to the southeast, a long, long way even for this robot heroine. In fact, it's slightly more than the distance the rover has traveled since landing in the Meridiani Plains back in January 2004."
+        },
+        {
+          "ref": "opp041#1",
+          "rol": "resultado_real",
+          "afirmacion": "El anuncio oficial del destino Endeavour por parte de la NASA y el equipo MER se realizó el 22 de septiembre de 2008.",
+          "fuente_url": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "cita": "On September 22, NASA and the MER team announced exactly where Opportunity would go next – a giant crater to the southeast."
+        },
+        {
+          "ref": "opp041#4",
+          "rol": "resultado_real",
+          "afirmacion": "Steve Squyres admitió que podían no llegar a Endeavour, pero que era la dirección científicamente correcta.",
+          "fuente_url": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "cita": "\"We may not get there,\" Squyres admits. \"But it is scientifically the right direction to go anyway.\""
+        },
+        {
+          "ref": "opp041#6",
+          "rol": "resultado_real",
+          "afirmacion": "John Callas, director del proyecto MER en el JPL, describió el nuevo objetivo como el más audaz y agresivo que el equipo había tenido hasta entonces.",
+          "fuente_url": "https://www.planetary.org/articles/09-30-mer-update-1",
+          "cita": "\"This is a bolder, more aggressive objective than we have had before,\" noted JPL's John Callas, project manager for MER. \"It's tremendously exciting.\""
+        },
+        {
+          "ref": "opp040#4",
+          "rol": "resultado_real",
+          "afirmacion": "Opportunity llegó al cráter Endeavour el 9 de agosto de 2011, tras un viaje de casi tres años y unos 21 km (13 millas).",
+          "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+          "cita": "after a journey of nearly three years and about 13 miles (21 kilometers), Opportunity arrived at Endeavour crater on Aug. 9, 2011."
+        }
+      ]
+    },
+    {
+      "id": "n13a",
+      "tipo": "escena_alternativa",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 1,
+      "capitulo": 4,
+      "capitulo_titulo": "Marte pone a prueba",
+      "personaje": "Opportunity",
+      "titulo": "Un lugar ya conocido",
+      "fecha": "2009",
+      "narrativa": {
+        "texto": "Se decide seguir explorando los alrededores de Victoria. El trabajo continúa con buenos datos y poco riesgo, pero el borde de Endeavour sigue en el horizonte, sin visitar. Los meses pasan y los paneles siguen cargándose cada día.",
+        "escena_visual": "El rover cerca del borde de un cráter conocido y, a lo lejos, una línea de colinas sin explorar.",
+        "emocion": "monotonía"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "siguiente": "n13b",
+      "rol": "ficticio_consecuencia",
+      "orden_camino_real": null,
+      "rama_de": "n13",
+      "opcion_origen": "n13-B",
+      "respaldo_detalle": []
+    },
+    {
+      "id": "n13b",
+      "tipo": "fallo",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 2,
+      "capitulo": 4,
+      "capitulo_titulo": "Marte pone a prueba",
+      "personaje": "Opportunity",
+      "titulo": "Una misión sin su mayor hallazgo",
+      "fecha": "2011",
+      "narrativa": {
+        "texto": "Con el paso de los años el rover acumula desgaste en ruedas y motores, y cada vez avanza menos. Nunca llega al borde de Endeavour. Los minerales que podían explicar cómo circuló el agua allí quedan sin estudiar de cerca.",
+        "escena_visual": "El rover inmóvil, con polvo en los paneles y un cráter lejano sin visitar al fondo.",
+        "emocion": "ocasión perdida"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "volver_a": "n13",
+      "leccion": "En la realidad Opportunity emprendió el viaje y llegó a Endeavour el 9 de agosto de 2011, tras casi tres años y unos 21 kilómetros. Allí hizo uno de sus hallazgos más importantes: la vena de yeso Homestake.",
+      "en_realidad_respaldo": [
+        "opp040#4",
+        "opp047#2"
+      ],
+      "rol": "ficticio_final_alternativo",
+      "orden_camino_real": null,
+      "rama_de": "n13",
+      "opcion_origen": "n13-B",
+      "respaldo_detalle": [
+        {
+          "ref": "opp040#4",
+          "rol": "en_realidad",
+          "afirmacion": "Opportunity llegó al cráter Endeavour el 9 de agosto de 2011, tras un viaje de casi tres años y unos 21 km (13 millas).",
+          "fuente_url": "https://science.nasa.gov/mission/mer-opportunity/",
+          "cita": "after a journey of nearly three years and about 13 miles (21 kilometers), Opportunity arrived at Endeavour crater on Aug. 9, 2011."
+        },
+        {
+          "ref": "opp047#2",
+          "rol": "en_realidad",
+          "afirmacion": "En noviembre de 2011, el equipo usó el Microscopio Imager, el espectrómetro APXS y la Pancam con múltiples filtros para examinar la vena, bautizada informalmente como 'Homestake'.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "cita": "Last month, researchers used the Microscopic Imager and Alpha Particle X-ray Spectrometer on the rover's arm and multiple filters of the Panoramic Camera on the rover's mast to examine the vein, which is informally named \"Homestake.\""
+        }
+      ]
+    },
+    {
+      "id": "n14",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 5,
+      "capitulo_titulo": "El agua y el adiós",
+      "personaje": "Opportunity",
+      "titulo": "La vena de yeso",
+      "fecha": "Noviembre de 2011",
+      "narrativa": {
+        "texto": "En noviembre de 2011, en el borde del cráter Endeavour, el equipo examinó una vena brillante con el microscopio, el espectrómetro APXS y la cámara panorámica. Mide entre 40 y 50 centímetros de largo y de uno a dos de ancho, el grosor de un pulgar. Los instrumentos encontraron abundante calcio y azufre, casi sulfato de calcio puro, y la cámara sugiere que es yeso. Squyres calificó el hallazgo como la historia «definitiva» de que el agua fluyó por fracturas subterráneas de la roca. Nada parecido se había visto en los 33 kilómetros de llanuras que Opportunity exploró durante 90 meses antes de llegar a Endeavour.",
+        "escena_visual": "Una vena clara y brillante cruzando una roca oscura, vista de cerca.",
+        "emocion": "triunfo científico"
+      },
+      "respaldo": [
+        "opp047#2",
+        "opp047#0",
+        "opp047#3",
+        "opp047#4",
+        "opp047#5",
+        "opp047#6"
+      ],
+      "eventos_base": [
+        "opp047"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "editor": "jpl.nasa.gov",
+          "url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Yeso en Marte",
+        "texto": "Homestake es una vena de yeso de 40 a 50 cm; nada parecido apareció en 33 km de llanuras."
+      },
+      "siguiente": "n15",
+      "rol": "historia_real",
+      "orden_camino_real": 14,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp047#2",
+          "rol": "narrativa",
+          "afirmacion": "En noviembre de 2011, el equipo usó el Microscopio Imager, el espectrómetro APXS y la Pancam con múltiples filtros para examinar la vena, bautizada informalmente como 'Homestake'.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "cita": "Last month, researchers used the Microscopic Imager and Alpha Particle X-ray Spectrometer on the rover's arm and multiple filters of the Panoramic Camera on the rover's mast to examine the vein, which is informally named \"Homestake.\""
+        },
+        {
+          "ref": "opp047#0",
+          "rol": "narrativa",
+          "afirmacion": "La vena Homestake mide entre 40 y 50 cm de largo y entre 1 y 2 cm de ancho (del ancho de un pulgar humano), y sobresale ligeramente de la roca circundante.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "cita": "The vein examined most closely by Opportunity is about the width of a human thumb (0.4 to 0.8 inch, or 1 to 2 centimeters), 16 to 20 inches (40 to 50 centimeters) long, and protrudes slightly higher than the bedrock on either side of it."
+        },
+        {
+          "ref": "opp047#3",
+          "rol": "narrativa",
+          "afirmacion": "El espectrómetro identificó abundante calcio y azufre en una proporción que apunta a sulfato de calcio casi puro.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "cita": "The spectrometer identified plentiful calcium and sulfur, in a ratio pointing to relatively pure calcium sulfate."
+        },
+        {
+          "ref": "opp047#4",
+          "rol": "narrativa",
+          "afirmacion": "Los datos multifiltro de la cámara panorámica sugieren que el mineral es yeso, un sulfato de calcio hidratado; en la Tierra, el yeso se usa para fabricar yeso de pared y escayola.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "cita": "The multi-filter data from the camera suggest gypsum, a hydrated calcium sulfate. On Earth, gypsum is used for making drywall and plaster of Paris."
+        },
+        {
+          "ref": "opp047#5",
+          "rol": "narrativa",
+          "afirmacion": "Steve Squyres (investigador principal de Opportunity, Universidad de Cornell) calificó el hallazgo de historia 'definitiva' de que el agua fluyó por fracturas subterráneas en la roca.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "cita": "\"This tells a slam-dunk story that water flowed through underground fractures in the rock,\" said Steve Squyres of Cornell University, Ithaca, N.Y., principal investigator for Opportunity. \"This stuff is a fairly pure chemical deposit that formed in place right where we see it. That can't be said for other gypsum seen on Mars or for other water-related minerals Opportunity has found.\""
+        },
+        {
+          "ref": "opp047#6",
+          "rol": "narrativa",
+          "afirmacion": "Nada similar a la vena Homestake se observó en los 33 kilómetros de llanuras repletas de cráteres que Opportunity exploró durante 90 meses antes de llegar al cráter Endeavour.",
+          "fuente_url": "https://www.jpl.nasa.gov/news/nasa-mars-rover-finds-mineral-vein-deposited-by-water",
+          "cita": "None like it were seen in the 20 miles (33 kilometers) of crater-pocked plains that Opportunity explored for 90 months before it reached Endeavour, nor in the higher ground of the rim."
+        }
+      ]
+    },
+    {
+      "id": "n15",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 5,
+      "capitulo_titulo": "El agua y el adiós",
+      "personaje": "Opportunity",
+      "titulo": "La tormenta",
+      "fecha": "Mayo-junio de 2018",
+      "narrativa": {
+        "texto": "A fines de mayo de 2018 una tormenta de polvo creció en Marte; fue detectada por primera vez el 30 de mayo. Las tormentas de escala planetaria ocurren cada seis a ocho años terrestres, y la anterior había sido en 2007. El 1 de junio los paneles solares de Opportunity generaban unos 645 vatios-hora; una semana después producían solo 22. La tormenta habría cubierto al mismo tiempo Norteamérica, la Antártida y la Unión Europea. El nivel de opacidad del aire llegó a 10,8, el más alto jamás medido por una misión a Marte; en la tormenta de 2007, que Opportunity sobrevivió, el máximo había sido 5,5.",
+        "escena_visual": "Un cielo naranja que se oscurece sobre un valle y un rover pequeño con los paneles cubiertos de polvo.",
+        "emocion": "amenaza creciente"
+      },
+      "respaldo": [
+        "opp070#5",
+        "opp070#1",
+        "opp070#3",
+        "opp070#4",
+        "opp075#4",
+        "opp075#5"
+      ],
+      "eventos_base": [
+        "opp070",
+        "opp075"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://spaceflightnow.com/2018/06/13/huge-dust-storm-knocks-aging-mars-rover-out-of-contact-with-earth/",
+          "editor": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/2018/06/13/huge-dust-storm-knocks-aging-mars-rover-out-of-contact-with-earth/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/",
+          "editor": "lasp.colorado.edu",
+          "url": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+          "editor": "planetary.org",
+          "url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.planetary.org/articles/08-mer-update-nasa-focuses-on-recovering-opportunity",
+          "editor": "planetary.org",
+          "url": "https://www.planetary.org/articles/08-mer-update-nasa-focuses-on-recovering-opportunity",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Mucho más fuerte",
+        "texto": "La opacidad llegó a 10,8 en 2018; en la tormenta de 2007, que Opportunity sobrevivió, fue de 5,5."
+      },
+      "siguiente": "n16",
+      "rol": "historia_real",
+      "orden_camino_real": 15,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp070#5",
+          "rol": "narrativa",
+          "afirmacion": "La tormenta fue detectada por primera vez el 30 de mayo de 2018, según la prensa especializada",
+          "fuente_url": "https://spaceflightnow.com/2018/06/13/huge-dust-storm-knocks-aging-mars-rover-out-of-contact-with-earth/",
+          "cita": "First detected May 30, the dust storm has been growing rapidly and is now expected to encircle the entire planet in the next two or three days."
+        },
+        {
+          "ref": "opp070#1",
+          "rol": "narrativa",
+          "afirmacion": "Las tormentas de polvo de escala planetaria en Marte ocurren aproximadamente cada tres o cuatro años marcianos (seis a ocho años terrestres); la anterior había sido en 2007",
+          "fuente_url": "https://lasp.colorado.edu/maven/2018/06/14/nasa-encounters-the-perfect-storm-for-science/",
+          "cita": "These massive, planet-scaled storms are estimated to happen about once every three to four Mars years (six to eight Earth years); the last one was in 2007."
+        },
+        {
+          "ref": "opp070#3",
+          "rol": "narrativa",
+          "afirmacion": "El 1 de junio el rover generaba ~645 vatios-hora; una semana después solo producía 22 vatios-hora, casi 100 vatios-hora menos del mínimo necesario para sobrevivir",
+          "fuente_url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+          "cita": "The robot went from generating fairly robust power levels on June 1st, around 645 watt-hours or more than two-thirds original capability on landing with pristine solar arrays, to an unheard of, life-threatening low just a week later... Opportunity was producing just 22 watt-hours of power. That is almost 100 watt-hours less than what has been considered necessary for survival for a MER class rover."
+        },
+        {
+          "ref": "opp070#4",
+          "rol": "narrativa",
+          "afirmacion": "Comparada con la Tierra, la tormenta habría cubierto al mismo tiempo Norteamérica, la Antártida y la Unión Europea",
+          "fuente_url": "https://www.planetary.org/articles/06-mer-update-opportunity-dust-storm-sleep",
+          "cita": "For perspective, on Earth, the storm would cover North America, Antarctica, and the European Union."
+        },
+        {
+          "ref": "opp075#4",
+          "rol": "narrativa",
+          "afirmacion": "El tau máximo medido durante la tormenta de 2018 fue de 10,8, el más alto jamás registrado por ninguna misión de exploración de Marte.",
+          "fuente_url": "https://www.planetary.org/articles/08-mer-update-nasa-focuses-on-recovering-opportunity",
+          "cita": "Team members have not heard from Opportunity since June 10th, when they received a message that the dust in the sky overhead, a Tau as the team calls it, was 10.8, the highest the MER mission or any Mars mission has measured."
+        },
+        {
+          "ref": "opp075#5",
+          "rol": "narrativa",
+          "afirmacion": "Durante la tormenta global de 2007, el tau alcanzó un máximo de 5,5 y Opportunity sobrevivió; la tormenta de 2018 fue mucho más intensa.",
+          "fuente_url": "https://www.planetary.org/articles/08-mer-update-nasa-focuses-on-recovering-opportunity",
+          "cita": "it has been estimated as high as 5.5 during the planet-encircling dust event (PEDE) that Opportunity survived in 2007."
+        }
+      ]
+    },
+    {
+      "id": "n16",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 5,
+      "capitulo_titulo": "El agua y el adiós",
+      "personaje": "Opportunity",
+      "titulo": "La última panorámica",
+      "fecha": "3-10 de junio de 2018",
+      "narrativa": {
+        "texto": "El 3 de junio de 2018 Opportunity analizó su último rasgo de superficie, un afloramiento de roca. Entre el 13 de mayo y el 10 de junio tomó 354 imágenes para su panorámica final, y algunas partes quedaron en blanco y negro porque la tormenta llegó antes de que pudiera usar todos los filtros. El 10 de junio llegó su última comunicación. John Callas explicó que el mensaje indicaba cielos increíblemente oscuros: era de noche durante el día. La científica Abigail Fraeman dijo que básicamente decía que no tenían energía. La frase «mi batería está baja y se está haciendo oscuro» fue una interpretación poética de un periodista, no un mensaje literal del rover.",
+        "escena_visual": "Una panorámica de un valle con zonas en blanco y negro y el cielo muy oscuro.",
+        "emocion": "melancolía"
+      },
+      "respaldo": [
+        "opp071#0",
+        "opp071#2",
+        "opp071#13",
+        "opp071#8",
+        "opp072#11",
+        "opp072#10",
+        "opp072#9"
+      ],
+      "eventos_base": [
+        "opp071",
+        "opp072"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://science.nasa.gov/resource/opportunity-rovers-final-mars-images/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/resource/opportunity-rovers-final-mars-images/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://svs.gsfc.nasa.gov/31026",
+          "editor": "svs.gsfc.nasa.gov",
+          "url": "https://svs.gsfc.nasa.gov/31026",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://laist.com/news/jpl-mars-rover-opportunity-battery-is-low-and-its-getting-dark",
+          "editor": "laist.com",
+          "url": "https://laist.com/news/jpl-mars-rover-opportunity-battery-is-low-and-its-getting-dark",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Una frase que no es del rover",
+        "texto": "La frase «mi batería está baja y se está haciendo oscuro» fue una interpretación poética de un periodista."
+      },
+      "siguiente": "n17",
+      "rol": "historia_real",
+      "orden_camino_real": 16,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp071#0",
+          "rol": "narrativa",
+          "afirmacion": "El afloramiento tabular de roca fue el último rasgo de superficie que Opportunity analizó el 3 de junio de 2018 durante su misión.",
+          "fuente_url": "https://science.nasa.gov/resource/opportunity-rovers-final-mars-images/",
+          "cita": "The tabular rock outcrop was the last surface feature Opportunity analyzed on June 3, 2018, (Sol 5,014) during its mission of exploration. The rover team was wrapping up investigations of these rocks when the dust storm hit."
+        },
+        {
+          "ref": "opp071#2",
+          "rol": "narrativa",
+          "afirmacion": "La última panorámica de Opportunity fue tomada entre el 13 de mayo y el 10 de junio de 2018 (Sols 5.084 a 5.111) y consta de 354 imágenes.",
+          "fuente_url": "https://svs.gsfc.nasa.gov/31026",
+          "cita": "This 360-degree panoramas is composed of 354 images taken by the Opportunity rover's Panoramic Camera (Pancam) from May 13 through June 10, 2018, or sols (Martian days) 5,084 through 5,111."
+        },
+        {
+          "ref": "opp071#13",
+          "rol": "narrativa",
+          "afirmacion": "Algunos fotogramas de la panorámica final quedaron en blanco y negro porque el rover no tuvo tiempo de fotografiar esas posiciones con los filtros verde y violeta antes de que la tormenta llegara.",
+          "fuente_url": "https://science.nasa.gov/resource/opportunity-rovers-final-mars-images/",
+          "cita": "A few frames (bottom left) remain black and white, as the solar-powered rover did not have the time to photograph those locations using the green and violet filters before a severe Mars-wide dust storm swept in on June 2018."
+        },
+        {
+          "ref": "opp071#8",
+          "rol": "narrativa",
+          "afirmacion": "La última comunicación de Opportunity fue recibida el 10 de junio de 2018 (Sol 5.111).",
+          "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "cita": "The Opportunity rover stopped communicating with Earth when a severe Mars-wide dust storm blanketed its location in June 2018. After more than a thousand commands to restore contact, engineers in the Space Flight Operations Facility at NASA's Jet Propulsion Laboratory (JPL) made their last attempt to revive Opportunity Tuesday, to no avail. The solar-powered rover's final communication was received June 10."
+        },
+        {
+          "ref": "opp072#11",
+          "rol": "narrativa",
+          "afirmacion": "El director del proyecto John Callas afirmó que el último mensaje también indicaba que los cielos estaban increíblemente oscuros: era de noche durante el día.",
+          "fuente_url": "https://laist.com/news/jpl-mars-rover-opportunity-battery-is-low-and-its-getting-dark",
+          "cita": "\"It also told us the skies were incredibly dark, to the point where no sunlight gets through. It's night time during the day.\""
+        },
+        {
+          "ref": "opp072#10",
+          "rol": "narrativa",
+          "afirmacion": "La científica adjunta Abigail Fraeman dijo que el último mensaje del rover 'básicamente decía que no teníamos energía'.",
+          "fuente_url": "https://laist.com/news/jpl-mars-rover-opportunity-battery-is-low-and-its-getting-dark",
+          "cita": "\"It basically said we had no power left, and that was the last time we heard from it.\""
+        },
+        {
+          "ref": "opp072#9",
+          "rol": "narrativa",
+          "afirmacion": "La frase 'My battery is low and it's getting dark' fue una interpretación poética del periodista Jacob Margolis, no un mensaje literal del rover.",
+          "fuente_url": "https://laist.com/news/jpl-mars-rover-opportunity-battery-is-low-and-its-getting-dark",
+          "cita": "My tweet is an interpretation of what two scientists from the Mars Exploration Rover Mission told me."
+        }
+      ]
+    },
+    {
+      "id": "n17",
+      "tipo": "decision",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 5,
+      "capitulo_titulo": "El agua y el adiós",
+      "personaje": "Equipo de la misión",
+      "titulo": "El silencio después de la tormenta",
+      "fecha": "29 de octubre de 2018",
+      "narrativa": {
+        "texto": "29 de octubre de 2018. Desde el 11 de septiembre, el JPL envía comandos varias veces al día y un receptor escucha cualquier señal que llegue de Opportunity. El plan decía que, si pasaban 45 días activos sin respuesta, el proyecto empezaría a reasignar personal, aunque la escucha pasiva seguiría al menos hasta finales de enero de 2019. Hoy se cumple el plazo y no hay respuesta.",
+        "escena_visual": "Una antena de espacio profundo apuntando a un cielo oscuro y una sala de control con una señal plana.",
+        "emocion": "incertidumbre"
+      },
+      "contexto": {
+        "lo_que_sabes": [
+          "Se espera que los vientos retiren el polvo de los paneles; la temporada de vientos de limpieza va de noviembre a enero.",
+          "Hay una hipótesis, no confirmada, de que el rover se congeló o entró en un modo de falla irreversible por no tener calentador.",
+          "Cuando se perdió el contacto, Opportunity tenía almacenados solo 22 vatios-hora, frente a los 300 normales.",
+          "Opportunity llevaba casi quince años en Marte; su garantía original era de 90 días."
+        ],
+        "en_juego": "Seguir cuesta el esfuerzo de un equipo; parar cierra la posibilidad de que el rover despierte."
+      },
+      "pregunta": "¿Qué hace la NASA ahora?",
+      "opciones": [
+        {
+          "id": "n17-A",
+          "texto": "Dar por terminada la campaña de comandos activos.",
+          "detalle": "Se cumple el plan y el equipo puede dedicarse a otras misiones; la escucha pasiva seguiría un tiempo.",
+          "correcta": false,
+          "siguiente": "n17a"
+        },
+        {
+          "id": "n17-B",
+          "texto": "Seguir intentando el contacto por tiempo indefinido y reevaluar en enero.",
+          "detalle": "Cuesta tiempo y esfuerzo, pero la temporada de vientos que limpia el polvo apenas comienza.",
+          "correcta": true,
+          "siguiente": "n18"
+        }
+      ],
+      "resultado_real": "El 29 de octubre de 2018 la NASA anunció que continuaría los intentos de contacto con Opportunity por tiempo indefinido y que reevaluaría la situación en enero de 2019. John Callas declaró que el equipo seguiría trabajando hasta recibir instrucciones de la cúpula de la NASA de cerrar el proyecto.",
+      "respaldo": [
+        "opp076#3",
+        "opp076#4",
+        "opp076#5",
+        "opp076#8",
+        "opp076#11",
+        "opp075#1",
+        "opp075#8",
+        "opp075#9"
+      ],
+      "respaldo_resultado": [
+        "opp076#1",
+        "opp076#2",
+        "opp076#12"
+      ],
+      "eventos_base": [
+        "opp075",
+        "opp076"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://www.space.com/42288-nasa-keeps-hailing-mars-rover-opportunity.html",
+          "editor": "space.com",
+          "url": "https://www.space.com/42288-nasa-keeps-hailing-mars-rover-opportunity.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.space.com/41702-mars-rover-opportunity-recovery-deadline.html",
+          "editor": "space.com",
+          "url": "https://www.space.com/41702-mars-rover-opportunity-recovery-deadline.html",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.scientificamerican.com/article/lost-opportunity-after-a-15-year-odyssey-nasas-trailblazing-mars-rover-approaches-its-end/",
+          "editor": "scientificamerican.com",
+          "url": "https://www.scientificamerican.com/article/lost-opportunity-after-a-15-year-odyssey-nasas-trailblazing-mars-rover-approaches-its-end/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.planetary.org/articles/09-mer-update-team-initiates-plan-to-recover-opportunity",
+          "editor": "planetary.org",
+          "url": "https://www.planetary.org/articles/09-mer-update-team-initiates-plan-to-recover-opportunity",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.planetary.org/articles/08-mer-update-nasa-focuses-on-recovering-opportunity",
+          "editor": "planetary.org",
+          "url": "https://www.planetary.org/articles/08-mer-update-nasa-focuses-on-recovering-opportunity",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://www.jhunewsletter.com/article/2019/02/nasa-lost-contact-with-its-mars-opportunity-rover-in-a-dust-storm",
+          "editor": "jhunewsletter.com",
+          "url": "https://www.jhunewsletter.com/article/2019/02/nasa-lost-contact-with-its-mars-opportunity-rover-in-a-dust-storm",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "tiempo_s": 40,
+      "opcion_por_defecto": "n17-A",
+      "dato_desbloqueado": {
+        "titulo": "Más de mil comandos",
+        "texto": "En ocho meses el equipo envió más de 1.000 comandos al rover silencioso."
+      },
+      "rol": "decision",
+      "orden_camino_real": 17,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp076#3",
+          "rol": "narrativa",
+          "afirmacion": "Se esperaba que los vientos aumentaran en los meses siguientes y retiraran el polvo de los paneles solares del rover.",
+          "fuente_url": "https://www.space.com/42288-nasa-keeps-hailing-mars-rover-opportunity.html",
+          "cita": "Winds could increase in the next few months at Opportunity's location on Mars, resulting in dust being blown off the rover's solar panels."
+        },
+        {
+          "ref": "opp076#4",
+          "rol": "narrativa",
+          "afirmacion": "La temporada de vientos de limpieza en la ubicación de Opportunity comienza en noviembre y se extiende hasta enero.",
+          "fuente_url": "https://www.space.com/41702-mars-rover-opportunity-recovery-deadline.html",
+          "cita": "Those wind events should begin, in terrestrial time, in November and last until January, said Harrison, who began her work with the Mars Exploration Rover team by producing Martian weather forecasts when there were still twin robots."
+        },
+        {
+          "ref": "opp076#5",
+          "rol": "narrativa",
+          "afirmacion": "Existía la hipótesis (no confirmada) de que Opportunity se había congelado o caído en un 'modo de falla' irreversible al carecer de calentador.",
+          "fuente_url": "https://www.space.com/42288-nasa-keeps-hailing-mars-rover-opportunity.html",
+          "cita": "Opportunity has been through quite an ordeal, enduring bitterly cold Martian nights without a working heater to keep its electronic innards warm. So it's possible that the venerable rover...has frozen to death or fallen victim to some 'fault mode' from which it cannot recover."
+        },
+        {
+          "ref": "opp076#8",
+          "rol": "narrativa",
+          "afirmacion": "En el momento de la última comunicación, Opportunity tenía solo 22 watt-hora almacenados, frente a los 300 watt-hora normales.",
+          "fuente_url": "https://www.scientificamerican.com/article/lost-opportunity-after-a-15-year-odyssey-nasas-trailblazing-mars-rover-approaches-its-end/",
+          "cita": "Power was low: just 22 watt-hours, down from a normal 300 watt-hours on the solar panels. That's enough to run a typical food processor for about five minutes."
+        },
+        {
+          "ref": "opp076#11",
+          "rol": "narrativa",
+          "afirmacion": "Opportunity duró 15 años en Marte, 61 veces más que su garantía original de 90 días.",
+          "fuente_url": "https://www.scientificamerican.com/article/lost-opportunity-after-a-15-year-odyssey-nasas-trailblazing-mars-rover-approaches-its-end/",
+          "cita": "Opportunity has endured for 15 years on the Red Planet, 61 times longer than its 90-day warranty."
+        },
+        {
+          "ref": "opp075#1",
+          "rol": "narrativa",
+          "afirmacion": "El 11 de septiembre, JPL aumentó la frecuencia de comandos de tres veces por semana a varias veces al día.",
+          "fuente_url": "https://www.planetary.org/articles/09-mer-update-team-initiates-plan-to-recover-opportunity",
+          "cita": "launched the first phase of the strategy on September 11th, by increasing attempts to search for Opportunity's signal from three times a week to multiple times each day and electronically nudge the rover awake."
+        },
+        {
+          "ref": "opp075#8",
+          "rol": "narrativa",
+          "afirmacion": "El receptor de Ciencias de Radio de la DSN registraba pasivamente todas las señales provenientes de Marte para detectar cualquier señal espontánea de Opportunity.",
+          "fuente_url": "https://www.planetary.org/articles/09-mer-update-team-initiates-plan-to-recover-opportunity",
+          "cita": "passive listening over a Deep Space Network Radio Science Receiver that records all signals from Mars."
+        },
+        {
+          "ref": "opp075#9",
+          "rol": "narrativa",
+          "afirmacion": "Si no había señal en los 45 días activos, el proyecto comenzaría a reasignar personal pero la escucha pasiva continuaría al menos hasta finales de enero de 2019.",
+          "fuente_url": "https://www.planetary.org/articles/08-mer-update-nasa-focuses-on-recovering-opportunity",
+          "cita": "If no signal is found in that 45-day window, although the project would have to begin reassigning people and downsizing, the passive listening efforts would continue though until at least the end of January"
+        },
+        {
+          "ref": "opp076#1",
+          "rol": "resultado_real",
+          "afirmacion": "El 29 de octubre de 2018, la NASA anunció que continuaría los intentos de contacto con Opportunity por tiempo indefinido.",
+          "fuente_url": "https://www.space.com/42288-nasa-keeps-hailing-mars-rover-opportunity.html",
+          "cita": "After a review of the progress of the listening campaign, NASA will continue its current strategy for attempting to make contact with the Opportunity rover for the foreseeable future."
+        },
+        {
+          "ref": "opp076#2",
+          "rol": "resultado_real",
+          "afirmacion": "La NASA planeaba reevaluar la situación en enero de 2019.",
+          "fuente_url": "https://www.space.com/42288-nasa-keeps-hailing-mars-rover-opportunity.html",
+          "cita": "The agency will reassess the situation in the January 2019 time frame."
+        },
+        {
+          "ref": "opp076#12",
+          "rol": "resultado_real",
+          "afirmacion": "John Callas, gerente del proyecto, declaró que el equipo seguiría trabajando hasta recibir instrucciones de la cúpula de la NASA de cerrar el proyecto.",
+          "fuente_url": "https://www.jhunewsletter.com/article/2019/02/nasa-lost-contact-with-its-mars-opportunity-rover-in-a-dust-storm",
+          "cita": "Until [Thomas Zurbuchen, the associate administrator for NASA's science directorate] tells us to close down the project, we'll keep going."
+        }
+      ]
+    },
+    {
+      "id": "n17a",
+      "tipo": "escena_alternativa",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 1,
+      "capitulo": 5,
+      "capitulo_titulo": "El agua y el adiós",
+      "personaje": "Opportunity",
+      "titulo": "Se cierra la campaña activa",
+      "fecha": "2018",
+      "narrativa": {
+        "texto": "Termina la campaña de comandos diarios. El personal pasa a otros proyectos y el receptor sigue escuchando de forma pasiva. En Marte llega la temporada de vientos, pero ya nadie le habla al rover. Los paneles siguen bajo el polvo, en el valle.",
+        "escena_visual": "Una sala de control medio vacía y, en Marte, el viento moviendo polvo sobre un rover inmóvil.",
+        "emocion": "resignación"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "siguiente": "n17b",
+      "rol": "ficticio_consecuencia",
+      "orden_camino_real": null,
+      "rama_de": "n17",
+      "opcion_origen": "n17-A",
+      "respaldo_detalle": []
+    },
+    {
+      "id": "n17b",
+      "tipo": "fallo",
+      "camino": "alternativo",
+      "ficticio": true,
+      "hipotetico": true,
+      "nivel": 2,
+      "capitulo": 5,
+      "capitulo_titulo": "El agua y el adiós",
+      "personaje": "Opportunity",
+      "titulo": "Una pregunta sin respuesta",
+      "fecha": "2019",
+      "narrativa": {
+        "texto": "Pasan los meses sin señal. Al terminar enero, el proyecto se cierra sin saber si el rover habría respondido a nuevos comandos. Opportunity queda en el Valle Perseverance con una pregunta abierta: ¿se habría despertado si alguien hubiera seguido intentándolo?",
+        "escena_visual": "Un rover inmóvil bajo un cielo claro, sin nadie que le responda.",
+        "emocion": "tristeza"
+      },
+      "respaldo": [],
+      "eventos_base": [],
+      "datos_clave": [],
+      "fuentes": [],
+      "volver_a": "n17",
+      "leccion": "En la realidad la NASA siguió intentando por tiempo indefinido y reevaluó en enero de 2019. Al final el equipo envió más de 1.000 comandos durante ocho meses.",
+      "en_realidad_respaldo": [
+        "opp076#1",
+        "opp076#2",
+        "opp076#10"
+      ],
+      "rol": "ficticio_final_alternativo",
+      "orden_camino_real": null,
+      "rama_de": "n17",
+      "opcion_origen": "n17-A",
+      "respaldo_detalle": [
+        {
+          "ref": "opp076#1",
+          "rol": "en_realidad",
+          "afirmacion": "El 29 de octubre de 2018, la NASA anunció que continuaría los intentos de contacto con Opportunity por tiempo indefinido.",
+          "fuente_url": "https://www.space.com/42288-nasa-keeps-hailing-mars-rover-opportunity.html",
+          "cita": "After a review of the progress of the listening campaign, NASA will continue its current strategy for attempting to make contact with the Opportunity rover for the foreseeable future."
+        },
+        {
+          "ref": "opp076#2",
+          "rol": "en_realidad",
+          "afirmacion": "La NASA planeaba reevaluar la situación en enero de 2019.",
+          "fuente_url": "https://www.space.com/42288-nasa-keeps-hailing-mars-rover-opportunity.html",
+          "cita": "The agency will reassess the situation in the January 2019 time frame."
+        },
+        {
+          "ref": "opp076#10",
+          "rol": "en_realidad",
+          "afirmacion": "A lo largo de ocho meses, el equipo MER envió en total más de 1000 comandos al rover silencioso.",
+          "fuente_url": "https://ntrs.nasa.gov/citations/20210015954",
+          "cita": "Over the course of the next eight months, the MER team employed numerous recovery efforts and radiated over one thousand commands to wake the silent rover."
+        }
+      ]
+    },
+    {
+      "id": "n18",
+      "tipo": "historia",
+      "camino": "real",
+      "ficticio": false,
+      "hipotetico": false,
+      "capitulo": 5,
+      "capitulo_titulo": "El agua y el adiós",
+      "personaje": "Opportunity",
+      "titulo": "Farewell, Opportunity",
+      "fecha": "12-13 de febrero de 2019",
+      "narrativa": {
+        "texto": "Los últimos comandos se enviaron alrededor de las 8 p. m., hora del Pacífico, del 12 de febrero de 2019, mientras sonaba «I'll Be Seeing You», de Billie Holiday, en el centro de operaciones del JPL. Se transmitieron por la antena de 70 metros de Goldstone, y el último comando tardó trece minutos y medio en llegar a Marte. Al día siguiente, Thomas Zurbuchen declaró completa la misión y John Callas cerró con una frase: «Farewell, Opportunity, and well done». Opportunity había sido diseñada para durar 90 días marcianos y recorrer 1.000 metros. Superó su vida prevista unas 60 veces, recorrió más de 45 kilómetros y devolvió más de 217.000 imágenes, incluidas 15 panorámicas en color de 360 grados. Su descanso final: el Valle Perseverance. Zurbuchen dijo que su legado continúa en Curiosity, en InSight y en el rover Mars 2020.",
+        "escena_visual": "Una sala de control casi a oscuras, pantallas con la señal plana e ingenieros escuchando una canción.",
+        "emocion": "despedida y gratitud"
+      },
+      "respaldo": [
+        "opp077#0",
+        "opp077#1",
+        "opp077#5",
+        "opp077#2",
+        "opp077#3",
+        "opp077#6",
+        "opp077#7",
+        "opp077#9",
+        "opp077#12"
+      ],
+      "eventos_base": [
+        "opp077"
+      ],
+      "datos_clave": [],
+      "fuentes": [
+        {
+          "titulo": "https://www.planetary.org/articles/02-mer-update-opportunity-complete",
+          "editor": "planetary.org",
+          "url": "https://www.planetary.org/articles/02-mer-update-opportunity-complete",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "editor": "science.nasa.gov",
+          "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "tipo": "dossier verificado"
+        },
+        {
+          "titulo": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+          "editor": "spaceflightnow.com",
+          "url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+          "tipo": "dossier verificado"
+        }
+      ],
+      "dato_desbloqueado": {
+        "titulo": "Sesenta veces más",
+        "texto": "Opportunity superó unas 60 veces su vida prevista, recorrió más de 45 km y tomó más de 217.000 imágenes."
+      },
+      "final": true,
+      "rol": "historia_real",
+      "orden_camino_real": 18,
+      "rama_de": null,
+      "opcion_origen": null,
+      "respaldo_detalle": [
+        {
+          "ref": "opp077#0",
+          "rol": "narrativa",
+          "afirmacion": "Los últimos comandos se enviaron a Opportunity alrededor de las 8 pm PST del 12 de febrero de 2019, mientras sonaba 'I'll Be Seeing You' de Billie Holiday en el Centro de Operaciones de Vuelo Espacial del JPL.",
+          "fuente_url": "https://www.planetary.org/articles/02-mer-update-opportunity-complete",
+          "cita": "At around 8 pm February 12, 2019, Pacific Standard Time (PST), as the strains of Billie Holiday singing \"I'll Be Seeing You\" filled the Space Flight Operations Center at the Jet Propulsion Laboratory (JPL), final commands were transmitted to Opportunity."
+        },
+        {
+          "ref": "opp077#1",
+          "rol": "narrativa",
+          "afirmacion": "La transmisión final fue enviada a través de la antena de 70 metros de la Estación Mars en el Complejo Deep Space de Goldstone, en California.",
+          "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "cita": "The final transmission, sent via the 70-meter Mars Station antenna at NASA's Goldstone Deep Space Complex in California, ended a multifaceted, eight-month recovery strategy in an attempt to compel the rover to communicate."
+        },
+        {
+          "ref": "opp077#5",
+          "rol": "narrativa",
+          "afirmacion": "El último comando tardó 13 minutos y medio en llegar a Marte viajando a la velocidad de la luz.",
+          "fuente_url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+          "cita": "After the signal took 13-and-a-half minutes to reach Mars — traveling at the speed of light — Opportunity should have sent a response back to engineers keeping vigil in a control room at JPL. Silence reigned."
+        },
+        {
+          "ref": "opp077#2",
+          "rol": "narrativa",
+          "afirmacion": "Thomas Zurbuchen declaró: 'Estoy aquí con un profundo sentido de aprecio y gratitud para declarar la misión Opportunity como completa, y con ella, la misión Mars Exploration Rover como completa.'",
+          "fuente_url": "https://spaceflightnow.com/2019/02/13/nasa-declares-opportunity-rover-dead-after-15-years-on-mars/",
+          "cita": "\"I am standing here with a sense of deep appreciation and gratitude to declare the Opportunity mission as complete, and with it the Mars Exploration Rover mission as complete.\""
+        },
+        {
+          "ref": "opp077#3",
+          "rol": "narrativa",
+          "afirmacion": "John Callas, gerente del proyecto MER, cerró con la frase: 'Farewell, Opportunity, and well done.'",
+          "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "cita": "\"Farewell, Opportunity, and well done.\""
+        },
+        {
+          "ref": "opp077#6",
+          "rol": "narrativa",
+          "afirmacion": "Opportunity fue diseñada para durar 90 días marcianos y recorrer 1.000 metros; superó su vida útil prevista por 60 veces y recorrió más de 45 kilómetros.",
+          "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "cita": "Designed to last just 90 Martian days and travel 1,100 yards (1,000 meters), Opportunity vastly surpassed all expectations in its endurance, scientific value and longevity. In addition to exceeding its life expectancy by 60 times, the rover traveled more than 28 miles (45 kilometers)"
+        },
+        {
+          "ref": "opp077#7",
+          "rol": "narrativa",
+          "afirmacion": "Opportunity capturó más de 217.000 imágenes, incluyendo 15 panorámicas en color de 360 grados.",
+          "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "cita": "Returned more than 217,000 images, including 15 360-degree color panoramas."
+        },
+        {
+          "ref": "opp077#9",
+          "rol": "narrativa",
+          "afirmacion": "El lugar de descanso final de Opportunity fue el Valle de la Perseverancia, en el borde occidental del Cráter Endeavour.",
+          "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "cita": "the rover traveled more than 28 miles (45 kilometers) by the time it reached its most appropriate final resting spot on Mars — Perseverance Valley."
+        },
+        {
+          "ref": "opp077#12",
+          "rol": "narrativa",
+          "afirmacion": "Zurbuchen dijo que el legado de Opportunity continúa en el rover Curiosity, el lander InSight y en el rover Mars 2020 en construcción.",
+          "fuente_url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/",
+          "cita": "\"Whatever loss we feel now must be tempered with the knowledge that the legacy of Opportunity continues — both on the surface of Mars with the Curiosity rover and InSight lander — and in the clean rooms of JPL, where the upcoming Mars 2020 rover is taking shape.\""
+        }
+      ]
+    }
+  ],
+  "aristas": [
+    {
+      "desde": "n01",
+      "hacia": "n02",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n02",
+      "hacia": "n03",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n03",
+      "hacia": "n03a",
+      "tipo": "opcion_equivocada",
+      "opcion": "n03-A",
+      "etiqueta": "Construir un solo rover."
+    },
+    {
+      "desde": "n03",
+      "hacia": "n04",
+      "tipo": "opcion_correcta",
+      "opcion": "n03-B",
+      "etiqueta": "Construir dos rovers iguales, para dos lugares distintos."
+    },
+    {
+      "desde": "n03a",
+      "hacia": "n03b",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n03b",
+      "hacia": "n03",
+      "tipo": "volver_a_decidir",
+      "etiqueta": "Volver a decidir"
+    },
+    {
+      "desde": "n04",
+      "hacia": "n05",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n05",
+      "hacia": "n06",
+      "tipo": "opcion_correcta",
+      "opcion": "n05-A",
+      "etiqueta": "Una llanura casi sin rocas, con una señal de hematita que ningún otro lugar de Marte igualaba."
+    },
+    {
+      "desde": "n05",
+      "hacia": "n05a",
+      "tipo": "opcion_equivocada",
+      "opcion": "n05-B",
+      "etiqueta": "Una región de cañones y laderas, con paisajes espectaculares."
+    },
+    {
+      "desde": "n05a",
+      "hacia": "n05b",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n05b",
+      "hacia": "n05",
+      "tipo": "volver_a_decidir",
+      "etiqueta": "Volver a decidir"
+    },
+    {
+      "desde": "n06",
+      "hacia": "n07",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n07",
+      "hacia": "n07a",
+      "tipo": "opcion_equivocada",
+      "opcion": "n07-A",
+      "etiqueta": "Despegar hoy, para no acumular más retrasos."
+    },
+    {
+      "desde": "n07",
+      "hacia": "n08",
+      "tipo": "opcion_correcta",
+      "opcion": "n07-B",
+      "etiqueta": "Retrasar el lanzamiento un día y corregir la falla."
+    },
+    {
+      "desde": "n07a",
+      "hacia": "n07b",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n07b",
+      "hacia": "n07",
+      "tipo": "volver_a_decidir",
+      "etiqueta": "Volver a decidir"
+    },
+    {
+      "desde": "n08",
+      "hacia": "n09",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n09",
+      "hacia": "n10",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n10",
+      "hacia": "n11",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n11",
+      "hacia": "n11a",
+      "tipo": "opcion_equivocada",
+      "opcion": "n11-A",
+      "etiqueta": "Seguir conduciendo con fuerza hasta salir de la arena."
+    },
+    {
+      "desde": "n11",
+      "hacia": "n12",
+      "tipo": "opcion_correcta",
+      "opcion": "n11-B",
+      "etiqueta": "Reproducir la duna en la Tierra, probar maniobras y solo entonces mover el rover."
+    },
+    {
+      "desde": "n11a",
+      "hacia": "n11b",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n11b",
+      "hacia": "n11",
+      "tipo": "volver_a_decidir",
+      "etiqueta": "Volver a decidir"
+    },
+    {
+      "desde": "n12",
+      "hacia": "n13",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n13",
+      "hacia": "n14",
+      "tipo": "opcion_correcta",
+      "opcion": "n13-A",
+      "etiqueta": "Emprender el viaje a Endeavour."
+    },
+    {
+      "desde": "n13",
+      "hacia": "n13a",
+      "tipo": "opcion_equivocada",
+      "opcion": "n13-B",
+      "etiqueta": "Quedarse explorando los alrededores de Victoria."
+    },
+    {
+      "desde": "n13a",
+      "hacia": "n13b",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n13b",
+      "hacia": "n13",
+      "tipo": "volver_a_decidir",
+      "etiqueta": "Volver a decidir"
+    },
+    {
+      "desde": "n14",
+      "hacia": "n15",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n15",
+      "hacia": "n16",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n16",
+      "hacia": "n17",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n17",
+      "hacia": "n17a",
+      "tipo": "opcion_equivocada",
+      "opcion": "n17-A",
+      "etiqueta": "Dar por terminada la campaña de comandos activos."
+    },
+    {
+      "desde": "n17",
+      "hacia": "n18",
+      "tipo": "opcion_correcta",
+      "opcion": "n17-B",
+      "etiqueta": "Seguir intentando el contacto por tiempo indefinido y reevaluar en enero."
+    },
+    {
+      "desde": "n17a",
+      "hacia": "n17b",
+      "tipo": "continuar",
+      "etiqueta": ""
+    },
+    {
+      "desde": "n17b",
+      "hacia": "n17",
+      "tipo": "volver_a_decidir",
+      "etiqueta": "Volver a decidir"
+    }
+  ],
+  "diccionario": {
+    "tipo": "historia | decision | escena_alternativa | fallo (lo que usa el reproductor)",
+    "rol": "historia_real | decision | ficticio_consecuencia (nivel 1) | ficticio_final_alternativo (nivel 2): la misma idea con nombres claros",
+    "camino": "real (los 18 nodos de la historia verdadera) | alternativo (los 12 ficticios)",
+    "ficticio": "true si el nodo no ocurrió; no lleva fuentes, citas ni cifras",
+    "orden_camino_real": "posición 1-18 en la historia real; null en los ficticios",
+    "rama_de / opcion_origen": "en un ficticio: la decisión y la opción equivocada que lo originan",
+    "nivel": "solo ficticios: 1 = consecuencia, 2 = final alternativo (vuelve a la decisión)",
+    "narrativa.texto": "texto del nodo, listo para mostrar a un estudiante de 5.º de secundaria",
+    "narrativa.escena_visual": "descripción de la escena para generar la ilustración o animación",
+    "narrativa.emocion": "tono emocional del nodo",
+    "contexto.lo_que_sabes / contexto.en_juego": "solo decisiones: lo que el equipo sabía en ese momento y qué se arriesgaba",
+    "pregunta / opciones[]": "solo decisiones: 2 opciones con id, texto, detalle (ventaja y costo), correcta y siguiente",
+    "resultado_real": "solo decisiones: lo que ocurrió de verdad al elegir la opción correcta",
+    "leccion": "solo ficticios de nivel 2: «lo que pasó en realidad»",
+    "dato_desbloqueado": "dato curioso verificado para la cartilla de ese nodo",
+    "respaldo": "referencias «opp009#3» = dato 3 de datos_reales del dossier verificado de ese evento",
+    "respaldo_detalle[]": "las mismas referencias ya resueltas: afirmación verificada, cita literal y URL; rol indica dónde se usa",
+    "fuentes[]": "URLs de los dossiers de las que sale el nodo (modo creador)",
+    "aristas[]": "conexiones del grafo: continuar | opcion_correcta | opcion_equivocada | volver_a_decidir"
+  },
+  "uso_para_agentes": [
+    "Los 18 nodos reales solo pueden afirmar lo que está en respaldo_detalle. No añadas datos, fechas, cifras ni citas nuevas.",
+    "Los 12 nodos ficticios se narran como si hubieran ocurrido, pero sin fuentes, citas ni cifras; en la interfaz van marcados como línea alternativa.",
+    "Al terminar una rama ficticia se muestra siempre «lo que pasó en realidad» (campo leccion) y se vuelve a la decisión.",
+    "Cada decisión debe dar el contexto necesario (contexto.lo_que_sabes y contexto.en_juego) antes de mostrar las opciones."
+  ],
+  "resumen": {
+    "nodos": 30,
+    "historia": 12,
+    "decisiones": 6,
+    "ficticios_nivel_1": 6,
+    "ficticios_nivel_2": 6
+  }
+}</script>
+<script>
+async function arrancar(){
+  const crudo=document.getElementById('data').textContent.trim();
+  if(crudo[0]==='{')return iniciar(JSON.parse(crudo));
+  if(window.DATOS)return iniciar(window.DATOS);
+  try{const r=await fetch('../data/juego2_opportunity.json');if(!r.ok)throw new Error(r.status);return iniciar(await r.json())}
+  catch(_){document.body.innerHTML='<p style="max-width:600px;margin:60px auto;font:16px system-ui">Esto es una plantilla sin datos. Abre <code>public/story/juego2_mapa.html</code> o ejecuta <code>python story/build_juego2.py</code>.</p>'}
+}
+function iniciar(D){
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const N=Object.fromEntries(D.nodos.map(n=>[n.id,n]));
+const TIPO={historia:'Historia real',decision:'Decisión',escena_alternativa:'Ficticio · nivel 1 (consecuencia)',fallo:'Ficticio · nivel 2 (final alternativo)'};
+const ARI={continuar:'continúa',opcion_correcta:'opción correcta',opcion_equivocada:'opción equivocada',volver_a_decidir:'vuelve a decidir'};
+const sal=id=>D.aristas.filter(a=>a.desde===id),ent=id=>D.aristas.filter(a=>a.hacia===id);
+// camino real
+const REAL=[];(function(){let i=D.inicio;while(i){const n=N[i];REAL.push(n);i=n.siguiente||(n.tipo==='decision'?n.opciones.find(o=>o.correcta).siguiente:null)}})();
+let sel=null,vista='mapa',esc_=Math.min(1,Math.max(.6,(innerWidth-470)/1150));
+$('#stats').textContent=`${D.nodos.length} nodos · ${D.resumen.historia} historia · ${D.resumen.decisiones} decisiones · ${D.resumen.ficticios_nivel_1+D.resumen.ficticios_nivel_2} ficticios · ${D.aristas.length} conexiones`;
+const VISTAS=[['mapa','Mapa (grafo)'],['arbol','Árbol de decisiones'],['nodos','Todos los nodos'],['valid','Validación y campos']];
+$('#tabs').innerHTML=VISTAS.map(([k,l])=>`<button data-v="${k}" class="${k===vista?'on':''}">${l}</button>`).join(' ');
+$('#tabs').onclick=e=>{const v=e.target.dataset.v;if(!v)return;vista=v;document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));dibujar()};
+
+// ---------- MAPA ----------
+const X=205,W=156,H=62,XM=80,BH=300,YB=72,YF=178; // BH alto de cada franja de capítulo; YB y YF alturas (dentro de la franja) de la fila real y de la fila ficticia
+const bandTop=c=>(c-1)*BH+14;
+function pos(){const p={};const porCap={};REAL.forEach(n=>(porCap[n.capitulo]=porCap[n.capitulo]||[]).push(n));
+  Object.entries(porCap).forEach(([c,l])=>l.forEach((n,j)=>p[n.id]={x:XM+j*X,y:bandTop(+c)+YB}));
+  REAL.filter(n=>n.tipo==='decision').forEach(d=>{const mala=d.opciones.find(o=>!o.correcta),n1=N[mala.siguiente],n2=N[n1.siguiente],y=bandTop(d.capitulo)+YF;
+    p[n1.id]={x:p[d.id].x+X*.5,y};p[n2.id]={x:p[d.id].x+X*1.5,y}});return p}
+function envolver(s,m){const w=s.split(' '),L=[''];w.forEach(x=>{if((L[L.length-1]+' '+x).trim().length>m&&L[L.length-1])L.push(x);else L[L.length-1]=(L[L.length-1]+' '+x).trim()});
+  if(L.length>2){L.length=2;L[1]=L[1].slice(0,m-1)+'…'}return L}
+function forma(n){const hw=W/2,hh=H/2;
+  if(n.tipo==='decision')return `<polygon class="f" points="${-hw+16},${-hh} ${hw-16},${-hh} ${hw},0 ${hw-16},${hh} ${-hw+16},${hh} ${-hw},0"/>`;
+  return `<rect class="f" x="${-hw}" y="${-hh}" width="${W}" height="${H}" rx="10"/>`+(n.final?`<rect class="f" x="${-hw+5}" y="${-hh+5}" width="${W-10}" height="${H-10}" rx="7" style="fill:none;stroke-dasharray:none"/>`:'')}
+function nodoSvg(n,p){const L=envolver(n.titulo,21),ord=n.orden_camino_real?` · #${n.orden_camino_real}`:'';
+  return `<g class="nodo t-${n.tipo} ${n.id===sel?'sel':''}" data-id="${n.id}" transform="translate(${p.x},${p.y})"><title>${esc(n.id+' · '+n.titulo+' — '+TIPO[n.tipo])}</title>${forma(n)}
+  <text class="id" x="${-W/2+10}" y="${-H/2+14}">${n.id}${ord}${n.final?' · FIN':''}</text>
+  ${L.map((l,i)=>`<text class="ti" text-anchor="middle" x="0" y="${6+i*14}">${esc(l)}</text>`).join('')}</g>`}
+function bordeDerecho(cap,P){return Math.max(...D.nodos.filter(n=>n.capitulo===cap).map(n=>P[n.id].x))+W/2+22}
+function arista(a,P){const A=P[a.desde],B=P[a.hacia];if(!A||!B)return '';
+  const cls=`e e-${a.tipo}`,mk=`url(#m-${a.tipo})`,ca=N[a.desde].capitulo,cb=N[a.hacia].capitulo;let d,lx,ly,lab='';
+  if((a.tipo==='continuar'||a.tipo==='opcion_correcta')&&ca!==cb){ // salto a la franja siguiente: sale por la derecha, baja por el hueco entre franjas y entra por arriba
+    const xr=bordeDerecho(ca,P),ym=bandTop(cb)-8;d=`M${A.x+W/2},${A.y} L${xr},${A.y} L${xr},${ym} L${B.x},${ym} L${B.x},${B.y-H/2-3}`;lx=A.x+W/2+26;ly=A.y}
+  else if(a.tipo==='continuar'||a.tipo==='opcion_correcta'){d=`M${A.x+W/2},${A.y} L${B.x-W/2-3},${B.y}`;lx=(A.x+B.x)/2;ly=A.y-12}
+  else if(a.tipo==='opcion_equivocada'){const x1=A.x-34,y1=A.y+H/2,x2=B.x-W/4,y2=B.y-H/2-3;d=`M${x1},${y1} C${x1},${y1+58} ${x2-14},${y2-50} ${x2},${y2}`;lx=(x1+x2)/2-14;ly=(y1+y2)/2}
+  else{const x1=A.x-W/4,y1=A.y-H/2,x2=B.x+34,y2=B.y+H/2+3;d=`M${x1},${y1} C${x1},${y1-50} ${x2+70},${y2+62} ${x2},${y2}`;lx=(x1+x2)/2+30;ly=(y1+y2)/2-2}
+  if(a.opcion){const L=a.opcion.slice(-1),ok=a.tipo==='opcion_correcta';lab=`<g transform="translate(${lx},${ly})"><title>${esc((ok?'✓ ':'✗ ')+a.etiqueta)}</title><circle r="11" fill="var(--card)" stroke="${ok?'var(--ok)':'var(--fic2)'}" stroke-width="2"/><text class="badgeb" text-anchor="middle" y="4" fill="${ok?'var(--ok)':'var(--fic2)'}">${ok?'✓':'✗'}${L}</text></g>`}
+  if(a.tipo==='volver_a_decidir')lab=`<g transform="translate(${lx},${ly})"><title>Vuelve a la decisión</title><text class="badgeb vl" text-anchor="middle" fill="var(--fic1)">↩ vuelve a decidir</text></g>`;
+  return `<path class="${cls}" d="${d}" marker-end="${mk}"/>${lab}`}
+let ancho0=0;
+function mapa(){const P=pos(),caps=D.capitulos.map(c=>c.n),ancho=Math.max(...caps.map(c=>bordeDerecho(c,P)))+14,alto=caps.length*BH+14;ancho0=ancho;
+  const bandas=D.capitulos.map(c=>{const y=bandTop(c.n)-10,x1=bordeDerecho(c.n,P);
+    return `<rect class="band" x="8" y="${y}" width="${x1-8}" height="${BH-18}" rx="12"/><text class="bandl" text-anchor="end" x="${x1-12}" y="${y+20}">Capítulo ${c.n} · ${esc(c.titulo)}</text>`}).join('');
+  const marks=['continuar','opcion_correcta','opcion_equivocada','volver_a_decidir'].map(t=>`<marker id="m-${t}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${({continuar:'var(--mut)',opcion_correcta:'var(--ok)',opcion_equivocada:'var(--fic2)',volver_a_decidir:'var(--fic1)'})[t]}"/></marker>`).join('');
+  $('#view').innerHTML=`<div class="legend"><b>Leyenda</b>
+   <span><i class="sw" style="border-color:var(--hist)"></i>Historia real</span><span><i class="sw hex" style="border-color:var(--dec);background:var(--dec)"></i>Decisión</span>
+   <span><i class="sw d" style="border-color:var(--fic1)"></i>Ficticio nivel 1 (consecuencia)</span><span><i class="sw d" style="border-color:var(--fic2)"></i>Ficticio nivel 2 (final alternativo)</span>
+   <span><i class="ln" style="border-color:var(--mut)"></i>continúa</span><span><i class="ln" style="border-color:var(--ok)"></i>✓ opción correcta</span>
+   <span><i class="ln d" style="border-color:var(--fic2)"></i>✗ opción equivocada</span><span><i class="ln dot" style="border-color:var(--fic1)"></i>vuelve a decidir</span></div>
+   <div class="tool"><button id="zm">−</button><button id="zp">+</button><button id="zf">Ajustar al ancho</button><span class="mut">Cada franja es un capítulo: arriba la historia real; debajo, las ramas ficticias (2 nodos por opción equivocada). Teclado: <kbd>→</kbd> sigue · <kbd>↓</kbd> rama equivocada · <kbd>↑</kbd> decisión · <kbd>←</kbd> anterior.</span></div>
+   <svg id="svg" width="${ancho*esc_}" height="${alto*esc_}" viewBox="0 0 ${ancho} ${alto}"><defs>${marks}</defs>${bandas}
+   ${D.aristas.map(a=>arista(a,P)).join('')}${D.nodos.map(n=>nodoSvg(n,P[n.id])).join('')}</svg>`;
+  $('#zp').onclick=()=>{esc_=Math.min(2,esc_+.15);mapa()};$('#zm').onclick=()=>{esc_=Math.max(.4,esc_-.15);mapa()};
+  $('#zf').onclick=()=>{esc_=Math.max(.4,Math.min(1.6,($('#view').clientWidth-30)/ancho0));mapa()}}
+
+// ---------- ÁRBOL ----------
+function it(n,extra=''){return `<span class="it ${n.id===sel?'sel':''}" data-id="${n.id}"><span class="chip ${n.tipo}">${({historia:'historia',decision:'decisión',escena_alternativa:'ficticio 1',fallo:'ficticio 2'})[n.tipo]}</span><b>${n.id}</b> ${esc(n.titulo)}${extra}</span>`}
+function arbol(){let h='<div class="tree"><p class="mut">Camino real en orden; en cada decisión, sus dos opciones y a dónde lleva cada una.</p>',cap=0;
+  REAL.forEach(n=>{if(n.capitulo!==cap){cap=n.capitulo;h+=`<div class="cap">Capítulo ${cap} · ${esc(D.capitulos.find(c=>c.n===cap).titulo)}</div>`}
+    h+=`<div>${it(n,` <span class="mut">· #${n.orden_camino_real} · ${esc(n.fecha)}</span>`)}</div>`;
+    if(n.tipo==='decision'){h+='<ul>';n.opciones.forEach(o=>{const d=N[o.siguiente];
+      if(o.correcta)h+=`<li><span class="chip ok">✓ ${o.id.slice(-1)} opción correcta</span> ${esc(o.texto)} <span class="mut">→ sigue la historia real: ${it(d)}</span></li>`;
+      else{const d2=N[d.siguiente];h+=`<li><span class="chip" style="border-color:var(--fic2);color:var(--fic2)">✗ ${o.id.slice(-1)} opción equivocada</span> ${esc(o.texto)}<ul><li>${it(d)}</li><li>${it(d2)} <span class="mut">↩ vuelve a ${n.id}</span></li></ul></li>`}});h+='</ul>'}});
+  $('#view').innerHTML=h+'</div>'}
+
+// ---------- TABLA ----------
+let fT='',fC='',fQ='';
+function tabla(){const l=D.nodos.filter(n=>(!fT||n.tipo===fT)&&(!fC||String(n.capitulo)===fC)&&(!fQ||(n.titulo+' '+n.narrativa.texto+' '+n.id).toLowerCase().includes(fQ.toLowerCase())));
+  $('#view').innerHTML=`<div class="tool"><select id="ft"><option value="">Todos los tipos</option>${Object.entries(TIPO).map(([k,v])=>`<option value="${k}" ${k===fT?'selected':''}>${v}</option>`).join('')}</select>
+   <select id="fc"><option value="">Todos los capítulos</option>${D.capitulos.map(c=>`<option value="${c.n}" ${String(c.n)===fC?'selected':''}>Cap. ${c.n}</option>`).join('')}</select>
+   <input id="fq" type="search" placeholder="Buscar…" value="${esc(fQ)}"><span class="mut">${l.length} de ${D.nodos.length}</span></div>
+   <table><tr><th>Id</th><th>#</th><th>Tipo</th><th>Cap.</th><th>Título</th><th>Fecha</th><th>Datos de respaldo</th><th>Fuentes</th><th>Palabras</th></tr>
+   ${l.map(n=>`<tr class="fila ${n.id===sel?'sel':''}" data-id="${n.id}"><td><b>${n.id}</b></td><td>${n.orden_camino_real??'—'}</td><td><span class="chip ${n.tipo}">${TIPO[n.tipo]}</span></td><td>${n.capitulo}</td><td>${esc(n.titulo)}</td><td>${esc(n.fecha)}</td><td>${n.respaldo_detalle.length||'—'}</td><td>${n.fuentes.length||'—'}</td><td>${n.narrativa.texto.split(/\s+/).length}</td></tr>`).join('')}</table>`;
+  $('#ft').onchange=e=>{fT=e.target.value;tabla()};$('#fc').onchange=e=>{fC=e.target.value;tabla()};$('#fq').oninput=e=>{fQ=e.target.value;clearTimeout(tabla._t);tabla._t=setTimeout(()=>{tabla();$('#fq').focus();$('#fq').setSelectionRange(fQ.length,fQ.length)},250)}}
+
+// ---------- VALIDACIÓN ----------
+function validacion(){const dec=D.nodos.filter(n=>n.tipo==='decision'),cnt=t=>D.nodos.filter(n=>n.tipo===t).length;
+  const malas=dec.map(d=>{const o=d.opciones.find(x=>!x.correcta),a=N[o.siguiente],b=a&&N[a.siguiente];return a&&b&&a.tipo==='escena_alternativa'&&b.tipo==='fallo'&&b.volver_a===d.id});
+  const alc=new Set(),pila=[D.inicio];while(pila.length){const i=pila.pop();if(alc.has(i))continue;alc.add(i);sal(i).forEach(a=>pila.push(a.hacia))}
+  const reales=D.nodos.filter(n=>!n.ficticio),fic=D.nodos.filter(n=>n.ficticio);
+  const C=[[D.nodos.length===30,`30 nodos (hay ${D.nodos.length})`],
+   [cnt('historia')===12&&cnt('decision')===6&&cnt('escena_alternativa')===6&&cnt('fallo')===6,`12 historia · 6 decisiones · 6 ficticios nivel 1 · 6 nivel 2 (${cnt('historia')} · ${cnt('decision')} · ${cnt('escena_alternativa')} · ${cnt('fallo')})`],
+   [dec.every(d=>d.opciones.length===2&&d.opciones.filter(o=>o.correcta).length===1),'cada decisión tiene 2 opciones y una sola correcta'],
+   [malas.every(Boolean),'cada opción equivocada lleva a 2 nodos ficticios (consecuencia → final alternativo) y vuelve a la decisión'],
+   [REAL.length===18&&REAL[0].tipo==='historia'&&REAL[1].tipo==='historia'&&REAL[2].tipo==='decision','el camino real tiene 18 nodos y empieza con 2 historias y una decisión'],
+   [REAL.every((n,i)=>!(n.tipo==='decision'&&REAL[i+1]&&REAL[i+1].tipo==='decision')),'nunca hay dos decisiones seguidas'],
+   [reales.every(n=>n.respaldo.length>=3&&n.fuentes.length>0),`los ${reales.length} nodos reales tienen respaldo (≥3 datos verificados) y fuentes`],
+   [fic.every(n=>!n.respaldo.length&&!n.fuentes.length),`los ${fic.length} ficticios no llevan fuentes ni respaldo`],
+   [D.aristas.length===35&&D.aristas.every(a=>N[a.desde]&&N[a.hacia]),`${D.aristas.length} conexiones, todas con extremos válidos`],
+   [alc.size===D.nodos.length,`todos los nodos son alcanzables desde ${D.inicio} (${alc.size})`]];
+  const refs=D.nodos.reduce((s,n)=>s+n.respaldo_detalle.length,0);
+  $('#view').innerHTML=`<h2>Validación</h2>${C.map(([ok,t])=>`<div class="chk"><b class="${ok?'ok':'no'}">${ok?'✓':'✗'}</b><span>${esc(t)}</span></div>`).join('')}
+   <p class="mut">Referencias a datos verificados en el JSON: ${refs}. Las pruebas completas (incluida la existencia de cada dato en su dossier) están en <code>story/tests/test_juego2.py</code>.</p>
+   <h2>Cómo usar este JSON (para otros agentes)</h2><ul>${D.uso_para_agentes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+   <h2>Campos</h2><table><tr><th>Campo</th><th>Qué es</th></tr>${Object.entries(D.diccionario).map(([k,v])=>`<tr><td><code>${esc(k)}</code></td><td>${esc(v)}</td></tr>`).join('')}</table>`}
+
+// ---------- DETALLE ----------
+function conex(id){const s=sal(id),e=ent(id);
+  return `<h3>Conexiones</h3>${s.map(a=>`<span class="chip link" data-go="${a.hacia}">${ARI[a.tipo]}${a.opcion?' '+a.opcion.slice(-1):''} → ${a.hacia}</span>`).join('')||'<span class="mut">Es el último nodo.</span>'}
+  <div class="mut" style="margin-top:4px">Llega desde: ${e.map(a=>`<span class="chip link" data-go="${a.desde}">${a.desde}</span>`).join('')||'—'}</div>`}
+function detalle(){if(!sel){$('#det').innerHTML='<p class="mut">Haz clic en un nodo para ver todo su contenido.</p>';return}
+  const n=N[sel],nar=n.narrativa;let h=`<span class="chip ${n.tipo}">${TIPO[n.tipo]}</span><span class="chip">${n.camino==='real'?'camino real':'camino alternativo'}</span>${n.ficticio?'<span class="chip">sin fuentes · inventado</span>':'<span class="chip ok">verificado</span>'}
+   <h2>${n.id} · ${esc(n.titulo)}</h2><div class="mut">Cap. ${n.capitulo} · ${esc(n.capitulo_titulo)} · ${esc(n.fecha)}${n.orden_camino_real?` · nodo #${n.orden_camino_real} de 18`:''}</div>`;
+  if(n.rama_de)h+=`<div class="box">Rama equivocada de la decisión <span class="chip link" data-go="${n.rama_de}">${n.rama_de}</span> (opción ${n.opcion_origen}) · nivel ${n.nivel} de 2</div>`;
+  h+=`<h3>${n.tipo==='decision'?'Situación':'Texto del nodo'}</h3><div class="box">${esc(nar.texto)}</div>`;
+  if(n.contexto)h+=`<h3>Lo que sabe el equipo</h3><ul>${n.contexto.lo_que_sabes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h3>Lo que está en juego</h3><div class="box">${esc(n.contexto.en_juego)}</div>`;
+  if(n.opciones)h+=`<h3>${esc(n.pregunta)}</h3>${n.opciones.map(o=>`<div class="op ${o.correcta?'ok':'mal'}"><b>${o.correcta?'✓':'✗'} ${o.id.slice(-1)}.</b> ${esc(o.texto)}<div class="mut">${esc(o.detalle)}</div><span class="chip link" data-go="${o.siguiente}">→ ${o.siguiente}</span></div>`).join('')}<h3>Resultado real (opción correcta)</h3><div class="box">${esc(n.resultado_real)}</div>`;
+  if(n.leccion)h+=`<h3>Lo que pasó en realidad</h3><div class="box">${esc(n.leccion)}</div>`;
+  if(n.dato_desbloqueado)h+=`<h3>Dato desbloqueado (cartilla)</h3><div class="box"><b>${esc(n.dato_desbloqueado.titulo)}</b><br>${esc(n.dato_desbloqueado.texto)}</div>`;
+  h+=`<h3>Para ilustrar</h3><div class="box"><b>Escena:</b> ${esc(nar.escena_visual)}<br><b>Emoción:</b> ${esc(nar.emocion)}</div>`;
+  if(n.respaldo_detalle.length)h+=`<h3>Datos verificados que lo respaldan (${n.respaldo_detalle.length})</h3>${n.respaldo_detalle.map(r=>`<div class="box"><span class="ref">${r.ref}</span> <span class="chip">${r.rol}</span><br>${esc(r.afirmacion)}<br><a href="${esc(r.fuente_url)}" target="_blank" rel="noopener">${esc(r.fuente_url.split('/')[2].replace('www.',''))}</a></div>`).join('')}`;
+  h+=conex(n.id)+`<details><summary>JSON del nodo</summary><pre>${esc(JSON.stringify(n,null,2))}</pre></details><button class="chip link" id="cp">Copiar JSON del nodo</button>`;
+  $('#det').innerHTML=h;$('#det').scrollTop=0;const c=$('#cp');if(c)c.onclick=()=>{navigator.clipboard?.writeText(JSON.stringify(n,null,2));c.textContent='Copiado'}}
+
+function elegir(id){if(!N[id])return;sel=id;history.replaceState(null,'','#'+id);detalle();
+  document.querySelectorAll('.nodo').forEach(g=>g.classList.toggle('sel',g.dataset.id===id));
+  document.querySelectorAll('.tree .it,tr.fila').forEach(e=>e.classList.toggle('sel',e.dataset.id===id))}
+function dibujar(){({mapa,arbol,nodos:tabla,valid:validacion})[vista]();if(vista==='mapa'&&!$('#zp').dataset.i){$('#zp').dataset.i=1}}
+document.addEventListener('click',e=>{const g=e.target.closest('[data-id]');if(g&&!e.target.closest('#det')){elegir(g.dataset.id);return}
+  const l=e.target.closest('[data-go]');if(l){elegir(l.dataset.go)}});
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)||e.ctrlKey||e.metaKey)return;if(!sel){if(e.key.startsWith('Arrow'))elegir(D.inicio);return}
+  const s=sal(sel),n=N[sel];let to=null;
+  if(e.key==='ArrowRight')to=(s.find(a=>a.tipo==='continuar'||a.tipo==='opcion_correcta')||s[0]||{}).hacia;
+  else if(e.key==='ArrowLeft'){const x=ent(sel).find(a=>a.tipo!=='volver_a_decidir');to=x&&x.desde}
+  else if(e.key==='ArrowDown'){const x=s.find(a=>a.tipo==='opcion_equivocada');to=x&&x.hacia}
+  else if(e.key==='ArrowUp'){to=n.rama_de||null}
+  if(to){e.preventDefault();elegir(to);const g=document.querySelector(`.nodo[data-id="${to}"]`);g&&g.scrollIntoView({block:'nearest',inline:'center'})}});
+/* Desde story/templates/ el prototipo se llama juego2.template.html; desde public/story/ se llama juego2.html. */
+if(/\/templates\//.test(location.pathname))$('#proto').href='juego2.template.html';
+$('#dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));a.download='juego2_opportunity.json';a.click()};
+dibujar();const h0=location.hash.slice(1);if(N[h0])elegir(h0);else detalle();
+}
+arrancar();
+</script></body></html>

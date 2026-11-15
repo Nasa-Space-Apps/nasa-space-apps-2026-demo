@@ -18,7 +18,7 @@ class RespaldoTest(unittest.TestCase):
     def test_bedrock_falla_y_usa_el_plan(self):
         llamados = []
 
-        async def falso(ev, turnos, p):
+        async def falso(ev, turnos, p, contexto=None):
             llamados.append(p.nombre)
             if p.nombre == "bedrock":
                 raise agente.ErrorProveedor("403 pago invalido")
@@ -30,7 +30,7 @@ class RespaldoTest(unittest.TestCase):
         self.assertEqual(met["fallback_desde"], "bedrock")
 
     def test_sin_respaldo_termina_con_mensaje(self):
-        async def falso(ev, turnos, p):
+        async def falso(ev, turnos, p, contexto=None):
             raise agente.ErrorProveedor("403")
 
         with mock.patch.object(agente, "investigar", falso):
@@ -40,7 +40,7 @@ class RespaldoTest(unittest.TestCase):
     def test_si_el_primero_funciona_no_llama_al_respaldo(self):
         llamados = []
 
-        async def falso(ev, turnos, p):
+        async def falso(ev, turnos, p, contexto=None):
             llamados.append(p.nombre)
             return "dossier", "bedrock", {}
 

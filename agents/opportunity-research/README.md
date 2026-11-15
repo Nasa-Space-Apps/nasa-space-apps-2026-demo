@@ -149,7 +149,7 @@ Viven en `prompts/` como archivos de texto, separados del código:
 | `esquema.py` | Modelos pydantic del dossier (el modelo debe devolver exactamente este esquema). |
 | `probar_herramientas.py` | Prueba de humo de todas las herramientas y de Claude. |
 | `requirements.txt`, `.env.example`, `.gitignore` | Dependencias, plantilla de entorno y exclusiones. |
-| `salida/` | Dossiers generados (se versionan). |
+| `../../misiones/<id>/dossiers/` | Dossiers generados por misión (se versionan). |
 | `cache/`, `.venv/`, `.env` | Locales; no se versionan. |
 
 ## Imágenes

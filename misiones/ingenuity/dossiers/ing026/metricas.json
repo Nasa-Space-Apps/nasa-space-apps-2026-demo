@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.24149554999999998,
+  "turnos": 11,
+  "duracion_s": 116.9,
+  "duracion_api_s": 99.3,
+  "tokens": {
+    "input_tokens": 7,
+    "cache_creation_input_tokens": 17093,
+    "cache_read_input_tokens": 41086,
+    "output_tokens": 10899,
+    "output_tokens_details": {
+      "thinking_tokens": 4457
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 17093
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1420,
+      "outputTokens": 29,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001565,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 7,
+      "outputTokens": 10899,
+      "cacheReadInputTokens": 41086,
+      "cacheCreationInputTokens": 17093,
+      "webSearchRequests": 0,
+      "costUSD": 0.23993054999999996,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 4457,
+      "cacheCreationEphemeral5mInputTokens": 17093,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 3,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 5,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.34251675,
+    "turnos": 2,
+    "duracion_s": 141.3,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4863,
+        "outputTokens": 34,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.005033,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 12032,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5867,
+        "webSearchRequests": 0,
+        "costUSD": 0.33748374999999997,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 10146,
+        "cacheCreationEphemeral5mInputTokens": 5867,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 15,
+      "datos_despues": 14,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 2,
+      "observaciones": "Se eliminó el dato [14] porque su afirmación incluía «72 vuelos» y «25 de enero de 2024», información que no aparece en la cita textual (que indica «Jan. 18, 2024» y no menciona número de vuelos). Los 13 datos restantes se conservaron: sus citas respaldan adecuadamente las afirmaciones centrales, aunque se señala que las fechas del proceso de despliegue en [2] no figuran en la cita literal."
+    }
+  },
+  "costo_usd_referencia_total": 0.5840122999999999,
+  "costos": {
+    "total_usd": 0.584013,
+    "por_paso": {
+      "investigacion": 0.241496,
+      "revision": 0.342517
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006598,
+        "entrada": 6283,
+        "salida": 63,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.239931,
+        "entrada": 7,
+        "salida": 10899,
+        "cache_leida": 41086,
+        "cache_escrita": 17093,
+        "razonamiento": 4457
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.337484,
+        "entrada": 3,
+        "salida": 12032,
+        "cache_leida": 0,
+        "cache_escrita": 5867,
+        "razonamiento": 10146
+      }
+    }
+  }
+}

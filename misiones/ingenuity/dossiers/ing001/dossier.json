@@ -1,0 +1,146 @@
+{
+  "evento_id": "ing001",
+  "titulo": "Balaram imagina un helicóptero para Marte: el origen de Ingenuity en los años 90",
+  "contexto_ampliado": "En algún momento de la década de 1990, un ingeniero del Laboratorio de Propulsión a Chorro (JPL) de la NASA llamado J. \"Bob\" Balaram asistió a una conferencia profesional que terminaría siendo decisiva. Allí, el profesor Ilan Kroo, de la Universidad de Stanford, presentó el concepto del \"mesicopter\": un vehículo aéreo en miniatura diseñado para aplicaciones en la Tierra, financiado como propuesta del programa NIAC (NASA Innovative Advanced Concepts). Balaram, que llevaba años en JPL —ingresó tras obtener su doctorado en Ingeniería de Computadoras y Sistemas en el Instituto Politécnico Rensselaer en 1985—, escuchó aquella charla y se hizo una pregunta clave: ¿podría funcionar algo así en Marte?\n\nEl mesicopter no era un simple boceto. Fue un estudio de Fase II del NIAC, con Ilan Kroo como investigador principal en Stanford, ejecutado entre agosto de 1999 y julio de 2001 bajo el título oficial \"The Mesicopter: A Meso-Scale Flight Vehicle\". Era exactamente el tipo de vehículo diminuto y ligero que Balaram imaginó enviando a otro planeta.\n\nCon esa inspiración, Balaram pasó a la acción. Propuso un proyecto conjunto con Stanford para una convocatoria de la NASA (NASA Research Announcement) y reclutó a AeroVironment, una pequeña empresa de Simi Valley, California. La propuesta recibió críticas favorables por parte de los evaluadores. Sin embargo, no fue seleccionada para financiamiento. El único resultado tangible de aquella etapa fue una prueba de pala-rotor realizada bajo condiciones que simulaban la atmósfera marciana en las instalaciones de JPL: un experimento modesto, pero que al menos demostró que la idea merecía seguir siendo explorada.\n\nAeroVironment, por su parte, también trabajó brevemente con JPL a finales de los años 90 en propuestas conceptuales para un helicóptero marciano, descritas por la propia empresa como \"cosas muy vagas y conceptuales\" que no recibieron financiamiento en aquel momento. Los esfuerzos de esa época quedaron en el papel.\n\nSin fondos, la idea de Balaram \"se quedó en un estante\" durante 15 años, según la propia NASA. ¿Por qué era tan difícil? El propio Balaram lo explicó comparando volar en Marte con hacerlo en la Tierra a 30 500 metros de altitud (100 000 pies), es decir, unas siete veces más alto de lo que puede ascender un helicóptero terrestre convencional. Las condiciones del planeta rojo hacían el desafío técnico enorme para la tecnología disponible en aquella época.\n\nPero Balaram no abandonó JPL ni dejó de trabajar en robótica espacial. Años más tarde, cuando la tecnología finalmente alcanzó a la ambición, su idea original se convirtió en el helicóptero Ingenuity. Balaram fue reconocido como el inventor del concepto y se desempeñó como Ingeniero Jefe del proyecto Mars Ingenuity entre 2014 y 2021, guiándolo a través de todas las fases de diseño, desarrollo y pruebas. Como lo resumió Mimi Aung, gestora del proyecto: \"Bob es el inventor de nuestro helicóptero marciano. Innovó el diseño y llevó esa visión a su culminación como ingeniero jefe\".",
+  "datos_reales": [
+    {
+      "afirmacion": "En los años 90, Balaram asistió a una conferencia profesional donde el profesor de Stanford Ilan Kroo habló sobre el 'mesicopter', un vehículo aéreo en miniatura para aplicaciones terrestres financiado por el NIAC de la NASA.",
+      "fuente_url": "https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/",
+      "cita": "In the 1990s, Balaram attended a professional conference, where Stanford professor Ilan Kroo spoke about a \"mesicopter,\" a miniature airborne vehicle for Earth applications that was funded as a NASA Innovative Advanced Concepts proposal.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Balaram propuso una propuesta conjunta con Stanford para una NASA Research Announcement y reclutó a AeroVironment, una pequeña empresa de Simi Valley, California.",
+      "fuente_url": "https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/",
+      "cita": "He suggested a joint proposal with Stanford for a NASA Research Announcement submission and recruited AeroVironment, a small company in Simi Valley, California.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La propuesta recibió críticas favorables pero no fue seleccionada para financiamiento; solo produjo una prueba de pala-rotor bajo condiciones marcianas en JPL.",
+      "fuente_url": "https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/",
+      "cita": "The proposal got favorable reviews, and although it was not selected for funding at that time, it did yield a blade-rotor test under Mars conditions at JPL.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras no recibir financiamiento, la idea de Balaram quedó 'en un estante' durante 15 años.",
+      "fuente_url": "https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/",
+      "cita": "Other than that, the idea \"sat on a shelf\" for 15 years.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Bob Balaram es el originador del concepto que se convirtió en el helicóptero Ingenuity en Marte y se desempeñó como su Ingeniero Jefe durante el desarrollo, pruebas y operaciones.",
+      "fuente_url": "https://www-robotics.jpl.nasa.gov/who-we-are/people/j_balaram/",
+      "cita": "Bob is the originator of the concept that became the Ingenuity helicopter on Mars. He served as its Chief Engineer during its development, test and operations.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "AeroVironment trabajó brevemente con JPL a finales de los años 90 en propuestas conceptuales de un helicóptero para Marte que no fueron financiadas.",
+      "fuente_url": "https://insideunmannedsystems.com/inside-ingenuity-with-aerovironment-part-one-designing-it/",
+      "cita": "AeroVironment worked very briefly with JPL in the late 1990s on some proposal efforts for a Mars helicopter; very vague, conceptual stuff that wasn't funded at the time.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El mesicopter fue un estudio de Fase II del NIAC, con el período de ejecución del 1 de agosto de 1999 al 31 de julio de 2001, con Ilan Kroo de Stanford University como investigador principal.",
+      "fuente_url": "https://www.niac.usra.edu/studies/377Kroo.html",
+      "cita": "This is a Phase II Study with the performance period from Aug 01 1999 12:00AM to Jul 31 2001 12:00AM | Principal Investigator | Kroo, Ilan | Proposal Title | The Mesicopter: A Meso-Scale Flight Vehicle | Organization | Stanford University",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Balaram obtuvo su doctorado en Ingeniería de Computadoras y Sistemas en el Instituto Politécnico Rensselaer en 1985 y ha estado en JPL desde entonces.",
+      "fuente_url": "https://www-robotics.jpl.nasa.gov/who-we-are/people/j_balaram/",
+      "cita": "He received his Ph.D. in Computer & Systems Engineering from Rensselaer Polytechnic Institute in 1985 where his doctoral thesis addressed the control of highly non-linear systems. He has been at JPL ever since.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Balaram se desempeñó como Chief Engineer del proyecto Mars Ingenuity entre 2014 y 2021.",
+      "fuente_url": "https://www-robotics.jpl.nasa.gov/who-we-are/people/j_balaram/",
+      "cita": "Mars Ingenuity Project. Chief Engineer. 2014-2021",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Balaram describió volar en Marte como equivalente a volar en la Tierra a 100.000 pies (30.500 metros) de altitud, unas siete veces más alto de lo que puede volar un helicóptero terrestre típico.",
+      "fuente_url": "https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/",
+      "cita": "He compares it to flying on Earth at a 100,000-foot (30,500-meter) altitude — about seven times higher than a typical terrestrial helicopter can fly.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Mimi Aung, gestora del proyecto, describió a Balaram como el inventor del helicóptero marciano, quien innovó el diseño y lo siguió hasta su culminación como ingeniero jefe.",
+      "fuente_url": "https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/",
+      "cita": "\"Bob is the inventor of our Mars Helicopter. He innovated the design and followed up on that vision to its fruition as chief engineer through all phases of design, development and test,\" says project manager Aung.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "The Man Who Wanted to Fly on Mars",
+      "url": "https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "JPL Robotics: J. (Bob) Balaram – Perfil oficial",
+      "url": "https://www-robotics.jpl.nasa.gov/who-we-are/people/j_balaram/",
+      "editor": "JPL / California Institute of Technology",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "NIAC Study 377: The Mesicopter: A Meso-Scale Flight Vehicle (Ilan Kroo, Stanford)",
+      "url": "https://www.niac.usra.edu/studies/377Kroo.html",
+      "editor": "NASA Institute for Advanced Concepts (NIAC)",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Inside Ingenuity With AeroVironment, Part I: Designing It",
+      "url": "https://insideunmannedsystems.com/inside-ingenuity-with-aerovironment-part-one-designing-it/",
+      "editor": "Inside Unmanned Systems",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Bob Balaram – Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bob_Balaram",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Bob Balaram, el hombre detrás del vuelo de Ingenuity (American Bazaar)",
+      "url": "https://americanbazaaronline.com/?p=445005",
+      "editor": "American Bazaar",
+      "tipo": "prensa"
+    }
+  ],
+  "contradicciones": [
+    "Fecha de ingreso de Balaram a JPL: la página de JPL Robotics indica que obtuvo su Ph.D. en 1985 y que 'ha estado en JPL desde entonces' (https://www-robotics.jpl.nasa.gov/who-we-are/people/j_balaram/), mientras que American Bazaar afirma que 'joined NASA in 1986' (https://americanbazaaronline.com/?p=445005). La fuente oficial JPL es la más fiable.",
+    "El borrador describe a Balaram como 'ingeniero indio-americano', pero ninguna de las fuentes citadas en el dossier (ni https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/ ni https://www-robotics.jpl.nasa.gov/who-we-are/people/j_balaram/) menciona su origen étnico o nacionalidad.",
+    "El dato [0] cita la fuente NASA usando el nombre 'NASA Innovative Advanced Concepts' (nombre del programa relanzado en 2011), mientras que el borrador usa 'NASA Institute for Advanced Concepts' (nombre original 1998-2007). Dado que el estudio del mesicopter fue de 1999-2001, el nombre histórico correcto sería el segundo, pero la cita literal de la fuente (https://www.nasa.gov/solar-system/the-man-who-wanted-to-fly-on-mars/) dice 'Innovative', no 'Institute'."
+  ],
+  "huecos": [
+    "Año exacto de la conferencia en que Balaram escuchó a Ilan Kroo: las fuentes solo indican 'en los años 90' sin precisar el año.",
+    "Nombre o convocatoria específica del NASA Research Announcement al que se presentó la propuesta de Balaram.",
+    "Resultados detallados de la prueba de pala-rotor bajo condiciones marcianas en JPL a fines de los 90.",
+    "Año exacto en que el concepto fue inicialmente propuesto antes de quedar 15 años sin fondos (sabemos que el estudio NIAC del mesicopter fue Fase II en 1999-2001, pero el momento preciso en que Balaram lo escuchó y presentó la propuesta no está documentado con año exacto).",
+    "Detalles sobre qué revisores evaluaron la propuesta y por qué no fue seleccionada para financiamiento.",
+    "El borrador afirma que la atmósfera marciana 'es apenas el 1% de la densidad de la terrestre', pero ninguna de las fuentes citadas incluye esa cifra; solo se cita la equivalencia de volar a 100 000 pies.",
+    "El borrador detalla trabajo intermedio de Balaram en JPL (brazos robóticos para rovers, globos para Venus, simuladores de entrada/descenso/aterrizaje de Mars Science Laboratory), pero ningún dato citado en el dossier respalda esos detalles específicos.",
+    "El borrador cierra mencionando 'un encuentro fortuito entre el director de JPL y una demostración de drones a principios de la década de 2010', pero ningún dato del dossier documenta este episodio.",
+    "El borrador afirma que en los años 90 no existían 'materiales suficientemente ligeros, baterías suficientemente potentes ni sistemas de control suficientemente pequeños'; esta explicación técnica del retraso no aparece en ninguna de las fuentes citadas."
+  ],
+  "ideas_visuales": [
+    "Balaram sentado en una sala de conferencias escuchando la presentación del profesor Kroo sobre el mesicopter, con diapositivas que muestran un pequeño vehículo aéreo con rotores (basado en datos [0] y [6]).",
+    "Diagrama comparativo: un helicóptero terrestre volando a su techo máximo frente a la altitud equivalente de 30 500 metros que representa la atmósfera de Marte (basado en dato [9]).",
+    "Una prueba de pala-rotor en un laboratorio de JPL simulando condiciones de la atmósfera marciana, con ingenieros observando (basado en dato [2]).",
+    "Un estante o archivador con una carpeta etiquetada 'Mars Helicopter Proposal' acumulando polvo, con un reloj que marca 15 años (basado en dato [3]).",
+    "Retrato de Balaram junto al helicóptero Ingenuity terminado, con la cita de Mimi Aung sobreimpresa: 'Bob es el inventor de nuestro helicóptero marciano' (basado en datos [4], [8] y [10])."
+  ],
+  "datos_no_verificados": []
+}

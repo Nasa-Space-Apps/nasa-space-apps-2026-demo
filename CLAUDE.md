@@ -38,3 +38,9 @@ Antes de tocar código, lee **`docs/README.md`** (índice) y **`docs/architectur
   activo: `await params` va dentro de un `<Suspense>`. Ver «Rutas y vistas» en `docs/architecture.md`.
 - Globo: estilo alámbrico claro con tokens `theme.globe`; **sin texturas ni assets**; **cámara ortográfica** con elevación fija (aspecto isométrico); solo gira en el eje vertical, gira solo, y solo se dibuja lo de delante. Es el **menú previo al juego** (hito 31): sin panel ni lista, un botón flotante cambia de mundo, cada sitio abandonado tiene su vehículo **hundido en una masa que lo pega al suelo, tipo simbionte** (`lib/vehicles/mini.ts` da la forma exagerada y `blob.ts` la inclina y la funde en una malla; tinta + rosa + papel; gira para mirar al espectador) y su tarjeta (`VehicleCard` → `VehicleView` sobre fondo liso) **flota junto a él** (`placeFloating` en `GlobeLabels.tsx`, imperativo). No uses `Html` de drei (etiquetas DOM en `GlobeLabels.tsx`).
 - No hay selector de temas ni atajos `1…9`. Los `@keyframes` nuevos en `globals.css` no se recogen en dev: usa transiciones inline (`ease()` de `lib/ui.ts`, `Reveal`).
+
+## Pipeline de historias de misiones (aparte de la demo web)
+
+Para convertir una misión en una historia verificada de N eventos, usa la skill `mars-mission-story-pipeline` (`.claude/skills/`). Salidas siempre en `misiones/<id>/` (nunca mezcladas entre misiones); herramientas en `agents/opportunity-research/pipeline.py`. Empieza con `pipeline.py estado <id>`. Antes de investigar eventos hay que preguntar N y esperar la respuesta.
+
+**Al empezar una sesión**, lee una sola vez `LEEME_PRIMERO.md` (contexto base del pipeline y reglas de trabajo); no hace falta releerlo después.

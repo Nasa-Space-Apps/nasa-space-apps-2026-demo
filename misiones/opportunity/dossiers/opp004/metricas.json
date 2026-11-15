@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.4866277,
+  "turnos": 23,
+  "duracion_s": 136.3,
+  "duracion_api_s": 107.9,
+  "tokens": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 64288,
+    "cache_read_input_tokens": 221209,
+    "output_tokens": 11837,
+    "output_tokens_details": {
+      "thinking_tokens": 4469
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 64288
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1444,
+      "outputTokens": 30,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001594,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 12,
+      "outputTokens": 11837,
+      "cacheReadInputTokens": 221209,
+      "cacheCreationInputTokens": 64288,
+      "webSearchRequests": 0,
+      "costUSD": 0.4850337,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 4469,
+      "cacheCreationEphemeral5mInputTokens": 64288,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 5,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 15,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "2",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "3",
+    "costo_usd_referencia": 0.1935235,
+    "turnos": 2,
+    "duracion_s": 77.2,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4896,
+        "outputTokens": 30,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.005046,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 6066,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5890,
+        "webSearchRequests": 0,
+        "costUSD": 0.1884775,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 3774,
+        "cacheCreationEphemeral5mInputTokens": 5890,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 16,
+      "datos_despues": 16,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 1,
+      "huecos_nuevos": 3,
+      "observaciones": "Se conservaron los 16 datos porque todas las citas respaldan sus afirmaciones, pero se reescribió el relato eliminando múltiples detalles del borrador narrativo que no estaban en ninguna fuente (fecha y lugar de lanzamiento del MCO, altitudes específicas, declaración de Goldin, vínculo causal con Opportunity). Se añadió una contradicción clave: el evento dice \"falla de sensor\" pero la evidencia ap"
+    }
+  },
+  "costo_usd_referencia_total": 0.6801512,
+  "costos": {
+    "total_usd": 0.680151,
+    "por_paso": {
+      "investigacion": 0.486628,
+      "revision": 0.193523
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.00664,
+        "entrada": 6340,
+        "salida": 60,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.485034,
+        "entrada": 12,
+        "salida": 11837,
+        "cache_leida": 221209,
+        "cache_escrita": 64288,
+        "razonamiento": 4469
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.188477,
+        "entrada": 3,
+        "salida": 6066,
+        "cache_leida": 0,
+        "cache_escrita": 5890,
+        "razonamiento": 3774
+      }
+    }
+  }
+}

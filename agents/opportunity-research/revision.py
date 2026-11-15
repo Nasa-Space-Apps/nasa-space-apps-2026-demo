@@ -65,9 +65,9 @@ def armar_entrada(evento: dict, borrador: Dossier) -> str:
             + "\n\nHuecos del borrador:\n" + "\n".join(f"- {c}" for c in borrador.huecos))
 
 
-async def revisar(evento: dict, borrador: Dossier, prov: proveedores.Proveedor) -> tuple[Dossier, dict]:
+async def revisar(evento: dict, borrador: Dossier, prov: proveedores.Proveedor, contexto: dict | None = None) -> tuple[Dossier, dict]:
     """Devuelve (dossier revisado, métricas). Si el revisor falla, devuelve el borrador y deja el error en las métricas."""
-    sistema, version = prompts.cargar("revisor")
+    sistema, version = prompts.cargar("revisor", contexto)
     env = {**prov.env, "ANTHROPIC_MODEL": prov.modelo_revisor}
     proveedores.aplicar(proveedores.Proveedor(prov.nombre, prov.modelo_revisor, prov.etiqueta, prov.con_tope, env))
     opts = ClaudeAgentOptions(model=prov.modelo_revisor, system_prompt=sistema, tools=[], allowed_tools=[], max_turns=3, setting_sources=[],

@@ -1,0 +1,177 @@
+{
+  "evento_id": "ing032",
+  "titulo": "Vuelo 1 de Ingenuity: Wright Brothers Field — El primer vuelo propulsado en otro planeta (19 de abril de 2021)",
+  "contexto_ampliado": "El 19 de abril de 2021, a las 3:34 a. m. EDT (12:33 en hora solar media local marciana), el helicóptero Ingenuity de la NASA despegó de la superficie de Marte y se convirtió en la primera aeronave de la historia en realizar un vuelo propulsado y controlado en otro planeta. Este pequeño aparato, de apenas 49 centímetros de altura y 1,8 kilogramos de masa, se elevó hasta los 3 metros de altitud, mantuvo una suspensión estable durante 30 segundos y aterrizó suavemente tras un total de 39,1 segundos de vuelo.\n\nEl mayor reto técnico era la atmósfera marciana, que tiene solo un 1 % de la presión terrestre al nivel del suelo: las palas de los rotores —dos conjuntos de aproximadamente 1,2 metros de punta a punta— disponen de muy pocas moléculas de aire con las que generar sustentación. Para compensarlo, los rotores fueron diseñados para girar a velocidades de hasta 2.400 rpm, muy superiores a las de cualquier helicóptero terrestre. La gravedad de Marte, un tercio de la de la Tierra, ayuda parcialmente, pero no resuelve el problema de la escasez de atmósfera. Además, el vuelo fue completamente autónomo: los sistemas de guía, navegación y control a bordo ejecutaron algoritmos diseñados por el equipo de JPL, ya que la enorme distancia entre Marte y la Tierra impide cualquier tipo de pilotaje en tiempo real.\n\nPara transmitir sus datos, Ingenuity necesitaba al rover Perseverance como enlace de comunicaciones. Este se encontraba estacionado a unos 64,3 metros del helicóptero, en un punto denominado Van Zyl Overlook, desde donde registró las operaciones del vuelo con sus cámaras. La confirmación del éxito llegó al Laboratorio de Propulsión a Chorro (JPL) de la NASA a las 6:46 a. m. EDT, más de tres horas después del despegue, debido al tiempo que tarda la señal en recorrer la distancia entre ambos planetas.\n\nTras la confirmación, Thomas Zurbuchen, entonces Administrador Asociado de Ciencia de la NASA, bautizó el lugar del despegue como «Wright Brothers Field», en homenaje a los hermanos Wright. «Ahora, 117 años después de que los hermanos Wright consiguieran el primer vuelo en nuestro planeta, el helicóptero Ingenuity de la NASA ha logrado esta increíble hazaña en otro mundo», declaró. Por su parte, el piloto jefe de Ingenuity, Håvard Grip, anunció que la Organización de Aviación Civil Internacional (OACI) de las Naciones Unidas había otorgado a la NASA y a la FAA el designador oficial «IGY» con indicativo de llamada «INGENUITY», y que el lugar en el cráter Jezero recibió la designación ceremonial «JZRO».\n\nUn detalle cargado de simbolismo acompañó al helicóptero: bajo su panel solar, sujeto con cinta adhesiva de poliimida naranja, llevaba un pequeño trozo de muselina extraído del ala inferior izquierda del Flyer 1 de los hermanos Wright, el avión que realizó el primer vuelo propulsado en la Tierra en 1903. Ese trozo de tela fue obtenido del Carillon Historical Park de Dayton, Ohio, sede del Museo Nacional de los Hermanos Wright.\n\nEl proyecto Mars Helicopter tardó poco más de seis años en pasar de un estudio de viabilidad conceptual a lograr el primer vuelo en otro mundo. El panel solar de Ingenuity carga baterías de iones de litio que proporcionan energía suficiente para un vuelo de hasta 90 segundos por cada día marciano, con una potencia media de aproximadamente 350 vatios durante el vuelo. Con su primer despegue en aquel amanecer marciano de abril de 2021, Ingenuity demostró que el vuelo propulsado fuera de la Tierra es posible, abriendo el camino a futuras misiones con aeronaves robóticas en otros mundos.",
+  "datos_reales": [
+    {
+      "afirmacion": "El primer vuelo de Ingenuity ocurrió el 19 de abril de 2021, convirtiéndose en el primer vuelo propulsado y controlado de una aeronave en otro planeta.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "NASA's Ingenuity Mars Helicopter became the first aircraft in history to make a powered, controlled flight on another planet.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El helicóptero despegó a las 3:34 a. m. EDT (12:33 hora solar media local marciana), hora que el equipo determinó que tendría condiciones óptimas de energía y vuelo.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "The solar-powered helicopter first became airborne at 3:34 a.m. EDT (12:34 a.m. PDT) – 12:33 Local Mean Solar Time (Mars time) – a time the Ingenuity team determined would have optimal energy and flight conditions.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La confirmación del vuelo exitoso llegó al equipo de JPL a las 6:46 a. m. EDT.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "The Ingenuity team at the agency's Jet Propulsion Laboratory in Southern California confirmed the flight succeeded after receiving data from the helicopter via NASA's Perseverance Mars rover at 6:46 a.m. EDT (3:46 a.m. PDT).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity ascendió hasta su altitud máxima prescrita de 3 metros (10 pies) y mantuvo una suspensión estable durante 30 segundos.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "Altimeter data indicate Ingenuity climbed to its prescribed maximum altitude of 10 feet (3 meters) and maintained a stable hover for 30 seconds.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vuelo completo duró 39,1 segundos en total.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "It then descended, touching back down on the surface of Mars after logging a total of 39.1 seconds of flight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vuelo fue completamente autónomo, pilotado por sistemas de guía, navegación y control a bordo; no se podía controlar con un joystick porque los datos tardan demasiado en llegar desde la Tierra.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "Ingenuity's initial flight demonstration was autonomous – piloted by onboard guidance, navigation, and control systems running algorithms developed by the team at JPL. Because data must be sent to and returned from the Red Planet over hundreds of millions of miles using orbiting satellites and NASA's Deep Space Network, Ingenuity cannot be flown with a joystick.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Thomas Zurbuchen bautizó el lugar del vuelo como «Wright Brothers Field», 117 años después del primer vuelo de los hermanos Wright en la Tierra.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "Now, 117 years after the Wright brothers succeeded in making the first flight on our planet, NASA's Ingenuity helicopter has succeeded in performing this amazing feat on another world... this first of many airfields on other worlds will now be known as Wright Brothers Field.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La atmósfera de Marte tiene solo el 1 % de la presión superficial de la Tierra, lo que hace que las palas de los rotores tengan pocas moléculas de aire con las que generar sustentación.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "The Red Planet has a significantly lower gravity – one-third that of Earth's – and an extremely thin atmosphere with only 1% the pressure at the surface compared to our planet. This means there are relatively few air molecules with which Ingenuity's two 4-foot-wide (1.2-meter-wide) rotor blades can interact to achieve flight.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El rover Perseverance estaba estacionado a unos 64,3 metros del helicóptero, en el punto «Van Zyl Overlook», y actuó como enlace de comunicaciones y registró el vuelo con sus cámaras.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "Parked about 211 feet (64.3 meters) away at Van Zyl Overlook during Ingenuity's historic first flight, the Perseverance rover not only acted as a communications relay between the helicopter and Earth, but also chronicled the flight operations with its cameras.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La Organización de Aviación Civil Internacional (OACI) de las Naciones Unidas otorgó a la NASA y a la FAA el designador oficial IGY con indicativo de llamada INGENUITY.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "Ingenuity's chief pilot, Håvard Grip, announced that the International Civil Aviation Organization (ICAO) – the United Nations' civil aviation agency – presented NASA and the Federal Aviation Administration with official ICAO designator IGY, call-sign INGENUITY.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El lugar del vuelo en el cráter Jezero recibió la designación ceremonial de ubicación JZRO.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "The location of the flight has also been given the ceremonial location designation JZRO for Jezero Crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity mide 49 centímetros de altura y pesa 1,8 kilogramos (4 libras), con dos rotores de aproximadamente 1,2 metros de punta a punta.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "the 19.3-inch-tall (49-centimeter-tall) Ingenuity Mars Helicopter... the 4-pound (1.8-kg) rotorcraft... two 4-foot-wide (1.2-meter-wide) rotor blades.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El proyecto Mars Helicopter tardó poco más de seis años en pasar de un estudio de viabilidad «blue sky» al primer vuelo en otro mundo.",
+      "fuente_url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "cita": "The Mars Helicopter project has gone from 'blue sky' feasibility study to workable engineering concept to achieving the first flight on another world in a little over six years.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Ingenuity lleva un pequeño trozo de muselina extraído del ala inferior izquierda del Wright Flyer 1, fijado bajo el panel solar con cinta adhesiva de poliimida naranja.",
+      "fuente_url": "https://science.nasa.gov/photojournal/swatch-of-wright-brothers-flyer-1-attached-to-mars-helicopter/",
+      "cita": "NASA's Ingenuity Mars Helicopter carries a small swatch of muslin material from the lower-left wing of the Wright Brothers Flyer 1. Located on the underside of the helicopter's solar panel (the dark rectangle), the swatch is attached with dark orange polymide tape to a cable extending from the panel.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los rotores de Ingenuity giran a hasta 2.400 rpm.",
+      "fuente_url": "https://science.nasa.gov/photojournal/swatch-of-wright-brothers-flyer-1-attached-to-mars-helicopter/",
+      "cita": "A gray dot of epoxy at the intersection of the three wraps of cord prevents the lacing from loosening as the rotor blades (upper pair seen at bottom of image) rotate at up to 2,400 rpm.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El trozo de tela fue obtenido del Carillon Historical Park de Dayton, Ohio, sede del Museo Nacional de los Hermanos Wright.",
+      "fuente_url": "https://science.nasa.gov/photojournal/swatch-of-wright-brothers-flyer-1-attached-to-mars-helicopter/",
+      "cita": "The swatch of material from the Wright brothers' first airplane was obtained from the Carillon Historical Park, in Dayton, Ohio — home to the Wright Brothers National Museum.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El panel solar de Ingenuity carga baterías de iones de litio que suministran suficiente energía para un vuelo de 90 segundos por día marciano, con una potencia media de aproximadamente 350 vatios durante el vuelo.",
+      "fuente_url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "cita": "Solar panel charges Lithium-ion batteries, providing enough energy for one 90-second flight per Martian day ( approximately 350 Watts of average power during flight).",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "NASA's Ingenuity Mars Helicopter Succeeds in Historic First Flight (Nota de prensa oficial)",
+      "url": "https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Ingenuity Mars Helicopter – Key Facts and Tech Specs",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Swatch of Wright Brothers Flyer 1 Attached to Mars Helicopter (PIA24291)",
+      "url": "https://science.nasa.gov/photojournal/swatch-of-wright-brothers-flyer-1-attached-to-mars-helicopter/",
+      "editor": "NASA/JPL-Caltech",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Overview and Results From the Mars 2020 Perseverance Rover's First Science Campaign on the Jezero Crater Floor (NTRS)",
+      "url": "https://ntrs.nasa.gov/citations/20230016431",
+      "editor": "NASA NTRS",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "Distancia horizontal del vuelo: el registro oficial del evento (datos_clave) indica 0 m, mientras que la tabla de Wikipedia (datos_wikipedia.distancia_horizontal_m) indica 0,05 m. El PDF oficial del Flight Log de NASA (https://science.nasa.gov/wp-content/uploads/2024/06/ingenuity-helicopter-flight-log.pdf) no pudo ser leído para dirimir la diferencia. La nota de prensa de NASA (https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/) no especifica distancia horizontal, solo menciona altitud y tiempo total.",
+    "El borrador narrativo atribuye a Zurbuchen el anuncio del designador OACI «IGY», pero la cita literal de [9] (https://www.nasa.gov/news-release/nasas-ingenuity-mars-helicopter-succeeds-in-historic-first-flight/) indica que fue Håvard Grip, piloto jefe de Ingenuity, quien hizo ese anuncio.",
+    "El borrador describe la tela del Wright Flyer como «encapsulado en una película de poliimida», pero la cita de [13] (https://science.nasa.gov/photojournal/swatch-of-wright-brothers-flyer-1-attached-to-mars-helicopter/) dice «attached with dark orange polymide tape to a cable extending from the panel», es decir, la cinta de poliimida es el medio de fijación, no una película que encapsula la tela.",
+    "El dato [16] afirma que Ingenuity completó 72 vuelos y que la misión concluyó el 25 de enero de 2024, pero la cita literal proporcionada (https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/) solo menciona 128,8 minutos de vuelo, 17,0 km recorridos y altitud máxima de 24,0 m, sin incluir el número de vuelos ni la fecha de cierre de la misión."
+  ],
+  "huecos": [
+    "No se pudo confirmar con cita literal la rotación de 96° durante el vuelo mencionada en los datos del evento; la nota de prensa oficial solo indica ascenso, hover de 30 s y descenso, sin mencionar la rotación.",
+    "El PDF oficial del Flight Log de NASA (ingenuity-helicopter-flight-log.pdf) no pudo ser descargado ni leído, por lo que no se pudieron verificar directamente los datos tabulados del vuelo 1.",
+    "No se encontró en las fuentes leídas la velocidad de rotación exacta durante el Vuelo 1 (el dato de 2.400 rpm es el máximo de diseño, no necesariamente el usado en el vuelo 1).",
+    "No se confirma en las fuentes leídas el número de sol de Perseverance (58) en que ocurrió el vuelo; la prensa oficial solo menciona 'the 16th sol of its 30-sol flight test window' referido al helicóptero, no al contador de sol de Perseverance.",
+    "El evento original indica la hora UTC del despegue como 07:34 UTC, pero ninguna fuente citada en el dossier proporciona explícitamente la hora en formato UTC; solo se citan EDT y hora solar local marciana.",
+    "El evento original establece una velocidad máxima de suelo de 0 m/s para el vuelo 1, pero ninguna fuente consultada confirma este dato con cita literal.",
+    "El borrador narrativo menciona que Perseverance registró el vuelo con las cámaras Mastcam-Z y Navcam, pero ningún dato del dossier identifica esas cámaras por nombre; la cita de [8] solo dice «chronicled the flight operations with its cameras».",
+    "El borrador menciona que el último vuelo fue el 18 de enero de 2024, pero ninguna cita del dossier respalda esta fecha."
+  ],
+  "ideas_visuales": [
+    "Ingenuity posado sobre el suelo rojizo de Marte, instantes antes del despegue, con sus dos pares de rotores de 1,2 m visibles y el panel solar en la parte superior (basado en [0], [11]).",
+    "El helicóptero suspendido a 3 metros de altura sobre la superficie marciana, en plena fase de hover estable (basado en [3]).",
+    "El rover Perseverance en Van Zyl Overlook, a 64,3 metros de distancia, apuntando sus cámaras hacia Ingenuity mientras este vuela (basado en [8]).",
+    "Detalle del trozo de muselina del Wright Flyer 1 sujeto con cinta de poliimida naranja bajo el panel solar del helicóptero (basado en [13], [15]).",
+    "La sala de control del JPL en el momento en que llega la confirmación del vuelo exitoso a las 6:46 a. m. EDT (basado en [2]).",
+    "Vista cenital del lugar bautizado como «Wright Brothers Field» en el cráter Jezero, con la huella de aterrizaje de Ingenuity sobre la superficie (basado en [6], [10])."
+  ],
+  "datos_no_verificados": []
+}
