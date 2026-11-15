@@ -138,6 +138,16 @@ El mismo flujo, en la **Luna** (`/moon/surveyor-3`; el id de la misión lleva gu
 - **Audio:** 20 clips con Bill / `eleven_v4` (5 618 caracteres, 2 247 créditos), a petición del usuario.
 - Se retiraron las 2 paradas de relleno (`SURVEYOR3_CHECKPOINTS`) del hito 41.
 
+## Historia de Spirit (hito 45)
+
+El mismo flujo en `/mars/spirit`: cómic de **6** páginas → 3D con **12** paradas → cómic de **2** páginas + tarjeta «thank you, Spirit».
+
+- **Datos:** `scripts/data/spirit-story.mjs` (20 eventos de `misiones/spirit/dossiers`, entregados por el pipeline del equipo). Tierra (6): Squyres y sus cuatro propuestas, la pérdida del Climate Orbiter y el Polar Lander, el anuncio de los dos rovers, el nombre de Sofi Collis, el lanzamiento y el aterrizaje con 28 rebotes. Marte (12): del bucle de reinicios del sol 18 y el primer cepillado de roca a la marcha atrás, el remolino que limpió los paneles, Husband Hill, Comanche, la rueda rota (sol 779), la sílice de Home Plate, la trampa de Troy, «Free Spirit», la declaración de plataforma estacionaria y la última señal. Legado (2): el fin de los intentos de contacto y el reanálisis de 2026. Narraciones de 47–53 palabras. Cifras en disputa evitadas: la reunión de Goldin (solo se cuenta el anuncio del 10 ago 2000), el día exacto de la cumbre (29 sep vs «590 días» → «Sep 2005»), el día del atasco (23 abr vs 1 may 2009 → «Apr 2009»), la inclinación de 60° en Troy y la masa del rover (150 vs 185 kg).
+- **Ilustraciones:** `scripts/data/spirit-image-prompts.mjs` (mismo `STYLE`/`ENDING` que Ingenuity; el rover se describe igual en todas) y `npm run story-images -- spirit`. El sello de la carpeta en `spi001` muestra la palabra «REJECTED» (el modelo la escribió).
+- **3D:** terreno de Meridiani (`terrain.stl`, el de Opportunity, su gemelo): el montículo central de Gale era demasiado empinado (30–40°). Las paradas parten del llano del este, suben por la larga loma del oeste (Husband Hill, parada 5), bajan por el sur y terminan en el llano que hace de Home Plate/Troy (cuatro últimas paradas). Pendiente máxima del recorrido 15°; radio de activación 15. Vehículo procedural de Spirit (violeta).
+- **Audio:** 20 clips con Bill / `eleven_v4` (5 979 caracteres, 2 394 créditos).
+- **Globo:** la tarjeta de Spirit ya no dice «coming soon»: datos reales (aterrizó 3 ene 2004, 7,73 km, última señal 22 mar 2010).
+
 ## Pendiente
 
 - **Revisar las 60 narraciones de oído** (voz Bill; si alguna no convence, edita su texto en `scripts/data/<misión>-story.mjs` y vuelve a `npm run story -- <misión>` + `npm run story-audio -- <misión>`).

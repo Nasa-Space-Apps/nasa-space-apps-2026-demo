@@ -144,11 +144,11 @@ export const MISSIONS: Mission[] = [
     checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
     checkpointRadius: 22,
   },
-  // ---- vehicles without a story yet («coming soon» on the globe): their 3D models are kept, the fictional demo routes were removed ----
   {
+    // The real story (public/models/spirit/story.json, lib/story.ts); drives on the Meridiani terrain of Opportunity, its twin, as a stand-in for Gusev.
     id: "spirit",
-    name: "Spirit · Mars (demo)",
-    title: "MER-A · Spirit (demo)",
+    name: "Spirit · Mars",
+    title: "MER-A · Spirit",
     terrainUrl: "/models/terrain.stl",
     terrain: MARS_TERRAIN,
     rover: {
@@ -160,9 +160,10 @@ export const MISSIONS: Mission[] = [
     env: MARS_ENV,
     dust: MARS_DUST,
     tracks: MARS_TRACKS,
-    checkpoints: [], // coming soon: no story yet, so no route (and the globe keeps its 3D closed)
-    checkpointRadius: 18,
+    checkpoints: storyOf("spirit")!.checkpoints, // the real story: 12 Mars events (public/models/spirit/story.json); the 6 before the landing are comic pages
+    checkpointRadius: 15, // 12 stops 74–117 u apart
   },
+  // ---- vehicles without a story yet («coming soon» on the globe): their 3D models are kept, the fictional demo routes were removed ----
   {
     id: "ingenuity",
     name: "Ingenuity · Mars",

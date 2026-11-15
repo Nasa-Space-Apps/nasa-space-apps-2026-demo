@@ -1,5 +1,6 @@
 import ingenuity from "../../public/models/ingenuity/story.json";
 import opportunity from "../../public/models/opportunity/story.json";
+import spirit from "../../public/models/spirit/story.json";
 import surveyor3 from "../../public/models/surveyor3/story.json";
 import type { Checkpoint } from "./checkpoints";
 
@@ -96,6 +97,7 @@ function build(data: StoryFile): Story {
 const STORIES: Record<string, Story> = {
   opportunity: build(opportunity as unknown as StoryFile),
   ingenuity: build(ingenuity as unknown as StoryFile),
+  spirit: build(spirit as unknown as StoryFile),
   "surveyor-3": build(surveyor3 as unknown as StoryFile), // the mission id has a hyphen, the folder public/models/surveyor3 does not
 };
 

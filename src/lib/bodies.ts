@@ -65,15 +65,17 @@ export const BODIES: Body[] = [
       {
         missionId: "spirit",
         name: "Spirit",
-        place: "Gusev Crater · demo",
+        place: "Gusev Crater · Columbia Hills",
         lat: -14.57,
         lon: 175.47,
-        tag: "Stuck in sand · demo",
-        status: "Demo vehicle with an invented story: it sinks into soft sand and goes quiet. The ground is the same Mars terrain used for Opportunity.",
+        tag: "Stuck in sand · 2009",
+        status:
+          "Sank into soft sand at «Troy» in April 2009 and sent its last signal on March 22, 2010, as winter starved its solar panels. NASA stopped trying to reach it on May 24, 2011. In the 3D view it drives on the Meridiani terrain of Opportunity, as a stand-in for Gusev.",
         facts: [
-          ["Site", "Gusev Crater"],
-          ["Wheels", "5 of 6"],
-          ["Ending", "Fictional"],
+          ["Landed", "Jan 3, 2004"],
+          ["Planned", "3 months"],
+          ["Distance", "7.73 km"],
+          ["Last signal", "Mar 22, 2010"],
         ],
       },
       {
