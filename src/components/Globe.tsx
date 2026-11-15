@@ -8,6 +8,7 @@ import { MISSIONS } from "@/lib/missions";
 import { reducedMotion, springStep, type Spring } from "@/lib/motion";
 import { PERF } from "@/lib/perf";
 import type { Theme } from "@/lib/themes";
+import { blobFrom } from "@/lib/vehicles/blob";
 import { buildMarker } from "@/lib/vehicles/mini";
 import type { VehicleModel } from "@/lib/vehicles";
 import { labelEls, placeFloating } from "./GlobeLabels";
@@ -170,10 +171,10 @@ function Grid({ color }: { color: string }) {
   return <lineSegments geometry={geo} material={mat} />;
 }
 
-/** World units per model unit of the globe vehicles: a ~10-unit vehicle comes out ~0.17 units long (~24 px), about twice the old square pin. */
-const S = 0.017;
+/** World units per model unit of the globe vehicles: a ~10-unit vehicle comes out ~0.34 units long (~48 px). */
+const S = 0.034;
 const hot = { n: 0 }; // vehicles under the pointer: the idle spin pauses meanwhile, so a moving target can be clicked
-const SINK = 1.3; // model units of the vehicle buried in the ground (the wheels are half under the surface)
+const SINK = 1.0; // model units the blob's flat base lies below the surface (the invisible ground hides it, so the blob rises out of the ground)
 
 /**
  * A tiny vehicle standing on the surface at its lat/lon, a little buried (the invisible ground sphere hides what is below). Counter-scaled so it keeps its
@@ -204,14 +205,24 @@ function Marker({
   const grow = useRef<Spring>({ x: 0, v: 0 }); // starts at 0: each vehicle pops in (staggered) when its globe appears
   const born = useRef(-1);
   const phase = (index * 0.9) % 3.4; // each vehicle hops at its own moment
-  const tmp = useMemo(() => ({ p: new THREE.Vector3(), c: new THREE.Vector3(), cam: new THREE.Vector3(), s: new THREE.Vector3() }), []);
+  const tmp = useMemo(
+    () => ({ p: new THREE.Vector3(), c: new THREE.Vector3(), cam: new THREE.Vector3(), s: new THREE.Vector3(), n: new THREE.Vector3(), f: new THREE.Vector3(), q: new THREE.Quaternion() }),
+    [],
+  );
   const q = useMemo(() => {
     const d = new THREE.Vector3(...latLonDir(vehicle.lat, vehicle.lon));
     return { pos: d.clone().multiplyScalar(R), quat: new THREE.Quaternion().setFromUnitVectors(Z, d) };
   }, [vehicle]);
-  const rig = useMemo(() => buildMarker(model, { ...theme.globe.vehicle, bg: theme.globe.bg }), [model, theme]);
-  useEffect(() => () => rig.dispose(), [rig]);
-  const yaw = useMemo(() => ([...vehicle.missionId].reduce((a, c) => a + c.charCodeAt(0), 0) % 8) * 0.8, [vehicle]); // varied headings, fixed per vehicle
+  // one melted blob per vehicle (lib/vehicles/blob.ts), made from its low-detail model
+  const blob = useMemo(() => {
+    const palette = { ...theme.globe.vehicle, bg: theme.globe.bg };
+    const rig = buildMarker(model, palette);
+    const made = blobFrom(rig, palette, vehicle.missionId, (R * 1.5) / S); // 1.5 = the globe's size on screen
+    rig.dispose();
+    return made;
+  }, [model, theme, vehicle.missionId]);
+  useEffect(() => () => blob.dispose(), [blob]);
+  const facing = useRef<number | null>(null); // heading of the vehicle about the surface normal: it keeps turning to look at the viewer
   const g = theme.globe;
   const key = `v:${vehicle.missionId}`;
 
@@ -235,25 +246,38 @@ function Marker({
     if (born.current < 0) born.current = t;
     // playful: a springy pop-in, a quick hop every few seconds, a happy bounce while selected and a wiggle while hovered
     const alive = t - born.current > 0.3 + index * 0.12;
-    const gs = springStep(grow.current, !alive ? 0 : hover.current ? 1.5 : selected ? 1.3 : 1, dt, 260, 11);
-    let hop = 0;
+    const gs = springStep(grow.current, !alive ? 0 : hover.current ? 1.25 : selected ? 1.15 : 1, dt, 260, 11);
+    // the blob is jelly stuck to the ground: it breathes, ripples every few seconds, stretches up when hovered and throbs while selected
+    let sy = 1;
     let wob = 0;
     if (!reducedMotion()) {
       if (hover.current) {
-        hop = 0.7 + Math.abs(Math.sin(t * 9)) * 1.2;
-        wob = Math.sin(t * 16) * 0.22;
-      } else if (selected) hop = Math.abs(Math.sin(t * 4)) * 1.4;
+        sy = 1.2 + Math.sin(t * 15) * 0.04;
+        wob = Math.sin(t * 9) * 0.12;
+      } else if (selected) sy = 1.1 + Math.abs(Math.sin(t * 3.5)) * 0.1;
       else {
-        const hp = ((t + phase) % 3.4) / 0.75;
-        if (hp < 1) hop = Math.sin(hp * Math.PI) * 2.2;
+        const hp = ((t + phase) % 3.4) / 1.1;
+        const ripple = hp < 1 ? Math.sin(hp * Math.PI * 3) * (1 - hp) * 0.16 : 0;
+        sy = 1 + Math.sin(t * 1.7 + phase) * 0.05 + ripple;
       }
     }
-    b.position.y = (hop - SINK) * S;
-    b.rotation.y = yaw + wob;
-    b.scale.setScalar(S * Math.max(gs, 0.0001));
+    const sxz = 1 / Math.sqrt(sy); // squash and stretch keeps the volume
+    const gk = S * Math.max(gs, 0.0001);
+    b.position.y = -SINK * S;
+    // it turns to look at you: the nose points to the top of the screen (the camera sits on that side of the surface), seen three-quarters
+    r.getWorldQuaternion(tmp.q);
+    tmp.n.set(0, 0, 1).applyQuaternion(tmp.q);
+    tmp.f.set(0, 1, 0).addScaledVector(tmp.n, -tmp.n.y);
+    if (tmp.f.lengthSq() > 1e-4) {
+      tmp.f.applyQuaternion(tmp.q.invert());
+      const want = Math.atan2(tmp.f.x, -tmp.f.y) + 0.6;
+      facing.current = facing.current === null ? want : facing.current + wrap(want - facing.current) * (1 - Math.exp(-5 * dt));
+    }
+    b.rotation.y = (facing.current ?? 0) + wob;
+    b.scale.set(gk * sxz, gk * sy, gk * sxz);
     const k = (t * 0.8) % 1;
     if (ring.current) {
-      ring.current.scale.setScalar(0.8 + k * 1.1);
+      ring.current.scale.setScalar(0.8 + k * 0.7);
       (ring.current.material as THREE.MeshBasicMaterial).opacity = (selected || hover.current ? 0.95 : 0.55) * (1 - k);
     }
     // screen position: the label follows the vehicle, the floating card too while it is selected; both hide while the vehicle is on the far side
@@ -276,12 +300,12 @@ function Marker({
     <group ref={root} position={q.pos} quaternion={q.quat}>
       <group rotation-x={Math.PI / 2}>
         {/* the model stands on +y: turned so +y is the surface normal (the group's +z); sunk into the ground */}
-        <group ref={body} rotation-y={yaw} position-y={-SINK * S} scale={0.0001}>
-          <primitive object={rig.root} />
+        <group ref={body} position-y={-SINK * S} scale={0.0001}>
+          <primitive object={blob.mesh} />
         </group>
       </group>
       <mesh ref={ring} position-z={0.003} rotation-z={Math.PI / 4}>
-        <ringGeometry args={[0.13, 0.15, 4]} />
+        <ringGeometry args={[0.24, 0.27, 4]} />
         <meshBasicMaterial color={g.pin} transparent depthWrite={false} />
       </mesh>
       <mesh
@@ -301,7 +325,7 @@ function Marker({
           document.body.style.cursor = "";
         }}
       >
-        <sphereGeometry args={[0.17, 8, 8]} />
+        <sphereGeometry args={[0.22, 8, 8]} />
         <meshBasicMaterial transparent opacity={0} depthWrite={false} />
       </mesh>
     </group>

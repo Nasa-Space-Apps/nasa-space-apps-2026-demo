@@ -264,6 +264,22 @@ El usuario revisó el hito 31 y pidió:
 - **Dos trampas encontradas:** (1) el CSS nuevo no llegó al bundle del servidor de desarrollo hasta **recargar la página** (ver gotchas); (2) un `Canvas` de R3F dentro de un elemento con `transform: scale` se mide mal (`getBoundingClientRect` incluye la escala) y el vehículo de la tarjeta salía diminuto → `resize={{ offsetSize: true }}` en `VehicleView`.
 - Verificado: `tsc` y `lint` limpios; en el navegador: tarjeta flotante abierta, cierre con clic fuera, cambio Luna → Marte. **Sin probar**: Esc, la X y el clic real sobre un vehículo con el globo girando.
 
+### 33. Vehículos del globo como una sola masa fundida con el suelo («simbionte»)
+El usuario pidió que los vehículos del globo sean **un solo componente**, unificados y **pegados al globo** (referencia: el simbionte de Venom al adherirse), sin importar que pierdan algo de forma mientras se reconozcan un poco.
+- **`lib/vehicles/blob.ts`** (`blobFrom`): toma el modelo de bajo detalle de `mini.ts`, lo aplana a un **mapa de alturas** visto desde arriba, **cierra los huecos** entre piezas (dilatación), añade una **falda** que se extiende por el suelo y **6 zarcillos** que reptan, **desenfoca** (`MELT`) y reescala el pico (el mástil no se hunde) y lo convierte en **una malla suave** de 56×56 con el mismo material de 3 tonos. Conserva la huella y las partes altas (mástil, rotores, abanicos) pero no hay piezas sueltas.
+- **El parche se curva con la esfera** (`sphereR`): sin eso su base plana asomaba como un rombo negro en las esquinas. La base queda bajo el suelo invisible de profundidad, así que solo se ve la masa que emerge.
+- **Animación de gelatina** en vez de saltitos (un blob no salta): respira, se ondula cada pocos segundos, se estira y se menea al pasar el cursor y late al estar seleccionado (squash & stretch con volumen constante).
+- `mini.ts` se conserva como la **forma de partida** del blob. Verificado en el navegador (Opportunity y SEV): una masa de tinta con vetas rosa, pegada al suelo. **Sin probar**: el resto de vehículos de Marte ampliados ni el ajuste fino de `MELT` (más alto = más derretido, menos reconocible).
+
+### 34. Vehículos del globo más reconocibles y el doble de grandes
+El usuario aprobó el efecto de fundirse con el suelo pero la forma era **irreconocible**, y pidió mejorarla y **duplicar el tamaño**.
+- **Causa:** el mapa de alturas derretía todo el vehículo (solo quedaba una mancha) y, además, desde el centro del globo la cámara mira cada superficie casi **desde arriba** (la normal apunta a la cámara a ~29°), así que un vehículo «de pie» solo enseña su techo.
+- **Ahora** (`lib/vehicles/blob.ts`): el vehículo **conserva su forma real** y el fundido solo se lo traga **hasta ~26 % de su altura** (`CLIMB`): ruedas medio hundidas, panel, mástil y rotores quedan nítidos; el fundido (falda + zarcillos cortos + el mapa de alturas desenfocado) sigue pegándolo al suelo. Vehículo y fundido van en **una sola malla y un material**.
+- **Se inclina hacia atrás** (`LEAN` 0,5 rad, la cola se hunde y el morro sube) y **gira para mirar al espectador**: cada frame apunta el morro hacia arriba de la pantalla (el lado de la cámara) con 0,6 rad de tres cuartos, así se ven frente, techo y un costado desde cualquier posición del globo.
+- **Formas exageradas** (`lib/vehicles/mini.ts`): ruedas grandes con **cubo claro**, mástil grueso con cabeza de dos ojos, paneles anchos, rotores y abanicos en tono claro: lo que sobresale del fundido es lo que se reconoce.
+- **Doble de tamaño:** `S` pasa de 0,017 a 0,034 (~48 px; ~65 px al seleccionarlo). Anillo, esfera de impacto, etiqueta y gelatina se reajustaron. Para que no se pisen, **Ingenuity se movió** de (21,5°N, 71,5°E) a (24°N, 65°E) (es un marcador demo «desplazado»: ya no estaba en su sitio real).
+- Verificado en el navegador con Opportunity (globo quieto por el hash): se lee como un rover pequeño sobre una masa negra. **Sin revisar a escala real**: el resto de vehículos ni el cúmulo de Jezero; ajustes finos en `blob.ts` (`LEAN`, `CLIMB`, `MELT`).
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |

@@ -65,7 +65,7 @@ export default function GlobeLabels({ theme }: { theme: Theme }) {
     <div className="pointer-events-none fixed inset-0 z-[5] overflow-hidden">
       {BODIES.flatMap((b) => b.vehicles).map((v) => (
         <div key={v.missionId} style={{ ...base, transition: `opacity ${theme.dur.base}ms ${theme.ease}` }} ref={reg(`v:${v.missionId}`)}>
-          <div style={{ transform: "translate(22px,-14px)" }}>
+          <div style={{ transform: "translate(36px,-20px)" }}>
             <div style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1 }}>{v.name}</div>
             <div
               style={{
