@@ -1,5 +1,7 @@
 # Recursos de referencia por vehículo
 
+> **Histórico (hito 43):** los GLB y las fotos descritos aquí se **eliminaron de `public/models`** al limpiar los recursos sin uso; este archivo queda como registro de dónde salieron y con qué licencia. Se recuperan del historial de git.
+
 Material para **construir los vehículos procedurales** (`src/lib/vehicles/<id>.ts`). **Nada de esto se carga en la app**: los GLB y las
 fotos son referencia de proporciones y de detalle. Una carpeta por vehículo; las fotos en `images/` con su `images.json`
 (título, fecha, crédito, página de origen y URL de descarga de cada una).

@@ -328,6 +328,11 @@ El usuario pidió **adelantar el modelo 3D** de Surveyor 3 (la información de l
 Con las 20 ilustraciones ya hechas, el usuario pidió **implementar todo el storytelling** como en Opportunity e Ingenuity: tarjetas, checkpoints en el 3D, audios. Hecho: `scripts/data/surveyor3-story.mjs` (20 eventos: 6 antes de la Luna, 11 en el 3D, 3 de legado), `public/models/surveyor3/story.json` (con fuentes de los dossiers), 11 paradas planificadas sobre el terreno lunar (`npm run story-route -- surveyor3`, con los nuevos ajustes opcionales del planificador) y 20 clips de narración. `lib/story.ts` registra la historia como `surveyor-3`; `missions.ts` usa sus checkpoints (se quitaron los de relleno) y `bodies.ts` pasó a hechos reales (sin «demo»). `Journey`/`Comic` ganaron etiquetas genéricas (`skipLabel`, el lugar sale del `story.json`).
 - Verificado en el navegador: cómic de 6 páginas («skip to moon»), 3D con la primera parada, tarjeta con 3 fuentes, subtítulos de la narración y minimapa de 11 paradas, «skip the 3D» y la tarjeta final. `tsc` y `lint` limpios. **Sin probar:** conducir las 11 paradas (hay un tramo de solo 21 u entre dos radios de 14) ni escuchar los 20 clips.
 
+### 43. Limpieza de `public`
+El usuario pidió dejar en `public` **solo lo que se usa**. `public` pasó de **139 MB a 47 MB**. Se borró (todo sigue en git): 5 SVG de plantilla de Next; `images/` (30 fotos de checkpoints antiguos y 2 fotos de vehículos); `narration/` (17 clips de los checkpoints antiguos); en `guide/` 32 clips (26 por checkpoint, `next-*`/`remind-*`, y 6 de Perseverance y SEV; se podó también su `manifest.json`); y de `models/` todos los GLB y el zip de referencia, las fotos PIA de Spirit, InSight y Beagle 2 y las carpetas de SEV, Perseverance, Spirit, InSight y Beagle 2. `SOURCES.md` pasó a `docs/model-sources.md`.
+- **Se queda:** los 3 terrenos STL (los usan las 3 historias), `models/<misión>/{story.json,images,audio}` de Opportunity, Ingenuity y Surveyor 3, los 3 temas de `ambient/`, 30 clips de la guía genérica y de Opportunity, y `public/story/` (visores HTML del equipo).
+- **Trampa conocida:** el código de los checkpoints antiguos sigue ahí, así que `npm run narration` y `npm run guide` volverían a grabar lo borrado (avisado en `narration.md`, `guide.md`, `assets.md` y `CLAUDE.md`).
+
 ## Decisiones técnicas importantes
 
 | Decisión | Motivo |

@@ -1,3 +1,5 @@
+> **Ojo (hito 43):** los clips de `public/narration` se eliminaron (ya no los oye nadie: las historias llevan su propio audio en `public/models/<misión>/audio`). `npm run narration` los **volvería a grabar y gastar créditos**: úsalo con `--dry-run` primero.
+
 # Narración de checkpoints (ElevenLabs, pregrabada)
 
 Al llegar a un checkpoint suena su **narración en inglés**. Los audios se **graban una sola vez** con ElevenLabs

@@ -34,10 +34,9 @@ src/
   app/            layout.tsx (fuentes), page.tsx (→ /moon), [body]/page.tsx (globo), [body]/[vehicle]/page.tsx (escena del rover), globals.css
   components/     Explore + Globe + GlobeLabels + VehicleCard + VehicleView (globo y tarjeta del vehículo abandonado; ExploreLoader/SceneLoader cargan cada vista), Scene (Canvas + overlays), Rover (sigue la ruta), Dust, Tracks, Checkpoints (balizas), CheckpointCard, Timeline (línea de tiempo), Guide + GuideCaption (guía de voz), Minimap, Hud
   lib/            perf (perfil de rendimiento light/full), ui (estilos DOM compartidos), vehicles + vehicles/ (vehículos procedurales de 3 tonos: kit de primitivas y un archivo por vehículo), bodies (mundos + vehículos abandonados), game (estado), terrain (STL → malla + mapa de alturas), route (ruta del vehículo), missions, themes, checkpoints (storytelling + ruta), narration (voz del checkpoint), guide + guide-lines (guía de voz)
-public/models/    STL (terrenos) + una carpeta por vehículo (<id>/: GLB y fotos de referencia, ver SOURCES.md); no se cargan: son la referencia de proporciones de los vehículos procedurales (lib/vehicles/)
-public/images/    checkpoints/ (fotos NASA 16:10); vehicles/ (fotos de referencia, sin uso)
-public/narration/ mp3 pregrabados de cada checkpoint + manifest.json (ElevenLabs)
-public/guide/     mp3 pregrabados de la guía de voz (62 frases) + manifest.json
+public/models/    STL (terrenos) + una carpeta por historia (opportunity/, ingenuity/, surveyor3/: story.json, images/, audio/); los GLB de referencia se eliminaron (hito 43, ver model-sources.md)
+public/guide/     mp3 pregrabados de la guía de voz genérica (30 frases) + manifest.json
+public/story/     visores HTML del equipo (historia y juego de Opportunity)
 public/ambient/   mp3 pregrabados de la música de fondo (moon, mars, timeline) + manifest.json
 scripts/          generate-narration.mjs · generate-guide.mjs · generate-ambient.mjs · lib/tts.mjs (npm run narration / guide / ambient)
 docs/             esta documentación

@@ -1,3 +1,5 @@
+> **Ojo (hito 43):** de `public/guide` se eliminaron las frases por checkpoint (`next-*`, `remind-*`) y las de Perseverance y SEV (no se oyen en ninguna historia). `npm run guide` las **volvería a grabar y gastar créditos**: usa `--dry-run` primero. El catálogo de abajo describe el conjunto anterior.
+
 # Guía de voz («mission control»)
 
 Frases cortas y pregrabadas (en inglés) que acompañan al jugador mientras el vehículo avanza por su ruta o está parado: cuánto
