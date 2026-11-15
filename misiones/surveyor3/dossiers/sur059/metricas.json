@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.36940334999999996,
+  "turnos": 12,
+  "duracion_s": 181.0,
+  "duracion_api_s": 165.3,
+  "tokens": {
+    "input_tokens": 7,
+    "cache_creation_input_tokens": 20419,
+    "cache_read_input_tokens": 39567,
+    "output_tokens": 18616,
+    "output_tokens_details": {
+      "thinking_tokens": 11288
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 20419
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1531,
+      "outputTokens": 34,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001701,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 7,
+      "outputTokens": 18616,
+      "cacheReadInputTokens": 39567,
+      "cacheCreationInputTokens": 20419,
+      "webSearchRequests": 0,
+      "costUSD": 0.36770234999999996,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 11288,
+      "cacheCreationEphemeral5mInputTokens": 20419,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 2,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 7,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.322834,
+    "turnos": 2,
+    "duracion_s": 140.9,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5719,
+        "outputTokens": 40,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.005919,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 10996,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6720,
+        "webSearchRequests": 0,
+        "costUSD": 0.316915,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 8600,
+        "cacheCreationEphemeral5mInputTokens": 6720,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 18,
+      "datos_despues": 18,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 3,
+      "observaciones": "Se conservaron los 18 datos porque todas las citas respaldan adecuadamente sus afirmaciones principales. En el relato reescrito se eliminaron varios detalles presentes en el borrador original que no estaban respaldados por ninguna cita (alicates de corte modificados, trozo de tubo de aluminio, carta de Jaffe a la Sociedad Planetaria, afiliaciones institucionales de Rummel/Allton/Morrison, rango mi"
+    }
+  },
+  "costo_usd_referencia_total": 0.69223735,
+  "costos": {
+    "total_usd": 0.692237,
+    "por_paso": {
+      "investigacion": 0.369403,
+      "revision": 0.322834
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.00762,
+        "entrada": 7250,
+        "salida": 74,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.367702,
+        "entrada": 7,
+        "salida": 18616,
+        "cache_leida": 39567,
+        "cache_escrita": 20419,
+        "razonamiento": 11288
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.316915,
+        "entrada": 3,
+        "salida": 10996,
+        "cache_leida": 0,
+        "cache_escrita": 6720,
+        "razonamiento": 8600
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "ids": [
+    "sur001",
+    "sur005",
+    "sur008",
+    "sur011",
+    "sur015",
+    "sur022",
+    "sur027",
+    "sur031",
+    "sur032",
+    "sur035",
+    "sur016",
+    "sur038",
+    "sur040",
+    "sur045",
+    "sur048",
+    "sur054",
+    "sur055",
+    "sur059",
+    "sur064",
+    "sur066"
+  ],
+  "actos": [
+    {
+      "n": 1,
+      "titulo": "Preparar el camino"
+    },
+    {
+      "n": 2,
+      "titulo": "Viaje y alunizaje"
+    },
+    {
+      "n": 3,
+      "titulo": "Excavar la Luna"
+    },
+    {
+      "n": 4,
+      "titulo": "La visita de Apollo 12"
+    }
+  ],
+  "asignacion": {
+    "sur001": 1,
+    "sur005": 1,
+    "sur008": 1,
+    "sur011": 1,
+    "sur015": 1,
+    "sur022": 2,
+    "sur027": 2,
+    "sur031": 2,
+    "sur032": 2,
+    "sur035": 3,
+    "sur016": 3,
+    "sur038": 3,
+    "sur040": 3,
+    "sur045": 3,
+    "sur048": 4,
+    "sur054": 4,
+    "sur055": 4,
+    "sur059": 4,
+    "sur064": 4,
+    "sur066": 4
+  },
+  "razones": {
+    "sur001": "Origen: NASA aprueba Surveyor y lo asigna al JPL para abrirle el camino a Apollo.",
+    "sur005": "Tensión: fracasan los tres Ranger de bloque II y crece el temor de que Surveyor también falle.",
+    "sur008": "Giro de ingeniería: Surveyor adelgaza a ~950 kg para poder volar en un Atlas-Centaur.",
+    "sur011": "Antecedente: Surveyor 1 logra el primer alunizaje suave de EE. UU. (discutido por cifras de fotos).",
+    "sur015": "Lo distintivo de Surveyor 3: un brazo excavador sustituye a la cámara de aproximación (discutido: investigador principal).",
+    "sur022": "El despegue del Atlas-Centaur AC-12 el 17 abr 1967 (discutido: hora local y masa).",
+    "sur027": "Hito técnico: Canopus se localiza automáticamente por primera vez, sin ayuda desde la Tierra.",
+    "sur031": "Crisis en el descenso: el radar pierde el enlace por reflejos del terreno.",
+    "sur032": "Clímax: los motores no se apagan y la nave rebota dos veces antes de posarse (discutido: cifras de rebote).",
+    "sur035": "Primeras imágenes de TV en menos de una hora: algo visible e ilustrable.",
+    "sur016": "Resultado científico clave: el suelo aguanta, parecido a arena húmeda; Apollo puede aterrizar.",
+    "sur038": "Primer uso de la pala excavadora: la Luna se prueba por dentro.",
+    "sur040": "Imagen icónica: eclipse de Sol por la Tierra visto desde la Luna.",
+    "sur045": "Desenlace: último contacto el 4 may 1967; la noche lunar la apaga.",
+    "sur048": "Giro: Apollo 12 elige el Sitio 7 junto a Surveyor 3.",
+    "sur054": "Hito: el primer aterrizaje de precisión; el Intrepid baja junto a Surveyor 3 (discutido: distancia).",
+    "sur055": "Clímax del legado: Conrad y Bean cortan piezas de Surveyor 3 (discutido: fecha UTC/EE. UU.).",
+    "sur059": "Giro misterioso: ¿una bacteria viva en la cámara? Hallazgo y refutación (discutido).",
+    "sur064": "Resultado de ingeniería: la cámara aguantó 31 meses en la Luna casi sin fallos.",
+    "sur066": "Cierre visual: LRO fotografía Surveyor 3 y el sitio de Apollo 12."
+  },
+  "desviaciones": "Cuotas del prefiltro: aterrizaje 2 en vez de 1 (el descenso fue el momento más tenso), legado 6 en vez de 7. 7 de los 20 eventos están marcados como discutidos; la historia deberá mostrar las dos versiones."
+}

@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.3062298,
+  "turnos": 15,
+  "duracion_s": 152.3,
+  "duracion_api_s": 123.9,
+  "tokens": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 19790,
+    "cache_read_input_tokens": 101631,
+    "output_tokens": 13320,
+    "output_tokens_details": {
+      "thinking_tokens": 5392
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 19790
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1558,
+      "outputTokens": 28,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0016979999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 10,
+      "outputTokens": 13320,
+      "cacheReadInputTokens": 101631,
+      "cacheCreationInputTokens": 19790,
+      "webSearchRequests": 0,
+      "costUSD": 0.3045318,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 5392,
+      "cacheCreationEphemeral5mInputTokens": 19790,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 3,
+    "buscar_papers_ntrs": 1,
+    "leer_pagina": 9,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "3",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "4",
+    "costo_usd_referencia": 0.36701825,
+    "turnos": 2,
+    "duracion_s": 156.7,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 5852,
+        "outputTokens": 34,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0060220000000000004,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 12726,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 6853,
+        "webSearchRequests": 0,
+        "costUSD": 0.36099624999999996,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 10508,
+        "cacheCreationEphemeral5mInputTokens": 6853,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 18,
+      "datos_despues": 17,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 3,
+      "huecos_nuevos": 2,
+      "observaciones": "Se eliminó el dato [17] porque su afirmación dice 12° de pendiente mientras que su propia cita de NSSDC dice 14°; esto también obligó a retirar de la narrativa las referencias a la pendiente y a la ubicación en el Océano de las Tormentas. Se corrigieron en el relato la mención infundada de una pieza en JPL y el uso incorrecto de «en préstamo» para el Smithsonian."
+    }
+  },
+  "costo_usd_referencia_total": 0.67324805,
+  "costos": {
+    "total_usd": 0.673248,
+    "por_paso": {
+      "investigacion": 0.30623,
+      "revision": 0.367018
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.00772,
+        "entrada": 7410,
+        "salida": 62,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.304532,
+        "entrada": 10,
+        "salida": 13320,
+        "cache_leida": 101631,
+        "cache_escrita": 19790,
+        "razonamiento": 5392
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.360996,
+        "entrada": 3,
+        "salida": 12726,
+        "cache_leida": 0,
+        "cache_escrita": 6853,
+        "razonamiento": 10508
+      }
+    }
+  }
+}

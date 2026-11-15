@@ -1,0 +1,56 @@
+# Primer uso de la pala excavadora de Surveyor 3 (~22 abril 1967) (sur038)
+_Generado con Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1. Todo dato lleva fuente; los no verificados están al final._
+
+## Contexto ampliado
+El 20 de abril de 1967 la sonda Surveyor 3 se posó en la superficie lunar. Era la tercera misión de ingeniería de la serie Surveyor, pero la primera en llevar un instrumento capaz de interactuar físicamente con el suelo de otro mundo: el «soil mechanics surface sampler» (muestreador de mecánica de suelos superficial). Este dispositivo reemplazó a la cámara de televisión de aproximación que habían llevado las misiones anteriores.
+
+El muestreador consistía en una cuchara de unos 12 cm de largo por 5 cm de ancho, montada sobre un brazo de tipo pantógrafo de 1,5 metros de longitud. El brazo podía alcanzar hasta 1,5 metros desde la nave y excavar hasta 18 cm de profundidad. Fue diseñado para cavar, raspar y hacer zanjas en la superficie lunar mientras la cámara de televisión a bordo fotografiaba cada operación, de modo que los científicos en la Tierra pudieran estudiar las propiedades del regolito.
+
+Dos días después del alunizaje —aproximadamente el 22 de abril— se activó la pala por primera vez, recibiendo órdenes transmitidas desde la Tierra. Mediante esos comandos, el instrumento cavó cuatro zanjas, realizó cuatro pruebas de carga (bearing tests) y trece pruebas de impacto. Toda la actividad fue registrada por la cámara de televisión de la sonda, que entre el 20 de abril y el 3 de mayo de 1967 transmitió un total de 6 315 imágenes, incluyendo vistas del propio excavador mecánico en funcionamiento, panorámicas del paisaje lunar y tomas de la nave.
+
+Los resultados de estas pruebas fueron de enorme importancia para el programa Apolo. Los científicos concluyeron que el suelo lunar tenía una consistencia similar a la arena húmeda, con una resistencia a la carga de aproximadamente 10 libras por pulgada cuadrada (equivalentes a unos 98 kilopascales). En otras palabras, el regolito era lo suficientemente firme como para soportar el peso de un módulo lunar Apollo, exactamente la información que la NASA necesitaba antes de enviar astronautas.
+
+En total, el muestreador de superficie operó durante 18 horas y 22 minutos, repartidas en diez sesiones separadas a lo largo de la misión. Cabe señalar que existe una discrepancia entre fuentes: mientras que la NASA (science.nasa.gov) reporta cuatro pruebas de carga, la Wikipedia indica siete; el resto de las cifras (zanjas e impactos) coincide en ambas fuentes.
+
+Más de dos años después, los astronautas de la misión Apollo 12 recuperaron varias piezas de Surveyor 3 y las trajeron de vuelta a la Tierra, incluyendo la propia cuchara del muestreador. Hoy en día, esa cuchara se encuentra en exhibición en el JPL (Laboratorio de Propulsión a Chorro), como testimonio tangible del primer experimento de excavación realizado en la Luna.
+
+## Datos reales (citas verificadas en el texto)
+- La pala superficial (surface sampler) fue usada dos días después del alunizaje del 20 de abril de 1967, es decir, aproximadamente el 22 de abril. — [nssdc.gsfc.nasa.gov](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) · «Initial photos were received within an hour of landing and the surface sampler was used two days later.» · confianza alta
+- El brazo pantógrafo de la pala podía extenderse hasta 1,5 metros desde la nave. — [nssdc.gsfc.nasa.gov](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) · «A surface sampler, consisting of a 12 cm long by 5 cm wide scoop mounted on a 1.5 meter pantograph arm, replaced the approach television camera.» · confianza alta
+- La cuchara de la pala medía aproximadamente 12 cm de largo por 5 cm de ancho. — [nssdc.gsfc.nasa.gov](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) · «A surface sampler, consisting of a 12 cm long by 5 cm wide scoop mounted on a 1.5 meter pantograph arm.» · confianza alta
+- La pala operó un total de 18 horas y 22 minutos, abriendo zanjas de hasta 18 cm de profundidad. — [nssdc.gsfc.nasa.gov](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) · «The lunar sampler was operated for a total of 18 hours, 22 minutes, digging trenches as deep as 18 cm.» · confianza alta
+- Mediante órdenes enviadas desde la Tierra, la pala cavó cuatro zanjas, realizó cuatro pruebas de carga y trece pruebas de impacto. — [science.nasa.gov](https://science.nasa.gov/mission/surveyor-3/) · «Via commands from Earth, the probe dug four trenches and performed four bearing tests and thirteen impact tests.» · confianza alta
+- El suelo lunar resultó tener una consistencia similar a la arena húmeda, con una resistencia a la compresión de aproximadamente 10 psi (98 kilopascales). — [science.nasa.gov](https://science.nasa.gov/mission/surveyor-3/) · «scientists concluded that lunar soil had a consistency similar to wet sand, with a bearing strength of about 10 pounds per square inch (0.7 kilograms per square centimeter, or 98 kilopascals)— in other words, solid enough to support an Apollo Lunar Module.» · confianza alta
+- Surveyor 3 fue la primera misión de la serie en llevar un instrumento de muestreo del suelo superficial. — [science.nasa.gov](https://science.nasa.gov/mission/surveyor-3/) · «Surveyor 3 was the third engineering flight of the series, but for the first time carried a surface-sampling instrument that could reach up to 5 feet (1.5 meters) from the lander and could dig up to 7 inches (18 centimeters) deep.» · confianza alta
+- El muestreador fue diseñado para cavar, raspar y hacer zanjas en la superficie lunar, y los resultados se observaban con la cámara de televisión. — [en.wikipedia.org](https://en.wikipedia.org/wiki/Surveyor_3) · «The soil mechanics surface sampler was designed to dig, scrape, and trench the lunar surface and to transport lunar surface material while being photographed so that the properties of the lunar surface could be determined.» · confianza media
+- El tiempo total de operación del muestreador fue de 18 horas y 22 minutos en diez sesiones separadas. — [en.wikipedia.org](https://en.wikipedia.org/wiki/Surveyor_3) · «The surface sampler performed seven bearing tests, four trench tests, and thirteen impact tests. The total operating time was 18 hours, 22 minutes on ten separate occasions.» · confianza media
+- La cuchara recuperada por Apollo 12 se encuentra actualmente expuesta en el JPL. — [en.wikipedia.org](https://en.wikipedia.org/wiki/Surveyor_3) · «The scoop was also returned to Earth by the Apollo 12 astronauts and is currently on display at JPL.» · confianza media
+- La cámara de televisión registró vistas del excavador mecánico en funcionamiento y transmitió un total de 6315 imágenes entre el 20 de abril y el 3 de mayo de 1967. — [en.wikipedia.org](https://en.wikipedia.org/wiki/Surveyor_3) · «The camera returned 6315 pictures between April 20 and May 3, 1967, including views of the spacecraft itself, panoramic lunar surveys, views of the mechanical surface digger at work.» · confianza media
+
+## Fuentes nuevas
+- [Surveyor 3 (NSSDC Master Catalog 1967-035A)](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) · oficial NASA/JPL
+- [Surveyor 3 — NASA Science](https://science.nasa.gov/mission/surveyor-3/) · oficial NASA/JPL
+- [Surveyor 3 — Wikipedia (English)](https://en.wikipedia.org/wiki/Surveyor_3) · comunitaria
+- [Soil mechanics surface sampler — Lunar surface test and performance (NTRS 19670023255)](https://ntrs.nasa.gov/citations/19670023255) · científica
+- [Surveyor 3 — JPL Missions](https://www.jpl.nasa.gov/missions/surveyor-3/) · oficial NASA/JPL
+
+## Contradicciones
+- Número de pruebas de carga (bearing tests): science.nasa.gov indica 'four bearing tests' (https://science.nasa.gov/mission/surveyor-3/), mientras que Wikipedia indica 'seven bearing tests' (https://en.wikipedia.org/wiki/Surveyor_3). Ambas fuentes concuerdan en 4 pruebas de trinchera y 13 de impacto.
+- Número total de imágenes de TV: NSSDC indica 6326 imágenes (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A), mientras que Wikipedia indica 6315 imágenes (https://en.wikipedia.org/wiki/Surveyor_3).
+- El evento original afirma '4 pruebas de carga' (alineándose con science.nasa.gov, dato [4]), pero el dato [8] —tomado de Wikipedia (https://en.wikipedia.org/wiki/Surveyor_3)— reporta 'seven bearing tests'. El borrador ya señalaba la discrepancia entre fuentes, pero no indicaba explícitamente que el evento original toma partido por la cifra de science.nasa.gov y contradice la de Wikipedia.
+
+## Huecos
+- No se encontró la fecha y hora exactas del primer uso de la pala: solo se sabe que fue 'dos días después' del alunizaje del 20 de abril de 1967 (la fecha ~22 abr se deduce, no está documentada explícitamente).
+- No fue posible acceder al texto completo del informe preliminar de la NASA sobre Surveyor III (NTRS 19670023255) donde se describen los datos directos del experimento de mecánica de suelos; solo se pudo leer su ficha de metadatos.
+- Las mediciones de corriente del motor y de fuerzas aplicadas a la superficie no se obtuvieron debido al estado de la telemetría de la nave tras el aterrizaje (según Wikipedia); no se encontró confirmación de esto en fuentes primarias oficiales leídas.
+- No se confirmó en ninguna fuente leída la secuencia temporal exacta entre las cuatro zanjas, las pruebas de carga y las de impacto, ni en qué días específicos se realizó cada grupo de pruebas.
+- El paper científico de Scott, Roberson y Clary (1967) podría contener datos más precisos de resistencia y profundidad que no fue posible verificar al no estar disponible el texto completo.
+- El relato del borrador incluía detalles del alunizaje accidentado (radar confundido por rocas reflectantes, motores que no se apagaron, dos rebotes) que no están respaldados por ninguna de las fuentes citadas en el dossier; tampoco el evento original los menciona, así que se eliminaron del contexto.
+- El borrador mencionaba que Apollo 12 aterrizó 'a unos 180 metros' de Surveyor 3 y nombraba a los astronautas Pete Conrad y Alan Bean, pero ninguno de los datos recopilados (0-10) contiene esas cifras ni esos nombres; si se desea incluirlos, haría falta documentarlos con fuentes.
+
+## Ideas visuales
+- Diagrama del muestreador de suelo: cuchara de 12 × 5 cm montada en el brazo pantógrafo de 1,5 m, con cotas y escala humana para referencia.
+- Secuencia en tres viñetas de la pala excavando una zanja de hasta 18 cm de profundidad en el regolito lunar, inspirada en las imágenes reales transmitidas por la cámara de televisión.
+- Vista general de Surveyor 3 en la superficie lunar con el brazo extendido hacia el suelo, mientras la cámara de TV registra la operación (basado en datos [7] y [10]).
+- Infografía de resultados: comparación visual de la consistencia del suelo lunar (≈98 kPa) con arena húmeda terrestre, mostrando que puede soportar un módulo lunar Apollo.
+- La cuchara del muestreador expuesta en una vitrina del JPL, con una placa que indica su origen en Surveyor 3 y su recuperación por Apollo 12 (dato [9]).

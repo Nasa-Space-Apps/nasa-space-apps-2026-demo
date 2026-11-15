@@ -1,0 +1,186 @@
+{
+  "evento_id": "sur055",
+  "titulo": "Conrad y Bean cortan piezas de Surveyor 3 en la segunda caminata lunar (EVA-2, 20 nov 1969)",
+  "contexto_ampliado": "El 20 de noviembre de 1969, a las 03:54:45 GMT, los astronautas Pete Conrad y Alan Bean salieron del módulo lunar Intrepid para realizar la segunda caminata lunar (EVA-2) de la misión Apollo 12. Intrepid había logrado aterrizar a solo 155 metros de Surveyor 3, una sonda robótica que llevaba más de dos años en la superficie de la Luna, demostrando la capacidad de Apollo para efectuar alunizajes de precisión.\n\nDespués de recorrer la zona recolectando muestras geológicas, los astronautas alcanzaron Surveyor 3 a las 06:22 GMT. Lo que siguió fue una operación de desmontaje cuidadosamente planificada. Pete Conrad utilizó cortadores de pernos para retirar la cámara de televisión de la sonda, muestras de cableado y un tubo de aluminio sin pintar situado cerca del puntal de la pata número 2 de la nave. Además, como pieza extra, Conrad logró cortar la pala del brazo muestreador de suelo (SMSS) y guardarla en su bolsa de muestras. Los astronautas también intentaron desprender fragmentos de los espejos de control térmico montados sobre las cajas de electrónica de Surveyor, pero solo obtuvieron pequeñas esquirlas de vidrio y ese objetivo quedó sin cumplir.\n\nEn total, Conrad y Bean permanecieron 33 minutos junto a Surveyor 3. Las piezas recuperadas pesaban aproximadamente 10 kg e incluían la cámara de televisión, la pala del muestreador de suelo, un tubo de aluminio sin pintar, otro tubo recubierto de pintura blanca inorgánica y un segmento de cable de televisión envuelto en plástico aluminizado. La EVA-2 completa duró 3 horas y 49 minutos, y junto con la primera caminata, el tiempo total fuera del módulo sumó 7 horas y 45 minutos.\n\nLas piezas de Surveyor 3 regresaron a la Tierra acompañadas de 34 kilogramos de rocas y suelo lunar. Esto dio a ingenieros y científicos la oportunidad de examinar en laboratorio un equipo que había estado expuesto durante años al vacío, la radiación y los ciclos térmicos extremos de la Luna. Un factor que complicó el análisis fue que el propio aterrizaje del Apollo 12 había proyectado polvo lunar que alcanzó la sonda a 155 metros de distancia, contaminándola parcialmente.\n\nUn total de 36 estudios, realizados por 80 investigadores, analizaron los componentes devueltos. Los resultados fueron notablemente positivos: a pesar de haber soportado 32 ciclos de día y noche lunares, ninguna pieza presentó fallos ni efectos ambientales adversos graves. La pintura se había oscurecido por una capa de polvo lunar y por la exposición a la radiación, pero la tecnología había resistido bien. Benjamin Milwitzky, gerente del programa Surveyor, concluyó que el estado de la tecnología —incluso tal como existía antes del lanzamiento de Surveyor 3 en 1966— era capaz de producir hardware fiable para instalaciones lunares y planetarias de larga duración.\n\nUno de los hallazgos más debatidos fue el aislamiento de la bacteria Streptococcus mitis en el interior espumoso de la cámara de televisión. La posibilidad de que un microorganismo hubiera sobrevivido más de dos años en la Luna habría sido un descubrimiento extraordinario. Sin embargo, se ha sugerido que la muestra pudo haberse contaminado después del regreso de la cámara a la Tierra, lo que puso en evidencia la necesidad de protocolos de manipulación mucho más rigurosos para futuras investigaciones de hardware espacial.\n\nHoy en día, parte de ese legado material sigue accesible al público. La cámara de televisión de Surveyor 3 se exhibe en el Museo Nacional del Aire y el Espacio Smithsonian en Washington D.C., y la pala del muestreador de suelo se encuentra en préstamo de la NASA en el Cosmosphere de Hutchinson, Kansas. Estos objetos representan un caso pionero de recuperación y análisis de artefactos humanos dejados en otro mundo.",
+  "datos_reales": [
+    {
+      "afirmacion": "La EVA-2 de Apollo 12 comenzó a las 03:54:45 GMT del 20 de noviembre de 1969; Conrad y Bean alcanzaron Surveyor 3 a las 06:22 GMT.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "EVA 2 started at 03:54:45 GMT on November 20... After reaching Surveyor 3 at 06:22 GMT, Al Bean took a series of photographs of selected components as Pete Conrad read off their checklist.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Conrad y Bean permanecieron 33 minutos junto a Surveyor 3 durante la EVA-2.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "After spending 33 minutes at Surveyor 3, Conrad and Bean then proceeded out of Surveyor Crater and back to Intrepid to wrap up EVA 2 after a 1.8 kilometer traverse.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Pete Conrad utilizó cortadores de pernos modificados para retirar la cámara de televisión, muestras de cableado y un tubo de aluminio sin pintar de Surveyor 3.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "Conrad proceeded to use the bolt cutters to remove Surveyor's television camera as well as samples of cabling and an unpainted aluminum tube near the landing strut for Leg 2.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Como pieza adicional no planeada originalmente, Conrad cortó la pala del brazo muestreador de suelo (SMSS) de Surveyor 3 y la guardó en su bolsa de muestras.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "As a bonus, Conrad was able to cut the scoop from the end of Surveyor's SMSS and slip it into his sample bag.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los astronautas retiraron aproximadamente 10 kg de piezas de Surveyor 3, incluyendo la cámara de televisión, para su examen posterior en la Tierra.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "removing about 10 kg of parts from the spacecraft, including the TV camera, for later examination back on Earth.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las piezas recuperadas incluyeron la pala del muestreador de suelo, un tubo de aluminio sin pintar, otro tubo con pintura blanca inorgánica y un segmento de cable de televisión envuelto en plástico aluminizado.",
+      "fuente_url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+      "cita": "the astronauts collected a scoop from the probe's soil mechanics-surface sampler, a section of unpainted aluminum tube from a strut supporting the Surveyor's radar altimeter and doppler velocity sensor, another section of aluminum tube that was coated with inorganic white paint and a segment of television cable wrapped in aluminized plastic film.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El módulo lunar Intrepid aterrizó a 155 metros de Surveyor 3, demostrando la capacidad de alunizaje de precisión de Apollo.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "Intrepid landed at 06:54:36 GMT on November 19 just beyond the rim of Surveyor Crater only 155 meters from Surveyor 3. Apollo 12 had made the second successful manned landing on the lunar surface and had demonstrated the ability to make a precision landing.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los astronautas intentaron desprender muestras de los espejos de control térmico de las cajas de electrónica de Surveyor, pero solo obtuvieron pequeñas esquirlas de vidrio.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "The moonwalkers tried to flex the sheet metal on the top of the pair of Surveyor's thermally controlled electronics boxes in hopes of debonding part of the mirrors mounted on them. Unfortunately, the mirrors only shed fine slivers of glass, so no samples were gathered as hoped.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Un total de 36 estudios realizados por 80 investigadores analizaron los componentes de Surveyor 3 devueltos por Apollo 12.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "A total of 36 studies by 80 investigators were made.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "A pesar de 32 ciclos día-noche lunares, los componentes de Surveyor 3 estaban en condiciones notablemente buenas: no se encontraron fallos ni efectos ambientales adversos graves.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "Despite exposure to 32 day-night cycles on the lunar surface, the components of Surveyor 3 were in remarkably good condition. While the surface paint was darkened by a thin coating of lunar dust as well as radiation exposure, no failures or serious adverse environmental effects were found.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El aterrizaje del módulo lunar Apollo 12 proyectó polvo que llegó hasta Surveyor 3, a pesar de los 155 metros de distancia, contaminando la nave.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "the landing of Apollo 12 sandblasted the lander despite the 155-meter distance. Such dust contamination will be an issue in any future investigation of lunar hardware.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se aisló la bacteria Streptococcus mitis del interior espumoso de la cámara de televisión de Surveyor 3; estudios posteriores sugirieron que fue contaminación post-regreso, no supervivencia lunar.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "A common bacterium, Streptococcus mitis, was isolated from a sample of foam taken from the interior of the television camera... It has been suggested that the sample could have been contaminated after the camera's return.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Apollo 12 regresó con 34 kilogramos de muestras lunares además de las piezas de Surveyor 3.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "With the recovered Surveyor parts and 34 kilograms of lunar samples stowed, Intrepid lifted off the lunar surface on time at 14:25:47 GMT on November 20 to begin the journey home.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara de televisión de Surveyor 3 se encuentra actualmente en exhibición en el Museo Nacional del Aire y el Espacio Smithsonian en Washington D.C.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The Surveyor 3 camera is now on display in the Smithsonian National Air and Space Museum in Washington, D.C.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La pala del muestreador de suelo de Surveyor 3 se exhibe en el Cosmosphere de Hutchinson, Kansas, en préstamo de la NASA.",
+      "fuente_url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+      "cita": "The Cosmosphere space museum in Hutchinson, Kansas exhibits the scoop from the soil sampler, which is also on loan from NASA.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El gerente del programa Surveyor, Benjamin Milwitzky, concluyó que los estudios demostraban que la tecnología era capaz de producir hardware fiable para instalaciones lunares y planetarias de larga duración.",
+      "fuente_url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+      "cita": "Milwitzky to conclude, 'that the state of technology, even as it existed [prior to the Surveyor 3 launch in 1966], is capable of producing reliable hardware that makes feasible long-life lunar and planetary installations.'",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La EVA-2 completa duró 3 horas y 49 minutos, sumando un total de 7 horas 45 minutos entre las dos caminatas lunares de Apollo 12.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "The EVA ended after 3 hours and 49 minutes bringing the mission's total to 7 hours and 45 minutes – almost three times longer than the Apollo 11 EVA.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Surveyor 3 (1967-035A) — NSSDC",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "editor": "NASA NSSDC",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "50 years on, where are the Surveyor 3 parts retrieved by Apollo 12?",
+      "url": "https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html",
+      "editor": "collectSPACE",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "The Apollo 12 Visit to Surveyor 3: A Preview of Space Archaeology",
+      "url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "editor": "Drew Ex Machina",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Apollo 12 and Surveyor 3 (fotografía y descripción)",
+      "url": "https://science.nasa.gov/resource/apollo-12-and-surveyor-3/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Analysis of Surveyor 3 Material and Photographs Returned By Apollo 12 (NASA-SP-284)",
+      "url": "https://ntrs.nasa.gov/citations/19720019081",
+      "editor": "NASA / NTRS",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "DISTANCIA LM–SURVEYOR 3: Drew Ex Machina indica '155 meters' (https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology), mientras que NSSDC dice 'within about 180 m' (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) y NASA Science dice 'about 600 feet' (~183 m) (https://science.nasa.gov/resource/apollo-12-and-surveyor-3/).",
+    "MASA DE LAS PIEZAS RECUPERADAS: NSSDC indica 'about 10 kg' (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A), mientras que collectSPACE dice '20 pounds (9 kilograms)' (https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html).",
+    "NÚMERO DE INVESTIGADORES/ESTUDIOS: collectSPACE cita '40 teams of engineering and scientific investigators' (https://www.collectspace.com/news/news-112219a-apollo-12-surveyor-parts-50-years.html), mientras que Drew Ex Machina indica 'A total of 36 studies by 80 investigators' (https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology).",
+    "FECHA DE LA EVA-2 (zona horaria): La caminata comenzó a las 03:54 GMT del 20 de noviembre de 1969, lo que equivale al 19 de noviembre en hora del este de EE.UU. NSSDC y Drew Ex Machina usan el 20 nov (GMT); NASA Science implica el 19 nov (EST). Véase nota original del evento.",
+    "PENDIENTE DEL CRÁTER: El dato [17] del borrador afirma que Surveyor 3 descansaba en una pendiente de 12°, pero su propia cita textual de NSSDC (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) dice literalmente '14 degree slope'. La narrativa del borrador también usa 12° incorrectamente. Se elimina el dato [17] por esta discrepancia.",
+    "PRÉSTAMO vs. EXHIBICIÓN (Smithsonian): La narrativa del borrador dice que la cámara está 'en préstamo' al Smithsonian, pero la cita de NSSDC para el dato [13] (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) solo dice 'on display', sin mencionar préstamo. El término 'on loan' solo aparece confirmado para el Cosmosphere en el dato [14].",
+    "PIEZA EN JPL: La narrativa del borrador afirma que 'otra pieza del brazo muestreador se puede ver en el Laboratorio de Propulsión a Chorro (JPL) en Pasadena, California', pero ningún dato del dossier respalda esta afirmación."
+  ],
+  "huecos": [
+    "No se pudo acceder al informe oficial de misión Apollo 12 (MSC-01855, marzo 1970) ni a la publicación especial NASA-SP-284 (1972) directamente desde las herramientas disponibles; los datos de esos documentos solo se conocen a través de fuentes secundarias.",
+    "No se confirmó la masa exacta de cada pieza individual recuperada (cámara, pala, tubos, cable por separado).",
+    "No se confirmó si los cortadores de pernos se usaron para todos los componentes o solo para la cámara y la pala.",
+    "No se pudo verificar el tiempo exacto dedicado a cada operación individual dentro de los 33 minutos en Surveyor 3.",
+    "No se confirmó la ubicación actual de los tubos de aluminio y los tramos de cable recuperados (solo se verificó el destino de la cámara y la pala del muestreador).",
+    "El informe de análisis bacteriológico definitivo (que concluye sobre la contaminación post-regreso) no pudo ser consultado directamente; solo se conoce su conclusión a través de fuentes secundarias.",
+    "El evento original implica que los cortadores de pernos se usaron para retirar TODOS los componentes (cámara, cableado, tubo y pala), pero el dato [2] solo confirma su uso para la cámara, el cableado y el tubo de aluminio; el dato [3] dice que Conrad 'was able to cut the scoop' sin especificar la herramienta empleada.",
+    "El dato [2] describe los cortadores como 'modificados', pero la cita de Drew Ex Machina solo dice 'bolt cutters' sin el adjetivo 'modified'; el evento original tampoco dice 'modificados'. No hay fuente en el dossier que confirme esta característica."
+  ],
+  "ideas_visuales": [
+    "El módulo lunar Intrepid posado en la superficie lunar con Surveyor 3 visible a 155 metros de distancia, dentro de un cráter (datos [6], [10]).",
+    "Pete Conrad usando cortadores de pernos para separar la cámara de televisión de Surveyor 3, con Alan Bean fotografiando la operación (datos [0], [2]).",
+    "Conrad introduciendo la pala del muestreador de suelo en su bolsa de muestras tras cortarla del brazo SMSS (dato [3]).",
+    "Los astronautas intentando flexionar la chapa metálica sobre las cajas de electrónica de Surveyor, con pequeñas esquirlas de vidrio desprendiéndose (dato [7]).",
+    "Las cinco piezas recuperadas de Surveyor 3 (cámara, pala, dos tubos, cable) dispuestas junto a la bolsa de muestras, representando los ~10 kg totales (datos [4], [5]).",
+    "La cámara de televisión de Surveyor 3 exhibida en una vitrina del Museo Smithsonian en Washington D.C. (dato [13])."
+  ],
+  "datos_no_verificados": []
+}

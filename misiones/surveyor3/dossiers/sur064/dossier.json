@@ -1,0 +1,167 @@
+{
+  "evento_id": "sur064",
+  "titulo": "La cámara de Surveyor 3 aguantó 31 meses en la Luna: resultados de ingeniería casi sin fallos (análisis SP-284, 1972)",
+  "contexto_ampliado": "La sonda Surveyor 3, fabricada por Hughes Aircraft, fue visitada en noviembre de 1969 por los astronautas de Apollo 12, Pete Conrad y Alan Bean. Se trató de un hecho histórico sin precedentes: hasta el día de hoy, Surveyor 3 sigue siendo la única sonda visitada por seres humanos en otro mundo. Los astronautas desmontaron varios componentes de la nave y trajeron de regreso a la Tierra unos 10 kilogramos de piezas, incluyendo su cámara de televisión. El objetivo era estudiar los efectos de la exposición prolongada al duro entorno lunar sobre materiales y objetos fabricados por el ser humano.\n\nLa cámara había permanecido en la superficie lunar durante aproximadamente dos años y medio —947 días exactos—, soportando 32 noches lunares de dos semanas cada una, con temperaturas que descendían por debajo de −200 °F (−130 °C). Al llegar a la Tierra, fue enviada a Hughes Aircraft Company para estudios detallados y desmontaje.\n\nUno de los efectos más visibles fue el cambio de color: las superficies blancas de la nave se habían vuelto de tono bronceado (tan). Al examinar de cerca el espejo de la cámara, se descubrieron patrones de interferencia óptica. La investigación determinó que la decoloración general de las superficies se debía a contaminación por polvo lunar y daño por radiación.\n\nEn cuanto al estado mecánico y funcional, los resultados fueron notables. La mayoría de los componentes principales de la cámara estaban funcionales y sin daños. Los cambios observados se atribuyeron a extremos de temperatura, impactos de micrometeoritos y errores de fabricación. Sin embargo, las evidencias de impacto de micrometeoritos fueron muy escasas, y no se encontró evidencia significativa de soldadura en frío, un fenómeno preocupante en el vacío espacial donde los metales pueden fusionarse entre sí. En términos generales, las anomalías halladas se atribuyeron mayoritariamente a causas distintas de la exposición al entorno lunar.\n\nLa pala de muestreo del suelo recuperada también se encontraba en buen estado, con poco cambio más allá de un desvanecimiento del color blanco de la pintura provocado por la radiación solar. Estos hallazgos mostraban que la tecnología de la época había resistido de forma sorprendente las condiciones extremas de la superficie lunar.\n\nLos resultados completos de este análisis fueron publicados por la NASA en 1972 en la Special Publication SP-284, titulada «Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12». Esta publicación constituyó la primera documentación sistemática de los efectos de una exposición prolongada al entorno lunar sobre equipos terrestres. Hoy, la cámara de televisión de Surveyor 3 se encuentra en exhibición permanente en el Museo Nacional del Aire y el Espacio en Washington, D.C.",
+  "datos_reales": [
+    {
+      "afirmacion": "Los astronautas de Apollo 12 trajeron de regreso unos 10 kg de piezas de Surveyor 3, incluyendo la cámara de televisión.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "they brought back about 22 pounds (10 kg) of parts of the Surveyor to the Earth, including its TV camera",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El análisis de la cámara mostró que resistió 947 días en el vacío del espacio, incluyendo 32 noches lunares con temperaturas por debajo de −200 °F (−130 °C), y se recuperó en buen estado.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Analysis of the camera found that it withstood 947 days in the vacuum of space, including 32 two-week lunar nights with temperatures dropping below −200 °F (−130 °C), in good condition.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La mayoría de los componentes principales de la cámara estaban funcionales y sin daños; algunos cambios se debieron a extremos de temperatura, impactos de micrometeoritos y errores de fabricación.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Most major components were functional and undamaged. Some changes were caused by temperature extremes, micrometeorite strikes, and manufacturing errors.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La pala de muestreo del suelo recuperada también estaba en buen estado, con poco cambio más allá de un desvanecimiento del color blanco inducido por el Sol.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "The recovered sampler scoop was also in good condition with little change other than some sun-induced fading of the paint.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "No se encontró evidencia significativa de soldadura en frío en la cámara; las anomalías se atribuyeron principalmente a causas distintas de la exposición lunar.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19710024418",
+      "cita": "No significant evidence of cold welding was observed, and the anomalies were largely attributable to causes other than lunar exposure.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se encontraron muy pocas evidencias de impacto de micrometeoritos en la cámara de Surveyor 3.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19710024418",
+      "cita": "Very little evidence of micrometeoroid impact was noted.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La decoloración de las superficies de la cámara se debió a contaminación por polvo lunar y daño por radiación.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19710024418",
+      "cita": "Discoloration of material surfaces -- one of the major effects noted--was found to be due to lunar dust contamination and radiation damage.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara de televisión de Surveyor 3 había estado en la Luna durante 2 años y medio antes de ser traída de regreso por los astronautas de Apollo XII.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19710024418",
+      "cita": "the Surveyor III television camera, which resided on the moon for 2 and 1/2 years before being brought back to earth by the Apollo XII astronauts.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara fue enviada a Hughes Aircraft Company para estudios detallados y desmontaje.",
+      "fuente_url": "https://www.nature.com/articles/234210b0",
+      "cita": "The camera was then shipped to Hughes Aircraft Company for detailed studies and disassembly.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las superficies blancas de la nave Surveyor 3 se habían vuelto de color bronceado (tan) tras su exposición en la Luna.",
+      "fuente_url": "https://www.nature.com/articles/234210b0",
+      "cita": "They noticed that the white surfaces of the spacecraft had become tan.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se encontraron patrones de interferencia óptica en el espejo de la cámara de Surveyor 3.",
+      "fuente_url": "https://www.nature.com/articles/234210b0",
+      "cita": "On close examination, optical interference patterns were found on the camera mirror.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las piezas recuperadas se devolvieron para el estudio de los efectos de la exposición prolongada al duro entorno lunar sobre objetos fabricados por el ser humano.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Several components of the Surveyor 3 lander were collected and returned to the Earth for study of the long-term exposure effects of the harsh lunar environment on human-made objects and materials.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA publicó el análisis de las piezas de Surveyor 3 en la Special Publication SP-284 en 1972.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19720019081",
+      "cita": "Postflight analysis of parts from Surveyor 3 spacecraft, lunar material, and photographs brought back on Apollo 12 flight",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Surveyor 3 fue fabricado por Hughes Aircraft.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Manufacturer: Hughes Aircraft",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Test and Evaluation of the Surveyor 3 Television Camera Returned from the Moon by Apollo 12 (NTRS 19710024418)",
+      "url": "https://ntrs.nasa.gov/citations/19710024418",
+      "editor": "NASA (Headquarters)",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Analysis of Surveyor 3 Material and Photographs Returned By Apollo 12 – SP-284 (NTRS 19720019081)",
+      "url": "https://ntrs.nasa.gov/citations/19720019081",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 3 – Wikipedia (English)",
+      "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "editor": "Wikipedia contributors",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Organic Analyses of Selected Areas of Surveyor III recovered on the Apollo 12 Mission (Nature, 1971)",
+      "url": "https://www.nature.com/articles/234210b0",
+      "editor": "Nature Publishing Group",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "La duración de la estancia de Surveyor 3 en la Luna se expresa de forma ligeramente distinta en las fuentes: Nature (https://www.nature.com/articles/234210b0) dice '31 months', el NTRS 19710024418 (https://ntrs.nasa.gov/citations/19710024418) dice '2 and 1/2 years', y Wikipedia (https://en.wikipedia.org/wiki/Surveyor_3) dice '947 days'. Las tres cifras son esencialmente equivalentes (~31 meses) pero la imprecisión de '2 and 1/2 years' podría interpretarse como 30 meses. No hay contradicción material, pero la precisión varía entre fuentes.",
+    "El evento original afirma que 'ningún fallo se debió principalmente al entorno lunar, salvo los causados por ciclos térmicos'. Sin embargo, el dato [3] (https://en.wikipedia.org/wiki/Surveyor_3) señala que algunos cambios se debieron a 'temperature extremes, micrometeorite strikes, and manufacturing errors', mencionando impactos de micrometeoritos como causa de cambios además de los ciclos térmicos. Aunque el dato [6] (https://ntrs.nasa.gov/citations/19710024418) minimiza la evidencia de micrometeoritos ('very little evidence'), la mención en [3] amplía las causas lunares más allá de los solos ciclos térmicos que indica el evento original."
+  ],
+  "huecos": [
+    "No fue posible leer el texto completo del PDF del SP-284 (NASA-SP-284, NASA-19720019081.pdf), por lo que los datos específicos del evento—40 equipos de investigadores, ~275 tareas de análisis y la duración de 16 meses del estudio—no pudieron verificarse directamente en el texto del documento original.",
+    "La conclusión explícita de que el estudio 'probó que la tecnología de la época permitía instalaciones lunares de larga duración' aparece en el evento pero no fue encontrada citada en ninguna fuente accesible durante la investigación.",
+    "No se pudo acceder al contenido del capítulo III del SP-284 sobre la parte de ingeniería de Hughes Aircraft para verificar los detalles específicos de las tareas de análisis.",
+    "No se verificó en texto leído el nombre concreto de los investigadores responsables del análisis de ingeniería en Hughes Aircraft.",
+    "El evento original menciona específicamente que 'la electrónica, la óptica, los mecanismos y los lubricantes estaban en general en buen estado'; ninguna fuente del dossier desglosa estas cuatro categorías (electrónica, óptica, mecanismos, lubricantes) de forma individual. El dato [3] solo dice 'most major components were functional and undamaged'.",
+    "El evento original califica la conclusión de ingeniería como 'no espectacular'; esta caracterización textual no aparece respaldada en ninguna de las citas del dossier.",
+    "El evento original atribuye los efectos observados exclusivamente a 'ciclos térmicos' como causa lunar, pero las fuentes consultadas no usan esa formulación precisa; el dato [3] habla de 'temperature extremes' y el dato [5] dice que las anomalías eran 'largely attributable to causes other than lunar exposure', sin aislar los ciclos térmicos como la única excepción."
+  ],
+  "ideas_visuales": [
+    "Vista de los astronautas Pete Conrad y Alan Bean junto a la sonda Surveyor 3 en la superficie lunar, noviembre de 1969 (dato [0]).",
+    "Primer plano de la cámara de televisión de Surveyor 3 con sus superficies blancas convertidas en tono bronceado (tan) tras 31 meses de exposición lunar (datos [8], [10]).",
+    "Imagen de detalle del espejo de la cámara mostrando patrones de interferencia óptica causados por polvo lunar y radiación (datos [7], [11]).",
+    "La cámara siendo examinada y desmontada en las instalaciones de Hughes Aircraft Company (dato [9]).",
+    "La cámara de televisión de Surveyor 3 en su vitrina de exhibición permanente en el Museo Nacional del Aire y el Espacio, Washington, D.C. (dato [14])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Surveyor 3 es la única sonda visitada por seres humanos en otro mundo; los astronautas Pete Conrad y Alan Bean la visitaron en noviembre de 1969.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Surveyor 3 was visited by Apollo 12 astronauts Pete Conrad and Alan Bean in November 1969, and remains the only probe visited by humans on another world.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La cámara de televisión de Surveyor 3 está en exhibición permanente en el Museo Nacional del Aire y el Espacio en Washington, D.C.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "its TV camera, which is now on permanent display in the National Air and Space Museum in Washington, D.C.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}

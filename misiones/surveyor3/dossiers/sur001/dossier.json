@@ -1,0 +1,167 @@
+{
+  "evento_id": "sur001",
+  "titulo": "NASA aprueba Surveyor y lo asigna al JPL (primavera de 1960)",
+  "contexto_ampliado": "En mayo de 1960 se autorizó el proyecto Surveyor, cuya gestión recayó en el Laboratorio de Propulsión a Chorro (JPL) de la NASA, ubicado en Pasadena, California. Así arrancaba uno de los programas más importantes de la exploración lunar robótica, que con el tiempo se convertiría en precursor directo de las misiones tripuladas Apollo.\n\nLa versión original del programa era mucho más ambiciosa que la que finalmente se ejecutó. La NASA contemplaba entregar más de dos docenas de instrumentos científicos a la superficie de la Luna, con un primer lanzamiento previsto para 1963. Se diseñaron dos variantes de nave: el Surveyor A, un módulo de alunizaje con una masa de unos 1.100 kilogramos al lanzamiento, capaz de transportar hasta 157 kilogramos de instrumentos; y el Surveyor B, una plataforma orbital que operaría desde una órbita de 100 kilómetros de altura para realizar reconocimiento televisado de la superficie lunar.\n\nEl 19 de enero de 1961, Hughes Aircraft Company fue seleccionada como contratista principal para construir las naves, mientras que el JPL mantuvo la dirección del proyecto en nombre de la NASA. Poco después, el presidente John F. Kennedy lanzó su histórico desafío de enviar seres humanos a la Luna antes de que terminara la década. Esta decisión reconfiguró las prioridades: los objetivos de los programas Ranger y Surveyor fueron redirigidos para apoyar ese nuevo esfuerzo nacional.\n\nEn su versión definitiva, el programa Surveyor quedó definido como una serie de siete vuelos robóticos de alunizaje suave. Sus tres objetivos principales eran: desarrollar y validar la tecnología para posarse suavemente en la Luna; verificar que las condiciones de la superficie lunar fueran compatibles con el diseño de las futuras naves Apollo; y ampliar el conocimiento científico sobre nuestro satélite natural.\n\nPara llegar a la Luna, las naves Surveyor utilizaban el cohete Atlas-Centaur, un vehículo de lanzamiento que empleaba hidrógeno líquido y oxígeno líquido como propelentes. La secuencia de alunizaje era un proceso ingenioso: un radar de marcación de altitud activaba el retrocohete principal para el frenado primario; una vez agotado, el retrocohete y ese radar se separaban de la nave, y entraban en acción los radares Doppler y altimétrico, que alimentaban al piloto automático para controlar tres motores de maniobra orientables hasta el contacto con la superficie.\n\nEl costo total del programa —construcción y lanzamiento de las siete naves— alcanzó los 469 millones de dólares. Como testimonio tangible de aquella época, la cámara de televisión del Surveyor 3 se conserva hoy en el Museo Nacional del Aire y el Espacio (Smithsonian) en Washington D.C.",
+  "datos_reales": [
+    {
+      "afirmacion": "El proyecto Surveyor fue autorizado en mayo de 1960.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "In May of 1960, JPL's Surveyor project was authorized.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El JPL gestionó el proyecto Surveyor en nombre de la NASA, con Hughes Aircraft Co. como contratista principal del sistema de la nave.",
+      "fuente_url": "https://science.nasa.gov/mission/lunar-rangers-and-surveyors/",
+      "cita": "the Surveyor project began its development in 1961 with the selection of Hughes Aircraft Co. as spacecraft system contractor to JPL, which managed the project.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Hughes Aircraft recibió el contrato para construir Surveyor el 19 de enero de 1961.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "On January 19, 1961, Hughes Aircraft (whose space division is now part of Boeing) received the contract to build Surveyor.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El programa Surveyor consistió en una serie de siete vuelos robóticos de alunizaje suave.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The primary objectives of the Surveyor program, a series of seven robotic lunar softlanding flights, were to support the coming crewed Apollo landings.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los tres objetivos principales del programa Surveyor eran: desarrollar y validar la tecnología para alunizar suavemente, verificar la compatibilidad del diseño Apollo con la superficie lunar, y ampliar el conocimiento científico de la Luna.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "developing and validating the technology for landing softly on the Moon; (2) providing data on the compatibility of the Apollo design with conditions encountered on the lunar surface; and (3) adding to the scientific knowledge of the Moon.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El coste total del programa Surveyor fue de 469 millones de dólares.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The Surveyor program involved building and launching seven Surveyor spacecraft to the Moon at a total cost of $469 million.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vehículo de lanzamiento elegido para Surveyor fue el Atlas-Centaur, que usaba hidrógeno líquido y oxígeno líquido como propelentes.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "The launch vehicle for this new lunar spacecraft was to be the Atlas-Centaur then under development by NASA. The Centaur used liquid hydrogen and liquid oxygen (LOX) as propellants – the first rocket stage to do so.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sistema de alunizaje de Surveyor empleaba tres motores de maniobra regulables controlados por un radar de cuatro haces.",
+      "fuente_url": "https://science.nasa.gov/mission/lunar-rangers-and-surveyors/",
+      "cita": "a new and elegant robotic landing method, with three steerable rocket engines controlled by a four-beam spacecraft radar.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante la secuencia de alunizaje, un radar de marcación de altitud activaba el retrocohete principal para el frenado primario; tras su separación, los motores de maniobra y los radares Doppler y altimétrico controlaban el descenso final.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "For the landing sequence, an altitude marking radar initiated the firing of the main retrorocket for primary braking. After firing was complete, the retrorocket and radar were jettisoned and the doppler and altimeter radars were activated. These provided information to the autopilot which controlled the vernier propulsion system to touchdown.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En su concepción original, el Surveyor A portaría hasta 157 kilogramos de instrumentos y pesaría aproximadamente 1.100 kilogramos al lanzamiento.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "Surveyor A would be designed to land on the lunar surface. It would have a mass of about 1,100 kilograms when launched and carry as much as 157 kilograms of instrumentation.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En la concepción original del programa se previó una variante orbital denominada Surveyor B que operaría en una órbita lunar de 100 kilómetros de altura.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "The second variant considered was designated Surveyor B. This spacecraft would use the same basic structure as the lander but instead would be placed into a 100-kilometer high lunar orbit to perform television reconnaissance of the Moon's surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras el compromiso del presidente Kennedy con el alunizaje humano, los objetivos de Ranger y Surveyor fueron redirigidos para apoyar ese nuevo esfuerzo.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "Within days of the failure of Atlas-Centaur 1, President John F. Kennedy threw down the gauntlet and committed the US to a manned lunar landing by the end of the decade. The Ranger and Surveyor program objectives were redirected to support this new effort.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA contempló originalmente entregar más de dos docenas de instrumentos científicos a la superficie de la Luna, con un primer lanzamiento previsto para 1963.",
+      "fuente_url": "https://science.nasa.gov/mission/lunar-rangers-and-surveyors/",
+      "cita": "NASA originally contemplated delivering more than two dozen scientific instruments to the surface of the Moon with a first launch as early as 1963.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El JPL, con sede en Pasadena (California), gestionó la serie Surveyor de módulos de aterrizaje robóticos como precursores de las misiones tripuladas Apollo.",
+      "fuente_url": "https://www.nasa.gov/history/55-years-ago-surveyor-1-makes-a-soft-landing-on-the-moon/",
+      "cita": "NASA's Jet Propulsion Laboratory in Pasadena, California, managed the Surveyor series of robotic landers that served as precursors to the Apollo crewed Moon landings.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La cámara de televisión del Surveyor 3 se encuentra actualmente expuesta en el Museo Nacional del Aire y el Espacio (Smithsonian) en Washington D.C.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The Surveyor 3 camera is now on display in the Smithsonian National Air and Space Museum in Washington, D.C.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Surveyor 3 — NSSDCA/COSPAR ID: 1967-035A",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "editor": "NASA NSSDCA (Goddard Space Flight Center)",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Lunar Ranger and Surveyor Programs — Science@NASA",
+      "url": "https://science.nasa.gov/mission/lunar-rangers-and-surveyors/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "55 Years Ago: Surveyor 1 Makes A Soft Landing on the Moon",
+      "url": "https://www.nasa.gov/history/55-years-ago-surveyor-1-makes-a-soft-landing-on-the-moon/",
+      "editor": "NASA History Office",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 1 Mission Page — NASA JPL",
+      "url": "https://www.jpl.nasa.gov/missions/surveyor-1/",
+      "editor": "NASA Jet Propulsion Laboratory",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 1: America's First Lunar Landing — Drew Ex Machina",
+      "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "editor": "Drew Ex Machina (Andrew Lepage)",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "La fecha de inicio de actividad del programa presenta una diferencia de matiz entre fuentes: drewexmachina.com (comunitaria) afirma 'In May of 1960, JPL's Surveyor project was authorized' (autorización en mayo de 1960), mientras que science.nasa.gov (oficial NASA) indica 'the Surveyor project began its development in 1961 with the selection of Hughes Aircraft Co. as spacecraft system contractor' (desarrollo iniciado en 1961). Ambas afirmaciones son potencialmente compatibles (autorización ≠ inicio del desarrollo con contratista), pero la diferencia puede confundir. Fuentes: https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/ y https://science.nasa.gov/mission/lunar-rangers-and-surveyors/",
+    "El evento original dice que la aprobación fue en 'la primavera de 1960' y que NASA 'encargó su desarrollo al JPL', sugiriendo una decisión institucional de la NASA asignada al JPL. Sin embargo, la cita del dato [0] (drewexmachina.com) dice literalmente 'JPL's Surveyor project was authorized', formulación que presenta a Surveyor como un proyecto ya propio del JPL que fue autorizado, no como algo asignado externamente. Es una diferencia de matiz sobre quién originó el programa.",
+    "El evento original describe el diseño con 'retrocohetes regulables guiados por radar' (plural, como si fueran un solo sistema). Los datos [7] y [8] revelan que en realidad había dos subsistemas distintos: un retrocohete principal de frenado (no descrito como regulable) que se separaba tras cumplir su función, y luego tres motores de maniobra orientables ('steerable', dato [7] de science.nasa.gov) controlados por radares Doppler y altimétrico (dato [8] de nssdc.gsfc.nasa.gov). La descripción del evento simplifica significativamente esta arquitectura de dos etapas."
+  ],
+  "huecos": [
+    "Identidad de los funcionarios específicos de la NASA que firmaron la aprobación formal del programa en 1960.",
+    "Documento oficial de autorización del programa (número de directiva o acta de la NASA) que fije la fecha exacta de la primavera de 1960.",
+    "Si el programa soviético Luna fue citado formalmente como motivación en los documentos de autorización de 1960.",
+    "Detalles del presupuesto inicial asignado al programa en el momento de su aprobación (1960), distinto del coste final de 469 millones de dólares.",
+    "Razones concretas por las que la variante Surveyor B orbital fue cancelada a favor del programa Lunar Orbiter del Langley Research Center (el texto de drewexmachina menciona la decisión pero no el documento específico).",
+    "Ningún dato confirma que el sistema de descenso con retrocohetes regulables guiados por radar descrito en el evento corresponda al diseño original de 1960; los datos técnicos del alunizaje ([7] y [8]) describen la versión final construida, no necesariamente lo concebido al aprobar el programa.",
+    "Ningún dato especifica qué ocurrió con la variante orbital Surveyor B: el dato [10] confirma que fue prevista, pero no hay fuente que documente cuándo ni por qué fue cancelada ni qué programa la sustituyó.",
+    "Ningún dato indica cuántas de las siete misiones Surveyor lograron alunizar con éxito, ni las fechas de los lanzamientos."
+  ],
+  "ideas_visuales": [
+    "Plano del JPL en Pasadena, California, en 1960: ingenieros ante planos y maquetas del recién autorizado proyecto Surveyor (datos [0], [13]).",
+    "Diagrama comparativo del diseño original: el Surveyor A (módulo de alunizaje de 1.100 kg con 157 kg de instrumentos) junto al Surveyor B (plataforma orbital a 100 km de altura), mostrando la ambición inicial del programa (datos [9], [10], [12]).",
+    "Cohete Atlas-Centaur con una nave Surveyor en su parte superior, en la plataforma de lanzamiento, con indicación de los propelentes de hidrógeno y oxígeno líquidos (dato [6]).",
+    "Secuencia ilustrada del alunizaje en tres fases: activación del retrocohete principal por el radar de altitud, separación del retrocohete, y descenso final con los tres motores orientables guiados por los radares Doppler y altimétrico (datos [7], [8]).",
+    "La cámara de televisión del Surveyor 3 expuesta en una vitrina del Museo Nacional del Aire y el Espacio (Smithsonian) en Washington D.C. (dato [14])."
+  ],
+  "datos_no_verificados": []
+}

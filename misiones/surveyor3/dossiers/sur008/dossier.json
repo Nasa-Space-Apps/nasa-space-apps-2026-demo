@@ -1,0 +1,135 @@
+{
+  "evento_id": "sur008",
+  "titulo": "Rediseño: Surveyor adelgaza a unos 950 kg con 52 kg de instrumentos (finales de 1962)",
+  "contexto_ampliado": "El programa Surveyor tenía como objetivo enviar sondas a la superficie lunar y, para lograrlo, dependía de un cohete revolucionario: el Atlas-Centaur, el primero en utilizar hidrógeno líquido y oxígeno líquido como propelentes en su etapa superior. Esta combinación proporcionaba hasta un 50 % más de empuje por kilogramo que los propelentes convencionales de la época [1]. Sin embargo, como señala la historia oficial de la NASA (SP-4901), la agencia \"hizo conscientemente al Surveyor totalmente dependiente de un vehículo lanzador muy avanzado que aún no había sido desarrollado: el Atlas/Centaur\" [5]. Si el Centaur no cumplía, el Surveyor no volaría.\n\nDesarrollar el Centaur resultó más difícil de lo esperado. Los sucesivos rediseños de esta innovadora etapa superior añadieron masa al vehículo y su rendimiento esperado cayó [2]. La situación llevó a la NASA a transferir la gestión del programa Centaur al Centro de Investigación Lewis en 1962 [3]. Tal como documenta el SP-4901, \"las estimaciones de capacidad de elevación del vehículo lanzador fluctuaron mucho, y principalmente a la baja\", lo que obligaba a modificar constantemente el diseño de la nave Surveyor y su carga útil [4].\n\nLa consecuencia directa fue que el Surveyor tuvo que \"adelgazar\" drásticamente. A finales de 1962, debido a los cambios en el diseño del Centaur, el nuevo plan contemplaba un módulo más ligero de 950 kilogramos con solo 52 kilogramos de instrumentos [6]. Para 1963, la estimación de masa operativa se estabilizó en torno a los 975 kilogramos, de los cuales apenas 30 kilogramos corresponderían a instrumentación [7]. Cada revisión reflejaba el difícil equilibrio entre lo que los ingenieros querían llevar a la Luna y lo que el cohete podía realmente levantar.\n\nHacia 1965, la NASA tomó una decisión definitiva: utilizar el modelo de ingeniería recortado de unos 1.000 kilogramos para los siete vuelos programados del Surveyor, en vez de reservarlo únicamente para los cuatro primeros vuelos de prueba como se había planeado [8]. Los 30 kilogramos de instrumentación que llevaron los primeros Surveyors consistían principalmente en sensores de ingeniería —acelerómetros, giroscopios, sensores de temperatura y otros—, destinados a realizar más de doscientas mediciones del rendimiento y estado de la nave [9].\n\nCuriosamente, el SP-4901 reconoce en retrospectiva que \"la mayor parte de las proyecciones de capacidad de elevación del Centaur resultaron ser demasiado conservadoras, y gran parte del tiempo y el gasto dedicados a los programas de reducción de masa del Surveyor podrían haberse evitado\" [10]. Dicho de otro modo, el Surveyor recortó peso para un Centaur que al final resultó más capaz de lo temido. Con el tiempo, el Centaur se convirtió en uno de los cohetes más exitosos de la historia espacial: realizó más de 175 misiones con apenas un puñado de fallos, incluyendo las misiones Pioneer, Viking, los Orbitadores Lunares y Cassini, entre muchas otras [11].",
+  "datos_reales": [
+    {
+      "afirmacion": "El Centaur era el primer cohete en usar hidrógeno líquido como propelente en su etapa superior, tecnología que prometía hasta un 50 % más de empuje por kilogramo que los propelentes convencionales.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "The Centaur used liquid hydrogen and liquid oxygen (LOX) as propellants – the first rocket stage to do so. This combination provided up to half again as much thrust than a like mass of conventional propellants then in use.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras el primer lanzamiento fallido del Atlas-Centaur, los rediseños para corregir los defectos añadieron masa al vehículo y redujeron su rendimiento esperado.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "More redesign work added additional weight to this highly innovative upper stage and the expected performance dropped.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La NASA transfirió la gestión del programa Centaur al Centro de Investigación Lewis en 1962, debido al fracaso de su primer lanzamiento y a los problemas de desarrollo acumulados.",
+      "fuente_url": "https://www.nasa.gov/altitude-wind-tunnel-centaur-testing/",
+      "cita": "NASA, which was by then relying on Centaur to send Surveyor spacecraft to the Moon, transferred the program to the Lewis Research Center in October 1962.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El SP-4901 (historia oficial de la NASA) documenta que las estimaciones de capacidad de elevación del Centaur fluctuaron mucho y principalmente a la baja, obligando a constantes modificaciones del diseño del Surveyor.",
+      "fuente_url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+      "cita": "Estimates of the weight-lifting capability of the launch vehicle fluctuated greatly, and mostly downward, despite pressures to push the spacecraft weight upward. The design of the Surveyor spacecraft and its payload had to be constantly modified.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El SP-4901 señala que la NASA hizo al Surveyor totalmente dependiente del Atlas/Centaur, un vehículo lanzador avanzado que aún no había volado, lo que complicó el desarrollo de ambos.",
+      "fuente_url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+      "cita": "NASA consciously made Surveyor totally dependent on a highly advanced, yet-to be-developed launch vehicle, the Atlas/Centaur, whose management was transferred to the space agency from the Department of Defense.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "A finales de 1962, debido a los cambios en el diseño del Centaur, el Surveyor tuvo que reducir su masa al nuevo objetivo de 950 kg con solo 52 kg de instrumentos.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "Because of the Centaur design changes, Surveyor also had to shed some mass. The new design called for a somewhat lighter 950-kilogram lander carrying only 52 kilograms of instruments.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En 1963, la estimación de masa operativa del Surveyor se estabilizó en torno a los 975 kg, de los cuales solo 30 kg serían instrumentación.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "The mass estimate for the operational spacecraft was settling around 975 kilograms of which 30 kilograms would be instrumentation.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Hacia 1965, la NASA decidió utilizar el modelo de ingeniería recortado de ~1.000 kg para los siete vuelos programados del Surveyor, en lugar de solo para los cuatro primeros vuelos de prueba.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "NASA decided to make use of the lighter 1000-kilogram stripped-down 'engineering' model of Surveyor for all seven scheduled flights, instead of just for the first four missions as previously planned.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los primeros Surveyors llevaron en vuelo 30 kg de instrumentación, compuesta principalmente por sensores de ingeniería (acelerómetros, giroscopios, sensores de temperatura) para medir el rendimiento de la nave.",
+      "fuente_url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "cita": "A total of 30 kilograms of instrumentation were carried by the first Surveyors. Most were engineering sensors such as strain gauges, accelerometers, rate gyros, temperature sensors, and so on to be used to make more than two hundred measurements of the spacecraft's performance and condition.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El SP-4901 señala que, en retrospectiva, la mayor parte de las proyecciones del Centaur resultaron demasiado conservadoras y gran parte del esfuerzo de reducción de masa del Surveyor podría haberse evitado.",
+      "fuente_url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+      "cita": "As it turned out, most of the Centaur weight lifting projections were too conservative, and much of the time and expense involved in spacecraft weight reduction programs could have been avoided.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Centro de Investigación Lewis logró hacer del Centaur un cohete fiable, que luego realizó misiones Pioneer, Viking, los Orbitadores Lunares, Cassini y más de 175 misiones en total.",
+      "fuente_url": "https://www.nasa.gov/altitude-wind-tunnel-centaur-testing/",
+      "cita": "Centaur not only made the Surveyor program a success but would go on to perform over 175 missions with only a handful of failures. These missions included Pioneer, Viking, the Lunar Orbiter, Orbiting Astronomical Observatories, Cassini, and others.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Unmanned Space Project Management: Surveyor and Lunar Orbiter, Chapter 2 (NASA SP-4901)",
+      "url": "https://apolloexplorer.co.uk/books/sp-4901/chp2.htm",
+      "editor": "NASA History Office (copia en apolloexplorer.co.uk)",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 1: America's First Lunar Landing",
+      "url": "https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/",
+      "editor": "Drew Ex Machina",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Altitude Wind Tunnel – Centaur Testing (NASA Glenn Research Center Historic Facilities)",
+      "url": "https://www.nasa.gov/altitude-wind-tunnel-centaur-testing/",
+      "editor": "NASA Glenn Research Center",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Rocket Systems Area – Centaur Program (NASA Glenn Research Center Historic Facilities)",
+      "url": "https://www.nasa.gov/rocket-systems-area-centaur-program/",
+      "editor": "NASA Glenn Research Center",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Fecha del primer lanzamiento fallido del Atlas-Centaur: Drew Ex Machina indica 'May 8, 1961' (https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/) mientras que NASA Glenn (Altitude Wind Tunnel) indica 'May 8, 1962' (https://www.nasa.gov/altitude-wind-tunnel-centaur-testing/). La página de NASA (Rocket Systems Area) también sitúa la explosión en 1962 (https://www.nasa.gov/rocket-systems-area-centaur-program/), lo que sugiere que la fecha de 1961 en Drew Ex Machina podría ser un error tipográfico, aunque no se puede afirmar sin fuente definitiva.",
+    "Mes de la transferencia del programa Centaur a Lewis en 1962: NASA (Altitude Wind Tunnel) dice 'October 1962' (https://www.nasa.gov/altitude-wind-tunnel-centaur-testing/), mientras que NASA (Rocket Systems Area) dice 'September 1962' (https://www.nasa.gov/rocket-systems-area-centaur-program/). Ambas son páginas oficiales de la NASA y difieren en un mes.",
+    "En [5], la afirmación traduce 'yet-to be-developed launch vehicle' (SP-4901, https://apolloexplorer.co.uk/books/sp-4901/chp2.htm) como 'vehículo lanzador avanzado que aún no había volado'. Sin embargo, 'not yet developed' (no desarrollado aún) es una afirmación más fuerte que 'no había volado' (no había volado aún): un cohete puede estar desarrollado sin haber volado. La afirmación suaviza el original.",
+    "En [2], la afirmación indica que los rediseños se realizaron 'tras el primer lanzamiento fallido del Atlas-Centaur' y fueron 'para corregir los defectos', pero la cita (https://www.drewexmachina.com/2016/05/30/surveyor-1-americas-first-lunar-landing/) solo dice 'More redesign work added additional weight… and the expected performance dropped', sin mencionar el lanzamiento fallido como causa ni especificar que los rediseños fueran correctivos.",
+    "En [3], la afirmación atribuye la transferencia a Lewis a 'el fracaso de su primer lanzamiento y los problemas de desarrollo acumulados', pero la cita (https://www.nasa.gov/altitude-wind-tunnel-centaur-testing/) solo confirma que la NASA transfirió el programa en octubre de 1962, sin especificar la razón."
+  ],
+  "huecos": [
+    "Los datos específicos de masa para 1962 (950 kg / 52 kg de instrumentos) y 1963 (975 kg / 30 kg) solo se encontraron en la fuente comunitaria Drew Ex Machina, no en documentos primarios de NASA/JPL leídos directamente.",
+    "No se pudo precisar el mes exacto de 1965 en que se tomó la decisión formal de usar el modelo de ingeniería de ~1.000 kg para los siete vuelos.",
+    "No se encontró en los documentos leídos información verificable sobre si el plan de usar el generador nuclear SNAP-11 (mencionado en Drew Ex Machina para 1962) fue considerado seriamente o descartado y en qué momento.",
+    "No se encontraron en NTRS papers técnicos primarios (JPL/Hughes Aircraft) sobre los análisis de masa del Surveyor en las fases de 1962-1965.",
+    "La masa exacta de los Surveyors reales al lanzamiento (no las estimaciones) no pudo confirmarse en los textos leídos para este dossier.",
+    "Al eliminar [0] por incluir instrumentos específicos no respaldados por su cita, el dossier pierde las cifras del diseño original del Surveyor (~1.100 kg de masa total, ~157 kg de instrumentos) que permitían dimensionar la magnitud de los recortes. La cita de [0] sí respalda esas cifras de masa, pero no los instrumentos listados en la afirmación.",
+    "El evento original indica 'fecha_inicio: 1962-12' (diciembre de 1962), pero ningún dato conservado precisa el mes exacto dentro de 'finales de 1962'; la fuente de [6] (Drew Ex Machina) solo dice 'end of 1962'.",
+    "El evento original afirma que 'hacia 1965 se eligió un modelo de ingeniería recortado de unos 1.000 kg para los siete vuelos', y [8] lo confirma, pero no se encontró en los datos conservados la razón específica de ese cambio de plan (de solo cuatro vuelos de prueba a los siete)."
+  ],
+  "ideas_visuales": [
+    "Esquema del cohete Atlas-Centaur señalando su etapa superior de hidrógeno líquido, la innovación que lo hacía revolucionario pero difícil de desarrollar [1].",
+    "Línea temporal con tres hitos de masa del Surveyor: 950 kg / 52 kg de instrumentos (finales de 1962) → 975 kg / 30 kg (1963) → 1.000 kg para los 7 vuelos (~1965), mostrando visualmente la evolución del diseño [6, 7, 8].",
+    "Diagrama del módulo Surveyor 'recortado' (~1.000 kg) con sus 30 kg de sensores de ingeniería etiquetados: acelerómetros, giroscopios, sensores de temperatura [9].",
+    "Gráfico de barras descendente que ilustre cómo las estimaciones de capacidad del Centaur 'fluctuaron principalmente a la baja' según el SP-4901, con flechas que muestren la presión inversa sobre la masa del Surveyor [4].",
+    "Montaje visual del Centaur a lo largo de las décadas en sus diversas misiones: Pioneer, Viking, Orbitadores Lunares, Cassini, representando las más de 175 misiones exitosas [11]."
+  ],
+  "datos_no_verificados": []
+}

@@ -1,0 +1,140 @@
+{
+  "evento_id": "sur031",
+  "titulo": "Surveyor 3: El radar pierde el enlace por reflejos del terreno (20 abril 1967)",
+  "contexto_ampliado": "El 20 de abril de 1967, la sonda Surveyor 3 se encontraba en los últimos instantes de su descenso hacia la superficie lunar. Según un documento técnico de la NASA conservado en el NTRS, el aterrizaje tuvo lugar a las 00:04 GMT de ese día, aproximadamente 23 horas después del amanecer lunar local en el sitio de destino.\n\nUnos segundos antes del contacto con el suelo, ocurrió un fallo inesperado: los radares de la sonda perdieron el enlace. El NSSDC de la NASA lo describe así: los radares perdieron la señal, aparentemente debido a intensos reflejos centelleantes provenientes del sitio de aterrizaje. NASA Science, por su parte, lo resume de forma más directa: rocas muy reflectantes confundieron el radar de descenso de la sonda, y el motor principal no se apagó en el momento correcto, a unos 4,3 metros de altitud. Es importante señalar que la causa no fue cerrada definitivamente: el NSSDC usa la palabra «apparently» (al parecer), lo que indica que se trata de la explicación más probable, pero no de una conclusión técnica absoluta.\n\nAnte la pérdida de señal, el sistema de guiado reaccionó según su programación de respaldo: cambió automáticamente a un modo controlado por inercia. Sin embargo, este modo tenía una limitación crucial: impedía que se emitiera la orden automática de apagar los motores verniers. Como consecuencia, esos motores siguieron encendidos cuando la nave tocó el suelo por primera vez.\n\nEl resultado fue insólito: la Surveyor 3 tocó la superficie lunar tres veces. Los motores verniers continuaron encendidos durante los dos primeros toques, provocando que la nave se levantara del suelo cada vez. El primer rebote elevó la sonda a unos 11 metros de altura; el segundo la llevó a unos 3,4 metros. La Surveyor 3 se convirtió así en el primer vehículo espacial en despegar involuntariamente de la superficie de la Luna, y lo hizo en dos ocasiones.\n\nLos registros del NSSDC permiten reconstruir la secuencia con precisión. El primer toque ocurrió a las 00:04:17 UTC y el contacto definitivo a las 00:04:53 UTC, es decir, 36 segundos de rebotes. La distancia horizontal entre el primer y el segundo punto de toque fue de unos 20 metros; entre el segundo y el tercero, unos 11 metros. Los motores finalmente se apagaron 34 segundos después del primer contacto, no de forma automática, sino porque los ingenieros en la Tierra enviaron un comando de corte por radio.\n\nTras su accidentado aterrizaje, la Surveyor 3 quedó en reposo sobre una pendiente de 14 grados dentro de un cráter de unos 200 metros de diámetro, ubicado en el sureste del Oceanus Procellarum, a unos 370 kilómetros al sur del cráter Copérnico.\n\nEl episodio dejó una pregunta sin respuesta definitiva: ¿qué provocó exactamente aquellos reflejos tan intensos? La explicación de las rocas altamente reflectantes quedó como la hipótesis más probable, pero el uso de la palabra «apparently» en la documentación del NSSDC indica que la causa nunca fue cerrada de manera concluyente.",
+  "datos_reales": [
+    {
+      "afirmacion": "Unos segundos antes del toque, los radares perdieron el enlace, aparentemente debido a intensos reflejos centelleantes del sitio de aterrizaje.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "A few seconds before touchdown the radars lost lock, apparently due to high scintillating reflections from the landing site.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sistema de guiado cambió automáticamente a modo inercial, lo que impidió el corte de los motores verniers.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The guidance system automatically switched to an inertially controlled mode which prevented vernier engine cutoff.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Rocas muy reflectantes confundieron el radar de descenso y el motor no se apagó en el momento correcto, a unos 4,3 metros de altitud.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "highly reflective rocks confused the lander's descent radar, and the main engine failed to cut off at the correct moment at about 14 feet (4.3 meters) in altitude.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El alunizaje ocurrió tres veces porque los motores verniers siguieron encendidos durante los dos primeros toques, haciendo que la nave volviera a levantarse.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "Touchdown on the lunar surface occurred three times because the vernier engines continued to fire during the first two touchdowns causing the spacecraft to lift off the surface.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La distancia entre el primer y segundo punto de toque fue de unos 20 metros; entre el segundo y el tercero, unos 11 metros.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The distance between the first and second touchdown sites was about 20 meters and between the second and third 11 meters.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los motores se apagaron 34 segundos después del primer toque mediante un comando de corte transmitido desde la Tierra.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "Engines were shut off 34 seconds after initial touchdown by an engine cutoff command transmitted from Earth.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El primer toque ocurrió a las 00:04:17 UTC y el toque final a las 00:04:53 UTC del 20 de abril de 1967.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "Initial touchdown occurred at 00:04:17 UT and final touchdown at 00:04:53 UT on 20 April 1967",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La Surveyor 3 quedó en reposo en una pendiente de 14 grados dentro de un cráter de unos 200 metros de diámetro en el sureste del Oceanus Procellarum, a unos 370 km al sur del cráter Copérnico.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "Surveyor 3 came to rest on a 14 degree slope inside a subdued 200 meter crater in southeast Oceanus Procellarum roughly 370 km south of Copernicus crater.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La Surveyor 3 fue el primer vehículo espacial en despegar involuntariamente de la superficie lunar, algo que hizo dos veces.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_program",
+      "cita": "Surveyor 3 was the first spacecraft to unintentionally lift off from the Moon's surface, which it did twice, due to an anomaly with Surveyor's landing radar, which did not shut off the vernier engines but kept them firing throughout the first touchdown and after it.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El artículo de televisión en NTRS confirma que la Surveyor III aterrizó en la superficie lunar a las 00:04 GMT del día 110 de 1967, aproximadamente 23 horas después del amanecer lunar local.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19670023254",
+      "cita": "Surveyor III landed on the lunar surface at 00:04 GMT, on Day 110, 1967, approximately 23 hr after local sunrise on the Moon.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Surveyor 3 (NSSDC Master Catalog 1967-035A)",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "editor": "NASA NSSDC",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 3 — NASA Science",
+      "url": "https://science.nasa.gov/mission/surveyor-3/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Television observations from Surveyor III (NTRS 19670023254)",
+      "url": "https://ntrs.nasa.gov/citations/19670023254",
+      "editor": "NASA NTRS",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Surveyor 3 — Wikipedia (en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Surveyor program — Wikipedia (en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Surveyor_program",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "Altura del primer rebote: science.nasa.gov indica 'a height of 33 feet (10 meters)' (https://science.nasa.gov/mission/surveyor-3/), mientras que Wikipedia indica 'about 35 feet (11 meters)' (https://en.wikipedia.org/wiki/Surveyor_3). El NSSDC no especifica la altura del rebote. Ambas cifras son aproximadas pero difieren en ~1 metro / ~2 pies.",
+    "Altura del segundo rebote: science.nasa.gov indica 'to 10 feet (3 meters)' (https://science.nasa.gov/mission/surveyor-3/), mientras que Wikipedia dice 'about 11 feet (3.4 meters)' (https://en.wikipedia.org/wiki/Surveyor_3). Diferencia menor pero presente.",
+    "Masa de lanzamiento: science.nasa.gov registra '2,200 pounds (997.9 kilograms)' (https://science.nasa.gov/mission/surveyor-3/), mientras que el NSSDC indica '1026 kg at launch' (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) —cifra que coincide con Wikipedia: 2,262 lb / 1,026 kg—. La diferencia (~28 kg) no está explicada en ninguna fuente consultada.",
+    "El dato [2] (NASA Science: https://science.nasa.gov/mission/surveyor-3/) atribuye el fallo al «main engine» («the main engine failed to cut off at the correct moment»), mientras que los datos [1] y [3] (NSSDC: https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A) y [9] (Wikipedia: https://en.wikipedia.org/wiki/Surveyor_program) identifican específicamente los «vernier engines» como los motores que no se apagaron. Se trata de sistemas de propulsión distintos: el retrocohete principal (main engine/retrorocket) fue eyectado mucho antes de la fase final del descenso. El uso de «main engine» en NASA Science parece impreciso o contradictorio con las demás fuentes."
+  ],
+  "huecos": [
+    "La causa exacta de la pérdida de enlace del radar no fue cerrada definitivamente en la documentación oficial pública: el NSSDC usa 'apparently' (al parecer), lo que indica que es la explicación más probable pero no una conclusión técnica formal.",
+    "No se encontró en las fuentes consultadas un informe técnico de misión detallado (Surveyor 3 Mission Report) en NTRS que especifique el tipo exacto de radar que perdió el enlace primero (Doppler o altímetro) ni la secuencia interna del fallo.",
+    "No se dispone de datos verificados sobre la composición mineralógica de las rocas altamente reflectantes del sitio que confundieron el radar.",
+    "No se encontró documentación técnica verificada sobre si la anomalía del radar de Surveyor 3 modificó los procedimientos o el diseño del radar para misiones Surveyor posteriores o para el Apollo.",
+    "El procedimiento nominal de caída libre en los últimos metros del descenso (que el borrador narrativo describía como 3,4 m desde velocidad cero) no está respaldado por ninguna cita verificada en los datos conservados: la cita asociada al dato [8] no incluía esa información y el dato fue descartado.",
+    "Ninguno de los datos conservados documenta las fases del descenso previas a la anomalía (altitud y velocidad al encender el retrocohete, altitud de eyección del retrocohete) que el borrador narrativo mencionaba sin respaldo citado."
+  ],
+  "ideas_visuales": [
+    "La sonda Surveyor 3 en fase final de descenso, con haces de radar rebotando caóticamente en rocas brillantes de la superficie lunar, representando la pérdida de enlace [0, 2].",
+    "Diagrama o esquema del sistema de guiado mostrando el cambio de modo radar a modo inercial, con los motores verniers que permanecen encendidos [1].",
+    "Secuencia en tres viñetas de los rebotes: primer toque con motores encendidos y ascenso a 11 m, segundo toque y ascenso a 3,4 m, y tercer toque definitivo [3, 10, 6].",
+    "Vista cenital del cráter de 200 m mostrando los tres puntos de toque con distancias de 20 m y 11 m entre ellos [4, 7].",
+    "Sala de control terrestre donde los ingenieros transmiten el comando de apagado de motores, 34 segundos después del primer contacto [5].",
+    "La Surveyor 3 en reposo sobre la pendiente de 14 grados dentro del cráter en Oceanus Procellarum [7]."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "El primer rebote elevó la sonda unos 11 metros; el segundo la llevó a unos 3,4 metros de altura.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Its first bounce reached the altitude of about 35 feet (11 meters). The second bounce reached a height of about 11 feet (3.4 meters).",
+      "confianza": "media",
+      "verificado_en_texto": false
+    }
+  ]
+}

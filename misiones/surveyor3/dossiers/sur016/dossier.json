@@ -1,0 +1,104 @@
+{
+  "evento_id": "sur016",
+  "titulo": "El suelo lunar aguanta: parecido a arena húmeda — Surveyor 3 (abril 1967)",
+  "contexto_ampliado": "En abril de 1967, la sonda Surveyor 3 se posó sobre la superficie lunar portando por primera vez un instrumento capaz de interactuar físicamente con el suelo: el soil mechanics surface sampler (muestreador mecánico de suelos). Se trataba de un pequeño cucharón montado sobre un brazo extensible que podía alcanzar hasta 1,5 metros de distancia desde la sonda y excavar hasta 18 centímetros de profundidad. Antes de esta misión, el conocimiento sobre las propiedades mecánicas del regolito lunar se basaba en observaciones fotográficas y estimaciones indirectas, sin contacto directo.\n\nEl muestreador realizó tres tipos de ensayos: pruebas de carga (bearing tests), en las que se presionaba el suelo para medir su resistencia; pruebas de zanjeo (trench tests), en las que se excavaban surcos para estudiar el material en profundidad; y pruebas de impacto (impact tests), en las que el brazo golpeaba la superficie desde distintas alturas. Según la página oficial de la NASA, se cavaron cuatro zanjas, se ejecutaron cuatro pruebas de carga y trece pruebas de impacto. Sin embargo, la enciclopedia Wikipedia registra siete pruebas de carga en lugar de cuatro, manteniendo las cuatro de zanjeo y las trece de impacto, con un tiempo total de operación de 18 horas y 22 minutos distribuido en diez sesiones separadas. Esta discrepancia en el número de pruebas de carga no ha podido resolverse sin consultar el informe técnico original de JPL.\n\nLos resultados cuantitativos fueron reveladores. Durante las pruebas de carga, el instrumento penetró entre 38 y 50 milímetros en el suelo, mientras que en las operaciones de zanjeo alcanzó una profundidad de 175 milímetros (6,9 pulgadas). Estas mediciones proporcionaron datos concretos sobre la firmeza y estructura del regolito lunar a distintas profundidades.\n\nA partir de estos ensayos, los científicos concluyeron que el suelo lunar tenía una consistencia similar a la arena húmeda, con una resistencia de carga de aproximadamente 10 libras por pulgada cuadrada (equivalentes a 0,7 kilogramos por centímetro cuadrado o, según la fuente NASA, 98 kilopascales, aunque esta última conversión presenta una inconsistencia matemática). Lo fundamental era que esa resistencia resultaba suficientemente alta como para confirmar que la superficie podía soportar el peso de un Módulo Lunar Apollo, lo que representaba una certeza crucial para los futuros alunizajes tripulados del programa espacial estadounidense.\n\nEl informe preliminar de la misión, disponible en el repositorio técnico de la NASA, reforzó estas conclusiones al señalar que las capas más profundas del material lunar presentaban propiedades semejantes a las de suelos terrestres ordinarios. Esto significaba que los ingenieros podían aplicar principios conocidos de mecánica de suelos al diseño y cálculo del tren de aterrizaje del módulo lunar Apollo.\n\nSurveyor 3 pasó a la historia no solo por sus hallazgos científicos, sino también por un hecho único en la exploración espacial: es la única sonda enviada a otro mundo que ha sido visitada por seres humanos. La misión Apollo 12 aterrizó posteriormente cerca de la sonda inactiva, cerrando simbólicamente el vínculo entre la exploración robótica y la tripulada que Surveyor 3 había hecho posible con sus mediciones de suelo. En conjunto, los datos obtenidos en abril de 1967 despejaron uno de los mayores interrogantes de la carrera espacial y abrieron la puerta a los alunizajes tripulados.",
+  "datos_reales": [
+    {
+      "afirmacion": "El suelo lunar tenía una consistencia similar a la arena húmeda, con una resistencia de carga de ~10 psi (0,7 kg/cm² o 98 kPa), suficiente para soportar un Módulo Lunar Apollo.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "scientists concluded that lunar soil had a consistency similar to wet sand, with a bearing strength of about 10 pounds per square inch (0.7 kilograms per square centimeter, or 98 kilopascals)— in other words, solid enough to support an Apollo Lunar Module.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El muestreador de suelos de Surveyor 3 realizó pruebas de zanjas, pruebas de carga e impacto: se cavaron cuatro zanjas y se ejecutaron cuatro pruebas de carga y trece de impacto.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "the probe dug four trenches and performed four bearing tests and thirteen impact tests.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El brazo del muestreador de Surveyor 3 podía alcanzar hasta 1,5 metros desde la sonda y excavar hasta 18 centímetros de profundidad.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "the first time carried a surface-sampling instrument that could reach up to 5 feet (1.5 meters) from the lander and could dig up to 7 inches (18 centimeters) deep.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El muestreador mecánico de suelos realizó siete pruebas de carga, cuatro de zanjeo y trece de impacto, con un tiempo total de operación de 18 horas y 22 minutos en diez sesiones.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "The surface sampler performed seven bearing tests, four trench tests, and thirteen impact tests. The total operating time was 18 hours, 22 minutes on ten separate occasions.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Durante las pruebas de carga, las penetraciones fueron de 38 a 50 mm; en las operaciones de zanjeo se alcanzó una profundidad de 175 mm (6,9 pulgadas).",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Penetrations of 1.5 to 2.0 in (38 to 50 mm) were obtained from the bearing tests, and a 6.9 in (175 mm) depth was reached during trenching operations.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El informe preliminar de Surveyor 3 señaló que las capas más profundas del suelo presentaban propiedades semejantes a suelos terrestres ordinarios.",
+      "fuente_url": "https://ntrs.nasa.gov/citations/19690074497",
+      "cita": "the deeper layers of material whose properties resemble those of ordinary terrestrial soils.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Surveyor 3 es la única sonda enviada a otro mundo que ha sido visitada por seres humanos.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "cita": "Surveyor 3 is the only probe visited by humans on another world.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Surveyor 3 — NASA Science",
+      "url": "https://science.nasa.gov/mission/surveyor-3/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 3 Preliminary Science Results (NTRS 19690074497)",
+      "url": "https://ntrs.nasa.gov/citations/19690074497",
+      "editor": "NASA NTRS / JPL",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Bearing strength of lunar soil (NTRS 19720035207 / Jaffe, L.D., JPL, 1971)",
+      "url": "https://ntrs.nasa.gov/citations/19720035207",
+      "editor": "NASA NTRS / The Moon journal",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Surveyor 3 — Wikipedia (en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "Número de pruebas de carga (bearing tests): NASA Science indica 'four bearing tests' (https://science.nasa.gov/mission/surveyor-3/), mientras que Wikipedia indica 'seven bearing tests' (https://en.wikipedia.org/wiki/Surveyor_3). Ninguna de las dos fuentes cita directamente el informe técnico original de JPL que resolvería la discrepancia.",
+    "Valor de resistencia de carga: el evento menciona que 'otro informe de JPL (NTRS 19690074497) citado por un buscador da 3-8 psi para la carga estática'. El texto extraído de ese documento (https://ntrs.nasa.gov/citations/19690074497) no incluye valores numéricos de psi en el resumen disponible, por lo que no se pudo verificar ni refutar esa cifra alternativa. La fuente oficial NASA Science da 10 psi (https://science.nasa.gov/mission/surveyor-3/).",
+    "Inconsistencia en la conversión de unidades dentro de la propia fuente NASA (https://science.nasa.gov/mission/surveyor-3/): se indica simultáneamente 10 psi, 0,7 kg/cm² y 98 kPa, pero 10 psi equivalen a ~68,9 kPa (no a 98 kPa), y 0,7 kg/cm² equivalen a ~68,6 kPa. El valor de 98 kPa correspondería en realidad a ~14,2 psi o ~1,0 kg/cm². El evento original repite esta misma inconsistencia. No es posible determinar cuál de los tres valores es el correcto sin el informe técnico primario de JPL."
+  ],
+  "huecos": [
+    "No se pudo acceder al texto completo del informe técnico JPL 'Surveyor 3 Preliminary Science Results' (NTRS 19690074497) para verificar si incluye el rango de 3-8 psi mencionado en la nota del evento; solo se obtuvo el resumen del abstract.",
+    "No se confirmó si las cifras de 10 psi corresponden a carga estática, dinámica o un promedio de ambas condiciones.",
+    "No se pudo verificar en qué fecha exacta (dentro de abril-mayo 1967) se extrajeron las conclusiones finales de resistencia de suelo, ya que las fuentes solo indican el período general de operaciones.",
+    "El rango preciso de resistencia estimado para los distintos tipos de ensayo (carga estática vs. impacto vs. zanjeo) no aparece desglosado en los documentos consultados.",
+    "La verificación en laboratorio terrestre de las mediciones de suelo de Surveyor 3, usando material traído por Apollo 12, no queda completamente respaldada por citas: el dato [7] fue descartado porque la cita (https://ntrs.nasa.gov/citations/19720035207) no incluía la masa de 1,3 g de la muestra ni que fue traída por el cucharón, detalles que la afirmación añadía.",
+    "Los detalles específicos de la recuperación de componentes de Surveyor 3 por los astronautas de Apollo 12 (fecha exacta, piezas desmontadas, cucharón y cámara) no quedan confirmados por la cita del dato [8] (https://science.nasa.gov/mission/surveyor-3/), que solo menciona el aterrizaje a ~180 m pero no la recuperación.",
+    "El tipo de mecanismo del brazo del muestreador (descrito como 'pantógrafo' en el dato [5] de Wikipedia) no aparece respaldado por la cita proporcionada (https://en.wikipedia.org/wiki/Surveyor_3), que solo detalla las dimensiones del cucharón."
+  ],
+  "ideas_visuales": [
+    "El brazo extensible de Surveyor 3 alcanzando 1,5 m desde la sonda, con el cucharón presionando el suelo lunar durante una prueba de carga (basado en datos [1], [2]).",
+    "Vista en corte del regolito lunar mostrando las profundidades alcanzadas: 38-50 mm en pruebas de carga y 175 mm en zanjeo, con escala en milímetros (basado en dato [4]).",
+    "Infografía comparativa lado a lado: un bloque de suelo lunar junto a un bloque de arena húmeda terrestre, ambos soportando un peso equivalente, ilustrando la resistencia de ~10 psi y la analogía de consistencia (basado en dato [0]).",
+    "Diagrama de los tres tipos de ensayo realizados (carga, zanjeo e impacto) con íconos y cifras: número de pruebas según ambas fuentes y tiempo total de operación de 18 h 22 min (basado en datos [1], [3]).",
+    "La sonda Surveyor 3 solitaria en la superficie de la Luna, con una placa que la identifica como 'la única sonda visitada por humanos en otro mundo' (basado en dato [9])."
+  ],
+  "datos_no_verificados": []
+}

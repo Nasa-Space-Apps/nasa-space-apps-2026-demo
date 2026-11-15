@@ -1,0 +1,185 @@
+{
+  "evento_id": "sur059",
+  "titulo": "Streptococcus mitis en la cámara de Surveyor 3: hallazgo (1970) y refutación (2011)",
+  "contexto_ampliado": "El 19 de noviembre de 1969, los astronautas Pete Conrad y Alan Bean del Apollo 12 aterrizaron en Oceanus Procellarum —el «Océano de las Tormentas»— a solo 535 pies (163 metros) de la sonda robótica Surveyor 3, que había llegado a la Luna el 20 de abril de 1967. Los astronautas recuperaron varios componentes de la sonda, entre ellos su cámara de televisión y una muestra de cableado, que regresaron a la Tierra para ser analizados. En total, se realizaron 36 estudios por 80 investigadores sobre los componentes devueltos de Surveyor 3.\n\nAl examinar la cámara en un laboratorio terrestre, los analistas encontraron algo inesperado: en la espuma interior del cuerpo de la cámara de televisión se aisló una pequeña colonia de Streptococcus mitis, una bacteria común en la boca y garganta humanas. En la muestra de cable, en cambio, no se encontró nada. La hipótesis inicial fue que entre 50 y 100 microbios habrían sobrevivido al lanzamiento, al vacío del espacio, a la radiación lunar, a temperaturas promedio de –253 °C y a la ausencia total de agua, nutrientes o fuente de energía. La cámara no había sido esterilizada antes del lanzamiento de Surveyor 3 en abril de 1967, lo que hacía posible que el microorganismo hubiera estado ahí desde antes del viaje.\n\nSin embargo, pronto surgieron dudas serias. La cámara había sido traída de regreso en una bolsa de nailon, no en el tipo de contenedor sellado hermético usado para las muestras lunares del programa Apollo, lo que abría la posibilidad de contaminación durante el viaje de regreso. Además, Leonard D. Jaffe, científico del programa Surveyor, reportó que se había producido una violación del procedimiento estéril: un instrumento utilizado para raspar muestras de las piezas fue depositado sobre una mesa de laboratorio no estéril y luego se usó nuevamente para recolectar muestras para cultivo. Jaffe concluyó que era «bastante posible que los microorganismos hubieran sido transferidos a la cámara después de su regreso a la Tierra y que nunca hubieran estado en la Luna».\n\nLa cuestión fue retomada décadas después. En 2007, la NASA financió un estudio archivístico para localizar la filmación del análisis microbiológico de la cámara y confirmar el reporte de violación del procedimiento estéril. Luego, en marzo de 2011, los investigadores John Rummel, Judith Allton y Don Morrison presentaron sus conclusiones en una reunión científica celebrada en The Woodlands, Texas. Al revisar los archivos en video de la época, el equipo encontró deficiencias claras: los analistas usaban ropa de manga corta con los brazos expuestos, y los faldones de las batas se elevaban por encima de la mesa de flujo laminar, actuando como un fuelle que podía impulsar partículas del interior de la ropa hacia las muestras. Rummel calificó la afirmación de supervivencia bacteriana como «endeble, incluso para los estándares de la época», y señaló que el hallazgo original nunca había pasado la revisión de pares, aunque persistió en la prensa y en internet durante décadas.\n\nNo obstante, existían argumentos a favor del hallazgo original. Fred Mitchell, autor principal del artículo original, señaló que hubo un retraso significativo antes de que el cultivo comenzara a crecer, un comportamiento consistente con bacterias en estado latente, no con una contaminación reciente. Además, solo se aislaron unos pocos microbios individuales de una única especie; si hubiera habido contaminación fresca, cabría esperar millones de bacterias de múltiples especies.\n\nEl debate, en última instancia, no puede resolverse de forma definitiva: las piezas de Surveyor 3 fueron sacadas de cuarentena y expuestas plenamente a condiciones terrestres, lo que hace imposible repetir la prueba. Hoy, la cámara de televisión de Surveyor 3 se exhibe en el Museo Nacional del Aire y el Espacio del Smithsonian en Washington, D.C. Lo que sí dejó el episodio fue una lección crucial para la exploración futura: como advirtió Rummel, sin controles de contaminación mucho más rigurosos, las muestras procedentes de Marte podrían «ahogarse» en vida terrestre al regresar, impidiendo detectar cualquier vida marciana que pudieran contener.",
+  "datos_reales": [
+    {
+      "afirmacion": "Apollo 12 aterrizó el 19 de noviembre de 1969 en Oceanus Procellarum, a 535 pies (163 metros) de Surveyor 3.",
+      "fuente_url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "cita": "On Nov. 19, 1969, Apollo 12 astronauts Pete Conrad and Alan Bean made a precision landing on the lunar surface in Oceanus Procellarum [...] Their touchdown point was a mere 535 feet (163 meters) from the Surveyor 3 lander",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Surveyor 3 aterrizó en la Luna el 20 de abril de 1967.",
+      "fuente_url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "cita": "the hardware that had soft-landed on the lunar terrain years before, on April 20, 1967",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se encontró una pequeña colonia de la bacteria Streptococcus mitis en el interior de la cámara de Surveyor 3.",
+      "fuente_url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "cita": "a small colony of common bacteria -- Streptococcus Mitis -- had stowed away on the device",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Las bacterias fueron halladas específicamente en la espuma interior de la cámara de televisión; no se encontró nada en la muestra del cable.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "A common bacterium, Streptococcus mitis, was isolated from a sample of foam taken from the interior of the television camera. [...] Nothing was found on a sample of cable.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La hipótesis inicial estimó que entre 50 y 100 microbios habrían sobrevivido al vacío, la radiación lunar y temperaturas de -253°C sin agua ni nutrientes.",
+      "fuente_url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "cita": "50 to 100 of the microbes appeared to have survived launch, the harsh vacuum of space, three years of exposure to the moon's radiation environment, the lunar deep-freeze at an average temperature of minus 253 degrees Celsius, not to mention no access to nutrients, water or an energy source",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Jaffe concluyó que era bastante posible que los microorganismos hubieran sido transferidos a la cámara después de su regreso a la Tierra y nunca hubieran estado en la Luna.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "cita": "It is, therefore, quite possible that the microorganisms were transferred to the camera after its return to Earth, and that they had never been to the Moon.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "En marzo de 2011, Rummel, Allton y Morrison presentaron el trabajo 'A Microbe on the Moon? Surveyor III and Lessons Learned for Future Sample Return Missions' en The Woodlands, Texas.",
+      "fuente_url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "cita": "Their verdict was given at a meeting on 'The Importance of Solar System Sample Return Missions to the Future of Planetary Science,' in March at The Woodlands, Texas, sponsored by the NASA Planetary Science Division and Lunar and Planetary Institute.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Al revisar archivos en video de la época, el equipo encontró que los analistas usaban ropa de manga corta con brazos expuestos y faldones de bata más altos que la mesa de flujo laminar, lo cual actuaría como fuelle de partículas.",
+      "fuente_url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "cita": "participants studying the camera were found to be wearing short-sleeve scrubs, thus arms were exposed. Also, the scrub shirt tails were higher than the flow bench level … and would act as a bellows for particulates from inside the shirt",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Rummel calificó la afirmación de supervivencia bacteriana como 'endeble' incluso para los estándares de la época, y señaló que el hallazgo nunca pasó la revisión de pares.",
+      "fuente_url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "cita": "The claim that a microbe survived 2.5 years on the moon was flimsy, at best, even by the standards of the time [...] The claim never passed peer review, yet has persisted in the press -- and on the Internet -- ever since.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Lt. Col. Fred Mitchell, autor principal del artículo original de 1971, señaló que hubo un retraso significativo en el crecimiento del cultivo, consistente con bacterias en estado latente, no con contaminación fresca.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "cita": "there was a significant delay before the sampled culture began growing; this is consistent with the sampled bacteria consisting of dormant cells, but not if the sampled culture was the result of fresh contamination.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Solo se aislaron unos pocos microbios individuales de una única especie; una contaminación fresca habría producido millones de bacterias de múltiples especies.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "cita": "if fresh contamination had occurred, millions of individual bacteria and 'a representation of the entire microbial population would be expected'; instead, only a few individual bacteria were sampled, and only from a single species.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Se realizaron 36 estudios por 80 investigadores sobre los componentes de Surveyor 3 devueltos de la Luna.",
+      "fuente_url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "cita": "A total of 36 studies by 80 investigators were made.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Rummel advirtió que sin mejores controles de contaminación, las muestras de Marte podrían contaminarse con vida terrestre al regresar, impidiendo detectar posible vida marciana.",
+      "fuente_url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "cita": "We need to be orders of magnitude more careful about contamination control than was the Surveyor 3 camera-team. If we aren't, samples from Mars could be drowned in Earth life upon return, and in all of that 'noise' we might never have the ability to detect Mars life we may have brought back, too.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Reports of Streptococcus mitis on the Moon",
+      "url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Moon Microbe Mystery Finally Solved",
+      "url": "https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html",
+      "editor": "Space.com / Leonard David",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "The Apollo 12 Visit to Surveyor 3: A Preview of Space Archaeology",
+      "url": "https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology",
+      "editor": "Drew Ex Machina",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "A Microbe on the Moon? Surveyor III and Lessons Learned for Future Sample Return Missions (Rummel, Allton, Morrison, 2011)",
+      "url": "https://www.lpi.usra.edu/meetings/sssr2011/pdf/5023.pdf",
+      "editor": "LPI / NASA",
+      "tipo": "científica"
+    }
+  ],
+  "contradicciones": [
+    "Distancia entre el aterrizaje del Apollo 12 y Surveyor 3: Space.com afirma '535 feet (163 meters)' (https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html), mientras que Drew Ex Machina afirma 'only 155 meters from Surveyor 3' (https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology). Diferencia de 8 metros entre ambas fuentes.",
+    "Duración de la estancia de Surveyor 3 en la Luna: Space.com usa 'three years' en un contexto y '2.5 years' en otro dentro del mismo artículo (https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html); Drew Ex Machina dice '31 months' y '2½ years' (https://drewexmachina.com/2019/11/25/the-apollo-12-visit-to-surveyor-3-a-preview-of-space-archaeology); Wikipedia dice 'nearly three years' y 'two and a half years' en el mismo artículo (https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon). El valor exacto de abril 1967 a noviembre 1969 es aprox. 31 meses (~2 años y 7 meses).",
+    "El título exacto del trabajo de Rummel et al. ('A Microbe on the Moon? Surveyor III and Lessons Learned for Future Sample Return Missions') aparece en la afirmación del dato [9], pero la cita textual de Space.com (https://www.space.com/11536-moon-microbe-mystery-solved-apollo-12.html) que lo respalda no incluye dicho título sino el nombre de la reunión; el título del trabajo proviene presumiblemente del PDF de LPI (https://www.lpi.usra.edu/meetings/sssr2011/pdf/5023.pdf) que el propio borrador declara como inaccesible.",
+    "La cifra de –253 °C como 'temperatura promedio' lunar en el dato [4] (Space.com) resulta físicamente cuestionable: la temperatura media en la superficie lunar oscila entre aproximadamente –173 °C (noche) y +127 °C (día). El valor de –253 °C (solo 20 K sobre el cero absoluto) parece un error de la fuente Space.com que se incorporó al dossier sin contraste con otra referencia."
+  ],
+  "huecos": [
+    "El PDF del artículo completo de 2011 de Rummel, Allton y Morrison (https://www.lpi.usra.edu/meetings/sssr2011/pdf/5023.pdf) fue inaccesible; solo se dispone de fragmentos del motor de búsqueda y de la cobertura de prensa de Space.com.",
+    "El artículo original de 1971 de Mitchell y Ellis ('Surveyor III: Bacterium isolated from lunar retrieved TV camera', Proceedings of the Second Lunar Science Conference) no fue leído directamente; los datos de Mitchell provienen de lo citado por Wikipedia.",
+    "No se pudo confirmar si el estudio archivístico financiado por la NASA en 2007 localizó efectivamente la filmación en 16mm del análisis microbiológico y qué resultados obtuvo.",
+    "Un fragmento de la presentación de Rummel en LPI (no leído, PDF vacío) sugiere que S. mitis fue uno de los organismos aislados en tests microbiológicos de rutina de la tripulación del Apollo 12, lo cual reforzaría la hipótesis de contaminación; esto no pudo verificarse en texto leído.",
+    "No se verificó el número exacto de colonias aisladas según el laboratorio original. La cifra de '50 a 100 microbios' aparece en Space.com como deducción del experimento no planeado, no como cita directa del artículo científico de 1971.",
+    "No se confirmó en qué fecha exacta ni en qué instalación específica del Laboratorio de Recepción Lunar de Houston se realizó el análisis bacteriológico de la cámara devuelta.",
+    "El evento original indica '1970' como fecha de inicio del hallazgo, pero ningún dato del dossier precisa en qué momento exacto (mes, año) se realizó el análisis microbiológico que detectó Streptococcus mitis tras la devolución de la cámara en noviembre de 1969.",
+    "El evento menciona 'Estudios posteriores' (en plural) que contribuyeron a la refutación, pero el dossier solo documenta en detalle uno: el de Rummel, Allton y Morrison (2011), más las observaciones previas de Jaffe y el estudio archivístico de 2007. No se identifican otros estudios de refutación específicos.",
+    "No se establece en el dossier si el estudio archivístico financiado por la NASA en 2007 [dato 16] fue el mismo que permitió a Rummel et al. localizar la filmación en 16 mm analizada en 2011, o si fueron esfuerzos independientes."
+  ],
+  "ideas_visuales": [
+    "Los astronautas Conrad y Bean en la superficie lunar, caminando hacia la sonda Surveyor 3 parcialmente cubierta de polvo, con el módulo lunar Apollo 12 visible al fondo a 163 metros de distancia (datos [0] y [1]).",
+    "La cámara de televisión de Surveyor 3 siendo introducida en una bolsa de nailon sobre la superficie lunar, en contraste con los contenedores herméticos metálicos usados para las rocas lunares (dato [6]).",
+    "Vista de microscopio mostrando la colonia de Streptococcus mitis aislada de la espuma interior de la cámara, con una placa de Petri en primer plano (datos [2] y [3]).",
+    "Fotograma de la filmación de archivo: analistas en el laboratorio con ropa de manga corta y brazos expuestos, trabajando frente a la mesa de flujo laminar con los faldones de las batas por encima del nivel de la mesa (dato [10]).",
+    "La cámara de televisión de Surveyor 3 exhibida en una vitrina del Museo Nacional del Aire y el Espacio del Smithsonian, con una placa informativa sobre el debate bacteriológico (dato [14])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "La cámara de Surveyor 3 no fue esterilizada antes del lanzamiento de la sonda en abril de 1967.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "cita": "The camera was not sterilized on Earth before the space probe's launch in April 1967, two and a half years earlier.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La cámara fue traída de regreso a la Tierra en una bolsa de nailon, no en el tipo de contenedor sellado hermético utilizado para las muestras lunares del programa Apollo.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "cita": "The Surveyor 3 camera was returned from the Moon in a nylon duffel bag, and was not in the type of sealed airtight metal container used to return lunar samples in the early Apollo missions.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "Leonard D. Jaffe, científico del programa Surveyor, reportó que se produjo una violación del procedimiento estéril: un instrumento de muestreo fue colocado sobre una mesa de laboratorio no estéril y luego usado para recolectar muestras para cultivo.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "cita": "a 'breach of sterile procedure' took place at just the right time to produce a false positive result. One of the implements being used to scrape samples off the Surveyor parts was laid down on a non-sterile laboratory bench, and then was used to collect surface samples for culturing.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "La prueba no puede repetirse: las piezas de Surveyor 3 fueron sacadas de cuarentena y expuestas a condiciones terrestres. La cámara se exhibe actualmente en el Smithsonian Air and Space Museum en Washington, D.C.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "cita": "The bacterial test is now non-repeatable because the parts were subsequently taken out of quarantine and fully re-exposed to terrestrial conditions (the Surveyor 3 camera is now on display in the Smithsonian Air and Space Museum in Washington, D.C.).",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "En 2007, la NASA financió un estudio archivístico para buscar la filmación del análisis microbiológico de la cámara y confirmar el reporte de violación del procedimiento estéril.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Reports_of_Streptococcus_mitis_on_the_Moon",
+      "cita": "In 2007, NASA funded an archival study that sought the film of the camera-body microbial sampling, to confirm the report of a breach in sterile technique.",
+      "confianza": "media",
+      "verificado_en_texto": false
+    }
+  ]
+}

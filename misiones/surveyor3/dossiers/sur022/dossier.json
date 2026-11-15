@@ -1,0 +1,209 @@
+{
+  "evento_id": "sur022",
+  "titulo": "Despegue del Atlas-Centaur AC-12 desde LC-36B — Surveyor 3 (17 abril 1967)",
+  "contexto_ampliado": "En la madrugada del 17 de abril de 1967, el cohete Atlas-Centaur AC-12 despegó del Complejo de Lanzamiento 36B de Cabo Cañaveral, Florida, llevando a bordo la sonda Surveyor 3. Todas las fuentes coinciden en que el despegue ocurrió a las 07:05:01 UT. En hora local, sin embargo, existe una discrepancia: el NSSDC registra las 2:05:01 a.m. EST, mientras que el analista espacial Andrew LePage indica las 3:05:01 AM EST. La diferencia se explica probablemente porque en abril de 1967 ya regía el horario de verano (EDT, UTC−4), lo que haría correcta la cifra de LePage si se interpreta como EDT; el NSSDC parece usar EST (UTC−5) por convención. La ventana de lanzamiento disponible ese día se extendía de la 1:24 a las 4:09 AM EST.\n\nEl vehículo lanzador estaba compuesto por un Atlas D n.º 292 como primera etapa y una etapa superior Centaur D. El Atlas-Centaur era un cohete derivado del misil balístico SM-65 Atlas D, y se lanzaba exclusivamente desde el Complejo de Lanzamiento 36 de Cabo Cañaveral, una instalación utilizada durante años para misiones Pioneer, Surveyor y Mariner. La etapa Centaur fue la primera en la historia de la astronáutica en emplear hidrógeno líquido (LH₂) y oxígeno líquido (LOX) como propelentes, una combinación de alto rendimiento energético que resultaba indispensable para colocar una carga de más de una tonelada en trayectoria lunar. El LC-36B había realizado su primer lanzamiento el 11 de agosto de 1965.\n\nA diferencia de las misiones Surveyor anteriores, que habían seguido trayectorias directas a la Luna, el AC-12 aprovechó por primera vez la capacidad de reignición del Centaur para partir desde una órbita de aparcamiento terrestre. Tras la separación de la etapa Atlas, los motores RL-10 del Centaur quemaron durante aproximadamente 5 minutos según el NSSDC —340 segundos según el dato más preciso de LePage— para alcanzar una órbita de aparcamiento. El NSSDC la describe como circular a 167 km de altitud, mientras que LePage ofrece datos más detallados: una órbita ligeramente elíptica de 163 por 174 km, con una inclinación de 30,0° respecto al ecuador.\n\nTras un período de costa de 22 minutos y 9 segundos, los motores del Centaur se reencendieron para ejecutar la quema de inyección translunar, colocando a la nave en trayectoria hacia la Luna. La separación definitiva de la Surveyor 3 respecto a su etapa Centaur se produjo a las 07:39:54 GMT. A partir de ese instante, la sonda —conocida como «Surveyor C» antes de recibir su designación numérica definitiva— quedó sola rumbo al satélite natural de la Tierra.\n\nEl programa Surveyor, del cual la Surveyor 3 sería la segunda sonda en lograr un alunizaje suave, tenía objetivos directamente vinculados a las futuras misiones tripuladas Apollo: desarrollar y validar la tecnología para alunizar suavemente, proporcionar datos sobre la compatibilidad del diseño del Apollo con las condiciones de la superficie lunar, y ampliar el conocimiento científico de la Luna. El programa completo incluyó siete naves y tuvo un coste total de 469 millones de dólares.\n\nUn detalle que ilustra la complejidad documental de la era espacial es la discrepancia en la masa de lanzamiento de la Surveyor 3: el NSSDC indica 1026 kg, NASA Science registra 997,9 kg (2200 libras) y LePage señala 1036 kg, calificándola como la más pesada de la serie hasta ese momento. Ninguna fuente explica la diferencia; es posible que cada cifra incluya distintos componentes (sonda sola, con adaptador o con propelente de crucero). Lo que sí confirma el NSSDC es que la masa al llegar a la Luna sería de apenas 296 kg, una reducción drástica debida al consumo de combustible durante las maniobras de frenado y descenso.",
+  "datos_reales": [
+    {
+      "afirmacion": "Surveyor 3 fue lanzada el 17 de abril de 1967 a las 07:05:01 UT desde el Complejo 36B del Eastern Test Range en el Centro Espacial Kennedy.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "Surveyor 3 was launched at 07:05:01 UT (2:05:01 a.m. EST) on 17 April 1967 on an Atlas-Centaur from complex 36B of the Eastern Test Range at Kennedy Space Center.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El vehículo lanzador fue el Atlas Centaur AC-12, compuesto por un Atlas D n.º 292 y una etapa superior Centaur D.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "Launch Vehicle: Atlas Centaur (AC-12 / Atlas D no. 292 / Centaur D)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El sitio de lanzamiento fue el Complejo de Lanzamiento 36B en Cabo Cañaveral, Florida.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "Launch Site: Cape Canaveral, Fla. / Launch Complex 36B",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La hora de lanzamiento según NASA Science fue el 17 de abril de 1967 a las 07:05:01 UT.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "Launch Date and Time: April 17, 1967 / 07:05:01 UT",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La masa de Surveyor 3 al lanzamiento era de 1026 kg y de 296 kg al aterrizar en la Luna, según el NSSDC.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "Surveyor 3 had a mass of 1026 kg at launch and 296 kg at landing.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras la separación del Atlas, el Centaur quemó durante aproximadamente 5 minutos para colocar la nave en una órbita circular de aparcamiento de 167 km de altitud.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "After separation from the Atlas, the Centaur burned for approximately 5 minutes, putting the spacecraft into a 167 km circular Earth parking orbit.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El Centaur se reencendió 22 minutos y 9 segundos después para inyectar la nave en trayectoria selenográfica.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The Centaur was restarted 22 minutes, 9 seconds later, injecting the spacecraft into a selenographic trajectory.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Los objetivos del programa Surveyor eran apoyar las misiones Apollo desarrollando tecnología de alunizaje suave, aportando datos sobre compatibilidad del diseño Apollo y ampliando el conocimiento científico de la Luna.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The primary objectives of the Surveyor program, a series of seven robotic lunar softlanding flights, were to support the coming crewed Apollo landings by: (1) developing and validating the technology for landing softly on the Moon; (2) providing data on the compatibility of the Apollo design with conditions encountered on the lunar surface; and (3) adding to the scientific knowledge of the Moon.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El programa Surveyor completo, que incluyó siete naves, tuvo un coste total de 469 millones de dólares.",
+      "fuente_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "cita": "The Surveyor program involved building and launching seven Surveyor spacecraft to the Moon at a total cost of $469 million.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Surveyor 3 fue el segundo vehículo de la serie Surveyor en realizar un alunizaje suave.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "NASA's Surveyor 3 was the second in the Surveyor series to make a soft landing on the Moon.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según NASA Science, la masa de Surveyor 3 era de 2200 libras (997,9 kg).",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "Spacecraft Mass: 2,200 pounds (997.9 kilograms)",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según LePage, el Atlas-Centaur 12 despegó del LC-36B a las 3:05:01 AM EST (equivalentes a 7:05:01 GMT) el 17 de abril de 1967.",
+      "fuente_url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+      "cita": "Atlas-Centaur 12 successfully lifted off from Cape Kennedy's Launch Complex 36B at 3:05:01 AM EST (7:05:01 GMT) on April 17, 1967.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según LePage, la masa total de lanzamiento de Surveyor C (Surveyor 3) era de 1036 kg, la mayor de la serie hasta ese momento.",
+      "fuente_url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+      "cita": "The total launch mass of Surveyor C was 1,036 kilograms – the heaviest so far in the series.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según LePage, la primera quema del Centaur duró 340 segundos y colocó la nave en una órbita de aparcamiento de 163 por 174 km inclinada 30,0° al ecuador.",
+      "fuente_url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+      "cita": "Ten seconds later, the Centaur's pair of RL-10 engines were started for their 340-second burn needed to place the stage and its Moon-bound payload into a temporary 163 by 174 kilometer parking orbit inclined 30.0° to the equator.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Según LePage, la separación de la sonda Surveyor 3 de la etapa Centaur se produjo a las 07:39:54 GMT.",
+      "fuente_url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+      "cita": "what was now called Surveyor 3 separated from its spent upper stage at 07:39:54 GMT.",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "La ventana de lanzamiento del 17 de abril se extendía de la 1:24 a las 4:09 AM EST.",
+      "fuente_url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+      "cita": "the first possible launch window extended from 1:24 to 4:09 AM EST on April 17",
+      "confianza": "media",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "A diferencia de los Surveyor anteriores, el AC-12 utilizó la capacidad de reignición en órbita del Centaur, comenzando su misión desde una órbita de aparcamiento.",
+      "fuente_url": "https://science.nasa.gov/mission/surveyor-3/",
+      "cita": "Unlike the previous Surveyors, Surveyor 3 began its mission from parking orbit around Earth with a burn from the Centaur upper stage, now capable of multiple firings.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Surveyor 3 (NSSDC Master Catalog)",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+      "editor": "NASA NSSDC",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 3 — NASA Science",
+      "url": "https://science.nasa.gov/mission/surveyor-3/",
+      "editor": "NASA Science",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Surveyor 3: Touching the Face of the Moon",
+      "url": "https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/",
+      "editor": "Drew Ex Machina (Andrew LePage)",
+      "tipo": "prensa"
+    },
+    {
+      "titulo": "Atlas-Centaur — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Atlas-Centaur",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    },
+    {
+      "titulo": "Cape Canaveral Launch Complex 36 — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cape_Canaveral_Launch_Complex_36",
+      "editor": "Wikipedia",
+      "tipo": "comunitaria"
+    }
+  ],
+  "contradicciones": [
+    "HORA LOCAL AL LANZAMIENTO: El NSSDC indica '2:05:01 a.m. EST' (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A), mientras que LePage/Drew Ex Machina indica '3:05:01 AM EST' (https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/). La hora UT/GMT (07:05:01) es coincidente en todas las fuentes. El 17 de abril de 1967 corresponde a horario de verano en EE.UU. (EDT = UTC-4), lo que haría correcta la cifra de 03:05:01 EDT de LePage; el NSSDC parece emplear 'EST' (UTC-5) por error o convención, obteniendo 02:05:01.",
+    "MASA AL LANZAMIENTO (tres valores distintos): NSSDC indica 1026 kg (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A); NASA Science indica 997,9 kg (2200 lb) (https://science.nasa.gov/mission/surveyor-3/); y LePage/Drew Ex Machina indica 1036 kg (https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/). Ninguna fuente explica la discrepancia. Posible causa: las tres cifras pueden incluir distintos componentes (sonda sola, con adaptador de lanzamiento, con combustible de viaje, etc.).",
+    "ÓRBITA DE APARCAMIENTO (geometría): NSSDC describe la órbita de aparcamiento como '167 km circular' (https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A), mientras que LePage la describe como '163 by 174 kilometer' (elíptica, aunque casi circular) con inclinación 30,0° (https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/). Los valores son compatibles (rango de altitud muy similar) pero no idénticos; la fuente de LePage parece más precisa.",
+    "Duración de la primera quema del Centaur: el NSSDC dice «approximately 5 minutes» (dato [5], https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A), mientras que LePage indica 340 segundos, es decir ~5 minutos y 40 segundos (dato [13], https://www.drewexmachina.com/2017/04/17/surveyor-3-touching-the-face-of-the-moon/). El borrador ya señalaba la discrepancia en la altitud de la órbita de aparcamiento entre estas dos fuentes, pero no esta diferencia en la duración de la quema."
+  ],
+  "huecos": [
+    "No se encontró ninguna fuente oficial o fiable que confirme o descarte la existencia de retrasos o incidencias durante la cuenta atrás del AC-12. El evento señala que 'la fuente no menciona retrasos', pero no se puede afirmar que no los hubo.",
+    "No se encontró explicación oficial para la discrepancia triple en la masa de lanzamiento (NSSDC: 1026 kg, NASA Science: 997,9 kg, LePage: 1036 kg). No está claro si los valores incluyen distintos componentes (adaptador de carga útil, retrocohete, propelentes verniers).",
+    "No se pudo verificar la duración exacta de la segunda quema del Centaur (inyección translunar) en ninguna fuente oficial. LePage indica 111 segundos, pero es una fuente de prensa especializada, no oficial.",
+    "No se encontraron documentos técnicos en NTRS sobre el vuelo AC-12 específico o el sistema de lanzamiento del Surveyor 3.",
+    "No se encontró información verificada sobre el número exacto de personal presente en el LC-36B durante el lanzamiento ni sobre el director de vuelo o controladores de misión de esta misión específica."
+  ],
+  "ideas_visuales": [
+    "Vista nocturna del Atlas-Centaur AC-12 en la plataforma del LC-36B de Cabo Cañaveral, iluminado por reflectores antes del despegue de madrugada (basado en datos [2], [11], [15]: lanzamiento entre la 1:24 y las 4:09 AM hora local).",
+    "Instante del despegue: el AC-12 se eleva entre llamas y humo en la oscuridad desde el Complejo 36B, 17 de abril de 1967 (datos [0], [1], [2]).",
+    "Diagrama de la secuencia de vuelo: separación del Atlas, primera quema del Centaur de 340 segundos y entrada en órbita de aparcamiento a ~167 km (datos [5], [13], [21]).",
+    "La nave Surveyor 3 y la etapa Centaur en órbita de aparcamiento terrestre a unos 167 km de altitud, con la curvatura de la Tierra de fondo (datos [5], [13]).",
+    "Reencendido de los motores RL-10 del Centaur para la inyección translunar tras 22 minutos y 9 segundos de costa (dato [6]).",
+    "Separación de la Surveyor 3 de la etapa Centaur agotada a las 07:39:54 GMT, con la sonda alejándose en solitario rumbo a la Luna (dato [14])."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "La etapa Centaur fue la primera etapa de cohete en utilizar hidrógeno líquido (LH2) y oxígeno líquido (LOX) como propelentes.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Atlas-Centaur",
+      "cita": "Centaur was the first rocket stage to utilize liquid hydrogen (LH2) and liquid oxygen (LOX) as propellants.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El Atlas-Centaur fue un vehículo lanzador estadounidense derivado del misil SM-65 Atlas D, lanzado siempre desde el Complejo de Lanzamiento 36 de Cabo Cañaveral.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Atlas-Centaur",
+      "cita": "The Atlas-Centaur was a United States expendable launch vehicle derived from the SM-65 Atlas D missile. The vehicle featured a Centaur upper stage, the first such stage to use high-performance liquid hydrogen as fuel. Launches were conducted from Launch Complex 36 at the Cape Canaveral Air Force Station (CCAFS) in Florida.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El primer lanzamiento del LC-36B se realizó el 11 de agosto de 1965 con un Atlas-Centaur (Surveyor SD-2).",
+      "fuente_url": "https://en.wikipedia.org/wiki/Cape_Canaveral_Launch_Complex_36",
+      "cita": "First launch: August 11, 1965, Atlas-Centaur (Surveyor SD-2)",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    },
+    {
+      "afirmacion": "El LC-36 fue diseñado para lanzar el cohete Atlas-Centaur y se utilizó para lanzar las sondas Pioneer, Surveyor y Mariner.",
+      "fuente_url": "https://en.wikipedia.org/wiki/Cape_Canaveral_Launch_Complex_36",
+      "cita": "From the 1960s to the 1980s, LC-36 was used by NASA and the United States Air Force to launch many payloads from the Atlas-Centaur and its derivatives, including the Pioneer, Surveyor, and Mariner probes.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}
