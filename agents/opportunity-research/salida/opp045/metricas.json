@@ -1,0 +1,157 @@
+{
+  "modo": "Amazon Bedrock · perfil default · us-east-1 · us.anthropic.claude-sonnet-4-6 + revisor us.anthropic.claude-opus-4-6-v1",
+  "costo_usd_referencia": 0.217465,
+  "turnos": 13,
+  "duracion_s": 115.8,
+  "duracion_api_s": 89.4,
+  "tokens": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 19214,
+    "cache_read_input_tokens": 54235,
+    "output_tokens": 8512,
+    "output_tokens_details": {
+      "thinking_tokens": 2251
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 19214
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "por_modelo": {
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+      "inputTokens": 1315,
+      "outputTokens": 24,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001435,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "bedrock",
+      "costBasis": "list"
+    },
+    "us.anthropic.claude-sonnet-4-6": {
+      "inputTokens": 9,
+      "outputTokens": 8512,
+      "cacheReadInputTokens": 54235,
+      "cacheCreationInputTokens": 19214,
+      "webSearchRequests": 0,
+      "costUSD": 0.21603,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 2251,
+      "cacheCreationEphemeral5mInputTokens": 19214,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "claude-sonnet-4-6",
+      "provider": "bedrock",
+      "costBasis": "list"
+    }
+  },
+  "llamadas_herramientas": {
+    "buscar_web": 4,
+    "leer_pagina": 6,
+    "buscar_papers_ntrs": 1,
+    "StructuredOutput": 1
+  },
+  "prompts": {
+    "investigador": "2",
+    "usuario": "1"
+  },
+  "proveedor": "bedrock",
+  "revision": {
+    "modelo": "us.anthropic.claude-opus-4-6-v1",
+    "prompt_version": "3",
+    "costo_usd_referencia": 0.30731025,
+    "turnos": 2,
+    "duracion_s": 125.5,
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "inputTokens": 4459,
+        "outputTokens": 26,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.004589,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "bedrock",
+        "costBasis": "list"
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "inputTokens": 3,
+        "outputTokens": 10745,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 5453,
+        "webSearchRequests": 0,
+        "costUSD": 0.30272125,
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 8674,
+        "cacheCreationEphemeral5mInputTokens": 5453,
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "canonicalModel": "claude-opus-4-6",
+        "provider": "bedrock",
+        "costBasis": "list"
+      }
+    },
+    "cambios": {
+      "datos_antes": 15,
+      "datos_despues": 14,
+      "indices_invalidos": 0,
+      "contradicciones_nuevas": 2,
+      "huecos_nuevos": 4,
+      "observaciones": "Se eliminó el dato [7] porque su cita solo respalda el nombre «Columbia Memorial Station» pero no la fecha de aterrizaje ni el cráter Gusev que la afirmación incluía. Se corrigió la traducción de «near tears» a «casi lágrimas» en el relato (dato [12]) y se eliminó el año 2007 del hallazgo de sílice (dato [8]) por no estar en la cita. El relato se depuró de múltiples detalles sin respaldo citaciona"
+    }
+  },
+  "costo_usd_referencia_total": 0.52477525,
+  "costos": {
+    "total_usd": 0.524775,
+    "por_paso": {
+      "investigacion": 0.217465,
+      "revision": 0.30731
+    },
+    "por_modelo": {
+      "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+        "usd": 0.006024,
+        "entrada": 5774,
+        "salida": 50,
+        "cache_leida": 0,
+        "cache_escrita": 0,
+        "razonamiento": 0
+      },
+      "us.anthropic.claude-sonnet-4-6": {
+        "usd": 0.21603,
+        "entrada": 9,
+        "salida": 8512,
+        "cache_leida": 54235,
+        "cache_escrita": 19214,
+        "razonamiento": 2251
+      },
+      "us.anthropic.claude-opus-4-6-v1": {
+        "usd": 0.302721,
+        "entrada": 3,
+        "salida": 10745,
+        "cache_leida": 0,
+        "cache_escrita": 5453,
+        "razonamiento": 8674
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "evento_id": "opp054",
+  "titulo": "La «rosquilla de mermelada»: el misterio de Pinnacle Island",
+  "contexto_ampliado": "A principios de enero de 2014, el rover Opportunity operaba en un área llamada Cook Haven, ubicada en la cresta Murray Ridge, dentro de la sección Solander Point del borde del cráter Endeavour. El hallazgo que estaba a punto de producirse coincidía con una fecha especial: se cumplía una década desde que Spirit y Opportunity iniciaron sus misiones en Marte, un hito que la NASA celebraba en Washington DC. Fue en ese contexto que apareció uno de los descubrimientos más curiosos de toda la misión.\n\nEn una imagen tomada por el rover el 8 de enero de 2014, los científicos detectaron una pequeña roca de apenas 4 centímetros de ancho, con un borde blanco y un centro rojo intenso, en un lugar donde cuatro días antes no había absolutamente nada. El equipo de MER refinó la ventana de aparición a un intervalo de cuatro días marcianos, entre los soles 3536 y 3540. Steve Squyres, investigador principal de la misión, la bautizó de manera memorable: «Parece una rosquilla de mermelada, y no se parece a nada que hayamos visto jamás en Marte.» La roca recibió el nombre oficial de Pinnacle Island.\n\nEl misterio de su origen no tardó en resolverse. Tras mover el rover una corta distancia, los científicos pudieron ver directamente cuesta arriba una roca volcada con el mismo aspecto inusual: centro rojo y borde blanco. La bautizaron Stuart Island, y junto a ella se distinguía claramente la huella de una rueda del rover. «La atropellamos. Podemos ver el rastro. De ahí vino Pinnacle Island», confirmó Ray Arvidson, investigador adjunto de la misión, de la Universidad Washington en San Luis. Pinnacle Island se encontraba a aproximadamente 1 metro cuesta abajo de Stuart Island, exactamente donde la rueda la había lanzado al partir la roca original.\n\nEl análisis químico de Pinnacle Island reveló resultados sorprendentes. La roca contenía niveles muy altos de azufre y magnesio, y el doble de manganeso que cualquier otra muestra analizada hasta entonces en Marte. La parte roja oscura del centro correspondía a «algún tipo de óxido de hierro y manganeso», mientras que la parte blanca exterior era «algún tipo de sulfato», según Arvidson. Todos estos elementos y minerales tienen algo en común: son solubles en agua. Su alta concentración en la roca indica que fueron depositados allí por la acción del agua a lo largo del tiempo.\n\n¿Cuándo actuó esa agua? Arvidson planteó dos posibilidades: pudo haber ocurrido en tiempos relativamente recientes, justo bajo la superficie marciana, o bien hace mucho más tiempo en capas rocosas más profundas que quedaron al descubierto por la erosión. Squyres añadió otra reflexión fascinante: si la roca estaba volcada, su cara inferior podría no haber estado expuesta a la atmósfera de Marte «quizás durante miles de millones de años». En cierto sentido, la rueda de Opportunity había abierto una ventana al pasado geológico del planeta.\n\nTras completar la inspección de Pinnacle Island, el equipo dirigió Opportunity hacia el sur y cuesta arriba para investigar capas de roca expuestas en la pendiente, aproximándose a una formación conocida como el escarpe McClure-Beverlin. La «rosquilla de mermelada» quedó atrás, pero su legado científico —evidencia de actividad acuosa en minerales ocultos bajo la superficie marciana— se sumó al extenso catálogo de descubrimientos de un rover que ya llevaba diez años explorando el planeta rojo.",
+  "datos_reales": [
+    {
+      "afirmacion": "Pinnacle Island medía aproximadamente 4 centímetros (1,5 pulgadas) de ancho, con borde blanco y centro rojo intenso.",
+      "fuente_url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/",
+      "cita": "Only about 1.5 inches wide (4 centimeters), the white-rimmed, red-centered rock caused a stir last month when it appeared in an image the rover took Jan. 8 at a location where it was not present four days earlier.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Pinnacle Island es un fragmento de una roca mayor que la rueda de Opportunity partió y lanzó cuesta abajo; la roca madre (Stuart Island) fue encontrada justo cuesta arriba, con la huella de la rueda a su lado.",
+      "fuente_url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/",
+      "cita": "\"Once we moved Opportunity a short distance, after inspecting Pinnacle Island, we could see directly uphill an overturned rock that has the same unusual appearance,\" said Opportunity Deputy Principal Investigator Ray Arvidson of Washington University in St. Louis. \"We drove over it. We can see the track. That's where Pinnacle Island came from.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El análisis químico de Pinnacle Island reveló altos niveles de manganeso y azufre; Arvidson indicó que estos elementos solubles en agua fueron concentrados en la roca por la acción del agua.",
+      "fuente_url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/",
+      "cita": "Examination of Pinnacle Island revealed high levels of elements such as manganese and sulfur, suggesting these water-soluble ingredients were concentrated in the rock by the action of water.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Arvidson apuntó que la concentración de esos minerales pudo ocurrir recientemente cerca de la superficie, o hace mucho más tiempo en capas más profundas que quedaron al descubierto por la erosión.",
+      "fuente_url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/",
+      "cita": "\"This may have happened just beneath the surface relatively recently,\" Arvidson said, \"or it may have happened deeper below ground longer ago and then, by serendipity, erosion stripped away material above it and made it accessible to our wheels.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Steve Squyres describió Pinnacle Island como una «rosquilla de mermelada» y dijo que era diferente a cualquier roca vista antes en Marte; era blanca por fuera con un interior rojo oscuro profundo.",
+      "fuente_url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+      "cita": "White around the outside, it features a deep, dark red interior. \"It looks kind of like a jelly doughnut – and it's unlike anything we've ever seen on Mars,\" he said.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Squyres declaró en enero de 2014 que la roca tenía niveles muy altos de azufre y magnesio, y el doble de manganeso que cualquier otra roca analizada en Marte.",
+      "fuente_url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+      "cita": "\"It's very high in sulfur and magnesium, with twice as much manganese as anything we've seen on Mars.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El equipo de MER refinó la aparición de Pinnacle Island a un lapso de cuatro días marcianos, entre los soles 3536 y 3540.",
+      "fuente_url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+      "cita": "On further analysis, Jim Rice, of the Planetary Science Institute and MER Geology Team leader, refined the appearance of Pinnacle Island to have occurred sometime within four Martian days, between sols 3536 and 3540.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Arvidson identificó la parte roja como 'algún tipo de óxido de hierro y manganeso' y la parte blanca como 'algún tipo de sulfato', señalando que todos son minerales solubles en agua.",
+      "fuente_url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+      "cita": "From the ongoing stream of data coming down, the dark red stuff appears to be \"iron manganese oxide of some kind,\" while the surrounding white part \"represents some kind of sulfate,\" Arvidson suggested at month's end. \"These are all minerals and elements soluble in water.\"",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Squyres especuló con que, si la roca estaba boca abajo, su cara inferior no habría estado expuesta a la atmósfera marciana quizás durante miles de millones de años.",
+      "fuente_url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+      "cita": "\"If that's what we're seeing, the underside of this rock hasn't been exposed to the Martian atmosphere for perhaps billions of years,\" said Squyres.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El descubrimiento de Pinnacle Island ocurrió mientras Opportunity operaba en Cook Haven, en Murray Ridge, dentro de la sección Solander Point del borde del cráter Endeavour.",
+      "fuente_url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+      "cita": "As 2014 rang in on Mars, Opportunity was investigating exposed outcrop targets in an area dubbed Cook Haven, located on Murray Ridge in the Solander Point section of Endeavour's rim.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "Tras terminar el estudio de Pinnacle Island, el equipo planeó dirigir el rover hacia el sur y cuesta arriba para investigar el escarpe McClure-Beverlin.",
+      "fuente_url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/",
+      "cita": "Now that the rover is finished inspecting this rock, the team plans to drive Opportunity south and uphill to investigate exposed rock layers on the slope. Opportunity is approaching a boulder-studded ridge informally named the McClure-Beverlin Escarpment.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    },
+    {
+      "afirmacion": "El descubrimiento de Pinnacle Island coincidió con el décimo aniversario de Opportunity en la superficie de Marte (aterrizó el 24 de enero de 2004), un hito que el equipo había comenzado a celebrar en Washington DC.",
+      "fuente_url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+      "cita": "The geologic pastry popped up just after the MER 10 celebrations began in Washington DC. Ten years ago, Spirit and Opportunity set out for three-month excursions of Gusev Crater and Meridiani Planum.",
+      "confianza": "alta",
+      "verificado_en_texto": true
+    }
+  ],
+  "fuentes_nuevas": [
+    {
+      "titulo": "Mars Rover Heads Uphill After Solving 'Doughnut' Riddle – NASA News Release",
+      "url": "https://www.nasa.gov/news-release/mars-rover-heads-uphill-after-solving-doughnut-riddle/",
+      "editor": "NASA",
+      "tipo": "oficial NASA/JPL"
+    },
+    {
+      "titulo": "Mars Exploration Rovers Update: Opportunity Finds Mystery Rock, Mission Celebrates 10 Years",
+      "url": "https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+      "editor": "The Planetary Society (A.J.S. Rayl)",
+      "tipo": "científica"
+    },
+    {
+      "titulo": "Where Martian 'Jelly Doughnut' Rock Came From (True Color) – Image & Caption",
+      "url": "https://science.nasa.gov/resource/where-martian-jelly-doughnut-rock-came-from-true-color/",
+      "editor": "NASA Science / JPL-Caltech / Cornell Univ. / Arizona State Univ.",
+      "tipo": "oficial NASA/JPL"
+    }
+  ],
+  "contradicciones": [
+    "Sol en que se notó Pinnacle Island vs. fecha del 8 de enero: Planetary Society asigna Sol 3540 = 7 de enero y Sol 3541 = 8 de enero (el rock fue notado en Sol 3541), mientras que science.nasa.gov indica que el rock 'showed up in front of Opportunity in an image taken on Sol 3540 (Jan. 8, 2014)'. Fuentes: https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock y https://science.nasa.gov/resource/where-martian-jelly-doughnut-rock-came-from-true-color/",
+    "El evento original describe la roca como 'rica en manganeso y azufre', pero el dato [5] (Planetary Society, citando a Squyres) añade que también contenía niveles muy altos de magnesio: «It's very high in sulfur and magnesium, with twice as much manganese as anything we've seen on Mars.» El evento original omite por completo el magnesio como elemento clave. URL: https://www.planetary.org/articles/01-mer-update-opportunity-finds-mystery-rock",
+    "El dato [9] afirmaba que la roca se estudió 'durante semanas', pero su propia cita (science.nasa.gov) dice 'for several days in January', una duración claramente menor. Esta discrepancia interna motivó la eliminación del dato. URL: https://science.nasa.gov/resource/where-martian-jelly-doughnut-rock-came-from-true-color/"
+  ],
+  "huecos": [
+    "No se encontró en las fuentes leídas la composición química precisa y cuantificada (en porcentajes o ppm) de manganeso, azufre y magnesio en Pinnacle Island; solo hay descripciones cualitativas ('very high', 'twice as much').",
+    "No se pudo confirmar con fuentes leídas si Pinnacle Island fue estudiada en algún artículo científico revisado por pares que publicara los datos analíticos completos del APXS.",
+    "No hay datos verificados sobre si la hipótesis de ejecta de impacto meteorítico fue descartada formalmente o solo abandonada como menos probable.",
+    "No se confirma en las fuentes leídas la orientación exacta de la roca (si estaba boca abajo o boca arriba al ser analizada), aunque Squyres menciona la posibilidad de que estuviera volcada.",
+    "Al eliminar el dato [9] por discrepancia en la duración, el dossier pierde la única cita que respaldaba los instrumentos específicos usados (cámara microscópica MI y espectrómetro APXS). Ningún otro dato conservado nombra estos instrumentos con cita verificable.",
+    "El relato del borrador incluía la hipótesis de ejecta de impacto meteorítico como explicación alternativa a la aparición de la roca, pero ningún dato del dossier la respalda con cita; tampoco se confirma si fue descartada formalmente."
+  ],
+  "ideas_visuales": [
+    "Vista comparativa antes/después del mismo punto del suelo marciano: sin la roca (cuatro días antes) y con Pinnacle Island visible, mostrando su borde blanco y centro rojo de 4 cm [datos 0, 6].",
+    "Primer plano de Pinnacle Island sobre el suelo de Marte: roca pequeña con borde blanco y centro rojo oscuro profundo, tal como la describió Squyres [datos 0, 4].",
+    "Panorámica cuesta arriba mostrando a Stuart Island volcada con la huella de la rueda del rover a su lado, y Pinnacle Island a 1 metro cuesta abajo; flechas indicando la trayectoria del fragmento [datos 1, 10].",
+    "Diagrama en corte de la composición de Pinnacle Island: centro etiquetado como óxido de hierro-manganeso (rojo) y borde como sulfato (blanco), con los elementos clave (Mn, S, Mg) señalados [datos 5, 7].",
+    "Mapa esquemático de la zona: Cook Haven en Murray Ridge, sección Solander Point del cráter Endeavour, con la posición de Opportunity y la dirección hacia el escarpe McClure-Beverlin [datos 11, 12].",
+    "Infografía de línea temporal: soles 3536-3540 (ventana de aparición de la roca), detección el 8 de enero de 2014, identificación de Stuart Island y resolución del misterio, partida hacia McClure-Beverlin [datos 0, 6, 1, 12]."
+  ],
+  "datos_no_verificados": [
+    {
+      "afirmacion": "Stuart Island, la roca madre de Pinnacle Island, se encontraba a aproximadamente 1 metro (3 pies) cuesta arriba de Pinnacle Island; una huella de rueda junto a Stuart Island confirmó la historia.",
+      "fuente_url": "https://science.nasa.gov/resource/where-martian-jelly-doughnut-rock-came-from-true-color/",
+      "cita": "For scale, Pinnacle Island is about 3 feet (1 meter) from Stuart Island. The rover's own solar panels blocked a view of it while the robotic-arm instruments were studying Pinnacle Island. The wheel track beside Stuart Island helps tell the story: Opportunity drove over a rock and broke it open. One of the pieces, Pinnacle Island, was knocked downhill.",
+      "confianza": "alta",
+      "verificado_en_texto": false
+    }
+  ]
+}
