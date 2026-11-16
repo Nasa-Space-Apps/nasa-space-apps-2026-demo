@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Left behind">
+<title>Left behind</title>
+<rect width="256" height="256" rx="56" fill="#E2603A"/>
+<rect x="180" y="18" width="26" height="60" rx="13" fill="#FEECE3"/>
+<rect x="30" y="60" width="196" height="112" rx="32" fill="#FEECE3"/>
+<circle cx="88" cy="116" r="28" fill="#171717"/>
+<circle cx="168" cy="116" r="28" fill="#171717"/>
+<rect x="110" y="166" width="36" height="46" fill="#FEECE3"/>
+<rect x="56" y="206" width="144" height="30" rx="15" fill="#FEECE3"/>
+</svg>
