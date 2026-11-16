@@ -16,6 +16,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "video/**", // the local, git-ignored Remotion project (it has its own tooling)
   ]),
 ]);
 
