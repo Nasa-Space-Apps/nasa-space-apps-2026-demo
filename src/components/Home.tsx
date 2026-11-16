@@ -1,9 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { CARDS, STAGE, pointer, stageScale } from "@/lib/home";
 import { reducedMotion } from "@/lib/motion";
+import { PERF } from "@/lib/perf";
 import { HOME, cssVars, themeFor } from "@/lib/themes";
 import { ease } from "@/lib/ui";
 import Ambient, { AmbientButton } from "./Ambient";
@@ -32,7 +33,17 @@ const stageStyle: CSSProperties = {
   pointerEvents: "none",
 };
 
+/**
+ * Next keeps a visited route alive (hidden, with its state) while another one is open. The light perf profile releases this view's WebGL canvas then (lib/perf.ts), and
+ * coming back (the brand mark of the globe) mounts it fresh: otherwise it would still wear the fade of its last trip («start») and show a blank screen.
+ */
 export default function Home() {
+  const pathname = usePathname();
+  if (PERF.releaseHiddenViews && pathname !== "/") return null;
+  return <HomeView />;
+}
+
+function HomeView() {
   const router = useRouter();
   const theme = useMemo(() => themeFor("home"), []);
   const [canvasReady, setCanvasReady] = useState(false);
@@ -40,6 +51,11 @@ export default function Home() {
   const [timedOut, setTimedOut] = useState(false);
   const [leaving, setLeaving] = useState(false);
   const ready = (canvasReady && imagesReady) || timedOut;
+  // the full perf profile keeps the view mounted and re-runs its effects when it comes back: lift the fade of the trip that left it
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reset after coming back from a trip
+    setLeaving(false);
+  }, []);
 
   const root = useRef<HTMLDivElement>(null);
   const cards = useRef<(HTMLDivElement | null)[]>([]);

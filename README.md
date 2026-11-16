@@ -14,6 +14,7 @@ No hay conducción libre: el jugador avanza con `Espacio` o salta de checkpoint 
 
 ## Qué incluye la demo
 
+- **Home (`/`, hito 55):** una sola composición animada (paleta de la referencia: azul lila): **Opportunity en 3D, grande y quieto**, y **cuatro cartas** con ilustraciones de las historias, dos a cada lado, giradas y flotando (decoración: no abren nada). Sello giratorio y botón «start» abren el globo; clic en cualquier sitio suelta chispas; las capas se mueven un poco con el puntero. Detalle: [`docs/design.md`](docs/design.md) («Home»).
 - **Vista del globo (`/moon`, `/mars`):** un globo alámbrico (rejilla fina, solo lo de delante, cuadrados que orbitan con él, vehículos en miniatura hundidos en el suelo)
   que **gira solo** y se puede **girar en dos ejes** (sobre su propio eje y cabeceando; nunca rueda de lado) (arrastrar le da inercia; al manipularlo la cara visible siempre muestra algún vehículo: si agarras una cara vacía, gira rápido hasta uno; al soltar, la inclinación vuelve sola a la inicial, conservando hacia dónde lo giraste) y **acercar con la rueda** (el zoom solo escala el globo y los vehículos, no los botones), con un selector Luna/Marte a la izquierda, un botón de música (icono) a la derecha y el marcador del vehículo abandonado → su tarjeta con el vehículo ilustrado en 3 tonos →
   **«Travel to the past»** abre `/<mundo>/<vehículo>` (p. ej. `/moon/surveyor-3`), la historia; si el vehículo aún no tiene historia, el botón es **«Coming soon»**. `Esc` cierra la tarjeta; `← Globe` vuelve. Cada ruta carga solo sus recursos.
@@ -65,7 +66,7 @@ En la escena, arriba a la izquierda está `← story` (vuelve a la última pági
 
 | Ruta | Vista |
 | --- | --- |
-| `/` | redirige a `/moon` |
+| `/` | **home** (hito 55): una sola composición con cartas de ilustraciones y Opportunity en 3D; «start» y el sello abren el globo (`/mars`); el logo del globo vuelve aquí |
 | `/moon`, `/mars` | globo con el selector de mundo (cambiar de mundo no recarga) |
 | `/mars/opportunity`, `/mars/spirit`, `/mars/ingenuity`, `/mars/insight`, `/mars/beagle-2`, `/moon/surveyor-3` | la historia del vehículo (`/<mundo>/<id de la misión>`): cómic → 3D → cómic; los demás vehículos redirigen al globo; `/mars#opportunity` abre el globo con la tarjeta |
 

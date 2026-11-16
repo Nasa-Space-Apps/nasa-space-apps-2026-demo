@@ -94,6 +94,7 @@ Con la extensión Claude in Chrome (o cualquier navegador):
 - Con `cacheComponents`, Next **conserva montada la vista anterior** (oculta, con su estado de React) cuando navegas a otra ruta, y al volver **re-ejecuta sus efectos**. `Explore` fundía a blanco al viajar (`leaving = true`) y al volver con «← Globe» o el botón Atrás
   del navegador seguía así: página en blanco en `/moon#sev`. Corregido reseteando `leaving` en el efecto de montaje. **Regla:** todo estado transitorio de una vista (fundidos, «en curso»…) debe reiniciarse en el efecto de montaje, no en el inicializador del `useState`.
 - Para reproducirlo: `/moon` → clic en el vehículo → Travel to the past → `navigate back`.
+- **El home (`/`) tenía el mismo fallo (hito 55):** «start» (o el sello) fundía la página al color del campo (`leaving = true`) y, al volver con el logo del globo, **el home salía en blanco** porque Next lo había conservado oculto con ese fundido. Corregido con la misma regla: `Home` no renderiza nada cuando la ruta no es `/` (perfil `light`: libera además su canvas 3D y vuelve a montarse de cero, con su entrada) y su efecto de montaje resetea `leaving` (perfil `full`). Para reproducirlo: `/` → «start» → clic en el logo del globo. (Un clic programático en el logo sí funcionaba al principio: el fallo solo aparece si el home ya se visitó.)
 
 ## Audio: no confíes en `preload` (hito 38)
 
@@ -161,6 +162,7 @@ Con la extensión Claude in Chrome (o cualquier navegador):
 
 ## Servidor de desarrollo
 
+- **Si la hoja de estilos del servidor se queda antigua** (los `.home-*` nuevos no aparecían aunque `globals.css` los tenía; ver más arriba la comprobación con `document.styleSheets`), hay que parar `npm run dev`, borrar `.next` y volver a arrancarlo. Tras hacerlo desde una sesión de Claude, ese servidor queda corriendo en segundo plano: ciérralo o relánzalo tú.
 - **El usuario arranca `npm run dev` a mano** (y pidió que no se deje ninguno corriendo). Si lanzas uno propio para probar,
   ciérralo después. Next avisa si ya hay otro en el proyecto («You can access the existing server at…») y no arranca un
   segundo: pruebas contra el existente.
