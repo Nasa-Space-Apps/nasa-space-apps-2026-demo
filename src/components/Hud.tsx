@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { getAmbient, subscribeAmbient } from "@/lib/ambient";
-import { getGuide, subscribeGuide } from "@/lib/guide";
-import { getNarration, subscribeNarration } from "@/lib/narration";
+import { getAmbient, subscribeAmbient, toggleAmbient } from "@/lib/ambient";
+import { input, stepForward } from "@/lib/game";
+import { getGuide, subscribeGuide, toggleGuide } from "@/lib/guide";
+import { getNarration, subscribeNarration, toggleNarration } from "@/lib/narration";
 import type { Theme } from "@/lib/themes";
 import { ease } from "@/lib/ui";
 import Icon from "./Icon";
@@ -53,6 +54,75 @@ export function Hints({ theme, still = false }: { theme: Theme; still?: boolean 
           {l}
         </span>
       ))}
+    </div>
+  );
+}
+
+/**
+ * The keys of the desktop HUD, as buttons for a finger (compact screens): a big «hold to drive» button (press and keep pressing: the vehicle advances to the next
+ * stop; a vehicle that never moved gets «next moment», a tap) and three round toggles (narration, guide, music) that do what N, G and S do. `side` stacks them for a
+ * phone held sideways.
+ */
+export function TouchControls({ theme, still = false, side = false }: { theme: Theme; still?: boolean; side?: boolean }) {
+  const narration = useSyncExternalStore(subscribeNarration, getNarration, getNarration);
+  const guide = useSyncExternalStore(subscribeGuide, getGuide, getGuide);
+  const ambient = useSyncExternalStore(subscribeAmbient, getAmbient, getAmbient);
+  const [down, setDown] = useState(false);
+  useEffect(
+    () => () => {
+      input.go = false;
+    },
+    [],
+  );
+  const press = (e: React.PointerEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId); // the finger may slide off the button while it drives
+    } catch {
+      /* a synthetic pointer has nothing to capture */
+    }
+    setDown(true);
+    if (still) stepForward();
+    else input.go = true;
+  };
+  const release = () => {
+    setDown(false);
+    input.go = false;
+  };
+  const toggle = (label: string, on: boolean, run: () => void, icon: "voice" | "guide" | "sound" | "sound-off") => (
+    <button
+      key={label}
+      type="button"
+      className="ui-toggle"
+      aria-pressed={on}
+      aria-label={`${label}: ${on ? "on" : "off"}`}
+      onClick={(e) => {
+        e.currentTarget.blur();
+        run();
+      }}
+    >
+      <Icon name={icon} size={20} />
+    </button>
+  );
+  return (
+    <div className={side ? "flex flex-col items-end gap-2" : "flex items-center gap-2"} style={{ fontFamily: theme.font, pointerEvents: "auto" }}>
+      <div className={side ? "flex gap-2" : "contents"}>
+        {toggle("Narration", narration.enabled, toggleNarration, "voice")}
+        {!still && toggle("Guide", guide.enabled, toggleGuide, "guide")}
+        {toggle("Music", ambient.enabled, toggleAmbient, ambient.enabled ? "sound" : "sound-off")}
+      </div>
+      <button
+        type="button"
+        className={`ui-drive ${down ? "is-down" : ""}`}
+        style={side ? { minHeight: 48, padding: "0 20px" } : { flex: 1 }}
+        onPointerDown={press}
+        onPointerUp={release}
+        onPointerCancel={release}
+        onContextMenu={(e) => e.preventDefault()}
+      >
+        <Icon name={still ? "arrow-right" : "play"} size={18} />
+        {still ? "next moment" : "hold to drive"}
+      </button>
     </div>
   );
 }

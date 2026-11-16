@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { portraitOf, TEAM } from "@/lib/team";
 import { useTheme } from "@/lib/use-theme";
+import { useViewport } from "@/lib/viewport";
 import { ease, ui } from "@/lib/ui";
 import FadeImg from "./FadeImg";
 import Icon from "./Icon";
@@ -11,8 +12,9 @@ import Icon from "./Icon";
  * «Credits» button (top right of the globe) and its floating card: a comic page with one panel per person of `lib/team.ts` (portrait in an ink frame, name,
  * role and a LinkedIn button). It springs in under the button with the theme's `pop` curve; Escape, the X or a click outside closes it.
  */
-export default function Credits() {
+export default function Credits({ iconOnly = false }: { iconOnly?: boolean }) {
   const theme = useTheme();
+  const vp = useViewport();
   const { label, title, panel, frame } = ui(theme);
   const root = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
@@ -64,12 +66,14 @@ export default function Credits() {
         className={`ui-btn ui-btn-bar ${open ? "is-active" : "is-ghost"}`}
         aria-expanded={open}
         aria-controls="credits-card"
+        aria-label="Credits"
+        style={iconOnly ? { width: 44, padding: 0 } : undefined}
         onClick={(e) => {
           e.currentTarget.blur();
           setOpen((o) => !o);
         }}
       >
-        <Icon name="user" size={18} /> Credits
+        <Icon name="user" size={18} /> {!iconOnly && "Credits"}
       </button>
 
       {mounted && (
@@ -77,11 +81,15 @@ export default function Credits() {
           id="credits-card"
           role="dialog"
           aria-label="Created by"
-          className="absolute right-0 top-full z-20 mt-3"
+          className={vp.compact ? "fixed z-30" : "absolute right-0 top-full z-20 mt-3"}
           style={{
             ...panel,
             padding: 14,
-            width: "min(640px, calc(100vw - 40px))",
+            // on a small screen the card hangs from the top of the screen (its button is not at the right edge: the music button sits there), full width
+            ...(vp.compact ? { left: "max(12px, env(safe-area-inset-left))", right: "max(12px, env(safe-area-inset-right))", top: "calc(max(12px, env(safe-area-inset-top)) + 56px)", margin: "0 auto", maxWidth: 640 } : { width: "min(640px, calc(100vw - 24px))" }),
+            maxHeight: "calc(100dvh - 90px)",
+            overflowY: "auto",
+            overscrollBehavior: "contain",
             transformOrigin: "top right",
             rotate: "0.6deg", // a page laid on the table
             opacity: shown ? 1 : 0,
@@ -97,18 +105,18 @@ export default function Credits() {
           </div>
           <ul className="m-0 flex list-none flex-wrap gap-3.5 p-0">
             {TEAM.map((p, i) => (
-              <li key={p.id} className="min-w-0 flex-1" style={{ flexBasis: 250 }}>
+              <li key={p.id} className="min-w-0 flex-1" style={{ flexBasis: vp.phone ? 130 : 250 }}>
                 <div className="relative" style={{ ...frame, aspectRatio: "4 / 5", background: theme.line, rotate: i % 2 ? "0.9deg" : "-0.9deg" }}>
                   <FadeImg src={portraitOf(p)} alt={`Portrait of ${p.name}`} theme={theme} />
                 </div>
-                <div style={{ ...title, marginTop: 16, fontSize: 26 }}>{p.name}</div>
-                <div style={{ ...label, marginTop: 6, fontSize: 14, color: theme.ink }}>{p.role}</div>
+                <div style={{ ...title, marginTop: vp.phone ? 10 : 16, fontSize: vp.phone ? 19 : 26 }}>{p.name}</div>
+                <div style={{ ...label, marginTop: 6, fontSize: vp.phone ? 12 : 14, color: theme.ink }}>{p.role}</div>
                 <a
                   href={p.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ui-btn"
-                  style={{ marginTop: 16, transition: ease(theme, ["background-size", "color"]) }}
+                  style={{ marginTop: vp.phone ? 10 : 16, transition: ease(theme, ["background-size", "color"]), ...(vp.phone ? { padding: "11px 16px" } : {}) }}
                 >
                   LinkedIn <Icon className="ui-arrow" name="arrow-right" size={14} />
                 </a>

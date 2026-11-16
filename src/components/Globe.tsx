@@ -38,6 +38,10 @@ const zoomBy = (f: number) => {
   view.target = THREE.MathUtils.clamp(view.target * f, ZOOM_MIN, Math.min(ZOOM_MAX, view.cap));
   view.touched = true;
 };
+/** Where the globe sits on a small screen when the vehicle's sheet covers part of it: the page asks for a shift in pixels (+x right, +y up) and the globe eases there. */
+export const globeShift = { x: 0, y: 0, tx: 0, ty: 0 };
+/** Two fingers on the globe: pinching zooms it, and the drag (which belongs to one finger) is ignored meanwhile. */
+const touch = { pinching: false };
 const PITCH_MAX = 1.45; // the globe can be tipped up to this far (rad) either way, never over the pole
 const DEG = 180 / Math.PI;
 /** Longitude (degrees) at the centre of the screen for a given spin of the globe (the inverse of `faceAngle`). */
@@ -51,7 +55,7 @@ const AY = new THREE.Vector3(0, 1, 0);
  */
 function frame(w: number, h: number) {
   const portrait = w < h;
-  const zoom = Math.min(h / 5.68, w / (portrait ? 3.6 : 4.9));
+  const zoom = Math.min(h / 5.68, w / (portrait ? 3.3 : 4.9));
   return { portrait, zoom, x: 0 };
 }
 
@@ -83,11 +87,48 @@ function Fit() {
       else return;
       e.preventDefault();
     };
+    // pinch (two touches): the distance between them scales the zoom. Listened for on the window, in the capture phase, so it sees the touches before the globe's own drag does.
+    const pts = new Map<number, { x: number; y: number }>();
+    let last = 0;
+    const gap = () => {
+      const [a, b] = [...pts.values()];
+      return Math.hypot(a.x - b.x, a.y - b.y);
+    };
+    const onDown = (e: PointerEvent) => {
+      if (e.pointerType !== "touch" || !onGlobe()) return;
+      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pts.size === 2) {
+        touch.pinching = true;
+        last = gap();
+      }
+    };
+    const onMove = (e: PointerEvent) => {
+      if (!pts.has(e.pointerId)) return;
+      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pts.size === 2 && last > 0) {
+        const now = gap();
+        zoomBy(now / last);
+        last = now;
+      }
+    };
+    const onUp = (e: PointerEvent) => {
+      pts.delete(e.pointerId);
+      if (pts.size < 2) last = 0;
+      if (pts.size === 0) touch.pinching = false;
+    };
     window.addEventListener("wheel", onWheel, { passive: false });
     window.addEventListener("keydown", onKey);
+    window.addEventListener("pointerdown", onDown, true);
+    window.addEventListener("pointermove", onMove, true);
+    window.addEventListener("pointerup", onUp, true);
+    window.addEventListener("pointercancel", onUp, true);
     return () => {
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("keydown", onKey);
+      window.removeEventListener("pointerdown", onDown, true);
+      window.removeEventListener("pointermove", onMove, true);
+      window.removeEventListener("pointerup", onUp, true);
+      window.removeEventListener("pointercancel", onUp, true);
     };
   }, []);
   useFrame((_, dtRaw) => {
@@ -407,9 +448,10 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
   const outer = useRef<THREE.Group>(null); // position + scale
   const spin = useRef<THREE.Group>(null); // the globe's orientation: a turntable (spin about its own axis + pitch about the screen's horizontal axis, never roll)
   const size = useThree((s) => s.size);
+  const camera = useThree((s) => s.camera);
   const st = useMemo(
     () => ({
-      drag: false, moved: 0, settle: 0, free: false,
+      drag: false, moved: 0, settle: 0, free: false, lx: 0, ly: 0, // lx, ly: where the pointer was at the last move (a finger reports no movement of its own)
       pitch: TILT, // rad: how far the pole leans towards the viewer = the latitude at the centre of the screen
       spin: 0, // rad: turn about the globe's own axis (the longitude at the centre of the screen is −spin − 90°)
       vp: 0, vs: 0, // their speeds (the flick after a drag; `vs` relaxes to the idle spin)
@@ -527,7 +569,9 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
     const { portrait, x } = frame(size.width, size.height);
     // the globe never moves or zooms because of a click: it stays where it is, the card floats beside the vehicle
     o.scale.setScalar(springStep(pop, portrait ? 0.85 : 1.5, dt, 70, 8));
-    o.position.set(x, 0, 0);
+    globeShift.x += (globeShift.tx - globeShift.x) * (1 - Math.exp(-6 * dt));
+    globeShift.y += (globeShift.ty - globeShift.y) * (1 - Math.exp(-6 * dt));
+    o.position.set(x + globeShift.x / camera.zoom, globeShift.y / camera.zoom, 0);
 
     // zoom: with a vehicle selected, never zoom in past the point where it would leave the screen
     if (selectedId !== null) {
@@ -618,12 +662,14 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
   });
 
   const drag = (e: ThreeEvent<PointerEvent>) => {
-    if (!st.drag || st.snap) return; // (while the globe snaps to a vehicle the pointer is ignored)
+    if (!st.drag || st.snap || touch.pinching) return; // (while the globe snaps to a vehicle the pointer is ignored)
     const o = outer.current;
     if (!o) return;
     const k = 0.0075 / Math.max(o.scale.x, 0.6);
-    const mx = e.nativeEvent.movementX;
-    const my = e.nativeEvent.movementY;
+    const mx = e.nativeEvent.clientX - st.lx;
+    const my = e.nativeEvent.clientY - st.ly;
+    st.lx = e.nativeEvent.clientX;
+    st.ly = e.nativeEvent.clientY;
     st.moved += Math.abs(mx) + Math.abs(my);
     // two axes only: sideways turns the globe about its own axis (the spin), up and down tips it (the pitch); it never rolls
     st.spin += mx * k;
@@ -645,8 +691,10 @@ function BodyGlobe({ body, selectedId, faceId, theme, onSelect }: GlobeProps) {
           {/* invisible sphere: catches the drag */}
           <mesh
             onPointerDown={(e) => {
-              if (selectedId !== null) return; // a card is open: the pointer can't turn the globe (a click outside closes the card)
+              if (selectedId !== null || touch.pinching) return; // a card is open: the pointer can't turn the globe (a click outside closes the card); two fingers pinch, they don't drag
               e.stopPropagation();
+              st.lx = e.nativeEvent.clientX;
+              st.ly = e.nativeEvent.clientY;
               (e.target as unknown as PointerTarget).setPointerCapture(e.pointerId);
               st.drag = true;
               st.free = true;

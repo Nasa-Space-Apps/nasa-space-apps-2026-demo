@@ -160,6 +160,14 @@ Con la extensión Claude in Chrome (o cualquier navegador):
 - El *bake* del minimapa (desenfoque + curvas) tarda unas decenas de ms; ocurre al cargar y al cambiar de estilo/misión.
 - Posible parpadeo de sombras al moverse (el frustum de la luz sigue al rover sin ajustarse al texel). Ver roadmap.
 
+## Móvil y tamaños (hito 56)
+
+- **Probar un tamaño de pantalla:** `resize_window` no cambia una ventana maximizada. Abre una ruta 404 (`/zz`), sustituye el `body` por un `<iframe style="width:390px;height:760px">` con la ruta y manéjalo con `iframe.contentDocument` (los `@media` y `innerWidth` del iframe son los suyos). `zoom` del navegador-herramienta: pasa una región que contenga el iframe (el marco de la captura es el de la ventana, no el del iframe). Recargar muchos iframes con WebGL **mata la pestaña** («This page couldn't load»): cierra y abre otra.
+- **El globo giraba con la ruedecilla pero no con el dedo:** `PointerEvent.movementX` es 0 en táctil; el arrastre usa la diferencia de `clientX/Y` entre eventos.
+- **`position: relative` en una clase propia pisa a `absolute` de Tailwind** (las utilidades van en una capa y el CSS sin capa gana): `.ui-hit` no debe poner `position`; los marcadores de la línea de tiempo se colocaban mal por eso.
+- **Un contenedor con `justify-content: center` y desbordamiento corta el inicio** (la tarjeta final del cómic en móvil): usa `safe center`.
+- Las tarjetas (`Credits`) ancladas a la derecha de su botón se salen por la izquierda cuando el botón no está en el borde: en pantallas compactas van `fixed` y de borde a borde.
+
 ## Servidor de desarrollo
 
 - **Si la hoja de estilos del servidor se queda antigua** (los `.home-*` nuevos no aparecían aunque `globals.css` los tenía; ver más arriba la comprobación con `document.styleSheets`), hay que parar `npm run dev`, borrar `.next` y volver a arrancarlo. Tras hacerlo desde una sesión de Claude, ese servidor queda corriendo en segundo plano: ciérralo o relánzalo tú.

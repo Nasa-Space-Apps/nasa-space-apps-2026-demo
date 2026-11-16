@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Libre_Franklin } from "next/font/google";
 import { THEME, cssVars, themeFor } from "@/lib/themes";
 import WorldVars from "@/components/WorldVars";
@@ -10,6 +10,16 @@ const sans = Libre_Franklin({
   variable: "--font-sans",
   subsets: ["latin"],
 });
+
+// A phone shows the page at its own width, under the notch and the home bar (the HUD keeps clear of both with `env(safe-area-inset-*)`); the game handles its own
+// gestures (drag, pinch, hold), so the browser's page zoom is switched off.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: "Left behind",

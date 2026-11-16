@@ -5,6 +5,7 @@ import { beatToCheckpoint, type StoryBeat } from "@/lib/story";
 import { playNarration, preloadNarration, stopNarration, toggleNarration } from "@/lib/narration";
 import { useTheme } from "@/lib/use-theme";
 import { ease, ui } from "@/lib/ui";
+import { useViewport } from "@/lib/viewport";
 import Captions from "./Captions";
 import Icon from "./Icon";
 
@@ -76,7 +77,10 @@ export default function Comic({
   startAt?: number; // page to open on
 }) {
   const theme = useTheme();
+  const vp = useViewport();
   const { frame } = ui(theme);
+  // page width: wide screens put the page 44 vw / 50 vh wide with its neighbours peeking; a phone held upright gives it most of the width (its 4:5 picture still has to fit
+  // between the top bar and the subtitles + dock); held sideways, a page is a small picture and the narration subtitles carry the text
   const total = beats.length + (end ? 1 : 0);
   const [i, setI] = useState(startAt);
   const [entered, setEntered] = useState(false);
@@ -159,7 +163,7 @@ export default function Comic({
       aria-label={`${name}, the story`}
       style={
         {
-          "--pw": "min(44vw, 50vh)", // width of a page: its 4:5 picture sets the height (the subtitles sit under it)
+          "--pw": vp.short ? "min(36vw, calc((100dvh - 170px) * 0.8))" : vp.portrait || vp.phone ? "min(78vw, calc((100dvh - 290px) * 0.8))" : "min(44vw, 50vh)", // width of a page: its 4:5 picture sets the height (the subtitles sit under it)
           background: theme.canvas,
           fontFamily: theme.font,
           opacity: entered && !leaving ? 1 : 0,
@@ -190,20 +194,28 @@ export default function Comic({
       <Blobs at={i} />
 
       {/* top bar: the way back, the title, the way to skip the comic */}
-      <div className="absolute left-5 right-5 top-5 z-10 flex items-start justify-between">
-        <button type="button" className="ui-btn is-ghost" onClick={(e) => (e.currentTarget.blur(), onBack())}>
+      <div
+        className="absolute z-10 grid items-start"
+        style={{
+          gridTemplateColumns: "1fr auto 1fr",
+          left: vp.compact ? "max(12px, env(safe-area-inset-left))" : 20,
+          right: vp.compact ? "max(12px, env(safe-area-inset-right))" : 20,
+          top: vp.compact ? "max(12px, env(safe-area-inset-top))" : 20,
+        }}
+      >
+        <button type="button" className="ui-btn is-ghost justify-self-start" style={vp.compact ? { height: 40, padding: "0 14px" } : undefined} onClick={(e) => (e.currentTarget.blur(), onBack())}>
           <Icon name="arrow-left" size={16} /> globe
         </button>
         <div className="pointer-events-none text-center" style={{ transform: entered ? "none" : "translateY(-30px)", transition: `transform ${theme.dur.base}ms ${theme.pop}` }}>
-          <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.9, color: theme.ink }}>{name.toLowerCase()}</div>
-          <div style={{ fontSize: 12, fontWeight: 700, color: theme.ink, marginTop: 4 }}>the story · {label}</div>
+          <div style={{ fontSize: vp.phone ? 21 : 30, fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.9, color: theme.ink }}>{name.toLowerCase()}</div>
+          <div style={{ fontSize: vp.phone ? 11 : 12, fontWeight: 700, color: theme.ink, marginTop: 4 }}>the story · {label}</div>
         </div>
         {onSkip ? (
-          <button type="button" className="ui-btn is-ghost" onClick={(e) => (e.currentTarget.blur(), onSkip())}>
-            {skipLabel} <Icon className="ui-arrow" name="arrow-right" size={16} />
+          <button type="button" className="ui-btn is-ghost justify-self-end" style={vp.compact ? { height: 40, padding: "0 14px" } : undefined} onClick={(e) => (e.currentTarget.blur(), onSkip())}>
+            {vp.phone ? "skip" : skipLabel} <Icon className="ui-arrow" name="arrow-right" size={16} />
           </button>
         ) : (
-          <span style={{ width: 96 }} />
+          <span />
         )}
       </div>
 
@@ -265,10 +277,10 @@ export default function Comic({
                     style={{
                       ...paper,
                       position: "absolute",
-                      left: 12,
-                      top: 12,
-                      padding: "5px 11px",
-                      fontSize: 15,
+                      left: vp.phone ? 8 : 12,
+                      top: vp.phone ? 8 : 12,
+                      padding: vp.phone ? "4px 9px" : "5px 11px",
+                      fontSize: vp.phone ? 13 : 15,
                       fontWeight: 800,
                       letterSpacing: "-0.02em",
                       lineHeight: 1.1,
@@ -283,8 +295,8 @@ export default function Comic({
                   <div
                     style={{
                       position: "absolute",
-                      right: 12,
-                      top: 12,
+                      right: vp.phone ? 8 : 12,
+                      top: vp.phone ? 8 : 12,
                       background: theme.ink,
                       color: theme.onInk,
                       borderRadius: theme.radiusSm,
@@ -301,22 +313,23 @@ export default function Comic({
                     style={{
                       ...paper,
                       position: "absolute",
-                      left: 12,
-                      right: 12,
-                      bottom: 12,
-                      padding: "11px 15px 13px",
+                      left: vp.phone ? 8 : 12,
+                      right: vp.phone ? 8 : 12,
+                      bottom: vp.phone ? 8 : 12,
+                      padding: vp.phone ? "8px 11px 10px" : "11px 15px 13px",
+                      display: vp.short ? "none" : undefined,
                       rotate: "0.5deg",
                       opacity: active ? 1 : 0,
                       transform: active ? "none" : "translateY(28px) rotate(2deg)",
                       transition: `transform ${theme.dur.base}ms ${theme.pop} 260ms, opacity ${theme.dur.fast}ms ${theme.ease} 260ms`,
                     }}
                   >
-                    <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-0.035em", lineHeight: 1, color: theme.ink }}>{b.title}</div>
-                    <p style={{ marginTop: 7, fontSize: 14, fontWeight: 500, lineHeight: 1.35, letterSpacing: "-0.005em", color: theme.ink }}>{b.summary}</p>
+                    <div style={{ fontSize: vp.phone ? 18 : 22, fontWeight: 800, letterSpacing: "-0.035em", lineHeight: 1, color: theme.ink }}>{b.title}</div>
+                    <p style={{ marginTop: vp.phone ? 5 : 7, fontSize: vp.phone ? 12.5 : 14, fontWeight: 500, lineHeight: 1.3, letterSpacing: "-0.005em", color: theme.ink }}>{b.summary}</p>
                   </div>
                 </div>
               ) : (
-                <div className="flex flex-col items-center justify-center text-center" style={{ ...frame, aspectRatio: "4 / 5", background: theme.canvas, padding: 24 }}>
+                <div className="flex flex-col items-center justify-center text-center" style={{ ...frame, aspectRatio: vp.phone ? undefined : "4 / 5", minHeight: vp.phone ? "calc(var(--pw) * 1.25 - 28px)" : undefined, justifyContent: "safe center", background: theme.canvas, padding: vp.phone ? 16 : 24, maxHeight: "calc(100dvh - 200px)", overflowY: "auto", overscrollBehavior: "contain", touchAction: "pan-y" }}>
                   {end}
                 </div>
               )}
@@ -326,23 +339,23 @@ export default function Comic({
       })}
 
       {/* subtitles of the narration */}
-      <div className="pointer-events-none fixed bottom-20 left-1/2 z-50 h-0 w-[min(780px,92vw)] -translate-x-1/2">
-        <Captions theme={theme} wide />
+      <div className="pointer-events-none fixed left-1/2 z-50 h-0 w-[min(780px,94vw)] -translate-x-1/2" style={{ bottom: vp.compact ? "calc(max(12px, env(safe-area-inset-bottom)) + 58px)" : 80 }}>
+        <Captions theme={theme} wide small={vp.compact} />
       </div>
 
       {/* the dock: back, progress, next */}
-      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2.5" style={{ opacity: leaving ? 0 : 1, transition: ease(theme, ["opacity"]) }}>
+      <div className="absolute left-1/2 z-20 flex -translate-x-1/2 items-center gap-2.5" style={{ bottom: vp.compact ? "max(12px, env(safe-area-inset-bottom))" : 20, maxWidth: "96vw", opacity: leaving ? 0 : 1, transition: ease(theme, ["opacity"]) }}>
         <button type="button" className="ui-fab ui-fab-sm" aria-label={i === 0 && onBackPast ? "Back to the 3D route" : "Previous page"} title={i === 0 && onBackPast ? "Back to the 3D route" : undefined} disabled={i === 0 && !onBackPast} style={{ opacity: i === 0 && !onBackPast ? 0.4 : 1 }} onClick={(e) => (e.currentTarget.blur(), go(i - 1))}>
           <Icon name="arrow-left" size={14} />
         </button>
         <div
-          className="flex items-center gap-4"
-          style={{ background: theme.ink, color: theme.onInk, borderRadius: theme.radiusSm, padding: "10px 22px", minWidth: "min(300px, 60vw)", transform: entered ? "none" : "translateY(50px)", transition: `transform ${theme.dur.base}ms ${theme.pop} 200ms` }}
+          className="flex min-w-0 items-center gap-3"
+          style={{ background: theme.ink, color: theme.onInk, borderRadius: theme.radiusSm, padding: vp.phone ? "10px 16px" : "10px 22px", minWidth: vp.phone ? 0 : "min(300px, 60vw)", transform: entered ? "none" : "translateY(50px)", transition: `transform ${theme.dur.base}ms ${theme.pop} 200ms` }}
         >
           <span style={{ fontSize: 15, fontWeight: 800, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>
-            {String(i + 1).padStart(2, "0")}. {beats[i]?.title ?? "The end"}
+            {vp.phone ? String(i + 1).padStart(2, "0") : `${String(i + 1).padStart(2, "0")}. ${beats[i]?.title ?? "The end"}`}
           </span>
-          <span className="flex-1 overflow-hidden" style={{ height: 5, borderRadius: 999, background: theme.inkSoft, minWidth: 60 }}>
+          <span className="flex-1 overflow-hidden" style={{ height: 5, borderRadius: 999, background: theme.inkSoft, minWidth: vp.phone ? 70 : 60 }}>
             <span className="block h-full" style={{ width: `${progress}%`, background: theme.accent, borderRadius: 999, transition: ease(theme, ["width"]) }} />
           </span>
         </div>

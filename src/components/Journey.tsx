@@ -9,6 +9,7 @@ import { loadNarration, stopNarration } from "@/lib/narration";
 import { MISSIONS } from "@/lib/missions";
 import { beatToCheckpoint, storyOf, type Story } from "@/lib/story";
 import { useTheme } from "@/lib/use-theme";
+import { useViewport } from "@/lib/viewport";
 import Ambient from "./Ambient";
 import Comic from "./Comic";
 import Icon from "./Icon";
@@ -76,6 +77,7 @@ function useStoryAssets(beats: Story["beats"]) {
 
 function JourneyView({ missionId, story, onReplay }: { missionId: string; story: Story; onReplay: () => void }) {
   const theme = useTheme();
+  const vp = useViewport();
   const { ready, progress } = useStoryAssets(story.beats);
   const router = useRouter();
   const body = bodyOfMission(missionId)?.id ?? "mars";
@@ -168,11 +170,11 @@ function JourneyView({ missionId, story, onReplay }: { missionId: string; story:
           onBackPast={backToMars}
           end={
             <>
-              <div style={{ fontSize: 34, fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.95, color: theme.ink }}>{story.closing.title}</div>
-              <p style={{ marginTop: 14, fontSize: 15, fontWeight: 500, lineHeight: 1.4, color: theme.ink }}>
+              <div style={{ fontSize: vp.phone ? 26 : 34, fontWeight: 800, letterSpacing: "-0.045em", lineHeight: 0.95, color: theme.ink }}>{story.closing.title}</div>
+              <p style={{ marginTop: vp.phone ? 10 : 14, fontSize: vp.phone ? 13.5 : 15, fontWeight: 500, lineHeight: 1.4, color: theme.ink }}>
                 {story.closing.text}
               </p>
-              <div className="mt-6 flex flex-col gap-2.5">
+              <div className={`${vp.phone ? "mt-4" : "mt-6"} flex w-full flex-col gap-2.5`}>
                 <button type="button" className="ui-btn" onClick={onReplay}>
                   play again <Icon className="ui-arrow" name="arrow-right" size={16} />
                 </button>
@@ -192,17 +194,18 @@ function JourneyView({ missionId, story, onReplay }: { missionId: string; story:
 /** Top right while driving: «skip the 3D» goes straight to the epilogue; at the last stop it becomes «continue the story». */
 function MarsActions({ lastId, onClick }: { lastId: string; onClick: () => void }) {
   const theme = useTheme();
+  const vp = useViewport();
   const [on, setOn] = useState(false); // the rover is at the last stop
   useEffect(() => {
     const id = window.setInterval(() => setOn(game.active === lastId), 400);
     return () => window.clearInterval(id);
   }, [lastId]);
   return (
-    <div className="fixed right-5 top-5 z-20">
+    <div className="fixed z-20" style={{ right: vp.compact ? "max(12px, env(safe-area-inset-right))" : 20, top: vp.compact ? "max(12px, env(safe-area-inset-top))" : 20 }}>
       {/* re-keyed when it changes, so the button pops again as it turns from «skip» into «continue» */}
       <Pop key={on ? "end" : "mid"} theme={theme} delay={on ? 900 : 1200} origin="right center" from="scale(0.4) rotate(8deg) translateY(-20px)">
-        <button type="button" className={`ui-btn ${on ? "" : "is-accent"}`} onClick={(e) => (e.currentTarget.blur(), onClick())}>
-          {on ? "continue the story" : "skip the 3D"} <Icon className="ui-arrow" name="arrow-right" size={16} />
+        <button type="button" className={`ui-btn ${on ? "" : "is-accent"}`} style={vp.compact ? { padding: "0 16px", height: 40 } : undefined} onClick={(e) => (e.currentTarget.blur(), onClick())}>
+          {on ? (vp.phone ? "continue" : "continue the story") : vp.phone ? "skip 3D" : "skip the 3D"} <Icon className="ui-arrow" name="arrow-right" size={16} />
         </button>
       </Pop>
     </div>

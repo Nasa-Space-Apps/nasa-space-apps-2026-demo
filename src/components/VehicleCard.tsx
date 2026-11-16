@@ -16,6 +16,7 @@ export default function VehicleCard({
   vehicle,
   bodyName,
   soon,
+  compact = false,
   onTravel,
   onClose,
 }: {
@@ -24,6 +25,7 @@ export default function VehicleCard({
   vehicle: AbandonedVehicle;
   bodyName: string;
   soon: boolean; // the vehicle has no story yet: «coming soon» instead of the way in (its 3D demo is not open)
+  compact?: boolean; // a sheet on a small screen: the vehicle's picture sits beside its name, the facts are tighter
   onTravel: () => void;
   onClose: () => void;
 }) {
@@ -47,6 +49,49 @@ export default function VehicleCard({
     );
     return () => a.cancel();
   }, [soon]);
+
+  if (compact) {
+    return (
+      <div style={{ ...panel, padding: 10, fontFamily: theme.font, rotate: "0.4deg" }} className="w-full select-none">
+        <div className="mb-2 flex items-center justify-between pl-1">
+          <span style={label}>abandoned · {bodyName}</span>
+          <button type="button" className="ui-fab ui-fab-sm" aria-label="Close" onClick={onClose}>
+            <Icon name="close" size={14} />
+          </button>
+        </div>
+        <div className="flex items-center gap-3">
+          <div style={{ ...frame, width: 128, flex: "none" }}>
+            <VehicleView config={mission.rover} label={`${vehicle.name}, illustrated`} />
+          </div>
+          <div className="min-w-0">
+            <div style={{ ...title, fontSize: 21 }}>{vehicle.name}</div>
+            <div style={{ ...label, marginTop: 5 }}>{vehicle.place}</div>
+          </div>
+        </div>
+        <p className="line-clamp-4" style={{ ...text, marginTop: 10, fontSize: 13, lineHeight: 1.4, color: theme.muted }}>
+          {vehicle.status}
+        </p>
+        <div className="mt-3 grid grid-cols-4 gap-x-2">
+          {vehicle.facts.map(([k, v]) => (
+            <div key={k} className="min-w-0">
+              <span style={{ ...label, display: "block", fontSize: 10.5 }}>{k}</span>
+              <span style={{ marginTop: 3, display: "block", fontSize: 13, fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.1, color: theme.ink }}>{v}</span>
+            </div>
+          ))}
+        </div>
+        {soon ? (
+          <button type="button" className="ui-btn is-ghost" disabled aria-disabled="true" style={{ marginTop: 12, width: "100%", justifyContent: "center" }}>
+            Coming soon · its story is still being researched
+          </button>
+        ) : (
+          <button type="button" className="ui-btn" onClick={onTravel} style={{ marginTop: 12, width: "100%", justifyContent: "space-between" }}>
+            Travel to the past
+            <Icon className="ui-arrow" name="arrow-right" size={18} />
+          </button>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div style={{ ...panel, padding: 12, fontFamily: theme.font, rotate: "0.6deg" /* a page floating beside its vehicle */ }} className="w-full select-none">

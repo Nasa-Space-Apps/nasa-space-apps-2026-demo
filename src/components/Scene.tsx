@@ -14,6 +14,7 @@ import { useTheme } from "@/lib/use-theme";
 import { themeFor, type WorldId } from "@/lib/themes";
 import { PERF } from "@/lib/perf";
 import { ease } from "@/lib/ui";
+import { useViewport } from "@/lib/viewport";
 import { bodyOfMission } from "@/lib/bodies";
 import { toggleGuide } from "@/lib/guide";
 import { toggleNarration } from "@/lib/narration";
@@ -29,7 +30,7 @@ import Dust from "./Dust";
 import Tracks from "./Tracks";
 import Minimap from "./Minimap";
 import Timeline from "./Timeline";
-import { Hints, TopBar } from "./Hud";
+import { Hints, TopBar, TouchControls } from "./Hud";
 
 const damp = THREE.MathUtils.damp;
 
@@ -67,7 +68,7 @@ function Sun({ mission }: { mission: Mission }) {
 }
 
 function CameraRig() {
-  const cur = useMemo(() => ({ x: NaN, y: 0, z: 0, fov: 35, ang: 0 }), []);
+  const cur = useMemo(() => ({ x: NaN, y: 0, z: 0, fov: 35, ang: 0, vo: "" }), []);
   useFrame((state, dtRaw) => {
     const dt = Math.min(dtRaw, 0.05);
     const cam = state.camera as THREE.PerspectiveCamera;
@@ -82,19 +83,31 @@ function CameraRig() {
     cur.x = damp(cur.x, tx, 3.5, dt);
     cur.y = damp(cur.y, game.y, 3.5, dt);
     cur.z = damp(cur.z, tz, 3.5, dt);
+    // a phone held sideways stacks the HUD over the left and the bottom: slide the picture right and a little up so the vehicle stays in the free corner
+    const short = state.size.height < 520 && state.size.width > state.size.height;
+    const vo = short ? `${state.size.width}x${state.size.height}` : "";
+    if (vo !== cur.vo) {
+      cur.vo = vo;
+      if (short) cam.setViewOffset(state.size.width, state.size.height, -state.size.width * 0.2, state.size.height * 0.05, state.size.width, state.size.height);
+      else cam.clearViewOffset();
+    }
     const shake = game.boost ? 0.05 : 0;
     // a vehicle that never moves: the camera circles it, a step for every moment of the story (game.s is 100 per moment), with a slow drift in between
     const orbit = game.stationary ? game.s * 0.005 + Math.sin(state.clock.elapsedTime * 0.12) * 0.07 : 0;
     cur.ang = damp(cur.ang, orbit, 2.2, dt);
     const ca = Math.cos(cur.ang);
     const sa = Math.sin(cur.ang);
-    const near = game.stationary ? 0.85 : 1;
+    // a tall screen (a phone held upright) shows the scene through a narrow window: pull the camera back so the vehicle fits the width, and aim a little below it so it rides
+    // above the HUD that stacks at the bottom
+    const aspect = state.size.width / state.size.height;
+    const tall = aspect < 1 ? 1 - aspect : 0;
+    const near = (game.stationary ? 0.85 : 1) * (1 + tall * 1.15);
     cam.position.set(
       cur.x + (22 * ca + 24 * sa) * near + (Math.random() - 0.5) * shake,
       cur.y + 16 * near + (Math.random() - 0.5) * shake,
       cur.z + (-22 * sa + 24 * ca) * near,
     );
-    cam.lookAt(cur.x, cur.y + 2, cur.z);
+    cam.lookAt(cur.x, cur.y + 2 - tall * 4.5, cur.z);
     const targetFov = 35 + Math.min(1, Math.abs(game.speed) / game.topSpeed) * 9;
     cur.fov = damp(cur.fov, targetFov, 3, dt);
     if (Math.abs(cam.fov - cur.fov) > 0.01) {
@@ -191,6 +204,7 @@ export default function Scene({ missionId, ...options }: { missionId: string } &
 
 function SceneView({ missionId, onBack, backLabel, lockVehicle }: { missionId: string } & SceneOptions) {
   const theme = useTheme();
+  const vp = useViewport();
   const router = useRouter();
   const mission = MISSIONS.find((m) => m.id === missionId) ?? MISSIONS[0];
   const vehicle = bodyOfMission(mission.id);
@@ -255,7 +269,7 @@ function SceneView({ missionId, onBack, backLabel, lockVehicle }: { missionId: s
           <Experience key={mission.id} mission={mission} />
         </Suspense>
       </Canvas>
-      <div className="fixed left-5 top-5 z-20">
+      <div className="fixed z-20" style={{ left: vp.compact ? "max(12px, env(safe-area-inset-left))" : 20, top: vp.compact ? "max(12px, env(safe-area-inset-top))" : 20 }}>
         <TopBar
           theme={theme}
           onGlobe={onBack ?? goGlobe}
@@ -266,14 +280,43 @@ function SceneView({ missionId, onBack, backLabel, lockVehicle }: { missionId: s
         />
       </div>
       <Ambient track="timeline" />
-      <Minimap theme={theme} title={mission.title} accent={mission.rover.palette.dark} />
-      <CheckpointCard theme={theme} />
-      {/* bottom centre, between the card (left) and the minimap (right): caption above, then the key chips, then the timeline */}
-      <div className="pointer-events-none fixed bottom-5 left-1/2 z-10 flex w-[clamp(440px,calc(100vw-900px),560px)] -translate-x-1/2 flex-col items-stretch gap-2.5">
-        <Captions theme={theme} />
-        <Hints theme={theme} still={mission.stationary} />
-        <Timeline theme={theme} accent={mission.rover.palette.dark} />
-      </div>
+      {vp.compact ? (
+        <>
+          {/* phones, tablets, small windows: everything stacks at the bottom (captions float above the stack). The minimap is left out: the timeline says where you are. */}
+          <div
+            className="pointer-events-none fixed bottom-0 z-10 flex flex-col items-stretch gap-2"
+            style={{
+              left: vp.short ? "max(12px, env(safe-area-inset-left))" : 0,
+              right: vp.short ? "auto" : 0,
+              width: vp.short ? "min(520px, calc(100vw - 230px))" : undefined,
+              maxWidth: vp.short ? undefined : 580,
+              margin: vp.short ? 0 : "0 auto",
+              padding: vp.short ? "0 0 max(10px, env(safe-area-inset-bottom))" : "0 12px max(12px, env(safe-area-inset-bottom))",
+            }}
+          >
+            <Captions theme={theme} small />
+            <CheckpointCard theme={theme} compact short={vp.short} />
+            <Timeline theme={theme} accent={mission.rover.palette.dark} compact />
+            {!vp.short && <TouchControls theme={theme} still={mission.stationary} />}
+          </div>
+          {vp.short && (
+            <div className="pointer-events-none fixed z-10" style={{ right: "max(12px, env(safe-area-inset-right))", bottom: "max(10px, env(safe-area-inset-bottom))" }}>
+              <TouchControls theme={theme} still={mission.stationary} side />
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          <Minimap theme={theme} title={mission.title} accent={mission.rover.palette.dark} />
+          <CheckpointCard theme={theme} />
+          {/* bottom centre, between the card (left) and the minimap (right): caption above, then the key chips, then the timeline */}
+          <div className="pointer-events-none fixed bottom-5 left-1/2 z-10 flex w-[clamp(440px,calc(100vw-900px),560px)] -translate-x-1/2 flex-col items-stretch gap-2.5">
+            <Captions theme={theme} />
+            <Hints theme={theme} still={mission.stationary} />
+            <Timeline theme={theme} accent={mission.rover.palette.dark} />
+          </div>
+        </>
+      )}
       <div
         aria-hidden={ready}
         className="pointer-events-none fixed inset-0 z-30"

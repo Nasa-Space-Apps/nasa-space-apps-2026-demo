@@ -13,7 +13,7 @@ import Reveal from "./Reveal";
  * checkpoint (autopilot, forward or backward); there is no way to stop anywhere else. State is polled from `game` with a rAF loop,
  * The moving dot and the current marker take the vehicle colour (`accent`). React only re-renders when the checkpoint list, the visited set, the current stop or the status text change.
  */
-export default function Timeline({ theme, accent }: { theme: Theme; accent: string }) {
+export default function Timeline({ theme, accent, compact = false }: { theme: Theme; accent: string; compact?: boolean }) {
   const [cps, setCps] = useState<Checkpoint[]>([]);
   const [reached, setReached] = useState<string[]>([]);
   const [at, setAt] = useState(-1); // index of the checkpoint the vehicle is stopped on (-1 = between two)
@@ -77,14 +77,15 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
   const n = cps.length;
   if (n < 2) return null;
   const pct = (i: number) => `${(i / (n - 1)) * 100}%`;
-  const M = 9; // horizontal inset so the end markers stay inside the card
-  const labels = n <= 8; // a long route (the story's 13 stops) has no room for names under the markers: the line above says where you are and what is next
+  const M = compact ? 10 : 9; // horizontal inset so the end markers stay inside the card
+  const dotSize = compact ? 14 : 16;
+  const labels = !compact && n <= 8; // a long route (the story's 13 stops) has no room for names under the markers: the line above says where you are and what is next
 
   return (
-    <div aria-label="Route timeline" style={{ ...panel, padding: "14px 16px 12px", fontFamily: theme.font }} className="select-none">
+    <div aria-label="Route timeline" style={{ ...panel, padding: compact ? "10px 14px 6px" : "14px 16px 12px", fontFamily: theme.font, pointerEvents: "auto" }} className="select-none">
       <div className="flex items-baseline justify-between gap-3">
         <Reveal theme={theme} key={status} rise={5} className="min-w-0">
-          <span className="block truncate" style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.1 }}>
+          <span className="block truncate" style={{ fontSize: compact ? 15 : 18, fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.1 }}>
             {status}
           </span>
         </Reveal>
@@ -93,7 +94,7 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
         </span>
       </div>
 
-      <div className="relative" style={{ height: 26, margin: `8px ${M}px 0` }}>
+      <div className="relative" style={{ height: compact ? 24 : 26, margin: `${compact ? 4 : 8}px ${M}px 0` }}>
         <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 overflow-hidden" style={{ height: 5, borderRadius: 999, background: theme.line }}>
           <div ref={fill} style={{ height: "100%", width: 0, background: theme.ink }} />
         </div>
@@ -129,13 +130,13 @@ export default function Timeline({ theme, accent }: { theme: Theme; accent: stri
                 e.currentTarget.blur(); // keep Space for driving
                 travelTo(i);
               }}
-              className="ui-marker absolute top-1/2 block p-0"
+              className="ui-marker ui-hit absolute top-1/2 block p-0"
               style={{
                 left: pct(i),
-                width: 16,
-                height: 16,
-                marginLeft: -8,
-                marginTop: -8,
+                width: dotSize,
+                height: dotSize,
+                marginLeft: -dotSize / 2,
+                marginTop: -dotSize / 2,
                 borderRadius: 999,
                 transform: here ? "scale(1.25)" : undefined,
                 background: here ? accent : done ? theme.ink : theme.surface,

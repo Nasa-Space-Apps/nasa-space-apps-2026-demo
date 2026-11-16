@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { Vector3, type Group } from "three";
-import { PIECES, STAGE, stageScale, type Piece } from "@/lib/home";
+import { PIECES, layoutFor, stageScale, type Piece } from "@/lib/home";
 import { PERF } from "@/lib/perf";
 import { buildVehicle } from "@/lib/vehicles";
 
@@ -13,8 +13,6 @@ import { buildVehicle } from "@/lib/vehicles";
  * the pointer, so the cards underneath keep working.
  */
 const PX = 22; // stage units per world unit at scale 1
-const FOCAL = STAGE.w / 2; // stage x and y of the centre of the screen
-const MIDDLE = STAGE.h / 2;
 
 const R = new Vector3();
 const U = new Vector3();
@@ -53,9 +51,11 @@ function Vehicle({ piece, show }: { piece: Piece; show: boolean }) {
     if (!g) return;
     g.visible = show;
     // stage position (where its nearest wheels touch the ground) → screen → world: a point of the screen plane through the origin, slid along the view direction down to y = 0
+    const lay = layoutFor(size.width, size.height);
+    const at = lay.piece;
     const sc = stageScale(size.width, size.height);
-    const sx = size.width / 2 + (piece.x - FOCAL) * sc;
-    const sy = size.height / 2 + (piece.y - MIDDLE) * sc - reach * camera.zoom * piece.scale;
+    const sx = size.width / 2 + (at.x - lay.w / 2) * sc;
+    const sy = size.height / 2 + (at.y - lay.h / 2) * sc - reach * camera.zoom * at.scale;
     const e = camera.matrixWorld.elements;
     R.set(e[0], e[1], e[2]);
     U.set(e[4], e[5], e[6]);
@@ -63,10 +63,10 @@ function Vehicle({ piece, show }: { piece: Piece; show: boolean }) {
     Q.copy(R).multiplyScalar((sx - size.width / 2) / camera.zoom).addScaledVector(U, -(sy - size.height / 2) / camera.zoom);
     Q.addScaledVector(F, -Q.y / F.y);
     g.position.copy(Q);
-    g.scale.setScalar(piece.scale);
-    g.rotation.y = piece.yaw;
+    g.scale.setScalar(at.scale);
+    g.rotation.y = at.yaw;
     invalidate();
-  }, [camera, size, show, piece, reach, invalidate]);
+  }, [camera, size, show, reach, invalidate]);
 
   return (
     <group ref={group} visible={false}>

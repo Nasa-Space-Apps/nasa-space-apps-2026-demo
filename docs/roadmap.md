@@ -53,6 +53,7 @@ Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría
 - ✅ Interfaz y audios en inglés.
 - ✅ **Vista de entrada con el globo** (`/moon`, `/mars`): globo alámbrico claro sin assets, gira solo (inercia al arrastrar; desde el hito 51 gira en dos ejes —su propio eje y el cabeceo— y tiene zoom propio), cuadrados negros que orbitan con él
   (solo los de delante), selector de mundo, marcadores/etiquetas de los vehículos abandonados y tarjeta con el modelo 3D empolvado → «Travel to the past».
+- ✅ **Responsive** (hito 56): móvil, apaisado y tableta en home, globo, cómic y escena (HUD compacto, controles táctiles, pellizco en el globo). Pendiente: probar con un dedo real (pellizco, mantener pulsado) y en un móvil físico; la escena apaisada va justa de espacio.
 - ✅ **Home** (`/`, hito 55): una sola composición (cartas con ilustraciones + Opportunity en 3D quieto), paleta propia de la referencia, parallax, chispas y sello que abren el globo; el logo del globo vuelve al home. Pendiente: una composición propia para pantallas verticales (hoy es un recorte), el logo dibujado a mano, medir el coste de los dos canvas en la laptop del usuario.
 - ✅ **Rutas por vehículo** (`/moon/sev`, `/mars/opportunity`) con carga de recursos por ruta (`cacheComponents` + `generateStaticParams`).
 - ✅ **Rediseño completo en el tema «Primer»**: tokens únicos, tipografía, UI, globo, escena 3D y movimiento suave (ver [design.md](design.md)).

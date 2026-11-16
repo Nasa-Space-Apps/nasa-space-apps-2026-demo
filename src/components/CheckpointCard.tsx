@@ -12,9 +12,10 @@ import Icon from "./Icon";
 type Shown = { cp: Checkpoint; index: number; total: number };
 
 /** Info card (bottom left) shown while the rover is inside a checkpoint. State is polled from `game`, no per-frame renders. */
-export default function CheckpointCard({ theme }: { theme: Theme }) {
+export default function CheckpointCard({ theme, compact = false, short = false }: { theme: Theme; compact?: boolean; short?: boolean }) {
   const [shown, setShown] = useState<Shown | null>(null);
   const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false); // compact screens: the card opens as a peek (picture, title, listen) and unfolds on a tap
   const [reached, setReached] = useState<string[]>([]);
   const nar = useSyncExternalStore(subscribeNarration, getNarration, getNarration);
 
@@ -40,6 +41,7 @@ export default function CheckpointCard({ theme }: { theme: Theme }) {
         const cp = game.checkpoints.find((c) => c.id === game.active);
         if (cp) setShown({ cp, index: game.checkpoints.indexOf(cp), total: game.checkpoints.length });
         setOpen(!!cp);
+        setExpanded(false);
       }
       if (game.visited.size !== lastCount) {
         lastCount = game.visited.size;
@@ -97,6 +99,83 @@ export default function CheckpointCard({ theme }: { theme: Theme }) {
         </div>
       );
     })();
+
+  if (compact) {
+    const tall = short ? "calc(100dvh - 215px)" : "calc(100dvh - 400px)";
+    return (
+      <div
+        aria-live="polite"
+        aria-hidden={!open}
+        className="select-none"
+        style={{
+          fontFamily: theme.font,
+          pointerEvents: "none",
+          display: "grid",
+          gridTemplateRows: open ? "1fr" : "0fr",
+          opacity: open ? 1 : 0,
+          transition: `grid-template-rows ${theme.dur.slow}ms ${theme.ease}, opacity ${theme.dur.base}ms ${theme.ease}`,
+        }}
+      >
+        <div style={{ minHeight: 0, overflow: "hidden", paddingTop: 2 }}>
+          {shown && (
+            <div style={{ ...panel, padding: 10, pointerEvents: open ? "auto" : "none", rotate: "-0.4deg" }}>
+              <div className="flex items-start gap-3">
+                <div className="relative flex-none" style={{ ...frame, width: expanded ? 92 : 58, aspectRatio: shown.cp.imageRatio ?? "4 / 5", background: theme.line, transition: ease(theme, ["width"]) }}>
+                  <FadeImg src={shown.cp.image} alt={shown.cp.name} theme={theme} />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div style={{ ...title, fontSize: 18 }}>{shown.cp.name}</div>
+                  <div style={{ ...label, marginTop: 4, color: theme.ink }}>
+                    {place} {shown.index + 1}/{shown.total} <span style={{ opacity: 0.45 }}>·</span> {shown.cp.place}
+                  </div>
+                  <div className="mt-2 flex items-center gap-2">
+                    {listen(true)}
+                    <button
+                      type="button"
+                      className="ui-fab ui-fab-sm ml-auto"
+                      aria-expanded={expanded}
+                      aria-label={expanded ? "Show less" : "Show more"}
+                      onClick={(e) => {
+                        e.currentTarget.blur();
+                        setExpanded((x) => !x);
+                      }}
+                    >
+                      <Icon name="chevron-down" size={14} style={{ transform: expanded ? "rotate(180deg)" : "none", transition: ease(theme, ["transform"], theme.dur.fast) }} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {expanded && (
+                <div style={{ maxHeight: tall, overflowY: "auto", overscrollBehavior: "contain", marginTop: 10, touchAction: "pan-y" }}>
+                  <p style={{ ...text, fontSize: 13, lineHeight: 1.4, color: theme.muted }}>{shown.cp.text}</p>
+                  <div className="mt-3 grid grid-cols-3 gap-x-3" style={{ borderTop: `2px solid ${theme.ink}`, paddingTop: 6 }}>
+                    {shown.cp.facts.map(([k, v]) => (
+                      <div key={k} className="min-w-0">
+                        <span style={{ ...label, display: "block", fontSize: 11 }}>{k}</span>
+                        <span style={{ marginTop: 3, display: "block", fontSize: 14, fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.1 }}>{v}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {shown.cp.sources && (
+                    <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-0.5" style={{ borderTop: `2px solid ${theme.ink}`, paddingTop: 6 }}>
+                      <span style={{ ...label, fontSize: 11 }}>sources</span>
+                      {shown.cp.sources.map((s) => (
+                        <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" title={`${s.type} source`} className="ui-link" style={{ minWidth: 0, fontSize: 12, textTransform: "none", letterSpacing: 0, gap: 5, padding: "6px 0" }}>
+                          <span className="truncate">{s.host}</span>
+                          <Icon name="arrow-right" size={12} style={{ flex: "none", transform: "rotate(-45deg)" }} />
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                  <div style={{ ...label, marginTop: 6, fontSize: 10.5, textTransform: "none", fontWeight: 500 }}>{shown.cp.credit} · facts from NASA and the sources above</div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div

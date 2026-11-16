@@ -133,6 +133,25 @@ La portada es **una sola composición**, como la portada de un juego o de un ani
 - `prefers-reduced-motion`: sin parallax, deriva, flotación, giro ni chispas de rastro. Un solo bucle `requestAnimationFrame` mueve todo lo del DOM (sin re-renders).
 - **Pendiente:** el logo no está dibujado a mano; la vista vertical es un recorte de la composición (no una composición propia); medir el coste de los dos canvas (chispas 2D + 3D) en la laptop del usuario.
 
+## Responsive (hito 56)
+
+Toda la solución se ve y se juega en **móvil, tableta y escritorio**. Dos niveles de decisión:
+
+- **Clases de tamaño** (`lib/viewport.ts`, `useViewport()`): **`compact`** (ancho < 1100 px o alto < 600: el HUD de escritorio no cabe → tabletas, móviles y ventanas pequeñas), **`phone`** (< 640 px de ancho), **`short`** (< 520 px de alto: móvil **apaisado**), `portrait`, `touch` (puntero grueso o compacto). Solo se usa para decisiones que el CSS no puede tomar (qué HUD montar, qué botones mostrar). Los ajustes puramente visuales van en CSS (`clamp`, `dvh`, `env(safe-area-inset-*)`).
+- **Qué se esconde o cambia (decisiones de diseño):**
+  | Vista | Escritorio | Móvil |
+  | --- | --- | --- |
+  | **Home** | composición ancha (vehículo al centro, 2 cartas a cada lado) | composición **vertical** propia (`TALL` en `lib/home.ts`): 4 cartas en dos filas sobre Opportunity; el sello, «start» y el logo se **agrandan** al encogerse el escenario (`keepSize`) para seguir siendo pulsables; Credits solo icono |
+  | **Globo** | selector de mundo arriba a la izquierda, logo centrado, tarjeta flotando junto al vehículo | logo arriba a la izquierda, créditos/música como **iconos**, **selector de mundo abajo** (al alcance del pulgar), pista «drag to spin · pinch to zoom · tap a vehicle»; la tarjeta es una **hoja inferior** (apaisado: panel a la derecha) y **el globo se desplaza** (`globeShift`) para que su vehículo siga visible |
+  | **Cómic** | páginas de 44 vw con las vecinas asomando | página del 78 vw (4:5 ajustado a la altura), barra superior compacta («skip»), subtítulos de una línea más pequeños, la píldora de abajo solo lleva el número y la barra; **apaisado**: página pequeña **sin el recuadro de texto** (lo llevan los subtítulos); la tarjeta final se desplaza dentro de la página |
+  | **Escena 3D** | tarjeta a la izquierda, minimapa a la derecha, teclas abajo | **sin minimapa** (la línea de tiempo dice dónde estás) y **sin chips de teclas**: todo se apila abajo (subtítulos → tarjeta → línea de tiempo → controles). La tarjeta del checkpoint es una **«asomada»** (miniatura, título, escuchar) que se despliega con un toque; los marcadores de la línea de tiempo tienen una zona táctil ampliada (`.ui-hit`). **Apaisado**: el apilado va a la izquierda, los controles abajo a la derecha, y la cámara desplaza la imagen para que el vehículo quede en la esquina libre |
+- **Controles táctiles** (`TouchControls` en `Hud.tsx`): botón grande **«hold to drive»** (mantener pulsado = Espacio; un vehículo inmóvil lleva **«next moment»**, un toque) y tres toggles redondos (narración, guía, música = N, G, S). Con `setPointerCapture` el dedo puede resbalar fuera del botón sin soltar la marcha.
+- **Globo táctil**: arrastrar con un dedo gira (el movimiento se calcula con `clientX/Y`, porque un dedo no da `movementX`); **pellizcar** con dos dedos hace zoom (el arrastre se ignora mientras tanto, `touch.pinching`).
+- **Cámara de la escena en pantallas altas**: se aleja (hasta ×1,6 con 390 × 844) y apunta algo por debajo del vehículo para que quede por encima del HUD apilado.
+- **Metaetiqueta de vista** (`layout.tsx`): `viewport-fit=cover` (el HUD respeta el notch y la barra inferior con `env(safe-area-inset-*)`) y zoom de página desactivado (el juego maneja sus gestos). `overscroll-behavior: none`.
+- **Probar un tamaño** sin cambiar la ventana (la herramienta de redimensionar no sirve en una ventana maximizada): abrir `/cualquier-ruta-404`, sustituir el `body` por un `<iframe src="/ruta" style="width:390px;height:760px">` y pulsar los botones con `iframe.contentDocument`. Tamaños usados: 390 × 844 (móvil), 844 × 390 (apaisado), 768 × 1024 (tableta). Ojo: recargar muchos iframes con WebGL agota la GPU y la pestaña muere; abre una pestaña nueva si pasa.
+- **Pendiente:** la vista vertical del home es su propia composición pero solo con cuatro cartas; no se ha probado en un móvil físico (los gestos táctiles —pellizco, mantener pulsado— están probados por código y con eventos sintéticos, no con un dedo); la escena en móvil apaisado es funcional pero justa de espacio.
+
 ## Parte 1 del juego (historieta 2D)
 
 Las viñetas que se hagan para la Parte 1 ([game-design.md](game-design.md)) **deben seguir este lenguaje**: papel crema + recuadros con trazo de tinta grueso + manchas planas de azul/rosa de fondo + grano, y el cómic de la referencia como modelo de composición (varias viñetas por página, globos de texto, onomatopeyas). El ritmo del original —recorrido horizontal de páginas con la rueda— es una opción para la navegación. Las ilustraciones en sí (dibujo, producción) siguen **pendientes**.

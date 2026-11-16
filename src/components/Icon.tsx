@@ -15,6 +15,9 @@ const PATHS = {
   user: "M8 7.75a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5ZM2.75 13.75c.6-2.6 2.7-4 5.25-4s4.65 1.4 5.25 4",
   sound: "M2.5 6.25H5L8.5 3.5v9L5 9.75H2.5ZM10.75 5.75a3.25 3.25 0 0 1 0 4.5M12.75 4a5.75 5.75 0 0 1 0 8",
   "sound-off": "M2.5 6.25H5L8.5 3.5v9L5 9.75H2.5ZM11 6l3 4M14 6l-3 4",
+  voice: "M2.75 3.25h10.5v7H8.5L5.25 13v-2.75H2.75Z", // a speech bubble: the narration
+  guide: "M4 14V2.5M4 3h8l-2 2.75L12 8.5H4", // a flag: the mission-control guide
+  home: "M2.5 7.5 8 3l5.5 4.5M4 6.75V13h8V6.75",
 } as const;
 
 export type IconName = keyof typeof PATHS;

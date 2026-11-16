@@ -7,10 +7,11 @@ import { MISSIONS } from "@/lib/missions";
 import { PERF } from "@/lib/perf";
 import { storyOf } from "@/lib/story";
 import { useTheme } from "@/lib/use-theme";
+import { useViewport } from "@/lib/viewport";
 import { ease } from "@/lib/ui";
 import Ambient, { AmbientButton } from "./Ambient";
 import Credits from "./Credits";
-import Globe from "./Globe";
+import Globe, { globeShift } from "./Globe";
 import GlobeLabels, { floating } from "./GlobeLabels";
 import Logo from "./Logo";
 import Pop from "./Pop";
@@ -38,6 +39,7 @@ const regFloat = (el: HTMLElement | null) => {
 
 function ExploreView({ initialBodyId }: { initialBodyId: string }) {
   const theme = useTheme();
+  const vp = useViewport();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -67,6 +69,20 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
       window.clearTimeout(closeTimer.current);
     };
   }, []);
+  // a sheet covers the lower part of a phone held upright (or the right side of one held sideways): the globe moves out of its way while a card is open
+  useEffect(() => {
+    const open = picked !== null && vp.compact;
+    globeShift.tx = open && vp.short ? -vp.w * 0.2 : 0;
+    globeShift.ty = open && !vp.short ? Math.min(vp.h * 0.2, 170) : 0;
+    return () => {
+      globeShift.tx = 0;
+      globeShift.ty = 0;
+    };
+  }, [picked, vp.compact, vp.short, vp.w, vp.h]);
+  // on a small screen the card is a sheet (CSS), not a page floating beside its vehicle: the globe must not move it
+  useEffect(() => {
+    if (vp.compact) floating.el = null;
+  }, [vp.compact]);
   const cardVehicle = body.vehicles.find((v) => v.missionId === cardId) ?? null;
   const cardMission = MISSIONS.find((m) => m.id === cardVehicle?.missionId) ?? null;
 
@@ -120,15 +136,26 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
       <GlobeLabels theme={theme} />
       <Ambient track={body.id === "mars" ? "mars" : "moon"} />
 
-      {/* top left: the world switch, just text; the current world wears a pink highlighter */}
-      <div className="fixed left-5 top-5 z-10 flex items-center gap-1" role="tablist" aria-label="World" style={{ fontFamily: theme.font }}>
+      {/* the world switch, just text; the current world wears a highlighter. Top left on wide screens; at the bottom, in reach of the thumb, on compact ones */}
+      <div
+        className="fixed z-10 flex items-center gap-1"
+        role="tablist"
+        aria-label="World"
+        style={{
+          fontFamily: theme.font,
+          ...(vp.compact
+            ? { left: 0, right: 0, margin: "0 auto", width: "fit-content", bottom: "calc(max(14px, env(safe-area-inset-bottom)) + 46px)", pointerEvents: picked === null ? "auto" : "none" }
+            : { left: 20, top: 20 }),
+        }}
+      >
         {BODIES.map((b, i) => (
-          <Pop key={b.id} theme={theme} delay={i * 90} origin="left center" from="scale(0.4) rotate(-10deg) translateY(-16px)">
+          <Pop key={b.id} theme={theme} show={!vp.compact || picked === null} delay={i * 90} origin={vp.compact ? "center bottom" : "left center"} from={vp.compact ? "scale(0.4) translateY(20px)" : "scale(0.4) rotate(-10deg) translateY(-16px)"}>
             <button
               type="button"
               role="tab"
               aria-selected={b.id === body.id}
               className={`ui-world ${b.id === body.id ? "is-active" : ""}`}
+              style={vp.compact ? { fontSize: 26, padding: "6px 18px 8px" } : undefined}
               onClick={(e) => {
                 e.currentTarget.blur();
                 switchBody(b.id);
@@ -141,15 +168,18 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
       </div>
 
       {/* top centre: the brand mark, back to the home page */}
-      <div className="fixed left-0 right-0 top-4 z-10 mx-auto w-fit">
+      <div
+        className="fixed z-10"
+        style={vp.compact ? { left: "max(12px, env(safe-area-inset-left))", top: "max(12px, env(safe-area-inset-top))" } : { left: 0, right: 0, top: 16, margin: "0 auto", width: "fit-content" }}
+      >
         <Pop theme={theme} delay={150} origin="center top" from="scale(0.4) translateY(-24px) rotate(-8deg)">
-          <Logo theme={theme} size={20} />
+          <Logo theme={theme} size={vp.compact ? 18 : 20} />
         </Pop>
       </div>
 
-      <div className="fixed right-5 top-5 z-10 flex items-center gap-2" style={{ fontFamily: theme.font }}>
+      <div className="fixed z-10 flex items-center gap-2" style={{ fontFamily: theme.font, right: vp.compact ? "max(12px, env(safe-area-inset-right))" : 20, top: vp.compact ? "max(12px, env(safe-area-inset-top))" : 20 }}>
         <Pop theme={theme} delay={300} origin="right center" from="scale(0.5) rotate(-6deg) translateY(-14px)">
-          <Credits />
+          <Credits iconOnly={vp.phone} />
         </Pop>
         <Pop theme={theme} delay={220} origin="right center" from="scale(0.5) rotate(6deg) translateY(-14px)">
           <AmbientButton />
@@ -157,7 +187,7 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
       </div>
 
       {/* bottom centre: what to do (it hops away while a card is open and back when it closes) */}
-      <div className="pointer-events-none fixed bottom-6 left-1/2 z-10" style={{ transform: "translateX(-50%)" }}>
+      <div className="pointer-events-none fixed left-1/2 z-10" style={{ transform: "translateX(-50%)", bottom: vp.compact ? "max(14px, env(safe-area-inset-bottom))" : 24, maxWidth: "96vw" }}>
         <Pop theme={theme} show={picked === null} delay={350} from="scale(0.5) translateY(40px)" to="scale(0.7) translateY(30px)">
           <span
             className="flex items-center gap-2 whitespace-nowrap"
@@ -165,9 +195,9 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
               background: theme.ink,
               color: theme.onInk,
               borderRadius: theme.radiusSm,
-              padding: "11px 22px",
+              padding: vp.phone ? "10px 16px" : "11px 22px",
               fontFamily: theme.font,
-              fontSize: 14,
+              fontSize: vp.phone ? 12.5 : 14,
               fontWeight: 700,
               letterSpacing: "0.01em",
               textTransform: "lowercase",
@@ -177,9 +207,9 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
             <span style={{ opacity: 0.4 }}>·</span>
             drag to spin
             <span style={{ opacity: 0.4 }}>·</span>
-            scroll to zoom
+            {vp.touch ? "pinch to zoom" : "scroll to zoom"}
             <span style={{ opacity: 0.4 }}>·</span>
-            click a vehicle
+            {vp.touch ? "tap a vehicle" : "click a vehicle"}
           </span>
         </Pop>
       </div>
@@ -187,20 +217,26 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
       {/* the vehicle's card, floating beside it: the globe positions this wrapper (it never follows the pointer), the card inside pops in and out */}
       {cardVehicle && cardMission && (
         <div
-          ref={regFloat}
-          className="pointer-events-none fixed left-0 top-0 z-20 w-[clamp(280px,26vw,360px)]"
-          style={{ opacity: 0, willChange: "transform", transition: ease(theme, ["opacity"]), fontFamily: theme.font }}
+          ref={vp.compact ? undefined : regFloat}
+          className={`pointer-events-none fixed z-20 ${vp.compact ? "" : "left-0 top-0 w-[clamp(280px,26vw,360px)]"}`}
+          style={
+            vp.compact
+              ? vp.short
+                ? { right: "max(12px, env(safe-area-inset-right))", top: 12, bottom: 12, width: "min(390px, 46vw)", overflowY: "auto", fontFamily: theme.font }
+                : { left: 0, right: 0, bottom: 0, margin: "0 auto", width: "min(470px, calc(100vw - 20px))", padding: "0 0 max(10px, env(safe-area-inset-bottom))", fontFamily: theme.font }
+              : { opacity: 0, willChange: "transform", transition: ease(theme, ["opacity"]), fontFamily: theme.font }
+          }
         >
           <Pop
             theme={theme}
             key={`card-${cardVehicle.missionId}`}
             show={picked !== null}
-            origin="left center"
-            from="scale(0.3) rotate(-8deg) translateX(-30px)"
-            to="scale(0.6) rotate(5deg) translateX(-20px)"
+            origin={vp.compact && !vp.short ? "center bottom" : "left center"}
+            from={vp.compact ? (vp.short ? "scale(0.6) translateX(40px)" : "scale(0.7) translateY(80px)") : "scale(0.3) rotate(-8deg) translateX(-30px)"}
+            to={vp.compact ? (vp.short ? "scale(0.6) translateX(40px)" : "scale(0.8) translateY(60px)") : "scale(0.6) rotate(5deg) translateX(-20px)"}
             style={{ pointerEvents: picked !== null ? "auto" : "none" }}
           >
-            <VehicleCard theme={theme} mission={cardMission} vehicle={cardVehicle} bodyName={body.name} soon={!storyOf(cardMission.id)} onTravel={travel} onClose={() => select(null)} />
+            <VehicleCard theme={theme} mission={cardMission} vehicle={cardVehicle} bodyName={body.name} soon={!storyOf(cardMission.id)} compact={vp.compact} onTravel={travel} onClose={() => select(null)} />
           </Pop>
         </div>
       )}
