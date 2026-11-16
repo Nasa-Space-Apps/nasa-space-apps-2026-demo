@@ -43,3 +43,6 @@ next-env.d.ts
 
 # local logs
 dev.log
+
+# pitch video (local only)
+/video
