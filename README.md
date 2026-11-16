@@ -80,12 +80,11 @@ Cada ruta descarga solo lo suyo: el globo no carga la escena del rover, y la esc
 | **InSight · Mars** | `terrain.stl` (llano, maqueta de Elysium Planitia) | 14 **momentos** (el módulo no se mueve; Espacio pasa al siguiente) |
 | **Beagle 2 · Mars** | `gale-terrain.stl` (suelo llano del cráter, maqueta de Isidis Planitia) | 12 **momentos** (el módulo no se mueve) |
 | **Ingenuity · Mars** | `gale-terrain.stl` (cráter Gale, como maqueta de Jezero) | 13 (de la tela del Flyer 1 al vuelo 72) |
-| **Surveyor 3 · Moon** | `moon-terrain.stl` | 11 (del radar que falla a la visita del Apollo 12) |
+| **Surveyor 3 · Moon** | `moon-terrain.stl` | 11 **momentos** (del radar que falla a la visita del Apollo 12; el módulo no se mueve) |
 
 Cada historia son **20 eventos reales** investigados en dossiers (`misiones/<misión>/dossiers`): los 5–6 primeros son cómic (hasta el despegue o el aterrizaje), los siguientes
 son las paradas del 3D y los últimos 2–3 son el cómic final. Los datos viven en `public/models/<misión>/story.json` (generado con `npm run story`; el copy está en
-`scripts/data/<misión>-story.mjs`). Los terrenos son maquetas: las paradas no corresponden a lugares reales. En el 3D, Ingenuity y Surveyor 3 ruedan sobre ruedas
-añadidas (ficción: el real vuela / no se movió); Spirit y Opportunity conducen de verdad (Spirit con su rueda delantera derecha bloqueada). Receta para añadir otra: [`docs/story.md`](docs/story.md).
+`scripts/data/<misión>-story.mjs`). Los terrenos son maquetas: las paradas no corresponden a lugares reales. En el 3D, **Opportunity y Spirit conducen** (Spirit va marcha atrás desde jul 2004 y con la rueda delantera derecha bloqueada desde el sol 779), **Ingenuity vuela** entre paradas y se posa en cada una, y **InSight, Beagle 2 y Surveyor 3, que nunca se movieron, no se conducen**: Espacio pasa al siguiente momento. Qué se ha verificado y qué queda por hacer: [`docs/audit.md`](docs/audit.md). Receta para añadir otra: [`docs/story.md`](docs/story.md).
 
 > ⚠️ Los vehículos **no están a escala real** respecto al terreno (200–2000× más grandes). Decisión consciente para la PoC;
 > pendiente de resolver: ver [`docs/roadmap.md`](docs/roadmap.md).

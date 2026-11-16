@@ -4,7 +4,7 @@
 
 | Ruta | Vista | Qué carga |
 | --- | --- | --- |
-| `/` | redirige a `/moon` (`app/page.tsx`) | nada |
+| `/` | **Home** (`app/page.tsx` → `HomeLoader` → `Home`; hito 55, ver [design.md](design.md#home-hito-55--)) | three/R3F (el vehículo de la portada) + las 6 ilustraciones; datos de `lib/home.ts` |
 | `/moon`, `/mars` | **Globo** (`app/[body]/page.tsx` → `ExploreLoader` → `Explore`) | three/R3F + el globo; el vehículo ilustrado de la tarjeta (procedural, sin descargas) |
 | `/mars/opportunity`, `/mars/spirit`, `/mars/ingenuity`, `/moon/surveyor-3` | **La historia** (`app/[body]/[vehicle]/page.tsx` → `SceneLoader` → `Journey`: cómic → `Scene` 3D → cómic) | el terreno STL **solo de esa misión** (el vehículo es procedural, no hay GLB), su `story.json` (checkpoints, imágenes, audio), narración/guía |
 | `/<mundo>/<id>` de un vehículo sin historia (`sev`, `perseverance`, `insight`, `beagle-2`) | redirige al globo (`storyOf(id)` es `undefined`; «coming soon») | nada |
@@ -89,7 +89,7 @@ conducción libre); el `useEffect` de `Scene.tsx` atiende `M` (siguiente vehícu
 
 ## Vehículos inmóviles (hito 52)
 
-InSight y Beagle 2 nunca se movieron, así que su escena 3D no se conduce. Se reutiliza **toda** la maquinaria de la ruta (línea de tiempo, tarjeta, narración, minimapa) con una ruta **virtual**:
+InSight, Beagle 2 y (desde el hito 54) Surveyor 3 nunca se movieron, así que su escena 3D no se conduce. Se reutiliza **toda** la maquinaria de la ruta (línea de tiempo, tarjeta, narración, minimapa) con una ruta **virtual**:
 
 - `Mission.stationary` (de `Story.stationary`) → `Experience` publica `game.stationary = true` y construye `buildStationaryRoute(checkpoints, heading)` (`lib/route.ts`): el vehículo está en el spot del primer checkpoint (todos son el mismo, `BASE`) y las paradas están a 100 unidades virtuales una de otra; `game.s` es un **cursor de tiempo**, no una distancia recorrida.
 - **`Rover.tsx`**: en modo inmóvil el cursor se desliza a `STILL_RATE` (360 u/s) hacia `stops[game.travel]`; `game.speed` es siempre 0 (sin vibración, polvo ni huellas); el vehículo queda quieto en su sitio y sigue el terreno.
@@ -99,6 +99,19 @@ InSight y Beagle 2 nunca se movieron, así que su escena 3D no se conduce. Se re
 - **`Timeline.tsx`** y **`Minimap.tsx`**: textos «Going to…» / «The last moment»; el minimapa no dibuja ruta ni cuadrados numerados (solo el punto del vehículo).
 - **Modelos** (`lib/vehicles/insight.ts`, `beagle2.ts`): sin ruedas (`rig.wheels` vacío; `halfLen/halfWid` se pasan a `finish`), así que `Dust` y `Tracks` no emiten nada.
 - **Datos**: `STATIONARY`/`BASE` en `scripts/data/<misión>-story.mjs`; `plan-story-route.mjs` no planifica trayectos (escribe N paradas iguales).
+
+## Dinámica de los vehículos en la escena (hito 54)
+
+`Rover.tsx` ajusta el comportamiento al vehículo real (config en `RoverConfig` de `missions.ts`; detalle y motivos en [audit.md](audit.md)):
+
+- **Helicóptero** (`rig.hover > 0`, Ingenuity): solo vuela mientras se mueve. `st.lift` sube a 1 cuando `|game.speed| > 1` y baja a 0 al detenerse: despega, vuela y se posa en cada parada; los rotores giran solo en el aire (`rate · lift`).
+- **Marcha atrás** (`reverseAfter`, Spirit desde `spi028`): al visitar ese checkpoint el modelo (`align`) gira 180° y las ruedas giran al revés; `game.heading` sigue siendo la dirección de avance (cámara, minimapa).
+- **Rueda muerta** (`deadWheelAfter`, Spirit desde `spi040`): las ruedas del kit pueden llevar una etiqueta (`wheel(x, z, r, draw, "dead")`, `rig.spinners[i].tag`); desde ese checkpoint esa rueda deja de girar.
+- **Inmóviles** (InSight, Beagle 2, Surveyor 3): ver arriba.
+
+## Home (hito 55)
+
+`/` ya no redirige: es la portada, **una sola composición** (cartas con las ilustraciones + vehículos 3D, ver [design.md](design.md#home-hito-55--)). `Home.tsx` apila capas sobre un escenario de 1700 × 1000 escalado (`--s`): sol y nubes traseras y cartas (DOM), **un único canvas 3D** transparente (`HomeScene.tsx`, cámara isométrica cuyo zoom sigue la escala del escenario; cada vehículo se coloca convirtiendo sus coordenadas de escenario en pantalla y deslizando el punto a lo largo de la dirección de la vista hasta el suelo), nubes delanteras, sello y botón, y chispas (`Sparkles.tsx`). Un único bucle `requestAnimationFrame` mueve parallax, cartas, blob, bandas, nubes y sello. `lib/home.ts` guarda los datos (`CARDS` y `PIECES` salen de `MISSIONS`, `BODIES` y `storyOf`; la ilustración de cada carta es un beat de su historia), el puntero compartido con el 3D (`pointer`), el emisor de chispas (`fx`), `over.vehicle` (que impide que la carta de debajo reciba el clic) y los generadores de formas (`blobPath`, `bandPath`, `cloudPath`). **`worldOfPath("/")` devuelve `"home"`** (un tercer «mundo» con la paleta de la referencia: `WORLDS.home` + `HOME` en `themes.ts`); el script de `layout.tsx` hace lo mismo. Desde el globo, el logo (`Logo.tsx`) vuelve a `/`.
 
 ## Tema por mundo (hito 46)
 

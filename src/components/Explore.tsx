@@ -12,6 +12,7 @@ import Ambient, { AmbientButton } from "./Ambient";
 import Credits from "./Credits";
 import Globe from "./Globe";
 import GlobeLabels, { floating } from "./GlobeLabels";
+import Logo from "./Logo";
 import Pop from "./Pop";
 import VehicleCard from "./VehicleCard";
 
@@ -137,6 +138,13 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
             </button>
           </Pop>
         ))}
+      </div>
+
+      {/* top centre: the brand mark, back to the home page */}
+      <div className="fixed left-0 right-0 top-4 z-10 mx-auto w-fit">
+        <Pop theme={theme} delay={150} origin="center top" from="scale(0.4) translateY(-24px) rotate(-8deg)">
+          <Logo theme={theme} size={20} />
+        </Pop>
       </div>
 
       <div className="fixed right-5 top-5 z-10 flex items-start gap-2" style={{ fontFamily: theme.font }}>

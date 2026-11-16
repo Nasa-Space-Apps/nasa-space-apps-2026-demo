@@ -306,6 +306,116 @@ button {
   vertical-align: middle;
 }
 
+/* ---- home page (components/Home.tsx): the brand, the badge, the tilted cards ---- */
+.home-brand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 14px;
+  margin-inline: auto;
+  width: fit-content;
+  z-index: 20;
+}
+.home-logo {
+  display: block;
+  transition: transform var(--dur-base) var(--pop);
+  transform: rotate(-2deg);
+}
+.home-logo:hover {
+  transform: rotate(2deg) scale(1.07);
+}
+.home-logo:active {
+  transform: scale(0.94);
+}
+.home-logo-ch {
+  transition: transform var(--dur-base) var(--pop);
+}
+.home-logo:hover .home-logo-ch {
+  transform: translateY(-3px) rotate(0deg) !important;
+}
+.home-badge-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transition: transform var(--dur-base) var(--pop);
+}
+.home-badge-btn:hover {
+  transform: scale(1.1) rotate(8deg);
+}
+.home-badge-btn:active {
+  transform: scale(0.92);
+}
+/* tall or narrow screens: the logo moves to the left corner, clear of the credits button */
+@media (max-aspect-ratio: 1/1) {
+  .home-brand {
+    left: 14px;
+    right: auto;
+    margin-inline: 0;
+  }
+}
+/* a card of the home composition: an illustration in a paper frame, tilted (--rot, degrees); under the pointer it lifts, straightens and shows its name */
+.home-card-wrap {
+  position: absolute;
+  pointer-events: auto;
+}
+.home-card-wrap:hover {
+  z-index: 30;
+}
+.home-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: var(--stroke) solid var(--ink);
+  border-radius: 8px;
+  background: var(--surface);
+  cursor: pointer;
+  transition: transform var(--dur-base) var(--pop);
+}
+.home-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 2.5px solid var(--ink);
+  border-radius: 4px;
+}
+.home-card:hover {
+  transform: translateY(-14px) scale(1.12) rotate(calc(var(--rot) * -1deg));
+}
+.home-card:active {
+  transform: translateY(-6px) scale(1.05) rotate(calc(var(--rot) * -1deg));
+}
+.home-card-tag {
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 10px) scale(0.6);
+  transition:
+    opacity var(--dur-fast) var(--ease),
+    transform var(--dur-base) var(--pop);
+}
+.home-card:hover .home-card-tag {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+.home-start {
+  padding: 18px 46px;
+  font-size: 22px;
+}
+
 /* ---- reduced motion: keep the layout, drop the movement ---- */
 @media (prefers-reduced-motion: reduce) {
   *,

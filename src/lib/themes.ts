@@ -103,7 +103,7 @@ const BASE: Theme = {
  * The colours of each world. Ink and paper (the comic itself) stay the same everywhere; what changes is the field behind it, the single accent and what
  * hangs from them (globe grid, beacon, marker, the little vehicles on the globe, the ground). Mars is rust and butterscotch; the Moon is steel blue and mint.
  */
-export type WorldId = "mars" | "moon";
+export type WorldId = "mars" | "moon" | "home";
 type World = {
   canvas: string; // the field: page, globe, scene sky and fog, loading screen
   canvasAlt: string; // a lighter tint of the field: the globe grid and the comic's background blobs
@@ -114,6 +114,27 @@ type World = {
 export const WORLDS: Record<WorldId, World> = {
   mars: { canvas: "#E2603A", canvasAlt: "#F49A6D", accent: "#FFC247", accentSoft: "#B33A16", beacon: "#F08A00" },
   moon: { canvas: "#4B7DB8", canvasAlt: "#86AFDA", accent: "#6BE3C3", accentSoft: "#1F5C8E", beacon: "#16B38F" },
+  // the home page only: the colours of the reference itself (ponpon-mania.com): periwinkle field, pink accent (docs/design.md, «Home»)
+  home: { canvas: BLUE, canvasAlt: "#A9A9FF", accent: PINK, accentSoft: "#4747E0", beacon: PINK },
+};
+
+/**
+ * Extra colours of the home page (the collage of cards and vehicles): the sun-orange window and its wisps, the pink clouds in front, and the vehicles, which are
+ * recoloured here so that they read against orange, pink and periwinkle (the mission colours of `missions.ts` are for their own scenes).
+ */
+export const HOME = {
+  sun: "#FFAE14", // the window: a big flat sun
+  sunGlow: "#FFC53D", // the lighter disc inside it
+  orange: "#FF7A00", // deep orange wisps
+  pink: PINK, // clouds and wisps
+  pinkSoft: "#FBB6D8", // the back row of clouds
+  butter: "#FFC247", // the badge's centre (the butter of Mars)
+  vehicles: {
+    opportunity: { dark: "#1E7A5A", mid: "#58C79A", light: "#E9FBF1" }, // green
+    ingenuity: { dark: "#171717", mid: "#FEECE3", light: "#FFFFFF" }, // ink and cream
+    insight: { dark: "#0F6F80", mid: "#6CC3CC", light: "#E6F6F7" }, // teal
+    "surveyor-3": { dark: "#5C3FB5", mid: "#B8A3F0", light: "#F1ECFB" }, // violet
+  } as Record<string, { dark: string; mid: string; light: string }>,
 };
 
 const themes = new Map<WorldId, Theme>();
@@ -137,10 +158,13 @@ export function themeFor(id: WorldId): Theme {
   return t;
 }
 
-/** The world of a route: /mars and /mars/<vehicle> are Mars, everything else (/moon…) is the Moon. */
-export const worldOfPath = (path: string): WorldId => (path.split("/")[1] === "mars" ? "mars" : "moon");
+/** The world of a route: / is the home page, /moon… the Moon, everything else (/mars…) Mars. */
+export const worldOfPath = (path: string): WorldId => {
+  const first = path.split("/")[1];
+  return first === "moon" ? "moon" : first === "" || first === undefined ? "home" : "mars";
+};
 
-/** The default theme (the Moon, where `/` leads). Components pick the one of their world with `useTheme()` (lib/use-theme.ts). */
+/** The default theme (the Moon). Components pick the one of their world with `useTheme()` (lib/use-theme.ts). */
 export const THEME: Theme = themeFor("moon");
 
 /** The theme as CSS custom properties (set on <html> so `globals.css` classes can use them). */
