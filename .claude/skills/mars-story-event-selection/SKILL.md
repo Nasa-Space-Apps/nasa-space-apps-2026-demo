@@ -1,49 +1,49 @@
 ---
 name: mars-story-event-selection
-description: Fase 2.1 — preguntar cuántos eventos (N) quiere la historia, esperar la respuesta, y elegir los N eventos de la línea de tiempo base con más potencial narrativo. Úsala cuando `estado` diga COMPUERTA, o el usuario pida elegir/cambiar los eventos de la historia de una misión.
+description: Phase 2.1 — ask how many events (N) the story should have, wait for the answer, and choose the N events of the base timeline with the most narrative potential. Use it when `estado` says GATE, or when the user asks to choose/change the events of a mission's story.
 ---
 
-# Fase 2.1 — Compuerta de N y selección
+# Phase 2.1 — The N gate and selection
 
-Requisito: existe `timelines_v0/linea_de_tiempo_<id>.json` (si no, Fase 1).
+Requirement: `timelines_v0/linea_de_tiempo_<id>.json` exists (if not, Phase 1).
 
-## 1. Compuerta: preguntar N (OBLIGATORIO, y parar)
+## 1. Gate: ask for N (MANDATORY, then stop)
 
-Ejecuta `PY pipeline.py estado <id>` y muestra al usuario, en pocas líneas: nº de eventos de la base, reparto por fase, **N sugerido** y la tabla de estimaciones (costo ≈ 0,52 USD/evento, ≈ 3,9 min/evento en serie, ≈ 1,4 min con 3 en paralelo; son medidas de Opportunity con Bedrock).
+Run `PY pipeline.py estado <id>` and show the user, in a few lines: number of events in the base, split by phase, **suggested N** and the estimate table (cost ≈ 0.52 USD/event, ≈ 3.9 min/event in series, ≈ 1.4 min with 3 in parallel; measured on Opportunity with Bedrock).
 
-Haz **una sola pregunta**: «¿Cuántos eventos quieres en la historia?». **Detente.** No elijas, no investigues, no escribas hasta que responda. Si responde algo ambiguo («unos 20»), confirma el número exacto.
+Ask **one single question**: "How many events do you want in the story?". **Stop.** Do not choose, research or write until they answer. If the answer is vague ("about 20"), confirm the exact number.
 
-## 2. Prefiltro objetivo (gratis, sin modelo)
+## 2. Objective pre-filter (free, no model)
 
-`PY pipeline.py prefiltro <id> --n <N>` → `misiones/<id>/seleccion/prefiltro.json` con, por evento: fuentes fuertes, respaldo, discutido, fecha precisa, `puntaje_objetivo`; y **cuotas sugeridas por fase** (proporcionales, ≥1 por fase con eventos).
-El puntaje solo mide solidez de fuentes; **no** es el potencial narrativo. Úsalo para desempatar, no para decidir.
+`PY pipeline.py prefiltro <id> --n <N>` → `misiones/<id>/seleccion/prefiltro.json` with, per event: strong sources, backing, disputed, precise date, `puntaje_objetivo`; and **suggested quotas per phase** (proportional, ≥1 per phase that has events).
+The score only measures how solid the sources are; it is **not** narrative potential. Use it to break ties, not to decide.
 
-## 3. Elegir los N (juicio narrativo, tuyo)
+## 3. Choose the N (narrative judgement, yours)
 
-Lee los eventos de la base (títulos, detalle, datos_clave). Criterios, en orden:
+Read the events of the base (titles, detail, key data). Criteria, in order:
 
-1. **Potencial de historia** (criterio 1): hay protagonista, tensión o giro, algo que se pueda ver, animar o ilustrar; un estudiante de 17 años lo recordaría.
-2. **Arco completo:** que la historia tenga principio (origen/diseño), nudo (viaje, aterrizaje, crisis) y desenlace (fin, legado). Respeta las cuotas del prefiltro salvo razón escrita.
-3. **Fuentes:** importan pero no deciden (el agente investigador buscará más). Un evento discutido puede entrar si la controversia es parte de la historia; anótalo.
-4. **Variedad:** no repetir el mismo tipo de evento (p. ej. diez hallazgos de ciencia seguidos).
+1. **Story potential** (criterion 1): a protagonist, tension or twist, something that can be seen, animated or illustrated; a 17-year-old would remember it.
+2. **Complete arc:** the story needs a beginning (origin/design), a middle (cruise, landing, crisis) and an end (end of mission, legacy). Respect the pre-filter quotas unless you write down a reason.
+3. **Sources:** they matter but do not decide (the research agent will find more). A disputed event may enter if the controversy is part of the story; note it.
+4. **Variety:** do not repeat the same kind of event (e.g. ten science findings in a row).
 
-Agrúpalos en **actos** (3–5, con título corto) y escribe una `razón` de una línea por evento.
+Group them into **acts** (3–5, with a short title) and write a one-line `reason` per event.
 
-## 4. Guardar
+## 4. Save
 
-Crea un JSON de trabajo en `misiones/<id>/seleccion/borrador.json`:
+Create a working JSON at `misiones/<id>/seleccion/borrador.json`:
 
 ```json
 {"ids": ["spi003", "..."],
- "actos": [{"n": 1, "titulo": "Nacer"}, {"n": 2, "titulo": "Llegar"}],
+ "actos": [{"n": 1, "titulo": "Born"}, {"n": 2, "titulo": "Arriving"}],
  "asignacion": {"spi003": 1},
- "razones": {"spi003": "Por qué entra"}}
+ "razones": {"spi003": "Why it is in"}}
 ```
 
-y aplícalo: `PY pipeline.py seleccion <id> --archivo misiones/<id>/seleccion/borrador.json` (valida que los ids existan y no se repitan; escribe `seleccion.json` con cobertura por fase).
+and apply it: `PY pipeline.py seleccion <id> --archivo misiones/<id>/seleccion/borrador.json` (checks that the ids exist and are not repeated; writes `seleccion.json` with coverage per phase).
 
-Muestra al usuario la lista final (id, fecha, título, acto, razón) y la cobertura por fase. **Espera su visto bueno** antes de investigar: puede quitar/añadir; repite el paso 4.
+Show the user the final list (id, date, title, act, reason) and the coverage per phase. **Wait for their approval** before researching: they may remove/add; repeat step 4.
 
-## Después
+## Afterwards
 
-`estado` mostrará FASE 2.2. Sigue con `mars-event-research`. Si el usuario cambia N más tarde, es una selección nueva: no borres dossiers ya hechos (se reutilizan los que coincidan).
+`estado` will show PHASE 2.2. Continue with `mars-event-research`. If the user changes N later, it is a new selection: do not delete dossiers already made (the ones that match are reused).

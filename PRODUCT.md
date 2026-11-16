@@ -8,65 +8,67 @@ web
 
 ## Stack
 
-Next.js (App Router, `cacheComponents`) + React + three.js / React Three Fiber + Tailwind. Código existente; no se cambia de stack.
+Next.js (App Router, `cacheComponents`) + React + three.js / React Three Fiber + Tailwind. Existing code; the stack does not change.
 
 ## Users
 
-Jurado y público de un hackathon de NASA viendo la demo en una laptop o un proyector (pantalla grande, ratón y teclado). El móvil solo debe no romperse. Una persona curiosa, sin conocimientos técnicos, que quiere entender en segundos qué pasó con un vehículo espacial abandonado.
+The primary audience is **school-age space enthusiasts (secondary school, ~17 years old)** and casual learners, on a laptop (mouse and keyboard) or a phone/tablet (touch). The demo is also watched by a hackathon jury on a laptop or a projector. A curious person with no technical background who wants to understand, in seconds, what happened to an abandoned space vehicle.
 
 ## Product Purpose
 
-«Left behind» (título de trabajo): un **juego** sobre la vida completa del rover **Opportunity** —desde las decisiones de planificación y construcción hasta su última señal en Marte (2018)— con dos modos:
+**Left Behind** is a **game of stories** about the robotic explorers NASA left on Mars and the Moon, built for the NASA Space Apps 2026 challenge "Abandoned but not Forgotten". It tells the whole life of a mission — from the planning and construction decisions to its last signal — with two modes:
 
-- **Historia** (informativo y atractivo): la misión contada de principio a fin. **Parte 1** (hasta el aterrizaje): historieta 2D con ilustraciones y voz. **Parte 2** (en Marte): el recorrido 3D con checkpoints reales y narración.
-- **Decisiones** (aprender del error): los mismos puntos de la historia, pero algunos son **elecciones** del equipo de la misión. Elegir lo que no hizo la historia real lleva a un **fallo de la misión** (escena o animación incluida) que explica qué pasó de verdad y por qué.
+- **Story** (informative and attractive — **implemented for six vehicles**: Opportunity, Spirit, Ingenuity, Surveyor 3, InSight and Beagle 2): **Part 1** (until landing) is a 2D comic with illustrations and a voice; **Part 2** is the 3D route with real, sourced checkpoints and narration.
+- **Decisions** (learn from the mistake — **designed, not implemented**): the same points of the story, but some are **choices** by the mission team. Choosing what the real history did not do leads to a **mission failure** (a scene or animation included) that explains what really happened and why.
 
-Éxito = que el espectador recuerde cómo se llegó a Marte y por qué Opportunity duró 14 años, y que en el modo Decisiones entienda un riesgo real al equivocarse. Definición completa: `docs/game-design.md`. Está **definido, no implementado**.
+Success = the viewer remembers how the vehicle got to its world and why it ended where it did (e.g. why Opportunity lasted 14 years instead of 90 days), feels a personal connection with it and, in the Decisions mode, understands a real risk by getting it wrong. Full definition: `docs/game-design.md`; what is built: `docs/story.md`.
 
 ## Positioning
 
-No es un visor de datos de misión ni un simulador de conducción: es una **historia jugable** sobre una misión real, contada con ilustraciones, voz y el terreno 3D del vehículo (la ruta es fija; no hay conducción libre). Solo Opportunity «por el momento»; el resto de vehículos del proyecto anterior están en pausa.
+It is not a mission-data viewer nor a driving simulator: it is an **interactive story** about real missions, told with illustrations, voice and the vehicle's own 3D terrain (the route is fixed; there is no free driving). A **globe** is the menu: each abandoned site has its vehicle; vehicles without a story yet say "coming soon". The platform is meant to grow over time with more vehicles, more art and more interaction.
 
 ## Operating Context
 
-- Entrada: selección de modo (Historia / Decisiones). Dos partes por modo: Parte 1 «Earth» (viñetas 2D) y Parte 2 «Mars» (escena 3D).
-- Parte 2 (ya existe): `Espacio` mantenido avanza hasta el siguiente checkpoint; la línea de tiempo permite viajar hacia delante o atrás; `N` narración, `G` guía de voz.
-- **Antes del giro** (código conservado, en pausa): globo (`/moon`, `/mars`), escena por vehículo (`/<mundo>/<vehículo>`), Perseverance, SEV y 4 vehículos demo ficticios.
-- Se demuestra en vivo: la app no necesita claves ni red (narración y guía son mp3 pregrabados).
+- Entry: the home (`/`) → the globe (`/mars`, `/moon`) → a vehicle's card → "Travel to the past" → the story (comic → 3D → comic) at `/<world>/<vehicle>`.
+- 3D: `Space` held advances to the next checkpoint; the timeline lets you travel forward or backward; `N` narration, `G` voice guide, `S` music. Stationary vehicles (InSight, Beagle 2, Surveyor 3): `Space` goes to the next moment. On touch screens: on-screen buttons.
+- It works live with no keys or network: narration, guide and music are pre-recorded mp3s.
+- **Responsive:** phone, sideways phone, tablet and desktop.
 
 ## Capabilities and Constraints
 
-- Interfaz y audios en **inglés**; documentación del repo en español.
-- Vehículos procedurales de 3 tonos (`src/lib/vehicles.ts`); los GLB originales se conservan sin uso.
-- Fotos de checkpoints de NASA (dominio público) con crédito visible.
-- Estado compartido escena ⇄ DOM en el objeto mutable `src/lib/game.ts` (sin re-renders por frame).
-- Los vehículos aún no tienen escala real (pendiente documentado en `docs/roadmap.md`).
-- Los textos de los checkpoints actuales de Opportunity son verosímiles pero **no verificados**: se reemplazarán por datos reales (plantilla en `docs/data-request.md`) antes de dar el juego por válido.
-- En el modo Decisiones, las ramas alternas son **contrafactuales** y se rotulan como tal («What if…»); nunca se presentan como historia.
-- El SEV (en pausa) no tiene relación histórica con Apollo 14: su final es ficticio y así se rotula.
+- The interface and audio are in **English**; the documentation is in English.
+- Procedural 3-tone vehicles (`src/lib/vehicles.ts`); no GLBs.
+- Illustrations are **AI-generated** and always labelled so; they are not photos. The terrains are scale models: the stops are not real places.
+- Shared scene ⇄ DOM state in the mutable object `src/lib/game.ts` (no per-frame re-renders).
+- The vehicles do not have real scale yet (pending, documented in `docs/roadmap.md`).
+- Every fact comes from research dossiers with literal quotes checked by code (`misiones/<mission>/dossiers`); the information was audited (`docs/audit.md`).
+- In the Decisions mode, the alternative branches are **counterfactual** and are labelled as such ("What if…"); they are never presented as history.
+- SEV (coming soon) has no historical relation to Apollo 14: its ending is fictional and is labelled so. Beagle 2 is a British/ESA lander, told because NASA's HiRISE found it.
 
 ## Brand Commitments
 
-- **Estilo plano (flat design)** como regla de toda la demo: sin sombras, brillos ni degradados (solo el grano estático del campo azul).
-- **Referencia visual fijada por el usuario: ponpon-mania.com/chapter/2** (cómic interactivo: campo azul con grano, páginas de papel crema con trazo de tinta grueso, un acento rosa, Libre Franklin en negrita minúscula). Sustituyó a primer.io/payment-pioneers en el hito 30. El tema «Ink & Paper» es el único de la demo y la Parte 1 (historieta 2D) debe seguir su lenguaje (`docs/design.md`).
-- Movimiento **suave** en todo: ninguna transición brusca.
+- **Flat design** as a rule of the whole demo: no shadows, glows or gradients (only the static grain of the field).
+- **Visual reference fixed by the owner: ponpon-mania.com/chapter/2** (an interactive comic: a grainy field, cream paper pages with a thick ink stroke, one accent, Libre Franklin in bold lowercase). The "Ink & Paper" theme is the only one, with a **palette per world** (terracotta + butter on Mars, steel blue + mint on the Moon) and the home's own periwinkle; see `docs/design.md`.
+- Smooth motion everywhere: no abrupt transitions.
 
 ## Evidence on Hand
 
-- 60 ilustraciones de IA (20 por historia: Opportunity, Ingenuity y Surveyor 3) en `public/models/<misión>/images`, con los hechos y fuentes de cada evento en su `story.json` (`docs/assets.md`).
-- 60 narraciones y 30 frases de guía pregrabadas (`public/models/<misión>/audio`, `public/guide`).
-- No hay testimonios, métricas ni claims comerciales; no inventarlos.
+- 120 AI illustrations (20 per story), 120 narrations and 30 voice-guide phrases (`public/models/<mission>/…`, `public/guide`).
+- 6 stories × 20 real events with sources in each `story.json`; 140 research dossiers (30 for Opportunity, 20 for each other mission).
+- No testimonials, metrics or commercial claims: do not invent them.
 
 ## Product Principles
 
-1. Contar una historia, no mostrar datos: cada pantalla sirve al viaje del vehículo.
-1b. Equivocarse enseña: todo fallo del modo Decisiones explica la causa real y permite volver a elegir; nunca es un «game over» mudo.
-2. Lo esencial primero: el espectador entiende qué hacer (Espacio, línea de tiempo) sin leer instrucciones.
-3. Plano y limpio: color y forma en lugar de sombra y brillo.
-4. Todo movimiento es suave y con propósito; nada salta ni se corta.
-5. Honestidad: lo real se rotula como real y lo ficticio como ficticio.
+1. Tell a story, do not show data: every screen serves the vehicle's journey.
+1b. Being wrong teaches: every failure of the Decisions mode explains the real cause and lets you choose again; never a mute "game over".
+2. The essentials first: the viewer understands what to do (Space, the timeline) without reading instructions.
+3. Flat and clean: colour and shape instead of shadow and glow.
+4. All motion is smooth and has a purpose; nothing jumps or cuts.
+5. Honesty: what is real is labelled real and what is fictional or AI-made is labelled so.
 
 ## Accessibility & Inclusion
 
-- Contraste legible sobre fondos claros; respetar `prefers-reduced-motion` en las animaciones de interfaz.
-- Los botones de la interfaz no deben activarse con `Espacio` al avanzar (se les hace `blur()` tras el clic).
+- Readable contrast on light backgrounds; respect `prefers-reduced-motion` in the UI animations.
+- Everything a voice says has a subtitle.
+- UI buttons must not be activated with `Space` when advancing (they are `blur()`ed after a click).
+- Touch targets ≥ 44 px on touch screens.

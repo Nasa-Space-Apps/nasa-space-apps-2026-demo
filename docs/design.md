@@ -1,185 +1,182 @@
-# Diseño: tema «Ink & Paper» (cómic) + flat design
+# Design: the "Ink & Paper" theme (comic) + flat design
 
-**Toda la demo usa un único tema, «Ink & Paper»**, y el **estilo plano (flat)**. Es decisión del usuario (hito 30) y manda sobre cualquier otra preferencia estética.
-Referencia fijada por el usuario: [ponpon-mania.com/chapter/2](https://ponpon-mania.com/chapter/2) (cómic interactivo), medida con los *computed styles* y capturas de la página.
-Los valores viven **solo** en `src/lib/themes.ts` (`THEME`); este documento explica el porqué y las reglas. *(Antes: tema «Primer», referencia primer.io/payment-pioneers; sigue en el historial de Git.)*
+**The whole demo uses one theme, "Ink & Paper", and the flat style.** It was fixed by the project owner and overrides any other aesthetic preference. Reference: [ponpon-mania.com/chapter/2](https://ponpon-mania.com/chapter/2) (an interactive comic), measured with computed styles and screenshots. The values live **only** in `src/lib/themes.ts` (`BASE` + `WORLDS`); this document explains the why and the rules.
 
-## La idea
+## The idea
 
-Una interfaz de **cómic hecho a mano y silenciosa**: un campo plano de color con un grano fino (**terracota en Marte, azul acero en la Luna**; el azul lila de la referencia ya no se usa), **hojas de papel crema** con **trazo grueso de tinta negra**, un solo acento por mundo, botones en píldora y una única tipografía en negrita y minúscula.
-En el original, las páginas del cómic (crema, ligeramente giradas) cuelgan sobre un fondo de manchas planas azul y rosa; aquí el fondo es el azul (cielo del 3D, globo, carga) y las tarjetas son las páginas. La interfaz se queda neutra (tinta y papel); el color de verdad lo ponen el campo del mundo, el acento y los **vehículos** (3 tonos).
+A quiet, hand-made-comic interface: a flat field of colour with a fine grain (**terracotta on Mars, steel blue on the Moon**, periwinkle on the home page), **sheets of cream paper** with a **thick black ink stroke**, one accent per world, pill-shaped buttons and a single heavy lowercase typeface. In the original, the comic pages (cream, slightly tilted) hang over a background of flat blobs; here the background is the world's field (the sky of the 3D, the globe, the loading screen) and the cards are the pages. The interface stays neutral (ink and paper); the real colour comes from the world's field, the accent and the **vehicles** (3 tones).
 
-## Qué se midió en la referencia
+## What was measured on the reference
 
-| Dato | Valor |
+| Datum | Value |
 | --- | --- |
-| Fondo (canvas WebGL) | azul lila plano `≈ #7E7EFF` y rosa `≈ #F892C0` en manchas orgánicas que cambian por escena; **grano** fino sobre el azul |
-| Papel de las páginas | `#FEECE3` (`rgb(254,236,227)`), esquinas casi rectas, giro de ~0,5° |
-| Tinta | `#171717`; trazo de los recuadros del cómic muy grueso e irregular |
-| Pantalla de carga | `#FFF6F0`, mascota en círculo de tinta, barra fina |
-| Píldora de progreso | tinta `#191819`, radio 60, texto blanco 700 |
-| Tipografía | **Libre Franklin** (variable 100–900); navegación 15 px, **700, minúscula**; logotipo dibujado a mano |
-| Hover de la navegación | **contorno de 1 px en píldora** que aparece alrededor del texto |
-| Interacción | recorrido horizontal con la rueda, cursor «grab», página que se desliza |
+| Background (WebGL canvas) | flat periwinkle `≈ #7E7EFF` and pink `≈ #F892C0` in organic blobs that change per scene; fine **grain** over the blue |
+| Paper of the pages | `#FEECE3`, almost-square corners, ~0.5° tilt |
+| Ink | `#171717`; very thick, irregular stroke on the comic frames |
+| Loading screen | `#FFF6F0`, a mascot in an ink circle, a thin bar |
+| Progress pill | ink `#191819`, radius 60, white 700 text |
+| Typography | **Libre Franklin** (variable 100–900); navigation 15 px, **700, lowercase**; hand-drawn logotype |
+| Navigation hover | a **1 px pill outline** around the text |
+| Interaction | horizontal scroll with the wheel, "grab" cursor, sliding page |
 
 ## Tokens
 
-| Token | Valor | Uso |
+| Token | Value | Use |
 | --- | --- | --- |
-| `canvas` | por mundo: Marte `#E2603A`, Luna `#4B7DB8` (el azul lila `#7E7EFF` de la referencia ya no se usa) | **El campo**: fondo de la página, del globo, cielo y niebla de la escena, pantalla de carga y color al que se funden las vistas |
-| `surface` / `onInk` | `#FEECE3` | El **papel**: paneles y tarjetas; y el color del texto/iconos sobre tinta |
-| `paperLight` | `#FFF6F0` | Papel claro: fondo plano detrás del vehículo en su tarjeta |
-| `ink` / `inkSoft` | `#171717` / `#3A3A3A` | Texto, trazos, botón primario, barra superior, limbo y estrellas del globo, curvas de nivel del terreno |
-| `muted` | `#675651` | Texto secundario |
-| `line` | `#E8CFC2` | Pistas de barras y divisores sobre papel |
-| `accent` / `hover` | por mundo: Marte `#FFC247`, Luna `#6BE3C3` (antes rosa `#F892C0`) | **El único acento**: posición actual, gema de las balizas, selección de texto, relleno que barre un botón al pasar el cursor, botón `.is-accent` |
-| `accentSoft` | por mundo: Marte `#B33A16`, Luna `#1F5C8E` | Enlaces en hover |
-| `radius` / `radiusSm` | 6 / 999 px | Papel y paneles / botones, chips y píldoras (totalmente redondos) |
-| `stroke` | 3 px | Trazo de tinta de paneles, fotos e ilustraciones (el «recuadro de viñeta») |
-| `grain` | 0,08 | Opacidad del grano sobre toda la pantalla (0 = sin grano) |
-| `ease` | `cubic-bezier(0.22, 1, 0.36, 1)` | La curva de **todas** las transiciones |
-| `dur` | 250 / 600 / 1000 ms | `fast` (hover), `base` (estados), `slow` (entradas y desplazamientos) |
-| `ground` | `mars` arena `#EEBE95 → #FFF1DF` (borde `#F7D8BC`), `moon` plata `#CDD3DA → #F5F6F8` (borde `#E2E6EA`), `lines` tinta | Terreno de cada mundo en 3 tonos de papel con curvas de nivel de tinta |
+| `canvas` | per world: Mars `#E2603A`, Moon `#4B7DB8`, home `#7E7EFF` | **The field**: page background, globe, scene sky and fog, loading screen, the colour views melt into |
+| `surface` / `onInk` | `#FEECE3` | The **paper**: panels and cards; and the colour of text/icons on ink |
+| `paperLight` | `#FFF6F0` | Light paper: the flat background behind a vehicle on its card |
+| `ink` / `inkSoft` | `#171717` / `#3A3A3A` | Text, strokes, primary button, top bar, globe limb and stars, terrain contour lines |
+| `muted` | `#675651` | Secondary text |
+| `line` | `#E8CFC2` | Bar tracks and dividers on paper |
+| `accent` / `hover` | per world: Mars `#FFC247`, Moon `#6BE3C3`, home `#F892C0` | **The only accent**: current position, beacon gem, text selection, the fill that sweeps across a button on hover, the `.is-accent` button |
+| `accentSoft` | per world: Mars `#B33A16`, Moon `#1F5C8E` | Links on hover |
+| `radius` / `radiusSm` | 6 / 999 px | Paper and panels / buttons, chips and pills (fully round) |
+| `stroke` | 3 px | Ink stroke of panels, photos and illustrations (the "comic panel") |
+| `grain` | 0.08 | Opacity of the grain over the whole screen (0 = off) |
+| `ease` | `cubic-bezier(0.22, 1, 0.36, 1)` | The curve of **all** transitions |
+| `pop` | `cubic-bezier(0.34, 1.7, 0.5, 1)` | The playful curve: overshoots, then settles |
+| `dur` | 250 / 600 / 1000 ms | `fast` (hover), `base` (states), `slow` (entrances and moves) |
+| `ground` | `mars` sand `#EEBE95 → #FFF1DF` (edge `#F7D8BC`), `moon` silver `#CDD3DA → #F5F6F8` (edge `#E2E6EA`), `lines` ink | The terrain of each world in 3 paper tones with ink contour lines |
 
-Paletas de los vehículos (3 tonos, en `missions.ts`; el `bg` es `paperLight`): Opportunity coral `#E65A4F / #F9A66C / #FFE4E0`, Spirit violeta, Ingenuity ámbar, Surveyor 3 oliva, SEV azul, Perseverance verde. Cada vehículo conserva su color y **no** sigue la paleta del mundo (posible mejora: alinearlos).
+Vehicle palettes (3 tones, in `missions.ts`; `bg` is `paperLight`): Opportunity coral `#E65A4F / #F9A66C / #FFE4E0`, Spirit violet, Ingenuity amber, Surveyor 3 olive, InSight teal, Beagle 2 berry, SEV blue, Perseverance green. Each vehicle keeps its own colour and does **not** follow the world's palette (possible improvement: align them).
 
-## Paleta por mundo (hito 46)
+## Palette per world
 
-Tinta y papel (el cómic) son iguales en todas partes; lo que cambia con el mundo es **el campo, el acento y lo que cuelga de ellos**. Se define en `WORLDS` de `src/lib/themes.ts` y `themeFor(mundo)` devuelve el tema completo:
+Ink and paper (the comic itself) are the same everywhere; what changes with the world is **the field, the accent and what hangs from them**. It is defined in `WORLDS` of `src/lib/themes.ts` and `themeFor(world)` returns the full theme:
 
-| | campo (`canvas`) | tinte claro (`canvasAlt`: rejilla del globo, manchas del cómic) | acento | acento suave (enlaces) | baliza activa | suelo 3D (`ground`) |
+| | field (`canvas`) | light tint (`canvasAlt`: globe grid, comic blobs) | accent | soft accent (links) | active beacon | 3D ground |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Marte** | `#E2603A` terracota | `#F49A6D` | `#FFC247` mantequilla | `#B33A16` | `#F08A00` | arena cálida `#EEBE95 / #FFF1DF` |
-| **Luna** | `#4B7DB8` azul acero | `#86AFDA` | `#6BE3C3` menta | `#1F5C8E` | `#16B38F` | plata fría `#CDD3DA / #F5F6F8` |
+| **Mars** | `#E2603A` terracotta | `#F49A6D` | `#FFC247` butter | `#B33A16` | `#F08A00` | warm sand `#EEBE95 / #FFF1DF` |
+| **Moon** | `#4B7DB8` steel blue | `#86AFDA` | `#6BE3C3` mint | `#1F5C8E` | `#16B38F` | cool silver `#CDD3DA / #F5F6F8` |
+| **Home** | `#7E7EFF` periwinkle | `#A9A9FF` | `#F892C0` pink | `#4747E0` | `#F892C0` | — |
 
-- **Cómo se aplica:** `useTheme()` (`lib/use-theme.ts`) da el tema del mundo de la ruta (`/mars…` = Marte, el resto = Luna) y sigue el `pushState` del selector del globo; los componentes lo usan en vez de importar `THEME`. Dentro del `<Canvas>` de R3F no llega el contexto de React: `Experience` saca el mundo de la misión (`bodyOfMission`). Las variables CSS las publica `components/WorldVars.tsx` y un script en el `<head>` de `app/layout.tsx` las pone antes del primer pintado (sin parpadeo). El cielo y la niebla de cada misión (`missions.ts`) son el campo de su mundo.
-- Para retocar un color: cámbialo en `WORLDS` (o en `BASE.ground`); no escribas colores sueltos. Los vehículos conservan su color propio (`missions.ts`), que ya no es el acento.
+- **How it is applied:** `useTheme()` (`lib/use-theme.ts`) gives the theme of the route's world and follows the globe selector's `pushState`; components use it instead of importing `THEME`. Inside R3F's `<Canvas>` the React context does not arrive: `Experience` takes the world from the mission (`bodyOfMission`). The CSS variables are published by `components/WorldVars.tsx` and a script in the `<head>` of `app/layout.tsx` sets them before the first paint (no flash). Each mission's sky and fog (`missions.ts`) are its world's field.
+- To tweak a colour change it in `WORLDS` (or `BASE.ground`); never write loose colours. If you add a CSS token, add it to `cssVars()`.
 
-## Tipografía
+## Typography
 
-- **Una sola familia: Libre Franklin** (la de la referencia; `next/font/google` en `layout.tsx`). No hay mono: `THEME.mono` apunta a la misma familia y se usa para etiquetas, botones y números.
-- **Títulos** (`display`/`title`, `ui.ts`): peso **800**, tracking −0,04 em, interlineado ~1. **Texto**: 14 px, peso 500. **Etiquetas, botones, chips y enlaces**: peso **700, minúscula** (`text-transform: lowercase`), 12–14 px, tracking +0,01 em. Los nombres propios en títulos conservan la capitalización; en etiquetas salen en minúscula, como en la referencia.
-- Escala: `display` 32, `title` 22, texto 14, etiquetas 12 (`lib/ui.ts`). **Sin kickers**: el título habla solo; los metadatos van debajo, en minúscula.
+- **One family: Libre Franklin** (the reference's own; `next/font/google` in `layout.tsx`). There is no mono: `THEME.mono` points to the same family and is used for labels, buttons and numbers.
+- **Titles** (`display`/`title`, `ui.ts`): weight **800**, tracking −0.04 em, line height ~1. **Text**: 14 px, weight 500. **Labels, buttons, chips and links**: weight **700, lowercase** (`text-transform: lowercase`), 12–14 px, tracking +0.01 em. Proper nouns in titles keep their capitalisation; in labels they come out lowercase, like the reference.
+- Scale: `display` 32, `title` 22, text 14, labels 12 (`lib/ui.ts`). **No kickers**: the title speaks alone; metadata goes below, in lowercase.
 
 ## Hover
 
-En la referencia, el hover de la navegación es un **contorno en píldora**. En la demo: `.ui-btn` (primario = píldora de tinta; `.is-ghost` = contorno de 2 px) y las filas/celdas (`.ui-row`, `.ui-nav`) se **rellenan de rosa con un barrido** de izquierda a derecha (`background-size` 0 → 100 %) en 600 ms y el texto pasa a tinta; `.ui-marker` (línea de tiempo) se rellena de rosa y crece; `.ui-link` pasa a azul (`accentSoft`); las flechas se deslizan 4 px (la de «volver», hacia atrás). La opción seleccionada (`.is-active`) se queda en tinta. Los botones desactivados no reaccionan.
+In the reference the navigation hover is a **pill outline**. In the demo: `.ui-btn` (primary = ink pill; `.is-ghost` = 2 px outline) and rows/cells (`.ui-row`, `.ui-nav`) **fill with the accent in a sweep** left to right (`background-size` 0 → 100 %) in 600 ms and the text turns ink; `.ui-marker` (timeline) fills with the accent and grows; `.ui-link` turns blue (`accentSoft`); arrows slide 4 px (the back arrow, backwards). The selected option (`.is-active`) stays ink. Disabled buttons do not react.
 
-## Iconos (`components/Icon.tsx`)
+## Icons (`components/Icon.tsx`)
 
-Un único set, **dibujado**: rejilla 16×16, **trazo de 2 px** (antes 1,5: más cercano al trazo del cómic), extremos y uniones redondeados, sin relleno, heredan `currentColor`. Iconos: `arrow-right`, `arrow-left`, `chevron-down`, `play`, `stop`, `pause`, `close`. **Nunca glifos sueltos**.
+A single drawn set: a 16×16 grid, a **2 px stroke**, round caps and joins, no fill, inheriting `currentColor`. Icons: `arrow-right`, `arrow-left`, `chevron-down`, `play`, `stop`, `pause`, `close`, `user`, `sound`, `sound-off`, `voice`, `guide`, `home`. **Never loose glyphs** (→ ▶ ■).
 
-## Componentes
+## Components
 
-- **Panel** (`ui().panel`): papel con **trazo de tinta de 3 px** (`stroke`) y esquinas de 6 px. Sin sombra. `ui().frame` es el mismo trazo para fotos e ilustraciones dentro de un panel (la «viñeta»).
-- **Páginas giradas**: la tarjeta del checkpoint (−0,7°) y el minimapa (+0,7°) llevan una rotación mínima (`rotate`, independiente de `transform`) para que parezcan hojas sobre la mesa, no cajas de UI. No giran los demás paneles (se apilan).
-- **Botón primario** (`.ui-btn`): píldora de tinta, texto de papel en negrita minúscula, flecha que se desliza; secundario `.is-ghost` (contorno 2 px).
-- **Barra superior** (`TopBar`): píldora de tinta con «← globe» y el selector vehicle; el desplegable es papel con trazo.
-- **Chips de teclas** (`Hints`): píldoras de tinta; la tecla en un círculo rosa (apagados: píldora al 60 % y tecla de papel).
-- **Subtítulos** (`Captions`): burbuja de tinta; etiqueta «narrator» (papel) o «guide» (rosa).
-- **Línea de tiempo**: pista de 5 px redondeada, relleno de tinta y **círculos** de 16 px con trazo de tinta por checkpoint (tinta = alcanzado, color del vehículo = el vehículo está parado ahí). Solo entre dos checkpoints aparece un punto del color del vehículo que recorre la pista.
-- **Minimapa**: dentro de un panel, con su viñeta (trazo de tinta); curvas de nivel suaves sobre papel, ruta en tinta (discontinua la pendiente), checkpoints cuadrados numerados.
-- **Tarjeta del 3D (hito 48)**: la ilustración a todo el ancho de la tarjeta (4:5, tan alta como deje la pantalla) y debajo título, lugar, progreso + `listen`, resumen, datos y fuentes; ver [story.md](story.md).
-- **Botón «skip the 3D»** (`.ui-btn.is-accent`): relleno del acento del mundo con contorno de tinta de 2,5 px; el barrido del hover es de tinta. «continue the story» es el botón primario (tinta).
-- **Botones de la esquina (créditos y música; globo y home)**: misma altura (44 px), mismo contorno de 2 px de tinta (`.ui-btn-bar`, `.ui-fab-md`; ninguno relleno), iconos de 18 px y alineados por el centro. El icono de música (`sound` / `sound-off`) dice el estado: no se atenúa, para que los dos pesen igual; `aria-label` y `title` también.
-- **Píldora de página del cómic**: «05. Six minutes of fall» (número, punto, espacio y el título tal como viene del `story.json`, sin pasar a minúscula).
-- **Globo (menú del juego)**: campo del mundo, rejilla en el tinte claro del mundo, limbo y estrellas en tinta; **gira en dos ejes (sobre su propio eje y cabeceando, sin roll)** (con límite al manipularlo: la cara visible siempre tiene un vehículo; si se agarra una cara vacía, gira rápido hasta uno; al soltar el cabeceo vuelve rápido a la inclinación inicial, conservando la longitud) y se acerca con la rueda dentro de unos límites (0,75–2,6; cuanto más cerca, más cerca de un vehículo debe quedar el centro) (solo se escala el globo y los vehículos). **Sin paneles**: el mundo se cambia con **texto** (`.ui-world`: «Mars  Moon» en 800; el actual lleva un subrayado rosa que se desliza con rebote, el otro se inclina y crece al pasar el cursor); una pista de tinta abajo; y los **vehículos hundidos en una masa que los pega al suelo** (efecto simbionte: tinta + rosa + papel, una sola malla, forma reconocible —ruedas, panel, mástil— que gira para mirarte y respira y se estira como gelatina; anillo cuadrado de papel que pulsa, etiqueta de tinta solo al pasar el cursor). La **tarjeta del vehículo flota** junto a él (papel con trazo, +0,6°), se cierra con una **X** (`.ui-fab-sm`, gira 90° al hover), con Esc o con un clic fuera, y el globo se queda quieto y bloqueado mientras está abierta.
-- **Carga** (`Loading.tsx`): campo azul, título enorme en 800 abajo a la izquierda, etapa en negrita minúscula y barra de 6 px (tinta sobre papel) pegada al borde inferior.
+- **Panel** (`ui().panel`): paper with a **3 px ink stroke** and 6 px corners. No shadow. `ui().frame` is the same stroke for photos and illustrations inside a panel (the "comic panel").
+- **Tilted pages**: the checkpoint card (−0.7°) and the minimap (+0.7°) carry a minimal `rotate` (independent of `transform`) so they look like sheets on a table, not UI boxes. The other panels do not tilt (they stack).
+- **Primary button** (`.ui-btn`): ink pill, paper text in bold lowercase, a sliding arrow; secondary `.is-ghost` (2 px outline); `.is-accent` for "skip the 3D" (the world's accent with a 2.5 px ink outline, the hover sweep is ink).
+- **Top bar** (`TopBar`): an ink pill with "← story"/"← globe" and the vehicle selector; the dropdown is paper with a stroke.
+- **Key chips** (`Hints`): ink pills; the key in an accent circle (off: the pill at 60 % and a paper key).
+- **Subtitles** (`Captions`): an ink bubble; label "narrator" (paper) or "guide" (accent).
+- **Timeline**: a 5 px rounded track, an ink fill and 16 px **circles** with an ink stroke per checkpoint (ink = reached, vehicle colour = the vehicle is stopped there); only between two checkpoints does a dot in the vehicle's colour travel the track.
+- **Minimap**: inside a panel with its ink-stroked frame; soft contour lines on paper, ink route (dashed for the pending part), square numbered checkpoints.
+- **3D card**: the illustration at the card's full width (4:5, as tall as the screen allows) and below it title, place, progress + `listen`, summary, facts and sources; see [story.md](story.md).
+- **Corner buttons (credits and music; globe and home)**: same height (44 px), same 2 px ink outline (`.ui-btn-bar`, `.ui-fab-md`; none filled), 18 px icons, centre-aligned. The music icon (`sound` / `sound-off`) says the state: it is not dimmed, so the two weigh the same.
+- **Comic page pill**: "05. Six minutes of fall" (number, dot, space and the title as it comes from `story.json`, not lowercased).
+- **Globe (the game menu)**: the world's field, a grid in the world's light tint, ink limb and stars; it **turns on two axes (own axis and pitch, no roll)** with limits (see [architecture.md](architecture.md#globe-view-explore)) and zooms within limits (0.75–2.6). **No panels**: the world is changed with **text** (`.ui-world`: "Mars  Moon" in 800; the current one has an accent underline that slides with a bounce, the other tilts and grows on hover); a hint pill of ink at the bottom; and the **vehicles sunk into a mass that glues them to the ground** (the symbiote effect: ink + accent + paper, one mesh, a recognisable shape that turns to face you, breathes and stretches like jelly; a pulsing square paper ring; an ink label only on hover). The **vehicle card floats** beside it (paper with stroke, +0.6°), closes with an **X** (`.ui-fab-sm`, spins 90° on hover), with Esc or a click outside, and the globe stays still and locked while it is open.
+- **Loading** (`Loading.tsx`): see below.
 
-## Escena 3D
+## 3D scene
 
-- **Cielo y niebla** = `canvas` del mundo: el horizonte se disuelve en el campo, como las páginas sobre el fondo de la referencia.
-- **Terreno**: el mismo mapa de alturas de siempre, `MeshToonMaterial` de 3 pasos de tono (`RAMP` 120/190/255, antes 88/172/255 para que las sombras no ensucien el papel) en **arena** (Marte) y **plata** (Luna) con **curvas de nivel de tinta** dibujadas por su shader (`withContours`, `lines` = tinta).
-- **Polvo** crema/lila (`#F4DDD0` / `#E9E2F8`), **huellas** de tinta suave. **Balizas**: poste y anillo de tinta (grises al alcanzarlas) y gema rosa.
-- Luz y sombras se conservan; lo que se dibuja encima (UI, globo, balizas) es plano. `Canvas flat` (sin *tone mapping*).
+- **Sky and fog** = the world's `canvas`: the horizon melts into the field, like the pages over the background of the reference.
+- **Terrain**: the same height map, `MeshToonMaterial` with 3 tone steps (`RAMP` 120/190/255) in **sand** (Mars) and **silver** (Moon) with **ink contour lines** drawn by its shader (`withContours`, `lines` = ink).
+- **Dust** cream/lilac (`#F4DDD0` / `#E9E2F8`), soft ink **tracks**. **Beacons**: ink pole and ring (grey once reached) and an accent gem.
+- Light and shadows are kept; what is drawn on top (UI, globe, beacons) is flat. `Canvas flat` (no tone mapping).
 
-## El grano
+## The grain
 
-`body::after` en `globals.css`: una capa fija y estática con un tile de ruido (SVG `feTurbulence`) a la opacidad `THEME.grain`. Es **textura, no degradado ni brillo**: la referencia lo tiene sobre su azul. Ojo: es una capa a pantalla completa sobre los canvas WebGL; **no se ha medido su coste** en la laptop del usuario (ver [performance.md](performance.md)); si pesa, `grain: 0` en `themes.ts` la quita.
+`body::after` in `globals.css`: a fixed, static layer with a noise tile (SVG `feTurbulence`) at the opacity `THEME.grain`. It is **texture, not a gradient or a glow**: the reference has it over its blue. It is a full-screen layer over the WebGL canvases; its cost was not measured on the owner's laptop (see [performance.md](performance.md)); if it weighs, `grain: 0` in `themes.ts` removes it.
 
-## Vehículos
+## Vehicles
 
-Siguen la estética de **3 tonos de un solo color** sin contornos ni degradados (ver `lib/vehicles/kit.ts`, medidas sobre el GLB de referencia, receta en [themes-and-missions.md](themes-and-missions.md)). Se ven bien sobre el papel crema y contra el campo azul. En la tarjeta del globo van **quietos, en vista isométrica**, dentro de una viñeta con trazo de tinta, sobre `paperLight`.
-**Pendiente (decisión de arte):** la referencia dibuja sus personajes en tinta negra y crema, sin colores; los vehículos conservan sus colores. Si se quiere ir más allá, habría que rehacerlos a tinta (negro + crema).
+They follow the **3 tones of a single colour** aesthetic with no outlines or gradients (see `lib/vehicles/kit.ts`, proportions measured on reference GLBs, recipe in [themes-and-missions.md](themes-and-missions.md)). They read well on cream paper and against the field. In the globe's card they are **still, in isometric view**, inside a stroked frame on `paperLight`. **Open art decision:** the reference draws its characters in black ink and cream, no colours; vehicles keep their colours. Going further would mean redrawing them in ink (black + cream).
 
-## Movimiento (suave, y juguetón donde es un juego)
+## Motion (smooth, and playful where it is a game)
 
-- **Dos curvas** y tres duraciones: `THEME.ease` (suave, para todo lo funcional) y **`THEME.pop`** (`cubic-bezier(0.34, 1.7, 0.5, 1)`: rebota y se asienta) para los elementos **de juego** del menú y de los botones. Nada de `ease`/`linear` sueltos ni duraciones inventadas.
-- **Pops de juego** (hito 32): `components/Pop.tsx` hace entrar/salir con escala + giro + rebote (selector de mundo, música, pista inferior, tarjeta del vehículo que sale desde su vehículo); `.ui-btn` sube y se inclina al hover y se aplasta al pulsar; `.ui-fab-sm` (la X) gira 90°. En el 3D (`lib/motion.ts`, muelles desde `useFrame`): el globo y cada vehículo aparecen con rebote escalonado, cada vehículo da un saltito cada pocos segundos, se agranda y se menea al hover y rebota al estar seleccionado. Los bucles van con la Web Animations API (flecha de «travel to the past»). `prefers-reduced-motion` quita saltitos y meneos.
-- **Entradas**: fundido + ascenso de 14 px (`Reveal`), escalonadas; las tarjetas del checkpoint y el minimapa suben 18 px y se funden en 600–1000 ms.
-- **Cambios de estado**: color, opacidad y tamaño por transición; en 3D se interpolan (`lerp` con `1 − e^(−k·dt)`).
-- **Transiciones de vista**: al viajar, el globo se funde al azul y la escena entra desde ese mismo azul (y al volver igual): sin cortes.
-- **`prefers-reduced-motion`**: `globals.css` reduce todas las transiciones a ~0.
-- Los `@keyframes` nuevos no los recoge el servidor de desarrollo: usa transiciones (`ease()` de `lib/ui.ts`, `Reveal`).
+- **Two curves** and three durations: `THEME.ease` (smooth, for everything functional) and **`THEME.pop`** (bounces and settles) for the **game** elements of the menu and the buttons. No loose `ease`/`linear` or invented durations.
+- **Game pops**: `components/Pop.tsx` enters/leaves with scale + tilt + bounce (world selector, music, bottom hint, the vehicle card that comes out of its vehicle); `.ui-btn` rises and tilts on hover and squashes when pressed; `.ui-fab-sm` (the X) spins 90°. In 3D (`lib/motion.ts`, springs from `useFrame`): the globe and each vehicle appear with a staggered bounce, each vehicle hops every few seconds, grows and wiggles on hover and bounces when selected. Loops use the Web Animations API (the arrow of "travel to the past"). `prefers-reduced-motion` removes the hops and wiggles.
+- **Entrances**: fade + 14 px rise (`Reveal`), staggered; the checkpoint card and the minimap rise 18 px and fade in 600–1000 ms.
+- **State changes**: colour, opacity and size by transition; in 3D they are interpolated (`lerp` with `1 − e^(−k·dt)`).
+- **View transitions**: when travelling, the globe melts into the field and the scene comes in from that same field (and back): no cuts.
+- **`prefers-reduced-motion`**: `globals.css` reduces all transitions to ~0.
+- New `@keyframes` are not picked up by the dev server: use transitions (`ease()` from `lib/ui.ts`, `Reveal`).
 
-## Cómic de la historia (`components/Comic.tsx`, hito 36)
+## Comic of the story (`components/Comic.tsx`)
 
-Las páginas de la historia de Opportunity siguen el lenguaje de ponpon-mania.com/chapter/3: **papel crema sobre el campo azul**, con **manchas rosa** detrás (aquí flotan y se mueven con cada página) y una **píldora de tinta** abajo (título + progreso rosa + botones redondos `.ui-fab-sm`). Cada página: marco de tinta (`stroke`) con la **ilustración de IA** a página completa (4:5), un **sello de fecha** girado −3° (entra con rebote), el contador `n/N` y un **recuadro de título + resumen** girado +0,5° que sube con rebote. Las páginas vecinas se ven más pequeñas y pálidas (0,8 / opacidad 0,6) y giradas; la activa se endereza. La ilustración hace un zoom lento al llegar. Todo con `THEME.pop`; `prefers-reduced-motion` lo reduce. Las ilustraciones se rotulan **«AI-generated illustration»** (no son fotos).
+The pages follow the language of ponpon-mania.com/chapter/3: **cream paper over the field**, with **flat blobs** behind (here they float and move with each page) and an **ink pill** at the bottom (title + progress in accent + round `.ui-fab-sm` buttons). Each page: an ink frame (`stroke`) with the **AI illustration** at full page (4:5), a **date stamp** tilted −3° (enters with a bounce), the `n/N` counter and a **title + summary box** tilted +0.5° that rises with a bounce. Neighbouring pages are smaller and paler (0.8 / opacity 0.6) and tilted; the active one straightens. The illustration zooms slowly on arrival. Everything with `THEME.pop`. The illustrations are labelled **"AI-generated illustration"** (they are not photos).
 
-## Créditos — «Created by» (hito 53)
+## Credits — "created by"
 
-Botón «Credits» (`.ui-btn.is-ghost`, icono `user`) arriba a la derecha del globo, junto al de música. Su tarjeta es una **página de cómic** (papel + trazo de tinta, +0,6°) que entra con rebote (`THEME.pop`) bajo el botón: título «created by» con la X (`.ui-fab-sm`) y una viñeta por persona con el **retrato en un marco de tinta** (4:5, ligeramente girado ±0,9°), nombre (26 px, 800), rol y un botón primario «LinkedIn →». Se cierra con la X, `Esc` o un clic fuera. **`CreatedBy`** repite a las personas en pequeño (retrato redondo con anillo de tinta, nombre y rol, enlazados) al pie de la tarjeta final de cada historia. Los retratos son los ilustrados que aportó el usuario (planos, de un solo tono de color por persona: morado y azul), copiados a 720 px en `public/team/`. Datos en `lib/team.ts`.
+A "Credits" button (`.ui-btn.is-ghost`, icon `user`) top right of the globe and the home, next to the music one. Its card is a **comic page** (paper + ink stroke, +0.6°) that springs in below the button: the title "created by" with the X, and one panel per person: the **portrait in an ink frame** (4:5, tilted ±0.9°), the name (26 px, 800), the role and a primary "LinkedIn →" button. It closes with the X, `Esc` or a click outside. **`CreatedBy`** repeats the people small (a round portrait with an ink ring, name and role, linked) at the foot of every story's closing card. The portraits are flat illustrated ones supplied by the owner (one tone of colour per person), at 720 px in `public/team/`. Data in `lib/team.ts`.
 
-## Home (hito 55) — `/`
+## Home
 
-La portada es **una sola composición**, como la portada de un juego o de un anime (referencia: el home de ponpon-mania.com: personajes, logo centrado, sello circular que gira). **No hay vistas que pasen una tras otra ni imagen de fondo**: las ilustraciones de las historias son **cartas** repartidas por la mesa y **Opportunity en 3D, grande y quieto**, está delante de ellas. Casi nada de texto (el logo, el sello y un botón «start»). Es la **única pantalla con la paleta de la referencia** (mundo `home` en `WORLDS`, extras en `HOME`, ambos en `themes.ts`): campo **azul lila** `#7E7EFF`, tinta y papel. Las reglas planas siguen (sin sombras ni degradados; solo el grano). *Probado y descartado (a petición del usuario): un sol/blob con bandas de nube, Marte y la Luna de fondo, una nube rosa (delante y detrás), y los otros vehículos 3D (InSight, Surveyor 3, Ingenuity volando).*
+The cover is **one composition**, like the cover of a game (reference: the home of ponpon-mania.com: characters, a centred logo, a circular spinning badge). **There are no views that pass one after another or a background image**: the stories' illustrations are **cards** spread over the table and **Opportunity in 3D, big and still**, stands in front of them. Almost no text (the logo, the badge and a "start" button). It is the **only screen with the palette of the reference** (the `home` world in `WORLDS`, extras in `HOME`, both in `themes.ts`): a **periwinkle** field `#7E7EFF`, ink and paper. The flat rules still hold (no shadows or gradients; only the grain). *Tried and dropped at the owner's request: a sun/blob with cloud bands, Mars and the Moon in the background, a pink cloud, and the other 3D vehicles.*
 
-- **Escenario y dos composiciones** (`lib/home.ts`): todo se coloca en un «escenario» de unidades fijas que se escala para caber (`stageScale`). Hay **dos composiciones** de las mismas piezas: `WIDE` (pantalla apaisada: escenario de 1700 × 1000, vehículo en el centro, dos cartas a cada lado) y `TALL` (móvil vertical: 1000 × 1700, cuatro cartas en dos filas sobre el vehículo); `layoutFor(w, h)` elige. Las cartas son DOM; el vehículo, un único canvas 3D colocado con las mismas coordenadas.
-- **Cuatro cartas** (`CARDS`: una ilustración de IA por historia —Beagle 2 y Spirit a la izquierda, Ingenuity y Surveyor 3 a la derecha—, elegida con su beat): marco de papel con trazo de tinta, **dos a cada lado** del vehículo, **giradas con rotación juguetona y de distintos tamaños** (225–270), que **flotan** (suben y bajan, bamboleo) y entran **repartidas desde abajo**, con rebote y escalonadas. Al pasar el puntero **se levantan, se enderezan y crecen** y asoma su nombre. **Son decoración: no abren nada** (el usuario no quiere que redirijan; son `div`, sin cursor de mano). Ninguna carta queda detrás del vehículo.
-- **Un vehículo 3D** (`PIECES`, `HomeScene.tsx`): **Opportunity** (verde: `HOME.vehicles`, para que se lea contra el azul lila), grande (escala 2,9 en la composición ancha, 2,7 en la vertical: `Layout.piece`) y **sin animación ni interacción**: no se balancea, no sigue al puntero, no tiene parallax ni entrada con muelle (solo aparece con un fundido junto con la página); se dibuja una vez (`frameloop="demand"`) y otra al cambiar el tamaño de la ventana. Su posición es la de sus **ruedas más cercanas** en coordenadas del escenario. El canvas no captura el puntero. Para añadir más vehículos: otra entrada en `PIECES` y su sitio en cada `Layout` (y, si hace falta, su color en `HOME.vehicles`).
-- **Sello giratorio** (el de la referencia: anillo de tinta con `textPath`, centro mantequilla con flecha, gira solo y se acelera al pasar el puntero; arriba a la izquierda) y botón **«start»** (algo por encima del borde inferior): los dos abren el globo (`/mars`). Viven en el escenario pero **no encogen por debajo de un mínimo** (`keepSize`: se contraescalan cuando el escenario se reduce en un móvil, para seguir siendo pulsables). El **logo** (`Logo.tsx`) vuelve al home desde el globo.
-- **Chispas** (`Sparkles.tsx`): estrellitas planas que titilan, rastro tras el puntero y **confeti al hacer clic** (sobre el fondo o un vehículo). **Parallax** de todas las capas con el puntero (`data-depth`).
-- **Entrada**: pantalla de carga («Waking up the rovers») que se levanta cuando las seis ilustraciones están decodificadas y el canvas existe; luego todo entra con `Pop` escalonado. Al salir, se funde al color del campo.
-- `prefers-reduced-motion`: sin parallax, deriva, flotación, giro ni chispas de rastro. Un solo bucle `requestAnimationFrame` mueve todo lo del DOM (sin re-renders).
-- **Pendiente:** el logo no está dibujado a mano; la vista vertical es un recorte de la composición (no una composición propia); medir el coste de los dos canvas (chispas 2D + 3D) en la laptop del usuario.
+- **Stage and two compositions** (`lib/home.ts`): everything is placed on a "stage" of fixed units scaled to fit (`stageScale`). `WIDE` (landscape: stage 1700 × 1000, vehicle in the centre, two cards on each side) and `TALL` (a phone held upright: 1000 × 1700, four cards in two rows above the vehicle); `layoutFor(w, h)` chooses. The cards are DOM; the vehicle, a single 3D canvas placed with the same coordinates.
+- **Four cards** (`CARDS`: one AI illustration per story — Beagle 2 and Spirit on the left, Ingenuity and Surveyor 3 on the right —, chosen by its beat): a paper frame with an ink stroke, **two on each side** of the vehicle, **tilted playfully and of different sizes** (225–270), **floating** (up and down, wobble) and entering **dealt from below**, with a bounce, staggered. On hover **they lift, straighten and grow** and their name shows. **They are decoration: they open nothing** (`div`s with no hand cursor).
+- **One 3D vehicle** (`PIECES`, `HomeScene.tsx`): **Opportunity** (green: `HOME.vehicles`, so it reads against the periwinkle), big (scale 2.9 on the wide composition, 2.7 on the tall one: `Layout.piece`) and **with no animation or interaction**: it does not sway, follow the pointer or parallax; it is drawn once (`frameloop="demand"`) and again on resize. It is positioned by its **nearest wheels** in stage coordinates. The canvas does not capture the pointer. To add more vehicles: another entry in `PIECES`, its spot in each `Layout` and, if needed, its colour in `HOME.vehicles`.
+- **Spinning badge** (the reference's: an ink ring with `textPath`, a butter centre with an arrow, it spins by itself and speeds up on hover; top left) and the **"start"** button (a little above the bottom edge): both open the globe (`/mars`). They live on the stage but **do not shrink below a minimum** (`keepSize`). The **logo** (`Logo.tsx`) returns home from the globe.
+- **Sparkles** (`Sparkles.tsx`): flat little stars that twinkle, a trail behind the pointer and **confetti on click**. **Parallax** of all layers with the pointer (`data-depth`).
+- **Entrance**: a loading screen ("Waking up the rovers") that lifts when the six illustrations are decoded and the canvas exists; then everything enters with a staggered `Pop`. On leaving, it melts into the field colour.
+- `prefers-reduced-motion`: no parallax, drift, floating, spinning or trail sparkles. A single `requestAnimationFrame` loop moves all the DOM (no re-renders).
+- **Pending:** the logo is not hand-drawn; the cost of the two canvases (2D sparkles + 3D) on the owner's laptop was not measured.
 
-## Responsive (hito 56)
+## Responsive
 
-Toda la solución se ve y se juega en **móvil, tableta y escritorio**. Dos niveles de decisión:
+The whole solution looks and plays well on **phone, tablet and desktop**. Two levels of decision:
 
-- **Clases de tamaño** (`lib/viewport.ts`, `useViewport()`): **`compact`** (ancho < 1100 px o alto < 600: el HUD de escritorio no cabe → tabletas, móviles y ventanas pequeñas), **`phone`** (< 640 px de ancho), **`short`** (< 520 px de alto: móvil **apaisado**), `portrait`, `touch` (puntero grueso o compacto). Solo se usa para decisiones que el CSS no puede tomar (qué HUD montar, qué botones mostrar). Los ajustes puramente visuales van en CSS (`clamp`, `dvh`, `env(safe-area-inset-*)`).
-- **Qué se esconde o cambia (decisiones de diseño):**
-  | Vista | Escritorio | Móvil |
+- **Size classes** (`lib/viewport.ts`, `useViewport()`): **`compact`** (width < 1100 px or height < 600: the desktop HUD does not fit → tablets, phones and small windows), **`phone`** (< 640 px wide), **`short`** (< 520 px tall: a **sideways** phone), `portrait`, `touch` (coarse or compact pointer). Only used for decisions CSS cannot take (which HUD to mount, which buttons to show). Purely visual adjustments go in CSS (`clamp`, `dvh`, `env(safe-area-inset-*)`).
+- **What is hidden or changed:**
+
+  | View | Desktop | Phone |
   | --- | --- | --- |
-  | **Home** | composición ancha (vehículo al centro, 2 cartas a cada lado) | composición **vertical** propia (`TALL` en `lib/home.ts`): 4 cartas en dos filas sobre Opportunity; el sello, «start» y el logo se **agrandan** al encogerse el escenario (`keepSize`) para seguir siendo pulsables; Credits solo icono |
-  | **Globo** | selector de mundo arriba a la izquierda, logo centrado, tarjeta flotando junto al vehículo | logo arriba a la izquierda, créditos/música como **iconos**, **selector de mundo abajo** (al alcance del pulgar), pista «drag to spin · pinch to zoom · tap a vehicle»; la tarjeta es una **hoja inferior** (apaisado: panel a la derecha) y **el globo se desplaza** (`globeShift`) para que su vehículo siga visible |
-  | **Cómic** | páginas de 44 vw con las vecinas asomando | página del 78 vw (4:5 ajustado a la altura), barra superior compacta («skip»), subtítulos de una línea más pequeños, la píldora de abajo solo lleva el número y la barra; **apaisado**: página pequeña **sin el recuadro de texto** (lo llevan los subtítulos); la tarjeta final se desplaza dentro de la página |
-  | **Escena 3D** | tarjeta a la izquierda, minimapa a la derecha, teclas abajo | **sin minimapa** (la línea de tiempo dice dónde estás) y **sin chips de teclas**: todo se apila abajo (subtítulos → tarjeta → línea de tiempo → controles). La tarjeta del checkpoint es una **«asomada»** (miniatura, título, escuchar) que se despliega con un toque; los marcadores de la línea de tiempo tienen una zona táctil ampliada (`.ui-hit`). **Apaisado**: el apilado va a la izquierda, los controles abajo a la derecha, y la cámara desplaza la imagen para que el vehículo quede en la esquina libre |
-- **Controles táctiles** (`TouchControls` en `Hud.tsx`): botón grande **«hold to drive»** (mantener pulsado = Espacio; un vehículo inmóvil lleva **«next moment»**, un toque) y tres toggles redondos (narración, guía, música = N, G, S). Con `setPointerCapture` el dedo puede resbalar fuera del botón sin soltar la marcha.
-- **Globo táctil**: arrastrar con un dedo gira (el movimiento se calcula con `clientX/Y`, porque un dedo no da `movementX`); **pellizcar** con dos dedos hace zoom (el arrastre se ignora mientras tanto, `touch.pinching`).
-- **Cámara de la escena en pantallas altas**: se aleja (hasta ×1,6 con 390 × 844) y apunta algo por debajo del vehículo para que quede por encima del HUD apilado.
-- **Metaetiqueta de vista** (`layout.tsx`): `viewport-fit=cover` (el HUD respeta el notch y la barra inferior con `env(safe-area-inset-*)`) y zoom de página desactivado (el juego maneja sus gestos). `overscroll-behavior: none`.
-- **Probar un tamaño** sin cambiar la ventana (la herramienta de redimensionar no sirve en una ventana maximizada): abrir `/cualquier-ruta-404`, sustituir el `body` por un `<iframe src="/ruta" style="width:390px;height:760px">` y pulsar los botones con `iframe.contentDocument`. Tamaños usados: 390 × 844 (móvil), 844 × 390 (apaisado), 768 × 1024 (tableta). Ojo: recargar muchos iframes con WebGL agota la GPU y la pestaña muere; abre una pestaña nueva si pasa.
-- **Pendiente:** la vista vertical del home es su propia composición pero solo con cuatro cartas; no se ha probado en un móvil físico (los gestos táctiles —pellizco, mantener pulsado— están probados por código y con eventos sintéticos, no con un dedo); la escena en móvil apaisado es funcional pero justa de espacio.
+  | **Home** | wide composition (vehicle centred, 2 cards on each side) | its own **vertical** composition (`TALL`): 4 cards in two rows above Opportunity; the badge, "start" and the logo **grow** when the stage shrinks (`keepSize`) to stay tappable; Credits icon only |
+  | **Globe** | selector top left, logo centred, card floating beside the vehicle | logo top left, credits/music as **icons**, **world selector at the bottom** (within thumb reach), hint "drag to spin · pinch to zoom · tap a vehicle"; the card is a **bottom sheet** (sideways: a panel on the right) and **the globe moves** (`globeShift`) so its vehicle stays visible |
+  | **Comic** | 44 vw pages with the neighbours peeking | a 78 vw page (4:5 fitted to the height), a compact top bar ("skip"), smaller one-line subtitles, the bottom pill carries only the number and the bar; **sideways**: a small page **without the text box** (the subtitles carry it); the closing card scrolls inside its page |
+  | **3D scene** | card on the left, minimap on the right, keys at the bottom | **no minimap** (the timeline says where you are) and **no key chips**: everything stacks at the bottom (subtitles → card → timeline → controls). The checkpoint card is a **peek** (thumbnail, title, listen) that unfolds on a tap; the timeline markers have an enlarged touch zone (`.ui-hit`). **Sideways**: the stack goes to the left, the controls bottom right, and the camera shifts the picture so the vehicle sits in the free corner |
 
-## Parte 1 del juego (historieta 2D)
+- **Touch controls** (`TouchControls` in `Hud.tsx`): a big **"hold to drive"** button (hold = Space; a stationary vehicle has **"next moment"**, a tap) and three round toggles (narration, guide, music = N, G, S). With `setPointerCapture` a finger can slide off the button without releasing the drive.
+- **Touch globe**: dragging with one finger turns it (movement is computed from `clientX/Y`, because a finger gives no `movementX`); **pinching** with two fingers zooms (the drag is ignored meanwhile, `touch.pinching`).
+- **Scene camera on tall screens**: it pulls back (up to ×1.6 at 390 × 844) and aims a bit below the vehicle so it sits above the stacked HUD.
+- **View meta tag** (`layout.tsx`): `viewport-fit=cover` (the HUD respects the notch and the bottom bar with `env(safe-area-inset-*)`) and page zoom off (the game handles its gestures). `overscroll-behavior: none`.
+- **Testing a size** without resizing the window (the resize tool does not work on a maximised window): open `/any-404-route`, replace the `body` with an `<iframe src="/route" style="width:390px;height:760px">` and drive it with `iframe.contentDocument`. Sizes used: 390 × 844 (phone), 844 × 390 (sideways), 768 × 1024 (tablet). Beware: reloading many iframes with WebGL exhausts the GPU and the tab dies; open a new tab if that happens.
+- **Pending:** not tested on a physical phone (the touch gestures were tested by code and with synthetic events, not with a real finger); the sideways scene is functional but tight on space.
 
-Las viñetas que se hagan para la Parte 1 ([game-design.md](game-design.md)) **deben seguir este lenguaje**: papel crema + recuadros con trazo de tinta grueso + manchas planas de azul/rosa de fondo + grano, y el cómic de la referencia como modelo de composición (varias viñetas por página, globos de texto, onomatopeyas). El ritmo del original —recorrido horizontal de páginas con la rueda— es una opción para la navegación. Las ilustraciones en sí (dibujo, producción) siguen **pendientes**.
+## Loading
 
-## Reglas (lista de comprobación)
+One loading screen (`components/Loading.tsx`): the world's field, a huge 800 title bottom left, a bold lowercase stage line and a 6 px bar (ink on paper) glued to the bottom edge. Every stage of a trip (route fallback, chunk download, terrain download and build) draws the same thing in the same place, so going from one to the next never shows a different screen. Nothing appears abruptly: exits fade **before** navigating, and canvases/photos enter with a fade (`FadeImg`, `onCreated`). The scene's cover waits for `game.terrain` to be published (the terrain built and the shaders compiled with `<Preload all/>`).
 
-1. **Colores sólidos.** Sin degradados, sin sombras (`box-shadow` de profundidad, `drop-shadow`, `text-shadow`), sin brillos ni desenfoques decorativos. Excepciones aceptadas: el contorno de 2 px de `.ui-btn.is-ghost` (un trazo, no una sombra) y el **grano** estático.
-2. **Trazo de tinta** (`stroke`) en paneles, fotos e ilustraciones; esquinas casi rectas en papel, **píldoras** en botones y chips.
-3. **Profundidad por color y superficie**, no por luz: el papel sobre el campo azul.
-4. **Un solo acento por mundo** (mantequilla en Marte, menta en la Luna), usado con cuentagotas; el campo (terracota / azul acero) no es un acento.
-5. **Tipografía e iconos**: Libre Franklin (800 títulos, 700 minúscula en etiquetas); sin kickers; iconos solo de `Icon.tsx`.
-6. **Imágenes**: fotos de NASA de los checkpoints (16:10, con crédito) dentro de un recuadro de tinta, sin filtros; los vehículos se dibujan; las viñetas de la Parte 1 son ilustradas.
-7. **Movimiento**: la curva y las duraciones del tema; nada brusco; respeta `prefers-reduced-motion`.
-8. **Tokens, no valores sueltos**: si falta un color o una medida, añádelo a `themes.ts`.
+## Rules (checklist)
 
-## Cómo aplicarlo en código
+1. **Solid colours.** No gradients, no shadows (`box-shadow` for depth, `drop-shadow`, `text-shadow`), no glows or decorative blurs. Accepted exceptions: the 2 px outline of `.ui-btn.is-ghost` (a stroke, not a shadow) and the static **grain**.
+2. **Ink stroke** (`stroke`) on panels, photos and illustrations; almost-square corners on paper, **pills** on buttons and chips.
+3. **Depth by colour and surface**, not by light: paper over the field.
+4. **One accent per world** (butter on Mars, mint on the Moon), used sparingly; the field is not an accent.
+5. **Typography and icons**: Libre Franklin (800 titles, 700 lowercase on labels); no kickers; icons only from `Icon.tsx`.
+6. **Images**: the checkpoints' illustrations (4:5, with credit) inside an ink frame, no filters; vehicles are drawn; the comic's panels are illustrated.
+7. **Motion**: the theme's curve and durations; nothing abrupt; respect `prefers-reduced-motion`.
+8. **Tokens, not loose values**: if a colour or a measure is missing, add it to `themes.ts`.
 
-- Tokens: `src/lib/themes.ts` (`BASE` + `WORLDS`; `themeFor`, `useTheme`). Se publican como variables CSS en `<html>` (`cssVars`, `WorldVars`) y el canvas/WebGL los lee directamente (`missions.ts` toma cielo y terreno de `themeFor(<mundo>)` / `THEME.ground` y el fondo de la tarjeta de `THEME.paperLight`).
-- Estilos de texto y contenedores: `src/lib/ui.ts` (`ui(theme)` → `label`, `display`, `title`, `text`, `panel`, `value`, `frame`); `ease(theme, props, ms?, delay?)` para `transition`.
-- Estados interactivos: clases `.ui-btn`, `.ui-link`, `.ui-row`, `.ui-nav`, `.ui-marker` en `src/app/globals.css`. Iconos: `<Icon name="arrow-right" />`.
-- Entradas suaves: `components/Reveal.tsx`.
-- Antes de dar por buena una pantalla: ¿hay sombra, degradado o brillo? ¿Algún salto sin transición? ¿Algún color o curva fuera de `themes.ts`?
+## How to apply it in code
 
-## Pendiente / abierto
+- Tokens: `src/lib/themes.ts` (`BASE` + `WORLDS`; `themeFor`, `useTheme`). They are published as CSS variables on `<html>` (`cssVars`, `WorldVars`) and the canvas/WebGL reads them directly.
+- Text and container styles: `src/lib/ui.ts` (`ui(theme)` → `label`, `display`, `title`, `text`, `panel`, `value`, `frame`); `ease(theme, props, ms?, delay?)` for `transition`.
+- Interactive states: the classes `.ui-btn`, `.ui-link`, `.ui-row`, `.ui-nav`, `.ui-marker`, `.ui-fab`, `.ui-world` in `src/app/globals.css`. Icons: `<Icon name="arrow-right" />`. Soft entrances: `components/Reveal.tsx`.
+- Before accepting a screen: is there a shadow, gradient or glow? Any jump without a transition? Any colour or curve outside `themes.ts`?
 
-- La tipografía de la referencia es Libre Franklin (libre), así que coincide; el **logotipo y los títulos dibujados a mano** del original no tienen equivalente (se usa Libre Franklin 800).
-- Revisar el contraste del texto de tinta sobre el azul `#7E7EFF` en proyector (carga, etiquetas del globo) y la legibilidad del grano.
-- Manchas de fondo rosa/azul que cambian por escena (el original usa un canvas WebGL): hoy el campo es azul liso; añadir manchas planas orgánicas es un paso siguiente.
-- Revisar el contraste del acento de Marte (mantequilla) sobre la arena del suelo (la baliza activa usa un tono más oscuro, `beacon`) y de la menta sobre la plata en la Luna.
-- Alinear (o no) el color de cada vehículo con la paleta de su mundo.
-- Revisión de acabado con un revisor independiente (skill de diseño) **no ejecutada**; la verificación fue visual en el navegador.
+## Open
+
+- The reference's typeface is Libre Franklin (free), so it matches; the original's **hand-drawn logotype and titles** have no equivalent (Libre Franklin 800 is used).
+- Check the contrast of ink text on the periwinkle field on a projector (loading, globe labels) and the legibility of the grain.
+- Check the contrast of Mars' accent (butter) on the sand ground (the active beacon uses a deeper tone, `beacon`) and of mint on silver on the Moon.
+- Align (or not) each vehicle's colour with its world's palette.
+- An independent finish review (design skill) was **not run**; verification was visual in the browser.

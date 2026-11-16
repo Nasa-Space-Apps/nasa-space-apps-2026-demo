@@ -1,38 +1,38 @@
 ---
 name: mars-dossier-reconciliation
-description: Fase 2.3 — conciliar los dossiers investigados con la línea de tiempo base: detectar contradicciones, huecos y eventos frágiles, y decidir con el usuario qué conservar, corregir o reemplazar antes de escribir la historia. Úsala cuando `estado` diga FASE 2.3 o antes de `mars-story-writing`.
+description: Phase 2.3 — reconcile the researched dossiers with the base timeline: detect contradictions, gaps and fragile events, and decide with the user what to keep, fix or replace before writing the story. Use it when `estado` says PHASE 2.3 or before `mars-story-writing`.
 ---
 
-# Fase 2.3 — Conciliación
+# Phase 2.3 — Reconciliation
 
-Requisito: todos los dossiers de la selección existen (`estado` → 0 pendientes).
+Requirement: all the dossiers of the selection exist (`estado` → 0 pending).
 
-## 1. Generar el informe
+## 1. Generate the report
 
-`PY pipeline.py conciliar <id>` → `misiones/<id>/informes/conciliacion.md` y `.json`: por evento, datos verificados vs sin verificar, contradicciones, huecos, fuentes fuertes y marca de **frágil**.
-Es frágil si: más de 1/3 de sus datos no se verificó, o tiene menos de 5 verificados, o ninguna fuente oficial/científica.
+`PY pipeline.py conciliar <id>` → `misiones/<id>/informes/conciliacion.md` and `.json`: per event, verified vs unverified data, contradictions, gaps, strong sources and a **fragile** flag.
+An event is fragile if: more than 1/3 of its data was not verified, or it has fewer than 5 verified items, or it has no official/scientific source.
 
-## 2. Leer y decidir (tu trabajo)
+## 2. Read and decide (your job)
 
-Para cada evento marcado (y cada uno con contradicciones), compara con la base (`nota`, `discutido`):
+For every flagged event (and every one with contradictions), compare with the base (`nota`, `discutido`):
 
-| Situación | Decisión por defecto |
+| Situation | Default decision |
 |---|---|
-| Dossier confirma la base y suma detalle | **conservar** |
-| Dossier corrige un dato de la base (fecha, cifra) | conservar el dossier; anotar la discrepancia en el informe, **no** editar la base sin permiso |
-| Dos fuentes oficiales discrepan | **conservar con aviso**: la historia dirá «según X… según Y…» |
-| Evento frágil con tema fuerte para la historia | proponer una segunda pasada (`agente.py --forzar`) o buscar fuente a mano |
-| Evento frágil y reemplazable | proponer **reemplazar** por otro evento de la misma fase (volver a 2.1 solo para ese) |
+| The dossier confirms the base and adds detail | **keep** |
+| The dossier corrects a datum of the base (date, figure) | keep the dossier; note the discrepancy in the report, **do not** edit the base without permission |
+| Two official sources disagree | **keep with a warning**: the story will say "according to X… according to Y…" |
+| Fragile event with a strong theme for the story | propose a second pass (`agente.py --forzar`) or look for a source by hand |
+| Fragile and replaceable event | propose to **replace** it with another event of the same phase (go back to 2.1 for that one only) |
 
-Marca la decisión en la tabla del `.md` (☐ → ☑) y resume al usuario: frágiles, contradicciones relevantes, propuesta. **Espera su respuesta** si hay algo que reemplazar o rehacer (gasta cupo).
+Mark the decision in the table of the `.md` (☐ → ☑) and summarise for the user: fragile events, relevant contradictions, proposal. **Wait for their answer** if anything has to be replaced or redone (it spends quota).
 
-## 3. Reglas
+## 3. Rules
 
-- Un dato `no_verificado` **no pasa a la historia como hecho**. Puede ir como «se cuenta que…» solo si el usuario lo acepta.
-- No resuelvas contradicciones eligiendo la fuente que más te gusta: ganan oficial/científica; si empatan, se muestra la discrepancia.
-- No edites los dossiers a mano. Corregir = reinvestigar.
-- La base de `timelines_v0/` no se modifica aquí; las discrepancias quedan en el informe para decidir después.
+- An `unverified` datum **does not go into the story as a fact**. It may go as "it is said that…" only if the user accepts it.
+- Do not resolve contradictions by picking the source you like most: official/scientific wins; if they tie, the discrepancy is shown.
+- Do not edit the dossiers by hand. Correcting = researching again.
+- The base in `timelines_v0/` is not modified here; the discrepancies stay in the report to be decided later.
 
-## Después
+## Afterwards
 
-Con las decisiones tomadas, sigue con `mars-story-writing`. `estado` pasa a FASE 2.4 cuando existe `informes/conciliacion.json`.
+With the decisions made, continue with `mars-story-writing`. `estado` moves to PHASE 2.4 when `informes/conciliacion.json` exists.

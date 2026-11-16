@@ -79,7 +79,7 @@ async function arrancar(){
     if(!r.ok)throw new Error(r.status);
     return iniciar(await r.json());
   }catch(_){
-    document.body.innerHTML='<div style="max-width:620px;margin:60px auto;padding:0 16px;font:16px/1.6 system-ui"><h2>Esto es una plantilla sin datos</h2><p>Abre el HTML ya generado: <code>public/story/juego.html</code> (en <code>npm run dev</code>: <code>/story/juego.html</code>).</p><p>Para regenerarlo: <code>python story/build_juego.py</code>.</p><p>Si sirves la carpeta <code>story/</code> por http, la plantilla carga <code>../data/juego2_opportunity.json</code> sola.</p></div>';
+    document.body.innerHTML='<div style="max-width:620px;margin:60px auto;padding:0 16px;font:16px/1.6 system-ui"><h2>Esto es una plantilla sin datos</h2><p>Abre el HTML ya generado: <code>public/story/juego2.html</code> (en <code>npm run dev</code>: <code>/story/juego2.html</code>).</p><p>Para regenerarlo: <code>python story/build_juego2.py</code>.</p><p>Si sirves la carpeta <code>story/</code> por http, la plantilla carga <code>../data/juego2_opportunity.json</code> sola.</p></div>';
   }
 }
 function iniciar(D){

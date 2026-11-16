@@ -1,127 +1,79 @@
-# Roadmap / pendientes
+# Roadmap / pending
 
-> **Prioridad actual: el juego sobre Opportunity** (modos Historia y Decisiones, Parte 1 en 2D y Parte 2 en 3D). Plan por fases y preguntas abiertas en [game-design.md](game-design.md#10-fases-sugeridas-propuesto). Lo de abajo es anterior al giro: lo que se refiere a más vehículos, el globo o la comparación entre expediciones está **en pausa**.
+> **Current priority:** the Story mode is done for six vehicles; the next big piece is the **Decisions mode** ([game-design.md](game-design.md)). The full list of data TODOs with their default values is in [audit.md](audit.md#todo-documented-default-values).
 
-## Siguiente (qué hacer al retomar)
+## Next (what to do when resuming)
 
-> **TODO de la auditoría (hito 54):** la lista completa, con los valores por defecto que se dejaron y por qué, está en [audit.md](audit.md#todo-valores-por-defecto-documentados) (TODO-1 a TODO-10).
+State (Nov 2026): 6 complete stories (Opportunity, Spirit, Ingenuity, Surveyor 3, InSight, Beagle 2) with comic, 3D, narration and sources; a palette per world; a free globe; a 3D card with the illustration at full width; a home page; responsive layouts. Candidates, in the order they fit what was asked so far:
 
-Estado (hito 48): 4 historias completas (Opportunity, Spirit, Ingenuity, Surveyor 3) con cómic, 3D, narración y fuentes; paleta por mundo; globo libre; tarjeta 3D con ilustración a todo el ancho. Candidatos, en el orden en que encajan con lo pedido hasta ahora:
+1. **Listen to the 120 narrations** and review the 120 illustrations (the folder stamp of `spi001` says "REJECTED"); re-record only what does not please (`--only`).
+2. **More stories:** Perseverance and SEV stay "coming soon" (no dossiers). Recipe: [story.md](story.md).
+3. **3D scenes that change with the moment** in the stationary vehicles (InSight's seismometer and mole only after deployment, dust on the panels, what was found of Beagle 2 in 2015): today the model is the same at every moment (see [story.md](story.md#stationary-vehicles)).
+4. **Decisions mode** (defined in [game-design.md](game-design.md), not implemented; the 30 nodes of Opportunity are in `story/data/juego2_opportunity.json`).
+5. **A real terrain of Gusev, Jezero, Elysium and Isidis** (Spirit uses Meridiani; Ingenuity and Beagle 2 use Gale; InSight uses Meridiani): the stops are not real places.
+6. **Align each vehicle's colour with its world's palette** (today: Spirit violet, Ingenuity amber, Opportunity coral, Surveyor 3 olive).
+7. Check the 3D card on small screens (≤ 720 px tall) and vertical ones, and test the touch gestures (pinch, hold-to-drive) on a **physical phone**.
+8. Old debts: real scale of the vehicles (below), non-persistent `visited` progress, the served production build (`npm run build && npm start`) never tested in a browser.
 
-1. **Revisar de oído las 120 narraciones** y las 20 ilustraciones de Spirit (el sello de «REJECTED» de `spi001`); regrabar solo lo que no guste (`--only`).
-2. **Más historias:** InSight y Beagle 2 ya están completas (hito 52). Perseverance y SEV siguen «coming soon» (sin dossiers). Receta: [story.md](story.md).
-3. **Escenas 3D que cambien con el momento** en los módulos inmóviles (el sismómetro y el topo solo tras desplegarse, polvo en los paneles de InSight, lo hallado en 2015 de Beagle 2): hoy el modelo es el mismo en todos los momentos (ver [story.md](story.md#vehículos-inmóviles)).
-4. **Modo Decisiones** (definido en [game-design.md](game-design.md), no implementado; los 30 nodos de Opportunity están en `story/data/juego_opportunity.json`).
-5. **Terreno propio de Gusev** (hoy Spirit usa Meridiani como maqueta) y de Jezero (Ingenuity usa Gale): las paradas no son lugares reales.
-6. **Alinear el color de cada vehículo con la paleta de su mundo** (hoy: Spirit violeta, Ingenuity ámbar, Opportunity coral, Surveyor 3 oliva).
-7. Comprobar la tarjeta del 3D en pantallas pequeñas (≤ 720 px de alto) y en vertical; el zoom táctil (pellizco) del globo no está hecho.
-8. Deudas viejas: escala real de los vehículos (abajo), progreso `visited` no persistente, build servido sin probar.
+Ideas and technical debts, in no strict order. ⭐ = what best fits what the owner asked for.
 
-Ideas y deudas técnicas detectadas, sin orden estricto. Lo marcado ⭐ es lo que más encaja con lo que el usuario ha pedido.
+## ⚠️ Unresolved: real scale of the vehicles
 
-## ⚠️ Por resolver: escala real de los vehículos
+**Today the vehicles are heavily oversized relative to the terrain** (a conscious proof-of-concept decision; left as it is "for now"):
 
-**Hoy los vehículos están muy sobredimensionados respecto al terreno** (decisión consciente para la PoC: se dejó así «por
-ahora»). Detalle de la medición:
-
-| | Terreno | ≈ m por unidad | Tamaño real del vehículo | En escena | Sobredimensión |
+| | Terrain | ≈ m per unit | Real vehicle size | In the scene | Oversize |
 | --- | --- | --- | --- | --- | --- |
-| Opportunity · Marte | ~263 × 356 km → 559 × 762 u | ~470 m | 2,3 × 1,6 × 1,5 m | ~10 × 15 u ≈ 4,7 × 7 km | ~2000× |
-| SEV · Luna | ~30 × 30 km → 255 × 255 u | ~118 m | 4,5 × 4 × 3 m | ~8 × 12 × 8 u ≈ 0,9 × 1,4 km | ~200× |
+| Opportunity · Mars | ~263 × 356 km → 559 × 762 u | ~470 m | 2.3 × 1.6 × 1.5 m | ~10 × 15 u ≈ 4.7 × 7 km | ~2000× |
+| Surveyor 3 / SEV · Moon | ~30 × 30 km → 255 × 255 u | ~118 m | 4.5 × 4 × 3 m (SEV) | ~8 × 12 × 8 u ≈ 0.9 × 1.4 km | ~200× |
 
-Fuentes: fichas de NASA 3D Resources (Opportunity Landing Site / Apollo 14 – Landing Site; además el eje vertical va
-exagerado, ×35 en la Luna) y fichas técnicas de MER y SEV. Los `scale` de `missions.ts` solo igualan el tamaño aparente entre
-vehículos: el SEV (4,5 m) se ve igual de grande que el Opportunity (2,3 m).
+Sources: NASA 3D Resources sheets (Opportunity Landing Site / Apollo 14 – Landing Site; the vertical axis is also exaggerated, ×35 on the Moon) and technical sheets of the MER and the SEV. The `scale` values in `missions.ts` only equalise the apparent size between vehicles. The STLs are relief scale models and cannot be used 1:1 (Opportunity would measure ~0.005 u). Options:
 
-Los STL son maquetas de relieve, no sirven a escala 1:1 (el Opportunity mediría ~0,005 u). Opciones:
+1. **Stay stylised** and at least fix the proportion *between* vehicles.
+2. **Real terrain at rover scale**: replace the STLs with a high-resolution DTM cut to a few hundred metres (HiRISE for Mars; LROC NAC at 0.5 m/px for the Moon). Then 1 u = 1 m, the vehicle would be real and the speeds (now arbitrary: 18–42 u/s) would make physical sense. The checkpoints would need to be repositioned.
 
-1. **Seguir estilizado** y, como mínimo, corregir la proporción *entre* vehículos (SEV ≈ 2× Opportunity).
-2. **Terreno real a escala de rover**: sustituir los STL por un DTM de alta resolución recortado a unos cientos de metros
-   (HiRISE para Marte; LROC NAC a 0,5 m/px para Apollo 14). Así 1 u = 1 m, el vehículo sería real y las velocidades (ahora
-   arbitrarias: 18–42 u/s) tendrían sentido físico. Los checkpoints (`lib/checkpoints.ts`) habría que recolocarlos.
+## Done (latest version of the demo)
 
-## Hecho (última versión de la demo)
+- ✅ **Six stories** (Opportunity, Spirit, Ingenuity, Surveyor 3, InSight, Beagle 2) with the same flow (comic → 3D → comic, narration, sources); generic per-mission scripts; stationary vehicles (InSight, Beagle 2, Surveyor 3); vehicles without a story with "coming soon".
+- ✅ **A palette per world** (Mars terracotta + butter, Moon steel blue + mint) and UI polish: a globe turning on two axes with its own zoom, a music icon button, an accent "skip the 3D", the "05. Title" label in the comic, a 3D card with the illustration at full width.
+- ✅ **Audit** of all the information (milestone 54): see [audit.md](audit.md).
+- ✅ **Credits** (milestone 53): the "created by" card and the line on each closing card.
+- ✅ **Home** (`/`): one composition (cards with illustrations + Opportunity in 3D), its own palette, parallax, sparkles and a badge that opens the globe; the globe's logo goes back to it. Pending: a hand-drawn logo and measuring the cost of the two canvases on the owner's laptop.
+- ✅ **Responsive**: phone, sideways phone and tablet in home, globe, comic and scene (compact HUD, touch controls, pinch on the globe). Pending: a physical phone; the sideways scene is tight on space.
+- ✅ **Tab icon** (the rover's camera mast): `src/app/favicon.ico`, `icon.svg`, `apple-icon.png`.
+- ✅ **Pitch video** (30 s): built with Remotion from the app's own UI (kept locally in `video/`, git-ignored).
+- ✅ Base features: a ruled route (no free driving: `Space` held and a timeline), minimap with contours, dust, tracks, follow camera, pre-recorded narration with subtitles, a voice guide, background music, routes per vehicle with per-route resource loading (`cacheComponents` + `generateStaticParams`), the performance profile ([performance.md](performance.md)).
 
-- ✅ **Historias** de Opportunity (hito 36), Ingenuity (hito 40), Surveyor 3 (hito 42) y **Spirit (hito 45)** con el mismo flujo (cómic → 3D → cómic, narración, fuentes); scripts genéricos por misión; vehículos sin historia con «coming soon» (hito 43–44).
-- ✅ **Paleta por mundo** (hito 46: Marte terracota + mantequilla, Luna azul acero + menta) y **UI** (hitos 47–48): globo en dos ejes (giro propio + cabeceo, sin roll) con zoom propio, botón de música como icono, «skip the 3D» de acento, etiqueta «05. Título» en el cómic, tarjeta 3D con la ilustración a todo el ancho. Lo siguiente de esta lista describe etapas anteriores.
+## Smaller globe and route items
 
-- ✅ 3 expediciones (Opportunity y Perseverance en Marte, SEV en la Luna), tema único (flat; «Ink & Paper» desde el hito 30, antes «Primer»), minimapa, polvo, huellas, cámara de seguimiento.
-- ✅ **Storytelling**: 5 o 6 checkpoints por expedición, salida y final incluidos (balizas, rombos en el minimapa, tarjeta con foto y datos).
-- ✅ **Ruta definida** (sin conducción libre): `Espacio` mantenido avanza hasta el siguiente checkpoint; **línea de tiempo** con clic en
-  los checkpoints para viajar (hacia delante o atrás).
-- ✅ **Narración** pregrabada con ElevenLabs (voz Bill, `eleven_v4`), automática al entrar, tecla `N`, botón Listen/Stop.
-- ✅ Interfaz y audios en inglés.
-- ✅ **Vista de entrada con el globo** (`/moon`, `/mars`): globo alámbrico claro sin assets, gira solo (inercia al arrastrar; desde el hito 51 gira en dos ejes —su propio eje y el cabeceo— y tiene zoom propio), cuadrados negros que orbitan con él
-  (solo los de delante), selector de mundo, marcadores/etiquetas de los vehículos abandonados y tarjeta con el modelo 3D empolvado → «Travel to the past».
-- ✅ **Responsive** (hito 56): móvil, apaisado y tableta en home, globo, cómic y escena (HUD compacto, controles táctiles, pellizco en el globo). Pendiente: probar con un dedo real (pellizco, mantener pulsado) y en un móvil físico; la escena apaisada va justa de espacio.
-- ✅ **Home** (`/`, hito 55): una sola composición (cartas con ilustraciones + Opportunity en 3D quieto), paleta propia de la referencia, parallax, chispas y sello que abren el globo; el logo del globo vuelve al home. Pendiente: una composición propia para pantallas verticales (hoy es un recorte), el logo dibujado a mano, medir el coste de los dos canvas en la laptop del usuario.
-- ✅ **Rutas por vehículo** (`/moon/sev`, `/mars/opportunity`) con carga de recursos por ruta (`cacheComponents` + `generateStaticParams`).
-- ✅ **Rediseño completo en el tema «Primer»**: tokens únicos, tipografía, UI, globo, escena 3D y movimiento suave (ver [design.md](design.md)).
-- ✅ **Guía de voz «mission control»**: 49 frases pregrabadas (voz Daniel; recortada al quitar la conducción libre) con subtítulo, tecla `G`, reglas anti-saturación y
-  variantes por vehículo (ver [guide.md](guide.md)).
+- The marker sits slightly right of the globe's centre when focused (perspective: the globe is shifted right of the camera); it could be compensated in `faceAngle`.
+- The orbiting squares hide with the globe's centre plane (not by real occlusion): one near the edge can vanish before being covered.
+- Invalid routes (`/nope`, `/moon/opportunity`) return **200** with the 404 page (a limitation of streaming with `cacheComponents`).
+- Keyboard on the globe: only `Esc`; arrows/`Tab` for the world selector and accessibility of the markers could be added.
 
-- ✅ **Perseverance (vehículo de prueba)**: historia real de Mars 2020 con final ficticio sobre el terreno de Gale (ver [history.md](history.md), hito 26).
-  Pendiente si se quiere más rigor: un modelo de elevación del cráter **Jezero** (los lugares de la historia son de Jezero, el suelo es de Gale) y una cama de música propia.
+## Product
 
-## Pendientes menores del globo y las rutas
+- **Route / timeline**: test "`Space` toggles play/pause" against "hold"; cruise speed and the speed of the automatic trip; show the estimated time/distance on the bar; arrow-key shortcuts for the previous/next checkpoint; a key to return to the start.
+- ⭐ **Storytelling**: persistent progress in `localStorage` (today `visited` is lost on reload), a more complete end-of-story screen, own or higher-resolution images.
+- **Narration**: a different voice per world, a volume control, SFX. **Voice guide**: tune thresholds/cooldowns with real play (`QUIET`, `cool(...)` in `guide.ts`), a verbosity level in the UI, a volume independent of the narration.
+- **Checkpoint interaction**: a key to pin/close the card, a gallery, "learn more" links.
+- **Internationalisation**: the interface and audio are fixed in English; another language needs extracting the texts and re-recording the audio.
+- **Sound**: engine and dust effects. **Sky**: stars/Earth on the Moon, a gradient on Mars (the camera hardly sees the sky now).
+- Ideas from NASA's "Eyes" apps (Eyes on Curiosity: Rover Replay, Highlights, an orbital camera, a panel of 7 rover cameras; science.nasa.gov/eyes: a `curiosity-static.glb` — **check the licence before use**): an accumulated route with **date/sol per checkpoint** and distance driven; alternative cameras (overhead following the route, close to the vehicle); markers on the terrain with a photo/description; on the globe, the **whole trajectory** and more abandoned vehicles (Sojourner, Lunokhod, the Apollo LRV…).
 
-- El marcador queda algo a la derecha del centro del globo al enfocarlo (perspectiva: el globo está desplazado a la derecha de la cámara); se podría compensar en `faceAngle`.
-- Los cuadrados orbitantes se ocultan con el plano del centro del globo (no por oclusión real): uno junto al borde puede desaparecer antes de quedar tapado.
-- Las rutas no válidas (`/nope`, `/moon/opportunity`) devuelven **200** con la página 404 (limitación del streaming con `cacheComponents`).
-- Teclado en el globo: solo `Esc`; se podrían añadir flechas/`Tab` para el selector de mundo y accesibilidad de los marcadores.
-- No hay `loading` propio mientras llegan los chunks (se ve el color de fondo); se podría estilizar.
+## Visual / technical
 
-## Ideas tras revisar los «NASA Eyes» (nov 2026)
+- **Tracks with fade-out** (they disappear only when the 2,600-mark ring is recycled).
+- **Stable shadows**: snap the light's frustum to the texel to avoid flicker while moving.
+- **Environment map** (`Environment` with `Lightformer`) to recover metallic materials without them coming out black (not needed with the procedural vehicles).
+- **Draco offline**: host the decoder in `public/draco/` (not used since the GLBs were removed).
+- **Weight of `public`**: clean (~80 MB); each story's mp3s are ~7 MB (`mp3_44100_64` would halve them).
+- **Modest hardware**: the scene can drop to ~1 fps if another tab has WebGL open; consider a lower `dpr`, cheaper shadows or a "light" mode (the `light` perf profile already does part of this).
+- **Vehicles**: remake them at real scale when "real scale" is solved, and animate parts if wanted (a mast that turns, suspension that articulates, steering wheels).
+- **Terrain in the same style** (3-tone height bands, no gradients).
+- **Tests**: none for the app. Easy candidates: `buildHeightField`/`heightAt`, `findSpawn`, marching squares. (The research agent and the decision-game data have their own free tests.)
 
-- **Eyes on Curiosity** (app WebGL): modos Rover Replay (reproduce eventos con marcadores sobre el terreno), Highlights (vuela a un sitio y muestra imagen + descripción), cámara orbital, panel de 7 cámaras del rover. No se pudo comprobar si tiene línea de tiempo ni cómo dibuja el recorrido.
-- **science.nasa.gov/eyes**: ofrece `curiosity-static.glb` (11 MB, [enlace](https://science.nasa.gov/wp-content/uploads/2024/03/curiosity-static.glb)) —posible 3.er vehículo real; **revisar la licencia de uso antes**—, además de Mars Relay Network y Eyes on the Solar System (trayectorias/texturas). Sin APIs.
-- ⭐ Ruta acumulada con **fecha/sol por checkpoint** y distancia recorrida, para contar «cómo se movió»; cámaras alternativas (cenital que sigue la ruta, cercana al vehículo); marcadores en el terreno con foto/descripción (estilo Highlights).
-- Globo: marcar también la **trayectoria completa** sobre la esfera (no solo el punto final), añadir más vehículos abandonados (Spirit, Sojourner, Lunokhod, Apollo LRV…) y una luna/órbita animada.
+## Quality
 
-## Producto
-
-- **Ruta / línea de tiempo**: probar «`Espacio` alterna reproducir/pausar» frente a «mantener»; velocidad de crucero (Marte ≈ 1 100 u de
-  ruta ≈ 46 s sin paradas, Luna ≈ 520 u ≈ 29 s) y del viaje automático; mostrar el tiempo/distancia estimada en la barra; atajos de
-  teclado (flechas) para ir al checkpoint anterior/siguiente; tecla para volver a la salida; que el viaje automático narre/pare en los
-  intermedios si se prefiere; la salida de Marte (0, 0) es el cráter central (en suelo llano).
-- **Final de la Luna**: «Last Light» es inventado (el SEV no existe en Apollo 14); si se quiere algo histórico, el final natural es el
-  despegue de Antares.
-
-- ⭐ **Storytelling**: más checkpoints por expedición, progreso persistente en `localStorage` (hoy `visited` se pierde al recargar), pantalla de fin de expedición, imágenes propias
-  o en mayor resolución.
-- **Narración**: (subtítulos ya hechos con tiempos calculados en el cliente), voz distinta por
-  expedición, control de volumen, música/ambiente y SFX. Evaluar la voz elegida (no se pudo escuchar al grabar) y, si no gusta,
-  regrabar con `--voice`. Ver [narration.md](narration.md).
-- **Guía de voz**: ajustar umbrales/enfriamientos con juego real (`QUIET`, `cool(...)` en `guide.ts`), más frases por vehículo, pistas
-  de teclas contextuales para novatos (hoy solo las frases `idle-5/6` y `ready-4` mencionan `Space`), nivel de verbosidad en la UI (alto/bajo/off) y
-  volumen independiente de la narración.
-- **Checkpoints: interacción extra** — hoy la tarjeta aparece al entrar en el radio y se oculta al salir. Posibles mejoras:
-  tecla para fijarla/cerrarla, galería, enlaces «saber más».
-- **Internacionalización**: la interfaz y los audios están fijos en inglés; si hiciera falta otro idioma habría que extraer
-  los textos (hoy están repartidos en componentes y `checkpoints.ts`) y regrabar los audios.
-- ⭐ **Más vehículos/terrenos y más estilos**: el sistema ya está preparado (ver [themes-and-missions.md](themes-and-missions.md)).
-- **Controles táctiles** (joystick virtual) para móvil.
-- **Sonido**: motor, polvo, ambiente (la voz de los checkpoints ya existe: ver `docs/narration.md`).
-- **Obstáculos / colisiones** y objetos del escenario (rocas, banderas, módulo de aterrizaje).
-- **Cielo**: estrellas/Tierra en la Luna, gradiente en Marte (la cámara casi no ve el cielo ahora mismo).
-
-## Visual / técnico
-
-- ✅ **Ruedas animadas**: los vehículos procedurales tienen las ruedas separadas y giran con la velocidad.
-- **Huellas con desvanecimiento** (ahora desaparecen solo al reciclar el anillo de 2600 marcas).
-- **Sombras estables**: ajustar el frustum de la luz al texel para evitar parpadeo al moverse.
-- **Mapa de entorno** (`Environment` con `Lightformer`) para recuperar materiales metálicos sin que salgan negros.
-- **Draco offline**: alojar el decodificador en `public/draco/`.
-- **Peso de `public`**: ya limpio (47 MB, hito 43). Los mp3 de las historias suman ~7 MB cada una (`mp3_44100_64` los reduciría a la mitad).
-- **Rendimiento en equipos modestos**: la escena puede ir a ~1 fps si hay otra pestaña con WebGL abierta; valorar `dpr` más bajo,
-  sombras más baratas o un modo «ligero».
-- **Vehículos procedurales**: ya rehechos con detalle y proporciones medidas sobre los GLB (hito 27). Queda rehacerlos a escala real al resolver «escala real» (arriba), y, si se quiere, animar piezas (mástil que gira, suspensión que articula con el terreno, dirección de las ruedas).
-- **Terreno al mismo estilo** (siguiente paso del rediseño): bandas de altura en 3 tonos, sin degradados.
-- **Tests**: no hay. Candidatos fáciles: `buildHeightField`/`heightAt`, `findSpawn`, marching squares.
-
-## Calidad
-
-- Probar el build de producción servido (`npm run build && npm start`) en el navegador; `npm run build` ya compila sin errores.
-- Revisar accesibilidad de los selectores (roles ARIA, foco con teclado — ahora se hace `blur()` tras el clic para no
-  interferir con `Espacio`).
-- Revisar el `README` generado por Next si se añade despliegue.
+- Test the served production build (`npm run build && npm start`) in the browser; `npm run build` already compiles without errors.
+- Review the accessibility of the selectors (ARIA roles, keyboard focus — today `blur()` is called after a click so as not to interfere with `Space`).
+- Test in a browser with no cache and no internet (nothing external is needed to play except Google Fonts at build time).

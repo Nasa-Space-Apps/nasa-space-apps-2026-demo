@@ -1,27 +1,27 @@
-# Agente investigador de Opportunity
+# Event research agent
 
-Recibe **un evento** (JSON) de la misión del rover Opportunity y hace una investigación web para ampliarlo. Produce un dossier con:
+Takes **one event** (JSON) of a space mission and researches it on the web to expand it. (It was written for Opportunity, hence the folder name; the prompts are mission-neutral and it now serves every mission in `misiones/`.) It produces a dossier with:
 
-- un relato en español para estudiantes de 5.º de secundaria,
-- datos reales, cada uno con URL y una cita literal comprobada por código,
-- fuentes nuevas clasificadas, contradicciones, huecos e ideas visuales.
+- a story in Spanish for secondary-school students (17 years old),
+- real facts, each with a URL and a literal quote checked by code,
+- new classified sources, contradictions, gaps and visual ideas.
 
-Está pensado para ampliar los eventos de `story/data/historia_opportunity.json` y `story/data/juego_opportunity.json`.
+The dossiers are the source of every fact shown in the web demo (see [`../../docs/story.md`](../../docs/story.md)); the end-to-end flow is in [`../../docs/research-pipeline.md`](../../docs/research-pipeline.md). Code identifiers, prompts and dossier contents are in Spanish on purpose: they are the research data of a Spanish-speaking team.
 
-## Requisitos
+## Requirements
 
-| Requisito | Detalle |
+| Requirement | Detail |
 |---|---|
-| Python | 3.12 (probado con 3.12.10). |
-| Claude | Una de dos: **(a)** Claude Code instalado y con sesión iniciada (`claude login`), que usa tu plan; o **(b)** una `ANTHROPIC_API_KEY`. |
-| Red | Acceso a internet. Todas las herramientas de búsqueda son gratis y sin clave. |
-| Espacio | Unos 500 MB: el entorno virtual y el navegador Chromium de Playwright (~125 MB). |
+| Python | 3.12 (tested with 3.12.10). |
+| Claude | One of: **(a)** Claude Code installed and logged in (`claude login`), which uses your plan; or **(b)** an `ANTHROPIC_API_KEY`. |
+| Network | Internet access. All the search tools are free and need no key. |
+| Disk | About 500 MB: the virtual environment and Playwright's Chromium (~125 MB). |
 
-El SDK (`claude-agent-sdk`) lanza Claude Code por debajo. No verifiqué si trae su propio ejecutable; si falla al arrancar, instala Claude Code (<https://code.claude.com/docs>).
+The SDK (`claude-agent-sdk`) launches Claude Code underneath. If it fails to start, install Claude Code (<https://code.claude.com/docs>).
 
-## Instalación (una vez por máquina)
+## Install (once per machine)
 
-Desde esta carpeta (`agents/opportunity-research/`).
+From this folder (`agents/opportunity-research/`).
 
 **Windows (PowerShell):**
 
@@ -39,144 +39,146 @@ python3 -m venv .venv
 .venv/bin/python -m playwright install chromium
 ```
 
-Después, comprueba que todo funciona:
+Then check that everything works:
 
 ```
-.venv\Scripts\python probar_herramientas.py            # prueba herramientas y Claude (gasta un poco de cupo)
-.venv\Scripts\python probar_herramientas.py --sin-claude   # solo herramientas, sin gastar cupo
+.venv\Scripts\python probar_herramientas.py            # tests the tools and Claude (spends a little quota)
+.venv\Scripts\python probar_herramientas.py --sin-claude   # tools only, spends no quota
 ```
 
-Resultado esperado: todo `OK` salvo **Wikipedia / Wikimedia Commons**, que aparece como `FALLA`/`OMITIDA` a propósito (ver «Problemas conocidos»). Escribe `resultado_pruebas.json`.
+Expected result: everything `OK` except **Wikipedia / Wikimedia Commons**, which shows as `FALLA`/`OMITIDA` on purpose (see "Known problems"). It writes `resultado_pruebas.json` (git-ignored).
 
-## Proveedores de modelo y autenticación
+## Model providers and authentication
 
-El agente puede correr con tres proveedores. Se elige con `--proveedor`, con `PROVEEDOR_LLM` en `.env`, o automáticamente (API key si existe `ANTHROPIC_API_KEY`; si no, plan).
+The agent can run with three providers. Pick one with `--proveedor`, with `PROVEEDOR_LLM` in `.env`, or automatically (API key if `ANTHROPIC_API_KEY` exists; otherwise the plan).
 
-| Proveedor | Qué usa | Requiere | Costo |
+| Provider | What it uses | Needs | Cost |
 |---|---|---|---|
-| `plan` | Tu suscripción de Claude (sesión de Claude Code) | `claude login` | Consume el cupo del plan |
-| `api` | API de Anthropic | `ANTHROPIC_API_KEY` | USD por token; tope `PRESUPUESTO_USD` |
-| `bedrock` | Claude en Amazon Bedrock | Credenciales AWS en un perfil de la CLI, con acceso a los modelos | Se factura en la cuenta de AWS; tope `PRESUPUESTO_USD` |
+| `plan` | Your Claude subscription (a Claude Code session) | `claude login` | Consumes the plan's quota |
+| `api` | The Anthropic API | `ANTHROPIC_API_KEY` | USD per token; cap `PRESUPUESTO_USD` |
+| `bedrock` | Claude on Amazon Bedrock | AWS credentials in a CLI profile with access to the models | Billed to the AWS account; cap `PRESUPUESTO_USD` |
 
-**Bedrock:** usa `CLAUDE_CODE_USE_BEDROCK=1` por debajo (lo pone el programa). Variables: `AWS_REGION` (por defecto `us-east-1`), `BEDROCK_PROFILE` (por defecto `default`, explícito para no usar otro perfil por accidente), `BEDROCK_MODELO` y `BEDROCK_MODELO_PEQUENO` (por defecto `us.anthropic.claude-sonnet-4-6` y `us.anthropic.claude-haiku-4-5-20251001-v1:0`, los que respondieron en la cuenta probada; los de la familia 5.5 devolvieron `INVALID_PAYMENT_INSTRUMENT` hasta que AWS acepte un método de pago). Los IDs son perfiles de inferencia, no los IDs simples; se listan con `aws bedrock list-inference-profiles`. Permisos IAM mínimos: `bedrock:InvokeModel`, `bedrock:InvokeModelWithResponseStream` y `bedrock:ListInferenceProfiles`. La primera vez la cuenta debe tener método de pago válido y el acceso al modelo habilitado.
+**Bedrock:** uses `CLAUDE_CODE_USE_BEDROCK=1` underneath (the program sets it). Variables: `AWS_REGION` (default `us-east-1`), `BEDROCK_PROFILE` (default `default`, explicit so another profile is never used by accident), `BEDROCK_MODELO` and `BEDROCK_MODELO_PEQUENO` (defaults `us.anthropic.claude-sonnet-4-6` and `us.anthropic.claude-haiku-4-5-20251001-v1:0`, the ones that answered on the tested account; the 5.5 family returned `INVALID_PAYMENT_INSTRUMENT` until AWS accepts a payment method). The IDs are inference profiles, not the plain model IDs; list them with `aws bedrock list-inference-profiles`. Minimum IAM permissions: `bedrock:InvokeModel`, `bedrock:InvokeModelWithResponseStream` and `bedrock:ListInferenceProfiles`. The first time, the account needs a valid payment method and model access enabled.
 
-**Revisión con Opus (solo Bedrock):** tras la investigación de Sonnet, una segunda pasada con Opus (`BEDROCK_MODELO_REVISOR`, por defecto `us.anthropic.claude-opus-4-6-v1`; `ninguno` la desactiva) relee el borrador sin herramientas ni internet. No reescribe el dossier: devuelve solo decisiones (qué datos conservar por número, el relato nuevo y las contradicciones o huecos que añade frente al evento original). **No puede** inventar datos, URLs, citas ni imágenes: `revision.fusionar` solo selecciona entre lo que ya existe. Si la revisión falla se conserva el borrador. En `metricas.json` queda la clave `revision` y `costo_usd_referencia_total`. Con `plan` y `api` no hay revisión. Para probarla sola sobre un dossier existente: `python revision.py salida/<id> <archivo.json> --evento <id> --guardar` (escribe `dossier.revisado.json`, no pisa el original).
+**Review with Opus (Bedrock only):** after Sonnet's research, a second pass with Opus (`BEDROCK_MODELO_REVISOR`, default `us.anthropic.claude-opus-4-6-v1`; `ninguno` turns it off) re-reads the draft with no tools and no internet. It does not rewrite the dossier: it returns only decisions (which facts to keep by index, the new story text and the contradictions or gaps it adds against the original event). It **cannot** invent facts, URLs, quotes or images: `revision.fusionar` only selects among what already exists. If the review fails the draft is kept. `metricas.json` gets the keys `revision` and `costo_usd_referencia_total`. With `plan` and `api` there is no review. To test it alone on an existing dossier: `python revision.py salida/<id> <file.json> --evento <id> --guardar` (writes `dossier.revisado.json`, does not overwrite the original).
 
-**Respaldo al plan:** con `--fallback-plan` (o `FALLBACK_PLAN=1`), si Bedrock o la API fallan **antes de que el agente empiece a trabajar** (credenciales, pago, acceso al modelo, red), se reintenta con el plan de Claude y se imprime un aviso; `metricas.json` guarda `fallback_desde`. Si falla a mitad del trabajo no se reintenta, para no pagar dos veces. `--plan` fuerza el plan directamente.
+**Fallback to the plan:** with `--fallback-plan` (or `FALLBACK_PLAN=1`), if Bedrock or the API fail **before the agent starts working** (credentials, payment, model access, network), it retries with the Claude plan and prints a warning; `metricas.json` stores `fallback_desde`. If it fails halfway it does not retry, to avoid paying twice. `--plan` forces the plan directly.
 
-Probar un proveedor (gasta una fracción de centavo): `python probar_herramientas.py --sin-claude` prueba solo las herramientas; sin `--sin-claude` prueba también el modelo, y `--proveedor bedrock` elige el proveedor.
+Test a provider (costs a fraction of a cent): `python probar_herramientas.py --sin-claude` tests only the tools; without `--sin-claude` it tests the model too, and `--proveedor bedrock` chooses the provider.
 
-## Uso
-
-```
-python agente.py <archivo.json> [--evento ID] [--plan] [--forzar] [--max-turnos 30]
-```
-
-Ejemplos (Windows; en macOS/Linux usa `.venv/bin/python` y `/`):
+## Usage
 
 ```
-.venv\Scripts\python agente.py ..\..\story\data\historia_opportunity.json --evento opp018
-.venv\Scripts\python agente.py ..\..\story\data\juego_opportunity.json --evento n08
-.venv\Scripts\python agente.py mi_evento.json
+python agente.py --mision <id> --evento <event_id> [--plan] [--forzar] [--max-turnos 30]
+python agente.py <file.json> [--evento ID] [--plan] [--forzar] [--max-turnos 30]
+python procesar_lote.py --mision <id> --ids a,b,c --paralelo 3 --tope-usd <cap>
+python pipeline.py estado <id>            # phase and next step of a mission
+python costos.py --mision <id>            # cost per event and per model
 ```
 
-- **Eventos ya procesados:** si `salida/<id>/dossier.json` existe, el agente **no ejecuta nada**, no gasta cupo y termina con código de salida `2` y un mensaje. Para repetirlo hay que pasar `--forzar`: antes de escribir el resultado nuevo, la versión anterior (dossier, métricas e imágenes) se mueve a `salida/<id>/anteriores/<fecha-hora>/`. Si la corrida falla antes de terminar, la versión anterior queda intacta.
-- Si el archivo tiene varios elementos (`eventos` o `nodos`), `--evento` es obligatorio. Un JSON con un solo evento no lo necesita.
-- Ids disponibles: `opp001`…`opp081` en la línea de tiempo; los 20 de la historia están en `story/data/historia_opportunity.json`; `n01`…`n17` y sus ramas en el juego.
-- En consola muestra cada herramienta que llama el agente y, al final, el costo de referencia, los turnos y el tiempo.
-- Una corrida tarda de 1 a 3 minutos. Cada evento gasta cupo del plan (en las pruebas, entre 0,49 y 0,69 USD de referencia). Corre pocos eventos por sesión y monitorea el consumo.
+(On macOS/Linux use `.venv/bin/python` and `/`.)
 
-### Salida
+- **Events already processed:** if `salida/<id>/dossier.json` exists, the agent **runs nothing**, spends no quota and exits with code `2` and a message. To repeat it pass `--forzar`: before writing the new result, the previous version (dossier, metrics and images) is moved to `salida/<id>/anteriores/<date-time>/`. If the run fails before finishing, the previous version stays intact.
+- If the file has several elements (`eventos` or `nodos`), `--evento` is required. A JSON with a single event does not need it.
+- The console shows every tool the agent calls and, at the end, the reference cost, the turns and the time.
+- A run takes 1 to 3 minutes. Each event spends plan quota (in the tests, between 0.49 and 0.69 USD reference). Run few events per session and watch the consumption.
+
+### Output
 
 ```
-salida/<id-del-evento>/
-  dossier.json     datos completos (esquema en esquema.py)
-  dossier.md       versión legible
-  metricas.json    tokens, costo de referencia, turnos, duración y llamadas a herramientas
-  anteriores/      versiones previas, solo si se repitió con --forzar
+misiones/<mission>/dossiers/<event-id>/
+  dossier.json     full data (schema in esquema.py)
+  dossier.md       readable version
+  metricas.json    tokens, reference cost, turns, duration and tool calls
+  anteriores/      previous versions, only if repeated with --forzar
 ```
 
-Dentro de `dossier.json`:
+Inside `dossier.json`:
 
-- `datos_reales`: solo datos cuya cita se encontró de verdad en el texto leído.
-- `datos_no_verificados`: datos cuya cita **no** aparece en el texto. No los uses sin revisar.
-- `contradicciones` y `huecos`: lo que el agente no pudo confirmar. Léelos siempre: pueden revelar errores en el JSON de origen.
+- `datos_reales`: only facts whose quote was really found in the text that was read.
+- `datos_no_verificados`: facts whose quote does **not** appear in the text. Do not use them unreviewed.
+- `contradicciones` and `huecos`: what the agent could not confirm. Always read them: they can reveal errors in the source JSON.
 
-## Cómo funciona
+## How it works
 
-1. `agente.py` carga el evento y arranca un agente de Claude (SDK) con un `system_prompt` de reglas estrictas.
-2. El agente solo tiene las herramientas de `herramientas.py` (no tiene archivos ni terminal):
+1. `agente.py` loads the event and starts a Claude agent (SDK) with a strict-rules `system_prompt`.
+2. The agent only has the tools of `herramientas.py` (no files, no terminal):
 
-   | Herramienta | Qué hace | Requiere |
+   | Tool | What it does | Needs |
    |---|---|---|
-   | `buscar_web` | búsqueda DuckDuckGo (`ddgs`) | nada |
-   | `leer_pagina` | texto de una URL (`httpx` + `trafilatura`; `Crawl4AI` si la página usa JavaScript) | Chromium de Playwright |
-   | `buscar_papers_ntrs` | informes técnicos NASA (NTRS) | nada |
+   | `buscar_web` | DuckDuckGo search (`ddgs`) | nothing |
+   | `leer_pagina` | text of a URL (`httpx` + `trafilatura`; `Crawl4AI` if the page uses JavaScript) | Playwright's Chromium |
+   | `buscar_papers_ntrs` | NASA technical reports (NTRS) | nothing |
 
-3. Todo lo que el agente lee se guarda en `cache/` (respuestas y `corpus.json`). Si repites una corrida, las herramientas responden desde caché.
-4. Al terminar, el programa comprueba cada cita contra `cache/corpus.json` (`verificar()` en `agente.py`), descarga las imágenes permitidas y escribe los archivos.
+3. Everything the agent reads is saved in `cache/` (responses and `corpus.json`). If you repeat a run, the tools answer from the cache.
+4. When done, the program checks every quote against `cache/corpus.json` (`verificar()` in `agente.py`) and writes the files.
 
-## Prompts (para mejorarlos)
+## Prompts (to improve them)
 
-Viven en `prompts/` como archivos de texto, separados del código:
+They live in `prompts/` as text files, separate from the code:
 
-| Archivo | Para qué |
+| File | Purpose |
 |---|---|
-| `prompts/investigador.md` | `system_prompt`: reglas del agente. |
-| `prompts/usuario.md` | Mensaje inicial; `{evento_json}` se reemplaza por el evento. |
-| `prompts/CHANGELOG.md` | Qué cambió en cada versión y por qué. |
+| `prompts/investigador.md` | `system_prompt`: the agent's rules (current version). |
+| `prompts/investigador_v3.md` | Frozen copy of v3, to compare against or roll back (`PROMPT_INVESTIGADOR=investigador_v3`; the tests use it). |
+| `prompts/revisor.md` | The Opus reviewer's prompt. |
+| `prompts/usuario.md` | First message; `{evento_json}` is replaced by the event. |
+| `prompts/CHANGELOG.md` | What changed in every version and why. |
 
-- Cada archivo empieza con una cabecera `---` con `version: N`. `prompts.py` la lee y `metricas.json` guarda la versión usada (clave `prompts`).
-- **Para cambiar un prompt:** edita el `.md`, sube `version`, anota el cambio en `CHANGELOG.md`, corre `python -m unittest discover -s tests` (gratis) y compara 2 o 3 eventos con `--forzar`.
-- **Contrato que no debes romper:** el prompt nombra campos del esquema (`cita`, `fuente_url`, `datos_reales`…) y herramientas (`leer_pagina`, `buscar_papers_ntrs`…). Si renombras algo en `esquema.py` o `herramientas.py`, actualiza el prompt; `tests/test_prompts.py` falla si ya no coinciden.
+- Each file starts with a `---` header with `version: N`. `prompts.py` reads it and `metricas.json` stores the version used (key `prompts`).
+- **To change a prompt:** edit the `.md`, bump `version`, note the change in `CHANGELOG.md`, run `python -m unittest discover -s tests` (free) and compare 2 or 3 events with `--forzar`.
+- **Contract you must not break:** the prompt names schema fields (`cita`, `fuente_url`, `datos_reales`…) and tools (`leer_pagina`, `buscar_papers_ntrs`…). If you rename something in `esquema.py` or `herramientas.py`, update the prompt; `tests/test_prompts.py` fails if they no longer match.
 
-## Tests (gratis, sin red ni cupo)
+## Tests (free, no network or quota)
 
 ```
 .venv\Scripts\python -m unittest discover -s tests
 ```
 
-## Mapa de archivos
+## File map
 
-| Archivo | Contenido |
+| File | Contents |
 |---|---|
-| `agente.py` | Entrada de línea de comandos, prompt, verificación de citas, descarga de imágenes y salida. |
-| `revision.py` | Segunda pasada con Opus (Bedrock) y reglas que limitan lo que puede cambiar. |
-| `proveedores.py` | Selección y configuración de plan / api / bedrock. |
-| `herramientas.py` | Herramientas MCP en proceso, caché y filtro de URLs. |
-| `prompts.py`, `prompts/` | Carga y versiones de los prompts. |
-| `tests/` | Pruebas sin costo (prompts, esquema y herramientas coherentes). |
-| `esquema.py` | Modelos pydantic del dossier (el modelo debe devolver exactamente este esquema). |
-| `probar_herramientas.py` | Prueba de humo de todas las herramientas y de Claude. |
-| `requirements.txt`, `.env.example`, `.gitignore` | Dependencias, plantilla de entorno y exclusiones. |
-| `../../misiones/<id>/dossiers/` | Dossiers generados por misión (se versionan). |
-| `cache/`, `.venv/`, `.env` | Locales; no se versionan. |
+| `agente.py` | Command-line entry, prompt, quote verification and output. |
+| `pipeline.py` | The mission pipeline commands (`nueva`, `estado`, `prefiltro`, `seleccion`, `conciliar`, `historia`, `validar-base`). |
+| `procesar_lote.py` | Parallel batch runner with a spending cap and a stop after 3 failures in a row. |
+| `costos.py` | Cost report per event and per model. |
+| `mision.py` | Mission sheets (`misiones/<id>/ficha.json`) and where each mission's outputs live. |
+| `revision.py` | Second pass with Opus (Bedrock) and the rules that limit what it can change. |
+| `proveedores.py` | Selection and configuration of plan / api / bedrock. |
+| `herramientas.py` | In-process MCP tools, cache and URL filter. |
+| `prompts.py`, `prompts/` | Loading and versions of the prompts. |
+| `esquema.py` | pydantic models of the dossier (the model must return exactly this schema). |
+| `probar_herramientas.py` | Smoke test of all the tools and of Claude. |
+| `tests/` | Free tests (prompts, schema and tools stay consistent). |
+| `requirements.txt`, `.env.example`, `.gitignore` | Dependencies, environment template and exclusions. |
+| `cache/`, `.venv/`, `.env` | Local; not versioned. |
 
-## Imágenes
+## Images
 
-El agente **no busca ni descarga imágenes** (se quitó en el prompt v2). Los dossiers anteriores a ese cambio (`opp001`, `opp005`, `opp008`, `opp015`, `opp018`, `opp021`) conservan su campo `imagenes` y su carpeta `imagenes/` como datos históricos; el esquema nuevo los ignora al leerlos.
+The agent **does not search or download images** (removed in prompt v2). The dossiers made before that change (`opp001`, `opp005`, `opp008`, `opp015`, `opp018`, `opp021`) keep their `imagenes` field and `imagenes/` folder as historical data; the new schema ignores them when reading.
 
-## Garantías y seguridad
+## Guarantees and safety
 
-- Cada dato lleva URL y cita literal; las citas se comprueban por código.
-- `leer_pagina` rechaza URLs que no sean http/https hacia hosts públicos.
-- El agente corre aislado: no carga `CLAUDE.md` ni hooks del usuario (`setting_sources=[]`) y no tiene herramientas del sistema (`tools=[]`).
-- No inventa: lo que no puede confirmar va a `huecos`. No genera nada hipotético.
+- Every fact carries a URL and a literal quote; the quotes are checked by code.
+- `leer_pagina` rejects URLs that are not http/https to public hosts.
+- The agent runs isolated: it does not load the user's `CLAUDE.md` or hooks (`setting_sources=[]`) and has no system tools (`tools=[]`).
+- It does not invent: what it cannot confirm goes into `huecos`. It generates nothing hypothetical.
 
-## Problemas conocidos
+## Known problems
 
-- **Wikipedia/Wikimedia devuelve 403** con cualquier User-Agent genérico (probado). Por eso no está integrada. Se habilita poniendo un contacto real del usuario en `WIKIMEDIA_CONTACT`; no pongas datos personales de otra persona.
-- **No lee PDFs:** `leer_pagina` devuelve texto vacío para un PDF. Muchas fuentes oficiales de NASA lo son; es la mejora pendiente más útil.
-- **Páginas bloqueadas** (p. ej. ScienceDirect con Cloudflare) no se pueden leer; el agente lo anota en `huecos`.
-- **`ddgs` puede limitar la velocidad** si se lanzan muchas búsquedas seguidas. Espera unos minutos o corre menos eventos.
-- **La salida varía entre corridas:** el mismo evento puede dar 10 o 12 datos y costar ±25 %. Por eso conviene conservar la versión anterior (lo hace `--forzar`) y comparar antes de reemplazar.
-- **Windows:** si borrar o mover `.venv` o carpetas da «Device or resource busy», cierra los archivos abiertos en el IDE. Un `.venv` no se puede mover: se recrea con los comandos de instalación.
-- **Banner de Crawl4AI:** se silencia con la variable `CRAWL4AI_NO_CLOUD_NOTICE=1` (el agente ya la define).
+- **Wikipedia/Wikimedia returns 403** with any generic User-Agent (tested). That is why it is not integrated. Enable it by putting a real contact of the user in `WIKIMEDIA_CONTACT`; do not put another person's personal data there.
+- **It does not read PDFs:** `leer_pagina` returns empty text for a PDF. Many official NASA sources are PDFs; it is the most useful pending improvement.
+- **Blocked pages** (e.g. ScienceDirect behind Cloudflare) cannot be read; the agent notes it in `huecos`.
+- **`ddgs` may rate-limit** if many searches are launched in a row. Wait a few minutes or run fewer events.
+- **Output varies between runs:** the same event can give 10 or 12 facts and cost ±25 %. That is why keeping the previous version (what `--forzar` does) and comparing before replacing is worth it.
+- **Windows:** if deleting or moving `.venv` or folders gives "Device or resource busy", close the files open in the IDE. A `.venv` cannot be moved: recreate it with the install commands.
+- **Crawl4AI banner:** silenced with the variable `CRAWL4AI_NO_CLOUD_NOTICE=1` (the agent already sets it).
 
-## Para un agente que continúa este trabajo
+## For an agent that continues this work
 
-- Instala y verifica con `probar_herramientas.py --sin-claude` antes de correr el agente.
-- No subas `.env`, `cache/` ni `.venv/`. No imprimas claves.
-- Pide confirmación al usuario antes de correr muchos eventos (consumen su cupo).
-- Cuando un dossier contradiga el JSON de origen (como pasó con `opp001`), no cambies el JSON en silencio: avisa al usuario y propón la corrección.
-- Las convenciones del repo están en el `CLAUDE.md` de la raíz (documentación en español, interfaz del juego en inglés).
+- Install and verify with `probar_herramientas.py --sin-claude` before running the agent.
+- Do not commit `.env`, `cache/` or `.venv/`. Do not print keys.
+- Ask the user for confirmation before running many events (they consume their quota).
+- When a dossier contradicts the source JSON (as happened with `opp001`), do not silently change the JSON: warn the user and propose the correction.
+- The repo conventions are in the root `CLAUDE.md`.

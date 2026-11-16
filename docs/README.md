@@ -1,44 +1,53 @@
-# Documentación
+# Documentation
 
-Índice de la carpeta `docs/`. Si retomas el proyecto, léelos en este orden:
+Index of the `docs/` folder. To resume the project, read them in this order:
 
-0. **[story.md](story.md)** — **las historias implementadas** (Opportunity hito 36, Ingenuity hito 40, Surveyor 3 hito 42, Spirit hito 45, InSight y Beagle 2 hito 52 —vehículos inmóviles—): 20 eventos reales cada una (cómic → 3D → cómic), ilustraciones de IA, narraciones cortas, datos en `public/models/<misión>/`, cómo regenerarlas, la receta para añadir otra misión y qué falta.
-0. **[game-design.md](game-design.md)** — **enfoque vigente (hito 29): el juego sobre Opportunity**, con modo Historia y modo Decisiones, Parte 1 (2D) y Parte 2 (3D), reglas, impacto en el código y preguntas abiertas. *Léelo antes que nada: define hacia dónde va el proyecto.* El resto de la documentación describe lo que **ya está construido**.
-1. **[history.md](history.md)** — qué se hizo, en qué orden y por qué (incluye las decisiones de diseño y las preferencias del
-   usuario). *Léelo primero para recuperar el contexto.*
-2. **[architecture.md](architecture.md)** — mapa del código: **rutas y vistas** (globo y escena), archivos, flujo de datos, bucle de render, física del rover,
-   terreno, partículas, minimapa.
-3. **[design.md](design.md)** — **el diseño de la demo: tema «Ink & Paper» (cómic, referencia Ponpon Mania) + flat design, con paleta por mundo (Marte / Luna)** (tokens, tipografía, componentes, movimiento, 3D), cómo aplicarlo en código y qué falta.
-4. **[themes-and-missions.md](themes-and-missions.md)** — receta para añadir un estilo visual (incluye los tokens del globo), un vehículo+terreno (y su marcador en el globo) o
-   checkpoints (storytelling) nuevos.
-5. **[assets.md](assets.md)** — los terrenos y las carpetas de cada historia de `public/models`: tamaños, ejes, créditos (el globo no usa assets). Los GLB y fotos de referencia se eliminaron (hito 43): ver [model-sources.md](model-sources.md).
-6. **[gotchas.md](gotchas.md)** — trampas y problemas ya resueltos (rutas, globo, `cacheComponents`); cómo probar en el navegador.
-7. **[narration.md](narration.md)** — narración pregrabada de las historias (ElevenLabs): cómo grabar/regrabar (`npm run story-audio`), voz, modelo, subtítulos, costes.
-8. **[performance.md](performance.md)** — qué cuesta en GPU/memoria (medido), el **perfil `light`/`full`** de `lib/perf.ts` (cómo volver atrás en una línea) y cómo volver a medir.
-9. **[guide.md](guide.md)** — guía de voz «mission control»: principios, qué frase suena en cada momento y para cada vehículo, catálogo
-   de las 30 frases, cómo regrabar.
-10. **[ambient.md](ambient.md)** — música de fondo (ElevenLabs Music, pregrabada): una cama por lugar, bucle con crossfade, baja de volumen mientras habla la narración/guía, tecla `S`.
-11. **[audit.md](audit.md)** — **auditoría de la información (hito 54)**: qué se verificó (números, audio, ilustraciones, cronología, modelos 3D, posiciones del globo), qué se corrigió y la lista de **TODO** con sus valores por defecto. *Léelo antes de tocar datos de un vehículo.*
-11b. **[roadmap.md](roadmap.md)** — **«Siguiente»** (qué hacer al retomar), pendientes e ideas (incluye **⚠️ escala real de los vehículos**, aún sin resolver).
-12. **[data-request.md](data-request.md)** — qué información hay que extraer por vehículo (ficha, 4–6 paradas con fecha/hora/sol/posición, imágenes con crédito, fuentes) para la demo con Opportunity, Spirit, Ingenuity, InSight y Beagle 2; pensado para pasárselo a quien investiga.
+1. **[history.md](history.md)** — what was built, in what order and why (it includes the design decisions and the owner's preferences). *Read "Current state" first to recover the context.*
+2. **[story.md](story.md)** — **the implemented stories** (Opportunity, Spirit, Ingenuity, Surveyor 3, InSight and Beagle 2): 20 real events each (comic → 3D → comic), AI illustrations, short narrations, data in `public/models/<mission>/`, how to regenerate them, the recipe to add another mission and what is missing.
+3. **[game-design.md](game-design.md)** — the game's definition: the Story mode (built) and the **Decisions mode** (not built), Part 1 (2D) and Part 2 (3D), rules, impact on the code and open questions.
+4. **[architecture.md](architecture.md)** — the code map: **routes and views**, files, data flow, the render loop, vehicle physics, terrain, particles, minimap.
+5. **[design.md](design.md)** — the design of the demo: the "Ink & Paper" theme (comic, reference Ponpon Mania) + flat design, with a palette per world (Mars / Moon / home): tokens, typography, components, motion, 3D, home, responsive and loading.
+6. **[themes-and-missions.md](themes-and-missions.md)** — the recipe to add a style, a vehicle + terrain (and its marker on the globe) or checkpoints.
+7. **[assets.md](assets.md)** — the terrains and the story folders of `public/`: sizes, axes, credits, and the table of procedural vehicles. The GLBs and reference photos were removed: see [model-sources.md](model-sources.md).
+8. **[gotchas.md](gotchas.md)** — traps and problems already solved (routes, globe, `cacheComponents`, dev-server cache); how to test in the browser.
+9. **[narration.md](narration.md)** — the pre-recorded narration (ElevenLabs): how to record/re-record (`npm run story-audio`), voice, model, subtitles, costs.
+10. **[performance.md](performance.md)** — what costs GPU/memory (measured), the **`light`/`full` profile** of `lib/perf.ts` (how to roll back in one line) and how to measure again.
+11. **[guide.md](guide.md)** — the "mission control" voice guide: principles, which phrase plays when, the catalogue of 30 phrases, how to re-record.
+12. **[ambient.md](ambient.md)** — the background music (ElevenLabs Music, pre-recorded): a bed per place, a loop with crossfade, it lowers while the narration/guide speaks, the `S` key.
+13. **[audit.md](audit.md)** — **the audit of the information (milestone 54)**: what was verified (numbers, audio, illustrations, chronology, 3D models, globe positions), what was fixed and the list of **TODOs** with their default values. *Read it before touching a vehicle's data.*
+14. **[roadmap.md](roadmap.md)** — "Next" (what to do when resuming), pending items and ideas (including ⚠️ the unresolved **real scale of the vehicles**).
+15. **[research-pipeline.md](research-pipeline.md)** — the research workflow behind the stories: from a mission to verified dossiers (phases, rules, costs, lessons), with the agent in `agents/opportunity-research/` and the `mars-*` skills.
+16. **[model-sources.md](model-sources.md)** — historical: where the reference 3D models and photos came from and their licences.
 
-Otros documentos importantes fuera de `docs/`:
+Other important documents outside `docs/`:
 
-- [`../README.md`](../README.md) — visión general, cómo arrancar, controles.
-- [`../CLAUDE.md`](../CLAUDE.md) — instrucciones para Claude Code en este repo (convenciones).
-- [`../AGENTS.md`](../AGENTS.md) — aviso generado por Next sobre cambios incompatibles de esta versión.
+- [`../README.md`](../README.md) — overview, how to run, controls.
+- [`../CLAUDE.md`](../CLAUDE.md) — instructions for Claude Code in this repo (conventions).
+- [`../PRODUCT.md`](../PRODUCT.md) — the product brief (purpose, users, principles, brand).
+- [`../AGENTS.md`](../AGENTS.md) — the notice generated by Next about breaking changes in this version.
+- [`../story/README.md`](../story/README.md), [`../misiones/README.md`](../misiones/README.md), [`../agents/opportunity-research/README.md`](../agents/opportunity-research/README.md) and [`../timelines_v0/kit_herramientas/GUIDE.md`](../timelines_v0/kit_herramientas/GUIDE.md) — the research folders.
 
-## Mapa rápido del repo
+## Quick map of the repo
 
 ```
 src/
-  app/            layout.tsx (fuentes), page.tsx (home), [body]/page.tsx (globo), [body]/[vehicle]/page.tsx (escena del rover), globals.css
-  components/     Home + HomeLoader + HomeScene + Sparkles + Logo (el home, hito 55: cartas + Opportunity en 3D), Explore + Globe + GlobeLabels + VehicleCard + VehicleView (globo y tarjeta del vehículo abandonado; ExploreLoader/SceneLoader cargan cada vista), Journey + Comic (la historia: cómic → 3D → cómic), Scene (Canvas + overlays), Rover (sigue la ruta), Dust, Tracks, Checkpoints (balizas), CheckpointCard, Timeline (línea de tiempo), Captions, Guide (guía de voz), Minimap, Hud (TopBar, Hints, TouchControls), Credits
-  lib/            themes (BASE + paleta por mundo, incl. el mundo `home`) + use-theme (useTheme) + viewport (useViewport: compact/phone/short, hito 56), home (datos y composiciones del home), perf (perfil de rendimiento light/full), ui (estilos DOM compartidos), vehicles + vehicles/ (vehículos procedurales de 3 tonos: kit de primitivas y un archivo por vehículo), bodies (mundos + vehículos abandonados), game (estado), terrain (STL → malla + mapa de alturas), route (ruta del vehículo), missions, story (historias), checkpoints (tipo), narration (voz del checkpoint), guide + guide-lines (guía de voz), motion, ambient
-public/models/    STL (terrenos) + una carpeta por historia (opportunity/, spirit/, ingenuity/, surveyor3/, insight/, beagle2/: story.json, images/, audio/); los GLB de referencia se eliminaron (hito 43, ver model-sources.md)
-public/guide/     mp3 pregrabados de la guía de voz genérica (30 frases) + manifest.json
-public/story/     visores HTML del equipo (historia y juego de Opportunity)
-public/ambient/   mp3 pregrabados de la música de fondo (moon, mars, timeline) + manifest.json
-scripts/          build-story.mjs · plan-story-route.mjs · generate-story-images.mjs · generate-story-audio.mjs · generate-guide.mjs · generate-ambient.mjs · lib/tts.mjs (npm run story / story-route / story-images / story-audio / guide / ambient)
-docs/             esta documentación
+  app/            layout.tsx (font, tab icons), page.tsx (home), [body]/page.tsx (globe), [body]/[vehicle]/page.tsx (the story), globals.css
+  components/     Home + HomeLoader + HomeScene + Sparkles + Logo (the cover), Explore + Globe + GlobeLabels + VehicleCard + VehicleView (the globe and the vehicle card; ExploreLoader/SceneLoader load each view),
+                  Journey + Comic (the story: comic → 3D → comic), Scene (Canvas + overlays), Rover (follows the route), Dust, Tracks, Checkpoints (beacons), CheckpointCard, Timeline,
+                  Captions, Guide, Minimap, Hud (TopBar, Hints, TouchControls), Credits, Loading, Pop, Reveal, FadeImg, Icon, Ambient, WorldVars, FrameGovernor
+  lib/            themes (BASE + palette per world, incl. the `home` world) + use-theme, viewport (compact/phone/short), home (the cover's data and compositions), perf (light/full profile),
+                  ui (shared DOM styles), vehicles + vehicles/ (procedural 3-tone vehicles: the kit and one file per vehicle), bodies (worlds + abandoned vehicles), game (state),
+                  terrain (STL → mesh + height map), route, missions, story (the stories), checkpoints (type), narration, transcript, guide + guide-lines, motion, ambient, team
+public/models/    the 3 STL terrains + a folder per story (opportunity/, spirit/, ingenuity/, surveyor3/, insight/, beagle2/: story.json, images/, audio/)
+public/guide/     pre-recorded mp3s of the generic voice guide (30 phrases) + manifest.json
+public/ambient/   pre-recorded mp3s of the background music (moon, mars, timeline) + manifest.json
+public/team/      the authors' portraits
+public/story/     standalone HTML viewers of the research team's Opportunity prototypes
+scripts/          build-story · plan-story-route · generate-story-images · generate-story-audio · generate-guide · generate-ambient · audit-story · lib/ (npm run story / story-route / story-images / story-audio / guide / ambient / story-audit)
+docs/             this documentation
+misiones/         research dossiers per mission (the source of the facts)
+timelines_v0/     base timelines per mission + the research toolkit
+agents/           the research agent (Python)
+story/            Opportunity decision-game and story-viewer prototypes
+.claude/skills/   the mars-* skills of the research pipeline
 ```

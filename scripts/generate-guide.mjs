@@ -23,21 +23,21 @@ const argv = process.argv.slice(2);
 
 if (argv.includes("--docs")) {
   const KIND_TITLES = [
-    ["dist-far", "Distancia: 25 % del camino"],
-    ["dist-half", "Distancia: 50 % del camino"],
-    ["dist-close", "Distancia: 75 % del camino"],
-    ["dist-near", "Distancia: muy cerca (< 3 radios)"],
-    ["prog-1", "Progreso: queda uno"],
-    ["prog-many", "Progreso: quedan varios"],
-    ["done", "Expedición completada"],
-    ["idle", "Parado entre checkpoints"],
-    ["ready", "Parado dentro de un checkpoint, tras la narración"],
+    ["dist-far", "Distance: 25 % of the way"],
+    ["dist-half", "Distance: 50 % of the way"],
+    ["dist-close", "Distance: 75 % of the way"],
+    ["dist-near", "Distance: very close (< 3 radii)"],
+    ["prog-1", "Progress: one left"],
+    ["prog-many", "Progress: several left"],
+    ["done", "Expedition complete"],
+    ["idle", "Stopped between checkpoints"],
+    ["ready", "Stopped inside a checkpoint, after the narration"],
   ];
-  const NAMES = { opportunity: "Opportunity (Marte)" };
-  const tag = (l) => NAMES[l.vehicle] ?? "todos";
+  const NAMES = { opportunity: "Opportunity (Mars)" };
+  const tag = (l) => NAMES[l.vehicle] ?? "all";
   const count = (kind, v) => lines.filter((l) => l.kind === kind && (v === "generic" ? !l.vehicle : l.vehicle === v)).length;
-  let md = `Total: **${lines.length} frases** (${lines.filter((l) => !l.vehicle).length} genéricas, ${lines.filter((l) => l.vehicle === "opportunity").length} solo Opportunity).\n`;
-  md += "\n#### Resumen: frases disponibles por categoría\n\n| Categoría | Genéricas | Solo Opportunity | Pool Opportunity |\n| --- | --: | --: | --: |\n";
+  let md = `Total: **${lines.length} phrases** (${lines.filter((l) => !l.vehicle).length} generic, ${lines.filter((l) => l.vehicle === "opportunity").length} Opportunity only).\n`;
+  md += "\n#### Summary: phrases available per category\n\n| Category | Generic | Opportunity only | Opportunity pool |\n| --- | --: | --: | --: |\n";
   for (const [kind] of KIND_TITLES) {
     const g = count(kind, "generic");
     const o = count(kind, "opportunity");
@@ -46,7 +46,7 @@ if (argv.includes("--docs")) {
   for (const [kind, title] of KIND_TITLES) {
     const group = lines.filter((l) => l.kind === kind);
     if (!group.length) continue;
-    md += `\n#### ${title} — \`${kind}\` (${group.length})\n\n| id | Frase | Vehículo |\n| --- | --- | --- |\n`;
+    md += `\n#### ${title} — \`${kind}\` (${group.length})\n\n| id | Phrase | Vehicle |\n| --- | --- | --- |\n`;
     for (const l of group) md += `| \`${l.id}\` | ${l.text} | ${tag(l)} |\n`;
   }
   const file = path.join(ROOT, "docs/guide.md");

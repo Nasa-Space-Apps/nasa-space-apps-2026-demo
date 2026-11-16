@@ -1,111 +1,108 @@
-# Rover PoC — historias de Opportunity, Spirit, Ingenuity, Surveyor 3, InSight y Beagle 2
+# Left Behind — the stories of the machines NASA left on Mars and the Moon
 
-> **Enfoque:** la demo es un **juego** con modo **Historia** (ya implementado para **Opportunity**, **Spirit**, **Ingenuity**, **Surveyor 3**, **InSight** y **Beagle 2**: cómic 2D → recorrido 3D → cómic final, con 20 eventos reales cada una) y modo **Decisiones** (aún sin implementar). Ver [`docs/game-design.md`](docs/game-design.md) y [`docs/story.md`](docs/story.md). Los vehículos que aún no tienen historia (Perseverance, SEV) salen en el globo con «coming soon» y su 3D no se abre.
+An interactive, story-driven web experience for **NASA Space Apps Challenge 2026** ("Abandoned but not Forgotten"). Spin a globe of Mars and the Moon, pick an abandoned vehicle and **travel to the past**: each story runs from the first idea to the last signal as a narrated comic, a 3D drive across the terrain, and a closing comic. Every stop is a real, sourced event. Built for secondary-school students.
 
-Prueba de concepto 3D en el navegador: un rover recorre una **ruta definida** sobre un terreno real (modelos STL) en
-«expediciones» (Marte y Luna), con polvo, huellas, cámara de seguimiento, minimapa y **storytelling**: paradas sobre el
-terreno, una por evento real, que muestran una tarjeta con ilustración, datos y fuentes y **narran su historia con voz**.
-No hay conducción libre: el jugador avanza con `Espacio` o salta de checkpoint en checkpoint desde una línea de tiempo. Inspirada visualmente en
-[bruno-simon.com](https://bruno-simon.com/).
+> **Focus:** a game of stories with two planned modes — **Story** (implemented for **Opportunity, Spirit, Ingenuity, InSight, Beagle 2 and Surveyor 3**: comic 2D → 3D route → comic, 20 real events each) and **Decisions** (designed, not built). See [`docs/story.md`](docs/story.md) and [`docs/game-design.md`](docs/game-design.md). Vehicles without a story yet (Perseverance, SEV) appear on the globe as "coming soon" and their 3D does not open.
 
-**Stack:** Next.js 16 (App Router) · React 19 · three.js + `@react-three/fiber` + `@react-three/drei` · Tailwind 4 · TypeScript.
+**Stack:** Next.js 16 (App Router) · React 19 · three.js + `@react-three/fiber` + `@react-three/drei` · Tailwind 4 · TypeScript. The interface and audio are in **English**.
 
-> La interfaz y los audios están en **inglés**; esta documentación, en español.
+## What it includes
 
-## Qué incluye la demo
+- **Home (`/`):** one animated composition (periwinkle palette): **Opportunity in 3D, big and still**, and four floating cards with illustrations of the stories (decoration: they open nothing). A spinning badge and a "start" button open the globe; a click anywhere throws sparkles; layers move a little with the pointer.
+- **Globe (`/moon`, `/mars`):** a wireframe globe (a fine grid, only the front, black squares that orbit with it, small vehicles sunk into the ground) that **spins by itself** and can be turned on two axes (its own and the pitch, never rolling; with inertia; while you steer it the visible face always shows some vehicle, and on release the lean returns by itself) and zoomed with the wheel (only the globe and the vehicles scale). A Moon/Mars text switch on the left, a music icon and a Credits button on the right, and a vehicle's marker → its card with the vehicle illustrated in 3 tones → **"Travel to the past"** opens `/<world>/<vehicle>`; without a story the button says **"Coming soon"**. `Esc` closes the card.
+- **Six stories:** Opportunity, Spirit and InSight (Mars, Meridiani terrain), Ingenuity and Beagle 2 (Mars, Gale terrain) and Surveyor 3 (Moon). Each has an opening comic, a 3D route and a closing comic with a closing card.
+- **One theme, "Ink & Paper"** (comic; reference [ponpon-mania.com/chapter/2](https://ponpon-mania.com/chapter/2)) with a **palette per world**: a field with grain — **terracotta `#E2603A` on Mars, steel blue `#4B7DB8` on the Moon** —, cream paper `#FEECE3` with a 3 px ink stroke `#171717`, one accent per world (**butter `#FFC247` on Mars, mint `#6BE3C3` on the Moon**), pill buttons, Libre Franklin, 3-tone vehicles and smooth motion. See [`docs/design.md`](docs/design.md).
+- **Minimap** with relief (contour lines), the route (done and pending), heading, position and speed.
+- **Timeline** (a bar at the bottom): a marker per checkpoint and the vehicle's progress; you can only travel to checkpoints (click a marker).
+- **11–14 stops per story** (one per real event): a 3D beacon (pole + gem + ring on the terrain), a numbered diamond on the minimap and an **information card** (bottom left): the AI illustration fills the card's width and below it the title, progress, "listen", summary, 3 facts and up to 3 links to the sources.
+- **Narration** (ElevenLabs, voice Bill): plays on each comic page and each stop and stops when you leave. The audio is **pre-recorded** in the repo; the app calls no API at run time.
+- **"Mission control" voice guide** (voice Daniel): 30 short pre-recorded phrases that orient the player, with a subtitle; sparse, contextual and never over the narration.
+- **Background music** (a bed per place) that lowers while someone speaks.
+- **On mobile:** every view is adapted to small screens, sideways too: the home has its vertical composition; on the globe you **pinch** to zoom and the card is a bottom sheet; in 3D there is a **"hold to drive"** (or "next moment") button and toggles for narration/guide/music instead of keys, with no minimap. See [`docs/design.md`](docs/design.md#responsive).
+- **Credits:** a "Credits" card on the globe and the home and a "created by" line on every closing card (Jackson Merma, AI & Software Engineer; Paul Luque, Full Stack Developer).
 
-- **En el móvil (hito 56):** todo está adaptado a pantallas pequeñas, también apaisadas: el home tiene su composición vertical; en el globo se **pellizca** para hacer zoom y la tarjeta es una hoja inferior; en el 3D hay un botón **«hold to drive»** (o «next moment») y toggles de narración/guía/música en lugar de teclas, sin minimapa. Ver [`docs/design.md`](docs/design.md) («Responsive»).
-- **Home (`/`, hito 55):** una sola composición animada (paleta de la referencia: azul lila): **Opportunity en 3D, grande y quieto**, y **cuatro cartas** con ilustraciones de las historias, dos a cada lado, giradas y flotando (decoración: no abren nada). Sello giratorio y botón «start» abren el globo; clic en cualquier sitio suelta chispas; las capas se mueven un poco con el puntero. Detalle: [`docs/design.md`](docs/design.md) («Home»).
-- **Vista del globo (`/moon`, `/mars`):** un globo alámbrico (rejilla fina, solo lo de delante, cuadrados que orbitan con él, vehículos en miniatura hundidos en el suelo)
-  que **gira solo** y se puede **girar en dos ejes** (sobre su propio eje y cabeceando; nunca rueda de lado) (arrastrar le da inercia; al manipularlo la cara visible siempre muestra algún vehículo: si agarras una cara vacía, gira rápido hasta uno; al soltar, la inclinación vuelve sola a la inicial, conservando hacia dónde lo giraste) y **acercar con la rueda** (el zoom solo escala el globo y los vehículos, no los botones), con un selector Luna/Marte a la izquierda, un botón de música (icono) a la derecha y el marcador del vehículo abandonado → su tarjeta con el vehículo ilustrado en 3 tonos →
-  **«Travel to the past»** abre `/<mundo>/<vehículo>` (p. ej. `/moon/surveyor-3`), la historia; si el vehículo aún no tiene historia, el botón es **«Coming soon»**. `Esc` cierra la tarjeta; `← Globe` vuelve. Cada ruta carga solo sus recursos.
-- **6 historias** con vehículo propio: Opportunity, Spirit e InSight (Marte, terreno de Meridiani), Ingenuity y Beagle 2 (Marte, terreno de Gale) y Surveyor 3 (Luna). Cada una: cómic de apertura, recorrido 3D y cómic final con tarjeta de cierre.
-- **Un solo tema, «Ink & Paper»** (cómic; referencia: ponpon-mania.com/chapter/2), con **una paleta por mundo** (hito 46): campo con grano —**terracota `#E2603A` en Marte, azul acero `#4B7DB8` en la Luna**—, papel crema `#FEECE3` con trazo de tinta `#171717` de 3 px, un acento por mundo (**mantequilla `#FFC247` en Marte, menta `#6BE3C3` en la Luna**), botones en píldora, Libre Franklin (800 títulos, 700 minúscula en etiquetas), vehículos de 3 tonos y movimiento suave en todo. Ver [`docs/design.md`](docs/design.md).
-- **Minimapa** con relieve (curvas de nivel), la ruta (recorrida y pendiente), rumbo, posición y velocidad.
-- **Línea de tiempo** (barra horizontal abajo): un marcador por checkpoint y el progreso del vehículo; solo se puede viajar a los
-  checkpoints (clic en el marcador), no a un punto cualquiera de la ruta.
-- **11–13 paradas por historia** (una por evento real): baliza 3D (poste + gema + anillo sobre el terreno), rombo numerado en el minimapa y
-  **tarjeta informativa** (abajo a la izquierda): la ilustración de IA ocupa **todo el ancho** de la tarjeta y debajo van el título, el progreso, «listen», el resumen, 3 datos y hasta 3 enlaces a las fuentes.
-- **Narración con voz** (ElevenLabs, voz Bill): suena sola al llegar a cada página del cómic y a cada parada y se corta al salir. Los audios están
-  **pregrabados** en el repo; la app no llama a ninguna API en ejecución.
-- **Guía de voz «mission control»** (voz Daniel): 30 frases cortas pregrabadas («Almost there», «Hold Space to drive on»…) que orientan al jugador mientras avanza o está parado, con subtítulo. Poca, contextual y sin pisar a la narración.
-
-## Arrancar
+## Run
 
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run build      # build de producción
+npm run build      # production build
 npm run lint
-npm run story-audio -- <misión>  # (opcional) graba/regraba la narración de una historia (opportunity, ingenuity, surveyor3, spirit); necesita ELEVENLABS_API_KEY en .env.local
-npm run guide      # (opcional) graba/regraba la guía de voz; `-- --docs` actualiza el catálogo de frases en docs/guide.md
+npx tsc --noEmit   # types
+npm run story -- <mission>        # regenerates public/models/<mission>/story.json from scripts/data/<mission>-story.mjs
+npm run story-audio -- <mission>  # (optional) records/re-records a story's narration; needs ELEVENLABS_API_KEY in .env.local
+npm run story-audit -- <mission>  # checks the numbers and months of a story against its research dossiers
+npm run guide      # (optional) records/re-records the voice guide; `-- --docs` updates the phrase catalogue in docs/guide.md
 ```
 
-Para jugar **no hace falta ninguna clave ni variable de entorno**. La API key de ElevenLabs solo se usa en
-`npm run story-audio` y `npm run guide` (ver [`docs/narration.md`](docs/narration.md); plantilla en `.env.example`, `.env.local` está en `.gitignore`).
+To play, **no key or environment variable is needed**. The ElevenLabs and Replicate keys are only used by the generator scripts (see [`docs/narration.md`](docs/narration.md); the template is `.env.example`, `.env.local` is git-ignored).
 
-## Controles
+## Controls
 
-| Tecla / acción | Efecto |
+| Key / action | Effect |
 | --- | --- |
-| Arrastrar el globo | (vista del globo) Girarlo en dos ejes (horizontal: sobre su propio eje; vertical: lo inclina; nunca rueda de lado); al soltar sigue girando con inercia y la inclinación vuelve sola a la inicial |
-| Rueda / `Ctrl`+rueda / pellizco / `Ctrl` +, −, 0 | (vista del globo) Acercar o alejar **solo el globo y los vehículos** (los botones no cambian de tamaño; se evita el zoom de la página); límites 0,75–2,6, y al acercar el globo se recoloca para que haya un vehículo a la vista |
-| Clic en el marcador / en el vehículo de la lista | (vista del globo) Abrir la tarjeta del vehículo |
-| `Esc` | (vista del globo) Cerrar la tarjeta |
-| `Espacio` (mantener) | Avanzar por la ruta hasta el siguiente checkpoint; allí se detiene (suelta y vuelve a pulsar para seguir) |
-| `Espacio` (pulsar) | **InSight y Beagle 2** (módulos inmóviles): pasar al siguiente momento de la historia (tarjeta y narración nuevas; el módulo no se mueve) |
-| Clic en un marcador de la línea de tiempo | Viaje automático hasta ese checkpoint (hacia delante o hacia atrás) |
-| `N` | Activar/desactivar la narración automática (chip «Narration on/off»; se recuerda en `localStorage`: si «no suena nada», mira que no esté en off) |
-| `S` / botón de altavoz del globo | Música de fondo on/off |
-| `G` | Activar/desactivar la guía de voz (chip «Guide on/off») |
-| Botón **▶ Listen / ■ Stop** de la tarjeta | Oír/parar la narración del checkpoint actual |
+| Drag the globe | (globe) Turn it on two axes; on release it keeps turning with inertia and the lean returns to the initial one |
+| Wheel / `Ctrl`+wheel / pinch / `Ctrl` +, −, 0 | (globe) Zoom **only the globe and the vehicles**; limits 0.75–2.6 |
+| Click a marker | (globe) Open the vehicle's card |
+| `Esc` | (globe) Close the card |
+| `Space` (hold) | Advance along the route to the next checkpoint; it stops there (release and press again to go on) |
+| `Space` (press) | **InSight, Beagle 2 and Surveyor 3** (stationary modules): go to the next moment of the story (a new card and narration; the module does not move) |
+| Click a timeline marker | Automatic trip to that checkpoint (forward or backward) |
+| `N` | Turn the automatic narration on/off (remembered in `localStorage`: if "nothing sounds", check it is not off) |
+| `S` / the globe's speaker button | Background music on/off |
+| `G` | Voice guide on/off |
+| The **Listen / Stop** button of the card | Hear/stop the current checkpoint's narration |
 
-En la escena, arriba a la izquierda está `← story` (vuelve a la última página del cómic) y arriba a la derecha `skip the 3D` (botón del color de acento del mundo). El vehículo lo decide la URL; las preferencias de narración/guía se recuerdan
-(`localStorage`: `poc-narration`, `poc-guide`).
+In the scene, top left is `← story` (back to the last comic page) and top right `skip the 3D`. The vehicle is decided by the URL. Narration/guide/music preferences are remembered (`localStorage`: `poc-narration`, `poc-guide`, `poc-ambient`).
 
-## Rutas
+## Routes
 
-| Ruta | Vista |
+| Route | View |
 | --- | --- |
-| `/` | **home** (hito 55): una sola composición con cartas de ilustraciones y Opportunity en 3D; «start» y el sello abren el globo (`/mars`); el logo del globo vuelve aquí |
-| `/moon`, `/mars` | globo con el selector de mundo (cambiar de mundo no recarga) |
-| `/mars/opportunity`, `/mars/spirit`, `/mars/ingenuity`, `/mars/insight`, `/mars/beagle-2`, `/moon/surveyor-3` | la historia del vehículo (`/<mundo>/<id de la misión>`): cómic → 3D → cómic; los demás vehículos redirigen al globo; `/mars#opportunity` abre el globo con la tarjeta |
+| `/` | the **home**: one composition with illustration cards and Opportunity in 3D; "start" and the badge open the globe (`/mars`); the globe's logo returns here |
+| `/moon`, `/mars` | the globe with the world selector (switching world does not reload) |
+| `/mars/opportunity`, `/mars/spirit`, `/mars/ingenuity`, `/mars/insight`, `/mars/beagle-2`, `/moon/surveyor-3` | the vehicle's story (`/<world>/<mission id>`): comic → 3D → comic; the other vehicles redirect to the globe; `/mars#opportunity` opens the globe with the card |
 
-Cada ruta descarga solo lo suyo: el globo no carga la escena del rover, y la escena solo el terreno y el modelo de su vehículo.
+Each route downloads only its own: the globe does not load the scene, and the scene only its terrain and its vehicle's model.
 
-## Historias
+## The stories
 
-| Historia | Terreno | Paradas del 3D |
+| Story | Terrain | 3D stops |
 | --- | --- | --- |
-| **Opportunity · Mars** | `terrain.stl` | 13 (de las rocas empapadas de Eagle Crater a la última señal) |
-| **Spirit · Mars** | `terrain.stl` (maqueta de Gusev; el montículo de Gale era demasiado empinado) | 12 (del bucle de reinicios del sol 18 a la última señal en Troy) |
-| **InSight · Mars** | `terrain.stl` (llano, maqueta de Elysium Planitia) | 14 **momentos** (el módulo no se mueve; Espacio pasa al siguiente) |
-| **Beagle 2 · Mars** | `gale-terrain.stl` (suelo llano del cráter, maqueta de Isidis Planitia) | 12 **momentos** (el módulo no se mueve) |
-| **Ingenuity · Mars** | `gale-terrain.stl` (cráter Gale, como maqueta de Jezero) | 13 (de la tela del Flyer 1 al vuelo 72) |
-| **Surveyor 3 · Moon** | `moon-terrain.stl` | 11 **momentos** (del radar que falla a la visita del Apollo 12; el módulo no se mueve) |
+| **Opportunity · Mars** | `terrain.stl` | 13 (from the water-soaked rocks of Eagle Crater to the last signal) |
+| **Spirit · Mars** | `terrain.stl` (a Gusev stand-in; Gale's mound was too steep) | 12 (from the reboot loop of sol 18 to the last signal in Troy) |
+| **InSight · Mars** | `terrain.stl` (flat, an Elysium Planitia stand-in) | 14 **moments** (the module does not move; Space steps to the next) |
+| **Beagle 2 · Mars** | `gale-terrain.stl` (the crater floor, an Isidis Planitia stand-in) | 12 **moments** (the module does not move) |
+| **Ingenuity · Mars** | `gale-terrain.stl` (a Jezero stand-in) | 13 (from the Flyer 1 fabric to flight 72) |
+| **Surveyor 3 · Moon** | `moon-terrain.stl` | 11 **moments** (from the failing radar to Apollo 12's visit; the module does not move) |
 
-Cada historia son **20 eventos reales** investigados en dossiers (`misiones/<misión>/dossiers`): los 5–6 primeros son cómic (hasta el despegue o el aterrizaje), los siguientes
-son las paradas del 3D y los últimos 2–3 son el cómic final. Los datos viven en `public/models/<misión>/story.json` (generado con `npm run story`; el copy está en
-`scripts/data/<misión>-story.mjs`). Los terrenos son maquetas: las paradas no corresponden a lugares reales. En el 3D, **Opportunity y Spirit conducen** (Spirit va marcha atrás desde jul 2004 y con la rueda delantera derecha bloqueada desde el sol 779), **Ingenuity vuela** entre paradas y se posa en cada una, y **InSight, Beagle 2 y Surveyor 3, que nunca se movieron, no se conducen**: Espacio pasa al siguiente momento. Qué se ha verificado y qué queda por hacer: [`docs/audit.md`](docs/audit.md). Receta para añadir otra: [`docs/story.md`](docs/story.md).
+Each story is **20 real events** researched in dossiers (`misiones/<mission>/dossiers`): the first 4–6 are comic (until launch or landing), the next ones are the 3D stops and the last 2–3 are the closing comic. The data lives in `public/models/<mission>/story.json` (generated with `npm run story`; the copy is in `scripts/data/<mission>-story.mjs`). The terrains are scale models: the stops are not real places. In 3D, **Opportunity and Spirit drive** (Spirit backwards from Jul 2004 and with the front-right wheel locked from sol 779), **Ingenuity flies** between stops and lands at each, and **InSight, Beagle 2 and Surveyor 3, which never moved, are not driven**. What was verified and what is left: [`docs/audit.md`](docs/audit.md). Recipe to add another: [`docs/story.md`](docs/story.md).
 
-> ⚠️ Los vehículos **no están a escala real** respecto al terreno (200–2000× más grandes). Decisión consciente para la PoC;
-> pendiente de resolver: ver [`docs/roadmap.md`](docs/roadmap.md).
+> ⚠️ The vehicles are **not at real scale** relative to the terrain (200–2000× bigger). A conscious proof-of-concept decision; unresolved: see [`docs/roadmap.md`](docs/roadmap.md).
 
-## Documentación
+## Repository layout
 
-Empieza por **[`docs/README.md`](docs/README.md)** (índice). Resumen de qué leer según lo que quieras hacer:
-
-| Quiero… | Lee |
+| Folder | What it is |
 | --- | --- |
-| Retomar el proyecto tras un tiempo | [`CLAUDE.md`](CLAUDE.md) (reglas y estado) → [`docs/history.md`](docs/history.md) («Estado actual») → [`docs/roadmap.md`](docs/roadmap.md) |
-| Ver cómo se hace una historia (datos, imágenes, audio, ruta 3D) | [`docs/story.md`](docs/story.md) |
-| Cambiar colores de Marte/Luna o tocar la UI | [`docs/design.md`](docs/design.md) («Paleta por mundo») |
-| Entender cómo funciona el código | [`docs/architecture.md`](docs/architecture.md) |
-| Añadir un vehículo (con su marcador en el globo), un estilo o un checkpoint | [`docs/themes-and-missions.md`](docs/themes-and-missions.md) |
-| Grabar o cambiar la voz de la narración | [`docs/narration.md`](docs/narration.md) |
-| Ver/cambiar las frases de la guía de voz y cuándo suenan | [`docs/guide.md`](docs/guide.md) |
-| Saber qué hay en `public/models`, `images`, `narration` y `guide` | [`docs/assets.md`](docs/assets.md) |
-| Evitar tropezar con problemas ya resueltos / probar en el navegador | [`docs/gotchas.md`](docs/gotchas.md) |
+| `src/`, `public/`, `scripts/`, `docs/` | The web app, its assets (terrains, illustrations, narration, music), the generator scripts and the documentation |
+| `misiones/`, `timelines_v0/`, `agents/`, `.claude/skills/` | The research pipeline (dossiers, base timelines, the research agent, the `mars-*` skills): [`docs/research-pipeline.md`](docs/research-pipeline.md) |
+| `story/` | The research team's Opportunity decision-game and story-viewer prototypes: [`story/README.md`](story/README.md) |
 
-> `AGENTS.md` (generado por Next) avisa de que esta versión de Next tiene cambios incompatibles; ante la duda, consulta
-> `node_modules/next/dist/docs/`.
+## Documentation
+
+Start with **[`docs/README.md`](docs/README.md)** (the index). What to read for what you want to do:
+
+| I want to… | Read |
+| --- | --- |
+| Resume the project after a while | [`CLAUDE.md`](CLAUDE.md) (rules and state) → [`docs/history.md`](docs/history.md) ("Current state") → [`docs/roadmap.md`](docs/roadmap.md) |
+| See how a story is made (data, images, audio, 3D route) | [`docs/story.md`](docs/story.md) |
+| Understand where the facts come from | [`docs/research-pipeline.md`](docs/research-pipeline.md) |
+| Change Mars/Moon colours or touch the UI | [`docs/design.md`](docs/design.md) ("Palette per world") |
+| Understand how the code works | [`docs/architecture.md`](docs/architecture.md) |
+| Add a vehicle (with its marker on the globe), a style or a checkpoint | [`docs/themes-and-missions.md`](docs/themes-and-missions.md) |
+| Record or change the narration voice | [`docs/narration.md`](docs/narration.md) |
+| See/change the voice guide's phrases and when they play | [`docs/guide.md`](docs/guide.md) |
+| Know what is in `public/models`, `images`, `audio` and `guide` | [`docs/assets.md`](docs/assets.md) |
+| Avoid problems already solved / test in the browser | [`docs/gotchas.md`](docs/gotchas.md) |
+
+> `AGENTS.md` (generated by Next) warns that this version of Next has breaking changes; when in doubt, consult `node_modules/next/dist/docs/`.

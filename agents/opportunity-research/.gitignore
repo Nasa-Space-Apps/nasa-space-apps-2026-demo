@@ -3,3 +3,6 @@
 cache/
 __pycache__/
 lotes/
+
+# output of agents/opportunity-research/probar_herramientas.py
+resultado_pruebas.json

@@ -1,92 +1,75 @@
-# Narración (ElevenLabs, pregrabada)
+# Narration (ElevenLabs, pre-recorded)
 
-Cada página del cómic y cada parada del 3D tiene su **narración en inglés** (~45 palabras). Los audios se **graban una sola vez** con ElevenLabs
-(Text-to-Speech) y se guardan en el repo como archivos estáticos: **la app no llama a ElevenLabs en ejecución**.
+Every comic page and every 3D stop has its **English narration** (~45 words). The audio is **recorded once** with ElevenLabs (Text-to-Speech) and kept in the repo as static files: **the app does not call ElevenLabs at run time**.
 
-## Cómo está montado
+## How it is set up
 
 ```
-scripts/data/<misión>-story.mjs        el copy: cada beat tiene `narration` (guion hablado) y `summary` (texto de la tarjeta)
-npm run story -- <misión>              → public/models/<misión>/story.json (cada beat con su `audio`)
-scripts/generate-story-audio.mjs       npm run story-audio -- <misión>  → llama a ElevenLabs solo para lo nuevo/cambiado (lógica común en scripts/lib/tts.mjs,
-                                       compartida con la guía de voz: ver guide.md)
-public/models/<misión>/audio/<id>.mp3          las grabaciones (se commitean)
-public/models/<misión>/audio/manifest.json     metadatos de cada clip: voz, modelo, formato, hash del guion, tamaño, fecha
+scripts/data/<mission>-story.mjs       the copy: each beat has `narration` (the spoken script) and `summary` (the card text)
+npm run story -- <mission>             → public/models/<mission>/story.json (each beat with its `audio`)
+scripts/generate-story-audio.mjs       npm run story-audio -- <mission>  → calls ElevenLabs only for what is new/changed (common logic in scripts/lib/tts.mjs,
+                                       shared with the voice guide: see guide.md)
+public/models/<mission>/audio/<id>.mp3          the recordings (committed)
+public/models/<mission>/audio/manifest.json     metadata of each clip: voice, model, format, script hash, size, date
 
-Runtime:  Journey/Comic (página del cómic) · Checkpoints.tsx (parada del 3D) ──► narration.ts ──► <audio> desde un Blob en memoria
-          CheckpointCard (botón Listen/Stop) · Scene (tecla N)
+Runtime:  Journey/Comic (comic page) · Checkpoints.tsx (3D stop) ──► narration.ts ──► <audio> from an in-memory Blob
+          CheckpointCard (Listen/Stop button) · Scene (N key)
 ```
 
-- **Guion hablado vs texto de la tarjeta**: `summary` es el resumen escrito que se ve; `narration` es el guion que se lee en voz alta
-  (más narrativo, con los números escritos con letras para que la pronunciación sea natural).
-- **`manifest.json`** guarda por clip: `voiceId`, `voiceName`, `model`, `format`, `hash` (sha256 de guion + voz + modelo + formato), `chars`,
-  `bytes`, `generatedAt`. Con el hash el script sabe qué clips están al día.
-- **Carga:** `Journey` descarga todos los clips de la historia a memoria (Blobs, `lib/narration.ts`) detrás de una pantalla de preparación, así que suenan sin espera.
+- **Spoken script vs card text**: `summary` is the written summary that is seen; `narration` is the script read aloud (more narrative, with numbers spelled out so the pronunciation is natural).
+- **`manifest.json`** stores per clip: `voiceId`, `voiceName`, `model`, `format`, `hash` (sha256 of script + voice + model + format), `chars`, `bytes`, `generatedAt`. With the hash the script knows which clips are up to date.
+- **Loading:** `Journey` downloads all of a story's clips into memory (Blobs, `lib/narration.ts`) behind a preparation screen, so they play without delay.
 
-## Grabar / regrabar
+## Record / re-record
 
-Requiere tu API key en **`.env.local`** (`ELEVENLABS_API_KEY=…`, plantilla en `.env.example`; ignorado por git). Solo se usa aquí, nunca en la app.
+It needs your API key in **`.env.local`** (`ELEVENLABS_API_KEY=…`, template in `.env.example`; git-ignored). It is only used here, never in the app.
 
 ```bash
-npm run story-audio -- opportunity                 # genera lo que falta o ha cambiado (gasta créditos solo en eso)
-npm run story-audio -- ingenuity --dry-run         # muestra el plan y el nº de caracteres, sin llamar a la API
-npm run story-audio -- surveyor3 --only sur031     # solo esos beats
-npm run story-audio -- surveyor3 --force           # regraba todo
-npm run story-audio -- spirit                       # la de Spirit (hito 45): 20 clips, 5 979 caracteres, 2 394 créditos
-npm run story-audio -- surveyor3 --voice <id> --name "<etiqueta>" --model <id>   # otra voz/modelo en esta ejecución
+npm run story-audio -- opportunity                 # generates what is missing or changed (spends credits only on that)
+npm run story-audio -- ingenuity --dry-run         # shows the plan and the character count, without calling the API
+npm run story-audio -- surveyor3 --only sur031     # only those beats
+npm run story-audio -- surveyor3 --force           # re-records everything
+npm run story-audio -- spirit --voice <id> --name "<label>" --model <id>   # another voice/model in this run
 ```
 
-Flujo típico: editas `narration` en `scripts/data/<misión>-story.mjs` → `npm run story -- <misión>` → `npm run story-audio -- <misión>` (regraba solo ese clip) →
-commit de `public/models/<misión>/`. Si cambias de voz o modelo, todos los clips quedan «changed» y se regraban.
+Typical flow: edit `narration` in `scripts/data/<mission>-story.mjs` → `npm run story -- <mission>` → `npm run story-audio -- <mission>` (re-records only that clip) → commit `public/models/<mission>/`. If you change voice or model, every clip becomes "changed" and is re-recorded.
 
-**Voz y modelo actuales**: voz **Bill** (`pqHfZKP75CvOlQylNhV4`), prestablecida, madura y pausada (ritmo de documental), modelo **`eleven_v4`**
-(el más expresivo según la doc), `mp3_44100_128`. Se cambian en `scripts/generate-story-audio.mjs` o con `ELEVENLABS_VOICE_ID` /
-`ELEVENLABS_VOICE_NAME` / `ELEVENLABS_MODEL_ID`. Alternativas probadas: **Brian** `nPczCjzI2devNBz1zQrb`, **Daniel** `onwK4e9ZLuTAKqWW03F9`
-(la voz de la guía), **George** `JBFqnCBsd6RMkjVDRZzb`.
+**Current voice and model**: voice **Bill** (`pqHfZKP75CvOlQylNhV4`), a premade, mature, paced voice (documentary rhythm), model **`eleven_v4`** (the most expressive according to the docs), `mp3_44100_128`. Change them in `scripts/generate-story-audio.mjs` or with `ELEVENLABS_VOICE_ID` / `ELEVENLABS_VOICE_NAME` / `ELEVENLABS_MODEL_ID`. Alternatives tried: **Brian** `nPczCjzI2devNBz1zQrb`, **Daniel** `onwK4e9ZLuTAKqWW03F9` (the guide's voice), **George** `JBFqnCBsd6RMkjVDRZzb`.
 
-> La clave actual está **restringida**: sirve para Text-to-Speech pero no tiene `voices_read` ni `models_read`, así que no se pueden listar voces/modelos por API.
+> The current key is **restricted**: it works for Text-to-Speech but has no `voices_read` or `models_read`, so voices/models cannot be listed through the API. ElevenLabs has announced that its *default* voices expire on 31 Dec 2026; check that Bill is still available before re-recording.
 
-## Transcripción en pantalla (y receta para audios nuevos)
+## On-screen transcript (and the recipe for new audio)
 
-Todo lo que dice una voz se ve como subtítulo (`components/Captions.tsx`): la **narración** (etiqueta lima «Narrator») frase a frase mientras suena, y la guía
-(etiqueta naranja «Guide»). Nunca se solapan.
+Everything a voice says is seen as a subtitle (`components/Captions.tsx`): the **narration** (label "Narrator") phrase by phrase while it plays, and the guide (label "Guide"). They never overlap.
 
-**Decisión de diseño: de ElevenLabs solo se pide el audio; los tiempos se calculan en el cliente.** No se piden timestamps (obligaría a regrabar cada clip y
-gasta créditos extra): el reparto por código queda dentro de ~0,5 s de la voz. **Esta es la forma de trabajar para cualquier narración nueva:**
+**Design decision: only the audio is requested from ElevenLabs; the timings are computed on the client.** Timestamps are not requested (they would force re-recording every clip and cost extra credits): the code split stays within ~0.5 s of the voice. **This is the way to work for any new narration:**
 
-1. Escribe el guion en el campo `narration` del beat. Puntuación natural: cada `.`, `!` o `?` es un corte; las comas y conjunciones sirven para partir frases largas.
-2. Graba **solo el audio**: `npm run story-audio -- <misión>`.
-3. **No hay nada más que hacer**: al sonar el clip, `lib/narration.ts` lee su duración real del `<audio>` y `lib/transcript.ts` reparte las frases.
+1. Write the script in the beat's `narration` field. Natural punctuation: each `.`, `!` or `?` is a cut; commas and conjunctions split long sentences.
+2. Record **only the audio**: `npm run story-audio -- <mission>`.
+3. **Nothing else to do**: when the clip plays, `lib/narration.ts` reads its real duration from the `<audio>` and `lib/transcript.ts` spreads the phrases.
 
-Cómo se reparte (`lib/transcript.ts`):
+How it is spread (`lib/transcript.ts`):
 
-- **Frases** (`phrases()`): se cortan por oraciones; las de más de ~105 caracteres se vuelven a partir en la coma, punto y coma, guion o conjunción más cercana al centro.
-- **Tiempo de inicio** (`phraseStarts()`): la duración real del clip menos una respiración inicial (≤ 0,25 s) se reparte en proporción a **caracteres + peso de pausa** (+14 tras `. ! ? …`, +6 tras `, ; : —`).
-- **Seguimiento** (`lib/narration.ts`): un `requestAnimationFrame` compara `audio.currentTime` con los inicios y cambia `caption` solo cuando cambia la frase.
+- **Phrases** (`phrases()`): cut by sentences; those longer than ~105 characters are split again at the comma, semicolon, dash or conjunction closest to the middle.
+- **Start time** (`phraseStarts()`): the clip's real duration minus an initial breath (≤ 0.25 s) is shared in proportion to **characters + a pause weight** (+14 after `. ! ? …`, +6 after `, ; : —`).
+- **Tracking** (`lib/narration.ts`): a `requestAnimationFrame` compares `audio.currentTime` with the starts and changes `caption` only when the phrase changes.
 
-Para **ajustar** si algún clip se desfasa: cambia los pesos de pausa o `MAX` en `transcript.ts`. Es una prueba visual/auditiva (`tsc` no la cubre).
+To **adjust** a clip that drifts: change the pause weights or `MAX` in `transcript.ts`. It is a visual/auditory test (`tsc` does not cover it).
 
-## Uso en el juego
+## Use in the game
 
-- **Automático**: suena al llegar a cada página del cómic y al entrar en el radio de una parada del 3D; al salir se corta.
-- **Tecla `N`**: activa/desactiva la narración automática (se recuerda en `localStorage`, `poc-narration`). Dentro de una parada, activarla empieza a narrar al instante. **Si no se oye nada** (visto en el hito 46, con los archivos y el audio correctos), lo primero que hay que mirar es esta preferencia: `localStorage.getItem('poc-narration')` debe ser distinto de `"off"`; pulsa `N` hasta ver «narration on» y recarga.
-- **Botón «Listen / Stop»** en la tarjeta del 3D (funciona aunque la automática esté desactivada).
-- Mensajes junto al botón: `Audio file missing`, `Browser blocked audio: press Listen`, `Could not play audio`.
+- **Automatic**: it plays on arriving at each comic page and on entering the radius of a 3D stop; it is cut on leaving.
+- **`N` key**: turns the automatic narration on/off (remembered in `localStorage`, `poc-narration`). Inside a stop, turning it on starts narrating at once. **If nothing is heard** (the files and the audio being correct), look first at this preference: `localStorage.getItem('poc-narration')` must not be `"off"`; press `N` until you see "narration on" and reload.
+- **"Listen / Stop" button** on the 3D card (works even with the automatic narration off).
+- Messages next to the button: `Audio file missing`, `Browser blocked audio: press Listen`, `Could not play audio`.
 
-## Costes
+## Costs
 
-Se cobra por carácter y **solo al grabar**: una historia de 20 beats son ~5 300–5 800 caracteres (~2 100–2 300 créditos con `eleven_v4`). Regrabar un clip cuesta lo que midan
-sus ~260–320 caracteres. Jugar no consume nada.
+Billed per character and **only when recording**: a 20-beat story is ~5,300–6,400 characters (~2,100–2,550 credits with `eleven_v4`). Re-recording one clip costs what its ~260–320 characters measure. Playing consumes nothing.
 
-## Trampas
+## Gotchas
 
-- **Autoplay**: el navegador exige un gesto previo para reproducir audio. Conducir con el teclado cuenta; si se bloquea, aparece «Browser blocked audio» y el botón lo resuelve.
-  Los eventos de teclado *sintéticos* (los de las pruebas desde la consola) **no** cuentan: haz primero un clic real.
-- Si editas `narration` y no regrabas, el audio **no** coincide con el guion (el manifiesto lo detecta: `--dry-run` lo marca como `changed`).
-- Los mp3 pesan ~300–400 KB cada uno (~7 MB por historia) y van en git.
-- El *speed* y los `voice_settings` no se tocan (valores por defecto del modelo).
-
-## Histórico
-
-Hasta el hito 43 cada checkpoint tenía su clip en `public/narration` (script `generate-narration.mjs`, `npm run narration`). Todo eso se eliminó (hitos 43–44) al
-sustituirlo las historias; sigue en el historial de git.
+- **Autoplay**: the browser requires a prior gesture to play audio. Driving with the keyboard counts; if it is blocked, "Browser blocked audio" appears and the button solves it. *Synthetic* keyboard events (the console tests) do **not** count: click first.
+- If you edit `narration` and do not re-record, the audio does **not** match the script (the manifest detects it: `--dry-run` marks it `changed`).
+- The mp3s weigh ~300–400 KB each (~7 MB per story) and go in git.
+- `speed` and `voice_settings` are not touched (the model's defaults).

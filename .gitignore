@@ -46,3 +46,7 @@ dev.log
 
 # pitch video (local only)
 /video
+
+# local tool state (not part of the project)
+/.atl/
+/.impeccable/

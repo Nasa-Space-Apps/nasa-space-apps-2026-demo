@@ -1,136 +1,98 @@
-# Tema y vehículos
+# Theme and vehicles
 
-## El tema — `src/lib/themes.ts`
+## The theme — `src/lib/themes.ts`
 
-La demo tiene **un único tema, «Ink & Paper»** (cómic; referencia: ponpon-mania.com/chapter/2; antes «Primer»). Ya no hay selector de estilos ni atajos `1…9`: los temas anteriores
-(Light, Flat, Paper, Navy, Mind) se eliminaron (siguen en el historial de Git). Reglas y valores: [design.md](design.md).
+The demo has **a single theme, "Ink & Paper"** (comic; reference: ponpon-mania.com/chapter/2). There is no style selector (the earlier themes were removed; they are in git history). Rules and values: [design.md](design.md).
 
-**Paleta por mundo (hito 46):** `BASE` (no exportado) tiene todo lo común (tinta, papel, radios, movimiento, minimapa, suelo de ambos mundos…) y `WORLDS` el color que cambia con el mundo (`canvas`, `canvasAlt`, `accent`, `accentSoft`, `beacon`): **Marte** terracota + mantequilla, **Luna** azul acero + menta. `themeFor("mars" | "moon")` devuelve el `Theme` completo (cacheado); `worldOfPath(ruta)` da el mundo de una URL; `useTheme()` (`lib/use-theme.ts`) lo lee de la ruta en los componentes de UI. `THEME` (el tema de la Luna) queda solo como valor por defecto. **Para añadir un mundo nuevo:** una entrada en `WORLDS`, su `ground` en `BASE` y su caso en `worldOfPath`. Detalle y colores: [design.md](design.md#paleta-por-mundo-hito-46).
+**Palette per world:** `BASE` (not exported) holds everything shared (ink, paper, radii, motion, minimap, the ground of both worlds…) and `WORLDS` the colour that changes with the world (`canvas`, `canvasAlt`, `accent`, `accentSoft`, `beacon`): **Mars** terracotta + butter, **Moon** steel blue + mint, **home** periwinkle + pink. `themeFor("mars" | "moon" | "home")` returns the full `Theme` (cached); `worldOfPath(route)` gives the world of a URL; `useTheme()` (`lib/use-theme.ts`) reads it from the route in UI components. `THEME` (the Moon's theme) stays only as a default value. **To add a world:** an entry in `WORLDS`, its `ground` in `BASE` and its case in `worldOfPath`.
 
-El tema (tipo `Theme`) es la **única fuente de verdad** de los tokens: `WorldVars.tsx` (y un script del `<head>` en `app/layout.tsx`, para el primer pintado) los publica como variables CSS (`cssVars(themeFor(mundo))` → `--canvas`, `--surface`, `--ink`,
-`--ink-soft`, `--muted`, `--line`, `--accent`, `--radius`, `--radius-sm`, `--ease`, `--dur-*`) para las clases `.ui-*` de `globals.css`, y el código de canvas/WebGL (minimapa, globo,
-balizas) lee el objeto directamente. **Para cambiar un color o un radio, edita solo `themes.ts`** (los colores de cada mundo, en `WORLDS`).
+The theme (type `Theme`) is the **single source of truth** of the tokens: `WorldVars.tsx` (and a script in the `<head>` of `app/layout.tsx`, for the first paint) publishes them as CSS variables (`cssVars(themeFor(world))` → `--canvas`, `--surface`, `--ink`, `--accent`, `--radius`, `--ease`, `--dur-*`…) for the `.ui-*` classes of `globals.css`, and the canvas/WebGL code (minimap, globe, beacons) reads the object directly. **To change a colour or a radius, edit only `themes.ts`.**
 
-Campos de `Theme`:
+Fields of `Theme`:
 
-- **Fuentes:** `font` (texto) y `mono` (etiquetas, botones, números); se cargan con `next/font/google` en `layout.tsx` (`--font-sans`, `--font-mono`).
-- **Color:** `canvas` (fondo), `surface` (tarjetas), `ink`/`inkSoft` (texto y botón primario / su hover), `muted` (texto secundario), `line` (líneas finas), `accent` (el único color; cambia con el mundo) y `accentInk`.
-- **Forma y movimiento:** `radius` (paneles), `radiusSm` (botones, chips), `ease` (la curva de **todas** las transiciones) y `dur { fast, base, slow }` en ms.
-- **Minimapa:** `map { bg, minor, major, minorW, majorW, every }` (curvas de nivel), `trail`, `marker { dot, ring, arrow }`, `checkpoint { pin, done, ring }` (cuadrados numerados).
-- **Balizas 3D:** `beacon { pending, active, done }` (poste y anillo en `pending`/`done`; la gema en `active`).
-- **Globo:** `globe { bg, line, star, ink, tag, tagText, pin, vehicle }` (`bg`/`line`/`vehicle.mid` salen del mundo).
-- **Mundo:** `ground { mars, moon, lines }` (el suelo 3D de cada mundo; no depende del mundo actual).
+- **Fonts:** `font` (text) and `mono` (labels, buttons, numbers); loaded with `next/font/google` in `layout.tsx` (`--font-sans`).
+- **Colour:** `canvas` (background), `surface` (cards), `ink`/`inkSoft` (text and primary button / its hover), `muted`, `line`, `accent` (the single colour; changes with the world) and `accentInk`.
+- **Shape and motion:** `radius` (panels), `radiusSm` (buttons, chips), `stroke`, `grain`, `ease` (the curve of **all** transitions), `pop` and `dur { fast, base, slow }` in ms.
+- **Minimap:** `map { bg, minor, major, minorW, majorW, every }` (contour lines), `trail`, `marker { dot, ring, arrow }`, `checkpoint { pin, done, ring }` (numbered squares).
+- **3D beacons:** `beacon { pending, active, done }`.
+- **Globe:** `globe { bg, line, star, ink, tag, tagText, pin, vehicle }` (`bg`/`line`/`vehicle.mid` come from the world).
+- **World:** `ground { mars, moon, lines }` (the 3D ground of each world; it does not depend on the current world).
 
-Estilos DOM compartidos: `lib/ui.ts` (`ui(theme)` → `label`, `display`, `title`, `text`, `panel`, `value`; `ease(theme, props, ms?, delay?)` para `transition`) y `components/Reveal.tsx`
-(entrada suave). Las piezas con estados (botones, enlaces, filas del desplegable) son las clases `.ui-btn` (`.is-ghost`, `.is-accent`, `.is-active`), `.ui-fab` (disco redondo; `-md` = botón de música, `-sm` = la X), `.ui-link` (`.is-back`), `.ui-row` y `.ui-nav` de `globals.css`.
+Shared DOM styles: `lib/ui.ts` (`ui(theme)` → `label`, `display`, `title`, `text`, `panel`, `value`; `ease(theme, props, ms?, delay?)` for `transition`) and `components/Reveal.tsx`. The pieces with states are the classes `.ui-btn` (`.is-ghost`, `.is-accent`, `.is-active`), `.ui-fab` (a round disc; `-md` = the music button, `-sm` = the X), `.ui-link` (`.is-back`), `.ui-row`, `.ui-nav`, `.ui-world`, `.ui-marker`, `.ui-drive` and `.ui-toggle` of `globals.css`. For a new font: load it with `next/font/google` in `layout.tsx`, expose it as a CSS variable and use it in `font`/`mono`.
 
-Si quieres una fuente nueva: cárgala con `next/font/google` en `layout.tsx`, expónla como variable CSS y úsala en `font`/`mono`.
+## Vehicles + terrain (missions) — `src/lib/missions.ts`
 
-## Vehículos + terreno (misiones) — `src/lib/missions.ts`
-
-Una misión es un objeto `Mission` del array `MISSIONS`. Su ruta es `/<mundo>/<id>` (hay que añadir también el vehículo al mundo donde quedó abandonado en `lib/bodies.ts`); en la escena aparece en el selector «Vehicle» y la tecla `M` rota entre ellas (navegando).
+A mission is a `Mission` object of the `MISSIONS` array. Its route is `/<world>/<id>` (the vehicle must also be added to the world where it was abandoned in `lib/bodies.ts`).
 
 ```ts
 {
-  id: "sev",                       // clave estable (localStorage)
-  name: "SEV · Moon (Apollo 14)",   // texto del selector
-  title: "SEV · Apollo 14",        // título del minimapa
-  swatch: ["#0C0D11", "#8C8A86", "#C9C6BF"],
+  id: "surveyor-3",                 // stable key (localStorage, route)
+  name: "Surveyor 3 · Moon",        // selector label
+  title: "Surveyor 3 · Oceanus Procellarum",   // minimap title
   terrainUrl: "/models/moon-terrain.stl",
-  terrain: {
-    fade: 30,          // ancho (unidades) de la franja de borde que se aplana
-    lo: "#3b3b40",     // color del suelo más bajo
-    hi: "#b4b1aa",     // color del suelo más alto
-    edge: "#77756f",   // color del borde aplanado y del plano de suelo infinito
-  },
+  terrain: { fade: 30, lo: "…", hi: "…", edge: "…", lines: "…", step: 1.9 },  // border width flattened, ground tones, contour step
   rover: {
-    model: "sev",      // modelo procedural de lib/vehicles/ ("opportunity" | "sev" | "perseverance" | "spirit" | "ingenuity" | "insight" | "beagle2")
-    palette: { dark: "#1650B0", mid: "#7FB0E3", light: "#F2F7FC", bg: "#D9D9D9" },  // 3 tonos de un color + fondo liso de su tarjeta
-    maxSpeed: 18, boostSpeed: 32,   // maxSpeed = Espacio mantenido; boostSpeed = viaje automático (línea de tiempo)
-    heading: -Math.PI * 0.75,   // (sin uso: el rumbo sale de la ruta)
+    model: "surveyor3",             // procedural model of lib/vehicles/ ("opportunity" | "sev" | "perseverance" | "spirit" | "ingenuity" | "insight" | "beagle2" | "surveyor3")
+    palette: { dark: "#5C7A1F", mid: "#B3CC6A", light: "#F1F7DC", bg: THEME.paperLight },   // 3 tones of one colour + the plain background of its card
+    maxSpeed: 14, boostSpeed: 26,   // maxSpeed = Space held; boostSpeed = automatic trip (timeline)
+    heading: -Math.PI * 0.75,       // (unused: the heading comes from the route)
+    reverseAfter?, deadWheelAfter?  // Spirit only (see architecture.md)
   },
-  env: {
-    sky: "#0c0d11", fogNear: 50, fogFar: 210,         // color de fondo/niebla y distancias
-    hemi: ["#9aa3b5", "#2a2a2e", 0.5],                 // luz ambiente (cielo, suelo, intensidad)
-    sun: { color: "#fffaf0", intensity: 2.8, offset: [80, 38, 30] },  // offset respecto al rover
-  },
-  dust:   { color: "#bdbab3", drag: 0.5, lift: -4, up: 0.8, life: 0.8, size: 0.75, alpha: 0.4 },
-  tracks: { color: "#1c1c1f", opacity: 0.35 },
-  checkpoints: storyOf("…")!.checkpoints, // salen del story.json de la misión (src/lib/story.ts); `[]` = «coming soon»
-  checkpointRadius: 14,            // radio de activación (y tamaño de la baliza); ~1,5× el ancho del vehículo
+  env: { sky, fogNear, fogFar, hemi: [sky, ground, intensity], sun: { color, intensity, offset } },  // sky = themeFor(<world>).canvas
+  dust:   { color, drag, lift, up, life, size, alpha },
+  tracks: { color, opacity },
+  checkpoints: storyOf("surveyor-3")!.checkpoints,   // from the mission's story.json (src/lib/story.ts); `[]` = "coming soon"
+  checkpointRadius: 14,             // activation radius (and beacon size); ~1.5× the vehicle's width
+  stationary?: boolean,             // the vehicle never moves (InSight, Beagle 2, Surveyor 3)
 }
 ```
 
-### Receta
+### Recipe
 
-1. Copia el terreno (STL) a `public/models/` y documéntalo en [assets.md](assets.md). Los STL de Blender vienen **Z-up** y se rotan solos.
-2. **Crea el vehículo** en `src/lib/vehicles/<id>.ts`: una función que dibuja con el `Kit` (`lib/vehicles/kit.ts`: `box`, `cyl`, `tube`, `ball`, `ring`, `prism`/`slab`/`panel`, `lathe`, `loft`, `wheel` + `tyre`, `at`), avanza por **+z**, con las ruedas en y=0
-   y centradas en x/z; añádela a `buildVehicle` y al tipo `VehicleModel` (`lib/vehicles.ts`). Estilo y reglas: [design.md](design.md#vehículos).
-   **Mide antes de dibujar**: saca del GLB de referencia la posición y el radio de las ruedas, la caja del cuerpo y dónde va cada pieza (los GLB vienen comprimidos con Draco: se decodifican con `@gltf-transform/core` + `draco3dgltf` en Node), elige un factor de escala para que la huella
-   sea parecida a la de los demás (≈ 9–12 de ancho) y deja las ruedas un poco más grandes que las reales. Los detalles pequeños llevan tono fijo (`DARK`/`MID`/`LIGHT`) para que se lean.
-3. Añade el objeto a `MISSIONS` con su `model` y su `palette` (3 tonos de un color + fondo). Las ruedas, la huella (`halfLen/halfWid`) y el tamaño salen del modelo.
-4. Define su historia (y con ella los checkpoints y la **ruta**): receta en [story.md](story.md) (hito 44: ya no se escriben checkpoints a mano; sin historia, `checkpoints: []` y la tarjeta del globo dice «coming soon»). Hoy tienen historia `opportunity`, `spirit`, `ingenuity` y `surveyor-3`. En `missions.ts`, el cielo/niebla (`env.sky`) es `themeFor(<mundo>).canvas`, no un color suelto.
-5. **Añádelo al globo** (`src/lib/bodies.ts`): en el `Body` donde quedó abandonado (`mars`/`moon`; crea uno nuevo si hace falta) agrega un `AbandonedVehicle` con
-   `missionId` (= el `id` de la misión; será el segmento de la ruta `/<mundo>/<id>`), `name`, `place`, `lat`/`lon`, `tag` (frase corta del marcador), `status`, y hasta 4 `facts`. La tarjeta dibuja el vehículo con el `model`/`palette` de la misión (`VehicleView`).
-   El marcador, la etiqueta, la tarjeta y las rutas aparecen solos (`generateStaticParams` sale de `BODIES`).
-6. **Audios**: `npm run story-audio -- <misión>` (ver story.md). La guía de voz es genérica (no hace falta tocarla). La música (`ambient-tracks.ts`) es opcional: sin pista propia suena la de `timeline`.
-7. Prueba: carga el mapa, avanza con `Espacio`, comprueba la orientación (¿el frente es el frente?), la niebla y el polvo; y en `/<mundo>` que el marcador y la tarjeta (vehículo girando sobre fondo liso) funcionan.
+1. Copy the terrain (STL) to `public/models/` and document it in [assets.md](assets.md). STLs from Blender are **Z-up** and are rotated by themselves.
+2. **Create the vehicle** in `src/lib/vehicles/<id>.ts`: a function that draws with the `Kit` (`lib/vehicles/kit.ts`: `box`, `cyl`, `tube`, `ball`, `ring`, `prism`/`slab`/`panel`, `lathe`, `loft`, `wheel` + `tyre`, `at`), moves along **+z**, with the wheels on y=0 and centred on x/z; add it to `buildVehicle` and the `VehicleModel` type (`lib/vehicles.ts`), and a low-detail version for the globe in `mini.ts`. Style and rules: [design.md](design.md#vehicles). **Measure before drawing**: take from the reference GLB the position and radius of the wheels, the body's box and where each piece goes (GLBs come Draco-compressed: decode them with `@gltf-transform/core` + `draco3dgltf` in Node), pick a scale factor so the footprint is similar to the others (≈ 9–12 wide) and leave the wheels slightly bigger than the real ones. Small details carry a fixed tone (`DARK`/`MID`/`LIGHT`) so they read. A vehicle that never moved has **no wheels** (see [architecture.md](architecture.md#stationary-vehicles)).
+3. Add the object to `MISSIONS` with its `model` and `palette`. The wheels, the footprint (`halfLen/halfWid`) and the size come from the model.
+4. Define its story (and with it the checkpoints and the **route**): see [story.md](story.md). Without a story, `checkpoints: []` and the globe's card says "coming soon". In `missions.ts` the sky/fog (`env.sky`) is `themeFor(<world>).canvas`, not a loose colour.
+5. **Add it to the globe** (`src/lib/bodies.ts`): in the `Body` where it was abandoned (`mars`/`moon`; create a new one if needed) add an `AbandonedVehicle` with `missionId` (= the mission `id`; it becomes the route segment `/<world>/<id>`), `name`, `place`, `lat`/`lon` (real coordinates), `tag` (a short marker phrase), `status` and up to 4 `facts`. The card draws the vehicle with the mission's `model`/`palette` (`VehicleView`). The marker, label, card and routes appear by themselves (`generateStaticParams` comes from `BODIES`).
+6. **Audio**: `npm run story-audio -- <mission>` (see [story.md](story.md)). The voice guide is generic (nothing to touch). The music (`ambient-tracks.ts`) is optional: without its own track the `timeline` one plays.
+7. Test: load the map, advance with `Space`, check the orientation (is the front the front?), the fog and the dust; and on `/<world>` that the marker and the card (the vehicle turning over a plain background) work.
 
 ### Checkpoints (storytelling) — `src/lib/checkpoints.ts`
 
-> **Hito 44:** los checkpoints ya no se escriben a mano: `lib/story.ts` los genera de los beats del `story.json` de cada misión. Lo de abajo describe el **formato del tipo `Checkpoint`** y el comportamiento en la escena; para añadir una historia, mira [story.md](story.md). Las imágenes y audios de ejemplo (`/images/checkpoints/…`, `/narration/…`) ya no existen.
+The checkpoints are not written by hand: `lib/story.ts` generates them from the beats of each mission's `story.json`. What follows is the **format of the `Checkpoint` type** and the behaviour in the scene.
 
-Cada misión tiene una lista de **checkpoints** que es también **su ruta**, en orden: el **primero es la salida** (donde el vehículo
-empieza su recorrido o misión) y el **último, el final** (donde se paró o apagó); entre medias, las paradas de la historia. Cada
-uno abre una tarjeta informativa (abajo a la izquierda) y reproduce una narración al entrar en su radio. Todo el texto va **en inglés**; es ficticio pero verosímil,
-inspirado en las misiones reales.
+A mission's checkpoint list is **also its route**, in order: the **first is the start** and the **last the end**; between them, the stops of the story. Each one opens an informative card (bottom left) and plays a narration on entering its radius. All the text is **in English**.
 
 ```ts
 {
-  id: "sur031",                     // clave estable (se usa en game.visited)
-  name: "The radar loses its way",   // título de la tarjeta
-  place: "Apr 20, 1967 · Oceanus Procellarum",   // línea pequeña bajo el título
-  x: 70, z: 50,                     // coordenadas de MUNDO (terreno centrado en 0,0; ver abajo)
-  via: [[30, -28], [66, 8]],        // opcional: puntos intermedios del tramo ANTERIOR → ESTE (para no cruzar pendientes fuertes)
-  image: "/models/surveyor3/images/sur031.jpg",  // ilustración 4:5 de la historia
+  id: "sur031",                     // stable key (used in game.visited)
+  name: "The radar loses its way",  // card title
+  place: "Apr 20, 1967 · Oceanus Procellarum",   // small line under the title
+  x: 70, z: 50,                     // WORLD coordinates (terrain centred at 0,0; see below)
+  via: [[30, -28], [66, 8]],        // optional: intermediate points of the leg PREVIOUS → THIS (to avoid steep slopes)
+  image: "/models/surveyor3/images/sur031.jpg",  // 4:5 illustration of the story
+  imageRatio: "4 / 5",
   credit: "AI-generated illustration",
-  text: "…",                        // resumen escrito de la tarjeta (~35 palabras)
-  narration: "…",                   // guion hablado (~45 palabras, números con letras); ver docs/narration.md
-  audio: "/models/surveyor3/audio/sur031.mp3",  // mp3 pregrabado con `npm run story-audio -- surveyor3` (metadato)
-  facts: [["Diameter", "~340 m"], ["Material", "…"], ["Terrain", "…"]],   // 3 pares etiqueta/valor
+  text: "…",                        // written summary of the card (~25–35 words)
+  narration: "…",                   // spoken script (~45 words, numbers in words); see docs/narration.md
+  audio: "/models/surveyor3/audio/sur031.mp3",  // mp3 pre-recorded with `npm run story-audio -- surveyor3`
+  facts: [["Touchdowns", "3"], ["First bounce", "~10 m"], ["Second bounce", "~3 m"]],   // 3 label/value pairs
+  sources: [{ type, host, url }],   // up to 3 links
 }
 ```
 
-**Receta para añadir uno (o para una misión nueva):**
+**How the route is planned** (done by `npm run story-route -- <mission>`, not by hand):
 
-1. Elige el punto con `x, z` dentro del terreno y fuera de la franja aplanada (`fade`) con margen (aprox. `fade` + 10 unidades al borde) y
-   **en terreno llano** (la salida y el final, sobre todo: el vehículo se queda ahí). Para ver el relieve y comprobar
-   alturas/pendientes, usa un script que lea el STL (los ejes se transforman como en `buildTerrain`: `X = x − cx`, `Z = −(y − cy)`);
-   las zonas bajas suelen ser cráteres y las altas, bordes.
-2. **El primero es la salida**: el rover aparece ahí (ya no hay «punto de salida más plano»); su tarjeta se abre al cargar. No tiene
-   frases de guía (las historias no las tienen).
-3. **Traza la ruta con `via`**: entre dos checkpoints el camino es una curva suave por los `via`. Una línea recta suele cruzar
-   cráteres (en Marte llegaba a 56° de pendiente); lo que se hizo fue un **A\* sobre el mapa de alturas** (rejilla de 2 u, coste =
-   longitud·(1 + K·pendiente²·4), sin acercarse al borde), simplificado con Douglas-Peucker (ε 10–16 u) y comprobado con la propia
-   curva (pendiente máxima por tramo ≤ ~20°, giro ≤ ~35°/10 u). Evita que un tramo llegue a un checkpoint por un lado y salga por el
-   mismo (el rumbo se invierte al arrancar). Los `via` actuales son el resultado de ese proceso.
-4. Separación razonable: 100–400 unidades entre checkpoints (Marte es grande: 762 × 559). Los marcadores de la línea de tiempo van
-   equiespaciados, no hace falta que los tramos midan lo mismo.
-5. La imagen es la ilustración del beat (`npm run story-images -- <misión>`, 4:5), en `public/models/<misión>/images/`; documéntala en [assets.md](assets.md).
-6. Graba el audio: `npm run story-audio -- <misión>` (solo genera el clip nuevo) y commitea `public/models/<misión>/`.
-7. Prueba: mantén `Espacio` hasta él, comprueba que se detiene en el centro, que la baliza se ve, que la tarjeta aparece/desaparece y
-   que el marcador de la línea de tiempo y el cuadrado del minimapa se rellenan.
+1. The stop is chosen with `x, z` inside the terrain and outside the flattened strip (`fade`) with margin (about `fade` + 10 units to the border) and **on flat ground** (the start and the end especially: the vehicle stays there). To see the relief and check heights/slopes use a script that reads the STL (`scripts/lib/terrain-node.mjs`); low zones are usually craters and high ones rims.
+2. **The first checkpoint is the start**: the vehicle appears there; its card opens on load.
+3. **The route goes through `via` points**: between two checkpoints the path is a smooth curve through them. A straight line usually crosses craters (on Mars it reached 56° slope); the planner runs an **A\* over the height map** (2 u grid, cost = length·(1 + K·slope²·4), never near the border), simplified with Douglas-Peucker (ε 10–16 u) and checked with the curve itself (max slope per leg ≤ ~20°, turn ≤ ~35°/10 u). A leg must not arrive at a checkpoint on one side and leave by the same one (the heading would invert on starting).
+4. Reasonable separation: 20–130 units between checkpoints. The timeline markers are evenly spaced; the legs do not need to be the same length.
 
-Comportamiento: se activa al entrar en `checkpointRadius` y se desactiva al superar `1.15×` el radio (histéresis, evita
-parpadeos). Al alcanzarlo queda en `game.visited` hasta que se cambie de vehículo (no se persiste). Si dos radios se solapan,
-gana el primero de la lista. El vehículo **se detiene en el centro de cada checkpoint** (Espacio) y, en un viaje automático, los
-intermedios solo cuentan como visitados.
+Behaviour: a checkpoint activates on entering `checkpointRadius` and deactivates beyond `1.15×` the radius (hysteresis, avoids flicker). Once reached it stays in `game.visited` until the vehicle changes (not persisted). If two radii overlap, the first in the list wins. The vehicle **stops at the centre of each checkpoint** (Space) and, on an automatic trip, the intermediate ones only count as visited.
 
-### Cosas que dependen de la escala del terreno
+### Things that depend on the terrain scale
 
-- `fade`: terrenos pequeños o muy empinados necesitan que la ruta se aleje más del borde (en la Luna el borde aplanado baja ~25
-  unidades en 30 → pendiente de ~40°).
-- `fogNear/fogFar`: deben ocultar el borde del plano de suelo; en un terreno de 255 unidades se usa 50–210.
-- Velocidades: un terreno pequeño pide un rover más lento (`maxSpeed` al conducir, `boostSpeed` en viaje automático).
-- Escala física: los `scale` actuales **no** son reales (los vehículos son 200–2000× más grandes que en el terreno). Ver
-  «Por resolver: escala real» en [roadmap.md](roadmap.md).
+- `fade`: small or very steep terrains need the route to stay further from the border (on the Moon the flattened border drops ~25 units in 30 → ~40° slope).
+- `fogNear/fogFar`: they must hide the edge of the ground plane; on a terrain of 255 units 50–210 is used.
+- Speeds: a small terrain asks for a slower vehicle (`maxSpeed` when driving, `boostSpeed` on the automatic trip).
+- Physical scale: the current `scale` values are **not** real (the vehicles are 200–2000× bigger than they should be on the terrain). See "Unresolved: real scale" in [roadmap.md](roadmap.md).
