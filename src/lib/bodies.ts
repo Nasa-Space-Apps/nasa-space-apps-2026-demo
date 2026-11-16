@@ -37,9 +37,9 @@ export const BODIES: Body[] = [
         lon: -5.5,
         tag: "Lost in a dust storm · 2018",
         status:
-          "Last signal on June 10, 2018 (Sol 5111), as a global dust storm blocked its solar panels. NASA declared the mission complete on Feb 13, 2019.",
+          "Landed on Jan 24, 2004 (Pacific time; Jan 25 in UTC). Last signal on June 10, 2018 (Sol 5111), as a global dust storm blocked its solar panels. NASA declared the mission complete on Feb 13, 2019.",
         facts: [
-          ["Landed", "Jan 25, 2004"],
+          ["Landed", "Jan 24, 2004"],
           ["Planned", "90 sols"],
           ["Lasted", "5,111 sols"],
           ["Distance", "45.16 km"],
@@ -49,11 +49,12 @@ export const BODIES: Body[] = [
         missionId: "perseverance",
         name: "Perseverance",
         place: "Jezero Crater · test drive",
-        lat: 18.44,
-        lon: 77.45,
+        // TODO(audit): the real position is Jezero (18.44° N, 77.45° E), the same spot as Ingenuity's. The marker is moved ~9° away (a default) so both can be clicked.
+        lat: 25,
+        lon: 69,
         tag: "Test drive · demo",
         status:
-          "Powered down at sunset after caching its samples. Demo vehicle: the real Perseverance is still active and this ending is fictional. The ground is Gale Crater (Curiosity's landing site), used as a stand-in.",
+          "Powered down at sunset after caching its samples. Demo vehicle: the real Perseverance is still active and this ending is fictional. The ground is Gale Crater (Curiosity's landing site), used as a stand-in. On the globe its marker is moved ~9° from Jezero, so it does not cover Ingenuity's.",
         facts: [
           ["Landed", "Feb 18, 2021"],
           ["Site", "Jezero Crater"],
@@ -81,15 +82,17 @@ export const BODIES: Body[] = [
       {
         missionId: "ingenuity",
         name: "Ingenuity",
-        place: "Jezero Crater · demo airfield",
-        lat: 24,
-        lon: 65,
-        tag: "Last flight · demo",
-        status: "Demo vehicle with an invented story: it flies from airfield to airfield and lands for good after a last hover. The ground is Gale Crater, as a stand-in.",
+        place: "Jezero Crater · Valinor Hills",
+        lat: 18.44, // Jezero Crater (Octavia E. Butler Landing, 18.44° N, 77.45° E); its last airfield, Valinor Hills, is a few kilometres away
+        lon: 77.45,
+        tag: "Last flight · Jan 2024",
+        status:
+          "Flew 72 times in almost three years, far beyond the five flights planned. Its last flight, on Jan 18, 2024, ended with damaged rotor blades and NASA closed the mission on Jan 25, 2024. It rests at «Valinor Hills», where Perseverance photographed it. In the 3D view it flies over the Gale Crater terrain, as a stand-in for Jezero.",
         facts: [
-          ["Type", "Helicopter"],
-          ["Flights", "41 (fiction)"],
-          ["Ending", "Fictional"],
+          ["Landed", "Feb 18, 2021"],
+          ["Flights", "72"],
+          ["Distance", "17 km"],
+          ["Last flight", "Jan 18, 2024"],
         ],
       },
       {
@@ -138,10 +141,11 @@ export const BODIES: Body[] = [
       {
         missionId: "sev",
         name: "SEV",
-        place: "Mare Tranquillitatis · demo site",
+        place: "Mare Tranquillitatis · invented site",
+        // TODO(audit): fictional vehicle with no real position. The (8° N, 20° E) default keeps it clear of Surveyor 3 (3° S, 23° W); Apollo 14, the mission it borrows, landed at Fra Mauro (3.6° S, 17.5° W).
         lat: 8,
-        lon: 20, // far from Surveyor 3 (-3, -23): the two markers used to overlap on the globe
-        tag: "Powered down · demo",
+        lon: 20,
+        tag: "Fictional · demo",
         status:
           "Powered down as the sun set behind the ridge, and never woke up again. Demo vehicle: the SEV is a fictional stand-in on the Moon and this ending is fictional.",
         facts: [
@@ -153,11 +157,11 @@ export const BODIES: Body[] = [
         missionId: "surveyor-3",
         name: "Surveyor 3",
         place: "Surveyor crater · Oceanus Procellarum",
-        lat: -3.016,
-        lon: -23.418,
+        lat: -3.014, // NSSDC: 3.0138° S, 23.4193° W
+        lon: -23.419,
         tag: "Visited by Apollo 12",
         status:
-          "Went silent at its first lunar sunset, in early May 1967, and never woke up. Apollo 12 landed next to it in November 1969 and took its camera home. In the 3D view it rolls on three wheels: the real lander never moved.",
+          "Went silent at its first lunar sunset (last data on May 4, 1967) and never woke up. Apollo 12 landed about 160 meters away in November 1969 and its astronauts took the TV camera home. The real lander never moved after its two bounces, so in the 3D view it stands still.",
         facts: [
           ["Landed", "Apr 20, 1967"],
           ["Visited", "Nov 19, 1969"],

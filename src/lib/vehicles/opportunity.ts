@@ -5,7 +5,7 @@ import { DARK, Kit, LIGHT, MID, rows, type V3, type VehiclePalette, type Vehicle
  * real rover: the warm electronics box under an arrow-shaped solar deck (centre panel, two swept wings and the rear panel, all covered in rows
  * of cells), six cleated wheels on a rocker-bogie, the camera mast with its wide head (two pancams, two navcams), the low-gain antenna, the
  * steerable high-gain dish, the UHF whip, the sundial and the instrument arm folded under the front of the deck.
- * Spirit (MER-A) is the same machine: `stuckWheel` draws its front-right wheel locked and dragged, which is what ended its mission.
+ * Spirit (MER-A) is the same machine: `stuckWheel` tags its front-right wheel ("dead") so that the scene locks it when its motor fails (sol 779, 2006).
  */
 export function mer(p: VehiclePalette, o: { stuckWheel?: boolean } = {}): VehicleRig {
   const b = new Kit(p);
@@ -18,8 +18,7 @@ export function mer(p: VehiclePalette, o: { stuckWheel?: boolean } = {}): Vehicl
   for (const s of [-1, 1]) {
     for (const z of AXLES) {
       const tyre = () => b.tyre(R, 0.8, { cleats: 14, spokes: 5, hub: 0.34, curved: true });
-      if (o.stuckWheel && s === 1 && z === AXLES[0]) b.at([s * TRACK, R, z], null, tyre); // locked: part of the body, it never turns
-      else b.wheel(s * TRACK, z, R, tyre);
+      b.wheel(s * TRACK, z, R, tyre, o.stuckWheel && s === 1 && z === AXLES[0] ? "dead" : undefined); // Spirit's front right wheel can lock (it did on sol 779): the rover stops turning it
       b.cyl(0.13, 0.75, "x", s * 3.3, R, z, { seg: 10 }); // axle stub
       b.box(0.36, 0.5, 0.5, s * 3.12, R + 0.05, z, { r: 0.1 }); // drive motor
     }

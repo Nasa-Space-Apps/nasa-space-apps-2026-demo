@@ -10,6 +10,8 @@ export type RoverConfig = {
   maxSpeed: number;
   boostSpeed: number;
   heading: number; // initial heading (radians)
+  deadWheelAfter?: string; // checkpoint id from which the wheel tagged "dead" stops turning (Spirit: its front-right motor died on sol 779)
+  reverseAfter?: string; // checkpoint id from which the vehicle drives backwards (Spirit: from July 2004, to spare that wheel)
 };
 
 export type DustConfig = {
@@ -99,8 +101,9 @@ export const MISSIONS: Mission[] = [
     },
     dust: { color: "#E9E2F8", drag: 0.5, lift: -4, up: 0.8, life: 0.8, size: 0.75, alpha: 0.55 },
     tracks: { color: "#4B4660", opacity: 0.35 },
-    checkpoints: storyOf("surveyor-3")!.checkpoints, // 11 stops on the Moon; the 6 events before the landing are comic pages
-    checkpointRadius: 14, // 11 stops ~40–60 u apart
+    checkpoints: storyOf("surveyor-3")!.checkpoints, // 11 moments on the Moon; the 6 events before the landing are comic pages
+    checkpointRadius: 14,
+    stationary: storyOf("surveyor-3")!.stationary, // the lander never moved after its bounces: the moments are not places
   },
   {
     id: "sev",
@@ -157,6 +160,8 @@ export const MISSIONS: Mission[] = [
       palette: { dark: "#6A3FB5", mid: "#B196E6", light: "#F1ECFB", bg: THEME.paperLight }, // violet
       maxSpeed: 24, boostSpeed: 42,
       heading: -Math.PI * 0.75,
+      reverseAfter: "spi028", // from July 15, 2004 Spirit drove backwards, dragging its failing front right wheel
+      deadWheelAfter: "spi040", // sol 779 (13 Mar 2006): the motor of that wheel dies and the wheel locks
     },
     env: MARS_ENV,
     dust: MARS_DUST,

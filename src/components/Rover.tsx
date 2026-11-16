@@ -17,7 +17,7 @@ export default function Rover({ config }: { config: RoverConfig }) {
   const body = useRef<THREE.Group>(null);
   const align = useRef<THREE.Group>(null);
   const st = useMemo(
-    () => ({ y: NaN, pitch: 0, roll: 0, accel: 0, prevSpeed: 0, locked: false, goal: null as number | null, pt: { x: 0, z: 0, heading: 0 } }),
+    () => ({ y: NaN, pitch: 0, roll: 0, accel: 0, prevSpeed: 0, locked: false, goal: null as number | null, pt: { x: 0, z: 0, heading: 0 }, lift: 0, turn: 0 }),
     [],
   );
   const tmp = useMemo(() => new THREE.Vector3(), []);
@@ -113,7 +113,9 @@ export default function Rover({ config }: { config: RoverConfig }) {
     const hFR = H(L, -W);
     const hBL = H(-L, W);
     const hBR = H(-L, -W);
-    const tY = (hFL + hFR + hBL + hBR) / 4 - 0.1 + rig.hover; // hover > 0: a helicopter, it floats above the ground
+    // hover > 0: a helicopter. It only flies between stops: it lifts off when it starts moving and sits on the ground (rotors stopped) at every stop
+    st.lift = damp(st.lift, rig.hover > 0 && Math.abs(game.speed) > 1 ? 1 : 0, 2.6, dt);
+    const tY = (hFL + hFR + hBL + hBR) / 4 - 0.1 + rig.hover * st.lift;
     const tPitch = Math.atan2((hFL + hFR) / 2 - (hBL + hBR) / 2, 2 * L);
     const tRoll = Math.atan2((hFL + hBL) / 2 - (hFR + hBR) / 2, 2 * W);
     if (Number.isNaN(st.y)) {
@@ -134,7 +136,7 @@ export default function Rover({ config }: { config: RoverConfig }) {
     const extraPitch = THREE.MathUtils.clamp(st.accel * 0.0022 * (flying ? 3 : 1), flying ? -0.18 : -0.06, flying ? 0.18 : 0.06);
     const rumble = sr * (game.boost ? 1.6 : 1);
     const vibP = rumble * (Math.sin(t * 47) * 0.004 + Math.sin(t * 31) * 0.003);
-    const vibY = flying ? Math.sin(t * 1.7) * 0.22 : rumble * Math.abs(Math.sin(t * 23)) * 0.05; // a helicopter bobs instead of rumbling
+    const vibY = flying ? Math.sin(t * 1.7) * 0.22 * st.lift : rumble * Math.abs(Math.sin(t * 23)) * 0.05; // a helicopter bobs (in the air) instead of rumbling
 
     game.y = st.y;
     b.position.set(game.x, st.y + vibY, game.z);
@@ -143,8 +145,14 @@ export default function Rover({ config }: { config: RoverConfig }) {
     game.quaternion.copy(b.quaternion);
 
     // ---- wheel spin: distance rolled / radius (forward = +z = positive rotation about x) ----
-    for (const w of rig.spinners) w.obj.rotation.x += (game.speed * dt) / w.radius;
-    for (const r of rig.rotors) r.obj.rotation.y += r.rate * (0.6 + 0.4 * sr) * dt;
+    // a rover that drives backwards (Spirit, from July 2004) faces away from where it goes: its wheels turn the other way
+    const back = Boolean(config.reverseAfter && game.visited.has(config.reverseAfter));
+    st.turn = damp(st.turn, back ? Math.PI : 0, 6, dt);
+    a.rotation.y = st.turn;
+    const way = Math.cos(st.turn) >= 0 ? 1 : -1;
+    const deadWheel = Boolean(config.deadWheelAfter && game.visited.has(config.deadWheelAfter));
+    for (const w of rig.spinners) if (!(deadWheel && w.tag === "dead")) w.obj.rotation.x += (way * game.speed * dt) / w.radius;
+    for (const r of rig.rotors) r.obj.rotation.y += r.rate * (0.6 + 0.4 * sr) * (flying ? st.lift : 1) * dt; // the rotors turn only in the air
 
     // ---- wheel world positions (for dust / tracks) ----
     for (let i = 0; i < rig.wheels.length; i++) {

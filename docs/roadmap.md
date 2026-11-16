@@ -4,6 +4,8 @@
 
 ## Siguiente (qué hacer al retomar)
 
+> **TODO de la auditoría (hito 54):** la lista completa, con los valores por defecto que se dejaron y por qué, está en [audit.md](audit.md#todo-valores-por-defecto-documentados) (TODO-1 a TODO-10).
+
 Estado (hito 48): 4 historias completas (Opportunity, Spirit, Ingenuity, Surveyor 3) con cómic, 3D, narración y fuentes; paleta por mundo; globo libre; tarjeta 3D con ilustración a todo el ancho. Candidatos, en el orden en que encajan con lo pedido hasta ahora:
 
 1. **Revisar de oído las 120 narraciones** y las 20 ilustraciones de Spirit (el sello de «REJECTED» de `spi001`); regrabar solo lo que no guste (`--only`).

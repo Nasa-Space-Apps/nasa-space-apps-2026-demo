@@ -9,6 +9,7 @@
     "title": "thank you, Surveyor 3",
     "text": "A robot that tested the ground for Apollo and then received Apollo's visit: still the only probe humans have ever walked up to on another world."
   },
+  "stationary": true,
   "parts": [
     {
       "id": "intro",
@@ -340,8 +341,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur031.mp3",
       "route": {
-        "x": 55,
-        "z": -60
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -388,8 +389,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur032.mp3",
       "route": {
-        "x": 19,
-        "z": -41
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -436,14 +437,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur035.mp3",
       "route": {
-        "x": -28,
-        "z": -23,
-        "via": [
-          [
-            2,
-            -19
-          ]
-        ]
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -485,8 +480,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur015.mp3",
       "route": {
-        "x": 3,
-        "z": 4
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -533,8 +528,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur038.mp3",
       "route": {
-        "x": 41,
-        "z": 40
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -576,8 +571,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur016.mp3",
       "route": {
-        "x": 60,
-        "z": 44
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -614,8 +609,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur040.mp3",
       "route": {
-        "x": 11,
-        "z": 26
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -657,8 +652,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur045.mp3",
       "route": {
-        "x": -48,
-        "z": 17
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -700,8 +695,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur048.mp3",
       "route": {
-        "x": -88,
-        "z": 19
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -720,7 +715,7 @@
         ],
         [
           "Distance",
-          "~155 m"
+          "~160 m"
         ],
         [
           "First",
@@ -748,8 +743,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur054.mp3",
       "route": {
-        "x": -49,
-        "z": 55
+        "x": -30,
+        "z": -20
       }
     },
     {
@@ -796,8 +791,8 @@
       "imageRatio": "4 / 5",
       "audio": "/models/surveyor3/audio/sur055.mp3",
       "route": {
-        "x": -35,
-        "z": 100
+        "x": -30,
+        "z": -20
       }
     },
     {

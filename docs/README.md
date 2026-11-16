@@ -18,7 +18,8 @@
 9. **[guide.md](guide.md)** — guía de voz «mission control»: principios, qué frase suena en cada momento y para cada vehículo, catálogo
    de las 30 frases, cómo regrabar.
 10. **[ambient.md](ambient.md)** — música de fondo (ElevenLabs Music, pregrabada): una cama por lugar, bucle con crossfade, baja de volumen mientras habla la narración/guía, tecla `S`.
-11. **[roadmap.md](roadmap.md)** — **«Siguiente»** (qué hacer al retomar), pendientes e ideas (incluye **⚠️ escala real de los vehículos**, aún sin resolver).
+11. **[audit.md](audit.md)** — **auditoría de la información (hito 54)**: qué se verificó (números, audio, ilustraciones, cronología, modelos 3D, posiciones del globo), qué se corrigió y la lista de **TODO** con sus valores por defecto. *Léelo antes de tocar datos de un vehículo.*
+11b. **[roadmap.md](roadmap.md)** — **«Siguiente»** (qué hacer al retomar), pendientes e ideas (incluye **⚠️ escala real de los vehículos**, aún sin resolver).
 12. **[data-request.md](data-request.md)** — qué información hay que extraer por vehículo (ficha, 4–6 paradas con fecha/hora/sol/posición, imágenes con crédito, fuentes) para la demo con Opportunity, Spirit, Ingenuity, InSight y Beagle 2; pensado para pasárselo a quien investiga.
 
 Otros documentos importantes fuera de `docs/`:

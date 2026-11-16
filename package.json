@@ -12,7 +12,8 @@
     "story": "node scripts/build-story.mjs",
     "story-route": "node scripts/plan-story-route.mjs",
     "story-audio": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-story-audio.mjs",
-    "story-images": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-story-images.mjs"
+    "story-images": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-story-images.mjs",
+    "story-audit": "node scripts/audit-story.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",

@@ -2,8 +2,11 @@
  * Story data of Surveyor 3: the copy (English) of its 20 beats, in chronological order, plus where its facts, art and 3D terrain come from. Read by
  * scripts/build-story.mjs, which writes public/models/surveyor3/story.json. Same format and rules as opportunity-story.mjs (docs/story.md): narration ~45 words,
  * numbers spelled out, every fact from the dossiers (misiones/surveyor3/dossiers). Contested figures are left out or rounded: the number of TV pictures (6,315 vs
- * 6,326), the number of bearing tests (4 vs 7), the reach of the arm (1.5 vs 1.63 m), the distance to the Apollo 12 module (155 / 163 / 180 m).
- * part: intro = before the 3D (comic pages), mars = a 3D stop (here: on the Moon), outro = comic pages after the 3D.
+ * 6,326), the number of bearing tests (4 vs 7), the reach of the arm (1.5 vs 1.63 m), the distance to the Apollo 12 module (155 / 163 / 180 m: the card says «~160 m», the figure most sources give: 535 ft).
+ * part: intro = before the 3D (comic pages), mars = a 3D moment (here: on the Moon), outro = comic pages after the 3D.
+ *
+ * Surveyor 3 never moved after its two bounces (it sat tilted on a slope inside the crater for the rest of its life): STATIONARY = true (hito 54). In the 3D the
+ * lander stays at BASE and Space (or the timeline) goes from one moment of its story to the next (docs/story.md, «Vehículos inmóviles»).
  */
 export const MISSION = "surveyor3";
 export const NAME = "Surveyor 3";
@@ -13,6 +16,8 @@ export const DOSSIERS = "misiones/surveyor3/dossiers";
 // no `sourceImage`: the art is generated straight into public/models/surveyor3/images (npm run story-images -- surveyor3)
 /** 3D terrain of the mission (the Moon model, 256 × 256 u) and the line its stops follow (the line the earlier demo routes of the Moon took) */
 export const TERRAIN = "public/models/moon-terrain.stl";
+export const STATIONARY = true;
+export const BASE = [-30, -20]; // a gently sloping spot of the Moon model (mean slope ~5°: the real lander rested tilted on a ~12° slope)
 export const ANCHORS = [[55, -60], [-30, -30], [70, 50], [-85, 10], [-35, 100]];
 /** Planner settings for this terrain (see scripts/plan-story-route.mjs): the Moon model is small, so the safe area is smaller and the stops are closer */
 export const BOUNDS = { x0: -100, x1: 100, z0: -105, z1: 105 };
@@ -135,7 +140,7 @@ export const BEATS = [
     summary: "An astronomer had located Surveyor 3 from old pictures. Apollo 12's lunar module comes in through blowing dust, and the commander spots the lander.",
     narration:
       "November nineteenth, 1969. An astronomer, Ewen Whitaker, had pinpointed Surveyor Three from old pictures, and now the Apollo Twelve lunar module, Intrepid, comes in through blowing dust. The commander spots the lander on the crater's rim. It is the first precision landing on another world.",
-    facts: [["Landing", "19 Nov 1969"], ["Distance", "~155 m"], ["First", "Precision landing"]],
+    facts: [["Landing", "19 Nov 1969"], ["Distance", "~160 m"], ["First", "Precision landing"]],
   },
   {
     id: "sur055", part: "mars", date: "Nov 20, 1969", place: "Surveyor crater", title: "Parts for Earth",

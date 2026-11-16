@@ -16,7 +16,7 @@ export type VehiclePalette = { dark: string; mid: string; light: string; bg: str
 export type VehicleRig = {
   root: THREE.Group;
   wheels: THREE.Vector3[]; // ground contact points (local space)
-  spinners: { obj: THREE.Object3D; radius: number }[]; // wheel pivots: rotate about x by distance / radius
+  spinners: { obj: THREE.Object3D; radius: number; tag?: string }[]; // wheel pivots: rotate about x by distance / radius (tag "dead": a wheel that can be locked, see RoverConfig.deadWheelAfter)
   halfLen: number; // wheelbase half-length / half-track (to follow the terrain)
   halfWid: number;
   hover: number; // height above the ground the whole vehicle floats at (helicopters); 0 = on its wheels
@@ -83,7 +83,7 @@ export class Kit {
   private stack: THREE.Matrix4[] = [new THREE.Matrix4()];
   private body: THREE.BufferGeometry[] = [];
   private target = this.body;
-  private spun: { x: number; z: number; r: number; geos: THREE.BufferGeometry[] }[] = [];
+  private spun: { x: number; z: number; r: number; geos: THREE.BufferGeometry[]; tag?: string }[] = [];
   private turning: { pos: V3; rate: number; geos: THREE.BufferGeometry[] }[] = [];
 
   private palette: VehiclePalette;
@@ -247,7 +247,7 @@ export class Kit {
    * A wheel of radius r touching the ground at (x, 0, z). `draw` builds it centred on the origin with its axle along x and its OUTER face
    * towards +x (left wheels are turned round, so details like hub caps always face out). It becomes one mesh that spins about x.
    */
-  wheel(x: number, z: number, r: number, draw: () => void) {
+  wheel(x: number, z: number, r: number, draw: () => void, tag?: string) {
     const geos: THREE.BufferGeometry[] = [];
     const [stack, target] = [this.stack, this.target];
     this.stack = [x < 0 ? new THREE.Matrix4().makeRotationY(Math.PI) : new THREE.Matrix4()];
@@ -255,7 +255,7 @@ export class Kit {
     draw();
     this.stack = stack;
     this.target = target;
-    this.spun.push({ x, z, r, geos });
+    this.spun.push({ x, z, r, geos, tag });
     this.wheels.push(new THREE.Vector3(x, 0, z));
   }
 
@@ -315,7 +315,7 @@ export class Kit {
       pivot.position.set(w.x, w.r, w.z);
       pivot.add(mesh(w.geos));
       root.add(pivot);
-      spinners.push({ obj: pivot, radius: w.r });
+      spinners.push({ obj: pivot, radius: w.r, tag: w.tag });
     }
     const rotors: VehicleRig["rotors"] = [];
     for (const t of this.turning) {

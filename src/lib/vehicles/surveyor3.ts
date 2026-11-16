@@ -8,13 +8,13 @@ const lerp = (a: V3, b: V3, t: number): V3 => [a[0] + (b[0] - a[0]) * t, a[1] + 
  * and the flat square high-gain antenna, the TV camera looking up at its mirror, two thermal compartments on the frame, the omnidirectional antenna booms,
  * the three vernier engines and the surface-sampler arm reaching out to the front. About 3 m tall and 4.3 m between footpads in real life; here 2.2 units
  * per metre (≈ 9 wide, ≈ 7 tall) so it sits with the rest of the vehicles.
- * FICTION: the real lander never moved; this demo version stands each footpad on a drive wheel (a rolling lander) so that it can cross the terrain.
- * Drives along +z (the sampler-arm side): one wheel in front, two behind.
+ * The real lander never moved (after its two bounces it sat on a slope inside the crater for the rest of its life), so it has no wheels: each leg ends in a
+ * crushable footpad. The 3D scene is a «time» scene (lib/route.ts). Faces +z (the sampler-arm side): one leg in front, two behind.
  */
 export function surveyor3(p: VehiclePalette): VehicleRig {
   const b = new Kit(p);
-  const R = 1.0; // wheel radius (the real footpads are small crushable pads: bigger wheels read better and roll)
-  const RL = 4.6; // distance of each wheel from the centre line
+  const R = 0; // the footpads touch the ground at y = 0
+  const RL = 4.6; // distance of each footpad from the centre line
   const FY = 3.0; // height of the frame corners
   const RC = 2.0; // radius of the frame corners
   const ANG = [0, (Math.PI * 2) / 3, (Math.PI * 4) / 3]; // front, then the two rear legs (angle measured from +z towards +x)
@@ -28,13 +28,12 @@ export function surveyor3(p: VehiclePalette): VehicleRig {
     wheels.push([sx * RL, R, cz * RL]);
   }
 
-  // ---- legs: main strut, the stabilising strut from the inner frame, the crushable shock absorber and a wheel under each ----
+  // ---- legs: main strut, the stabilising strut from the inner frame, the crushable shock absorber and a footpad under each ----
   wheels.forEach((w, k) => {
     const c = corners[k];
     const hub: V3 = [w[0], R + 0.8, w[2]];
-    b.wheel(w[0], w[2], R, () => b.tyre(R, 0.8, { cleats: 14, spokes: 6, hub: 0.34 }));
-    b.cyl(0.14, 1.1, "x", w[0], R, w[2], { seg: 10 }); // axle
-    b.box(0.3, 1.0, 0.7, w[0] + (w[0] < 0 ? 0.55 : w[0] > 0 ? -0.55 : 0.55), R + 0.45, w[2], { r: 0.08 }); // fork, on the inner side of the wheel
+    b.cyl(0.85, 0.16, "y", w[0], 0.08, w[2], { tone: MID, seg: 20 }); // footpad
+    b.cyl(0.3, 0.3, "y", w[0], 0.3, w[2], { tone: LIGHT, seg: 12 }); // its socket
     b.tube(c, hub, 0.17, { tone: MID }); // main strut
     const shock = [lerp(c, hub, 0.42), lerp(c, hub, 0.8)];
     b.tube(shock[0], shock[1], 0.27, { tone: LIGHT, seg: 12 }); // crushable shock absorber
@@ -114,5 +113,5 @@ export function surveyor3(p: VehiclePalette): VehicleRig {
   b.box(0.42, 0.3, 0.6, s1[0], s1[1] - 0.15, s1[2] + 0.18, { tone: DARK, r: 0.06, rot: [0.25, 0, 0] }); // the scoop
   b.box(0.3, 0.05, 0.3, s1[0], s1[1] - 0.32, s1[2] + 0.5, { tone: LIGHT, rot: [0.25, 0, 0] }); // its little footpad
 
-  return b.finish();
+  return b.finish({ halfLen: 4.2, halfWid: 4.0 }); // no wheels: the footprint is given
 }

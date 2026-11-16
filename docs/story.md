@@ -138,6 +138,8 @@ El mismo flujo, en la **Luna** (`/moon/surveyor-3`; el id de la misión lleva gu
 - **Audio:** 20 clips con Bill / `eleven_v4` (5 618 caracteres, 2 247 créditos), a petición del usuario.
 - Se retiraron las 2 paradas de relleno (`SURVEYOR3_CHECKPOINTS`) del hito 41.
 
+> **Hito 54 (auditoría):** Surveyor 3 también es un **vehículo inmóvil** (se quedó inclinado en su cráter tras los dos rebotes): sus 11 paradas del 3D son ahora **momentos** en un solo punto (`STATIONARY`/`BASE` en `surveyor3-story.mjs`), y su modelo pierde las ruedas ficticias (trípode con tres apoyos). Lo de arriba sobre «paradas de 21–66 u» ya no aplica. La distancia al módulo del Apollo 12 pasa a «~160 m». Detalle y resto de cambios en [audit.md](audit.md).
+
 ## Historia de Spirit (hito 45)
 
 El mismo flujo en `/mars/spirit`: cómic de **6** páginas → 3D con **12** paradas → cómic de **2** páginas + tarjeta «thank you, Spirit».
