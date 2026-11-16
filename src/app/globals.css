@@ -166,16 +166,20 @@ button {
 .ui-fab:active {
   transform: scale(0.9);
 }
+/* the corner buttons (credits, music): the same 44 px height, the same 2 px ink outline, the same 18 px icons, neither filled; the music icon (sound / sound-off) says the state, so the two never differ in weight */
+.ui-btn-bar {
+  height: 44px;
+  padding: 0 20px;
+}
 .ui-fab-md {
-  width: 48px;
-  height: 48px;
-  border-width: 2.5px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--ink); /* an outline, like .ui-btn.is-ghost */
 }
 .ui-fab-md:hover {
   transform: rotate(-8deg) scale(1.1);
-}
-.ui-fab-md[aria-pressed="false"] {
-  background-color: var(--line); /* muted: a dimmer disc says the sound is off */
 }
 .ui-fab-sm {
   width: 34px;
@@ -357,7 +361,7 @@ button {
     margin-inline: 0;
   }
 }
-/* a card of the home composition: an illustration in a paper frame, tilted (--rot, degrees); under the pointer it lifts, straightens and shows its name */
+/* a card of the home composition: an illustration in a paper frame, tilted (--rot, degrees); under the pointer it lifts, straightens and shows its name (it is decoration: it opens nothing) */
 .home-card-wrap {
   position: absolute;
   pointer-events: auto;
@@ -373,7 +377,6 @@ button {
   border: var(--stroke) solid var(--ink);
   border-radius: 8px;
   background: var(--surface);
-  cursor: pointer;
   transition: transform var(--dur-base) var(--pop);
 }
 .home-card img {
@@ -386,9 +389,6 @@ button {
 }
 .home-card:hover {
   transform: translateY(-14px) scale(1.12) rotate(calc(var(--rot) * -1deg));
-}
-.home-card:active {
-  transform: translateY(-6px) scale(1.05) rotate(calc(var(--rot) * -1deg));
 }
 .home-card-tag {
   position: absolute;

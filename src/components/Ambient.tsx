@@ -37,7 +37,7 @@ export function AmbientButton() {
         toggleAmbient();
       }}
     >
-      <Icon name={enabled ? "sound" : "sound-off"} size={22} />
+      <Icon name={enabled ? "sound" : "sound-off"} size={18} />
     </button>
   );
 }

@@ -119,21 +119,13 @@ export const WORLDS: Record<WorldId, World> = {
 };
 
 /**
- * Extra colours of the home page (the collage of cards and vehicles): the sun-orange window and its wisps, the pink clouds in front, and the vehicles, which are
- * recoloured here so that they read against orange, pink and periwinkle (the mission colours of `missions.ts` are for their own scenes).
+ * Extra colours of the home page (the collage of cards and the vehicle): the butter of the badge's centre and Opportunity, recoloured green so that it reads against
+ * periwinkle (the mission colours of `missions.ts` are for its own scene).
  */
 export const HOME = {
-  sun: "#FFAE14", // the window: a big flat sun
-  sunGlow: "#FFC53D", // the lighter disc inside it
-  orange: "#FF7A00", // deep orange wisps
-  pink: PINK, // clouds and wisps
-  pinkSoft: "#FBB6D8", // the back row of clouds
   butter: "#FFC247", // the badge's centre (the butter of Mars)
   vehicles: {
     opportunity: { dark: "#1E7A5A", mid: "#58C79A", light: "#E9FBF1" }, // green
-    ingenuity: { dark: "#171717", mid: "#FEECE3", light: "#FFFFFF" }, // ink and cream
-    insight: { dark: "#0F6F80", mid: "#6CC3CC", light: "#E6F6F7" }, // teal
-    "surveyor-3": { dark: "#5C3FB5", mid: "#B8A3F0", light: "#F1ECFB" }, // violet
   } as Record<string, { dark: string; mid: string; light: string }>,
 };
 

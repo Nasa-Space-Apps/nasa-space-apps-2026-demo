@@ -61,7 +61,7 @@ export default function Credits() {
     <div ref={root} className="relative" style={{ fontFamily: theme.font }}>
       <button
         type="button"
-        className={`ui-btn ${open ? "is-active" : "is-ghost"}`}
+        className={`ui-btn ui-btn-bar ${open ? "is-active" : "is-ghost"}`}
         aria-expanded={open}
         aria-controls="credits-card"
         onClick={(e) => {
@@ -69,7 +69,7 @@ export default function Credits() {
           setOpen((o) => !o);
         }}
       >
-        <Icon name="user" size={16} /> Credits
+        <Icon name="user" size={18} /> Credits
       </button>
 
       {mounted && (

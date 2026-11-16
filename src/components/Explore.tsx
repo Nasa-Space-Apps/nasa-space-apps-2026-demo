@@ -147,7 +147,7 @@ function ExploreView({ initialBodyId }: { initialBodyId: string }) {
         </Pop>
       </div>
 
-      <div className="fixed right-5 top-5 z-10 flex items-start gap-2" style={{ fontFamily: theme.font }}>
+      <div className="fixed right-5 top-5 z-10 flex items-center gap-2" style={{ fontFamily: theme.font }}>
         <Pop theme={theme} delay={300} origin="right center" from="scale(0.5) rotate(-6deg) translateY(-14px)">
           <Credits />
         </Pop>
